@@ -1,0 +1,209 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 2, 49
+  size: 133, 105
+  orig: 133, 105
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 140, 99
+  size: 105, 105
+  orig: 105, 105
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 360, 145
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+A4
+  rotate: true
+  xy: 138, 4
+  size: 93, 101
+  orig: 93, 101
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 241, 265
+  size: 71, 96
+  orig: 71, 96
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 176, 363
+  size: 149, 147
+  orig: 149, 147
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 2, 345
+  size: 172, 165
+  orig: 172, 165
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 314, 249
+  size: 127, 98
+  orig: 127, 98
+  offset: 0, 0
+  index: -1
+B4
+  rotate: true
+  xy: 140, 206
+  size: 137, 99
+  orig: 137, 99
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 327, 416
+  size: 144, 94
+  orig: 144, 94
+  offset: 0, 0
+  index: -1
+B6
+  rotate: false
+  xy: 327, 349
+  size: 140, 65
+  orig: 140, 65
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: false
+  xy: 176, 345
+  size: 63, 16
+  orig: 63, 16
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: true
+  xy: 469, 349
+  size: 59, 19
+  orig: 59, 19
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: false
+  xy: 241, 54
+  size: 68, 26
+  orig: 68, 26
+  offset: 0, 0
+  index: -1
+Mouth Open
+  rotate: false
+  xy: 241, 2
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 473, 410
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 311, 48
+  size: 51, 32
+  orig: 51, 32
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: true
+  xy: 2, 156
+  size: 187, 136
+  orig: 187, 136
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 354, 87
+  size: 21, 52
+  orig: 21, 52
+  offset: 0, 0
+  index: -1
+b prop
+  rotate: true
+  xy: 241, 20
+  size: 32, 61
+  orig: 32, 61
+  offset: 0, 0
+  index: -1
+blade
+  rotate: false
+  xy: 2, 15
+  size: 134, 32
+  orig: 134, 32
+  offset: 0, 0
+  index: -1
+blade1
+  rotate: false
+  xy: 2, 2
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+blade2
+  rotate: true
+  xy: 493, 471
+  size: 39, 15
+  orig: 39, 15
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 443, 279
+  size: 67, 68
+  orig: 67, 68
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: true
+  xy: 443, 249
+  size: 28, 60
+  orig: 28, 60
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: true
+  xy: 304, 20
+  size: 26, 62
+  orig: 26, 62
+  offset: 0, 0
+  index: -1
+f prop
+  rotate: false
+  xy: 464, 171
+  size: 36, 76
+  orig: 36, 76
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 247, 141
+  size: 111, 106
+  orig: 111, 106
+  offset: 0, 0
+  index: -1
+wing
+  rotate: true
+  xy: 247, 82
+  size: 57, 105
+  orig: 57, 105
+  offset: 0, 0
+  index: -1

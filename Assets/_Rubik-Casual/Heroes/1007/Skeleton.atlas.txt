@@ -1,0 +1,160 @@
+
+Skeleton.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0
+  rotate: false
+  xy: 2, 134
+  size: 180, 120
+  orig: 180, 120
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 2, 12
+  size: 180, 120
+  orig: 180, 120
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 184, 134
+  size: 180, 120
+  orig: 180, 120
+  offset: 0, 0
+  index: -1
+ANGRY
+  rotate: false
+  xy: 371, 64
+  size: 38, 43
+  orig: 38, 43
+  offset: 0, 0
+  index: -1
+B_Leg
+  rotate: false
+  xy: 344, 50
+  size: 25, 57
+  orig: 25, 57
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 431, 192
+  size: 69, 62
+  orig: 69, 62
+  offset: 0, 0
+  index: -1
+Eye open
+  rotate: false
+  xy: 184, 2
+  size: 65, 23
+  orig: 65, 23
+  offset: 0, 0
+  index: -1
+Eye4(Close)
+  rotate: false
+  xy: 2, 3
+  size: 63, 7
+  orig: 63, 7
+  offset: 0, 0
+  index: -1
+Eye6(Hurt)
+  rotate: false
+  xy: 251, 6
+  size: 59, 19
+  orig: 59, 19
+  offset: 0, 0
+  index: -1
+F_Leg
+  rotate: true
+  xy: 431, 113
+  size: 30, 59
+  orig: 30, 59
+  offset: 0, 0
+  index: -1
+Gun
+  rotate: false
+  xy: 431, 145
+  size: 56, 45
+  orig: 56, 45
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 184, 27
+  size: 138, 105
+  orig: 138, 105
+  offset: 0, 0
+  index: -1
+L hand
+  rotate: false
+  xy: 411, 60
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+L hand2
+  rotate: false
+  xy: 411, 78
+  size: 27, 29
+  orig: 27, 29
+  offset: 0, 0
+  index: -1
+L hand3
+  rotate: false
+  xy: 344, 109
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+Light
+  rotate: false
+  xy: 366, 109
+  size: 63, 145
+  orig: 63, 145
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: true
+  xy: 468, 80
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+R hand reverse
+  rotate: true
+  xy: 489, 172
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+R hand1
+  rotate: true
+  xy: 489, 153
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+R hand2
+  rotate: false
+  xy: 440, 82
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+R hand3
+  rotate: true
+  xy: 344, 34
+  size: 14, 27
+  orig: 14, 27
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 324, 32
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1

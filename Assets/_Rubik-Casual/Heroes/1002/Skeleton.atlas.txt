@@ -1,0 +1,223 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 385
+  size: 155, 125
+  orig: 155, 125
+  offset: 0, 0
+  index: -1
+A1
+  rotate: true
+  xy: 2, 200
+  size: 183, 96
+  orig: 183, 96
+  offset: 0, 0
+  index: -1
+B1
+  rotate: true
+  xy: 100, 254
+  size: 129, 125
+  orig: 129, 125
+  offset: 0, 0
+  index: -1
+B2
+  rotate: true
+  xy: 100, 134
+  size: 118, 125
+  orig: 118, 125
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 227, 140
+  size: 122, 125
+  orig: 122, 125
+  offset: 0, 0
+  index: -1
+B4
+  rotate: true
+  xy: 227, 267
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 354, 305
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+B6
+  rotate: true
+  xy: 89, 15
+  size: 117, 125
+  orig: 117, 125
+  offset: 0, 0
+  index: -1
+B7
+  rotate: true
+  xy: 354, 199
+  size: 104, 125
+  orig: 104, 125
+  offset: 0, 0
+  index: -1
+B_Arm
+  rotate: true
+  xy: 347, 68
+  size: 31, 61
+  orig: 31, 61
+  offset: 0, 0
+  index: -1
+B_Armor
+  rotate: true
+  xy: 344, 31
+  size: 35, 57
+  orig: 35, 57
+  offset: 0, 0
+  index: -1
+B_Coat
+  rotate: false
+  xy: 236, 73
+  size: 75, 65
+  orig: 75, 65
+  offset: 0, 0
+  index: -1
+B_Hair
+  rotate: true
+  xy: 320, 432
+  size: 78, 169
+  orig: 78, 169
+  offset: 0, 0
+  index: -1
+B_Leg
+  rotate: false
+  xy: 482, 296
+  size: 24, 55
+  orig: 24, 55
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 236, 11
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: true
+  xy: 491, 447
+  size: 63, 17
+  orig: 63, 17
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: false
+  xy: 410, 47
+  size: 59, 20
+  orig: 59, 20
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: true
+  xy: 313, 71
+  size: 67, 32
+  orig: 67, 32
+  offset: 0, 0
+  index: -1
+F_Arm
+  rotate: true
+  xy: 419, 98
+  size: 30, 61
+  orig: 30, 61
+  offset: 0, 0
+  index: -1
+F_Armor
+  rotate: true
+  xy: 298, 17
+  size: 52, 44
+  orig: 52, 44
+  offset: 0, 0
+  index: -1
+F_Coat
+  rotate: false
+  xy: 481, 232
+  size: 23, 62
+  orig: 23, 62
+  offset: 0, 0
+  index: -1
+F_Ear
+  rotate: true
+  xy: 347, 101
+  size: 27, 70
+  orig: 27, 70
+  offset: 0, 0
+  index: -1
+F_Ear1
+  rotate: true
+  xy: 344, 2
+  size: 27, 61
+  orig: 27, 61
+  offset: 0, 0
+  index: -1
+F_Hair
+  rotate: false
+  xy: 2, 20
+  size: 85, 178
+  orig: 85, 178
+  offset: 0, 0
+  index: -1
+F_Leg
+  rotate: true
+  xy: 410, 69
+  size: 27, 59
+  orig: 27, 59
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 159, 395
+  size: 159, 115
+  orig: 159, 115
+  offset: 0, 0
+  index: -1
+Mouth Open
+  rotate: false
+  xy: 2, 2
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+Nodachi
+  rotate: true
+  xy: 482, 353
+  size: 77, 28
+  orig: 77, 28
+  offset: 0, 0
+  index: -1
+Nodachi shell
+  rotate: false
+  xy: 351, 130
+  size: 150, 31
+  orig: 150, 31
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 216, 32
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+blade
+  rotate: false
+  xy: 351, 163
+  size: 145, 34
+  orig: 145, 34
+  offset: 0, 0
+  index: -1
