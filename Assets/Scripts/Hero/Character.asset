@@ -15,11 +15,11 @@ MonoBehaviour:
   Characters:
   - ID: 1
     id: 1
-    Name: Character01
+    Name: p1001_SkeletonData
     CharacterType: 1
     EffectType: 3
     Rarity: 1
-    Role: 1
+    Role: 2
     skills: 
     Critical: 10
     AttackDamage: 10
@@ -35,11 +35,11 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 2
     id: 2
-    Name: Character02
+    Name: p1003_SkeletonData
     CharacterType: 0
     EffectType: 3
-    Rarity: 1
-    Role: 1
+    Rarity: 2
+    Role: 3
     skills: 
     Critical: 10
     AttackDamage: 10
@@ -55,11 +55,11 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 3
     id: 3
-    Name: Character03
+    Name: p1004_SkeletonData
     CharacterType: 0
     EffectType: 3
-    Rarity: 1
-    Role: 1
+    Rarity: 3
+    Role: 0
     skills: 
     Critical: 10
     AttackDamage: 10
@@ -75,10 +75,10 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 4
     id: 3
-    Name: Character04
+    Name: p1005_SkeletonData
     CharacterType: 0
     EffectType: 3
-    Rarity: 1
+    Rarity: 4
     Role: 1
     skills: 
     Critical: 10
@@ -95,10 +95,10 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 5
     id: 4
-    Name: Character05
+    Name: p1008_SkeletonData
     CharacterType: 0
     EffectType: 3
-    Rarity: 1
+    Rarity: 2
     Role: 1
     skills: 
     Critical: 10
@@ -115,10 +115,10 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 6
     id: 5
-    Name: Character06
+    Name: p1002_SkeletonData
     CharacterType: 1
     EffectType: 2
-    Rarity: 1
+    Rarity: 2
     Role: 1
     skills: 
     Critical: 10
@@ -135,10 +135,10 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 7
     id: 6
-    Name: Character07
-    CharacterType: 1
+    Name: p1007_SkeletonData
+    CharacterType: 0
     EffectType: 2
-    Rarity: 1
+    Rarity: 0
     Role: 1
     skills: 
     Critical: 10
@@ -147,6 +147,46 @@ MonoBehaviour:
     Health: 10
     MoveSpeed: 10
     Star: 5
+    Ascend: 10
+    Level: 5
+    Exp: 10
+    MaxExp: 1000
+    Target: 1
+    isInDeck: 0
+  - ID: 8
+    id: 7
+    Name: p1009_SkeletonData
+    CharacterType: 1
+    EffectType: 2
+    Rarity: 0
+    Role: 1
+    skills: 
+    Critical: 10
+    AttackDamage: 10
+    Depense: 10
+    Health: 10
+    MoveSpeed: 10
+    Star: 5
+    Ascend: 10
+    Level: 20
+    Exp: 10
+    MaxExp: 1000
+    Target: 1
+    isInDeck: 0
+  - ID: 10
+    id: 9
+    Name: p1010_SkeletonData
+    CharacterType: 1
+    EffectType: 2
+    Rarity: 0
+    Role: 1
+    skills: 
+    Critical: 10
+    AttackDamage: 10
+    Depense: 10
+    Health: 10
+    MoveSpeed: 10
+    Star: 4
     Ascend: 10
     Level: 1
     Exp: 10
