@@ -20,7 +20,7 @@ namespace Rubik_Casual
         //[SerializeField] public GameObject inDeck;
         
         
-        public void SetUp(Character character, UnityEngine.Events.UnityAction callbackClick = null, UnityEngine.Events.UnityAction callbackLongClick = null)
+        public void SetUp(Character character)
         {
            
             //avaCard.sprite = Common.GetAvatar(character.Name);
@@ -80,15 +80,16 @@ namespace Rubik_Casual
                     stars[i].GetComponent<Image>().color = Color.red;
                 }
             }
-            
-            if (callbackClick != null)
+
+            var btn = GetComponent<Button>();
+            if (btn != null)
             {
-                btnClick.onClick.AddListener(() => {
-                    callbackClick();
-                });
+                btn.onClick.AddListener(()=>
+                    {CharacterUIController.instance.ShowCharacterInfoPopup(character);});
             }
+
             //inDeck.SetActive(character.isInDeck);
-            
+
         }
         
     }

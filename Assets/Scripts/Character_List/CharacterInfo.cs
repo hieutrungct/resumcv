@@ -10,7 +10,7 @@ namespace Rubik_Casual
 
     public class CharacterInfo : ScriptableObject
     {
-        public Character[] Characters;
+        public List<Character> Characters;
     }
 
 }

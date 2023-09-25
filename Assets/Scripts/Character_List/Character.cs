@@ -60,7 +60,7 @@ namespace Rubik_Casual
         public int Exp;
         public int MaxExp;
         public int Target = 1;
-        public bool isInDeck = false;
+        //public bool isInDeck = false;
     }
     
     

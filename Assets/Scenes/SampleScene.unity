@@ -575,6 +575,7 @@ MonoBehaviour:
   listCharacter: {fileID: 11400000, guid: 9a944bca1aff57244a1738f290bf62aa, type: 2}
   slot_Character: {fileID: 7408709695027442042, guid: e150ba8a1e4e32d40b714555d809c99c, type: 3}
   transformSlot: {fileID: 105487235}
+  characterInfoPopup: {fileID: 8419639845997739835}
 --- !u!4 &1452397437
 Transform:
   m_ObjectHideFlags: 0
@@ -21453,6 +21454,7 @@ GameObject:
   - component: {fileID: 8419639845727489511}
   - component: {fileID: 8419639845727489509}
   - component: {fileID: 8419639845727489510}
+  - component: {fileID: 8419639845727489513}
   m_Layer: 5
   m_Name: Button_Arrow_L
   m_TagString: Untagged
@@ -21460,6 +21462,62 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8419639845727489513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419639845727489512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 8419639845727489510}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8419639845997739835}
+        m_TargetAssemblyTypeName: Rubik_Casual.CharacterInfoPopup, Assembly-CSharp
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &8419639845731070766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22344,14 +22402,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f73a75c814dc24aa773c33e5694df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avaCharacter: {fileID: 0}
-  lvTxt: {fileID: 0}
-  lvProcessTxt: {fileID: 0}
-  damageTxt: {fileID: 0}
-  defenseTxt: {fileID: 0}
-  critTxt: {fileID: 0}
-  healthTxt: {fileID: 0}
-  moveSpeedTxt: {fileID: 0}
+  avaCharacter: {fileID: 1458411610}
+  lvTxt: {fileID: 8419639845684579710}
+  lvProcessTxt: {fileID: 8419639847268727943}
+  damageTxt: {fileID: 8419639846518211675}
+  defenseTxt: {fileID: 8419639846965136237}
+  critTxt: {fileID: 8419639846911721810}
+  healthTxt: {fileID: 8419639846169816134}
+  moveSpeedTxt: {fileID: 8419639846240943671}
+  btn_Arrow_r: {fileID: 8419639846485813110}
+  btn_Arrow_l: {fileID: 8419639845727489513}
+  role: {fileID: 8419639846358681390}
 --- !u!222 &8419639846026695818
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24560,6 +24621,7 @@ GameObject:
   - component: {fileID: 8419639846485813108}
   - component: {fileID: 8419639846485813106}
   - component: {fileID: 8419639846485813107}
+  - component: {fileID: 8419639846485813110}
   m_Layer: 5
   m_Name: Button_Arrow_R
   m_TagString: Untagged
@@ -24567,6 +24629,62 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8419639846485813110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419639846485813109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 8419639846485813107}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8419639845997739835}
+        m_TargetAssemblyTypeName: Rubik_Casual.CharacterInfoPopup, Assembly-CSharp
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8419639846505652209
 MonoBehaviour:
   m_ObjectHideFlags: 0
