@@ -10,7 +10,7 @@ using System.Linq;
 namespace RubikCasual.RewardMonth
 {
     public class RewardMonthController : MonoBehaviour
-        {
+    {
         [SerializeField] NowDaily nowDaily;
         public ItemData ListItemData;
         public DailyLoginItem dailyLoginItem;
@@ -23,18 +23,55 @@ namespace RubikCasual.RewardMonth
         {
             LobbyController.instance.PopupRewardMonth.SetActive(false);
         }
-        
+
         private void Awake()
         {
             instance = this;
             createItemDaily();
         }
-        
+        void Update()
+        {
+            updateItemDaily();
+        }
+
+        void updateItemDaily()
+        {
+            if (nowDaily.dayReward > LobbyController.instance.curentTime || LobbyController.instance.curentTime == 31 )
+            {
+                Reset();
+            }
+            if (nowDaily.dayReward != LobbyController.instance.curentTime && LobbyController.instance.curentTime < 29)
+            {
+                nowDaily.dayReward = LobbyController.instance.curentTime;
+                updateValueItemDaily(nowDaily.dayReward);
+                
+                
+                if (nowDaily.dayReward != 28)
+                {
+                    for (int i = 0; i < nowDaily.dayReward; i++)
+                    {
+                        var itemClear = slotItem[i];
+                        itemClear.Clear.SetActive(true);
+                        itemClear.focus.SetActive(false);
+                        slotItem[nowDaily.dayReward].focus.SetActive(true);
+                    }
+                }
+            }
+            if (LobbyController.instance.curentTime > 27 && LobbyController.instance.curentTime <31)
+            {
+                for (int i = 0; i < 28; i++)
+                    {
+                        var itemClear = slotItem[i];
+                        itemClear.Clear.SetActive(true);
+                        itemClear.focus.SetActive(false);
+                    }
+            }
+        }
         public void Reset()
         {
             foreach (var item in slotItem)
             {
-                
+
                 item.focus.SetActive(false);
                 item.Clear.SetActive(false);
                 item.isCheckClear = false;
@@ -42,64 +79,78 @@ namespace RubikCasual.RewardMonth
                 {
                     item.focus.SetActive(true);
                 }
-                nowDaily.dayReward=0;
-                nowDaily.numberItem=0;
+                nowDaily.dayReward = 0;
+                nowDaily.numberItem = 0;
             }
         }
 
         void createItemDaily()
         {
             DailyLogin = nowDaily.dayReward;
-            for(int i = 1; i <= 28 ; i++)
+            for (int i = 1; i <= 28; i++)
             {
-                    DailyLoginItem SlotClone = Instantiate(dailyLoginItem, slotDailyTransform);
-                    SlotClone.textDayNumber.text = "DAY " + i.ToString();
-                    SlotClone.itemIcon.sprite = ListItemData.InfoItems[ListItemData.daySlots[i-1].idItem].imageItem;
-                    SlotClone.idSlot = i;
-                    SlotClone.idItem = ListItemData.daySlots[i-1].idItem;
-                    if (!check)
-                    {
-                        SlotClone.focus.SetActive(true);
-                        check = true;
-                    }
-                    else
-                    {
-                        SlotClone.focus.SetActive(false);
-                    }
+                DailyLoginItem SlotClone = Instantiate(dailyLoginItem, slotDailyTransform);
+                SlotClone.textDayNumber.text = "DAY " + i.ToString();
+                SlotClone.itemIcon.sprite = ListItemData.InfoItems[ListItemData.daySlots[i - 1].idItem-1].imageItem;
+                SlotClone.itemIcon.preserveAspect = true;
+                SlotClone.idSlot = i;
+                SlotClone.idItem = ListItemData.daySlots[i - 1].idItem;
+                SlotClone.textValue.text = ListItemData.daySlots[i - 1].numberItemBonus.ToString();
+                if (!check)
+                {
+                    SlotClone.focus.SetActive(true);
+                    check = true;
+                }
+                else
+                {
+                    SlotClone.focus.SetActive(false);
+                }
 
-                    if (i % 7 == 0)
-                    {
-                        
-                        //Ngày cuối tuần
-                        SlotClone.BackGlow.color = SlotClone.specialColor;
-                        SlotClone.GetComponent<Image>().sprite = SlotClone.specialBackGlow;
-                    }
-                    slotItem.Add(SlotClone);
+                if (i % 7 == 0)
+                {
+
+                    //Ngày cuối tuần
+                    SlotClone.BackGlow.color = SlotClone.specialColor;
+                    SlotClone.GetComponent<Image>().sprite = SlotClone.specialBackGlow;
+                }
+                slotItem.Add(SlotClone);
             }
         }
-        public void showDayReward(int i)
+        public void updateValueItemDaily(int i)
         {
-            
+
             foreach (var item in slotItem)
             {
                 if (i == item.idSlot)
                 {
-                    
+
                     nowDaily.dayReward = i;
-                    nowDaily.numberItem = ListItemData.daySlots[i-1].numberItemBonus;
+                    nowDaily.numberItem = ListItemData.daySlots[i - 1].numberItemBonus;
                     if (checkItemById(item.idItem).name == "coins")
                     {
-                        LobbyController.instance.textCoins.text = (int.Parse(LobbyController.instance.textCoins.text)+nowDaily.numberItem).ToString() ;
+                        LobbyController.instance.textCoins.text = (int.Parse(LobbyController.instance.textCoins.text) + nowDaily.numberItem).ToString();
                     }
                     if (checkItemById(item.idItem).name == "gems")
                     {
-                        LobbyController.instance.textGem.text = (int.Parse(LobbyController.instance.textGem.text)+nowDaily.numberItem).ToString() ;
+                        LobbyController.instance.textGems.text = (int.Parse(LobbyController.instance.textGems.text) + nowDaily.numberItem).ToString();
+                    }
+                    if (checkItemById(item.idItem).name == "energy")
+                    { 
+                        
+                        LobbyController.instance.numberEnergy += nowDaily.numberItem;
+                        if (LobbyController.instance.numberEnergy>=60)
+                        {
+                            LobbyController.instance.numberEnergy=60;
+                        }
+                        LobbyController.instance.textEnergy.text = 
+                        LobbyController.instance.numberEnergy.ToString() +"/"+
+                        LobbyController.instance.limitEnergy.ToString();
                     }
 
                 }
             }
-            
-            
+
+
             nowDaily.nameDayReward = "Ngày " + nowDaily.dayReward.ToString();
             // UnityEngine.Debug.Log(nowDaily.nameDayReward);
             // UnityEngine.Debug.Log(nowDaily.numberItem);
@@ -120,39 +171,51 @@ namespace RubikCasual.RewardMonth
     [Serializable]
     class NowDaily
     {
-        public string nameDayReward{
-            set{
-                PlayerPrefs.SetString("Name_Day_Reward",value);
+        public string nameDayReward
+        {
+            set
+            {
+                PlayerPrefs.SetString("Name_Day_Reward", value);
             }
-            get{
+            get
+            {
                 return PlayerPrefs.GetString("Name_Day_Reward");
             }
         }
-        public int numberItem{
-            set{
-                PlayerPrefs.SetInt("Number_Item",value);
+        public int numberItem
+        {
+            set
+            {
+                PlayerPrefs.SetInt("Number_Item", value);
             }
-            get{
+            get
+            {
                 return PlayerPrefs.GetInt("Number_Item");
             }
         }
-        public int dayReward{
-            set{
-                PlayerPrefs.SetInt("Note_Day_Reward",value);
+        public int dayReward
+        {
+            set
+            {
+                PlayerPrefs.SetInt("Note_Day_Reward", value);
             }
-            get{
+            get
+            {
                 return PlayerPrefs.GetInt("Note_Day_Reward");
             }
         }
-        public int idItemByDaily{
-            set{
-                PlayerPrefs.SetInt("Note_Day_item",value);
+        public int idItemByDaily
+        {
+            set
+            {
+                PlayerPrefs.SetInt("Note_Day_item", value);
             }
-            get{
+            get
+            {
                 return PlayerPrefs.GetInt("Note_Day_item");
             }
         }
-        
-        
+
+
     }
 }
