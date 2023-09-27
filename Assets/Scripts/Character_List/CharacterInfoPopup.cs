@@ -37,7 +37,7 @@ namespace Rubik_Casual
         public void SetUp(Character character)
         {
             thisCharacter = character;
-            avaCharacter.skeletonDataAsset = AssetLoader.instance.GetAvaById(character.Name);
+            avaCharacter.skeletonDataAsset = AssetLoader.instance.GetAvaById(character.Nameid);
             avaCharacter.initialSkinName = avaCharacter.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             avaCharacter.startingAnimation = avaCharacter.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             SpineEditorUtilities.ReinitializeComponent(avaCharacter);
@@ -65,6 +65,11 @@ namespace Rubik_Casual
             int temp = CharacterUIController.instance.CheckIndexOfCharacter(thisCharacter);
             thisCharacter = CharacterUIController.instance.GetCharacter(temp - 1);
             SetUp(thisCharacter);
+        }
+
+        public void Close()
+        {
+            gameObject.SetActive(false);
         }
         
 

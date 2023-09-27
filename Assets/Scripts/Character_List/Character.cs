@@ -43,10 +43,11 @@ namespace Rubik_Casual
     {
         public int ID;
         public string id;
+        public string Nameid;
         public string Name;
         public CharacterType CharacterType;
         public EffectType EffectType;
-        public int Rarity;
+        public Rare Rarity;
         public int Role;
         public List<SkillName> skills;
         public int Critical;
@@ -60,7 +61,7 @@ namespace Rubik_Casual
         public int Exp;
         public int MaxExp;
         public int Target = 1;
-        //public bool isInDeck = false;
+        public bool isInDeck = false;
     }
     
     

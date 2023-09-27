@@ -26,7 +26,7 @@ namespace Rubik_Casual
             //avaCard.sprite = Common.GetAvatar(character.Name);
             //avaCard.sprite = AssetLoader.Instance.GetAvatarById(character.Name);
     
-            hero.skeletonDataAsset = AssetLoader.instance.GetAvaById(character.Name);
+            hero.skeletonDataAsset = AssetLoader.instance.GetAvaById(character.Nameid);
             hero.initialSkinName = hero.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             hero.startingAnimation = hero.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             //hero.skeletonDataAsset.GetSkeletonData(true);
@@ -36,19 +36,26 @@ namespace Rubik_Casual
             // avaCard.SetNativeSize();
             if (avaBox != null)
             {
-                avaBox.sprite = AssetLoader.Instance.RarrityBox[character.Rarity];
+                
                 switch(character.Rarity)
                 {
-                    case 1:
+                    case Rare.Common:
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[0];
+                        break;
+                    case Rare.UnCommon:
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
                         Glow.GetComponent<Image>().color = Color.blue;
                         break;
-                    case 2:
+                    case Rare.Rare:
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
                         Glow.GetComponent<Image>().color = Color.green;
                         break;
-                    case 3:
+                    case Rare.Epic:
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
                         Glow.GetComponent<Image>().color = Color.yellow;
                         break;
-                    case 4:
+                    case Rare.Legend:
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
                         Glow.GetComponent<Image>().color = Color.magenta;
                         break;
                 }

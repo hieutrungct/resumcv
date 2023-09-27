@@ -9,15 +9,16 @@ namespace Rubik_Casual
     public class Character_ListController : MonoBehaviour
     {
         
-        private void Start()
+        public void OnSortButtonClickedLever()
         {
-            
+            CharacterUIController.instance.SortChar(1);
         }
 
-        void Update()
+        public void OnSortButtonClickedRarity()
         {
-            
+            CharacterUIController.instance.SortChar(0);
         }
+
         
 
         
