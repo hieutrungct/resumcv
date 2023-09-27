@@ -16,8 +16,9 @@ namespace RubikCasual.RewardMonth
         public DailyLoginItem dailyLoginItem;
         public Transform slotDailyTransform;
         public List<DailyLoginItem> slotItem = new List<DailyLoginItem>();
-        public int DailyLogin;
+        public int curentTime, curentTimeMonth;
         bool check = false;
+        public System.DateTime lastDayOfCurrentMonth;
         public static RewardMonthController instance;
         public void CloseButton()
         {
@@ -26,45 +27,93 @@ namespace RubikCasual.RewardMonth
 
         private void Awake()
         {
+
             instance = this;
+            curentTime = 24;
+            curentTimeMonth = System.DateTime.Now.Month;
+
             createItemDaily();
+            ResetTodayTomorrow();
         }
         void Update()
         {
             updateItemDaily();
         }
+        void loadTime()
+        {
+            System.DateTime currentDate = System.DateTime.Now;
+
+            // Lấy ngày đầu tiên của tháng tiếp theo
+            System.DateTime firstDayOfNextMonth = new System.DateTime(currentDate.Year, currentDate.Month, 1).AddMonths(1);
+
+            // Lấy ngày cuối cùng của tháng hiện tại bằng cách trừ 1 ngày từ ngày đầu tiên của tháng tiếp theo
+            lastDayOfCurrentMonth = firstDayOfNextMonth.AddDays(-1);
+
+
+        }
+        void CheckData()
+        {
+            loadTime();
+            // check ngày cuối cùng của daily login
+            if (curentTime == 28 && !ListItemData.daySlots[curentTime - 1].isClick)
+            {
+                ListItemData.daySlots[curentTime - 1].isToday = true;
+            }
+            // check data nếu quá ngày 28 trở đi loại bỏ check today và tomorrow
+            if (curentTime >= 28)
+            {
+                for (int i = 0; i < 28; i++)
+                {
+                    if (i != 27)
+                    {
+                        ListItemData.daySlots[i].isToday = false;
+                    }
+                    ListItemData.daySlots[i].tomorrow = false;
+                }
+            }
+            // ghi nhận today loại bỏ today và tomorrow khi ng chơi ko vào game lâu ngày trừ ngày hiện tại
+            if (curentTime < 28 && !ListItemData.daySlots[curentTime].tomorrow)
+            {
+                ListItemData.daySlots[curentTime - 1].isToday = true;
+                for (int i = 0; i < curentTime - 1; i++)
+                {
+
+                    ListItemData.daySlots[i].isToday = false;
+                    ListItemData.daySlots[i].tomorrow = false;
+                }
+            }
+        }
 
         void updateItemDaily()
         {
-            if (nowDaily.dayReward > LobbyController.instance.curentTime || LobbyController.instance.curentTime == 31 )
+
+            int CountIsClick = 0;
+            foreach (var item in ListItemData.daySlots)
             {
-                Reset();
-            }
-            if (nowDaily.dayReward != LobbyController.instance.curentTime && LobbyController.instance.curentTime < 29)
-            {
-                nowDaily.dayReward = LobbyController.instance.curentTime;
-                updateValueItemDaily(nowDaily.dayReward);
-                
-                
-                if (nowDaily.dayReward != 28)
+                if (item.isToday)
                 {
-                    for (int i = 0; i < nowDaily.dayReward; i++)
-                    {
-                        var itemClear = slotItem[i];
-                        itemClear.Clear.SetActive(true);
-                        itemClear.focus.SetActive(false);
-                        slotItem[nowDaily.dayReward].focus.SetActive(true);
-                    }
+                    CountIsClick++;
                 }
             }
-            if (LobbyController.instance.curentTime > 27 && LobbyController.instance.curentTime <31)
+            if (nowDaily.dayReward > curentTime
+            || curentTime == lastDayOfCurrentMonth.Day
+            || CountIsClick > 1
+            || nowDaily.MonthDaily != curentTimeMonth
+            )
             {
-                for (int i = 0; i < 28; i++)
-                    {
-                        var itemClear = slotItem[i];
-                        itemClear.Clear.SetActive(true);
-                        itemClear.focus.SetActive(false);
-                    }
+                nowDaily.MonthDaily = curentTimeMonth;
+                Reset();
+            }
+        }
+        void ResetTodayTomorrow()
+        {
+            for (int i = 1; i <= curentTime; i++)
+            {
+                if (i != curentTime)
+                {
+                    ListItemData.daySlots[i - 1].isToday = false;
+                    ListItemData.daySlots[i - 1].tomorrow = false;
+                }
             }
         }
         public void Reset()
@@ -75,46 +124,116 @@ namespace RubikCasual.RewardMonth
                 item.focus.SetActive(false);
                 item.Clear.SetActive(false);
                 item.isCheckClear = false;
-                if (item.idSlot == 1)
-                {
-                    item.focus.SetActive(true);
-                }
+
                 nowDaily.dayReward = 0;
                 nowDaily.numberItem = 0;
+                if (item.idSlot <= curentTime)
+                {
+
+                    if (item.idSlot == curentTime)
+                    {
+                        item.focus.SetActive(true);
+                        item.textTodayTomorrow.text = "Today item";
+                    }
+                    else
+                    {
+                        item.Clear.SetActive(true);
+                        item.imageClear.SetActive(false);
+                    }
+                }
+                if (curentTime != item.idSlot)
+                {
+                    ListItemData.daySlots[item.idSlot - 1].isToday = false;
+                }
+
+                ListItemData.daySlots[item.idSlot - 1].isClick = false;
+                ListItemData.daySlots[item.idSlot - 1].tomorrow = false;
             }
         }
 
         void createItemDaily()
         {
-            DailyLogin = nowDaily.dayReward;
+            CheckData();
             for (int i = 1; i <= 28; i++)
             {
                 DailyLoginItem SlotClone = Instantiate(dailyLoginItem, slotDailyTransform);
                 SlotClone.textDayNumber.text = "DAY " + i.ToString();
-                SlotClone.itemIcon.sprite = ListItemData.InfoItems[ListItemData.daySlots[i - 1].idItem-1].imageItem;
+                SlotClone.itemIcon.sprite = ListItemData.InfoItems[ListItemData.daySlots[i - 1].idItem - 1].imageItem;
                 SlotClone.itemIcon.preserveAspect = true;
                 SlotClone.idSlot = i;
                 SlotClone.idItem = ListItemData.daySlots[i - 1].idItem;
                 SlotClone.textValue.text = ListItemData.daySlots[i - 1].numberItemBonus.ToString();
-                if (!check)
+                SlotClone.Item.AddComponent<Button>().onClick.AddListener(() => { onClickButton(SlotClone); });
+
+                if (i < curentTime || ListItemData.daySlots[i - 1].isClick)
+                {
+                    SlotClone.Clear.SetActive(true);
+                }
+
+                if (!ListItemData.daySlots[i - 1].isClick && i < curentTime)
+                {
+                    SlotClone.imageClear.SetActive(false);
+                }
+
+                if (ListItemData.daySlots[i - 1].isToday)
                 {
                     SlotClone.focus.SetActive(true);
-                    check = true;
+                    SlotClone.textTodayTomorrow.text = "Today item";
+                    ListItemData.daySlots[i - 1].tomorrow = false;
                 }
-                else
+
+                if (ListItemData.daySlots[i - 1].tomorrow)
                 {
-                    SlotClone.focus.SetActive(false);
+                    SlotClone.focus.SetActive(true);
+                    SlotClone.textTodayTomorrow.text = "Tomorrow item";
                 }
+
 
                 if (i % 7 == 0)
                 {
-
                     //Ngày cuối tuần
                     SlotClone.BackGlow.color = SlotClone.specialColor;
                     SlotClone.GetComponent<Image>().sprite = SlotClone.specialBackGlow;
                 }
                 slotItem.Add(SlotClone);
             }
+        }
+        void onClickButton(DailyLoginItem slotClone)
+        {
+            if (slotClone.Clear.activeSelf)
+            {
+                return;
+            }
+            if (slotClone.focus.activeSelf && slotClone.textTodayTomorrow.text == "Today item")
+            {
+                if (slotClone.idSlot < 28)
+                {
+                    slotItem[slotClone.idSlot].focus.SetActive(true);
+                    slotItem[slotClone.idSlot].textTodayTomorrow.text = "Tomorrow item";
+                    ListItemData.daySlots[slotClone.idSlot - 1].isClick = true;
+                    ListItemData.daySlots[slotClone.idSlot - 1].isToday = false;
+                    ListItemData.daySlots[slotClone.idSlot].tomorrow = true;
+                }
+                else
+                {
+                    ListItemData.daySlots[slotClone.idSlot - 1].isClick = true;
+                    ListItemData.daySlots[slotClone.idSlot - 1].isToday = false;
+                    ListItemData.daySlots[slotClone.idSlot - 1].tomorrow = false;
+                }
+            }
+            else
+            {
+                return;
+            }
+            if (!slotClone.isCheckClear)
+            {
+                slotClone.Clear.SetActive(true);
+                slotClone.focus.SetActive(false);
+                slotClone.isCheckClear = true;
+                updateValueItemDaily(slotClone.idSlot);
+            }
+            ListItemData.daySlots[slotClone.idSlot - 1].isToday = false;
+
         }
         public void updateValueItemDaily(int i)
         {
@@ -126,27 +245,29 @@ namespace RubikCasual.RewardMonth
 
                     nowDaily.dayReward = i;
                     nowDaily.numberItem = ListItemData.daySlots[i - 1].numberItemBonus;
+
+
+
+
                     if (checkItemById(item.idItem).name == "coins")
                     {
-                        LobbyController.instance.textCoins.text = (int.Parse(LobbyController.instance.textCoins.text) + nowDaily.numberItem).ToString();
+                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "coins").numberItem;
+                        ListItemData.datalobby.FirstOrDefault(L => L.name == "coins").numberItem = NumberItem + nowDaily.numberItem;
                     }
                     if (checkItemById(item.idItem).name == "gems")
                     {
-                        LobbyController.instance.textGems.text = (int.Parse(LobbyController.instance.textGems.text) + nowDaily.numberItem).ToString();
+                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "gems").numberItem;
+                        ListItemData.datalobby.FirstOrDefault(L => L.name == "gems").numberItem = NumberItem + nowDaily.numberItem;
                     }
                     if (checkItemById(item.idItem).name == "energy")
-                    { 
-                        
-                        LobbyController.instance.numberEnergy += nowDaily.numberItem;
-                        if (LobbyController.instance.numberEnergy>=60)
+                    {
+                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "energy").numberItem;
+                        ListItemData.datalobby.FirstOrDefault(L => L.name == "energy").numberItem = NumberItem + nowDaily.numberItem;
+                        if (NumberItem > 60)
                         {
-                            LobbyController.instance.numberEnergy=60;
+                            NumberItem = 60;
                         }
-                        LobbyController.instance.textEnergy.text = 
-                        LobbyController.instance.numberEnergy.ToString() +"/"+
-                        LobbyController.instance.limitEnergy.ToString();
                     }
-
                 }
             }
 
@@ -204,15 +325,15 @@ namespace RubikCasual.RewardMonth
                 return PlayerPrefs.GetInt("Note_Day_Reward");
             }
         }
-        public int idItemByDaily
+        public int MonthDaily
         {
             set
             {
-                PlayerPrefs.SetInt("Note_Day_item", value);
+                PlayerPrefs.SetInt("Note_Month_Reward", value);
             }
             get
             {
-                return PlayerPrefs.GetInt("Note_Day_item");
+                return PlayerPrefs.GetInt("Note_Month_Reward");
             }
         }
 

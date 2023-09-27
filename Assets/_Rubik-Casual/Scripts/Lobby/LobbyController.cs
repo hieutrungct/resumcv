@@ -4,33 +4,35 @@ using RubikCasual.DailyLogin;
 using TMPro;
 using UnityEngine;
 using RubikCasual.DailyItem;
+using RubikCasual.RewardMonth;
 namespace RubikCasual.Lobby
 {
     public class LobbyController : MonoBehaviour
     {
-        public GameObject PopupRewardMonth,PopupRewardWeek;
+        public GameObject PopupRewardMonth, PopupRewardWeek;
         public TextMeshProUGUI textCoins, textGems, textEnergy;
         public ItemData itemdata;
-        public int curentTime, numberEnergy, limitEnergy;
-
+        public int numberEnergy;
         public static LobbyController instance;
-        
+
         void Awake()
         {
             // openRewardMonth();
-            curentTime = 31;
-            limitEnergy = 60;
+
             instance = this;
-            loadItem();
+
         }
+
 
         void Update()
         {
-            saveItem();
+            loadItem();
         }
+
+
+        // load item trong data
         void loadItem()
         {
-            
             foreach (var itemLobby in itemdata.datalobby)
             {
                 numberEnergy = itemLobby.numberItem;
@@ -44,28 +46,12 @@ namespace RubikCasual.Lobby
                 }
                 if (itemLobby.name == "energy")
                 {
-                    textEnergy.text = numberEnergy.ToString() + "/" + limitEnergy.ToString();
+                    textEnergy.text = numberEnergy.ToString() + "/60";
                 }
             }
         }
-        void saveItem()
-        {
-            foreach (var itemLobby in itemdata.datalobby)
-            {
-                if (itemLobby.name == "coins")
-                {
-                    itemLobby.numberItem = int.Parse(textCoins.text);
-                }
-                if (itemLobby.name == "gems")
-                {
-                    itemLobby.numberItem = int.Parse(textGems.text);
-                }
-                if (itemLobby.name == "energy")
-                {
-                    itemLobby.numberItem = numberEnergy;
-                }
-            }
-        }
+        // lưu value item  vào trong data
+
         public void openRewardMonth()
         {
             PopupRewardMonth.SetActive(true);
@@ -76,13 +62,14 @@ namespace RubikCasual.Lobby
         }
         public void upCount()
         {
-            
-            if (curentTime == 31)
+
+            if (RewardMonthController.instance.curentTime == 31)
             {
-                curentTime = 1;
+                RewardMonthController.instance.curentTime = 1;
             }
-            else{
-                curentTime ++;
+            else
+            {
+                RewardMonthController.instance.curentTime++;
             }
         }
     }

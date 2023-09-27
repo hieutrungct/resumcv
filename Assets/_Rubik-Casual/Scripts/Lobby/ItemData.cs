@@ -10,6 +10,7 @@ namespace RubikCasual.DailyItem
     {
         public infoItem[] InfoItems;
         public DaySlot[] daySlots;
+        public DaySlotWeek[] daySlotWeeks;
         public DataLobby[] datalobby;
     }
     [Serializable]
@@ -25,6 +26,15 @@ namespace RubikCasual.DailyItem
     public class DaySlot
     {
         public int  idItem, numberItemBonus;
+        public bool isToday, tomorrow, isClick;
+
+    }
+    [Serializable]
+    public class DaySlotWeek
+    {
+        public int  idItem, numberItemBonus, DayPresent;
+        public bool isToday, tomorrow, isClick;
+
     }
     [Serializable]
     public class DataLobby

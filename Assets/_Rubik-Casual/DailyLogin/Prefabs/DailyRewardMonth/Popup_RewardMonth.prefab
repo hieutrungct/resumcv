@@ -2975,9 +2975,11 @@ MonoBehaviour:
   idItem: 0
   Clear: {fileID: 0}
   focus: {fileID: 0}
+  imageClear: {fileID: 0}
   Item: {fileID: 0}
   textDayNumber: {fileID: 0}
   textValue: {fileID: 0}
+  textTodayTomorrow: {fileID: 0}
   BackGlow: {fileID: 0}
   itemIcon: {fileID: 1468735958275660445}
   nomalBackGlow: {fileID: 0}

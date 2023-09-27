@@ -95,16 +95,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54779c462d039ff48a4ba027a499e64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idSlot: 0
+  idItem: 0
   Clear: {fileID: 8950902384972957967}
   focus: {fileID: 8950902384893591382}
+  imageClear: {fileID: 8950902386356056313}
   Item: {fileID: 8950902384711910306}
   textDayNumber: {fileID: 8950902385603791194}
   textValue: {fileID: 8950902385873839476}
+  textTodayTomorrow: {fileID: 8950902385130889185}
   BackGlow: {fileID: 8950902385178630979}
   itemIcon: {fileID: 8950902384781103842}
   nomalBackGlow: {fileID: 21300000, guid: 9edf88ae67e094b3cb3b788b80b98798, type: 3}
   specialBackGlow: {fileID: 21300000, guid: 72cf9608bf17a4510b03715a42431a14, type: 3}
-  isCheckTomorrow: 0
+  isCheckClear: 0
   nomalColor: {r: 0.39215687, g: 0.9411765, b: 1, a: 0.3529412}
   specialColor: {r: 0.9882353, g: 0.8156863, b: 1, a: 0.6509804}
 --- !u!1 &8950902384781103840
@@ -200,7 +204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8950902384893591383
 RectTransform:
   m_ObjectHideFlags: 0
