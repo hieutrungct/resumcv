@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/New Folder 1.meta
 guid: 93d6557b4c9d4a64f9f8a4d574f7ecd6
+========
+guid: 7bdba1cb8721bd44ba50471f4a66a33f
+>>>>>>>> Hieu/Character:Assets/_Rubik-Casual/Prefab.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

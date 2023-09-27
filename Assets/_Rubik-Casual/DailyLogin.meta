@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Rubik-Casual/DailyLogin.meta
 guid: 313ac4f83fb00fe4ab6c4ba667572a3a
+========
+guid: 1039c4f6928ca984486ff3da07571b2d
+>>>>>>>> Hieu/Character:Assets/Scripts/Character_List.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
