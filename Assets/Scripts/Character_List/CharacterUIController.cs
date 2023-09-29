@@ -13,13 +13,17 @@ namespace Rubik_Casual
         public Transform transformSlot;
         public CharacterInfoPopup characterInfoPopup;
         private List<Character> characters; 
+        private List<Character> sortedCharacters;
         public void Awake()
         {
             DontDestroyOnLoad(this);
             instance = this;
             CreateCharacter();
             characters = listCharacter.Characters;
+            
+            sortedCharacters = new List<Character>();
             SortRarityAndLevel();
+            
         }
 
         void CreateCharacter()
@@ -79,6 +83,9 @@ namespace Rubik_Casual
                     SortLevel();
                     break;
                 }
+                case 2:
+                    SortPower();
+                    break;
                 default:
                 {
                     break;
@@ -92,18 +99,7 @@ namespace Rubik_Casual
             characters.Sort((charA, charB) =>
             {
                 
-                int result = 0;
-                if(charA.Rarity > charB.Rarity)
-                    result = 1;
-                else if(charA.Rarity == charB.Rarity)
-                {
-                    result = charA.Level > charB.Level ? 1 : 0;
-                }
-                else
-                {
-                    result = 0;
-                }
-
+                int result = charA.Rarity.CompareTo(charB.Rarity);
                 return result;
             });
         }
@@ -113,6 +109,14 @@ namespace Rubik_Casual
             characters.Sort((charA, charB) =>
             {
                 int result = charA.Level.CompareTo(charB.Level);
+                return result;
+            });
+        }
+        private void SortPower()
+        {
+            characters.Sort((charA, charB) =>
+            {
+                int result = (charA.Critical + charA.AttackDamage).CompareTo(charB.Critical + charB.AttackDamage);
                 return result;
             });
         }
