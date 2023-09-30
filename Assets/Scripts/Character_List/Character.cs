@@ -31,13 +31,14 @@ namespace Rubik_Casual
         Epic = 3,
         Legend = 4
     }
-    public enum SortHero
+    public enum SortingType
     {
-        Rarity = 0,
-        RoleOfCard = 1,
-        TypyOfCard = 2,
-        EffectType = 3
+        None,
+        Lever,
+        Rarity,
+        Power
     }
+
     [Serializable]
     public class Character
     {

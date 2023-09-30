@@ -27878,7 +27878,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8419639847212617064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8419639845997739835}
+        m_TargetAssemblyTypeName: Rubik_Casual.CharacterInfoPopup, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &8419639847212617063
 CanvasRenderer:
   m_ObjectHideFlags: 0

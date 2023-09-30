@@ -20,8 +20,7 @@ namespace Rubik_Casual
             instance = this;
             CreateCharacter();
             characters = listCharacter.Characters;
-            
-            sortedCharacters = new List<Character>();
+            sortedCharacters = new List<Character>(characters);
             SortRarityAndLevel();
             
         }
@@ -43,18 +42,19 @@ namespace Rubik_Casual
         {
             characters.Sort((charA, charB) =>
             {
-                int result = charA.Rarity.CompareTo(charB.Rarity);
-                if (result == 0)
-                {
-                    result = charA.Level.CompareTo(charB.Level);
-                }
+                //int result = charA.Rarity.CompareTo(charB.Rarity);
+                //if (result == 0)
+                //{
+                //    result = charA.Level.CompareTo(charB.Level);
+                //}
+                int result = charA.Level.CompareTo(charB.Level);
                 return result;
             });
             
             RefreshCharacterUI();
         }
 
-        private void RefreshCharacterUI()
+        public void RefreshCharacterUI()
         {
             foreach (Transform child in transformSlot)
             {
@@ -62,6 +62,20 @@ namespace Rubik_Casual
             }
             
             for (int i = characters.Count-1; i > -1 ; i--)
+            {
+                CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
+                slotCharacter.SetUp(characters[i]);
+            }
+        }
+        
+        public void RefreshCharacterUIOpp()
+        {
+            foreach (Transform child in transformSlot)
+            {
+                Destroy(child.gameObject);
+            }
+            
+            for (int i = 0; i < characters.Count ; i++)
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
                 slotCharacter.SetUp(characters[i]);
