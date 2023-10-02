@@ -39,24 +39,28 @@ namespace Rubik_Casual
                 
                 switch(character.Rarity)
                 {
-                    case Rare.Common:
+                    case Rare.UnCommon:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[0];
                         break;
-                    case Rare.UnCommon:
+                    case Rare.Common:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
-                        Glow.GetComponent<Image>().color = Color.blue;
+                        Glow.GetComponent<Image>().color = new Color(0.043f, 0.455f, 0.808f, 1f);
+                        BackGlow.GetComponent<Image>().color = new Color(0.474f, 0.918f, 1f, 1f);
                         break;
                     case Rare.Rare:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
-                        Glow.GetComponent<Image>().color = Color.green;
+                        Glow.GetComponent<Image>().color = new Color(0f, 0.698f, 0.443f, 1f);
+                        BackGlow.GetComponent<Image>().color = new Color(1f, 0.953f, 0f, 1f);
                         break;
                     case Rare.Epic:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
-                        Glow.GetComponent<Image>().color = Color.yellow;
+                        Glow.GetComponent<Image>().color = new Color(0.886f, 0.58f, 0.173f, 1f);
+                        BackGlow.GetComponent<Image>().color = new Color(1f, 0.313f, 0f, 1f);
                         break;
                     case Rare.Legend:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
-                        Glow.GetComponent<Image>().color = Color.magenta;
+                        Glow.GetComponent<Image>().color = new Color(0.737f, 0.267f, 0.773f, 1f);
+                        BackGlow.GetComponent<Image>().color = new Color(0.929f, 0.459f, 1f, 1f);
                         break;
                 }
                  

@@ -12,19 +12,28 @@ namespace Rubik_Casual
         public TextMeshProUGUI textListSortLever, textListSortRarity, textListSortPower;
         private int  b, c;
         private int a = 3;
+        private bool isFirstClick = true;
         
         public void OnSortButtonClickedLever()
         {
             
             CharacterUIController.instance.SortChar(1);
             SetButtonColors(SortingType.Lever);
-            a--;
+            if (isFirstClick)
+            {
+                a = a - 2;
+                isFirstClick = false;
+            }
+            else
+            {
+                a--;
+            }
             b = c = 0;
             if (a < 1)
             {
                 a = 2;
             }
-            //Debug.Log(a);
+            Debug.Log(a);
             switch (a)
             {
                 case 2:
@@ -48,7 +57,7 @@ namespace Rubik_Casual
             {
                 b = 1;
             }
-            Debug.Log(b);
+            //Debug.Log(b);
             switch (b)
             {
                 case 1:

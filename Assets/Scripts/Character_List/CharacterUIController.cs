@@ -12,7 +12,7 @@ namespace Rubik_Casual
         public CharacterItem slot_Character;
         public Transform transformSlot;
         public CharacterInfoPopup characterInfoPopup;
-        private List<Character> characters; 
+        public List<Character> characters; 
         private List<Character> sortedCharacters;
         public void Awake()
         {
@@ -32,7 +32,6 @@ namespace Rubik_Casual
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
                 slotCharacter.SetUp(listCharacter.Characters[i]);
-                
             }
 
         }
@@ -48,6 +47,10 @@ namespace Rubik_Casual
                 //    result = charA.Level.CompareTo(charB.Level);
                 //}
                 int result = charA.Level.CompareTo(charB.Level);
+                if (result == 0)
+                {
+                    return charA.Rarity.CompareTo(charB.Rarity);
+                }
                 return result;
             });
             
@@ -56,6 +59,7 @@ namespace Rubik_Casual
 
         public void RefreshCharacterUI()
         {
+            
             foreach (Transform child in transformSlot)
             {
                 Destroy(child.gameObject);
@@ -65,17 +69,18 @@ namespace Rubik_Casual
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
                 slotCharacter.SetUp(characters[i]);
+                
             }
         }
         
         public void RefreshCharacterUIOpp()
         {
+            characters.Reverse();
             foreach (Transform child in transformSlot)
             {
                 Destroy(child.gameObject);
             }
-            
-            for (int i = 0; i < characters.Count ; i++)
+            for (int i = characters.Count-1; i > -1 ; i--)
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
                 slotCharacter.SetUp(characters[i]);
@@ -114,6 +119,10 @@ namespace Rubik_Casual
             {
                 
                 int result = charA.Rarity.CompareTo(charB.Rarity);
+                if (result == 0)
+                {
+                    result = charA.Level.CompareTo(charB.Level);
+                }
                 return result;
             });
         }
@@ -123,6 +132,10 @@ namespace Rubik_Casual
             characters.Sort((charA, charB) =>
             {
                 int result = charA.Level.CompareTo(charB.Level);
+                if (result == 0)
+                {
+                    return charA.Rarity.CompareTo(charB.Rarity);
+                }
                 return result;
             });
         }
@@ -131,6 +144,14 @@ namespace Rubik_Casual
             characters.Sort((charA, charB) =>
             {
                 int result = (charA.Critical + charA.AttackDamage).CompareTo(charB.Critical + charB.AttackDamage);
+                if (result == 0)
+                {
+                    result = charA.Level.CompareTo(charB.Level);
+                    if (result == 0)
+                    {
+                        return charA.Rarity.CompareTo(charB.Rarity);
+                    }
+                }
                 return result;
             });
         }
@@ -148,10 +169,15 @@ namespace Rubik_Casual
         }
         public Character GetCharacter(int index)
         {
-            if (index >= listCharacter.Characters.Count || index < 0)
+            if (index >= listCharacter.Characters.Count )
             {
-                index = 0;
+                index = listCharacter.Characters.Count -1;
             }
+            else if (index < 0)
+            {
+                 index = 0;
+            }
+            
             return characters[index];
         }
     }
