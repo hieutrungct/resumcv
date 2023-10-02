@@ -30,8 +30,8 @@ namespace RubikCasual.RewardMonth
         {
 
             instance = this;
-            curentTime = 26;
-            curentTimeMonth = System.DateTime.Now.Month;
+            curentTime = DateTime.Now.Day;
+            curentTimeMonth = DateTime.Now.Month;
 
             createItemDaily();
             ResetTodayTomorrow();
@@ -268,7 +268,7 @@ namespace RubikCasual.RewardMonth
                             NumberItem = 60;
                         }
                         ListItemData.datalobby.FirstOrDefault(L => L.name == "Energy").numberItem = NumberItem + nowDaily.numberItem;
-                        
+
                     }
                 }
             }

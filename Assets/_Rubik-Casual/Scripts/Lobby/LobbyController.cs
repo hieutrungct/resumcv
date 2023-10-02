@@ -10,7 +10,7 @@ namespace RubikCasual.Lobby
 {
     public class LobbyController : MonoBehaviour
     {
-        public GameObject PopupRewardMonth, PopupRewardWeek;
+        public GameObject PopupRewardMonth, PopupRewardWeek, PopupStageSelect;
         public TextMeshProUGUI textCoins, textGems, textEnergy;
         public ItemData itemdata;
         public int numberEnergy;
@@ -61,6 +61,10 @@ namespace RubikCasual.Lobby
         public void openRewardWeek()
         {
             PopupRewardWeek.SetActive(true);
+        }
+        public void openStage()
+        {
+            PopupStageSelect.SetActive(true);
         }
         public void upCount()
         {
