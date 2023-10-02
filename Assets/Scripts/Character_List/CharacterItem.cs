@@ -18,11 +18,11 @@ namespace Rubik_Casual
         [SerializeField] GameObject[] stars;
         [SerializeField] BtnOnClick btnClick;
         //[SerializeField] public GameObject inDeck;
-        
+        private Character _character;
         
         public void SetUp(Character character)
         {
-           
+            //_character = character;
             //avaCard.sprite = Common.GetAvatar(character.Name);
             //avaCard.sprite = AssetLoader.Instance.GetAvatarById(character.Name);
     

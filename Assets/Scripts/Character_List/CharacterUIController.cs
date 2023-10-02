@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace Rubik_Casual
 {
+    
     public class CharacterUIController : MonoBehaviour
     {
         public static CharacterUIController instance;
@@ -14,6 +16,13 @@ namespace Rubik_Casual
         public CharacterInfoPopup characterInfoPopup;
         public List<Character> characters; 
         private List<Character> sortedCharacters;
+        //list
+        public TextMeshProUGUI textListSortLever, textListSortRarity, textListSortPower;
+        private int a, b, c;
+        
+        private float count;
+        private bool isFirstClick = true;
+        
         public void Awake()
         {
             DontDestroyOnLoad(this);
@@ -88,21 +97,22 @@ namespace Rubik_Casual
         }
         
         // aaa
-        public void SortChar(int typeSort)
+        
+        public void SortChar(SortingType typeSort)
         {
             switch (typeSort)
             {
-                case 0:
+                case SortingType.Rarity:
                 {
                     SortRarity();
                     break;
                 }
-                case 1:
+                case SortingType.Lever:
                 {
                     SortLevel();
                     break;
                 }
-                case 2:
+                case SortingType.Power:
                     SortPower();
                     break;
                 default:
@@ -179,6 +189,73 @@ namespace Rubik_Casual
             }
             
             return characters[index];
+        }
+        
+        //list
+        public void OnSortButtonClickedLever()
+        {
+            
+            SortChar(SortingType.Lever);
+            SetButtonColors(SortingType.Lever);
+            if (isFirstClick)
+            {
+                a = a + 2;
+                isFirstClick = false;
+            }
+            else
+            {
+                a++;
+            }
+            b=c = 0;
+            if (a % 2 == 0)
+            {
+                RefreshCharacterUIOpp();
+            }
+            else 
+            {
+                RefreshCharacterUI();
+            }
+            
+        }
+
+        public void OnSortButtonClickedRarity()
+        {
+            SortChar(SortingType.Rarity);
+            SetButtonColors(SortingType.Rarity);
+            b++;
+            if (b % 2 == 0)
+            {
+                RefreshCharacterUIOpp();
+            }
+            else 
+            {
+                RefreshCharacterUI();
+            }
+            a = c = 0;
+            
+            
+        }
+        public void OnSortButtonClickedPower()
+        {
+            SortChar(SortingType.Power);
+            SetButtonColors(SortingType.Power);
+            c++;
+            a = b = 0;
+            if (c % 2 == 0)
+            {
+                RefreshCharacterUIOpp();
+            }
+            else 
+            {
+                RefreshCharacterUI();
+            }
+        }
+        private void SetButtonColors(SortingType selectedSortingType)
+        {
+            // Đặt màu cho nút đã chọn.
+            textListSortLever.color = (selectedSortingType == SortingType.Lever) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
+            textListSortRarity.color = (selectedSortingType == SortingType.Rarity) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
+            textListSortPower.color = (selectedSortingType == SortingType.Power) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
         }
     }
 }
