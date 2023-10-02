@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3922434275445241642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3922434275445241636}
+  - component: {fileID: 3922434275445241643}
+  m_Layer: 0
+  m_Name: AssetLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3922434275445241636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922434275445241642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1823137, y: 0.27932316, z: 238.12334}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3922434275445241643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922434275445241642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3644d17297043e43aeba8f4a11e62eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Avatars: []
+  Hero:
+  - {fileID: 11400000, guid: 61002dc2a13190148bb6a604d0236495, type: 2}
+  - {fileID: 11400000, guid: 9e5b3bcf810e81545abacbe52e76823b, type: 2}
+  - {fileID: 11400000, guid: 3f57c928e97648b42a74d56f7d0b57e2, type: 2}
+  - {fileID: 11400000, guid: 289222355bf34004786f9d6c070d5406, type: 2}
+  - {fileID: 11400000, guid: 4eda021e818ed90409891e4faaab957c, type: 2}
+  - {fileID: 11400000, guid: b067e8e8fdb7b3c47840382dab47eb3d, type: 2}
+  - {fileID: 11400000, guid: 2c0714f56ebe8a242ac1fc55a22816be, type: 2}
+  - {fileID: 11400000, guid: 82114ffbeb92c6e42a83a63730ac3305, type: 2}
+  - {fileID: 11400000, guid: b7ad1348403973d40ba981f2f2343242, type: 2}
+  - {fileID: 11400000, guid: dad3ab82bba634c49b5300e42033f930, type: 2}
+  RarrityBox:
+  - {fileID: 21300000, guid: b56197178539f48009c713d5b5d04a81, type: 3}
+  - {fileID: 21300000, guid: 91d37967864564f818aaf9326fcf0302, type: 3}
+  - {fileID: 21300000, guid: 08be456a6ddbf458784cf3a37e52822f, type: 3}
+  - {fileID: 21300000, guid: 284f99482071f47839549747513b612b, type: 3}
+  - {fileID: 21300000, guid: 072fc1e433b92438e915c6c10bfd2994, type: 3}
+  AttackSprite:
+  - {fileID: 21300000, guid: 7c38202bc1125471cb46578c474ed80e, type: 3}
+  - {fileID: 21300000, guid: b944c63612ae9407cbd657cf70397e9b, type: 3}
+  - {fileID: 21300000, guid: 7a860c9c2d94544b688db0cd613e58bd, type: 3}
+  - {fileID: 21300000, guid: 1b652d4125f7c453eba84d8462355c62, type: 3}
+  EffectSprite: []
+  SkillSprite: []
+  cardPrefab: {fileID: 0}
