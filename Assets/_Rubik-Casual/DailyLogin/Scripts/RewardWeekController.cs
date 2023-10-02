@@ -28,7 +28,7 @@ namespace RubikCasual.RewardWeek
         void Awake()
         {
             instance = this;
-            curentTime = 14;
+            curentTime = RewardMonthController.instance.curentTime;
             CheckDateContinuously();
             createItemDaily();
         }
