@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &3608339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 544767817358985660, guid: bd493aed2a08ac848b243514900a6c58, type: 3}
-  m_PrefabInstance: {fileID: 7160365656768331555}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &105487235 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 544767817307932049, guid: bd493aed2a08ac848b243514900a6c58, type: 3}
@@ -742,6 +737,9 @@ MonoBehaviour:
   transformSlot: {fileID: 105487235}
   characterInfoPopup: {fileID: 8419639845997739835}
   characters: []
+  textListSortLever: {fileID: 1912670771}
+  textListSortRarity: {fileID: 1912670769}
+  textListSortPower: {fileID: 7160365656768331565}
 --- !u!4 &1452397437
 Transform:
   m_ObjectHideFlags: 0
@@ -1019,8 +1017,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7264831564300318367}
-        m_TargetAssemblyTypeName: Rubik_Casual.Character_ListController, Assembly-CSharp
+      - m_Target: {fileID: 1452397436}
+        m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedLever
         m_Mode: 1
         m_Arguments:
@@ -19775,8 +19773,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7264831564300318367}
-        m_TargetAssemblyTypeName: Rubik_Casual.Character_ListController, Assembly-CSharp
+      - m_Target: {fileID: 1452397436}
+        m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedRarity
         m_Mode: 1
         m_Arguments:
@@ -19867,8 +19865,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7264831564300318367}
-        m_TargetAssemblyTypeName: Rubik_Casual.Character_ListController, Assembly-CSharp
+      - m_Target: {fileID: 1452397436}
+        m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedPower
         m_Mode: 1
         m_Arguments:
@@ -19931,21 +19929,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 544767817358985661, guid: bd493aed2a08ac848b243514900a6c58, type: 3}
   m_PrefabInstance: {fileID: 7160365656768331555}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7264831564300318367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3608339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4563e368206b8f448afd810988b15909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textListSortLever: {fileID: 1912670771}
-  textListSortRarity: {fileID: 1912670769}
-  textListSortPower: {fileID: 7160365656768331565}
 --- !u!222 &8419639845239962154
 CanvasRenderer:
   m_ObjectHideFlags: 0

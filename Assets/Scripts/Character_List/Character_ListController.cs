@@ -17,7 +17,7 @@ namespace Rubik_Casual
         public void OnSortButtonClickedLever()
         {
             
-            CharacterUIController.instance.SortChar(1);
+            CharacterUIController.instance.SortChar(SortingType.Lever);
             SetButtonColors(SortingType.Lever);
             if (isFirstClick)
             {
@@ -48,7 +48,7 @@ namespace Rubik_Casual
 
         public void OnSortButtonClickedRarity()
         {
-            CharacterUIController.instance.SortChar(0);
+            CharacterUIController.instance.SortChar(SortingType.Rarity);
             SetButtonColors(SortingType.Rarity);
             b++;
             c = 0;
@@ -71,7 +71,7 @@ namespace Rubik_Casual
         }
         public void OnSortButtonClickedPower()
         {
-            CharacterUIController.instance.SortChar(2);
+            CharacterUIController.instance.SortChar(SortingType.Power);
             SetButtonColors(SortingType.Power);
             c++;
             b = 0;
