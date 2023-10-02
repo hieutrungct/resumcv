@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
+
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 namespace RubikCasual.Day7Login
 {
@@ -12,8 +12,8 @@ namespace RubikCasual.Day7Login
         public int idSlot;
         public int idItem;
         public Image iconImage;
-        public TextMeshProUGUI textValue,textDay;
-        public GameObject clear, imageClear,Item;
+        public TextMeshProUGUI textValue, textDay, textTodayTomorrow;
+        public GameObject Clear, focus, imageClear, Item;
     }
 }
 

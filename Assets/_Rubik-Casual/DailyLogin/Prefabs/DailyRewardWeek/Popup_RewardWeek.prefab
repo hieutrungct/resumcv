@@ -25512,6 +25512,7 @@ MonoBehaviour:
   CloseBtn: {fileID: 7369115794290533363}
   dailyLoginItem: {fileID: 8950902384711910306, guid: cd8a053b69c12664c9c77c20aa2568fc, type: 3}
   day7LoginBonus: {fileID: 2241216093407030507, guid: e5c4b037b56a7304cb1cf2905335b121, type: 3}
+  checkCloseBtn: 0
 --- !u!1 &7369115794332945367
 GameObject:
   m_ObjectHideFlags: 0
@@ -29168,7 +29169,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -853.1, y: 311.89996}
-  m_SizeDelta: {x: 1159, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &7369115795911200249
 MonoBehaviour:
@@ -29868,6 +29869,22 @@ PrefabInstance:
     - target: {fileID: 2241216093407030507, guid: e5c4b037b56a7304cb1cf2905335b121, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751624949460987454, guid: e5c4b037b56a7304cb1cf2905335b121, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 540.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751624949460987454, guid: e5c4b037b56a7304cb1cf2905335b121, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 798.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751624949460987454, guid: e5c4b037b56a7304cb1cf2905335b121, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751624949460987454, guid: e5c4b037b56a7304cb1cf2905335b121, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5c4b037b56a7304cb1cf2905335b121, type: 3}

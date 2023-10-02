@@ -12,7 +12,7 @@ namespace RubikCasual.DailyLogin
     {
         public int idSlot;
         public int idItem;
-        public GameObject Clear, focus,  imageClear, Item;
+        public GameObject Clear, focus, imageClear, Item;
         public TextMeshProUGUI textDayNumber, textValue, textTodayTomorrow;
         public Image BackGlow, itemIcon;
         public Sprite nomalBackGlow, specialBackGlow;

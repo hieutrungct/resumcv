@@ -25,14 +25,14 @@ namespace RubikCasual.DailyItem
     [Serializable]
     public class DaySlot
     {
-        public int  idItem, numberItemBonus;
+        public int idItem, numberItemBonus;
         public bool isToday, tomorrow, isClick;
 
     }
     [Serializable]
     public class DaySlotWeek
     {
-        public int  idItem, numberItemBonus, DayPresent;
+        public int idItem, numberItemBonus, DayPresent;
         public bool isToday, tomorrow, isClick;
 
     }
