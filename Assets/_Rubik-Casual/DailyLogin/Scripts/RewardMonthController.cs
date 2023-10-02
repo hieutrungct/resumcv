@@ -17,19 +17,20 @@ namespace RubikCasual.RewardMonth
         public Transform slotDailyTransform;
         public List<DailyLoginItem> slotItem = new List<DailyLoginItem>();
         public int curentTime, curentTimeMonth;
-        bool check = false;
+        public bool checkCloseBtn = false;
         public System.DateTime lastDayOfCurrentMonth;
         public static RewardMonthController instance;
         public void CloseButton()
         {
             LobbyController.instance.PopupRewardMonth.SetActive(false);
+            checkCloseBtn = true;
         }
 
         private void Awake()
         {
 
             instance = this;
-            curentTime = 24;
+            curentTime = 26;
             curentTimeMonth = System.DateTime.Now.Month;
 
             createItemDaily();
@@ -249,24 +250,25 @@ namespace RubikCasual.RewardMonth
 
 
 
-                    if (checkItemById(item.idItem).name == "coins")
+                    if (checkItemById(item.idItem).name == "Coins")
                     {
-                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "coins").numberItem;
-                        ListItemData.datalobby.FirstOrDefault(L => L.name == "coins").numberItem = NumberItem + nowDaily.numberItem;
+                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "Coins").numberItem;
+                        ListItemData.datalobby.FirstOrDefault(L => L.name == "Coins").numberItem = NumberItem + nowDaily.numberItem;
                     }
-                    if (checkItemById(item.idItem).name == "gems")
+                    if (checkItemById(item.idItem).name == "Gems")
                     {
-                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "gems").numberItem;
-                        ListItemData.datalobby.FirstOrDefault(L => L.name == "gems").numberItem = NumberItem + nowDaily.numberItem;
+                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "Gems").numberItem;
+                        ListItemData.datalobby.FirstOrDefault(L => L.name == "Gems").numberItem = NumberItem + nowDaily.numberItem;
                     }
-                    if (checkItemById(item.idItem).name == "energy")
+                    if (checkItemById(item.idItem).name == "Energy")
                     {
-                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "energy").numberItem;
-                        ListItemData.datalobby.FirstOrDefault(L => L.name == "energy").numberItem = NumberItem + nowDaily.numberItem;
+                        var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "Energy").numberItem;
                         if (NumberItem > 60)
                         {
                             NumberItem = 60;
                         }
+                        ListItemData.datalobby.FirstOrDefault(L => L.name == "Energy").numberItem = NumberItem + nowDaily.numberItem;
+                        
                     }
                 }
             }

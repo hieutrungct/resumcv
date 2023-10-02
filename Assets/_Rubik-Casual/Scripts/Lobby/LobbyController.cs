@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using RubikCasual.DailyItem;
 using RubikCasual.RewardMonth;
+using RubikCasual.RewardWeek;
 namespace RubikCasual.Lobby
 {
     public class LobbyController : MonoBehaviour
@@ -18,14 +19,15 @@ namespace RubikCasual.Lobby
         void Awake()
         {
             // openRewardMonth();
-
             instance = this;
-
+            // PopupRewardMonth.SetActive(true);
+            // PopupRewardWeek.SetActive(true);
         }
 
 
         void Update()
         {
+
             loadItem();
         }
 
@@ -36,15 +38,15 @@ namespace RubikCasual.Lobby
             foreach (var itemLobby in itemdata.datalobby)
             {
                 numberEnergy = itemLobby.numberItem;
-                if (itemLobby.name == "coins")
+                if (itemLobby.name == "Coins")
                 {
                     textCoins.text = itemLobby.numberItem.ToString();
                 }
-                if (itemLobby.name == "gems")
+                if (itemLobby.name == "Gems")
                 {
                     textGems.text = itemLobby.numberItem.ToString();
                 }
-                if (itemLobby.name == "energy")
+                if (itemLobby.name == "Energy")
                 {
                     textEnergy.text = numberEnergy.ToString() + "/60";
                 }
