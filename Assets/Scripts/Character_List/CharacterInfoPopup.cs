@@ -56,14 +56,14 @@ namespace Rubik_Casual
         public void Next()
         {
             int temp = CharacterUIController.instance.CheckIndexOfCharacter(thisCharacter);
-            thisCharacter = CharacterUIController.instance.GetCharacter(temp + 1);
+            thisCharacter = CharacterUIController.instance.GetCharacter(temp - 1);
             SetUp(thisCharacter);
             
         }
         public void Back()
         {
             int temp = CharacterUIController.instance.CheckIndexOfCharacter(thisCharacter);
-            thisCharacter = CharacterUIController.instance.GetCharacter(temp - 1);
+            thisCharacter = CharacterUIController.instance.GetCharacter(temp + 1);
             SetUp(thisCharacter);
         }
 
