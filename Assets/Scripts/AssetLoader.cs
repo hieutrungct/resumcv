@@ -30,6 +30,7 @@ namespace Rubik_Casual
         {
             instance = this;
             Avatars = Resources.LoadAll<Sprite>("Character").ToList();
+            Hero = Resources.LoadAll<SkeletonDataAsset>("Character").ToList();
             
             foreach (Sprite sprite in Avatars)
             {

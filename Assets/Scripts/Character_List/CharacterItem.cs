@@ -22,7 +22,7 @@ namespace Rubik_Casual
         
         public void SetUp(Character character)
         {
-            //_character = character;
+            _character = character;
             //avaCard.sprite = Common.GetAvatar(character.Name);
             //avaCard.sprite = AssetLoader.Instance.GetAvatarById(character.Name);
     

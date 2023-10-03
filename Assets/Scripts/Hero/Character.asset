@@ -15,7 +15,7 @@ MonoBehaviour:
   Characters:
   - ID: 1
     id: 1
-    Nameid: p1001_SkeletonData
+    Nameid: Hero_01
     Name: aaa
     CharacterType: 1
     EffectType: 3
@@ -36,7 +36,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 10
     id: 9
-    Nameid: p1010_SkeletonData
+    Nameid: Hero_010
     Name: kkk
     CharacterType: 1
     EffectType: 2
@@ -57,7 +57,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 2
     id: 2
-    Nameid: p1003_SkeletonData
+    Nameid: Hero_03
     Name: bbb
     CharacterType: 0
     EffectType: 3
@@ -78,7 +78,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 6
     id: 5
-    Nameid: p1002_SkeletonData
+    Nameid: Hero_02
     Name: fff
     CharacterType: 1
     EffectType: 2
@@ -99,7 +99,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 3
     id: 3
-    Nameid: p1004_SkeletonData
+    Nameid: Hero_04
     Name: ccc
     CharacterType: 0
     EffectType: 3
@@ -120,7 +120,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 4
     id: 3
-    Nameid: p1005_SkeletonData
+    Nameid: Hero_05
     Name: ddd
     CharacterType: 0
     EffectType: 3
@@ -141,7 +141,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 7
     id: 6
-    Nameid: p1007_SkeletonData
+    Nameid: Hero_07
     Name: ggg
     CharacterType: 0
     EffectType: 2
@@ -162,7 +162,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 5
     id: 4
-    Nameid: p1008_SkeletonData
+    Nameid: Hero_08
     Name: eee
     CharacterType: 0
     EffectType: 3
@@ -183,7 +183,7 @@ MonoBehaviour:
     isInDeck: 0
   - ID: 8
     id: 7
-    Nameid: p1009_SkeletonData
+    Nameid: Hero_09
     Name: jjj
     CharacterType: 1
     EffectType: 2

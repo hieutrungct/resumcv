@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: p1008_SkeletonData
+  m_Name: Hero_010
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: d3806c684be0f4c5598fff0a9af2f21c, type: 2}
+  - {fileID: 11400000, guid: f78c347b91ed24ecfbda17e1ded820b5, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 7d3a494c692ab4bed9d9c7e57db6b445, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: bd04e647309144c98a388817554d4ab8, type: 3}
   skeletonDataModifiers: []
   fromAnimation: []
   toAnimation: []

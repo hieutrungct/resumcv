@@ -31,7 +31,6 @@ namespace Rubik_Casual
             characters = listCharacter.Characters;
             sortedCharacters = new List<Character>(characters);
             SortRarityAndLevel();
-            
         }
 
         void CreateCharacter()
@@ -50,11 +49,7 @@ namespace Rubik_Casual
         {
             characters.Sort((charA, charB) =>
             {
-                //int result = charA.Rarity.CompareTo(charB.Rarity);
-                //if (result == 0)
-                //{
-                //    result = charA.Level.CompareTo(charB.Level);
-                //}
+                
                 int result = charA.Level.CompareTo(charB.Level);
                 if (result == 0)
                 {
@@ -78,7 +73,6 @@ namespace Rubik_Casual
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
                 slotCharacter.SetUp(characters[i]);
-                
             }
         }
         
