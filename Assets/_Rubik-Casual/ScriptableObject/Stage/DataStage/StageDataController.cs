@@ -10,18 +10,18 @@ namespace RubikCasual.StageData
     public class StageDataController : ScriptableObject
     {
 
-        public List<Stage> stages;
+        public Stage[] stages;
 
 
     }
     [Serializable]
     public class LevelInStage
     {
-        public int idLvl,numberStar;
+        public int idLvl, numberStarComplete;
         public string nameLevel;
-        public bool isItem, isCompleteLevel;
-        public ItemBonus itemBonus;
-
+        public bool isItemTop, isCompleteLevel;
+        public List<ItemBonus> itemBonus;
+        public List<EnermyAtack> enermyAtacks;
         public bool isBoss;
     }
     [Serializable]
@@ -29,18 +29,20 @@ namespace RubikCasual.StageData
     {
         public int idStage, numberLevelUnlockStage;
         public string nameStage;
-        public Image imageStage;
-        public bool unlockStage;
-
-
+        public Sprite imageStage;
+        public bool unlockStage, isNew;
         public List<LevelInStage> levelInStages;
 
     }
     [Serializable]
     public class ItemBonus
     {
-
         public int idItem, numberValueBonus;
-
+    }
+    [Serializable]
+    public class EnermyAtack
+    {
+        public int idEnermy, numberEnermy;
+        public Sprite spriteEnermy;
     }
 }

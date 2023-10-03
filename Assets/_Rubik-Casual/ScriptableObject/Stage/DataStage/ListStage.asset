@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0acb80f8686cf48af6af38db82445b, type: 3}
+  m_Name: ListStage
+  m_EditorClassIdentifier: 
+  stages:
+  - idStage: 1
+    numberLevelUnlockStage: 0
+    nameStage: City of Shadow
+    imageStage: {fileID: 21300000, guid: fdc3ad5fb76254238bca973927314946, type: 3}
+    unlockStage: 1
+    isNew: 0
+    levelInStages:
+    - idLvl: 1
+      numberStarComplete: 3
+      nameLevel: 
+      isItemTop: 1
+      isCompleteLevel: 1
+      itemBonus:
+      - idItem: 1
+        numberValueBonus: 100
+      enermyAtacks:
+      - idEnermy: 1
+        numberEnermy: 2
+        spriteEnermy: {fileID: 0}
+      isBoss: 0
+    - idLvl: 2
+      numberStarComplete: 2
+      nameLevel: 
+      isItemTop: 0
+      isCompleteLevel: 0
+      itemBonus: []
+      enermyAtacks: []
+      isBoss: 0
+    - idLvl: 3
+      numberStarComplete: 0
+      nameLevel: 
+      isItemTop: 0
+      isCompleteLevel: 0
+      itemBonus: []
+      enermyAtacks: []
+      isBoss: 0
+    - idLvl: 4
+      numberStarComplete: 0
+      nameLevel: 
+      isItemTop: 0
+      isCompleteLevel: 0
+      itemBonus: []
+      enermyAtacks: []
+      isBoss: 0
+  - idStage: 2
+    numberLevelUnlockStage: 7
+    nameStage: Whispering Woods
+    imageStage: {fileID: 21300000, guid: 879d2339866da49968a95d6b3f418194, type: 3}
+    unlockStage: 0
+    isNew: 0
+    levelInStages:
+    - idLvl: 0
+      numberStarComplete: 0
+      nameLevel: 
+      isItemTop: 0
+      isCompleteLevel: 0
+      itemBonus: []
+      enermyAtacks: []
+      isBoss: 0
+  - idStage: 3
+    numberLevelUnlockStage: 10
+    nameStage: Cloudy Beach
+    imageStage: {fileID: 21300000, guid: bc4a084373ec44b99b49e7a2a4f5da2d, type: 3}
+    unlockStage: 0
+    isNew: 1
+    levelInStages:
+    - idLvl: 0
+      numberStarComplete: 0
+      nameLevel: 
+      isItemTop: 0
+      isCompleteLevel: 0
+      itemBonus: []
+      enermyAtacks: []
+      isBoss: 0
+  - idStage: 3
+    numberLevelUnlockStage: 10
+    nameStage: Cloudy Beach
+    imageStage: {fileID: 21300000, guid: bc4a084373ec44b99b49e7a2a4f5da2d, type: 3}
+    unlockStage: 0
+    isNew: 1
+    levelInStages:
+    - idLvl: 0
+      numberStarComplete: 0
+      nameLevel: 
+      isItemTop: 0
+      isCompleteLevel: 0
+      itemBonus: []
+      enermyAtacks: []
+      isBoss: 0
+  - idStage: 3
+    numberLevelUnlockStage: 10
+    nameStage: Cloudy Beach
+    imageStage: {fileID: 21300000, guid: bc4a084373ec44b99b49e7a2a4f5da2d, type: 3}
+    unlockStage: 0
+    isNew: 1
+    levelInStages:
+    - idLvl: 0
+      numberStarComplete: 0
+      nameLevel: 
+      isItemTop: 0
+      isCompleteLevel: 0
+      itemBonus: []
+      enermyAtacks: []
+      isBoss: 0
