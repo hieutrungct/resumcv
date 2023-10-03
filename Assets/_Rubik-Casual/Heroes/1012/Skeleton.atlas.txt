@@ -1,0 +1,307 @@
+
+Skeleton.png
+size: 512,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 2, 857
+  size: 205, 165
+  orig: 205, 165
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 406, 169
+  size: 80, 81
+  orig: 80, 81
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 294, 15
+  size: 88, 144
+  orig: 88, 144
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 294, 105
+  size: 110, 128
+  orig: 110, 128
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 294, 235
+  size: 109, 131
+  orig: 109, 131
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: true
+  xy: 468, 104
+  size: 63, 16
+  orig: 63, 16
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: false
+  xy: 233, 15
+  size: 59, 20
+  orig: 59, 20
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: false
+  xy: 104, 4
+  size: 64, 31
+  orig: 64, 31
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 2, 693
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 11
+  rotate: false
+  xy: 2, 201
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 13
+  rotate: false
+  xy: 2, 37
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 15
+  rotate: false
+  xy: 148, 693
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 17
+  rotate: false
+  xy: 148, 529
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 19
+  rotate: false
+  xy: 148, 365
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 21
+  rotate: false
+  xy: 148, 201
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 23
+  rotate: false
+  xy: 148, 37
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 25
+  rotate: false
+  xy: 294, 696
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 27
+  rotate: false
+  xy: 294, 532
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 29
+  rotate: false
+  xy: 294, 368
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 3
+  rotate: false
+  xy: 209, 860
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 5
+  rotate: false
+  xy: 2, 529
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: false
+  xy: 355, 860
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Layer 9
+  rotate: false
+  xy: 2, 365
+  size: 144, 162
+  orig: 144, 162
+  offset: 0, 0
+  index: -1
+Mouth Open
+  rotate: true
+  xy: 487, 440
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 17
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+Weapon1
+  rotate: true
+  xy: 440, 2
+  size: 101, 20
+  orig: 101, 20
+  offset: 0, 0
+  index: -1
+Weapon2
+  rotate: false
+  xy: 406, 105
+  size: 60, 62
+  orig: 60, 62
+  offset: 0, 0
+  index: -1
+b bunches
+  rotate: false
+  xy: 440, 473
+  size: 58, 73
+  orig: 58, 73
+  offset: 0, 0
+  index: -1
+b hand
+  rotate: true
+  xy: 487, 420
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 488, 193
+  size: 22, 57
+  orig: 22, 57
+  offset: 0, 0
+  index: -1
+b lower arm
+  rotate: false
+  xy: 490, 153
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+b speaker
+  rotate: true
+  xy: 170, 4
+  size: 31, 61
+  orig: 31, 61
+  offset: 0, 0
+  index: -1
+b upper arm
+  rotate: true
+  xy: 488, 176
+  size: 15, 22
+  orig: 15, 22
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 440, 548
+  size: 76, 65
+  orig: 76, 65
+  offset: 0, 0
+  index: -1
+bow
+  rotate: true
+  xy: 462, 66
+  size: 36, 21
+  orig: 36, 21
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: false
+  xy: 462, 31
+  size: 20, 33
+  orig: 20, 33
+  offset: 0, 0
+  index: -1
+f bunches
+  rotate: false
+  xy: 440, 743
+  size: 70, 115
+  orig: 70, 115
+  offset: 0, 0
+  index: -1
+f hand
+  rotate: false
+  xy: 490, 133
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: true
+  xy: 440, 371
+  size: 25, 53
+  orig: 25, 53
+  offset: 0, 0
+  index: -1
+f lower arm
+  rotate: false
+  xy: 462, 2
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+f prop
+  rotate: false
+  xy: 440, 398
+  size: 45, 73
+  orig: 45, 73
+  offset: 0, 0
+  index: -1
+f rope
+  rotate: false
+  xy: 440, 626
+  size: 58, 115
+  orig: 58, 115
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 405, 252
+  size: 114, 96
+  orig: 114, 96
+  offset: 0, 0
+  index: -1
