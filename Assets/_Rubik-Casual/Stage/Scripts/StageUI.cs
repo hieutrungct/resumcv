@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-namespace Rubik_Casual.Stage.UI
+namespace RubikCasual.Stage.UI
 {
     public class StageUI : MonoBehaviour
     {

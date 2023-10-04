@@ -15,14 +15,22 @@ namespace RubikCasual.StageData
 
     }
     [Serializable]
+    public class ItemRewardBonus
+    {
+        public int idItem;
+        public int numberItem;
+
+    }
+    [Serializable]
     public class LevelInStage
     {
-        public int idLvl, numberStarComplete;
-        public string nameLevel;
-        public bool isItemTop, isCompleteLevel;
+        public int idLvl, numberStarComplete, numberEnergyAtack;
+
+        public bool isItemTop, isCompleteLevel, isBoss, isLevelPresent, isLevelBonusComplete;
         public List<ItemBonus> itemBonus;
+        public List<ItemRewardBonus> itemRewardBonus;
         public List<EnermyAtack> enermyAtacks;
-        public bool isBoss;
+
     }
     [Serializable]
     public class Stage
@@ -32,7 +40,6 @@ namespace RubikCasual.StageData
         public Sprite imageStage;
         public bool unlockStage, isNew;
         public List<LevelInStage> levelInStages;
-
     }
     [Serializable]
     public class ItemBonus

@@ -228,3 +228,13 @@ MonoBehaviour:
     Skin: 
     numberItem: 60
     imageItem: {fileID: 21300000, guid: 2a395c4f5dd914dd2b50468e92772309, type: 3}
+  - id: 4
+    name: Boxing
+    Skin: 
+    numberItem: 0
+    imageItem: {fileID: 21300000, guid: 7f5077902f34e4dcda6e69df4ced83a7, type: 3}
+  - id: 5
+    name: Book
+    Skin: 
+    numberItem: 0
+    imageItem: {fileID: 21300000, guid: 949f7004ed54344bebb60dbafccfa660, type: 3}

@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Rubik_Casual.Stage.UI;
+using RubikCasual.Stage.UI;
 using RubikCasual.Lobby;
 using RubikCasual.StageData;
 using RubikCasual.StageLevel;
-using UnityEditor.SceneManagement;
+
 using UnityEngine;
 using UnityEngine.UI;
 

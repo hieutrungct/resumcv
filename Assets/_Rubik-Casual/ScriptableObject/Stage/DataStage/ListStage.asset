@@ -22,41 +22,122 @@ MonoBehaviour:
     levelInStages:
     - idLvl: 1
       numberStarComplete: 3
-      nameLevel: 
-      isItemTop: 1
+      numberEnergyAtack: 2
+      isItemTop: 0
       isCompleteLevel: 1
-      itemBonus:
+      isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus:
       - idItem: 1
-        numberValueBonus: 100
+        numberItem: 200
       enermyAtacks:
       - idEnermy: 1
         numberEnermy: 2
         spriteEnermy: {fileID: 0}
-      isBoss: 0
     - idLvl: 2
       numberStarComplete: 2
-      nameLevel: 
-      isItemTop: 0
-      isCompleteLevel: 0
-      itemBonus: []
-      enermyAtacks: []
+      numberEnergyAtack: 2
+      isItemTop: 1
+      isCompleteLevel: 1
       isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 1
+      itemBonus:
+      - idItem: 0
+        numberValueBonus: 0
+      itemRewardBonus:
+      - idItem: 1
+        numberItem: 0
+      - idItem: 2
+        numberItem: 0
+      - idItem: 4
+        numberItem: 0
+      - idItem: 5
+        numberItem: 0
+      enermyAtacks: []
     - idLvl: 3
       numberStarComplete: 0
-      nameLevel: 
+      numberEnergyAtack: 2
       isItemTop: 0
-      isCompleteLevel: 0
-      itemBonus: []
-      enermyAtacks: []
+      isCompleteLevel: 1
       isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus:
+      - idItem: 0
+        numberValueBonus: 0
+      itemRewardBonus: []
+      enermyAtacks: []
     - idLvl: 4
       numberStarComplete: 0
-      nameLevel: 
+      numberEnergyAtack: 2
       isItemTop: 0
       isCompleteLevel: 0
-      itemBonus: []
-      enermyAtacks: []
       isBoss: 0
+      isLevelPresent: 1
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
+    - idLvl: 5
+      numberStarComplete: 0
+      numberEnergyAtack: 2
+      isItemTop: 1
+      isCompleteLevel: 0
+      isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
+    - idLvl: 6
+      numberStarComplete: 0
+      numberEnergyAtack: 0
+      isItemTop: 1
+      isCompleteLevel: 0
+      isBoss: 1
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus:
+      - idItem: 0
+        numberValueBonus: 0
+      itemRewardBonus: []
+      enermyAtacks: []
+    - idLvl: 7
+      numberStarComplete: 0
+      numberEnergyAtack: 0
+      isItemTop: 0
+      isCompleteLevel: 0
+      isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
+    - idLvl: 8
+      numberStarComplete: 0
+      numberEnergyAtack: 0
+      isItemTop: 0
+      isCompleteLevel: 0
+      isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
+    - idLvl: 9
+      numberStarComplete: 0
+      numberEnergyAtack: 0
+      isItemTop: 0
+      isCompleteLevel: 0
+      isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
   - idStage: 2
     numberLevelUnlockStage: 7
     nameStage: Whispering Woods
@@ -66,12 +147,15 @@ MonoBehaviour:
     levelInStages:
     - idLvl: 0
       numberStarComplete: 0
-      nameLevel: 
+      numberEnergyAtack: 0
       isItemTop: 0
       isCompleteLevel: 0
-      itemBonus: []
-      enermyAtacks: []
       isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
   - idStage: 3
     numberLevelUnlockStage: 10
     nameStage: Cloudy Beach
@@ -81,12 +165,15 @@ MonoBehaviour:
     levelInStages:
     - idLvl: 0
       numberStarComplete: 0
-      nameLevel: 
+      numberEnergyAtack: 0
       isItemTop: 0
       isCompleteLevel: 0
-      itemBonus: []
-      enermyAtacks: []
       isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
   - idStage: 3
     numberLevelUnlockStage: 10
     nameStage: Cloudy Beach
@@ -96,12 +183,15 @@ MonoBehaviour:
     levelInStages:
     - idLvl: 0
       numberStarComplete: 0
-      nameLevel: 
+      numberEnergyAtack: 0
       isItemTop: 0
       isCompleteLevel: 0
-      itemBonus: []
-      enermyAtacks: []
       isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
   - idStage: 3
     numberLevelUnlockStage: 10
     nameStage: Cloudy Beach
@@ -111,9 +201,12 @@ MonoBehaviour:
     levelInStages:
     - idLvl: 0
       numberStarComplete: 0
-      nameLevel: 
+      numberEnergyAtack: 0
       isItemTop: 0
       isCompleteLevel: 0
-      itemBonus: []
-      enermyAtacks: []
       isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
