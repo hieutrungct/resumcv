@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using RubikCasual.InfoLevel.Reward;
 using RubikCasual.StageLevel;
 using TMPro;
@@ -13,14 +14,15 @@ namespace RubikCasual.InfoLevel
     {
         public int id = 0;
         public TextMeshProUGUI textNameStage, textEnergy;
-        public Image buttonFinish, lockFinishNow;
-        [SerializeField] List<EnemyUI> enemyUi;
+        public Image buttonFinish, lockFinishNow, buttonFight;
+        public EnermyLevelUI enermyUi;
         public RewardLevelUI rewardUi;
-        public Transform rewardUiPos;
+        public Transform rewardUiPos, enermyUiPos;
         public Sprite unlockFinishNow;
         public void closeButton()
         {
-            StageLevelController.instance.infoLevelClone.gameObject.GetComponent<Animator>().SetTrigger("ClosePop");
+         
+           StageLevelController.instance.infoLevelClone.gameObject.GetComponent<Animator>().SetTrigger("ClosePop");
             StartCoroutine(CloseButtonAfterAnimation());
         }
 
@@ -30,7 +32,9 @@ namespace RubikCasual.InfoLevel
             yield return new WaitForSeconds(0.5f);
 
             // Thực hiện các hành động sau khi Animation hoàn thành
-            Destroy(StageLevelController.instance.infoLevelClone.gameObject);
+
+            Destroy( StageLevelController.instance.infoLevelClone.gameObject);
+           
         }
     }
     [Serializable]

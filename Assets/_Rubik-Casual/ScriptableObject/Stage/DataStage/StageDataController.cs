@@ -50,6 +50,5 @@ namespace RubikCasual.StageData
     public class EnermyAtack
     {
         public int idEnermy, numberEnermy;
-        public Sprite spriteEnermy;
     }
 }

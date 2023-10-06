@@ -9,7 +9,7 @@ namespace RubikCasual.StageLevel.UI
     public class LevelUI : MonoBehaviour
     {
         public List<GameObject> Path, star;
-        public GameObject lvlUITop, lvlUICentrel, lvlUIBottom, focus, iconBoss;
+        public GameObject lvlUITop, lvlUICentrel, lvlUIBottom, focusTop, focusCentrel, focusBotton, iconBoss;
         public Image imageLvl;
         public TextMeshProUGUI textLevel;
         public Sprite focusSprite, normalSprite, notCompleteSprite;
@@ -19,7 +19,9 @@ namespace RubikCasual.StageLevel.UI
         {
             if (!StageLevelController.instance.infoLevelClone)
             {
-                focus.SetActive(false);
+                focusTop.SetActive(false);
+                focusCentrel.SetActive(false);
+                focusBotton.SetActive(false);
             }
         }
     }

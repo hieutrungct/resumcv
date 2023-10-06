@@ -9,21 +9,26 @@ using RubikCasual.StageData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using RubikCasual.EnermyData;
+using Spine.Unity.Editor;
 
 namespace RubikCasual.StageLevel
 {
     public class StageLevelController : MonoBehaviour
     {
         public TextMeshProUGUI textCoins, textGems, textEnergy;
-        public ItemData itemdata;
-        public StageDataController stageDataController;
+
         public Transform levelClonePos, infoLevelPos;
         public InfoLevelController infoLevel, infoLevelClone;
         public LevelUI levelUI;
         public List<LevelUI> listLevelUIClone;
         public Button btnClose;
         public int numberEnergy;
-
+        public ItemData itemdata;
+        public StageDataController stageDataController;
+        public EnemyDataController enemyDataController;
+        int idStage, count = 0;
+        bool isCreateLevelDone;
         GameObject stageLevelClone;
         public static StageLevelController instance;
 
@@ -33,49 +38,67 @@ namespace RubikCasual.StageLevel
             btnClose.onClick.AddListener(() => { destroyStageLevel(); });
             loadItem();
         }
+        void Update()
+        {
+
+        }
         public void destroyStageLevel()
         {
             Destroy(stageLevelClone);
         }
-        public void setUp(int idStage, GameObject stageLevelClones)
+        public void setUp(int idStages, GameObject stageLevelClones)
         {
             stageLevelClone = stageLevelClones;
+            idStage = idStages;
             createLevelUI(idStage);
         }
         void createLevelUI(int idStage)
         {
+
             var listLevelInStage = stageDataController.stages.FirstOrDefault(f => f.idStage == idStage);
             foreach (var item in listLevelInStage.levelInStages)
             {
                 var levelUIClone = Instantiate(levelUI, levelClonePos);
                 levelUIClone.textLevel.text = item.idLvl.ToString();
-                if (item.isLevelPresent)
-                {
-                    levelUIClone.focus.SetActive(true);
-                    createInfoLevel(item.idLvl, listLevelInStage.idStage);
-                }
-                else if (!item.isLevelPresent)
-                {
-                    levelUIClone.imageLvl.sprite = levelUIClone.notCompleteSprite;
-                }
+
                 if (item.isCompleteLevel)
                 {
+
                     levelUIClone.imageLvl.sprite = levelUIClone.normalSprite;
                     for (int i = 0; i < item.numberStarComplete; i++)
                     {
                         levelUIClone.star[i].SetActive(true);
                     }
                 }
+                else
+                {
+                    if (item.isLevelPresent)
+                    {
+                        levelUIClone.focusCentrel.SetActive(true);
+                        createInfoLevel(item.idLvl, listLevelInStage.idStage);
+                    }
+                    else
+                    {
+                        levelUIClone.imageLvl.sprite = levelUIClone.notCompleteSprite;
+                    }
+                }
 
+                //Tạo button cho mọi level kể cả màn chưa hoàn thành
                 levelUIClone.lvlUICentrel.AddComponent<Button>().onClick.AddListener(() =>
                 {
-                    if (!infoLevelClone && levelUIClone.imageLvl.sprite != levelUIClone.notCompleteSprite)
+                    if (item.isCompleteLevel || item.isLevelPresent)
                     {
-                        buttonClick(item.idLvl, listLevelInStage.idStage);
-                        if (true)
+                        var checkFocus = listLevelUIClone.FirstOrDefault(f => f.focusCentrel.activeSelf || f.focusTop.activeSelf || f.focusBotton.activeSelf);
+                        if (checkFocus != null)
                         {
-                            levelUIClone.focus.SetActive(true);
+                            checkFocus.focusTop.SetActive(false);
+                            checkFocus.focusCentrel.SetActive(false);
+                            checkFocus.focusBotton.SetActive(false);
+                            Destroy(infoLevelClone.gameObject);
                         }
+                        levelUIClone.focusCentrel.SetActive(true);
+                        buttonClick(item.idLvl, listLevelInStage.idStage);
+
                     }
                 });
 
@@ -93,8 +116,17 @@ namespace RubikCasual.StageLevel
                         levelUIClone.lvlUITop.SetActive(true);
                         levelUIClone.lvlUITop.AddComponent<Button>().onClick.AddListener(() =>
                         {
-                            if (!item.isLevelBonusComplete && infoLevelClone == null)
+                            if (!item.isLevelBonusComplete && item.isCompleteLevel)
                             {
+                                var checkFocus = listLevelUIClone.FirstOrDefault(f => f.focusCentrel.activeSelf || f.focusTop.activeSelf || f.focusBotton.activeSelf);
+                                if (checkFocus != null)
+                                {
+                                    checkFocus.focusTop.SetActive(false);
+                                    checkFocus.focusCentrel.SetActive(false);
+                                    checkFocus.focusBotton.SetActive(false);
+                                    Destroy(infoLevelClone.gameObject);
+                                }
+                                levelUIClone.focusTop.SetActive(true);
                                 createInfoLevelBonus(item.idLvl, listLevelInStage.idStage, "Coins");
                             }
                         });
@@ -102,21 +134,24 @@ namespace RubikCasual.StageLevel
                         {
                             levelUIClone.lvlUITop.GetComponent<Image>().sprite = levelUIClone.notCompleteSprite;
                         }
-                        foreach (var path in levelUIClone.Path)
-                        {
-                            if (path.name == "Path_Top")
-                            {
-                                path.SetActive(true);
-                            }
-                        }
+                        levelUIClone.Path.FirstOrDefault(f => f.name == "Path_Top").SetActive(true);
                     }
                     else
                     {
                         levelUIClone.lvlUIBottom.SetActive(true);
                         levelUIClone.lvlUIBottom.AddComponent<Button>().onClick.AddListener(() =>
                         {
-                            if (!item.isLevelBonusComplete && infoLevelClone == null)
+                            if (!item.isLevelBonusComplete && item.isCompleteLevel)
                             {
+                                var checkFocus = listLevelUIClone.FirstOrDefault(f => f.focusCentrel.activeSelf || f.focusTop.activeSelf || f.focusBotton.activeSelf);
+                                if (checkFocus != null)
+                                {
+                                    checkFocus.focusTop.SetActive(false);
+                                    checkFocus.focusCentrel.SetActive(false);
+                                    checkFocus.focusBotton.SetActive(false);
+                                    Destroy(infoLevelClone.gameObject);
+                                }
+                                levelUIClone.focusBotton.SetActive(true);
                                 createInfoLevelBonus(item.idLvl, listLevelInStage.idStage, "Gems");
                             }
                         });
@@ -124,34 +159,30 @@ namespace RubikCasual.StageLevel
                         {
                             levelUIClone.lvlUITop.GetComponent<Image>().sprite = levelUIClone.notCompleteSprite;
                         }
-                        foreach (var path in levelUIClone.Path)
-                        {
-                            if (path.name == "Path_Bottom")
-                            {
-                                path.SetActive(true);
-                            }
-                        }
+
+                        levelUIClone.Path.FirstOrDefault(f => f.name == "Path_Bottom").SetActive(true);
                     }
                 }
 
-                foreach (var path in levelUIClone.Path)
+
+                if (item.idLvl == 1)
                 {
-                    if (path.name != "Path_Top" && path.name != "Path_Bottom")
-                    {
-                        path.SetActive(true);
-                        if (item.idLvl == 1 && path.name == "Path_Left")
-                        {
-                            path.SetActive(false);
-                        }
-                        if ((item.idLvl == listLevelInStage.levelInStages[listLevelInStage.levelInStages.Count - 1].idLvl) && path.name == "Path_Right")
-                        {
-                            path.SetActive(false);
-                        }
-                    }
+                    levelUIClone.Path.FirstOrDefault(f => f.name == "Path_Right").SetActive(true);
                 }
+                else if (item.idLvl == listLevelInStage.levelInStages[listLevelInStage.levelInStages.Count - 1].idLvl)
+                {
+                    levelUIClone.Path.FirstOrDefault(f => f.name == "Path_Left").SetActive(true);
+                }
+                else
+                {
+                    levelUIClone.Path.FirstOrDefault(f => f.name == "Path_Right").SetActive(true);
+                    levelUIClone.Path.FirstOrDefault(f => f.name == "Path_Left").SetActive(true);
+                }
+
 
                 listLevelUIClone.Add(levelUIClone);
             }
+            isCreateLevelDone = true;
         }
         void createInfoLevel(int idInfoLevel, int idStage)
         {
@@ -162,7 +193,6 @@ namespace RubikCasual.StageLevel
             infoLevelClone.textNameStage.text = "STAGE " + idInfoLevel.ToString();
 
 
-
             foreach (var item in levelInData)
             {
                 if (item.idLvl == idInfoLevel)
@@ -170,11 +200,30 @@ namespace RubikCasual.StageLevel
                     foreach (var itemReward in item.itemRewardBonus)
                     {
                         var itemRewardClone = Instantiate(infoLevelClone.rewardUi, infoLevelClone.rewardUiPos);
-                        // var 
-                        // infoLevelClone.rewardUi.iconReward.sprite = 
-                        itemRewardClone.textValue.text = item.itemRewardBonus[0].numberItem.ToString();
+                        itemRewardClone.iconReward.sprite = itemdata.InfoItems.FirstOrDefault(f => f.id == itemReward.idItem).imageItem;
+                        itemRewardClone.iconReward.preserveAspect = true;
+                        itemRewardClone.textValue.text = item.itemRewardBonus.FirstOrDefault(f => f.idItem == itemReward.idItem).numberItem.ToString();
                     }
 
+                    foreach (var itemEnermy in item.enermyAtacks)
+                    {
+                        var enermyData = enemyDataController.enermy.FirstOrDefault(f => f.idEnermy == itemEnermy.idEnermy);
+                        var itemEnermyClone = Instantiate(infoLevelClone.enermyUi, infoLevelClone.enermyUiPos);
+                        itemEnermyClone.backgroundColor.color = enermyData.backgroundColor;
+                        itemEnermyClone.bottomGlowColor.color = enermyData.backgroundColor;
+                        itemEnermyClone.mask.color = enermyData.backgroundColor;
+                        itemEnermyClone.frameColor.color = enermyData.frameColor;
+
+                        itemEnermyClone.iconEnermy.skeletonDataAsset = enermyData.fileDataEnermy;
+                        itemEnermyClone.iconEnermy.initialSkinName = enermyData.nameEnermy;
+
+                        for (int i = 0; i < enermyData.numberStar; i++)
+                        {
+                            itemEnermyClone.star[i].SetActive(true);
+                        }
+                        SpineEditorUtilities.ReinitializeComponent(itemEnermyClone.iconEnermy);
+
+                    }
 
                     if (item.isCompleteLevel)
                     {
@@ -184,6 +233,7 @@ namespace RubikCasual.StageLevel
                 }
 
             }
+
         }
         void createInfoLevelBonus(int idInfoLevel, int idStage, string nameItemBonnus)
         {
@@ -192,6 +242,44 @@ namespace RubikCasual.StageLevel
             infoLevelClone = Instantiate(infoLevel, infoLevelPos);
             infoLevelClone.id = idInfoLevel;
             infoLevelClone.textNameStage.text = nameItemBonnus + " Bonus";
+
+            foreach (var item in levelInData)
+            {
+                if (item.idLvl == idInfoLevel)
+                {
+                    foreach (var itemBonus in item.itemBonus)
+                    {
+                        var itemRewardClone = Instantiate(infoLevelClone.rewardUi, infoLevelClone.rewardUiPos);
+                        itemRewardClone.iconReward.sprite = itemdata.InfoItems.FirstOrDefault(f => f.id == itemBonus.idItem).imageItem;
+                        itemRewardClone.iconReward.preserveAspect = true;
+                        itemRewardClone.textValue.text = item.itemBonus[0].numberValueBonus.ToString();
+                    }
+
+                    foreach (var itemEnermy in item.enermyAtacks)
+                    {
+                        var enermyData = enemyDataController.enermy.FirstOrDefault(f => f.idEnermy == itemEnermy.idEnermy);
+                        var itemEnermyClone = Instantiate(infoLevelClone.enermyUi, infoLevelClone.enermyUiPos);
+                        itemEnermyClone.backgroundColor.color = enermyData.backgroundColor;
+                        itemEnermyClone.bottomGlowColor.color = enermyData.backgroundColor;
+                        itemEnermyClone.mask.color = enermyData.backgroundColor;
+                        itemEnermyClone.frameColor.color = enermyData.frameColor;
+
+                        itemEnermyClone.iconEnermy.skeletonDataAsset = enermyData.fileDataEnermy;
+                        itemEnermyClone.iconEnermy.initialSkinName = enermyData.nameEnermy;
+
+                        for (int i = 0; i < enermyData.numberStar; i++)
+                        {
+                            itemEnermyClone.star[i].SetActive(true);
+                        }
+                        SpineEditorUtilities.ReinitializeComponent(itemEnermyClone.iconEnermy);
+
+                    }
+                    infoLevelClone.buttonFinish.gameObject.SetActive(false);
+                    var Pos = new Vector3(5.8f, infoLevelClone.buttonFight.rectTransform.position.y, infoLevelClone.buttonFight.rectTransform.position.z);
+                    infoLevelClone.buttonFight.rectTransform.position = Pos;
+                    Debug.Log(infoLevelClone.buttonFight.rectTransform.position);
+                }
+            }
 
         }
         void buttonClick(int idInfoLevel, int idStage)

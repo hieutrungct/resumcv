@@ -35,7 +35,6 @@ MonoBehaviour:
       enermyAtacks:
       - idEnermy: 1
         numberEnermy: 2
-        spriteEnermy: {fileID: 0}
     - idLvl: 2
       numberStarComplete: 2
       numberEnergyAtack: 2
@@ -43,22 +42,26 @@ MonoBehaviour:
       isCompleteLevel: 1
       isBoss: 0
       isLevelPresent: 0
-      isLevelBonusComplete: 1
+      isLevelBonusComplete: 0
       itemBonus:
-      - idItem: 0
-        numberValueBonus: 0
+      - idItem: 1
+        numberValueBonus: 200
       itemRewardBonus:
       - idItem: 1
-        numberItem: 0
+        numberItem: 100
       - idItem: 2
-        numberItem: 0
+        numberItem: 200
       - idItem: 4
-        numberItem: 0
+        numberItem: 300
       - idItem: 5
-        numberItem: 0
-      enermyAtacks: []
+        numberItem: 400
+      enermyAtacks:
+      - idEnermy: 1
+        numberEnermy: 0
+      - idEnermy: 2
+        numberEnermy: 0
     - idLvl: 3
-      numberStarComplete: 0
+      numberStarComplete: 1
       numberEnergyAtack: 2
       isItemTop: 0
       isCompleteLevel: 1
@@ -66,10 +69,22 @@ MonoBehaviour:
       isLevelPresent: 0
       isLevelBonusComplete: 0
       itemBonus:
-      - idItem: 0
-        numberValueBonus: 0
-      itemRewardBonus: []
-      enermyAtacks: []
+      - idItem: 2
+        numberValueBonus: 300
+      itemRewardBonus:
+      - idItem: 1
+        numberItem: 100
+      - idItem: 2
+        numberItem: 200
+      - idItem: 3
+        numberItem: 300
+      enermyAtacks:
+      - idEnermy: 1
+        numberEnermy: 0
+      - idEnermy: 2
+        numberEnermy: 0
+      - idEnermy: 3
+        numberEnermy: 0
     - idLvl: 4
       numberStarComplete: 0
       numberEnergyAtack: 2
@@ -80,7 +95,15 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enermyAtacks:
+      - idEnermy: 1
+        numberEnermy: 0
+      - idEnermy: 2
+        numberEnermy: 0
+      - idEnermy: 3
+        numberEnermy: 0
+      - idEnermy: 4
+        numberEnermy: 0
     - idLvl: 5
       numberStarComplete: 0
       numberEnergyAtack: 2
@@ -101,7 +124,7 @@ MonoBehaviour:
       isLevelPresent: 0
       isLevelBonusComplete: 0
       itemBonus:
-      - idItem: 0
+      - idItem: 1
         numberValueBonus: 0
       itemRewardBonus: []
       enermyAtacks: []
@@ -128,6 +151,17 @@ MonoBehaviour:
       itemRewardBonus: []
       enermyAtacks: []
     - idLvl: 9
+      numberStarComplete: 0
+      numberEnergyAtack: 0
+      isItemTop: 0
+      isCompleteLevel: 0
+      isBoss: 0
+      isLevelPresent: 0
+      isLevelBonusComplete: 0
+      itemBonus: []
+      itemRewardBonus: []
+      enermyAtacks: []
+    - idLvl: 10
       numberStarComplete: 0
       numberEnergyAtack: 0
       isItemTop: 0
