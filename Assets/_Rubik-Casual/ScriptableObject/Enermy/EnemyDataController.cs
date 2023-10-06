@@ -17,8 +17,8 @@ namespace RubikCasual.EnermyData
     {
         public int idEnermy, numberStar;
         public string nameEnermy;
-        public Color backgroundColor,frameColor;
-        
+        public Color backgroundColor, frameColor;
+        public Sprite backgroundValue;
         public SkeletonDataAsset fileDataEnermy;
     }
 }

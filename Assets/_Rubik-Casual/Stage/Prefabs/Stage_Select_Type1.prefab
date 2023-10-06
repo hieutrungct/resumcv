@@ -929,10 +929,10 @@ RectTransform:
   m_Father: {fileID: 1863484116009675245}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -39.5}
-  m_SizeDelta: {x: 21.999996, y: 79}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1863484115698394847
 CanvasRenderer:
@@ -1070,7 +1070,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 32.1, y: 19.9}
-  m_SizeDelta: {x: 80, y: 79}
+  m_SizeDelta: {x: 0, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1863484116009675155
 CanvasRenderer:
@@ -1409,7 +1409,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3702441997699864481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6572664461310059559}
+        m_TargetAssemblyTypeName: RubikCasual.Stage.StageController, Assembly-CSharp
+        m_MethodName: hideStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2438700588429809782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,7 +3117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollRect: {fileID: 430449419089975263}
-  levelClonePos: {fileID: 0}
+  levelClonePos: {fileID: 6107302262105987662}
   stageClonePos: {fileID: 2794326214839785569}
   stageLevelClone: {fileID: 0}
   stageLevel: {fileID: 8842984249389841346, guid: 2d84e55c0468dca4fa3a1803c2506caa, type: 3}

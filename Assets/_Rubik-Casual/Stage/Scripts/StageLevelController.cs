@@ -213,6 +213,8 @@ namespace RubikCasual.StageLevel
                         itemEnermyClone.bottomGlowColor.color = enermyData.backgroundColor;
                         itemEnermyClone.mask.color = enermyData.backgroundColor;
                         itemEnermyClone.frameColor.color = enermyData.frameColor;
+                        itemEnermyClone.backgroundValue.sprite = enermyData.backgroundValue;
+                        itemEnermyClone.textValue.text = "x" + itemEnermy.numberEnermy.ToString();
 
                         itemEnermyClone.iconEnermy.skeletonDataAsset = enermyData.fileDataEnermy;
                         itemEnermyClone.iconEnermy.initialSkinName = enermyData.nameEnermy;
@@ -263,6 +265,8 @@ namespace RubikCasual.StageLevel
                         itemEnermyClone.bottomGlowColor.color = enermyData.backgroundColor;
                         itemEnermyClone.mask.color = enermyData.backgroundColor;
                         itemEnermyClone.frameColor.color = enermyData.frameColor;
+                        itemEnermyClone.backgroundValue.sprite = enermyData.backgroundValue;
+                        itemEnermyClone.textValue.text = "x" + itemEnermy.numberEnermy.ToString();
 
                         itemEnermyClone.iconEnermy.skeletonDataAsset = enermyData.fileDataEnermy;
                         itemEnermyClone.iconEnermy.initialSkinName = enermyData.nameEnermy;

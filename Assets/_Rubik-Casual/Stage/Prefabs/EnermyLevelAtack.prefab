@@ -630,6 +630,8 @@ MonoBehaviour:
   bottomGlowColor: {fileID: 944056520702448457}
   mask: {fileID: 944056520848081421}
   frameColor: {fileID: 944056519163224673}
+  backgroundValue: {fileID: 139714677177952063}
+  textValue: {fileID: 7795912737541082402}
   star:
   - {fileID: 944056520647805561}
   - {fileID: 197838406632456403}
