@@ -18,22 +18,26 @@ MonoBehaviour:
     nameEnermy: Pet9001
     backgroundColor: {r: 0.2509804, g: 0.98823535, b: 0.98823535, a: 1}
     frameColor: {r: 0.121568605, g: 0.53038776, b: 0.5411765, a: 1}
+    backgroundValue: {fileID: 21300000, guid: 35d7e6588f1f34db1b9a5e62f4efdf77, type: 3}
     fileDataEnermy: {fileID: 11400000, guid: d867aa038088a4c739c6d32b4a709c14, type: 2}
   - idEnermy: 2
     numberStar: 2
     nameEnermy: Pet9002
     backgroundColor: {r: 0.9176471, g: 0.227451, b: 0.41176474, a: 1}
     frameColor: {r: 0.5411765, g: 0.121568605, b: 0.19066843, a: 1}
+    backgroundValue: {fileID: 21300000, guid: c7ade68a31f1d4e12a57617409b6ee8a, type: 3}
     fileDataEnermy: {fileID: 11400000, guid: d0da1e8c3eebf421c96c6911f39de9e1, type: 2}
   - idEnermy: 3
     numberStar: 3
     nameEnermy: Pet9003
     backgroundColor: {r: 0.31764707, g: 0.92549026, b: 0.20392159, a: 1}
     frameColor: {r: 0.17597401, g: 0.5411765, b: 0.121568605, a: 1}
+    backgroundValue: {fileID: 21300000, guid: e6eea4f7cbb9f46f79c0fe06180fa5b3, type: 3}
     fileDataEnermy: {fileID: 11400000, guid: 1bcd41d9505af40b99cc3125c163903e, type: 2}
   - idEnermy: 4
     numberStar: 4
     nameEnermy: Pet9004
     backgroundColor: {r: 0.9294118, g: 0.8705883, b: 0.3254902, a: 1}
     frameColor: {r: 0.5411765, g: 0.50524557, b: 0.121568605, a: 1}
+    backgroundValue: {fileID: 21300000, guid: 84063999b9e1741d099c1d8f7bbc0f7a, type: 3}
     fileDataEnermy: {fileID: 11400000, guid: 9e4675d1b006b43188fb18da01a70c12, type: 2}
