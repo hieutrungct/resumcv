@@ -24,7 +24,7 @@ namespace Rubik_Casual
         
         
 
-        public Image role;
+        public Image role, avatar;
         
         
         private Character thisCharacter;
@@ -42,8 +42,9 @@ namespace Rubik_Casual
             avaCharacter.startingAnimation = avaCharacter.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             SpineEditorUtilities.ReinitializeComponent(avaCharacter);
             
-            role.sprite = AssetLoader.Instance.AttackSprite[character.Role];
+            avatar.sprite = AssetLoader.Instance.GetAvatarById(character.Nameid);
             
+            role.sprite = AssetLoader.Instance.AttackSprite[character.Role];
             lvTxt.text = character.Level.ToString();
             lvProcessTxt.text = character.Exp + "/" + character.Exp;
             damageTxt.text = character.AttackDamage.ToString();
