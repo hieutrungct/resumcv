@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 944056519439950614}
   - component: {fileID: 8015633382522872352}
   m_Layer: 5
-  m_Name: EnermyLevelAtack
+  m_Name: EnemyLevelAtack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ccf48eb47409047b50ece68229eb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iconEnermy: {fileID: 8570045454174039186}
+  iconEnemy: {fileID: 8570045454174039186}
   backgroundColor: {fileID: 944056519439950614}
   bottomGlowColor: {fileID: 944056520702448457}
   mask: {fileID: 944056520848081421}
@@ -1167,8 +1167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122.6, y: 161}
-  m_SizeDelta: {x: 60.0468, y: 53.9527}
+  m_AnchoredPosition: {x: 117.8, y: -142.4}
+  m_SizeDelta: {x: 70.6485, y: 68.3307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7654141435679681408
 CanvasRenderer:
@@ -1200,7 +1200,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 84063999b9e1741d099c1d8f7bbc0f7a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1243,7 +1243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00070953, y: 0}
+  m_AnchoredPosition: {x: -0.0000000036671, y: 3.1}
   m_SizeDelta: {x: 60.045, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5751611290252200888
@@ -1614,7 +1614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 33.76999}
+  m_AnchoredPosition: {x: -15, y: 33.769}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &437239276243505875

@@ -15,9 +15,9 @@ namespace RubikCasual.InfoLevel
         public int id = 0;
         public TextMeshProUGUI textNameStage, textEnergy;
         public Image buttonFinish, lockFinishNow, buttonFight;
-        public EnermyLevelUI enermyUi;
+        public EnemyLevelUI enemyUi;
         public RewardLevelUI rewardUi;
-        public Transform rewardUiPos, enermyUiPos;
+        public Transform rewardUiPos, enemyUiPos;
         public Sprite unlockFinishNow;
         public void closeButton()
         {
@@ -40,8 +40,8 @@ namespace RubikCasual.InfoLevel
     [Serializable]
     class EnemyUI
     {
-        public Image iconEnermy;
-        public List<GameObject> starEnermy;
+        public Image iconEnemy;
+        public List<GameObject> starEnemy;
     }
 
 }

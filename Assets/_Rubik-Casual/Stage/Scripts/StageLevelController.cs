@@ -9,14 +9,15 @@ using RubikCasual.StageData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using RubikCasual.EnermyData;
+using RubikCasual.EnemyData;
 using Spine.Unity.Editor;
+using Rubik_Casual;
 
 namespace RubikCasual.StageLevel
 {
     public class StageLevelController : MonoBehaviour
     {
-        public TextMeshProUGUI textCoins, textGems, textEnergy;
+
 
         public Transform levelClonePos, infoLevelPos;
         public InfoLevelController infoLevel, infoLevelClone;
@@ -36,7 +37,7 @@ namespace RubikCasual.StageLevel
         {
             instance = this;
             btnClose.onClick.AddListener(() => { destroyStageLevel(); });
-            loadItem();
+
         }
         void Update()
         {
@@ -205,25 +206,28 @@ namespace RubikCasual.StageLevel
                         itemRewardClone.textValue.text = item.itemRewardBonus.FirstOrDefault(f => f.idItem == itemReward.idItem).numberItem.ToString();
                     }
 
-                    foreach (var itemEnermy in item.enermyAtacks)
+                    foreach (var itemEnemy in item.enemyAtacks)
                     {
-                        var enermyData = enemyDataController.enermy.FirstOrDefault(f => f.idEnermy == itemEnermy.idEnermy);
-                        var itemEnermyClone = Instantiate(infoLevelClone.enermyUi, infoLevelClone.enermyUiPos);
-                        itemEnermyClone.backgroundColor.color = enermyData.backgroundColor;
-                        itemEnermyClone.bottomGlowColor.color = enermyData.backgroundColor;
-                        itemEnermyClone.mask.color = enermyData.backgroundColor;
-                        itemEnermyClone.frameColor.color = enermyData.frameColor;
-                        itemEnermyClone.backgroundValue.sprite = enermyData.backgroundValue;
-                        itemEnermyClone.textValue.text = "x" + itemEnermy.numberEnermy.ToString();
+                        var enemyData = enemyDataController.enemy.FirstOrDefault(f => f.idEnemy == itemEnemy.idEnemy);
+                        var itemEnemyClone = Instantiate(infoLevelClone.enemyUi, infoLevelClone.enemyUiPos);
+                        var enemy = AssetLoader.instance.GetAvaByNameEn(enemyData.NameEnemyid);
+                        var checkIdEnemyColor = enemyDataController.colorEnemies.FirstOrDefault(f => f.idColor == enemyData.idColor);
 
-                        itemEnermyClone.iconEnermy.skeletonDataAsset = enermyData.fileDataEnermy;
-                        itemEnermyClone.iconEnermy.initialSkinName = enermyData.nameEnermy;
+                        itemEnemyClone.backgroundColor.color = checkIdEnemyColor.backgroundColor;
+                        itemEnemyClone.bottomGlowColor.color = checkIdEnemyColor.backgroundColor;
+                        itemEnemyClone.mask.color = checkIdEnemyColor.backgroundColor;
+                        itemEnemyClone.frameColor.color = checkIdEnemyColor.frameColor;
+                        itemEnemyClone.backgroundValue.sprite = checkIdEnemyColor.backgroundValue;
+                        itemEnemyClone.textValue.text = "x" + itemEnemy.numberEnemy.ToString();
 
-                        for (int i = 0; i < enermyData.numberStar; i++)
+                        itemEnemyClone.iconEnemy.skeletonDataAsset = enemy;
+                        itemEnemyClone.iconEnemy.initialSkinName = enemy.GetSkeletonData(true).Skins.Items[1].Name;
+
+                        for (int i = 0; i < enemyData.numberStar; i++)
                         {
-                            itemEnermyClone.star[i].SetActive(true);
+                            itemEnemyClone.star[i].SetActive(true);
                         }
-                        SpineEditorUtilities.ReinitializeComponent(itemEnermyClone.iconEnermy);
+                        SpineEditorUtilities.ReinitializeComponent(itemEnemyClone.iconEnemy);
 
                     }
 
@@ -257,25 +261,28 @@ namespace RubikCasual.StageLevel
                         itemRewardClone.textValue.text = item.itemBonus[0].numberValueBonus.ToString();
                     }
 
-                    foreach (var itemEnermy in item.enermyAtacks)
+                    foreach (var itemEnemy in item.enemyAtacks)
                     {
-                        var enermyData = enemyDataController.enermy.FirstOrDefault(f => f.idEnermy == itemEnermy.idEnermy);
-                        var itemEnermyClone = Instantiate(infoLevelClone.enermyUi, infoLevelClone.enermyUiPos);
-                        itemEnermyClone.backgroundColor.color = enermyData.backgroundColor;
-                        itemEnermyClone.bottomGlowColor.color = enermyData.backgroundColor;
-                        itemEnermyClone.mask.color = enermyData.backgroundColor;
-                        itemEnermyClone.frameColor.color = enermyData.frameColor;
-                        itemEnermyClone.backgroundValue.sprite = enermyData.backgroundValue;
-                        itemEnermyClone.textValue.text = "x" + itemEnermy.numberEnermy.ToString();
+                        var enemyData = enemyDataController.enemy.FirstOrDefault(f => f.idEnemy == itemEnemy.idEnemy);
+                        var itemEnemyClone = Instantiate(infoLevelClone.enemyUi, infoLevelClone.enemyUiPos);
+                        var enemy = AssetLoader.instance.GetAvaByNameEn(enemyData.NameEnemyid);
+                        var checkIdEnemyColor = enemyDataController.colorEnemies.FirstOrDefault(f => f.idColor == enemyData.idColor);
 
-                        itemEnermyClone.iconEnermy.skeletonDataAsset = enermyData.fileDataEnermy;
-                        itemEnermyClone.iconEnermy.initialSkinName = enermyData.nameEnermy;
+                        itemEnemyClone.backgroundColor.color = checkIdEnemyColor.backgroundColor;
+                        itemEnemyClone.bottomGlowColor.color = checkIdEnemyColor.backgroundColor;
+                        itemEnemyClone.mask.color = checkIdEnemyColor.backgroundColor;
+                        itemEnemyClone.frameColor.color = checkIdEnemyColor.frameColor;
+                        itemEnemyClone.backgroundValue.sprite = checkIdEnemyColor.backgroundValue;
+                        itemEnemyClone.textValue.text = "x" + itemEnemy.numberEnemy.ToString();
 
-                        for (int i = 0; i < enermyData.numberStar; i++)
+                        itemEnemyClone.iconEnemy.skeletonDataAsset = enemy;
+                        itemEnemyClone.iconEnemy.initialSkinName = enemy.GetSkeletonData(true).Skins.Items[1].Name;
+
+                        for (int i = 0; i < enemyData.numberStar; i++)
                         {
-                            itemEnermyClone.star[i].SetActive(true);
+                            itemEnemyClone.star[i].SetActive(true);
                         }
-                        SpineEditorUtilities.ReinitializeComponent(itemEnermyClone.iconEnermy);
+                        SpineEditorUtilities.ReinitializeComponent(itemEnemyClone.iconEnemy);
 
                     }
                     infoLevelClone.buttonFinish.gameObject.SetActive(false);
@@ -291,24 +298,6 @@ namespace RubikCasual.StageLevel
             createInfoLevel(idInfoLevel, idStage);
             Debug.Log("đang bấm");
         }
-        void loadItem()
-        {
-            foreach (var itemLobby in itemdata.datalobby)
-            {
-                numberEnergy = itemLobby.numberItem;
-                if (itemLobby.name == "Coins")
-                {
-                    textCoins.text = itemLobby.numberItem.ToString();
-                }
-                if (itemLobby.name == "Gems")
-                {
-                    textGems.text = itemLobby.numberItem.ToString();
-                }
-                if (itemLobby.name == "Energy")
-                {
-                    textEnergy.text = numberEnergy.ToString() + "/60";
-                }
-            }
-        }
+
     }
 }

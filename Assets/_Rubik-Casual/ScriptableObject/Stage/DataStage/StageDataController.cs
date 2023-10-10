@@ -29,7 +29,7 @@ namespace RubikCasual.StageData
         public bool isItemTop, isCompleteLevel, isBoss, isLevelPresent, isLevelBonusComplete;
         public List<ItemBonus> itemBonus;
         public List<ItemRewardBonus> itemRewardBonus;
-        public List<EnermyAtack> enermyAtacks;
+        public List<EnemyAtack> enemyAtacks;
 
     }
     [Serializable]
@@ -47,8 +47,8 @@ namespace RubikCasual.StageData
         public int idItem, numberValueBonus;
     }
     [Serializable]
-    public class EnermyAtack
+    public class EnemyAtack
     {
-        public int idEnermy, numberEnermy;
+        public int idEnemy, numberEnemy;
     }
 }
