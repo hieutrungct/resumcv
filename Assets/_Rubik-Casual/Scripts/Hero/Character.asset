@@ -33,7 +33,7 @@ MonoBehaviour:
     Exp: 10
     MaxExp: 1000
     Target: 1
-    isInDeck: 0
+    isInDeck: 1
   - ID: 10
     id: 9
     Nameid: Hero_010
@@ -54,7 +54,7 @@ MonoBehaviour:
     Exp: 10
     MaxExp: 1000
     Target: 1
-    isInDeck: 0
+    isInDeck: 1
   - ID: 2
     id: 2
     Nameid: Hero_03
@@ -75,7 +75,7 @@ MonoBehaviour:
     Exp: 10
     MaxExp: 1000
     Target: 1
-    isInDeck: 0
+    isInDeck: 1
   - ID: 6
     id: 5
     Nameid: Hero_02
@@ -96,7 +96,7 @@ MonoBehaviour:
     Exp: 10
     MaxExp: 1000
     Target: 1
-    isInDeck: 0
+    isInDeck: 1
   - ID: 3
     id: 3
     Nameid: Hero_04
