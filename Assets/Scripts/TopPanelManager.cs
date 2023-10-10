@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace Rubik_Casual
 {
     public class TopPanelManager : MonoBehaviour
@@ -15,13 +16,21 @@ namespace Rubik_Casual
 
         public List<string> objectNamesToCheckHide;
         public List<string> objectNamesToCheckActive;
+        
 
         private void Update()
         {
             CheckTabs();
             topPanel.SetActive(true);
         }
+        
 
+        //public void UpdateTopPanel(bool Energe, bool Gold, bool Gem)
+        //{
+            //energer.SetActive(Energe);
+            //gold.SetActive(Gold);
+            //gem.SetActive(Gem);
+        //}
         public void CheckTabs()
         {
             bool hideTopPanel = false;

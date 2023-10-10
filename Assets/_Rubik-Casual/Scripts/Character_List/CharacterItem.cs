@@ -95,8 +95,11 @@ namespace Rubik_Casual
             var btn = GetComponent<Button>();
             if (btn != null)
             {
-                btn.onClick.AddListener(()=>
-                    {CharacterUIController.instance.ShowCharacterInfoPopup(character);});
+                btn.onClick.AddListener(() =>
+                {
+                    CharacterUIController.instance.ShowCharacterInfoPopup(character);
+                    HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true);
+                });
             }
 
             //inDeck.SetActive(character.isInDeck);

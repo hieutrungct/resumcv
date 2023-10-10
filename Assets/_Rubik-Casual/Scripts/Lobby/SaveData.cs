@@ -9,9 +9,7 @@ using CharacterInfo = Rubik_Casual.CharacterInfo;
 public class SaveData : MonoBehaviour
 {
     public CharacterInfo myData;
-
-   
-
+    
     void Start()
     {
         SaveDataToJson();
@@ -26,6 +24,18 @@ public class SaveData : MonoBehaviour
         // Lưu JSON vào tệp
 
         System.IO.File.WriteAllText(Application.dataPath + "/_Rubik-Casual/ScriptableObject/data.json", json);
+    }
+
+    public void OnListCharater()
+    {
+        gameObject.SetActive(true);
+        
+        HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false);
+    }
+    public void HideListCharater()
+    {
+        gameObject.SetActive(false);
+        HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true);
     }
 }
   
