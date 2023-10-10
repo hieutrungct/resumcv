@@ -38,7 +38,6 @@ namespace Rubik_Casual.ScrollView
                 content.anchoredPosition = new Vector2(content.anchoredPosition.x, newY);
                 yield return null;
             }
-
             // Đảm bảo cuộn đến vị trí cuối cùng
             content.anchoredPosition = new Vector2(content.anchoredPosition.x, end);
         }

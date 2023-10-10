@@ -25,13 +25,12 @@ namespace Rubik_Casual
             topPanel.SetActive(true);
         }
         
-        private void Update()
-        {
-            //CheckTabs();
-            //topPanel.SetActive(true);
-        }
+        // private void Update()
+        // {
+        //     CheckTabs();
+        //     topPanel.SetActive(true);
+        // }
         
-
         public void UpdateTopPanel(bool Energe, bool Gold, bool Gem)
         {
             energerObj.SetActive(Energe);

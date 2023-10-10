@@ -136,23 +136,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 283704161}
+      objectReference: {fileID: 283704162}
     - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: HideListCharater
       objectReference: {fileID: 0}
     - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: SaveData, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -671,6 +671,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 664102492689521540, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
   m_PrefabInstance: {fileID: 1838083}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &283704162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283704161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac392b54343a2e94ea5439c288a8ce0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 0}
 --- !u!1 &341892946
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,8 +972,9 @@ GameObject:
   - component: {fileID: 630081333}
   - component: {fileID: 630081332}
   - component: {fileID: 630081331}
+  - component: {fileID: 630081335}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HUDCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1048,6 +1062,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &630081335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630081330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69369dffb5d4ae24c9fd8ec1eedb3211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energerObj: {fileID: 1355882318390028737}
+  topPanel: {fileID: 1355882318418574654}
+  goldObj: {fileID: 1355882318681944387}
+  gemObj: {fileID: 1355882317280480162}
 --- !u!1 &721138100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,7 +3190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 860.26, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355882317280480164
@@ -13529,7 +13559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 124.880005, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355882318390028739
@@ -19041,7 +19071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 488.26, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355882318681944389
@@ -52517,10 +52547,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 283704161}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 283704162}
+        m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
+        m_MethodName: OnListCharater
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

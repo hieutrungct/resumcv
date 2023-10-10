@@ -32,9 +32,9 @@ MonoBehaviour:
       itemRewardBonus:
       - idItem: 1
         numberItem: 200
-      enermyAtacks:
-      - idEnermy: 1
-        numberEnermy: 2
+      enemyAtacks:
+      - idEnemy: 1
+        numberEnemy: 1
     - idLvl: 2
       numberStarComplete: 2
       numberEnergyAtack: 2
@@ -55,11 +55,7 @@ MonoBehaviour:
         numberItem: 300
       - idItem: 5
         numberItem: 400
-      enermyAtacks:
-      - idEnermy: 1
-        numberEnermy: 0
-      - idEnermy: 2
-        numberEnermy: 0
+      enemyAtacks: []
     - idLvl: 3
       numberStarComplete: 1
       numberEnergyAtack: 2
@@ -78,13 +74,7 @@ MonoBehaviour:
         numberItem: 200
       - idItem: 3
         numberItem: 300
-      enermyAtacks:
-      - idEnermy: 1
-        numberEnermy: 0
-      - idEnermy: 2
-        numberEnermy: 0
-      - idEnermy: 3
-        numberEnermy: 0
+      enemyAtacks: []
     - idLvl: 4
       numberStarComplete: 0
       numberEnergyAtack: 2
@@ -95,15 +85,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks:
-      - idEnermy: 1
-        numberEnermy: 0
-      - idEnermy: 2
-        numberEnermy: 0
-      - idEnermy: 3
-        numberEnermy: 0
-      - idEnermy: 4
-        numberEnermy: 0
+      enemyAtacks: []
     - idLvl: 5
       numberStarComplete: 0
       numberEnergyAtack: 2
@@ -114,7 +96,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
     - idLvl: 6
       numberStarComplete: 0
       numberEnergyAtack: 0
@@ -127,7 +109,7 @@ MonoBehaviour:
       - idItem: 1
         numberValueBonus: 0
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
     - idLvl: 7
       numberStarComplete: 0
       numberEnergyAtack: 0
@@ -138,7 +120,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
     - idLvl: 8
       numberStarComplete: 0
       numberEnergyAtack: 0
@@ -149,7 +131,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
     - idLvl: 9
       numberStarComplete: 0
       numberEnergyAtack: 0
@@ -160,7 +142,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
     - idLvl: 10
       numberStarComplete: 0
       numberEnergyAtack: 0
@@ -171,7 +153,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
   - idStage: 2
     numberLevelUnlockStage: 7
     nameStage: Whispering Woods
@@ -189,7 +171,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
   - idStage: 3
     numberLevelUnlockStage: 10
     nameStage: Cloudy Beach
@@ -207,7 +189,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
   - idStage: 3
     numberLevelUnlockStage: 10
     nameStage: Cloudy Beach
@@ -225,7 +207,7 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
   - idStage: 3
     numberLevelUnlockStage: 10
     nameStage: Cloudy Beach
@@ -243,4 +225,4 @@ MonoBehaviour:
       isLevelBonusComplete: 0
       itemBonus: []
       itemRewardBonus: []
-      enermyAtacks: []
+      enemyAtacks: []
