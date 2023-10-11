@@ -296,10 +296,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e51a90ce3a61cc4992316ea6bc4b379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  idHero: 0
   characterInCombat: {fileID: 1500181234787495814}
   healthSlider: {fileID: 79838050539968148}
   healthSpriteHero: {fileID: 21300000, guid: 4ddc2082251c84e67adbea97fdabceb1, type: 3}
   healthSpriteEnemy: {fileID: 21300000, guid: 78b3e96079f8a4c05a3f6d5919d4156a, type: 3}
+  fill: {fileID: 79838051014679114}
 --- !u!1 &5077592846112708865
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,13 +369,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 61002dc2a13190148bb6a604d0236495, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: b51bcb96a3c70472891ce56da2822818, type: 2}
   initialSkinName: Pet1001
   initialFlipX: 0
   initialFlipY: 0
   startingAnimation: Idle
   startingLoop: 1
-  timeScale: 1
+  timeScale: 1.32
   freeze: 0
   updateWhenInvisible: 3
   unscaledTime: 0

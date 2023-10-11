@@ -9,6 +9,7 @@ namespace RubikCasual.Combat.SlotCharacterInfo
 {
     public class SlotCharaterInfoUI : MonoBehaviour
     {
+        public int idHero;
         public SkeletonGraphic heroIcon;
         public TextMeshProUGUI textLvl;
         public Image backGlow, bottomGlow, frame;

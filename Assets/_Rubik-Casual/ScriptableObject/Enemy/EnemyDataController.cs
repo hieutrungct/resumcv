@@ -23,7 +23,7 @@ namespace RubikCasual.EnemyData
     public class Enemy
     {
         public int idEnemy, idColor;
-        public string NameEnemyid, Name;
+        public string NameEnemyid, skinName, Name;
         public CharacterType CharacterType;
         public EffectType EffectType;
         public Rare Rarity;

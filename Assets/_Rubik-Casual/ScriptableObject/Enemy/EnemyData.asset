@@ -93,6 +93,26 @@ MonoBehaviour:
     Exp: 0
     MaxExp: 0
     Target: 0
+  - idEnemy: 5
+    idColor: 4
+    NameEnemyid: 9016_SkeletonData
+    Name: 
+    CharacterType: 0
+    EffectType: 0
+    Rarity: 0
+    Role: 0
+    skills: 
+    Critical: 0
+    AttackDamage: 0
+    Depense: 0
+    Health: 0
+    MoveSpeed: 0
+    numberStar: 0
+    Ascend: 0
+    Level: 0
+    Exp: 0
+    MaxExp: 0
+    Target: 0
   colorEnemies:
   - idColor: 1
     backgroundColor: {r: 0.25490198, g: 0.9686275, b: 0.9686275, a: 1}

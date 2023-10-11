@@ -40,13 +40,13 @@ MonoBehaviour:
     Name: kkk
     CharacterType: 1
     EffectType: 2
-    Rarity: 1
+    Rarity: 2
     Role: 1
     skills: 
     Critical: 15
     AttackDamage: 10
     Depense: 10
-    Health: 10
+    Health: 20
     MoveSpeed: 10
     Star: 4
     Ascend: 10
@@ -61,13 +61,13 @@ MonoBehaviour:
     Name: bbb
     CharacterType: 0
     EffectType: 3
-    Rarity: 2
+    Rarity: 3
     Role: 3
     skills: 
     Critical: 10
     AttackDamage: 10
     Depense: 10
-    Health: 10
+    Health: 17
     MoveSpeed: 10
     Star: 5
     Ascend: 10
@@ -82,13 +82,13 @@ MonoBehaviour:
     Name: fff
     CharacterType: 1
     EffectType: 2
-    Rarity: 2
+    Rarity: 4
     Role: 1
     skills: 
     Critical: 10
     AttackDamage: 13
     Depense: 10
-    Health: 10
+    Health: 25
     MoveSpeed: 10
     Star: 5
     Ascend: 10

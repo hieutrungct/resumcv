@@ -11,7 +11,7 @@ namespace RubikCasual.Combat.Character
         public int id, idHero;
         public SkeletonGraphic characterInCombat;
         public Slider healthSlider;
-        public Sprite healthSpriteHero;
-        public Sprite healthSpriteEnemy;
+        public Sprite healthSpriteHero, healthSpriteEnemy;
+        public Image fill;
     }
 }

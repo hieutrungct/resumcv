@@ -35,6 +35,12 @@ MonoBehaviour:
       enemyAtacks:
       - idEnemy: 1
         numberEnemy: 1
+      - idEnemy: 2
+        numberEnemy: 1
+      - idEnemy: 3
+        numberEnemy: 1
+      - idEnemy: 4
+        numberEnemy: 1
     - idLvl: 2
       numberStarComplete: 2
       numberEnergyAtack: 2
