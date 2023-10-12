@@ -13,5 +13,8 @@ namespace RubikCasual.Combat.Character
         public Slider healthSlider;
         public Sprite healthSpriteHero, healthSpriteEnemy;
         public Image fill;
+        public bool isHero, doneTurn;
+
     }
+
 }

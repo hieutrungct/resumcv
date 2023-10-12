@@ -16,6 +16,7 @@ MonoBehaviour:
   - idEnemy: 1
     idColor: 1
     NameEnemyid: 9001_SkeletonData
+    skinName: Pet9001
     Name: 
     CharacterType: 0
     EffectType: 0
@@ -36,6 +37,7 @@ MonoBehaviour:
   - idEnemy: 2
     idColor: 2
     NameEnemyid: 9002_SkeletonData
+    skinName: Pet9002
     Name: 
     CharacterType: 0
     EffectType: 0
@@ -56,6 +58,7 @@ MonoBehaviour:
   - idEnemy: 3
     idColor: 3
     NameEnemyid: 9003_SkeletonData
+    skinName: Pet9003
     Name: 
     CharacterType: 0
     EffectType: 0
@@ -76,6 +79,7 @@ MonoBehaviour:
   - idEnemy: 4
     idColor: 4
     NameEnemyid: 9004_SkeletonData
+    skinName: Pet9004
     Name: 
     CharacterType: 0
     EffectType: 0
@@ -95,7 +99,8 @@ MonoBehaviour:
     Target: 0
   - idEnemy: 5
     idColor: 4
-    NameEnemyid: 9016_SkeletonData
+    NameEnemyid: 9025_SkeletonData
+    skinName: Pet9025
     Name: 
     CharacterType: 0
     EffectType: 0

@@ -21,15 +21,18 @@ namespace RubikCasual.Combat
         public SlotCharaterInfoUI slotCharaterInfoUI;
         public Rubik_Casual.CharacterInfo characterInfo;
         public List<SlotCharaterInfoUI> listSlotHeroInfoClone;
+        public List<CharacterCombatUI> slotHeroClone, slotEnemyClone;
         public StageDataController stageData;
         public EnemyDataController enemyData;
         public int idLvl, idState;
         public List<int> listIdSlotHero, listIdSlotEnemy;
+        public static CombatController instance;
         void Start()
         {
+            instance = this;
             CreateCombat();
+            instance.gameObject.AddComponent<GamePlay>();
         }
-
         void CreateCombat()
         {
             checkIsInDeck();
@@ -43,7 +46,7 @@ namespace RubikCasual.Combat
             var heroData = characterInfo.Characters.FirstOrDefault(f => f.Nameid == heroIsInDeck.name);
             slotHeroInfoClone.gameObject.AddComponent<Button>().onClick.AddListener(() =>
             {
-
+                slotHeroInfoClone.clickInfoCharacter(heroClone);
             });
             slotHeroInfoClone.idHero = heroData.ID;
             slotHeroInfoClone.heroIcon.skeletonDataAsset = heroIsInDeck;
@@ -108,10 +111,12 @@ namespace RubikCasual.Combat
                 heroClone.characterInCombat.timeScale = UnityEngine.Random.Range(1f, 1.5f);
                 heroClone.healthSlider.value = 1;
                 heroClone.healthSlider.interactable = false;
+                heroClone.isHero = true;
+
                 CreateSlotHeroInfo(heroDataAsset, heroClone);
 
                 SpineEditorUtilities.ReinitializeComponent(heroClone.characterInCombat);
-
+                slotHeroClone.Add(heroClone);
                 count++;
             }
         }
@@ -142,12 +147,14 @@ namespace RubikCasual.Combat
 
                 var enemyClone = Instantiate(characterCombatUI, listSlotEnemy[count]);
                 var enemyDataAsset = Rubik_Casual.AssetLoader.instance.GetAvaByNameEn(enemyData.enemy.FirstOrDefault(f => f.idEnemy == IdSlotEnemy).NameEnemyid);
+
                 enemyClone.characterInCombat.skeletonDataAsset = enemyDataAsset;
                 enemyClone.characterInCombat.initialSkinName = enemyData.enemy.FirstOrDefault(f => f.idEnemy == IdSlotEnemy).skinName;
                 enemyClone.characterInCombat.initialFlipX = true;
                 enemyClone.characterInCombat.timeScale = 1;
                 enemyClone.characterInCombat.gameObject.GetComponent<RectTransform>().localScale = new Vector3(0.7f, 0.7f, 0.7f);
                 enemyClone.characterInCombat.timeScale = UnityEngine.Random.Range(1f, 1.5f);
+
 
                 enemyClone.fill.sprite = enemyClone.healthSpriteEnemy;
                 enemyClone.healthSlider.value = 1;
@@ -156,6 +163,7 @@ namespace RubikCasual.Combat
 
 
                 SpineEditorUtilities.ReinitializeComponent(enemyClone.characterInCombat);
+                slotEnemyClone.Add(enemyClone);
                 count++;
             }
 
