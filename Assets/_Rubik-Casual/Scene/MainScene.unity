@@ -1345,6 +1345,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -40.827354
       objectReference: {fileID: 0}
+    - target: {fileID: 5216631129353726841, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 155.63083
+      objectReference: {fileID: 0}
     - target: {fileID: 5216631129476276615, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1620,6 +1624,10 @@ PrefabInstance:
     - target: {fileID: 5216631130246761796, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
       propertyPath: m_SizeDelta.y
       value: 81.65471
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216631130246761796, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 154.99997
       objectReference: {fileID: 0}
     - target: {fileID: 5216631130301608542, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -51285,7 +51293,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2998343628230418839}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2998343628238473366}
+        m_TargetAssemblyTypeName: RubikCasual.Lobby.LobbyController, Assembly-CSharp
+        m_MethodName: loadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CombatScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &2998343628230418838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51505,6 +51525,7 @@ MonoBehaviour:
   textEnergy: {fileID: 1355882318047799585}
   itemdata: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   numberEnergy: 0
+  Game_Play_Screen: CombatScene
 --- !u!114 &2998343628238473367
 MonoBehaviour:
   m_ObjectHideFlags: 0

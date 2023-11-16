@@ -6,6 +6,7 @@ using UnityEngine;
 using RubikCasual.DailyItem;
 using RubikCasual.RewardMonth;
 using RubikCasual.RewardWeek;
+using System;
 namespace RubikCasual.Lobby
 {
     public class LobbyController : MonoBehaviour
@@ -14,6 +15,7 @@ namespace RubikCasual.Lobby
         public TextMeshProUGUI textCoins, textGems, textEnergy;
         public ItemData itemdata;
         public int numberEnergy;
+        public string Game_Play_Screen = "CombatScene";
         public static LobbyController instance;
 
         void Awake()
@@ -77,6 +79,10 @@ namespace RubikCasual.Lobby
             {
                 RewardMonthController.instance.curentTime++;
             }
+        }
+        public void loadScene(string sceneName)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }
     }
 }
