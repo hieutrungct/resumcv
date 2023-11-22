@@ -31,7 +31,7 @@ namespace RubikCasual.Combat
         {
             instance = this;
             CreateCombat();
-            instance.gameObject.AddComponent<GamePlay>();
+            // instance.gameObject.AddComponent<GamePlay>();
         }
         void CreateCombat()
         {
@@ -114,7 +114,6 @@ namespace RubikCasual.Combat
                 heroClone.isHero = true;
 
                 CreateSlotHeroInfo(heroDataAsset, heroClone);
-
                 SpineEditorUtilities.ReinitializeComponent(heroClone.characterInCombat);
                 slotHeroClone.Add(heroClone);
                 count++;

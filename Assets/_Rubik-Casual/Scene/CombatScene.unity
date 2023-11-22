@@ -436,38 +436,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155352918}
     m_Modifications:
-    - target: {fileID: 2395922521189482334, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.45129168
-      objectReference: {fileID: 0}
-    - target: {fileID: 2395922521189482334, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.28229633
-      objectReference: {fileID: 0}
-    - target: {fileID: 2395922521189482334, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.45129168
-      objectReference: {fileID: 0}
-    - target: {fileID: 2395922521189482334, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.28229633
-      objectReference: {fileID: 0}
-    - target: {fileID: 2395922521189482334, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -28.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 2395922521189482334, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 110.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482109833802191649, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 3.0598145
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482109833802191649, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4823833626789079790, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -576,10 +544,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8621106899502068230, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
-      propertyPath: enemyData
-      value: 
-      objectReference: {fileID: 11400000, guid: b62aee9619b0d5748a10fe2ddf77d7c2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f0c222fb5bced439edd7700324a108, type: 3}
 --- !u!224 &5514172368895619776 stripped

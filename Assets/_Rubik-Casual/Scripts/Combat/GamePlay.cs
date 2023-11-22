@@ -7,13 +7,12 @@ using UnityEngine;
 
 public class GamePlay : MonoBehaviour
 {
-    public bool isStartTurn;
+    public bool isHeroTurn = true, isEndTurn = true;
     public List<CharacterCombatUI> slotHeroClone, slotEnemyClone;
     public static GamePlay instance;
     void Awake()
     {
         instance = this;
-
     }
     void Start()
     {
@@ -24,39 +23,42 @@ public class GamePlay : MonoBehaviour
     }
     void Update()
     {
-        if (i == 4)
+        if (isEndTurn)
         {
-            i = 0;
-        }
-        // Input.GetKeyDown(KeyCode.Space) && 
-        if (!isStartTurn)
-        {
-
-            isStartTurn = true;
+            isEndTurn = false;
             GamePlayStart();
-            i++;
         }
+
     }
-    Vector3 backTurnPos;
+    Vector3 backTurnPos, posMove = new Vector3(2f, 0, 1f);
     float timeScale;
-    int i = 0;
     public void GamePlayStart()
     {
-        var turnIndex = i;
+        var turnIndex = Random.Range(0, 4);
         var attackIndex = Random.Range(0, 2);
-        var turn = slotHeroClone[turnIndex];
+        if (isHeroTurn)
+        {
+            turnHero(slotHeroClone[turnIndex], slotEnemyClone[attackIndex]);
+        }
+        else
+        {
+            turnHero(slotEnemyClone[attackIndex], slotHeroClone[turnIndex]);
+        }
+    }
+    public void turnHero(CharacterCombatUI turn, CharacterCombatUI attack)
+    {
+
         if (turn.characterInCombat.startingAnimation == "Idle")
         {
             turn.doneTurn = false;
             timeScale = turn.characterInCombat.timeScale;
             backTurnPos = turn.transform.position;
-            var attack = slotEnemyClone[attackIndex];
+
 
             StartCoroutine(PerformTurn(turn, attack));
         }
         else
         {
-            isStartTurn = false;
             return;
         }
     }
@@ -65,8 +67,14 @@ public class GamePlay : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        turn.transform.position = attack.transform.position - new Vector3(2f, 0, 1f);
-
+        if (isHeroTurn)
+        {
+            turn.transform.position = attack.transform.position - posMove;
+        }
+        else
+        {
+            turn.transform.position = attack.transform.position + posMove;
+        }
 
         var nhanPham = Random.Range(0, 4);
         turn.characterInCombat.timeScale = 1;
@@ -108,6 +116,7 @@ public class GamePlay : MonoBehaviour
     {
         turn.characterInCombat.timeScale = timeScale;
         turn.transform.position = backTurnPos;
-        isStartTurn = false;
+        isHeroTurn = !isHeroTurn;
+        isEndTurn = true;
     }
 }
