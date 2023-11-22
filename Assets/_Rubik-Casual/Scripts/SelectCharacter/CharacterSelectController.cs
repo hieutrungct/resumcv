@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CharacterSelectController : MonoBehaviour
+namespace RubikCasual.Lobby
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CharacterSelectController : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public List<SlotCharacterUI> lsSlotCharacterUI;
+        public void loadScene(string sceneName)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        }
+        public void BackPopupCharacter()
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

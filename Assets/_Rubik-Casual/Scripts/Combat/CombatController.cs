@@ -9,8 +9,8 @@ using RubikCasual.StageData;
 using Spine.Unity;
 using Spine.Unity.Editor;
 using UnityEngine;
-
 using UnityEngine.UI;
+
 namespace RubikCasual.Combat
 {
     public class CombatController : MonoBehaviour
@@ -31,7 +31,7 @@ namespace RubikCasual.Combat
         {
             instance = this;
             CreateCombat();
-            // instance.gameObject.AddComponent<GamePlay>();
+            instance.gameObject.AddComponent<GamePlay>();
         }
         void CreateCombat()
         {

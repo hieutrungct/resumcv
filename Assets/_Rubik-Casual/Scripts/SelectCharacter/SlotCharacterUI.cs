@@ -1,8 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SlotCharacterUI : MonoBehaviour
+namespace RubikCasual.Lobby
 {
-    
+    public class SlotCharacterUI : MonoBehaviour
+    {
+        public TextMeshProUGUI nameTxt, lvlTxt, expTxt, rateTxt;
+        public List<GameObject> lsStar;
+        public GameObject waittingSlot;
+        public Slider expSlider;
+    }
 }

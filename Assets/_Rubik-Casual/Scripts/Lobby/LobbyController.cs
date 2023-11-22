@@ -68,6 +68,10 @@ namespace RubikCasual.Lobby
         {
             PopupStageSelect.SetActive(true);
         }
+        public void openBattle()
+        {
+            PopupStageSelect.SetActive(true);
+        }
         public void upCount()
         {
 
@@ -80,9 +84,6 @@ namespace RubikCasual.Lobby
                 RewardMonthController.instance.curentTime++;
             }
         }
-        public void loadScene(string sceneName)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-        }
+
     }
 }

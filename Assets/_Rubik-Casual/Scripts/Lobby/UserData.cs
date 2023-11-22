@@ -12,6 +12,7 @@ namespace RubikCasual.Lobby
     {
         public string UserName, UserId;
         public float Gold, Gem, Level, Energy, Hp, Exp, Rank;
+        public List<float> lsIdSlotCharacter = new List<float>();
     }
     public class UserData : MonoBehaviour
     {
