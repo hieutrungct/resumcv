@@ -168,6 +168,10 @@ namespace RubikCasual.Combat
 
         }
 
+        public void loadScene()
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        }
     }
 
 }

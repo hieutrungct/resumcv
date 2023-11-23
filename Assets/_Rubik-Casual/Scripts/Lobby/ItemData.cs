@@ -12,6 +12,7 @@ namespace RubikCasual.DailyItem
         public DaySlot[] daySlots;
         public DaySlotWeek[] daySlotWeeks;
         public DataLobby[] datalobby;
+        public List<float> lsIdSlotSetupCharacter;
     }
     [Serializable]
     public class infoItem

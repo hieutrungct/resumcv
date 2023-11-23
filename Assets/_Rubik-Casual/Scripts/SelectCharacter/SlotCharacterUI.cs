@@ -10,7 +10,7 @@ namespace RubikCasual.Lobby
     {
         public TextMeshProUGUI nameTxt, lvlTxt, expTxt, rateTxt;
         public List<GameObject> lsStar;
-        public GameObject waittingSlot;
+        public GameObject waittingSlot, slotCharacter;
         public Slider expSlider;
     }
 }
