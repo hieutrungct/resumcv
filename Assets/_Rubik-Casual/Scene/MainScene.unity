@@ -1409,7 +1409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5216631129353726841, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 155.63084
+      value: 155.63083
       objectReference: {fileID: 0}
     - target: {fileID: 5216631129476276615, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1689,7 +1689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5216631130246761796, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 154.99998
+      value: 154.99997
       objectReference: {fileID: 0}
     - target: {fileID: 5216631130301608542, guid: 8efffe71f4841ca48955b8a636537c18, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2423,7 +2423,9 @@ MonoBehaviour:
     Exp: 0
     Rank: 0
     lsIdSlotCharacter: []
+    isChange: 0
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
+  characterInfo: {fileID: 11400000, guid: 9a944bca1aff57244a1738f290bf62aa, type: 2}
 --- !u!4 &1793757438
 Transform:
   m_ObjectHideFlags: 0
@@ -2580,6 +2582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1705126863}
     m_Modifications:
+    - target: {fileID: 1606184160599925396, guid: 790b41c8dae7bce4fa33090e4828a73a, type: 3}
+      propertyPath: TopPannel
+      value: 
+      objectReference: {fileID: 1355882318418574654}
     - target: {fileID: 3251697146097561749, guid: 790b41c8dae7bce4fa33090e4828a73a, type: 3}
       propertyPath: m_Name
       value: Character_Select
