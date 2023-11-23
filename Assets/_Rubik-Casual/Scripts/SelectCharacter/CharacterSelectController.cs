@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using Rubik_Casual;
+using RubikCasual.Tool;
 using Spine.Unity;
 using Spine.Unity.Editor;
 using TMPro;
@@ -15,14 +16,15 @@ namespace RubikCasual.Lobby
     public class CharacterSelectController : MonoBehaviour
     {
         public List<SlotCharacterUI> lsSlotCharacterUI;
-        public GameObject TopPannel;
+        public GameObject TopPannel, bgMainscreen;
         UserData userData;
         float duration = 0.5f;
-        Vector3 scaleOrigin, valueScale = new Vector3(), scaleCharacter = new Vector3(1.75f, 1.75f, 1.75f);
+        public Vector3 scaleCharacter = new Vector3(1.75f, 1.75f, 1.75f);
+        public float posOrigin;
         void Start()
         {
             userData = UserData.instance;
-            scaleOrigin = this.transform.localScale;
+            posOrigin = this.transform.position.x;
 
         }
         void Update()
@@ -83,10 +85,11 @@ namespace RubikCasual.Lobby
         public void BackPopupCharacter()
         {
 
-            this.gameObject.transform.DOScale(valueScale, duration);
-            if (this.gameObject.transform.localScale == valueScale)
+            MovePopup.transPopupHorizontal(this.gameObject, bgMainscreen);
+            if (this.gameObject.transform.position.x == posOrigin)
             {
                 this.gameObject.SetActive(false);
+
             }
             TopPannel.SetActive(true);
         }
@@ -94,10 +97,7 @@ namespace RubikCasual.Lobby
         {
             this.gameObject.SetActive(true);
             TopPannel.SetActive(false);
-            if (this.gameObject.transform.localScale == valueScale)
-            {
-                this.gameObject.transform.DOScale(scaleOrigin, duration);
-            }
+            MovePopup.transPopupHorizontal(bgMainscreen, this.gameObject);
         }
     }
 }
