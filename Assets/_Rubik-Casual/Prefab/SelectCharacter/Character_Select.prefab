@@ -6258,6 +6258,9 @@ MonoBehaviour:
   - {fileID: 5953795216237300452}
   - {fileID: 7566785013843891121}
   TopPannel: {fileID: 0}
+  bgMainscreen: {fileID: 0}
+  scaleCharacter: {x: 1.75, y: 1.75, z: 1.75}
+  posOrigin: 0
 --- !u!1 &3326807131434642526
 GameObject:
   m_ObjectHideFlags: 0

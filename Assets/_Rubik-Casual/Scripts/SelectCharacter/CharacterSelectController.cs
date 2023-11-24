@@ -25,7 +25,6 @@ namespace RubikCasual.Lobby
         {
             userData = UserData.instance;
             posOrigin = this.transform.position.x;
-
         }
         void Update()
         {
@@ -85,7 +84,7 @@ namespace RubikCasual.Lobby
         public void BackPopupCharacter()
         {
 
-            MovePopup.transPopupHorizontal(this.gameObject, bgMainscreen);
+            MovePopup.TransPopupHorizontal(this.gameObject, bgMainscreen);
             if (this.gameObject.transform.position.x == posOrigin)
             {
                 this.gameObject.SetActive(false);
@@ -97,7 +96,7 @@ namespace RubikCasual.Lobby
         {
             this.gameObject.SetActive(true);
             TopPannel.SetActive(false);
-            MovePopup.transPopupHorizontal(bgMainscreen, this.gameObject);
+            MovePopup.TransPopupHorizontal(bgMainscreen, this.gameObject);
         }
     }
 }

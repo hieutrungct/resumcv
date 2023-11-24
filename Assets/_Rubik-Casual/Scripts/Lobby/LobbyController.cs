@@ -68,10 +68,7 @@ namespace RubikCasual.Lobby
         {
             PopupStageSelect.SetActive(true);
         }
-        public void openBattle()
-        {
-            PopupStageSelect.SetActive(true);
-        }
+
         public void upCount()
         {
 

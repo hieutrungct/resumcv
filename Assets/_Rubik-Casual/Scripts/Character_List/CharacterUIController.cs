@@ -3,26 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using RubikCasual.Tool;
 
 namespace Rubik_Casual
 {
-    
+
     public class CharacterUIController : MonoBehaviour
     {
+        public GameObject gbTaget, gbPopupOpen;
         public static CharacterUIController instance;
         public CharacterInfo listCharacter;
         public CharacterItem slot_Character;
         public Transform transformSlot;
         public CharacterInfoPopup characterInfoPopup;
-        public List<Character> characters; 
+        public List<Character> characters;
         private List<Character> sortedCharacters;
         //list
         public TextMeshProUGUI textListSortLever, textListSortRarity, textListSortPower;
         private int a, b, c;
-        
+
         private float count;
         private bool isFirstClick = true;
-        
+
         public void Awake()
         {
             DontDestroyOnLoad(this);
@@ -35,7 +37,7 @@ namespace Rubik_Casual
 
         void CreateCharacter()
         {
-            
+
             for (int i = 0; i < listCharacter.Characters.Count; i++)
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
@@ -43,13 +45,13 @@ namespace Rubik_Casual
             }
 
         }
-        
-        
+
+
         private void SortRarityAndLevel()
         {
             characters.Sort((charA, charB) =>
             {
-                
+
                 int result = charA.Level.CompareTo(charB.Level);
                 if (result == 0)
                 {
@@ -57,25 +59,25 @@ namespace Rubik_Casual
                 }
                 return result;
             });
-            
+
             RefreshCharacterUI();
         }
 
         public void RefreshCharacterUI()
         {
-            
+
             foreach (Transform child in transformSlot)
             {
                 Destroy(child.gameObject);
             }
-            
-            for (int i = characters.Count-1; i > -1 ; i--)
+
+            for (int i = characters.Count - 1; i > -1; i--)
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
                 slotCharacter.SetUp(characters[i]);
             }
         }
-        
+
         public void RefreshCharacterUIOpp()
         {
             characters.Reverse();
@@ -83,36 +85,36 @@ namespace Rubik_Casual
             {
                 Destroy(child.gameObject);
             }
-            for (int i = characters.Count-1; i > -1 ; i--)
+            for (int i = characters.Count - 1; i > -1; i--)
             {
                 CharacterItem slotCharacter = Instantiate(slot_Character, transformSlot);
                 slotCharacter.SetUp(characters[i]);
             }
         }
-        
+
         // aaa
-        
+
         public void SortChar(SortingType typeSort)
         {
             switch (typeSort)
             {
                 case SortingType.Rarity:
-                {
-                    SortRarity();
-                    break;
-                }
+                    {
+                        SortRarity();
+                        break;
+                    }
                 case SortingType.Lever:
-                {
-                    SortLevel();
-                    break;
-                }
+                    {
+                        SortLevel();
+                        break;
+                    }
                 case SortingType.Power:
                     SortPower();
                     break;
                 default:
-                {
-                    break;
-                }
+                    {
+                        break;
+                    }
             }
             RefreshCharacterUI();
         }
@@ -121,7 +123,7 @@ namespace Rubik_Casual
         {
             characters.Sort((charA, charB) =>
             {
-                
+
                 int result = charA.Rarity.CompareTo(charB.Rarity);
                 if (result == 0)
                 {
@@ -130,7 +132,7 @@ namespace Rubik_Casual
                 return result;
             });
         }
-        
+
         private void SortLevel()
         {
             characters.Sort((charA, charB) =>
@@ -159,7 +161,7 @@ namespace Rubik_Casual
                 return result;
             });
         }
-        
+
         public void ShowCharacterInfoPopup(Character character)
         {
             characterInfoPopup.ShowCharaterfoPopup(character);
@@ -167,28 +169,28 @@ namespace Rubik_Casual
 
         public int CheckIndexOfCharacter(Character character)
         {
-          
+
             return characters.IndexOf(character);
-            
+
         }
         public Character GetCharacter(int index)
         {
-            if (index >= listCharacter.Characters.Count )
+            if (index >= listCharacter.Characters.Count)
             {
-                index = listCharacter.Characters.Count -1;
+                index = listCharacter.Characters.Count - 1;
             }
             else if (index < 0)
             {
-                 index = 0;
+                index = 0;
             }
-            
+
             return characters[index];
         }
-        
+
         //list
         public void OnSortButtonClickedLever()
         {
-            
+
             SortChar(SortingType.Lever);
             SetButtonColors(SortingType.Lever);
             if (isFirstClick)
@@ -200,16 +202,16 @@ namespace Rubik_Casual
             {
                 a++;
             }
-            b=c = 0;
+            b = c = 0;
             if (a % 2 == 0)
             {
                 RefreshCharacterUIOpp();
             }
-            else 
+            else
             {
                 RefreshCharacterUI();
             }
-            
+
         }
 
         public void OnSortButtonClickedRarity()
@@ -221,13 +223,13 @@ namespace Rubik_Casual
             {
                 RefreshCharacterUIOpp();
             }
-            else 
+            else
             {
                 RefreshCharacterUI();
             }
             a = c = 0;
-            
-            
+
+
         }
         public void OnSortButtonClickedPower()
         {
@@ -239,7 +241,7 @@ namespace Rubik_Casual
             {
                 RefreshCharacterUIOpp();
             }
-            else 
+            else
             {
                 RefreshCharacterUI();
             }
@@ -250,6 +252,14 @@ namespace Rubik_Casual
             textListSortLever.color = (selectedSortingType == SortingType.Lever) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
             textListSortRarity.color = (selectedSortingType == SortingType.Rarity) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
             textListSortPower.color = (selectedSortingType == SortingType.Power) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
+        }
+        public void OpenPopup()
+        {
+            MovePopup.TransPopupHorizontal(gbTaget, gbPopupOpen);
+        }
+        public void ClosePopup()
+        {
+            MovePopup.TransPopupHorizontal(gbPopupOpen, gbTaget);
         }
     }
 }
