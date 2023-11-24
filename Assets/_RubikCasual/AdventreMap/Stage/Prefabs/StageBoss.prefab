@@ -889,6 +889,7 @@ GameObject:
   - component: {fileID: 2858897722780150389}
   - component: {fileID: 3281041681957273589}
   - component: {fileID: 8077440417795890460}
+  - component: {fileID: 5620643021867471504}
   m_Layer: 5
   m_Name: StageBoss
   m_TagString: Untagged
@@ -1005,6 +1006,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5620643021867471504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562238677797235516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad82e0b120d3c6a4b8ae00a6b8c53550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posIconAva: {fileID: 2170516836793485544}
+  focusDot: {fileID: 1301633042031966280}
+  gbAvaBoss: {fileID: 6822957193858171546}
+  spriteLock: {fileID: 21300000, guid: 9a45a7855ac59a24fb2684fc19253721, type: 3}
+  spriteBossDot: {fileID: 21300000, guid: f012a71dc2fbf144d820893290e81157, type: 3}
 --- !u!1 &7605245402817083354
 GameObject:
   m_ObjectHideFlags: 0

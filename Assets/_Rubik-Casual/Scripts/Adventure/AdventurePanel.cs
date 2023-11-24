@@ -7,7 +7,9 @@ namespace RubikCasual.Adventure
 {
     public class AdventurePanel : MonoBehaviour
     {
+
         public GameObject gbTaget;
+        public List<DotAdventureUI> lsDotAdventureUI;
         public void ClosePopup()
         {
             MovePopup.TransPopupHorizontal(this.gameObject, gbTaget);

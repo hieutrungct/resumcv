@@ -16,15 +16,12 @@ namespace RubikCasual.Lobby
     public class CharacterSelectController : MonoBehaviour
     {
         public List<SlotCharacterUI> lsSlotCharacterUI;
-        public GameObject TopPannel, bgMainscreen;
+        public GameObject bgMainscreen;
         UserData userData;
-        float duration = 0.5f;
-        public Vector3 scaleCharacter = new Vector3(1.75f, 1.75f, 1.75f);
-        public float posOrigin;
+        Vector3 scaleCharacter = new Vector3(1.75f, 1.75f, 1.75f);
         void Start()
         {
             userData = UserData.instance;
-            posOrigin = this.transform.position.x;
         }
         void Update()
         {
@@ -83,19 +80,10 @@ namespace RubikCasual.Lobby
         }
         public void BackPopupCharacter()
         {
-
             MovePopup.TransPopupHorizontal(this.gameObject, bgMainscreen);
-            if (this.gameObject.transform.position.x == posOrigin)
-            {
-                this.gameObject.SetActive(false);
-
-            }
-            TopPannel.SetActive(true);
         }
         public void OpenPopupSelectCharacter()
         {
-            this.gameObject.SetActive(true);
-            TopPannel.SetActive(false);
             MovePopup.TransPopupHorizontal(bgMainscreen, this.gameObject);
         }
     }
