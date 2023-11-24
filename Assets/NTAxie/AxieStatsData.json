@@ -1,0 +1,1629 @@
+{
+  "AxieStatsData": [
+    {
+      "Index": 1,
+      "Origin": 1,
+      "Name": "Neptune",
+      "Class": 8,
+      "Cost": 5,
+      "HP": [
+        900,
+        1620,
+        2916
+      ],
+      "Def": 65,
+      "MagicDef": 65,
+      "Dmg": [
+        70,
+        126,
+        227
+      ],
+      "CritRate": 0.25,
+      "Value": 2990.75,
+      "SkillIndex": 1,
+      "Amount": 10,
+      "Skill": "tấn công đa mục tiêu hình chữ thập, 10%,15%,20% stun",
+      "Note": "Thần biển cả"
+    },
+    {
+      "Index": 2,
+      "Origin": 1,
+      "Name": "Jinbei",
+      "Class": 2,
+      "Cost": 4,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 35,
+      "MagicDef": 35,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2351.25,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "Tấn công 1 mục tiêu 224%,260%,300%",
+      "Note": "Chiến bình vĩ đại tộc người cá"
+    },
+    {
+      "Index": 3,
+      "Origin": 1,
+      "Name": "Ao Bing",
+      "Class": 1,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1509.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "tấn công đa mục tiêu hình chữ thập, 10%,15%,20% stun",
+      "Note": "tam thái tử Ngao Bính,"
+    },
+    {
+      "Index": 4,
+      "Origin": 1,
+      "Name": "Niord",
+      "Class": 7,
+      "Cost": 1,
+      "HP": [
+        650,
+        1170,
+        2106
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 2136.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "tấn công đa mục tiêu hình chữ thập, 10%,15%,20% stun",
+      "Note": "Thần thống trị gió và biển(Bắc Âu), mang lại sự an toàn tàu thuyền"
+    },
+    {
+      "Index": 5,
+      "Origin": 1,
+      "Name": "Focalors",
+      "Class": 9,
+      "Cost": 3,
+      "HP": [
+        650,
+        1170,
+        2106
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 1936.166667,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "tấn công đa mục tiêu hình chữ thập, 10%,15%,20% stun",
+      "Note": "Thủy thần đương nhiệm ( genshin impact)"
+    },
+    {
+      "Index": 6,
+      "Origin": 1,
+      "Name": "Kraken",
+      "Class": 7,
+      "Cost": 2,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2362.5,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "tấn công đa mục tiêu hình chữ thập, 10%,15%,20% stun",
+      "Note": "Rắn 9 đầu"
+    },
+    {
+      "Index": 7,
+      "Origin": 1,
+      "Name": "Kappa",
+      "Class": 4,
+      "Cost": 1,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        55,
+        99,
+        178
+      ],
+      "CritRate": 0.25,
+      "Value": 2224.333333,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "tấn công đa mục tiêu hình chữ thập, 10%,15%,20% stun",
+      "Note": "Yêu quái Nhật bản"
+    },
+    {
+      "Index": 8,
+      "Origin": 1,
+      "Name": "Makara",
+      "Class": 10,
+      "Cost": 2,
+      "HP": [
+        550,
+        990,
+        1782
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1609.833333,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "tấn công đa mục tiêu hình chữ thập, 10%,15%,20% stun",
+      "Note": ""
+    },
+    {
+      "Index": 9,
+      "Origin": 1,
+      "Name": "Tomioka",
+      "Class": 3,
+      "Cost": 3,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2111.833333,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "Sau khi tấn công, mục tiêu còn <= 5% max HP, lập tức bị tiêu diệt",
+      "Note": "Thủy Trụ Tomioka Giyuu ( Demon Slayer)"
+    },
+    {
+      "Index": 10,
+      "Origin": 1,
+      "Name": "Ziva",
+      "Class": 6,
+      "Cost": 2,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 2400.666667,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 11,
+      "Origin": 2,
+      "Name": "Yetty",
+      "Class": 7,
+      "Cost": 4,
+      "HP": [
+        1100,
+        1980,
+        3564
+      ],
+      "Def": 60,
+      "MagicDef": 60,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 3267.166667,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 12,
+      "Origin": 2,
+      "Name": "Inosuke",
+      "Class": 3,
+      "Cost": 4,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2251.25,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 13,
+      "Origin": 2,
+      "Name": "Leon",
+      "Class": 1,
+      "Cost": 3,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 50,
+      "MagicDef": 50,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2501.25,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 14,
+      "Origin": 2,
+      "Name": "Cerberus",
+      "Class": 2,
+      "Cost": 3,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 50,
+      "MagicDef": 50,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2501.25,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 15,
+      "Origin": 2,
+      "Name": "Bastet",
+      "Class": 9,
+      "Cost": 2,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 2400.666667,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 16,
+      "Origin": 2,
+      "Name": "Centaur",
+      "Class": 4,
+      "Cost": 2,
+      "HP": [
+        600,
+        1080,
+        1944
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 1785.5,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 17,
+      "Origin": 2,
+      "Name": "Rexxar",
+      "Class": 2,
+      "Cost": 1,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2261.833333,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 18,
+      "Origin": 2,
+      "Name": "Toro",
+      "Class": 7,
+      "Cost": 3,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2513.166667,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 19,
+      "Origin": 2,
+      "Name": "Rayquaza",
+      "Class": 5,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1509.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 20,
+      "Origin": 2,
+      "Name": "Slark",
+      "Class": 3,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 15,
+      "MagicDef": 15,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 1496.666667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 21,
+      "Origin": 2,
+      "Name": "Kumiho",
+      "Class": 9,
+      "Cost": 5,
+      "HP": [
+        850,
+        1530,
+        2754
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 2488.833333,
+      "SkillIndex": 1,
+      "Amount": 10,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 22,
+      "Origin": 2,
+      "Name": "Chopper",
+      "Class": 6,
+      "Cost": 4,
+      "HP": [
+        1000,
+        1800,
+        3240
+      ],
+      "Def": 60,
+      "MagicDef": 60,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 3065.833333,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 23,
+      "Origin": 3,
+      "Name": "Loki",
+      "Class": 9,
+      "Cost": 5,
+      "HP": [
+        900,
+        1620,
+        2916
+      ],
+      "Def": 65,
+      "MagicDef": 65,
+      "Dmg": [
+        70,
+        126,
+        227
+      ],
+      "CritRate": 0.25,
+      "Value": 2990.75,
+      "SkillIndex": 1,
+      "Amount": 10,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 24,
+      "Origin": 3,
+      "Name": "Horus",
+      "Class": 8,
+      "Cost": 4,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 35,
+      "MagicDef": 35,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2351.25,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 25,
+      "Origin": 3,
+      "Name": "Quinn",
+      "Class": 4,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1509.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 26,
+      "Origin": 3,
+      "Name": "Garuda",
+      "Class": 5,
+      "Cost": 1,
+      "HP": [
+        650,
+        1170,
+        2106
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 2136.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 27,
+      "Origin": 3,
+      "Name": "Sengoku",
+      "Class": 6,
+      "Cost": 3,
+      "HP": [
+        650,
+        1170,
+        2106
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 1936.166667,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 28,
+      "Origin": 3,
+      "Name": "Flamingo",
+      "Class": 2,
+      "Cost": 2,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2362.5,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 29,
+      "Origin": 3,
+      "Name": "Mihawk",
+      "Class": 3,
+      "Cost": 1,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        55,
+        99,
+        178
+      ],
+      "CritRate": 0.25,
+      "Value": 2224.333333,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 30,
+      "Origin": 3,
+      "Name": "Baalmon",
+      "Class": 7,
+      "Cost": 2,
+      "HP": [
+        550,
+        990,
+        1782
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1609.833333,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 31,
+      "Origin": 3,
+      "Name": "Helicopter",
+      "Class": 1,
+      "Cost": 3,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2111.833333,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 32,
+      "Origin": 3,
+      "Name": "Skywrath",
+      "Class": 10,
+      "Cost": 2,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 2400.666667,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 33,
+      "Origin": 3,
+      "Name": "Jakiro",
+      "Class": 9,
+      "Cost": 4,
+      "HP": [
+        1100,
+        1980,
+        3564
+      ],
+      "Def": 60,
+      "MagicDef": 60,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 3267.166667,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 34,
+      "Origin": 4,
+      "Name": "Stinger",
+      "Class": 4,
+      "Cost": 4,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2251.25,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 35,
+      "Origin": 4,
+      "Name": "Shinchu",
+      "Class": 3,
+      "Cost": 3,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 50,
+      "MagicDef": 50,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2501.25,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 36,
+      "Origin": 4,
+      "Name": "Huodou",
+      "Class": 8,
+      "Cost": 3,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 50,
+      "MagicDef": 50,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2501.25,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 37,
+      "Origin": 4,
+      "Name": "Paranoid",
+      "Class": 10,
+      "Cost": 2,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 2400.666667,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 38,
+      "Origin": 4,
+      "Name": "Kailios",
+      "Class": 9,
+      "Cost": 2,
+      "HP": [
+        600,
+        1080,
+        1944
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 1785.5,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 39,
+      "Origin": 4,
+      "Name": "Worm Queen",
+      "Class": 6,
+      "Cost": 1,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2261.833333,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 40,
+      "Origin": 4,
+      "Name": "Chronomon",
+      "Class": 1,
+      "Cost": 3,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2513.166667,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 41,
+      "Origin": 4,
+      "Name": "Mantis",
+      "Class": 2,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1509.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 42,
+      "Origin": 4,
+      "Name": "Gorgon",
+      "Class": 2,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 15,
+      "MagicDef": 15,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 1496.666667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 43,
+      "Origin": 4,
+      "Name": "Cocoon",
+      "Class": 7,
+      "Cost": 5,
+      "HP": [
+        850,
+        1530,
+        2754
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 2488.833333,
+      "SkillIndex": 1,
+      "Amount": 10,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 44,
+      "Origin": 5,
+      "Name": "Lifa",
+      "Class": 6,
+      "Cost": 4,
+      "HP": [
+        1000,
+        1800,
+        3240
+      ],
+      "Def": 60,
+      "MagicDef": 60,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 3065.833333,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 45,
+      "Origin": 5,
+      "Name": "Treant",
+      "Class": 2,
+      "Cost": 5,
+      "HP": [
+        900,
+        1620,
+        2916
+      ],
+      "Def": 65,
+      "MagicDef": 65,
+      "Dmg": [
+        70,
+        126,
+        227
+      ],
+      "CritRate": 0.25,
+      "Value": 2990.75,
+      "SkillIndex": 1,
+      "Amount": 10,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 46,
+      "Origin": 5,
+      "Name": "Watermelon",
+      "Class": 5,
+      "Cost": 4,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 35,
+      "MagicDef": 35,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2351.25,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 47,
+      "Origin": 5,
+      "Name": "Cactuar",
+      "Class": 4,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1509.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 48,
+      "Origin": 5,
+      "Name": "Pepper",
+      "Class": 3,
+      "Cost": 1,
+      "HP": [
+        650,
+        1170,
+        2106
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 2136.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 49,
+      "Origin": 5,
+      "Name": "Pando",
+      "Class": 7,
+      "Cost": 3,
+      "HP": [
+        650,
+        1170,
+        2106
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 1936.166667,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 50,
+      "Origin": 5,
+      "Name": "Hamadryad",
+      "Class": 8,
+      "Cost": 2,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2362.5,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 51,
+      "Origin": 5,
+      "Name": "Tinker",
+      "Class": 10,
+      "Cost": 1,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        55,
+        99,
+        178
+      ],
+      "CritRate": 0.25,
+      "Value": 2224.333333,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 52,
+      "Origin": 5,
+      "Name": "Ivern",
+      "Class": 1,
+      "Cost": 2,
+      "HP": [
+        550,
+        990,
+        1782
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1609.833333,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 53,
+      "Origin": 5,
+      "Name": "Urtica",
+      "Class": 9,
+      "Cost": 3,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2111.833333,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 54,
+      "Origin": 5,
+      "Name": "Lavender",
+      "Class": 9,
+      "Cost": 2,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 2400.666667,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 55,
+      "Origin": 6,
+      "Name": "Nika-Nika",
+      "Class": 2,
+      "Cost": 4,
+      "HP": [
+        1100,
+        1980,
+        3564
+      ],
+      "Def": 60,
+      "MagicDef": 60,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 3267.166667,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 56,
+      "Origin": 6,
+      "Name": "Viper",
+      "Class": 4,
+      "Cost": 4,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 25,
+      "MagicDef": 25,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2251.25,
+      "SkillIndex": 1,
+      "Amount": 12,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 57,
+      "Origin": 6,
+      "Name": "Hydra",
+      "Class": 7,
+      "Cost": 3,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 50,
+      "MagicDef": 50,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2501.25,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 58,
+      "Origin": 6,
+      "Name": "Naga",
+      "Class": 1,
+      "Cost": 3,
+      "HP": [
+        750,
+        1350,
+        2430
+      ],
+      "Def": 50,
+      "MagicDef": 50,
+      "Dmg": [
+        65,
+        117,
+        211
+      ],
+      "CritRate": 0.25,
+      "Value": 2501.25,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 59,
+      "Origin": 6,
+      "Name": "Ogdoabyss",
+      "Class": 8,
+      "Cost": 2,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 2400.666667,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 60,
+      "Origin": 6,
+      "Name": "Lulu",
+      "Class": 9,
+      "Cost": 2,
+      "HP": [
+        600,
+        1080,
+        1944
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 1785.5,
+      "SkillIndex": 1,
+      "Amount": 22,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 61,
+      "Origin": 6,
+      "Name": "Ganga",
+      "Class": 5,
+      "Cost": 1,
+      "HP": [
+        700,
+        1260,
+        2268
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2261.833333,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 62,
+      "Origin": 6,
+      "Name": "Venom",
+      "Class": 10,
+      "Cost": 3,
+      "HP": [
+        800,
+        1440,
+        2592
+      ],
+      "Def": 45,
+      "MagicDef": 45,
+      "Dmg": [
+        60,
+        108,
+        194
+      ],
+      "CritRate": 0.25,
+      "Value": 2513.166667,
+      "SkillIndex": 1,
+      "Amount": 18,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 63,
+      "Origin": 6,
+      "Name": "Nahida",
+      "Class": 3,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 20,
+      "MagicDef": 20,
+      "Dmg": [
+        40,
+        72,
+        130
+      ],
+      "CritRate": 0.25,
+      "Value": 1509.166667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 64,
+      "Origin": 6,
+      "Name": "Collei",
+      "Class": 6,
+      "Cost": 1,
+      "HP": [
+        500,
+        900,
+        1620
+      ],
+      "Def": 15,
+      "MagicDef": 15,
+      "Dmg": [
+        45,
+        81,
+        146
+      ],
+      "CritRate": 0.25,
+      "Value": 1496.666667,
+      "SkillIndex": 1,
+      "Amount": 29,
+      "Skill": "",
+      "Note": ""
+    },
+    {
+      "Index": 65,
+      "Origin": 6,
+      "Name": "Kurama",
+      "Class": 1,
+      "Cost": 5,
+      "HP": [
+        850,
+        1530,
+        2754
+      ],
+      "Def": 40,
+      "MagicDef": 40,
+      "Dmg": [
+        50,
+        90,
+        162
+      ],
+      "CritRate": 0.25,
+      "Value": 2488.833333,
+      "SkillIndex": 1,
+      "Amount": 10,
+      "Skill": "",
+      "Note": ""
+    }
+  ]
+}

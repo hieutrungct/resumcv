@@ -1,0 +1,37 @@
+{
+    "back":[
+        "beast-02", "beast-04", "beast-06", "beast-08", "beast-10", "beast-12", "bug-02", "bug-04", "bug-06", "bug-08", "bug-10", "bug-12", "bird-02", "bird-04", "bird-06", "bird-08", "bird-10", "bird-12", "plant-02", "plant-04", "plant-06", "plant-08", "plant-10", "plant-12", "aquatic-02", "aquatic-04", "aquatic-06", "aquatic-08", "aquatic-10", "aquatic-12", "reptile-02", "reptile-04", "reptile-06", "reptile-08", "reptile-10", "reptile-12", "beast-mystic-02", "bug-mystic-02", "bird-mystic-02", "plant-mystic-02", "aquatic-mystic-02", "reptile-mystic-02", "xmas-01", "xmas-02", "japan-01", "japan-02", "japan-03", "agamo-00", "agamo-01", "summer-as", "summer-a"
+    ],
+    "body":[
+        "body-normal", "body-bigyak", "body-curly", "body-fuzzy", "body-spiky", "body-sumo", "body-wetdog", "body-mystic-normal", "body-mystic-fuzzy", "body-frosty", "body-agamo"
+    ],
+    "ears":[
+        "beast-02", "beast-04", "beast-06", "beast-08", "beast-10", "beast-12", "bug-02", "bug-04", "bug-06", "bug-08", "bug-10", "bug-12", "bird-02", "bird-04", "bird-06", "bird-08", "bird-10", "bird-12", "plant-02", "plant-04", "plant-06", "plant-08", "plant-10", "plant-12", "aquatic-02", "aquatic-04", "aquatic-06", "aquatic-08", "aquatic-10", "aquatic-12", "reptile-02", "reptile-04", "reptile-06", "reptile-08", "reptile-10", "reptile-12", "beast-mystic-02", "bug-mystic-02", "bird-mystic-02", "plant-mystic-02", "aquatic-mystic-02", "reptile-mystic-02", "xmas-01", "xmas-02", "japan-01", "japan-02", "japan-03", "agamo-00", "agamo-01", "summer-as", "summer-a"
+    ],
+    "ear":[
+        "beast-02", "beast-04", "beast-06", "beast-08", "beast-10", "beast-12", "bug-02", "bug-04", "bug-06", "bug-08", "bug-10", "bug-12", "bird-02", "bird-04", "bird-06", "bird-08", "bird-10", "bird-12", "plant-02", "plant-04", "plant-06", "plant-08", "plant-10", "plant-12", "aquatic-02", "aquatic-04", "aquatic-06", "aquatic-08", "aquatic-10", "aquatic-12", "reptile-02", "reptile-04", "reptile-06", "reptile-08", "reptile-10", "reptile-12", "beast-mystic-02", "bug-mystic-02", "bird-mystic-02", "plant-mystic-02", "aquatic-mystic-02", "reptile-mystic-02", "xmas-01", "xmas-02", "japan-01", "japan-02", "japan-03", "agamo-00", "agamo-01", "summer-as", "summer-a"
+    ],
+    "eyes":[
+        "beast-02", "beast-04", "beast-08", "beast-10", "bug-02", "bug-04", "bug-08", "bug-10", "bird-02", "bird-04", "bird-08", "bird-10", "plant-02", "plant-04", "plant-08", "plant-10", "aquatic-02", "aquatic-04", "aquatic-08", "aquatic-10", "reptile-02", "reptile-04", "reptile-08", "reptile-10", "beast-mystic-02", "bug-mystic-02", "bird-mystic-02", "plant-mystic-02", "aquatic-mystic-02", "reptile-mystic-02", "xmas-01", "xmas-02", "japan-01", "japan-02", "japan-03", "agamo-00", "agamo-01", "summer-as", "summer-a"
+    ],
+    "horn":[
+        "beast-02", "beast-04", "beast-06", "beast-08", "beast-10", "beast-12", "bug-02", "bug-04", "bug-06", "bug-08", "bug-10", "bug-12", "bird-02", "bird-04", "bird-06", "bird-08", "bird-10", "bird-12", "plant-02", "plant-04", "plant-06", "plant-08", "plant-10", "plant-12", "aquatic-02", "aquatic-04", "aquatic-06", "aquatic-08", "aquatic-10", "aquatic-12", "reptile-02", "reptile-04", "reptile-06", "reptile-08", "reptile-10", "reptile-12", "beast-mystic-02", "bug-mystic-02", "bird-mystic-02", "plant-mystic-02", "aquatic-mystic-02", "reptile-mystic-02", "xmas-01", "xmas-02", "japan-01", "japan-02", "japan-03", "agamo-00", "agamo-01", "summer-as", "summer-a"
+    ],
+    "mouth":[
+        "beast-02", "beast-04", "beast-08", "beast-10", "bug-02", "bug-04", "bug-08", "bug-10", "bird-02", "bird-04", "bird-08", "bird-10", "plant-02", "plant-04", "plant-08", "plant-10", "aquatic-02", "aquatic-04", "aquatic-08", "aquatic-10", "reptile-02", "reptile-04", "reptile-08", "reptile-10", "beast-mystic-02", "bug-mystic-02", "bird-mystic-02", "plant-mystic-02", "aquatic-mystic-02", "reptile-mystic-02", "xmas-01", "xmas-02", "japan-01", "japan-02", "japan-03", "agamo-00", "agamo-01", "summer-as", "summer-a"
+    ],
+    "tail":[
+        "beast-02", "beast-04", "beast-06", "beast-08", "beast-10", "beast-12", "bug-02", "bug-04", "bug-06", "bug-08", "bug-10", "bug-12", "bird-02", "bird-04", "bird-06", "bird-08", "bird-10", "bird-12", "plant-02", "plant-04", "plant-06", "plant-08", "plant-10", "plant-12", "aquatic-02", "aquatic-04", "aquatic-06", "aquatic-08", "aquatic-10", "aquatic-12", "reptile-02", "reptile-04", "reptile-06", "reptile-08", "reptile-10", "reptile-12", "beast-mystic-02", "bug-mystic-02", "bird-mystic-02", "plant-mystic-02", "aquatic-mystic-02", "reptile-mystic-02", "xmas-01", "xmas-02", "japan-01", "japan-02", "japan-03", "agamo-00", "agamo-01", "summer-as", "summer-a"
+    ],
+    "body-class":[
+        "beast", "bug", "bird", "plant", "aquatic", "reptile"
+    ],
+    "accsssory_slot":[
+        "accessory-air", "accessory-cheek", "accessory-ground", "accessory-hip", "accessory-neck"
+    ]
+
+}
+
+
+
+
