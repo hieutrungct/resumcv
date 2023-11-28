@@ -1,0 +1,391 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm(L)
+  rotate: true
+  xy: 809, 647
+  size: 30, 65
+  orig: 30, 65
+  offset: 0, 0
+  index: -1
+Arm(R)
+  rotate: false
+  xy: 403, 741
+  size: 63, 34
+  orig: 63, 34
+  offset: 0, 0
+  index: -1
+ArmSkill(L)
+  rotate: true
+  xy: 207, 2
+  size: 29, 57
+  orig: 29, 57
+  offset: 0, 0
+  index: -1
+ArmSkill(R)
+  rotate: true
+  xy: 326, 740
+  size: 35, 75
+  orig: 35, 75
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 147, 31
+  size: 43, 57
+  orig: 43, 57
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: true
+  xy: 759, 639
+  size: 42, 48
+  orig: 42, 48
+  offset: 0, 0
+  index: -1
+ChestDecA
+  rotate: true
+  xy: 408, 708
+  size: 31, 46
+  orig: 31, 46
+  offset: 0, 0
+  index: -1
+ChestDecB
+  rotate: false
+  xy: 1003, 908
+  size: 19, 47
+  orig: 19, 47
+  offset: 0, 0
+  index: -1
+Eye1(Open)
+  rotate: false
+  xy: 876, 649
+  size: 66, 28
+  orig: 66, 28
+  offset: 0, 0
+  index: -1
+Eye2(Close)
+  rotate: true
+  xy: 1003, 957
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye3(Hurt)
+  rotate: true
+  xy: 299, 692
+  size: 62, 21
+  orig: 62, 21
+  offset: 0, 0
+  index: -1
+EyeBrow(Idle)
+  rotate: false
+  xy: 231, 281
+  size: 63, 12
+  orig: 63, 12
+  offset: 0, 0
+  index: -1
+Finger(R)
+  rotate: false
+  xy: 582, 619
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+FingerSkill(L)
+  rotate: false
+  xy: 1003, 828
+  size: 19, 13
+  orig: 19, 13
+  offset: 0, 0
+  index: -1
+HairWing(L)
+  rotate: true
+  xy: 266, 2
+  size: 29, 52
+  orig: 29, 52
+  offset: 0, 0
+  index: -1
+HairWing(R)
+  rotate: true
+  xy: 680, 644
+  size: 37, 77
+  orig: 37, 77
+  offset: 0, 0
+  index: -1
+Hand(R)
+  rotate: false
+  xy: 981, 651
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
+HandAtk(R)
+  rotate: false
+  xy: 408, 683
+  size: 27, 23
+  orig: 27, 23
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 480, 406
+  size: 111, 96
+  orig: 111, 96
+  offset: 0, 0
+  index: -1
+Leg(L)
+  rotate: true
+  xy: 144, 2
+  size: 27, 61
+  orig: 27, 61
+  offset: 0, 0
+  index: -1
+Leg(R)
+  rotate: true
+  xy: 598, 645
+  size: 36, 80
+  orig: 36, 80
+  offset: 0, 0
+  index: -1
+LegSkill(L)
+  rotate: false
+  xy: 367, 695
+  size: 39, 43
+  orig: 39, 43
+  offset: 0, 0
+  index: -1
+LegSkill(R)
+  rotate: false
+  xy: 282, 33
+  size: 40, 45
+  orig: 40, 45
+  offset: 0, 0
+  index: -1
+MiniChocoSkilla
+  rotate: false
+  xy: 601, 623
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MiniChocoSkillb
+  rotate: true
+  xy: 1003, 878
+  size: 28, 19
+  orig: 28, 19
+  offset: 0, 0
+  index: -1
+MiniHeart_Skilla
+  rotate: false
+  xy: 322, 694
+  size: 43, 44
+  orig: 43, 44
+  offset: 0, 0
+  index: -1
+MiniHeart_Skillb
+  rotate: false
+  xy: 320, 2
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+MiniHeart_Skillc
+  rotate: true
+  xy: 324, 51
+  size: 27, 24
+  orig: 27, 24
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 468, 770
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+Mo2_Att
+  rotate: true
+  xy: 324, 33
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+Mo3_Att
+  rotate: true
+  xy: 1003, 843
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Pony(L)_A
+  rotate: false
+  xy: 437, 683
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+Pony(L)_B
+  rotate: true
+  xy: 206, 33
+  size: 45, 74
+  orig: 45, 74
+  offset: 0, 0
+  index: -1
+Pony(R)_A
+  rotate: false
+  xy: 944, 650
+  size: 35, 26
+  orig: 35, 26
+  offset: 0, 0
+  index: -1
+Pony(R)_B
+  rotate: false
+  xy: 480, 307
+  size: 81, 97
+  orig: 81, 97
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 4
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Skiil_Choco
+  rotate: true
+  xy: 477, 519
+  size: 123, 103
+  orig: 123, 103
+  offset: 0, 0
+  index: -1
+Skill_Heart
+  rotate: true
+  xy: 205, 80
+  size: 195, 138
+  orig: 195, 138
+  offset: 0, 0
+  index: -1
+Skirt
+  rotate: false
+  xy: 951, 678
+  size: 67, 43
+  orig: 67, 43
+  offset: 0, 0
+  index: -1
+Weapon
+  rotate: true
+  xy: 811, 679
+  size: 42, 138
+  orig: 42, 138
+  offset: 0, 0
+  index: -1
+fx/A1
+  rotate: true
+  xy: 829, 825
+  size: 197, 172
+  orig: 197, 172
+  offset: 0, 0
+  index: -1
+fx/A2
+  rotate: false
+  xy: 829, 723
+  size: 180, 100
+  orig: 180, 100
+  offset: 0, 0
+  index: -1
+fx/A3
+  rotate: false
+  xy: 2, 32
+  size: 143, 42
+  orig: 143, 42
+  offset: 0, 0
+  index: -1
+fx/B1
+  rotate: false
+  xy: 609, 806
+  size: 218, 216
+  orig: 218, 216
+  offset: 0, 0
+  index: -1
+fx/C1
+  rotate: false
+  xy: 326, 777
+  size: 281, 245
+  orig: 281, 245
+  offset: 0, 0
+  index: -1
+fx/C2
+  rotate: false
+  xy: 2, 504
+  size: 295, 250
+  orig: 295, 250
+  offset: 0, 0
+  index: -1
+fx/C3
+  rotate: false
+  xy: 2, 756
+  size: 322, 266
+  orig: 322, 266
+  offset: 0, 0
+  index: -1
+fx/F2
+  rotate: true
+  xy: 359, 304
+  size: 198, 119
+  orig: 198, 119
+  offset: 0, 0
+  index: -1
+fx/F3
+  rotate: true
+  xy: 231, 295
+  size: 207, 126
+  orig: 207, 126
+  offset: 0, 0
+  index: -1
+fx/F4
+  rotate: false
+  xy: 609, 683
+  size: 200, 121
+  orig: 200, 121
+  offset: 0, 0
+  index: -1
+fx/G1
+  rotate: false
+  xy: 477, 644
+  size: 119, 131
+  orig: 119, 131
+  offset: 0, 0
+  index: -1
+fx/G2
+  rotate: true
+  xy: 299, 504
+  size: 177, 176
+  orig: 177, 176
+  offset: 0, 0
+  index: -1
+fx/G3
+  rotate: false
+  xy: 2, 76
+  size: 201, 199
+  orig: 201, 199
+  offset: 0, 0
+  index: -1
+fx/G4
+  rotate: false
+  xy: 2, 277
+  size: 227, 225
+  orig: 227, 225
+  offset: 0, 0
+  index: -1
+xxxEyeBrowAtk-Skill
+  rotate: true
+  xy: 811, 745
+  size: 59, 13
+  orig: 59, 13
+  offset: 0, 0
+  index: -1

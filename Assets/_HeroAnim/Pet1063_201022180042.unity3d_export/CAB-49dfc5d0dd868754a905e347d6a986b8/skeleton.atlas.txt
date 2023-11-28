@@ -1,0 +1,566 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2002_ body
+  rotate: false
+  xy: 915, 299
+  size: 53, 59
+  orig: 53, 59
+  offset: 0, 0
+  index: -1
+2002_ f wing black
+  rotate: true
+  xy: 436, 2
+  size: 35, 78
+  orig: 35, 78
+  offset: 0, 0
+  index: -1
+2002_ tail
+  rotate: true
+  xy: 533, 251
+  size: 116, 69
+  orig: 116, 69
+  offset: 0, 0
+  index: -1
+2002_Eye_Close
+  rotate: false
+  xy: 829, 203
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+2002_Eye_Hurt
+  rotate: false
+  xy: 722, 159
+  size: 63, 23
+  orig: 63, 23
+  offset: 0, 0
+  index: -1
+2002_Eye_Normal
+  rotate: false
+  xy: 650, 125
+  size: 66, 29
+  orig: 66, 29
+  offset: 0, 0
+  index: -1
+2002_Mo1
+  rotate: false
+  xy: 597, 186
+  size: 17, 10
+  orig: 17, 10
+  offset: 0, 0
+  index: -1
+2002_Mo2
+  rotate: true
+  xy: 955, 232
+  size: 19, 11
+  orig: 19, 11
+  offset: 0, 0
+  index: -1
+2002_Mo3
+  rotate: false
+  xy: 1013, 323
+  size: 9, 14
+  orig: 9, 14
+  offset: 0, 0
+  index: -1
+2002_aho hair
+  rotate: false
+  xy: 713, 2
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+2002_b arm
+  rotate: false
+  xy: 242, 9
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+2002_b hair acc
+  rotate: false
+  xy: 780, 198
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+2002_b leg
+  rotate: false
+  xy: 178, 2
+  size: 31, 66
+  orig: 31, 66
+  offset: 0, 0
+  index: -1
+2002_b pony
+  rotate: false
+  xy: 412, 157
+  size: 51, 104
+  orig: 51, 104
+  offset: 0, 0
+  index: -1
+2002_b shoulder
+  rotate: false
+  xy: 627, 88
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+2002_b wing black
+  rotate: false
+  xy: 970, 293
+  size: 41, 65
+  orig: 41, 65
+  offset: 0, 0
+  index: -1
+2002_b wing orange
+  rotate: true
+  xy: 693, 32
+  size: 47, 28
+  orig: 47, 28
+  offset: 0, 0
+  index: -1
+2002_chest
+  rotate: false
+  xy: 878, 120
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+2002_f arm
+  rotate: true
+  xy: 415, 371
+  size: 21, 41
+  orig: 21, 41
+  offset: 0, 0
+  index: -1
+2002_f hair acc
+  rotate: false
+  xy: 604, 240
+  size: 61, 96
+  orig: 61, 96
+  offset: 0, 0
+  index: -1
+2002_f leg
+  rotate: true
+  xy: 968, 250
+  size: 41, 46
+  orig: 41, 46
+  offset: 0, 0
+  index: -1
+2002_f leg2
+  rotate: false
+  xy: 336, 5
+  size: 37, 19
+  orig: 37, 19
+  offset: 0, 0
+  index: -1
+2002_f pony
+  rotate: false
+  xy: 465, 163
+  size: 65, 98
+  orig: 65, 98
+  offset: 0, 0
+  index: -1
+2002_f shoulder
+  rotate: false
+  xy: 620, 5
+  size: 19, 33
+  orig: 19, 33
+  offset: 0, 0
+  index: -1
+2002_f wing orange
+  rotate: false
+  xy: 597, 198
+  size: 62, 40
+  orig: 62, 40
+  offset: 0, 0
+  index: -1
+2002_head
+  rotate: true
+  xy: 436, 39
+  size: 116, 101
+  orig: 116, 101
+  offset: 0, 0
+  index: -1
+2002_new arm
+  rotate: true
+  xy: 915, 216
+  size: 16, 37
+  orig: 16, 37
+  offset: 0, 0
+  index: -1
+2002_new hand
+  rotate: true
+  xy: 968, 228
+  size: 20, 25
+  orig: 20, 25
+  offset: 0, 0
+  index: -1
+2010_Group 1
+  rotate: true
+  xy: 567, 9
+  size: 29, 51
+  orig: 29, 51
+  offset: 0, 0
+  index: -1
+2010_b dress
+  rotate: false
+  xy: 667, 349
+  size: 147, 84
+  orig: 147, 84
+  offset: 0, 0
+  index: -1
+2010_b hair down
+  rotate: false
+  xy: 667, 184
+  size: 111, 77
+  orig: 111, 77
+  offset: 0, 0
+  index: -1
+2010_b hair up
+  rotate: true
+  xy: 415, 263
+  size: 104, 116
+  orig: 104, 116
+  offset: 0, 0
+  index: -1
+2010_b hat
+  rotate: false
+  xy: 667, 435
+  size: 225, 75
+  orig: 225, 75
+  offset: 0, 0
+  index: -1
+2010_b hat access
+  rotate: true
+  xy: 915, 234
+  size: 17, 38
+  orig: 17, 38
+  offset: 0, 0
+  index: -1
+2010_b leg
+  rotate: false
+  xy: 883, 151
+  size: 23, 50
+  orig: 23, 50
+  offset: 0, 0
+  index: -1
+2010_b thick  leg
+  rotate: true
+  xy: 242, 38
+  size: 47, 27
+  orig: 47, 27
+  offset: 0, 0
+  index: -1
+2010_body
+  rotate: false
+  xy: 124, 2
+  size: 52, 66
+  orig: 52, 66
+  offset: 0, 0
+  index: -1
+2010_chest
+  rotate: false
+  xy: 787, 155
+  size: 46, 41
+  orig: 46, 41
+  offset: 0, 0
+  index: -1
+2010_eye Close
+  rotate: false
+  xy: 650, 104
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+2010_eye Hurt
+  rotate: false
+  xy: 650, 81
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+2010_eye Open
+  rotate: true
+  xy: 211, 18
+  size: 67, 29
+  orig: 67, 29
+  offset: 0, 0
+  index: -1
+2010_f  hat
+  rotate: true
+  xy: 204, 87
+  size: 224, 65
+  orig: 224, 65
+  offset: 0, 0
+  index: -1
+2010_f arm
+  rotate: false
+  xy: 627, 120
+  size: 21, 76
+  orig: 21, 76
+  offset: 0, 0
+  index: -1
+2010_f arm2
+  rotate: false
+  xy: 650, 156
+  size: 70, 26
+  orig: 70, 26
+  offset: 0, 0
+  index: -1
+2010_f dress
+  rotate: false
+  xy: 832, 224
+  size: 72, 23
+  orig: 72, 23
+  offset: 0, 0
+  index: -1
+2010_f hat access
+  rotate: true
+  xy: 294, 5
+  size: 19, 40
+  orig: 19, 40
+  offset: 0, 0
+  index: -1
+2010_f leg thick
+  rotate: false
+  xy: 516, 2
+  size: 49, 28
+  orig: 49, 28
+  offset: 0, 0
+  index: -1
+2010_fly
+  rotate: false
+  xy: 667, 263
+  size: 120, 84
+  orig: 120, 84
+  offset: 0, 0
+  index: -1
+2010_hat main
+  rotate: true
+  xy: 271, 135
+  size: 180, 121
+  orig: 180, 121
+  offset: 0, 0
+  index: -1
+2010_head
+  rotate: false
+  xy: 271, 26
+  size: 121, 107
+  orig: 121, 107
+  offset: 0, 0
+  index: -1
+2010_mo
+  rotate: true
+  xy: 1013, 339
+  size: 19, 9
+  orig: 19, 9
+  offset: 0, 0
+  index: -1
+2010_mo2
+  rotate: true
+  xy: 906, 223
+  size: 24, 7
+  orig: 24, 7
+  offset: 0, 0
+  index: -1
+2010_waist access
+  rotate: false
+  xy: 915, 253
+  size: 51, 44
+  orig: 51, 44
+  offset: 0, 0
+  index: -1
+2010_waist flower
+  rotate: false
+  xy: 641, 37
+  size: 50, 42
+  orig: 50, 42
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 263, 317
+  size: 150, 75
+  orig: 150, 75
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 2, 313
+  size: 259, 197
+  orig: 259, 197
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 894, 360
+  size: 150, 127
+  orig: 150, 127
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 394, 19
+  size: 40, 136
+  orig: 40, 136
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 2, 70
+  size: 200, 113
+  orig: 200, 113
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 2, 185
+  size: 200, 126
+  orig: 200, 126
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 263, 394
+  size: 200, 116
+  orig: 200, 116
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 465, 397
+  size: 200, 113
+  orig: 200, 113
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 2, 5
+  size: 120, 63
+  orig: 120, 63
+  offset: 0, 0
+  index: -1
+C1
+  rotate: true
+  xy: 584, 84
+  size: 100, 41
+  orig: 100, 41
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 539, 40
+  size: 100, 42
+  orig: 100, 42
+  offset: 0, 0
+  index: -1
+C3
+  rotate: true
+  xy: 539, 84
+  size: 100, 43
+  orig: 100, 43
+  offset: 0, 0
+  index: -1
+C4
+  rotate: true
+  xy: 789, 247
+  size: 100, 41
+  orig: 100, 41
+  offset: 0, 0
+  index: -1
+C5
+  rotate: true
+  xy: 832, 249
+  size: 100, 40
+  orig: 100, 40
+  offset: 0, 0
+  index: -1
+C6
+  rotate: true
+  xy: 874, 249
+  size: 100, 39
+  orig: 100, 39
+  offset: 0, 0
+  index: -1
+F_Love
+  rotate: false
+  xy: 816, 351
+  size: 75, 82
+  orig: 75, 82
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: true
+  xy: 394, 157
+  size: 158, 16
+  orig: 158, 16
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 465, 369
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+butterfly a
+  rotate: false
+  xy: 835, 119
+  size: 41, 39
+  orig: 41, 39
+  offset: 0, 0
+  index: -1
+butterfly a_dot
+  rotate: false
+  xy: 995, 224
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+butterfly b
+  rotate: false
+  xy: 532, 186
+  size: 63, 63
+  orig: 63, 63
+  offset: 0, 0
+  index: -1
+butterfly b_dot
+  rotate: true
+  xy: 271, 2
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+butterfly b_dot2
+  rotate: true
+  xy: 684, 2
+  size: 28, 27
+  orig: 28, 27
+  offset: 0, 0
+  index: -1
+butterfly c
+  rotate: false
+  xy: 835, 160
+  size: 46, 41
+  orig: 46, 41
+  offset: 0, 0
+  index: -1
+butterfly c_dot
+  rotate: true
+  xy: 641, 4
+  size: 31, 41
+  orig: 31, 41
+  offset: 0, 0
+  index: -1
+monster
+  rotate: true
+  xy: 607, 338
+  size: 57, 58
+  orig: 57, 58
+  offset: 0, 0
+  index: -1

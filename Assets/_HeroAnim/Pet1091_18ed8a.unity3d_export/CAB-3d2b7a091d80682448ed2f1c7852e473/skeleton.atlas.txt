@@ -1,0 +1,391 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm B
+  rotate: false
+  xy: 848, 691
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+Arm B Atk
+  rotate: true
+  xy: 306, 354
+  size: 58, 31
+  orig: 58, 31
+  offset: 0, 0
+  index: -1
+Arm B1 Skill
+  rotate: true
+  xy: 248, 291
+  size: 60, 45
+  orig: 60, 45
+  offset: 0, 0
+  index: -1
+Arm B2 Skill
+  rotate: true
+  xy: 693, 574
+  size: 74, 25
+  orig: 74, 25
+  offset: 0, 0
+  index: -1
+Arm B2 Skill_eff
+  rotate: false
+  xy: 694, 822
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+Arm Down F
+  rotate: false
+  xy: 848, 660
+  size: 34, 29
+  orig: 34, 29
+  offset: 0, 0
+  index: -1
+Arm Up F
+  rotate: false
+  xy: 928, 753
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 248, 353
+  size: 56, 59
+  orig: 56, 59
+  offset: 0, 0
+  index: -1
+Body Atk
+  rotate: false
+  xy: 845, 763
+  size: 49, 57
+  orig: 49, 57
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: true
+  xy: 693, 530
+  size: 42, 33
+  orig: 42, 33
+  offset: 0, 0
+  index: -1
+Cloth B
+  rotate: true
+  xy: 623, 528
+  size: 120, 68
+  orig: 120, 68
+  offset: 0, 0
+  index: -1
+Cloth R
+  rotate: false
+  xy: 896, 782
+  size: 98, 80
+  orig: 98, 80
+  offset: 0, 0
+  index: -1
+Cloth_Arm
+  rotate: false
+  xy: 402, 445
+  size: 79, 39
+  orig: 79, 39
+  offset: 0, 0
+  index: -1
+Cloth_L
+  rotate: true
+  xy: 258, 414
+  size: 65, 82
+  orig: 65, 82
+  offset: 0, 0
+  index: -1
+EF_A
+  rotate: false
+  xy: 845, 738
+  size: 48, 23
+  orig: 48, 23
+  offset: 0, 0
+  index: -1
+EF_B
+  rotate: false
+  xy: 342, 413
+  size: 58, 66
+  orig: 58, 66
+  offset: 0, 0
+  index: -1
+EF_C
+  rotate: true
+  xy: 265, 82
+  size: 30, 24
+  orig: 30, 24
+  offset: 0, 0
+  index: -1
+EF_D
+  rotate: false
+  xy: 483, 461
+  size: 76, 23
+  orig: 76, 23
+  offset: 0, 0
+  index: -1
+Eye_Close
+  rotate: true
+  xy: 996, 798
+  size: 64, 12
+  orig: 64, 12
+  offset: 0, 0
+  index: -1
+Eye_Skill
+  rotate: false
+  xy: 623, 502
+  size: 66, 24
+  orig: 66, 24
+  offset: 0, 0
+  index: -1
+Eyebrow
+  rotate: true
+  xy: 1010, 798
+  size: 64, 12
+  orig: 64, 12
+  offset: 0, 0
+  index: -1
+Eyebrow2
+  rotate: true
+  xy: 265, 148
+  size: 64, 18
+  orig: 64, 18
+  offset: 0, 0
+  index: -1
+Grenade
+  rotate: true
+  xy: 456, 376
+  size: 35, 32
+  orig: 35, 32
+  offset: 0, 0
+  index: -1
+Grenade Skill
+  rotate: false
+  xy: 722, 662
+  size: 124, 69
+  orig: 124, 69
+  offset: 0, 0
+  index: -1
+Gun
+  rotate: false
+  xy: 722, 733
+  size: 121, 87
+  orig: 121, 87
+  offset: 0, 0
+  index: -1
+Gun Atk
+  rotate: true
+  xy: 563, 492
+  size: 130, 58
+  orig: 130, 58
+  offset: 0, 0
+  index: -1
+Hand B
+  rotate: false
+  xy: 483, 440
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1
+Hand F
+  rotate: false
+  xy: 996, 774
+  size: 24, 22
+  orig: 24, 22
+  offset: 0, 0
+  index: -1
+Hat
+  rotate: false
+  xy: 153, 17
+  size: 100, 55
+  orig: 100, 55
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 896, 864
+  size: 158, 116
+  orig: 158, 116
+  offset: 0, 0
+  index: -1
+Leg Down B
+  rotate: false
+  xy: 896, 750
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+Leg Down B Atk
+  rotate: false
+  xy: 375, 367
+  size: 35, 44
+  orig: 35, 44
+  offset: 0, 0
+  index: -1
+Leg Down F
+  rotate: false
+  xy: 694, 789
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+Leg Down F Atk
+  rotate: false
+  xy: 248, 214
+  size: 45, 24
+  orig: 45, 24
+  offset: 0, 0
+  index: -1
+Leg Up B
+  rotate: false
+  xy: 412, 374
+  size: 42, 37
+  orig: 42, 37
+  offset: 0, 0
+  index: -1
+Leg Up B Atk
+  rotate: true
+  xy: 400, 631
+  size: 50, 33
+  orig: 50, 33
+  offset: 0, 0
+  index: -1
+Leg Up F
+  rotate: false
+  xy: 339, 364
+  size: 34, 47
+  orig: 34, 47
+  offset: 0, 0
+  index: -1
+Leg Up F Atk
+  rotate: false
+  xy: 248, 240
+  size: 43, 49
+  orig: 43, 49
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: true
+  xy: 607, 632
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+Mouth_Attack
+  rotate: false
+  xy: 104, 4
+  size: 22, 16
+  orig: 22, 16
+  offset: 0, 0
+  index: -1
+Mouth_Hurt
+  rotate: true
+  xy: 265, 114
+  size: 32, 19
+  orig: 32, 19
+  offset: 0, 0
+  index: -1
+Mouth_Skill
+  rotate: false
+  xy: 507, 438
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 2
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+eff/0
+  rotate: false
+  xy: 2, 22
+  size: 149, 190
+  orig: 149, 190
+  offset: 0, 0
+  index: -1
+eff/1
+  rotate: true
+  xy: 440, 624
+  size: 161, 165
+  orig: 161, 165
+  offset: 0, 0
+  index: -1
+eff/14
+  rotate: false
+  xy: 2, 683
+  size: 436, 339
+  orig: 436, 339
+  offset: 0, 0
+  index: -1
+eff/2
+  rotate: true
+  xy: 400, 486
+  size: 136, 161
+  orig: 136, 161
+  offset: 0, 0
+  index: -1
+eff/3
+  rotate: true
+  xy: 153, 74
+  size: 138, 110
+  orig: 138, 110
+  offset: 0, 0
+  index: -1
+eff/4
+  rotate: true
+  xy: 607, 650
+  size: 135, 113
+  orig: 135, 113
+  offset: 0, 0
+  index: -1
+eff/5
+  rotate: true
+  xy: 258, 481
+  size: 200, 140
+  orig: 200, 140
+  offset: 0, 0
+  index: -1
+eff/6
+  rotate: false
+  xy: 2, 214
+  size: 244, 225
+  orig: 244, 225
+  offset: 0, 0
+  index: -1
+eff/7
+  rotate: false
+  xy: 440, 787
+  size: 252, 235
+  orig: 252, 235
+  offset: 0, 0
+  index: -1
+eff/8
+  rotate: false
+  xy: 2, 441
+  size: 254, 240
+  orig: 254, 240
+  offset: 0, 0
+  index: -1
+eye open
+  rotate: false
+  xy: 402, 413
+  size: 76, 30
+  orig: 76, 30
+  offset: 0, 0
+  index: -1
+xxHand B Atk
+  rotate: false
+  xy: 955, 760
+  size: 27, 20
+  orig: 27, 20
+  offset: 0, 0
+  index: -1

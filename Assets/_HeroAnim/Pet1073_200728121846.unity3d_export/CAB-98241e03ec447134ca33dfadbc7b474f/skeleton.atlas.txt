@@ -1,0 +1,328 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: true
+  xy: 295, 455
+  size: 55, 200
+  orig: 55, 200
+  offset: 0, 0
+  index: -1
+A2
+  rotate: true
+  xy: 295, 317
+  size: 60, 150
+  orig: 60, 150
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 295, 255
+  size: 60, 131
+  orig: 60, 131
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 2, 131
+  size: 100, 186
+  orig: 100, 186
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 2, 3
+  size: 80, 126
+  orig: 80, 126
+  offset: 0, 0
+  index: -1
+A6
+  rotate: true
+  xy: 369, 62
+  size: 50, 80
+  orig: 50, 80
+  offset: 0, 0
+  index: -1
+A7
+  rotate: false
+  xy: 451, 84
+  size: 30, 28
+  orig: 30, 28
+  offset: 0, 0
+  index: -1
+B arm
+  rotate: true
+  xy: 332, 11
+  size: 24, 48
+  orig: 24, 48
+  offset: 0, 0
+  index: -1
+B hand
+  rotate: true
+  xy: 500, 390
+  size: 15, 10
+  orig: 15, 10
+  offset: 0, 0
+  index: -1
+B leg
+  rotate: true
+  xy: 442, 379
+  size: 26, 56
+  orig: 26, 56
+  offset: 0, 0
+  index: -1
+B ponytail
+  rotate: false
+  xy: 104, 146
+  size: 78, 176
+  orig: 78, 176
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 193, 308
+  size: 100, 43
+  orig: 100, 43
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 184, 145
+  size: 120, 65
+  orig: 120, 65
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 306, 114
+  size: 120, 57
+  orig: 120, 57
+  offset: 0, 0
+  index: -1
+B4
+  rotate: true
+  xy: 242, 43
+  size: 100, 45
+  orig: 100, 45
+  offset: 0, 0
+  index: -1
+B5
+  rotate: true
+  xy: 475, 206
+  size: 50, 35
+  orig: 50, 35
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 2, 319
+  size: 100, 191
+  orig: 100, 191
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 193, 353
+  size: 100, 157
+  orig: 100, 157
+  offset: 0, 0
+  index: -1
+C3
+  rotate: true
+  xy: 306, 173
+  size: 80, 114
+  orig: 80, 114
+  offset: 0, 0
+  index: -1
+C4
+  rotate: false
+  xy: 160, 47
+  size: 80, 96
+  orig: 80, 96
+  offset: 0, 0
+  index: -1
+Eye1(open)
+  rotate: true
+  xy: 428, 117
+  size: 67, 30
+  orig: 67, 30
+  offset: 0, 0
+  index: -1
+Eye2(Close)
+  rotate: false
+  xy: 269, 17
+  size: 61, 18
+  orig: 61, 18
+  offset: 0, 0
+  index: -1
+Eye2(Hurt)
+  rotate: false
+  xy: 391, 40
+  size: 57, 20
+  orig: 57, 20
+  offset: 0, 0
+  index: -1
+F arm
+  rotate: false
+  xy: 475, 258
+  size: 35, 57
+  orig: 35, 57
+  offset: 0, 0
+  index: -1
+F butterfly
+  rotate: true
+  xy: 160, 14
+  size: 31, 71
+  orig: 31, 71
+  offset: 0, 0
+  index: -1
+F butterfly 2
+  rotate: true
+  xy: 289, 57
+  size: 55, 78
+  orig: 55, 78
+  offset: 0, 0
+  index: -1
+F leg
+  rotate: true
+  xy: 460, 134
+  size: 22, 45
+  orig: 22, 45
+  offset: 0, 0
+  index: -1
+F ponytail
+  rotate: false
+  xy: 104, 324
+  size: 87, 186
+  orig: 87, 186
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 496, 356
+  size: 14, 8
+  orig: 14, 8
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: false
+  xy: 84, 2
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+Mo3
+  rotate: false
+  xy: 287, 219
+  size: 17, 14
+  orig: 17, 14
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 289, 37
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 428, 255
+  size: 45, 60
+  orig: 45, 60
+  offset: 0, 0
+  index: -1
+dress
+  rotate: true
+  xy: 447, 317
+  size: 60, 47
+  orig: 60, 47
+  offset: 0, 0
+  index: -1
+ear
+  rotate: false
+  xy: 422, 186
+  size: 34, 67
+  orig: 34, 67
+  offset: 0, 0
+  index: -1
+ear2
+  rotate: false
+  xy: 460, 158
+  size: 48, 46
+  orig: 48, 46
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 184, 212
+  size: 101, 94
+  orig: 101, 94
+  offset: 0, 0
+  index: -1
+outer
+  rotate: false
+  xy: 233, 2
+  size: 34, 39
+  orig: 34, 39
+  offset: 0, 0
+  index: -1
+outer2
+  rotate: true
+  xy: 460, 114
+  size: 18, 43
+  orig: 18, 43
+  offset: 0, 0
+  index: -1
+shark curve
+  rotate: false
+  xy: 84, 20
+  size: 74, 109
+  orig: 74, 109
+  offset: 0, 0
+  index: -1
+shark curve2
+  rotate: false
+  xy: 442, 407
+  size: 68, 46
+  orig: 68, 46
+  offset: 0, 0
+  index: -1
+shark eye dead
+  rotate: true
+  xy: 117, 2
+  size: 16, 12
+  orig: 16, 12
+  offset: 0, 0
+  index: -1
+shark eye dead1
+  rotate: true
+  xy: 287, 235
+  size: 18, 17
+  orig: 18, 17
+  offset: 0, 0
+  index: -1
+shark eye open
+  rotate: false
+  xy: 496, 366
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+shark eye open1
+  rotate: false
+  xy: 497, 498
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+shark straight
+  rotate: false
+  xy: 295, 379
+  size: 145, 74
+  orig: 145, 74
+  offset: 0, 0
+  index: -1

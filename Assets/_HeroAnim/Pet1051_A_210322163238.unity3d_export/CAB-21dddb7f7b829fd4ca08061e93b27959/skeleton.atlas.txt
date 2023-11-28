@@ -1,0 +1,419 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Leg_B
+  rotate: false
+  xy: 759, 47
+  size: 32, 48
+  orig: 32, 48
+  offset: 0, 0
+  index: -1
+Leg_F
+  rotate: false
+  xy: 78, 5
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 881, 378
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+arm_B
+  rotate: true
+  xy: 966, 107
+  size: 42, 23
+  orig: 42, 23
+  offset: 0, 0
+  index: -1
+arm_B_ shoulder
+  rotate: false
+  xy: 474, 261
+  size: 26, 13
+  orig: 26, 13
+  offset: 0, 0
+  index: -1
+arm_F
+  rotate: true
+  xy: 386, 15
+  size: 20, 50
+  orig: 20, 50
+  offset: 0, 0
+  index: -1
+arm_F_ shoulder
+  rotate: true
+  xy: 835, 71
+  size: 14, 37
+  orig: 14, 37
+  offset: 0, 0
+  index: -1
+arm_F_card
+  rotate: true
+  xy: 793, 42
+  size: 23, 34
+  orig: 23, 34
+  offset: 0, 0
+  index: -1
+ball_01
+  rotate: true
+  xy: 286, 2
+  size: 24, 23
+  orig: 24, 23
+  offset: 0, 0
+  index: -1
+ball_02
+  rotate: false
+  xy: 926, 112
+  size: 38, 37
+  orig: 38, 37
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 606, 198
+  size: 41, 61
+  orig: 41, 61
+  offset: 0, 0
+  index: -1
+cardA
+  rotate: true
+  xy: 438, 13
+  size: 22, 47
+  orig: 22, 47
+  offset: 0, 0
+  index: -1
+cardA2
+  rotate: true
+  xy: 507, 12
+  size: 22, 47
+  orig: 22, 47
+  offset: 0, 0
+  index: -1
+cardB
+  rotate: true
+  xy: 795, 87
+  size: 19, 48
+  orig: 19, 48
+  offset: 0, 0
+  index: -1
+cardB2
+  rotate: true
+  xy: 845, 87
+  size: 19, 48
+  orig: 19, 48
+  offset: 0, 0
+  index: -1
+cardC
+  rotate: true
+  xy: 606, 179
+  size: 17, 38
+  orig: 17, 38
+  offset: 0, 0
+  index: -1
+cardC2
+  rotate: false
+  xy: 907, 115
+  size: 17, 38
+  orig: 17, 38
+  offset: 0, 0
+  index: -1
+cardD
+  rotate: true
+  xy: 668, 378
+  size: 18, 40
+  orig: 18, 40
+  offset: 0, 0
+  index: -1
+cardD2
+  rotate: true
+  xy: 793, 67
+  size: 18, 40
+  orig: 18, 40
+  offset: 0, 0
+  index: -1
+cloths_back(L)
+  rotate: true
+  xy: 880, 155
+  size: 94, 44
+  orig: 94, 44
+  offset: 0, 0
+  index: -1
+cloths_back(R)
+  rotate: true
+  xy: 592, 55
+  size: 122, 70
+  orig: 122, 70
+  offset: 0, 0
+  index: -1
+cloths_stand(L)
+  rotate: false
+  xy: 649, 203
+  size: 13, 56
+  orig: 13, 56
+  offset: 0, 0
+  index: -1
+cloths_stand(R)
+  rotate: true
+  xy: 516, 36
+  size: 13, 56
+  orig: 13, 56
+  offset: 0, 0
+  index: -1
+cloths_star
+  rotate: true
+  xy: 516, 51
+  size: 126, 74
+  orig: 126, 74
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 2, 13
+  size: 74, 29
+  orig: 74, 29
+  offset: 0, 0
+  index: -1
+eye(Close)
+  rotate: false
+  xy: 192, 11
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+eye(Hurt)
+  rotate: false
+  xy: 926, 151
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+fx_SkillBall/C1
+  rotate: false
+  xy: 386, 37
+  size: 128, 131
+  orig: 128, 131
+  offset: 0, 0
+  index: -1
+fx_SkillBall/C2
+  rotate: true
+  xy: 146, 32
+  size: 133, 134
+  orig: 133, 134
+  offset: 0, 0
+  index: -1
+fx_SkillBall/C3
+  rotate: false
+  xy: 531, 261
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+fx_SkillBall/C4
+  rotate: false
+  xy: 2, 44
+  size: 142, 132
+  orig: 142, 132
+  offset: 0, 0
+  index: -1
+fx_SkillBall/C5
+  rotate: false
+  xy: 737, 378
+  size: 142, 132
+  orig: 142, 132
+  offset: 0, 0
+  index: -1
+fx_SkillBall/skill_fire20003
+  rotate: true
+  xy: 282, 28
+  size: 137, 102
+  orig: 137, 102
+  offset: 0, 0
+  index: -1
+fx_SkillBall/skill_fire20005
+  rotate: false
+  xy: 330, 170
+  size: 142, 104
+  orig: 142, 104
+  offset: 0, 0
+  index: -1
+fx_SkillBall/skill_fire20006
+  rotate: false
+  xy: 797, 251
+  size: 123, 125
+  orig: 123, 125
+  offset: 0, 0
+  index: -1
+fx_SkillBall/skill_fire20007
+  rotate: false
+  xy: 668, 255
+  size: 127, 121
+  orig: 127, 121
+  offset: 0, 0
+  index: -1
+fx_arrow/0
+  rotate: false
+  xy: 389, 398
+  size: 346, 112
+  orig: 346, 112
+  offset: 0, 0
+  index: -1
+fx_arrow/1
+  rotate: false
+  xy: 2, 400
+  size: 385, 110
+  orig: 385, 110
+  offset: 0, 0
+  index: -1
+fx_arrow/2
+  rotate: false
+  xy: 2, 289
+  size: 385, 109
+  orig: 385, 109
+  offset: 0, 0
+  index: -1
+fx_attackCard/1
+  rotate: true
+  xy: 188, 167
+  size: 120, 140
+  orig: 120, 140
+  offset: 0, 0
+  index: -1
+fx_attackCard/2
+  rotate: true
+  xy: 389, 276
+  size: 120, 140
+  orig: 120, 140
+  offset: 0, 0
+  index: -1
+fx_smoke/B1
+  rotate: false
+  xy: 664, 133
+  size: 80, 120
+  orig: 80, 120
+  offset: 0, 0
+  index: -1
+fx_smoke/B2
+  rotate: true
+  xy: 664, 53
+  size: 78, 93
+  orig: 78, 93
+  offset: 0, 0
+  index: -1
+fx_smoke/B3
+  rotate: false
+  xy: 797, 155
+  size: 81, 94
+  orig: 81, 94
+  offset: 0, 0
+  index: -1
+fx_smoke/B4
+  rotate: false
+  xy: 926, 174
+  size: 82, 84
+  orig: 82, 84
+  offset: 0, 0
+  index: -1
+hair_back
+  rotate: true
+  xy: 746, 147
+  size: 106, 49
+  orig: 106, 49
+  offset: 0, 0
+  index: -1
+hat_B
+  rotate: false
+  xy: 474, 179
+  size: 130, 80
+  orig: 130, 80
+  offset: 0, 0
+  index: -1
+hat_F
+  rotate: false
+  xy: 2, 178
+  size: 184, 109
+  orig: 184, 109
+  offset: 0, 0
+  index: -1
+hat_starA
+  rotate: true
+  xy: 336, 7
+  size: 19, 23
+  orig: 19, 23
+  offset: 0, 0
+  index: -1
+hat_starB
+  rotate: false
+  xy: 311, 4
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+hat_starC
+  rotate: true
+  xy: 259, 2
+  size: 24, 25
+  orig: 24, 25
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 881, 406
+  size: 141, 104
+  orig: 141, 104
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 474, 170
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+mouth(Oh)
+  rotate: false
+  xy: 502, 261
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+mouth(Open)
+  rotate: true
+  xy: 487, 2
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+rabit
+  rotate: false
+  xy: 922, 260
+  size: 96, 116
+  orig: 96, 116
+  offset: 0, 0
+  index: -1
+stage
+  rotate: false
+  xy: 797, 108
+  size: 108, 45
+  orig: 108, 45
+  offset: 0, 0
+  index: -1
+stage_star
+  rotate: true
+  xy: 759, 97
+  size: 48, 34
+  orig: 48, 34
+  offset: 0, 0
+  index: -1
+wath
+  rotate: true
+  xy: 144, 2
+  size: 28, 46
+  orig: 28, 46
+  offset: 0, 0
+  index: -1

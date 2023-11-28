@@ -1,0 +1,496 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm B
+  rotate: true
+  xy: 844, 303
+  size: 58, 42
+  orig: 58, 42
+  offset: 0, 0
+  index: -1
+Arm F
+  rotate: false
+  xy: 937, 307
+  size: 40, 61
+  orig: 40, 61
+  offset: 0, 0
+  index: -1
+Arm F Atk
+  rotate: false
+  xy: 888, 306
+  size: 47, 63
+  orig: 47, 63
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 978, 519
+  size: 66, 42
+  orig: 66, 42
+  offset: 0, 0
+  index: -1
+Cannon
+  rotate: false
+  xy: 2, 17
+  size: 141, 75
+  orig: 141, 75
+  offset: 0, 0
+  index: -1
+Cannon Tie
+  rotate: true
+  xy: 593, 2
+  size: 26, 39
+  orig: 26, 39
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: true
+  xy: 794, 21
+  size: 48, 38
+  orig: 48, 38
+  offset: 0, 0
+  index: -1
+Cloth B
+  rotate: true
+  xy: 979, 334
+  size: 34, 43
+  orig: 34, 43
+  offset: 0, 0
+  index: -1
+Cloth F
+  rotate: true
+  xy: 562, 2
+  size: 36, 29
+  orig: 36, 29
+  offset: 0, 0
+  index: -1
+Cloth Fur F
+  rotate: false
+  xy: 813, 89
+  size: 28, 16
+  orig: 28, 16
+  offset: 0, 0
+  index: -1
+EF_atk_A01
+  rotate: false
+  xy: 414, 40
+  size: 182, 174
+  orig: 182, 174
+  offset: 0, 0
+  index: -1
+EF_atk_A02
+  rotate: false
+  xy: 642, 620
+  size: 182, 174
+  orig: 182, 174
+  offset: 0, 0
+  index: -1
+EF_atk_A03
+  rotate: false
+  xy: 642, 444
+  size: 182, 174
+  orig: 182, 174
+  offset: 0, 0
+  index: -1
+EF_atk_B
+  rotate: false
+  xy: 630, 77
+  size: 110, 98
+  orig: 110, 98
+  offset: 0, 0
+  index: -1
+EF_explosion_A
+  rotate: false
+  xy: 979, 292
+  size: 42, 40
+  orig: 42, 40
+  offset: 0, 0
+  index: -1
+EF_explosion_B
+  rotate: false
+  xy: 979, 261
+  size: 42, 29
+  orig: 42, 29
+  offset: 0, 0
+  index: -1
+EF_explosion_C
+  rotate: false
+  xy: 874, 371
+  size: 75, 74
+  orig: 75, 74
+  offset: 0, 0
+  index: -1
+EF_light_01
+  rotate: true
+  xy: 316, 20
+  size: 72, 96
+  orig: 72, 96
+  offset: 0, 0
+  index: -1
+EF_skill_A1
+  rotate: false
+  xy: 642, 305
+  size: 164, 137
+  orig: 164, 137
+  offset: 0, 0
+  index: -1
+EF_skill_A2
+  rotate: false
+  xy: 826, 591
+  size: 165, 136
+  orig: 165, 136
+  offset: 0, 0
+  index: -1
+EF_skill_A3
+  rotate: false
+  xy: 826, 447
+  size: 150, 142
+  orig: 150, 142
+  offset: 0, 0
+  index: -1
+EF_skill_A4
+  rotate: false
+  xy: 869, 729
+  size: 153, 141
+  orig: 153, 141
+  offset: 0, 0
+  index: -1
+EF_skill_B1
+  rotate: false
+  xy: 620, 796
+  size: 247, 226
+  orig: 247, 226
+  offset: 0, 0
+  index: -1
+EF_skill_B2
+  rotate: true
+  xy: 414, 465
+  size: 247, 226
+  orig: 247, 226
+  offset: 0, 0
+  index: -1
+EF_skill_B3
+  rotate: true
+  xy: 414, 216
+  size: 247, 226
+  orig: 247, 226
+  offset: 0, 0
+  index: -1
+EF_skill_C
+  rotate: true
+  xy: 869, 872
+  size: 150, 153
+  orig: 150, 153
+  offset: 0, 0
+  index: -1
+EF_skill_D1
+  rotate: false
+  xy: 2, 714
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+EF_skill_D2
+  rotate: false
+  xy: 2, 404
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+EF_skill_D4
+  rotate: false
+  xy: 208, 714
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+EF_skill_D5
+  rotate: false
+  xy: 2, 94
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+EF_skill_D6
+  rotate: false
+  xy: 208, 404
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+EF_skill_D7
+  rotate: false
+  xy: 414, 714
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+EF_skill_D8
+  rotate: false
+  xy: 208, 94
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+Eye
+  rotate: false
+  xy: 490, 5
+  size: 70, 33
+  orig: 70, 33
+  offset: 0, 0
+  index: -1
+Eye2(Hurt)
+  rotate: false
+  xy: 841, 213
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+Eye3(Close)
+  rotate: true
+  xy: 826, 729
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eyebrow
+  rotate: true
+  xy: 847, 735
+  size: 59, 14
+  orig: 59, 14
+  offset: 0, 0
+  index: -1
+Eyebrow2
+  rotate: false
+  xy: 634, 10
+  size: 55, 18
+  orig: 55, 18
+  offset: 0, 0
+  index: -1
+Face
+  rotate: true
+  xy: 951, 370
+  size: 75, 54
+  orig: 75, 54
+  offset: 0, 0
+  index: -1
+Fan
+  rotate: true
+  xy: 598, 45
+  size: 169, 30
+  orig: 169, 30
+  offset: 0, 0
+  index: -1
+Fan Ribbon
+  rotate: true
+  xy: 808, 305
+  size: 56, 34
+  orig: 56, 34
+  offset: 0, 0
+  index: -1
+Fan Stick
+  rotate: false
+  xy: 907, 234
+  size: 19, 70
+  orig: 19, 70
+  offset: 0, 0
+  index: -1
+Fan2
+  rotate: false
+  xy: 145, 62
+  size: 169, 30
+  orig: 169, 30
+  offset: 0, 0
+  index: -1
+Fan3
+  rotate: false
+  xy: 145, 29
+  size: 167, 31
+  orig: 167, 31
+  offset: 0, 0
+  index: -1
+FlowerA
+  rotate: false
+  xy: 841, 237
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+FlowerB
+  rotate: false
+  xy: 835, 164
+  size: 50, 47
+  orig: 50, 47
+  offset: 0, 0
+  index: -1
+HairPony
+  rotate: true
+  xy: 784, 223
+  size: 80, 55
+  orig: 80, 55
+  offset: 0, 0
+  index: -1
+Hand F
+  rotate: false
+  xy: 928, 233
+  size: 30, 22
+  orig: 30, 22
+  offset: 0, 0
+  index: -1
+Hand F Atk
+  rotate: false
+  xy: 850, 140
+  size: 24, 22
+  orig: 24, 22
+  offset: 0, 0
+  index: -1
+Hand F Atk2
+  rotate: false
+  xy: 813, 107
+  size: 29, 18
+  orig: 29, 18
+  offset: 0, 0
+  index: -1
+Hand F Skill
+  rotate: false
+  xy: 620, 735
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+Hat
+  rotate: false
+  xy: 642, 177
+  size: 140, 126
+  orig: 140, 126
+  offset: 0, 0
+  index: -1
+Leg Down F
+  rotate: false
+  xy: 620, 756
+  size: 20, 38
+  orig: 20, 38
+  offset: 0, 0
+  index: -1
+Leg F
+  rotate: false
+  xy: 887, 161
+  size: 28, 50
+  orig: 28, 50
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 2, 2
+  size: 19, 13
+  orig: 19, 13
+  offset: 0, 0
+  index: -1
+Mouth_02
+  rotate: true
+  xy: 959, 272
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Mouth_03
+  rotate: true
+  xy: 691, 7
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
+  index: -1
+Mouth_Attack
+  rotate: false
+  xy: 904, 215
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 993, 587
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Snow Splash L
+  rotate: false
+  xy: 978, 447
+  size: 37, 70
+  orig: 37, 70
+  offset: 0, 0
+  index: -1
+Snow Splash R
+  rotate: true
+  xy: 808, 363
+  size: 79, 64
+  orig: 79, 64
+  offset: 0, 0
+  index: -1
+Snowball
+  rotate: false
+  xy: 813, 127
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+Snowball Splash
+  rotate: true
+  xy: 718, 24
+  size: 45, 74
+  orig: 45, 74
+  offset: 0, 0
+  index: -1
+SnowballA
+  rotate: false
+  xy: 414, 2
+  size: 74, 36
+  orig: 74, 36
+  offset: 0, 0
+  index: -1
+SnowballB
+  rotate: true
+  xy: 784, 177
+  size: 44, 26
+  orig: 44, 26
+  offset: 0, 0
+  index: -1
+SnowballC
+  rotate: false
+  xy: 630, 30
+  size: 86, 45
+  orig: 86, 45
+  offset: 0, 0
+  index: -1
+SnowballD
+  rotate: true
+  xy: 1007, 417
+  size: 28, 15
+  orig: 28, 15
+  offset: 0, 0
+  index: -1
+SnowballE
+  rotate: true
+  xy: 812, 182
+  size: 39, 21
+  orig: 39, 21
+  offset: 0, 0
+  index: -1
+hair_01
+  rotate: true
+  xy: 742, 71
+  size: 104, 69
+  orig: 104, 69
+  offset: 0, 0
+  index: -1
+hair_02
+  rotate: false
+  xy: 928, 257
+  size: 29, 47
+  orig: 29, 47
+  offset: 0, 0
+  index: -1

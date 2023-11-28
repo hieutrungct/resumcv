@@ -1,0 +1,559 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Acc
+  rotate: false
+  xy: 444, 399
+  size: 62, 79
+  orig: 62, 79
+  offset: 0, 0
+  index: -1
+ArmAtk(L)
+  rotate: false
+  xy: 633, 20
+  size: 84, 46
+  orig: 84, 46
+  offset: 0, 0
+  index: -1
+ArmAtk(R)
+  rotate: true
+  xy: 589, 497
+  size: 52, 38
+  orig: 52, 38
+  offset: 0, 0
+  index: -1
+ArmDown(L)
+  rotate: true
+  xy: 904, 248
+  size: 28, 40
+  orig: 28, 40
+  offset: 0, 0
+  index: -1
+ArmSkill(L)
+  rotate: true
+  xy: 845, 282
+  size: 40, 67
+  orig: 40, 67
+  offset: 0, 0
+  index: -1
+ArmSkill(R)
+  rotate: true
+  xy: 471, 497
+  size: 50, 106
+  orig: 50, 106
+  offset: 0, 0
+  index: -1
+ArmUp(L)
+  rotate: false
+  xy: 589, 551
+  size: 39, 33
+  orig: 39, 33
+  offset: 0, 0
+  index: -1
+ArmUp(R)
+  rotate: true
+  xy: 799, 65
+  size: 38, 45
+  orig: 38, 45
+  offset: 0, 0
+  index: -1
+ArmUpAtk(R)
+  rotate: true
+  xy: 825, 271
+  size: 30, 18
+  orig: 30, 18
+  offset: 0, 0
+  index: -1
+ArmdDown(R)
+  rotate: false
+  xy: 824, 224
+  size: 31, 45
+  orig: 31, 45
+  offset: 0, 0
+  index: -1
+AtkWeapon
+  rotate: false
+  xy: 592, 586
+  size: 184, 133
+  orig: 184, 133
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 280, 5
+  size: 36, 59
+  orig: 36, 59
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: false
+  xy: 800, 171
+  size: 41, 29
+  orig: 41, 29
+  offset: 0, 0
+  index: -1
+ChestCloth(L)
+  rotate: true
+  xy: 914, 278
+  size: 22, 67
+  orig: 22, 67
+  offset: 0, 0
+  index: -1
+ChestCloth(R)
+  rotate: false
+  xy: 800, 202
+  size: 22, 76
+  orig: 22, 76
+  offset: 0, 0
+  index: -1
+Eye1(Open)
+  rotate: false
+  xy: 341, 10
+  size: 66, 25
+  orig: 66, 25
+  offset: 0, 0
+  index: -1
+Eye2(Close)
+  rotate: false
+  xy: 778, 303
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye3(Hurt)
+  rotate: false
+  xy: 409, 13
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+FeatherA
+  rotate: false
+  xy: 216, 7
+  size: 62, 34
+  orig: 62, 34
+  offset: 0, 0
+  index: -1
+FeatherB
+  rotate: false
+  xy: 799, 105
+  size: 27, 64
+  orig: 27, 64
+  offset: 0, 0
+  index: -1
+FeatherSkillA
+  rotate: true
+  xy: 926, 302
+  size: 28, 96
+  orig: 28, 96
+  offset: 0, 0
+  index: -1
+FeatherSkillB
+  rotate: true
+  xy: 747, 280
+  size: 21, 76
+  orig: 21, 76
+  offset: 0, 0
+  index: -1
+Hat
+  rotate: true
+  xy: 926, 332
+  size: 132, 82
+  orig: 132, 82
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 508, 400
+  size: 113, 95
+  orig: 113, 95
+  offset: 0, 0
+  index: -1
+Leg(L)
+  rotate: false
+  xy: 747, 303
+  size: 29, 65
+  orig: 29, 65
+  offset: 0, 0
+  index: -1
+Leg(L)_Ring
+  rotate: true
+  xy: 1010, 434
+  size: 30, 12
+  orig: 30, 12
+  offset: 0, 0
+  index: -1
+Leg(R)
+  rotate: true
+  xy: 139, 2
+  size: 33, 75
+  orig: 33, 75
+  offset: 0, 0
+  index: -1
+Mei1
+  rotate: false
+  xy: 526, 224
+  size: 72, 11
+  orig: 72, 11
+  offset: 0, 0
+  index: -1
+Mei2
+  rotate: false
+  xy: 633, 7
+  size: 58, 11
+  orig: 58, 11
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: true
+  xy: 341, 37
+  size: 4, 7
+  orig: 4, 7
+  offset: 0, 0
+  index: -1
+Mo5
+  rotate: false
+  xy: 946, 259
+  size: 33, 17
+  orig: 33, 17
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: false
+  xy: 983, 276
+  size: 38, 24
+  orig: 38, 24
+  offset: 0, 0
+  index: -1
+Pony(L)
+  rotate: true
+  xy: 719, 17
+  size: 46, 101
+  orig: 46, 101
+  offset: 0, 0
+  index: -1
+Pony(R)
+  rotate: true
+  xy: 472, 549
+  size: 89, 115
+  orig: 89, 115
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 926, 605
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Wand
+  rotate: true
+  xy: 473, 10
+  size: 211, 46
+  orig: 211, 46
+  offset: 0, 0
+  index: -1
+Wand_wind(L)
+  rotate: false
+  xy: 822, 11
+  size: 24, 52
+  orig: 24, 52
+  offset: 0, 0
+  index: -1
+Wand_wind(R)
+  rotate: true
+  xy: 139, 37
+  size: 23, 37
+  orig: 23, 37
+  offset: 0, 0
+  index: -1
+WingDown(L)A
+  rotate: false
+  xy: 824, 202
+  size: 27, 20
+  orig: 27, 20
+  offset: 0, 0
+  index: -1
+WingDown(L)B
+  rotate: true
+  xy: 180, 221
+  size: 21, 39
+  orig: 21, 39
+  offset: 0, 0
+  index: -1
+WingDown(R)A
+  rotate: false
+  xy: 857, 218
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+WingDown(R)B
+  rotate: false
+  xy: 857, 250
+  size: 45, 30
+  orig: 45, 30
+  offset: 0, 0
+  index: -1
+WingSkill2(L)
+  rotate: true
+  xy: 237, 399
+  size: 79, 205
+  orig: 79, 205
+  offset: 0, 0
+  index: -1
+WingSkill2Down(R)
+  rotate: false
+  xy: 526, 237
+  size: 102, 48
+  orig: 102, 48
+  offset: 0, 0
+  index: -1
+WingUP(R)
+  rotate: true
+  xy: 237, 480
+  size: 128, 232
+  orig: 128, 232
+  offset: 0, 0
+  index: -1
+WingUPin(L)
+  rotate: true
+  xy: 521, 5
+  size: 50, 110
+  orig: 50, 110
+  offset: 0, 0
+  index: -1
+WingUPin(R)
+  rotate: false
+  xy: 721, 65
+  size: 76, 104
+  orig: 76, 104
+  offset: 0, 0
+  index: -1
+WingUPout(L)
+  rotate: true
+  xy: 2, 10
+  size: 50, 135
+  orig: 50, 135
+  offset: 0, 0
+  index: -1
+WingUPout(R)
+  rotate: false
+  xy: 951, 833
+  size: 71, 189
+  orig: 71, 189
+  offset: 0, 0
+  index: -1
+Wingskill1(L)
+  rotate: true
+  xy: 746, 929
+  size: 93, 203
+  orig: 93, 203
+  offset: 0, 0
+  index: -1
+Wingskill1(R)
+  rotate: false
+  xy: 472, 640
+  size: 118, 261
+  orig: 118, 261
+  offset: 0, 0
+  index: -1
+fx/A1
+  rotate: false
+  xy: 2, 62
+  size: 176, 180
+  orig: 176, 180
+  offset: 0, 0
+  index: -1
+fx/A2
+  rotate: false
+  xy: 592, 721
+  size: 176, 180
+  orig: 176, 180
+  offset: 0, 0
+  index: -1
+fx/A3
+  rotate: false
+  xy: 770, 747
+  size: 176, 180
+  orig: 176, 180
+  offset: 0, 0
+  index: -1
+fx/A4
+  rotate: true
+  xy: 233, 221
+  size: 176, 180
+  orig: 176, 180
+  offset: 0, 0
+  index: -1
+fx/A5
+  rotate: true
+  xy: 180, 43
+  size: 176, 180
+  orig: 176, 180
+  offset: 0, 0
+  index: -1
+fx/B0
+  rotate: true
+  xy: 954, 718
+  size: 113, 68
+  orig: 113, 68
+  offset: 0, 0
+  index: -1
+fx/B1
+  rotate: true
+  xy: 926, 466
+  size: 136, 95
+  orig: 136, 95
+  offset: 0, 0
+  index: -1
+fx/B2
+  rotate: false
+  xy: 633, 370
+  size: 132, 73
+  orig: 132, 73
+  offset: 0, 0
+  index: -1
+fx/B3
+  rotate: true
+  xy: 954, 604
+  size: 112, 63
+  orig: 112, 63
+  offset: 0, 0
+  index: -1
+fx/C1
+  rotate: false
+  xy: 2, 244
+  size: 229, 157
+  orig: 229, 157
+  offset: 0, 0
+  index: -1
+fx/D1
+  rotate: true
+  xy: 526, 287
+  size: 111, 105
+  orig: 111, 105
+  offset: 0, 0
+  index: -1
+fx/D2
+  rotate: true
+  xy: 521, 57
+  size: 164, 107
+  orig: 164, 107
+  offset: 0, 0
+  index: -1
+fx/D3
+  rotate: true
+  xy: 415, 223
+  size: 174, 109
+  orig: 174, 109
+  offset: 0, 0
+  index: -1
+fx/D4
+  rotate: true
+  xy: 362, 37
+  size: 182, 109
+  orig: 182, 109
+  offset: 0, 0
+  index: -1
+fx/E1
+  rotate: false
+  xy: 2, 817
+  size: 233, 205
+  orig: 233, 205
+  offset: 0, 0
+  index: -1
+fx/E2
+  rotate: false
+  xy: 2, 610
+  size: 233, 205
+  orig: 233, 205
+  offset: 0, 0
+  index: -1
+fx/E3
+  rotate: false
+  xy: 237, 817
+  size: 233, 205
+  orig: 233, 205
+  offset: 0, 0
+  index: -1
+fx/E4
+  rotate: false
+  xy: 2, 403
+  size: 233, 205
+  orig: 233, 205
+  offset: 0, 0
+  index: -1
+fx/E5
+  rotate: false
+  xy: 237, 610
+  size: 233, 205
+  orig: 233, 205
+  offset: 0, 0
+  index: -1
+fx/F1
+  rotate: false
+  xy: 720, 171
+  size: 78, 107
+  orig: 78, 107
+  offset: 0, 0
+  index: -1
+fx/F2
+  rotate: true
+  xy: 633, 280
+  size: 88, 112
+  orig: 88, 112
+  offset: 0, 0
+  index: -1
+fx/F3
+  rotate: false
+  xy: 630, 170
+  size: 88, 108
+  orig: 88, 108
+  offset: 0, 0
+  index: -1
+fx/F4
+  rotate: false
+  xy: 630, 68
+  size: 89, 100
+  orig: 89, 100
+  offset: 0, 0
+  index: -1
+fx/G1
+  rotate: false
+  xy: 472, 903
+  size: 272, 119
+  orig: 272, 119
+  offset: 0, 0
+  index: -1
+fx/J0
+  rotate: false
+  xy: 778, 606
+  size: 146, 139
+  orig: 146, 139
+  offset: 0, 0
+  index: -1
+fx/J1
+  rotate: false
+  xy: 778, 465
+  size: 146, 139
+  orig: 146, 139
+  offset: 0, 0
+  index: -1
+fx/J2
+  rotate: false
+  xy: 630, 445
+  size: 146, 139
+  orig: 146, 139
+  offset: 0, 0
+  index: -1
+fx/J3
+  rotate: false
+  xy: 778, 324
+  size: 146, 139
+  orig: 146, 139
+  offset: 0, 0
+  index: -1

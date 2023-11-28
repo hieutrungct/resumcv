@@ -1,0 +1,615 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm Down F
+  rotate: false
+  xy: 758, 734
+  size: 37, 34
+  orig: 37, 34
+  offset: 0, 0
+  index: -1
+Arm Down F Skil
+  rotate: true
+  xy: 690, 715
+  size: 40, 33
+  orig: 40, 33
+  offset: 0, 0
+  index: -1
+Arm Dpwn B
+  rotate: true
+  xy: 898, 816
+  size: 30, 24
+  orig: 30, 24
+  offset: 0, 0
+  index: -1
+Arm Up B
+  rotate: false
+  xy: 725, 741
+  size: 31, 32
+  orig: 31, 32
+  offset: 0, 0
+  index: -1
+Arm Up F
+  rotate: false
+  xy: 725, 715
+  size: 29, 24
+  orig: 29, 24
+  offset: 0, 0
+  index: -1
+Arm Up F Skill
+  rotate: false
+  xy: 758, 770
+  size: 42, 26
+  orig: 42, 26
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 522, 685
+  size: 49, 57
+  orig: 49, 57
+  offset: 0, 0
+  index: -1
+CFX/atk/D1
+  rotate: false
+  xy: 2, 285
+  size: 160, 144
+  orig: 160, 144
+  offset: 0, 0
+  index: -1
+CFX/atk/D2
+  rotate: false
+  xy: 2, 431
+  size: 162, 144
+  orig: 162, 144
+  offset: 0, 0
+  index: -1
+CFX/atk/D3
+  rotate: false
+  xy: 2, 577
+  size: 162, 160
+  orig: 162, 160
+  offset: 0, 0
+  index: -1
+CFX/atk/D4
+  rotate: true
+  xy: 758, 904
+  size: 118, 165
+  orig: 118, 165
+  offset: 0, 0
+  index: -1
+CFX/laser_spiral.img/0
+  rotate: true
+  xy: 519, 625
+  size: 58, 45
+  orig: 58, 45
+  offset: 0, 0
+  index: -1
+CFX/laser_spiral.img/1
+  rotate: true
+  xy: 347, 164
+  size: 64, 39
+  orig: 64, 39
+  offset: 0, 0
+  index: -1
+CFX/laser_spiral.img/2
+  rotate: false
+  xy: 683, 676
+  size: 44, 37
+  orig: 44, 37
+  offset: 0, 0
+  index: -1
+CFX/laser_spiral.img/3
+  rotate: false
+  xy: 802, 766
+  size: 43, 37
+  orig: 43, 37
+  offset: 0, 0
+  index: -1
+CFX/laser_spiral.img/4
+  rotate: true
+  xy: 797, 729
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1
+CFX/laser_spiral.img/5
+  rotate: true
+  xy: 121, 4
+  size: 20, 32
+  orig: 20, 32
+  offset: 0, 0
+  index: -1
+CFX/laser_spiral.img/6
+  rotate: true
+  xy: 544, 744
+  size: 10, 17
+  orig: 10, 17
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/0
+  rotate: false
+  xy: 2, 739
+  size: 245, 124
+  orig: 245, 124
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/1
+  rotate: false
+  xy: 351, 898
+  size: 239, 124
+  orig: 239, 124
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/2
+  rotate: true
+  xy: 166, 551
+  size: 186, 74
+  orig: 186, 74
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/3
+  rotate: false
+  xy: 375, 822
+  size: 184, 74
+  orig: 184, 74
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/4
+  rotate: false
+  xy: 375, 685
+  size: 145, 57
+  orig: 145, 57
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/5
+  rotate: false
+  xy: 374, 628
+  size: 143, 55
+  orig: 143, 55
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/7
+  rotate: true
+  xy: 408, 454
+  size: 144, 46
+  orig: 144, 46
+  offset: 0, 0
+  index: -1
+CFX/laser_start_1.img/8
+  rotate: false
+  xy: 289, 306
+  size: 99, 39
+  orig: 99, 39
+  offset: 0, 0
+  index: -1
+CFX/laser_start_3.img/0
+  rotate: false
+  xy: 758, 848
+  size: 165, 54
+  orig: 165, 54
+  offset: 0, 0
+  index: -1
+CFX/laser_start_3.img/1
+  rotate: true
+  xy: 137, 118
+  size: 165, 54
+  orig: 165, 54
+  offset: 0, 0
+  index: -1
+CFX/laser_start_3.img/2
+  rotate: false
+  xy: 561, 835
+  size: 165, 54
+  orig: 165, 54
+  offset: 0, 0
+  index: -1
+CFX/laser_start_3.img/3
+  rotate: false
+  xy: 561, 835
+  size: 165, 54
+  orig: 165, 54
+  offset: 0, 0
+  index: -1
+CFX/skill_2/0
+  rotate: false
+  xy: 249, 727
+  size: 124, 136
+  orig: 124, 136
+  offset: 0, 0
+  index: -1
+CFX/skill_2/1
+  rotate: false
+  xy: 166, 431
+  size: 112, 118
+  orig: 112, 118
+  offset: 0, 0
+  index: -1
+CFX/skill_2/2
+  rotate: false
+  xy: 164, 300
+  size: 123, 129
+  orig: 123, 129
+  offset: 0, 0
+  index: -1
+CFX/skill_2/3
+  rotate: false
+  xy: 242, 598
+  size: 130, 127
+  orig: 130, 127
+  offset: 0, 0
+  index: -1
+CFX/skill_2/4
+  rotate: true
+  xy: 2, 2
+  size: 111, 117
+  orig: 111, 117
+  offset: 0, 0
+  index: -1
+CFX/skill_3/0
+  rotate: true
+  xy: 644, 757
+  size: 76, 77
+  orig: 76, 77
+  offset: 0, 0
+  index: -1
+CFX/skill_3/1
+  rotate: true
+  xy: 561, 757
+  size: 76, 81
+  orig: 76, 81
+  offset: 0, 0
+  index: -1
+CFX/skill_3/2
+  rotate: true
+  xy: 193, 83
+  size: 73, 82
+  orig: 73, 82
+  offset: 0, 0
+  index: -1
+CFX/skill_3/3
+  rotate: false
+  xy: 277, 217
+  size: 57, 81
+  orig: 57, 81
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: true
+  xy: 242, 554
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1
+EffectA
+  rotate: false
+  xy: 121, 26
+  size: 44, 87
+  orig: 44, 87
+  offset: 0, 0
+  index: -1
+EffectB
+  rotate: true
+  xy: 847, 772
+  size: 35, 43
+  orig: 35, 43
+  offset: 0, 0
+  index: -1
+EffectC
+  rotate: true
+  xy: 678, 642
+  size: 32, 42
+  orig: 32, 42
+  offset: 0, 0
+  index: -1
+EffectD
+  rotate: true
+  xy: 925, 831
+  size: 44, 89
+  orig: 44, 89
+  offset: 0, 0
+  index: -1
+EnergyBall_A_Attack
+  rotate: true
+  xy: 464, 366
+  size: 86, 55
+  orig: 86, 55
+  offset: 0, 0
+  index: -1
+EnergyBall_B_Attack
+  rotate: false
+  xy: 456, 454
+  size: 62, 52
+  orig: 62, 52
+  offset: 0, 0
+  index: -1
+EnergyBall_C_Attack
+  rotate: false
+  xy: 277, 99
+  size: 75, 45
+  orig: 75, 45
+  offset: 0, 0
+  index: -1
+EnergyDust_A_Attack
+  rotate: false
+  xy: 167, 12
+  size: 24, 36
+  orig: 24, 36
+  offset: 0, 0
+  index: -1
+EnergyDust_B_Attack
+  rotate: false
+  xy: 800, 805
+  size: 45, 41
+  orig: 45, 41
+  offset: 0, 0
+  index: -1
+EyeBrow_Normal
+  rotate: true
+  xy: 728, 831
+  size: 58, 17
+  orig: 58, 17
+  offset: 0, 0
+  index: -1
+Eye_Close
+  rotate: true
+  xy: 544, 756
+  size: 64, 12
+  orig: 64, 12
+  offset: 0, 0
+  index: -1
+Eye_Normal
+  rotate: true
+  xy: 333, 29
+  size: 68, 30
+  orig: 68, 30
+  offset: 0, 0
+  index: -1
+Eye_Skill
+  rotate: true
+  xy: 167, 50
+  size: 66, 24
+  orig: 66, 24
+  offset: 0, 0
+  index: -1
+Gun
+  rotate: true
+  xy: 279, 2
+  size: 36, 42
+  orig: 36, 42
+  offset: 0, 0
+  index: -1
+Gun Skill
+  rotate: true
+  xy: 456, 508
+  size: 90, 62
+  orig: 90, 62
+  offset: 0, 0
+  index: -1
+HairBack
+  rotate: false
+  xy: 592, 891
+  size: 164, 131
+  orig: 164, 131
+  offset: 0, 0
+  index: -1
+HairTail(L)
+  rotate: false
+  xy: 277, 146
+  size: 68, 69
+  orig: 68, 69
+  offset: 0, 0
+  index: -1
+HairTail(R)
+  rotate: false
+  xy: 193, 8
+  size: 84, 73
+  orig: 84, 73
+  offset: 0, 0
+  index: -1
+Hand B
+  rotate: false
+  xy: 516, 600
+  size: 19, 23
+  orig: 19, 23
+  offset: 0, 0
+  index: -1
+Jet B
+  rotate: false
+  xy: 573, 672
+  size: 55, 33
+  orig: 55, 33
+  offset: 0, 0
+  index: -1
+Jet F
+  rotate: false
+  xy: 630, 678
+  size: 51, 37
+  orig: 51, 37
+  offset: 0, 0
+  index: -1
+Leg Down B
+  rotate: true
+  xy: 847, 809
+  size: 37, 49
+  orig: 37, 49
+  offset: 0, 0
+  index: -1
+Leg Down F
+  rotate: true
+  xy: 406, 364
+  size: 88, 56
+  orig: 88, 56
+  offset: 0, 0
+  index: -1
+Leg F Skill
+  rotate: false
+  xy: 573, 707
+  size: 52, 48
+  orig: 52, 48
+  offset: 0, 0
+  index: -1
+Leg Up B
+  rotate: false
+  xy: 406, 329
+  size: 50, 33
+  orig: 50, 33
+  offset: 0, 0
+  index: -1
+Leg Up F
+  rotate: true
+  xy: 566, 627
+  size: 43, 47
+  orig: 43, 47
+  offset: 0, 0
+  index: -1
+Leg m B
+  rotate: false
+  xy: 520, 577
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+Mouth_Attack
+  rotate: false
+  xy: 351, 880
+  size: 22, 16
+  orig: 22, 16
+  offset: 0, 0
+  index: -1
+Mouth_Hurt
+  rotate: true
+  xy: 729, 681
+  size: 32, 19
+  orig: 32, 19
+  offset: 0, 0
+  index: -1
+Mouth_Normal
+  rotate: true
+  xy: 747, 873
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Mouth_Skill
+  rotate: false
+  xy: 537, 602
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 374, 600
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Thunder_A_Attack
+  rotate: true
+  xy: 723, 775
+  size: 54, 33
+  orig: 54, 33
+  offset: 0, 0
+  index: -1
+Thunder_B_Attack
+  rotate: false
+  xy: 279, 40
+  size: 52, 57
+  orig: 52, 57
+  offset: 0, 0
+  index: -1
+Thunder_C_Attack
+  rotate: true
+  xy: 615, 626
+  size: 44, 27
+  orig: 44, 27
+  offset: 0, 0
+  index: -1
+Thunder_D_Attack
+  rotate: false
+  xy: 644, 633
+  size: 32, 43
+  orig: 32, 43
+  offset: 0, 0
+  index: -1
+Thunder_E_Attack
+  rotate: false
+  xy: 627, 717
+  size: 61, 38
+  orig: 61, 38
+  offset: 0, 0
+  index: -1
+Weapon
+  rotate: false
+  xy: 2, 865
+  size: 347, 157
+  orig: 347, 157
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 289, 347
+  size: 121, 115
+  orig: 121, 115
+  offset: 0, 0
+  index: -1
+hair_A
+  rotate: false
+  xy: 2, 115
+  size: 133, 168
+  orig: 133, 168
+  offset: 0, 0
+  index: -1
+hair_B_L
+  rotate: false
+  xy: 336, 230
+  size: 50, 74
+  orig: 50, 74
+  offset: 0, 0
+  index: -1
+hair_B_R
+  rotate: true
+  xy: 925, 877
+  size: 145, 90
+  orig: 145, 90
+  offset: 0, 0
+  index: -1
+heat_A
+  rotate: false
+  xy: 354, 114
+  size: 35, 48
+  orig: 35, 48
+  offset: 0, 0
+  index: -1
+heat_B_L
+  rotate: true
+  xy: 375, 744
+  size: 76, 167
+  orig: 76, 167
+  offset: 0, 0
+  index: -1
+heat_B_R
+  rotate: false
+  xy: 280, 470
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+heat_C_L
+  rotate: false
+  xy: 193, 158
+  size: 82, 140
+  orig: 82, 140
+  offset: 0, 0
+  index: -1
+heat_C_R
+  rotate: false
+  xy: 758, 798
+  size: 40, 48
+  orig: 40, 48
+  offset: 0, 0
+  index: -1

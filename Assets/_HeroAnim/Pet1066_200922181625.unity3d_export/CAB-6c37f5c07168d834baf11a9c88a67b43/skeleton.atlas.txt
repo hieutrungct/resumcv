@@ -1,0 +1,293 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 243, 43
+  size: 58, 66
+  orig: 58, 66
+  offset: 0, 0
+  index: -1
+B1
+  rotate: true
+  xy: 307, 357
+  size: 100, 117
+  orig: 100, 117
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 124, 107
+  size: 100, 117
+  orig: 100, 117
+  offset: 0, 0
+  index: -1
+B3
+  rotate: true
+  xy: 124, 5
+  size: 100, 117
+  orig: 100, 117
+  offset: 0, 0
+  index: -1
+B4
+  rotate: true
+  xy: 379, 260
+  size: 80, 93
+  orig: 80, 93
+  offset: 0, 0
+  index: -1
+C1
+  rotate: true
+  xy: 271, 255
+  size: 100, 106
+  orig: 100, 106
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 2, 60
+  size: 120, 141
+  orig: 120, 141
+  offset: 0, 0
+  index: -1
+C4
+  rotate: true
+  xy: 158, 390
+  size: 120, 147
+  orig: 120, 147
+  offset: 0, 0
+  index: -1
+C5
+  rotate: false
+  xy: 2, 203
+  size: 120, 163
+  orig: 120, 163
+  offset: 0, 0
+  index: -1
+Eye2(Close)
+  rotate: true
+  xy: 303, 43
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+Eye2(Hurt)
+  rotate: true
+  xy: 342, 141
+  size: 63, 21
+  orig: 63, 21
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 124, 226
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: true
+  xy: 474, 302
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+b arm_flower
+  rotate: false
+  xy: 443, 187
+  size: 40, 47
+  orig: 40, 47
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: false
+  xy: 2, 368
+  size: 154, 142
+  orig: 154, 142
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 363, 98
+  size: 42, 40
+  orig: 42, 40
+  offset: 0, 0
+  index: -1
+b light 3
+  rotate: true
+  xy: 365, 140
+  size: 46, 61
+  orig: 46, 61
+  offset: 0, 0
+  index: -1
+b light 4
+  rotate: false
+  xy: 233, 233
+  size: 34, 56
+  orig: 34, 56
+  offset: 0, 0
+  index: -1
+b light 5
+  rotate: true
+  xy: 269, 233
+  size: 20, 46
+  orig: 20, 46
+  offset: 0, 0
+  index: -1
+b light 6
+  rotate: false
+  xy: 483, 466
+  size: 23, 44
+  orig: 23, 44
+  offset: 0, 0
+  index: -1
+b outer
+  rotate: false
+  xy: 481, 124
+  size: 15, 61
+  orig: 15, 61
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 428, 138
+  size: 47, 51
+  orig: 47, 51
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 342, 206
+  size: 47, 35
+  orig: 47, 35
+  offset: 0, 0
+  index: -1
+dress
+  rotate: false
+  xy: 379, 188
+  size: 62, 46
+  orig: 62, 46
+  offset: 0, 0
+  index: -1
+eye1(open)
+  rotate: false
+  xy: 226, 111
+  size: 81, 32
+  orig: 81, 32
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: true
+  xy: 271, 358
+  size: 30, 34
+  orig: 30, 34
+  offset: 0, 0
+  index: -1
+f arm_flower
+  rotate: true
+  xy: 2, 2
+  size: 56, 58
+  orig: 56, 58
+  offset: 0, 0
+  index: -1
+f arm_flower_fire
+  rotate: true
+  xy: 62, 2
+  size: 56, 58
+  orig: 56, 58
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: false
+  xy: 324, 84
+  size: 37, 55
+  orig: 37, 55
+  offset: 0, 0
+  index: -1
+f leg2
+  rotate: false
+  xy: 474, 266
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+f light 1
+  rotate: false
+  xy: 310, 158
+  size: 30, 73
+  orig: 30, 73
+  offset: 0, 0
+  index: -1
+f light 2
+  rotate: true
+  xy: 243, 4
+  size: 37, 78
+  orig: 37, 78
+  offset: 0, 0
+  index: -1
+f outer
+  rotate: true
+  xy: 152, 241
+  size: 48, 79
+  orig: 48, 79
+  offset: 0, 0
+  index: -1
+ground
+  rotate: false
+  xy: 307, 459
+  size: 174, 51
+  orig: 174, 51
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 158, 291
+  size: 111, 97
+  orig: 111, 97
+  offset: 0, 0
+  index: -1
+head acc
+  rotate: false
+  xy: 226, 145
+  size: 82, 86
+  orig: 82, 86
+  offset: 0, 0
+  index: -1
+light_main
+  rotate: false
+  xy: 426, 342
+  size: 82, 115
+  orig: 82, 115
+  offset: 0, 0
+  index: -1
+mic
+  rotate: true
+  xy: 379, 236
+  size: 22, 98
+  orig: 22, 98
+  offset: 0, 0
+  index: -1
+mo1
+  rotate: false
+  xy: 379, 342
+  size: 19, 13
+  orig: 19, 13
+  offset: 0, 0
+  index: -1
+mo2
+  rotate: false
+  xy: 324, 64
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+necklace
+  rotate: false
+  xy: 317, 236
+  size: 18, 17
+  orig: 18, 17
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,216 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 2, 25
+  size: 165, 125
+  orig: 165, 125
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 334, 388
+  size: 103, 122
+  orig: 103, 122
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 334, 279
+  size: 81, 107
+  orig: 81, 107
+  offset: 0, 0
+  index: -1
+A4
+  rotate: true
+  xy: 329, 70
+  size: 66, 81
+  orig: 66, 81
+  offset: 0, 0
+  index: -1
+A5
+  rotate: true
+  xy: 447, 272
+  size: 70, 55
+  orig: 70, 55
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 2, 332
+  size: 164, 178
+  orig: 164, 178
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 2, 152
+  size: 164, 178
+  orig: 164, 178
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 168, 332
+  size: 164, 178
+  orig: 164, 178
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 334, 188
+  size: 82, 89
+  orig: 82, 89
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 168, 152
+  size: 164, 178
+  orig: 164, 178
+  offset: 0, 0
+  index: -1
+C1
+  rotate: true
+  xy: 280, 63
+  size: 87, 47
+  orig: 87, 47
+  offset: 0, 0
+  index: -1
+C2
+  rotate: true
+  xy: 417, 288
+  size: 98, 28
+  orig: 98, 28
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: false
+  xy: 447, 253
+  size: 63, 17
+  orig: 63, 17
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: false
+  xy: 143, 2
+  size: 59, 20
+  orig: 59, 20
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: true
+  xy: 418, 224
+  size: 62, 27
+  orig: 62, 27
+  offset: 0, 0
+  index: -1
+Hammer1
+  rotate: false
+  xy: 439, 418
+  size: 66, 92
+  orig: 66, 92
+  offset: 0, 0
+  index: -1
+Hammer2
+  rotate: false
+  xy: 2, 12
+  size: 139, 11
+  orig: 139, 11
+  offset: 0, 0
+  index: -1
+L Hand 1
+  rotate: true
+  xy: 204, 4
+  size: 18, 35
+  orig: 18, 35
+  offset: 0, 0
+  index: -1
+Mouth Hurt
+  rotate: true
+  xy: 439, 393
+  size: 23, 4
+  orig: 23, 4
+  offset: 0, 0
+  index: -1
+Mouth Open
+  rotate: false
+  xy: 412, 69
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+R Hand1
+  rotate: false
+  xy: 418, 192
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+R Hand2
+  rotate: true
+  xy: 241, 9
+  size: 13, 29
+  orig: 13, 29
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 169, 24
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: true
+  xy: 280, 49
+  size: 12, 38
+  orig: 12, 38
+  offset: 0, 0
+  index: -1
+b bunches
+  rotate: true
+  xy: 329, 33
+  size: 35, 76
+  orig: 35, 76
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 412, 82
+  size: 30, 54
+  orig: 30, 54
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 447, 344
+  size: 72, 63
+  orig: 72, 63
+  offset: 0, 0
+  index: -1
+f bunches
+  rotate: true
+  xy: 334, 138
+  size: 48, 84
+  orig: 48, 84
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: true
+  xy: 447, 222
+  size: 29, 61
+  orig: 29, 61
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 169, 44
+  size: 109, 106
+  orig: 109, 106
+  offset: 0, 0
+  index: -1

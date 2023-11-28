@@ -1,0 +1,489 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: true
+  xy: 2, 17
+  size: 180, 58
+  orig: 180, 58
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 127, 453
+  size: 200, 57
+  orig: 200, 57
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 127, 398
+  size: 200, 53
+  orig: 200, 53
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 127, 360
+  size: 200, 36
+  orig: 200, 36
+  offset: 0, 0
+  index: -1
+B1
+  rotate: true
+  xy: 329, 393
+  size: 117, 125
+  orig: 117, 125
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 2, 354
+  size: 123, 156
+  orig: 123, 156
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 2, 199
+  size: 107, 153
+  orig: 107, 153
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 257, 237
+  size: 72, 121
+  orig: 72, 121
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 331, 249
+  size: 98, 42
+  orig: 98, 42
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 139, 209
+  size: 84, 39
+  orig: 84, 39
+  offset: 0, 0
+  index: -1
+C3
+  rotate: true
+  xy: 192, 54
+  size: 71, 36
+  orig: 71, 36
+  offset: 0, 0
+  index: -1
+C4
+  rotate: true
+  xy: 291, 7
+  size: 60, 28
+  orig: 60, 28
+  offset: 0, 0
+  index: -1
+C5
+  rotate: true
+  xy: 314, 79
+  size: 58, 21
+  orig: 58, 21
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 111, 212
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+arm rope
+  rotate: false
+  xy: 428, 85
+  size: 14, 21
+  orig: 14, 21
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: true
+  xy: 361, 2
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+b arm2
+  rotate: true
+  xy: 437, 168
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+b ear
+  rotate: false
+  xy: 261, 137
+  size: 39, 70
+  orig: 39, 70
+  offset: 0, 0
+  index: -1
+b ear access
+  rotate: true
+  xy: 330, 156
+  size: 28, 52
+  orig: 28, 52
+  offset: 0, 0
+  index: -1
+b ear access down
+  rotate: false
+  xy: 339, 2
+  size: 20, 31
+  orig: 20, 31
+  offset: 0, 0
+  index: -1
+b ear access down2
+  rotate: false
+  xy: 225, 209
+  size: 24, 39
+  orig: 24, 39
+  offset: 0, 0
+  index: -1
+b fabric
+  rotate: false
+  xy: 62, 2
+  size: 97, 52
+  orig: 97, 52
+  offset: 0, 0
+  index: -1
+b finger
+  rotate: true
+  xy: 442, 127
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+b hair copy
+  rotate: false
+  xy: 139, 250
+  size: 116, 108
+  orig: 116, 108
+  offset: 0, 0
+  index: -1
+b knife A
+  rotate: true
+  xy: 161, 4
+  size: 53, 28
+  orig: 53, 28
+  offset: 0, 0
+  index: -1
+b knife B
+  rotate: true
+  xy: 337, 85
+  size: 53, 25
+  orig: 53, 25
+  offset: 0, 0
+  index: -1
+b knife C
+  rotate: true
+  xy: 251, 209
+  size: 26, 54
+  orig: 26, 54
+  offset: 0, 0
+  index: -1
+b knife D
+  rotate: false
+  xy: 431, 249
+  size: 23, 42
+  orig: 23, 42
+  offset: 0, 0
+  index: -1
+b knife E
+  rotate: true
+  xy: 456, 251
+  size: 42, 23
+  orig: 42, 23
+  offset: 0, 0
+  index: -1
+b knife F
+  rotate: false
+  xy: 391, 191
+  size: 42, 24
+  orig: 42, 24
+  offset: 0, 0
+  index: -1
+b knife light A
+  rotate: true
+  xy: 246, 2
+  size: 56, 20
+  orig: 56, 20
+  offset: 0, 0
+  index: -1
+b knife light B
+  rotate: false
+  xy: 330, 140
+  size: 57, 14
+  orig: 57, 14
+  offset: 0, 0
+  index: -1
+b knife light C
+  rotate: true
+  xy: 321, 20
+  size: 57, 16
+  orig: 57, 16
+  offset: 0, 0
+  index: -1
+b knife light D
+  rotate: true
+  xy: 2, 2
+  size: 13, 52
+  orig: 13, 52
+  offset: 0, 0
+  index: -1
+b knife light E
+  rotate: true
+  xy: 362, 31
+  size: 52, 11
+  orig: 52, 11
+  offset: 0, 0
+  index: -1
+b knife light F
+  rotate: true
+  xy: 375, 33
+  size: 51, 13
+  orig: 51, 13
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: true
+  xy: 389, 146
+  size: 24, 41
+  orig: 24, 41
+  offset: 0, 0
+  index: -1
+b leg2
+  rotate: false
+  xy: 392, 82
+  size: 34, 23
+  orig: 34, 23
+  offset: 0, 0
+  index: -1
+b waist outer
+  rotate: true
+  xy: 339, 35
+  size: 48, 21
+  orig: 48, 21
+  offset: 0, 0
+  index: -1
+blue knife
+  rotate: true
+  xy: 263, 71
+  size: 64, 28
+  orig: 64, 28
+  offset: 0, 0
+  index: -1
+blue knife handle
+  rotate: true
+  xy: 420, 108
+  size: 36, 20
+  orig: 36, 20
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 191, 11
+  size: 41, 53
+  orig: 41, 53
+  offset: 0, 0
+  index: -1
+box
+  rotate: true
+  xy: 62, 56
+  size: 141, 77
+  orig: 141, 77
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 481, 257
+  size: 34, 29
+  orig: 34, 29
+  offset: 0, 0
+  index: -1
+dress
+  rotate: true
+  xy: 307, 188
+  size: 47, 22
+  orig: 47, 22
+  offset: 0, 0
+  index: -1
+eye glass
+  rotate: true
+  xy: 203, 127
+  size: 80, 21
+  orig: 80, 21
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: true
+  xy: 230, 60
+  size: 71, 31
+  orig: 71, 31
+  offset: 0, 0
+  index: -1
+eye2(Close)
+  rotate: true
+  xy: 293, 69
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+eye2(Hurt)
+  rotate: true
+  xy: 268, 3
+  size: 66, 21
+  orig: 66, 21
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: false
+  xy: 396, 3
+  size: 28, 26
+  orig: 28, 26
+  offset: 0, 0
+  index: -1
+f arm2
+  rotate: true
+  xy: 390, 31
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+f ear
+  rotate: false
+  xy: 444, 295
+  size: 50, 84
+  orig: 50, 84
+  offset: 0, 0
+  index: -1
+f ear access
+  rotate: true
+  xy: 141, 59
+  size: 72, 49
+  orig: 72, 49
+  offset: 0, 0
+  index: -1
+f ear access down
+  rotate: true
+  xy: 409, 217
+  size: 30, 42
+  orig: 30, 42
+  offset: 0, 0
+  index: -1
+f ear access down2
+  rotate: false
+  xy: 302, 139
+  size: 26, 47
+  orig: 26, 47
+  offset: 0, 0
+  index: -1
+f fabric
+  rotate: false
+  xy: 331, 186
+  size: 58, 29
+  orig: 58, 29
+  offset: 0, 0
+  index: -1
+f finger
+  rotate: false
+  xy: 435, 192
+  size: 26, 23
+  orig: 26, 23
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: false
+  xy: 226, 133
+  size: 33, 74
+  orig: 33, 74
+  offset: 0, 0
+  index: -1
+f waist outer
+  rotate: false
+  xy: 331, 217
+  size: 76, 30
+  orig: 76, 30
+  offset: 0, 0
+  index: -1
+green knife
+  rotate: true
+  xy: 456, 381
+  size: 129, 42
+  orig: 129, 42
+  offset: 0, 0
+  index: -1
+green knife handle
+  rotate: true
+  xy: 364, 86
+  size: 52, 26
+  orig: 52, 26
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 331, 293
+  size: 111, 98
+  orig: 111, 98
+  offset: 0, 0
+  index: -1
+head_hair
+  rotate: false
+  xy: 392, 107
+  size: 26, 37
+  orig: 26, 37
+  offset: 0, 0
+  index: -1
+mo1
+  rotate: true
+  xy: 500, 493
+  size: 17, 10
+  orig: 17, 10
+  offset: 0, 0
+  index: -1
+mo2
+  rotate: false
+  xy: 432, 151
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+outer middle
+  rotate: false
+  xy: 390, 60
+  size: 35, 20
+  orig: 35, 20
+  offset: 0, 0
+  index: -1
+rope
+  rotate: true
+  xy: 496, 293
+  size: 86, 14
+  orig: 86, 14
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 141, 133
+  size: 60, 74
+  orig: 60, 74
+  offset: 0, 0
+  index: -1
+waist knife
+  rotate: false
+  xy: 391, 172
+  size: 44, 17
+  orig: 44, 17
+  offset: 0, 0
+  index: -1

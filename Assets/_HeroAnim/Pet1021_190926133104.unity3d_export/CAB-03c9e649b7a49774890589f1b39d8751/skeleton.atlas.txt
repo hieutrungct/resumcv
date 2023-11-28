@@ -1,0 +1,230 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: false
+  xy: 2, 2
+  size: 103, 64
+  orig: 103, 64
+  offset: 0, 0
+  index: -1
+A1
+  rotate: true
+  xy: 430, 391
+  size: 102, 60
+  orig: 102, 60
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 119, 180
+  size: 100, 56
+  orig: 100, 56
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 221, 194
+  size: 92, 51
+  orig: 92, 51
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 113, 125
+  size: 89, 53
+  orig: 89, 53
+  offset: 0, 0
+  index: -1
+B0
+  rotate: true
+  xy: 221, 247
+  size: 126, 117
+  orig: 126, 117
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 2, 367
+  size: 137, 126
+  orig: 137, 126
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 141, 375
+  size: 141, 118
+  orig: 141, 118
+  offset: 0, 0
+  index: -1
+B3
+  rotate: true
+  xy: 2, 219
+  size: 146, 115
+  orig: 146, 115
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 284, 387
+  size: 144, 106
+  orig: 144, 106
+  offset: 0, 0
+  index: -1
+B5
+  rotate: true
+  xy: 119, 238
+  size: 127, 100
+  orig: 127, 100
+  offset: 0, 0
+  index: -1
+B_Leg
+  rotate: true
+  xy: 204, 136
+  size: 26, 65
+  orig: 26, 65
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: false
+  xy: 204, 115
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: true
+  xy: 315, 184
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: false
+  xy: 221, 164
+  size: 66, 28
+  orig: 66, 28
+  offset: 0, 0
+  index: -1
+F_Leg
+  rotate: false
+  xy: 463, 317
+  size: 28, 72
+  orig: 28, 72
+  offset: 0, 0
+  index: -1
+HAIR
+  rotate: false
+  xy: 2, 68
+  size: 109, 149
+  orig: 109, 149
+  offset: 0, 0
+  index: -1
+HEAD
+  rotate: true
+  xy: 340, 259
+  size: 126, 121
+  orig: 126, 121
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 284, 375
+  size: 16, 10
+  orig: 16, 10
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: false
+  xy: 415, 181
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+RIBBON
+  rotate: true
+  xy: 339, 162
+  size: 37, 40
+  orig: 37, 40
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 492, 393
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm low
+  rotate: false
+  xy: 381, 174
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+b arm up
+  rotate: false
+  xy: 493, 359
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 113, 75
+  size: 48, 76
+  orig: 48, 76
+  offset: 0, 0
+  index: -1
+cake
+  rotate: false
+  xy: 191, 63
+  size: 53, 50
+  orig: 53, 50
+  offset: 0, 0
+  index: -1
+candy
+  rotate: true
+  xy: 289, 153
+  size: 39, 24
+  orig: 39, 24
+  offset: 0, 0
+  index: -1
+choco
+  rotate: false
+  xy: 467, 203
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+cloth
+  rotate: false
+  xy: 467, 247
+  size: 43, 68
+  orig: 43, 68
+  offset: 0, 0
+  index: -1
+f_Arm Low
+  rotate: true
+  xy: 246, 69
+  size: 44, 25
+  orig: 44, 25
+  offset: 0, 0
+  index: -1
+f_Arm Up
+  rotate: false
+  xy: 271, 129
+  size: 16, 33
+  orig: 16, 33
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 340, 201
+  size: 56, 125
+  orig: 56, 125
+  offset: 0, 0
+  index: -1

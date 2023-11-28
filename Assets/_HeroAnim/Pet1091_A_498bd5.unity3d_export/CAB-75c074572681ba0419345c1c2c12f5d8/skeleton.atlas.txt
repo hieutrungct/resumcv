@@ -1,0 +1,412 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm Down Atk
+  rotate: false
+  xy: 222, 2
+  size: 44, 32
+  orig: 44, 32
+  offset: 0, 0
+  index: -1
+Arm Down B
+  rotate: false
+  xy: 463, 336
+  size: 37, 52
+  orig: 37, 52
+  offset: 0, 0
+  index: -1
+Arm F
+  rotate: false
+  xy: 501, 426
+  size: 57, 37
+  orig: 57, 37
+  offset: 0, 0
+  index: -1
+Arm Up Atk
+  rotate: false
+  xy: 530, 345
+  size: 24, 47
+  orig: 24, 47
+  offset: 0, 0
+  index: -1
+Arm Up B
+  rotate: true
+  xy: 501, 394
+  size: 30, 54
+  orig: 30, 54
+  offset: 0, 0
+  index: -1
+AtkEFC
+  rotate: false
+  xy: 499, 465
+  size: 99, 24
+  orig: 99, 24
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 170, 477
+  size: 39, 63
+  orig: 39, 63
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: false
+  xy: 560, 430
+  size: 43, 33
+  orig: 43, 33
+  offset: 0, 0
+  index: -1
+Cloth B
+  rotate: false
+  xy: 250, 45
+  size: 38, 58
+  orig: 38, 58
+  offset: 0, 0
+  index: -1
+Cloth R
+  rotate: false
+  xy: 168, 32
+  size: 52, 70
+  orig: 52, 70
+  offset: 0, 0
+  index: -1
+Collar B
+  rotate: false
+  xy: 341, 241
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+Collar F
+  rotate: false
+  xy: 338, 307
+  size: 33, 19
+  orig: 33, 19
+  offset: 0, 0
+  index: -1
+EF_skill_A01
+  rotate: true
+  xy: 888, 814
+  size: 208, 133
+  orig: 208, 133
+  offset: 0, 0
+  index: -1
+EF_skill_A02
+  rotate: false
+  xy: 222, 638
+  size: 175, 165
+  orig: 175, 165
+  offset: 0, 0
+  index: -1
+EF_skill_A03
+  rotate: false
+  xy: 222, 477
+  size: 172, 159
+  orig: 172, 159
+  offset: 0, 0
+  index: -1
+Eye_Close
+  rotate: true
+  xy: 326, 241
+  size: 64, 13
+  orig: 64, 13
+  offset: 0, 0
+  index: -1
+Eye_Skill
+  rotate: true
+  xy: 222, 36
+  size: 66, 26
+  orig: 66, 26
+  offset: 0, 0
+  index: -1
+Eyebrow
+  rotate: true
+  xy: 637, 670
+  size: 64, 12
+  orig: 64, 12
+  offset: 0, 0
+  index: -1
+Eyebrow2
+  rotate: false
+  xy: 47, 8
+  size: 64, 17
+  orig: 64, 17
+  offset: 0, 0
+  index: -1
+FFX/0
+  rotate: false
+  xy: 654, 866
+  size: 232, 156
+  orig: 232, 156
+  offset: 0, 0
+  index: -1
+FFX/1
+  rotate: false
+  xy: 412, 863
+  size: 240, 159
+  orig: 240, 159
+  offset: 0, 0
+  index: -1
+FFX/2
+  rotate: true
+  xy: 2, 501
+  size: 250, 166
+  orig: 250, 166
+  offset: 0, 0
+  index: -1
+FFX/3
+  rotate: true
+  xy: 2, 259
+  size: 240, 161
+  orig: 240, 161
+  offset: 0, 0
+  index: -1
+FFX/4
+  rotate: true
+  xy: 2, 27
+  size: 230, 164
+  orig: 230, 164
+  offset: 0, 0
+  index: -1
+FX1/0
+  rotate: false
+  xy: 165, 307
+  size: 171, 168
+  orig: 171, 168
+  offset: 0, 0
+  index: -1
+FX1/2
+  rotate: true
+  xy: 399, 543
+  size: 191, 208
+  orig: 191, 208
+  offset: 0, 0
+  index: -1
+FX1/4
+  rotate: false
+  xy: 213, 805
+  size: 197, 217
+  orig: 197, 217
+  offset: 0, 0
+  index: -1
+Flower B
+  rotate: false
+  xy: 455, 390
+  size: 44, 56
+  orig: 44, 56
+  offset: 0, 0
+  index: -1
+Flower B Skill
+  rotate: false
+  xy: 394, 387
+  size: 59, 59
+  orig: 59, 59
+  offset: 0, 0
+  index: -1
+Flower F
+  rotate: false
+  xy: 244, 105
+  size: 59, 80
+  orig: 59, 80
+  offset: 0, 0
+  index: -1
+Flower F Skill
+  rotate: false
+  xy: 168, 104
+  size: 74, 81
+  orig: 74, 81
+  offset: 0, 0
+  index: -1
+FlowerAtk B Skill
+  rotate: false
+  xy: 396, 448
+  size: 101, 41
+  orig: 101, 41
+  offset: 0, 0
+  index: -1
+FlowerAtk F Skill
+  rotate: true
+  xy: 338, 328
+  size: 147, 54
+  orig: 147, 54
+  offset: 0, 0
+  index: -1
+Grass B skill
+  rotate: false
+  xy: 341, 266
+  size: 26, 39
+  orig: 26, 39
+  offset: 0, 0
+  index: -1
+Grass F Skill
+  rotate: false
+  xy: 609, 545
+  size: 31, 47
+  orig: 31, 47
+  offset: 0, 0
+  index: -1
+Gun
+  rotate: true
+  xy: 170, 542
+  size: 209, 50
+  orig: 209, 50
+  offset: 0, 0
+  index: -1
+Gun Atk
+  rotate: false
+  xy: 396, 491
+  size: 209, 50
+  orig: 209, 50
+  offset: 0, 0
+  index: -1
+Hand B
+  rotate: true
+  xy: 637, 607
+  size: 27, 21
+  orig: 27, 21
+  offset: 0, 0
+  index: -1
+Hand B Atk
+  rotate: true
+  xy: 168, 2
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+Hand F
+  rotate: true
+  xy: 268, 16
+  size: 27, 21
+  orig: 27, 21
+  offset: 0, 0
+  index: -1
+Hand F Atk
+  rotate: false
+  xy: 190, 5
+  size: 29, 25
+  orig: 29, 25
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 168, 187
+  size: 156, 118
+  orig: 156, 118
+  offset: 0, 0
+  index: -1
+Head Flower
+  rotate: true
+  xy: 394, 337
+  size: 48, 67
+  orig: 48, 67
+  offset: 0, 0
+  index: -1
+Leg Down B
+  rotate: true
+  xy: 2, 2
+  size: 23, 43
+  orig: 23, 43
+  offset: 0, 0
+  index: -1
+Leg Down F
+  rotate: true
+  xy: 113, 3
+  size: 22, 46
+  orig: 22, 46
+  offset: 0, 0
+  index: -1
+Leg Up B
+  rotate: true
+  xy: 337, 111
+  size: 39, 25
+  orig: 39, 25
+  offset: 0, 0
+  index: -1
+Leg Up F
+  rotate: true
+  xy: 290, 58
+  size: 45, 33
+  orig: 45, 33
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: true
+  xy: 600, 473
+  size: 16, 13
+  orig: 16, 13
+  offset: 0, 0
+  index: -1
+Mouth_Attack
+  rotate: false
+  xy: 373, 310
+  size: 22, 16
+  orig: 22, 16
+  offset: 0, 0
+  index: -1
+Mouth_Hurt
+  rotate: true
+  xy: 637, 636
+  size: 32, 19
+  orig: 32, 19
+  offset: 0, 0
+  index: -1
+Mouth_Skill
+  rotate: true
+  xy: 530, 327
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+Plant B
+  rotate: true
+  xy: 412, 736
+  size: 125, 234
+  orig: 125, 234
+  offset: 0, 0
+  index: -1
+Plant F
+  rotate: false
+  xy: 2, 753
+  size: 209, 269
+  orig: 209, 269
+  offset: 0, 0
+  index: -1
+SeedC
+  rotate: true
+  xy: 502, 333
+  size: 59, 26
+  orig: 59, 26
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 609, 594
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Tape B
+  rotate: true
+  xy: 337, 152
+  size: 40, 24
+  orig: 40, 24
+  offset: 0, 0
+  index: -1
+Tape F
+  rotate: false
+  xy: 326, 194
+  size: 31, 45
+  orig: 31, 45
+  offset: 0, 0
+  index: -1
+eye open
+  rotate: true
+  xy: 305, 110
+  size: 75, 30
+  orig: 75, 30
+  offset: 0, 0
+  index: -1

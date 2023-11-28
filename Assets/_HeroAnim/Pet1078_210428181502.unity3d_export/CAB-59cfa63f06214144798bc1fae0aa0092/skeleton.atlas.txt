@@ -1,0 +1,272 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Shadow
+  rotate: true
+  xy: 430, 20
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+armUp_B
+  rotate: false
+  xy: 591, 264
+  size: 30, 15
+  orig: 30, 15
+  offset: 0, 0
+  index: -1
+armUp_F
+  rotate: false
+  xy: 923, 57
+  size: 36, 22
+  orig: 36, 22
+  offset: 0, 0
+  index: -1
+arm_B
+  rotate: true
+  xy: 101, 1
+  size: 46, 28
+  orig: 46, 28
+  offset: 0, 0
+  index: -1
+arm_F
+  rotate: false
+  xy: 850, 55
+  size: 47, 31
+  orig: 47, 31
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 928, 80
+  size: 64, 58
+  orig: 64, 58
+  offset: 0, 0
+  index: -1
+cloths
+  rotate: true
+  xy: 951, 139
+  size: 127, 53
+  orig: 127, 53
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 753, 47
+  size: 70, 32
+  orig: 70, 32
+  offset: 0, 0
+  index: -1
+eye(Close)
+  rotate: false
+  xy: 162, 49
+  size: 65, 21
+  orig: 65, 21
+  offset: 0, 0
+  index: -1
+eye(Hurt)
+  rotate: false
+  xy: 786, 61
+  size: 63, 25
+  orig: 63, 25
+  offset: 0, 0
+  index: -1
+fx1_attack1/1
+  rotate: true
+  xy: 1, 71
+  size: 165, 247
+  orig: 165, 247
+  offset: 0, 0
+  index: -1
+fx1_attack1/2
+  rotate: false
+  xy: 259, 264
+  size: 165, 247
+  orig: 165, 247
+  offset: 0, 0
+  index: -1
+fx1_attack1/3
+  rotate: false
+  xy: 425, 264
+  size: 165, 247
+  orig: 165, 247
+  offset: 0, 0
+  index: -1
+fx2/heroShow0001
+  rotate: false
+  xy: 810, 267
+  size: 210, 102
+  orig: 210, 102
+  offset: 0, 0
+  index: -1
+fx2/heroShow0002
+  rotate: false
+  xy: 259, 161
+  size: 216, 102
+  orig: 216, 102
+  offset: 0, 0
+  index: -1
+fx2/heroShow0003
+  rotate: false
+  xy: 591, 280
+  size: 218, 112
+  orig: 218, 112
+  offset: 0, 0
+  index: -1
+fx2/heroShow0004
+  rotate: false
+  xy: 591, 393
+  size: 232, 118
+  orig: 232, 118
+  offset: 0, 0
+  index: -1
+fx_digger/skill039_hit_0001
+  rotate: false
+  xy: 1, 237
+  size: 257, 274
+  orig: 257, 274
+  offset: 0, 0
+  index: -1
+fx_digger/skill039_hit_0002
+  rotate: true
+  xy: 824, 370
+  size: 141, 180
+  orig: 141, 180
+  offset: 0, 0
+  index: -1
+fx_digger/skill039_hit_0003
+  rotate: true
+  xy: 249, 14
+  size: 146, 180
+  orig: 146, 180
+  offset: 0, 0
+  index: -1
+fx_digger/skill039_hit_0004
+  rotate: false
+  xy: 476, 93
+  size: 149, 170
+  orig: 149, 170
+  offset: 0, 0
+  index: -1
+fx_digger/skill_hit10004
+  rotate: false
+  xy: 626, 118
+  size: 166, 161
+  orig: 166, 161
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 793, 166
+  size: 157, 100
+  orig: 157, 100
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 626, 19
+  size: 126, 98
+  orig: 126, 98
+  offset: 0, 0
+  index: -1
+headFire1
+  rotate: false
+  xy: 1005, 475
+  size: 18, 36
+  orig: 18, 36
+  offset: 0, 0
+  index: -1
+headFire2
+  rotate: true
+  xy: 960, 60
+  size: 19, 33
+  orig: 19, 33
+  offset: 0, 0
+  index: -1
+headFire3
+  rotate: false
+  xy: 1005, 238
+  size: 15, 28
+  orig: 15, 28
+  offset: 0, 0
+  index: -1
+leg_B
+  rotate: false
+  xy: 898, 52
+  size: 24, 34
+  orig: 24, 34
+  offset: 0, 0
+  index: -1
+leg_F
+  rotate: false
+  xy: 592, 22
+  size: 28, 70
+  orig: 28, 70
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 1005, 462
+  size: 18, 12
+  orig: 18, 12
+  offset: 0, 0
+  index: -1
+mouth(Oh)
+  rotate: true
+  xy: 810, 376
+  size: 16, 13
+  orig: 16, 13
+  offset: 0, 0
+  index: -1
+mouth(Open)
+  rotate: true
+  xy: 457, 131
+  size: 29, 17
+  orig: 29, 17
+  offset: 0, 0
+  index: -1
+thigh_B
+  rotate: false
+  xy: 130, 3
+  size: 25, 44
+  orig: 25, 44
+  offset: 0, 0
+  index: -1
+upperBody
+  rotate: false
+  xy: 753, 1
+  size: 48, 45
+  orig: 48, 45
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 793, 87
+  size: 78, 134
+  orig: 78, 134
+  offset: 0, 0
+  index: -1
+weapon_B
+  rotate: false
+  xy: 1, 48
+  size: 160, 22
+  orig: 160, 22
+  offset: 0, 0
+  index: -1
+weapon_P2
+  rotate: true
+  xy: 457, 14
+  size: 78, 134
+  orig: 78, 134
+  offset: 0, 0
+  index: -1
+weapon_flag
+  rotate: true
+  xy: 1, 11
+  size: 36, 99
+  orig: 36, 99
+  offset: 0, 0
+  index: -1

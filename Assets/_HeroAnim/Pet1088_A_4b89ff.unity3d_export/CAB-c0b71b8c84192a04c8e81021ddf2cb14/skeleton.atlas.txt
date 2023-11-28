@@ -1,0 +1,755 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fx/A1
+  rotate: true
+  xy: 884, 658
+  size: 193, 66
+  orig: 193, 66
+  offset: 0, 0
+  index: -1
+Fx/A2
+  rotate: true
+  xy: 499, 268
+  size: 119, 50
+  orig: 119, 50
+  offset: 0, 0
+  index: -1
+Fx/B1
+  rotate: false
+  xy: 2, 32
+  size: 148, 136
+  orig: 148, 136
+  offset: 0, 0
+  index: -1
+Fx/B2
+  rotate: false
+  xy: 734, 715
+  size: 148, 136
+  orig: 148, 136
+  offset: 0, 0
+  index: -1
+Fx/B3
+  rotate: false
+  xy: 734, 577
+  size: 148, 136
+  orig: 148, 136
+  offset: 0, 0
+  index: -1
+Fx/C1
+  rotate: false
+  xy: 348, 631
+  size: 191, 169
+  orig: 191, 169
+  offset: 0, 0
+  index: -1
+Fx/C2
+  rotate: false
+  xy: 732, 853
+  size: 191, 169
+  orig: 191, 169
+  offset: 0, 0
+  index: -1
+Fx/C3
+  rotate: false
+  xy: 541, 631
+  size: 191, 169
+  orig: 191, 169
+  offset: 0, 0
+  index: -1
+Fx/C4
+  rotate: true
+  xy: 194, 199
+  size: 191, 169
+  orig: 191, 169
+  offset: 0, 0
+  index: -1
+Fx/D1
+  rotate: true
+  xy: 270, 10
+  size: 122, 115
+  orig: 122, 115
+  offset: 0, 0
+  index: -1
+Fx/D2
+  rotate: false
+  xy: 387, 70
+  size: 131, 118
+  orig: 131, 118
+  offset: 0, 0
+  index: -1
+Fx/D3
+  rotate: false
+  xy: 365, 267
+  size: 132, 120
+  orig: 132, 120
+  offset: 0, 0
+  index: -1
+Fx/D4
+  rotate: true
+  xy: 152, 2
+  size: 130, 116
+  orig: 130, 116
+  offset: 0, 0
+  index: -1
+Fx/E1
+  rotate: true
+  xy: 521, 157
+  size: 74, 107
+  orig: 74, 107
+  offset: 0, 0
+  index: -1
+Fx/E2
+  rotate: true
+  xy: 551, 304
+  size: 74, 114
+  orig: 74, 114
+  offset: 0, 0
+  index: -1
+Fx/E3
+  rotate: true
+  xy: 551, 233
+  size: 69, 116
+  orig: 69, 116
+  offset: 0, 0
+  index: -1
+Fx/F1
+  rotate: false
+  xy: 569, 380
+  size: 137, 124
+  orig: 137, 124
+  offset: 0, 0
+  index: -1
+Fx/F2
+  rotate: false
+  xy: 566, 506
+  size: 139, 123
+  orig: 139, 123
+  offset: 0, 0
+  index: -1
+Fx/F3
+  rotate: false
+  xy: 425, 492
+  size: 139, 137
+  orig: 139, 137
+  offset: 0, 0
+  index: -1
+Fx/F4
+  rotate: true
+  xy: 425, 389
+  size: 101, 142
+  orig: 101, 142
+  offset: 0, 0
+  index: -1
+Fx/H2
+  rotate: true
+  xy: 853, 405
+  size: 113, 31
+  orig: 113, 31
+  offset: 0, 0
+  index: -1
+Fx/H3
+  rotate: true
+  xy: 952, 678
+  size: 175, 55
+  orig: 175, 55
+  offset: 0, 0
+  index: -1
+Fx/H4
+  rotate: false
+  xy: 707, 520
+  size: 171, 55
+  orig: 171, 55
+  offset: 0, 0
+  index: -1
+Fx/K1
+  rotate: false
+  xy: 348, 802
+  size: 190, 220
+  orig: 190, 220
+  offset: 0, 0
+  index: -1
+Fx/K2
+  rotate: false
+  xy: 2, 170
+  size: 190, 220
+  orig: 190, 220
+  offset: 0, 0
+  index: -1
+Fx/K3
+  rotate: false
+  xy: 540, 802
+  size: 190, 220
+  orig: 190, 220
+  offset: 0, 0
+  index: -1
+Girl(L)_Arm_atk(R)
+  rotate: false
+  xy: 708, 308
+  size: 70, 25
+  orig: 70, 25
+  offset: 0, 0
+  index: -1
+Girl(L)_Armatk(L)
+  rotate: true
+  xy: 732, 178
+  size: 61, 20
+  orig: 61, 20
+  offset: 0, 0
+  index: -1
+Girl(L)_Armdown(L)
+  rotate: true
+  xy: 711, 154
+  size: 17, 22
+  orig: 17, 22
+  offset: 0, 0
+  index: -1
+Girl(L)_Armdown(R)
+  rotate: false
+  xy: 850, 262
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+Girl(L)_Armup(L)
+  rotate: false
+  xy: 712, 2
+  size: 14, 36
+  orig: 14, 36
+  offset: 0, 0
+  index: -1
+Girl(L)_Armup(R)
+  rotate: false
+  xy: 932, 516
+  size: 15, 35
+  orig: 15, 35
+  offset: 0, 0
+  index: -1
+Girl(L)_Body
+  rotate: false
+  xy: 667, 318
+  size: 39, 60
+  orig: 39, 60
+  offset: 0, 0
+  index: -1
+Girl(L)_Chest
+  rotate: true
+  xy: 840, 213
+  size: 38, 27
+  orig: 38, 27
+  offset: 0, 0
+  index: -1
+Girl(L)_Ear(L)
+  rotate: true
+  xy: 795, 323
+  size: 48, 64
+  orig: 48, 64
+  offset: 0, 0
+  index: -1
+Girl(L)_Ear(R)
+  rotate: true
+  xy: 448, 15
+  size: 53, 71
+  orig: 53, 71
+  offset: 0, 0
+  index: -1
+Girl(L)_Eye1
+  rotate: false
+  xy: 2, 2
+  size: 70, 28
+  orig: 70, 28
+  offset: 0, 0
+  index: -1
+Girl(L)_Eye2
+  rotate: true
+  xy: 754, 188
+  size: 58, 24
+  orig: 58, 24
+  offset: 0, 0
+  index: -1
+Girl(L)_Eye3
+  rotate: true
+  xy: 711, 173
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+Girl(L)_Eyebrow
+  rotate: true
+  xy: 1009, 809
+  size: 60, 13
+  orig: 60, 13
+  offset: 0, 0
+  index: -1
+Girl(L)_Face
+  rotate: true
+  xy: 952, 591
+  size: 85, 70
+  orig: 85, 70
+  offset: 0, 0
+  index: -1
+Girl(L)_Flower
+  rotate: false
+  xy: 886, 396
+  size: 44, 52
+  orig: 44, 52
+  offset: 0, 0
+  index: -1
+Girl(L)_Hair
+  rotate: false
+  xy: 365, 190
+  size: 154, 75
+  orig: 154, 75
+  offset: 0, 0
+  index: -1
+Girl(L)_Hair(R)
+  rotate: false
+  xy: 678, 85
+  size: 49, 67
+  orig: 49, 67
+  offset: 0, 0
+  index: -1
+Girl(L)_Hairback
+  rotate: true
+  xy: 320, 434
+  size: 178, 103
+  orig: 178, 103
+  offset: 0, 0
+  index: -1
+Girl(L)_Hand(L)
+  rotate: false
+  xy: 694, 40
+  size: 29, 43
+  orig: 29, 43
+  offset: 0, 0
+  index: -1
+Girl(L)_Hand(L)_atk
+  rotate: true
+  xy: 956, 379
+  size: 16, 23
+  orig: 16, 23
+  offset: 0, 0
+  index: -1
+Girl(L)_Hand(R)
+  rotate: false
+  xy: 353, 139
+  size: 32, 49
+  orig: 32, 49
+  offset: 0, 0
+  index: -1
+Girl(L)_Leg(L)
+  rotate: true
+  xy: 707, 597
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+Girl(L)_Leg(R)
+  rotate: true
+  xy: 861, 332
+  size: 39, 29
+  orig: 39, 29
+  offset: 0, 0
+  index: -1
+Girl(L)_Mouth
+  rotate: true
+  xy: 735, 154
+  size: 22, 14
+  orig: 22, 14
+  offset: 0, 0
+  index: -1
+Girl(L)_Mouth_ATK
+  rotate: false
+  xy: 989, 380
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Girl(L)_Mouth_Skill
+  rotate: false
+  xy: 606, 2
+  size: 23, 14
+  orig: 23, 14
+  offset: 0, 0
+  index: -1
+Girl(L)_Neck
+  rotate: false
+  xy: 729, 135
+  size: 19, 17
+  orig: 19, 17
+  offset: 0, 0
+  index: -1
+Girl(L)_Pull
+  rotate: false
+  xy: 780, 195
+  size: 29, 52
+  orig: 29, 52
+  offset: 0, 0
+  index: -1
+Girl(L)_Reft(L)
+  rotate: true
+  xy: 521, 233
+  size: 33, 19
+  orig: 33, 19
+  offset: 0, 0
+  index: -1
+Girl(L)_Reft(R)
+  rotate: false
+  xy: 1004, 871
+  size: 18, 40
+  orig: 18, 40
+  offset: 0, 0
+  index: -1
+Girl(L)_Ringdown
+  rotate: false
+  xy: 668, 29
+  size: 24, 49
+  orig: 24, 49
+  offset: 0, 0
+  index: -1
+Girl(L)_Ringup(L)
+  rotate: true
+  xy: 846, 291
+  size: 30, 29
+  orig: 30, 29
+  offset: 0, 0
+  index: -1
+Girl(L)_Ringup(R)
+  rotate: false
+  xy: 802, 286
+  size: 42, 35
+  orig: 42, 35
+  offset: 0, 0
+  index: -1
+Girl(L)_Tail
+  rotate: true
+  xy: 387, 2
+  size: 66, 59
+  orig: 66, 59
+  offset: 0, 0
+  index: -1
+Girl(R)_Arm(R)_Skill_Mask
+  rotate: false
+  xy: 886, 373
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+Girl(R)_Arm(R)_skill
+  rotate: false
+  xy: 886, 450
+  size: 44, 101
+  orig: 44, 101
+  offset: 0, 0
+  index: -1
+Girl(R)_ArmDOWN(L)
+  rotate: true
+  xy: 802, 253
+  size: 31, 46
+  orig: 31, 46
+  offset: 0, 0
+  index: -1
+Girl(R)_ArmDOWN(R)_atk
+  rotate: false
+  xy: 632, 27
+  size: 34, 51
+  orig: 34, 51
+  offset: 0, 0
+  index: -1
+Girl(R)_ArmDown(R)
+  rotate: true
+  xy: 853, 373
+  size: 30, 31
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+Girl(R)_ArmUP(L)
+  rotate: false
+  xy: 399, 397
+  size: 18, 35
+  orig: 18, 35
+  offset: 0, 0
+  index: -1
+Girl(R)_ArmUP(R)
+  rotate: false
+  xy: 152, 149
+  size: 40, 19
+  orig: 40, 19
+  offset: 0, 0
+  index: -1
+Girl(R)_ArmUP(R)_atk
+  rotate: false
+  xy: 632, 2
+  size: 54, 23
+  orig: 54, 23
+  offset: 0, 0
+  index: -1
+Girl(R)_Body
+  rotate: false
+  xy: 705, 241
+  size: 38, 65
+  orig: 38, 65
+  offset: 0, 0
+  index: -1
+Girl(R)_Chest
+  rotate: true
+  xy: 892, 332
+  size: 39, 31
+  orig: 39, 31
+  offset: 0, 0
+  index: -1
+Girl(R)_Ear(L)
+  rotate: false
+  xy: 932, 464
+  size: 86, 50
+  orig: 86, 50
+  offset: 0, 0
+  index: -1
+Girl(R)_Ear(R)
+  rotate: false
+  xy: 884, 553
+  size: 63, 103
+  orig: 63, 103
+  offset: 0, 0
+  index: -1
+Girl(R)_Eye1
+  rotate: false
+  xy: 74, 2
+  size: 68, 28
+  orig: 68, 28
+  offset: 0, 0
+  index: -1
+Girl(R)_Eye2
+  rotate: false
+  xy: 348, 617
+  size: 68, 12
+  orig: 68, 12
+  offset: 0, 0
+  index: -1
+Girl(R)_Eye3
+  rotate: true
+  xy: 606, 18
+  size: 58, 24
+  orig: 58, 24
+  offset: 0, 0
+  index: -1
+Girl(R)_Eye4
+  rotate: true
+  xy: 1004, 957
+  size: 65, 18
+  orig: 65, 18
+  offset: 0, 0
+  index: -1
+Girl(R)_Eyebrow
+  rotate: true
+  xy: 1009, 759
+  size: 48, 12
+  orig: 48, 12
+  offset: 0, 0
+  index: -1
+Girl(R)_Face
+  rotate: false
+  xy: 708, 401
+  size: 143, 117
+  orig: 143, 117
+  offset: 0, 0
+  index: -1
+Girl(R)_Flower
+  rotate: false
+  xy: 630, 147
+  size: 44, 84
+  orig: 44, 84
+  offset: 0, 0
+  index: -1
+Girl(R)_Leg(L)
+  rotate: false
+  xy: 989, 400
+  size: 29, 62
+  orig: 29, 62
+  offset: 0, 0
+  index: -1
+Girl(R)_Leg(R)
+  rotate: false
+  xy: 676, 154
+  size: 33, 79
+  orig: 33, 79
+  offset: 0, 0
+  index: -1
+Girl(R)_Mouth
+  rotate: true
+  xy: 914, 374
+  size: 20, 16
+  orig: 20, 16
+  offset: 0, 0
+  index: -1
+Girl(R)_Neck
+  rotate: true
+  xy: 688, 2
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+Girl(R)_Pony(R)
+  rotate: false
+  xy: 925, 855
+  size: 77, 167
+  orig: 77, 167
+  offset: 0, 0
+  index: -1
+Girl(R)_Strap
+  rotate: false
+  xy: 320, 392
+  size: 77, 40
+  orig: 77, 40
+  offset: 0, 0
+  index: -1
+Girl(R)_Strapback
+  rotate: true
+  xy: 669, 235
+  size: 81, 34
+  orig: 81, 34
+  offset: 0, 0
+  index: -1
+Girl(R)_Tako
+  rotate: false
+  xy: 521, 2
+  size: 83, 74
+  orig: 83, 74
+  offset: 0, 0
+  index: -1
+Girl(R)_Tako_Mouth
+  rotate: false
+  xy: 448, 2
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Girl(R)_Tako_emo1
+  rotate: false
+  xy: 707, 581
+  size: 25, 14
+  orig: 25, 14
+  offset: 0, 0
+  index: -1
+Girl(R)_Tako_emo2
+  rotate: true
+  xy: 1009, 733
+  size: 24, 12
+  orig: 24, 12
+  offset: 0, 0
+  index: -1
+Girl(R)_Wing(L)
+  rotate: false
+  xy: 776, 249
+  size: 24, 57
+  orig: 24, 57
+  offset: 0, 0
+  index: -1
+Girl(R)_Wing(R)
+  rotate: true
+  xy: 708, 335
+  size: 36, 85
+  orig: 36, 85
+  offset: 0, 0
+  index: -1
+Girl(R)_Wingback(L)
+  rotate: true
+  xy: 811, 201
+  size: 50, 27
+  orig: 50, 27
+  offset: 0, 0
+  index: -1
+Girl(R)_Wingback(R)
+  rotate: true
+  xy: 745, 248
+  size: 58, 29
+  orig: 58, 29
+  offset: 0, 0
+  index: -1
+Paper_A
+  rotate: true
+  xy: 932, 376
+  size: 19, 22
+  orig: 19, 22
+  offset: 0, 0
+  index: -1
+Paper_B
+  rotate: true
+  xy: 152, 134
+  size: 13, 17
+  orig: 13, 17
+  offset: 0, 0
+  index: -1
+Paper_C
+  rotate: true
+  xy: 1004, 913
+  size: 42, 18
+  orig: 42, 18
+  offset: 0, 0
+  index: -1
+Paper_D
+  rotate: true
+  xy: 840, 196
+  size: 15, 23
+  orig: 15, 23
+  offset: 0, 0
+  index: -1
+Pony(L)
+  rotate: true
+  xy: 194, 134
+  size: 63, 157
+  orig: 63, 157
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 708, 373
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+TAKO
+  rotate: false
+  xy: 2, 614
+  size: 344, 408
+  orig: 344, 408
+  offset: 0, 0
+  index: -1
+TAKO2
+  rotate: false
+  xy: 2, 392
+  size: 316, 220
+  orig: 316, 220
+  offset: 0, 0
+  index: -1
+TakoA_Skill
+  rotate: false
+  xy: 618, 80
+  size: 58, 65
+  orig: 58, 65
+  offset: 0, 0
+  index: -1
+TakoB_Skill
+  rotate: false
+  xy: 932, 397
+  size: 55, 65
+  orig: 55, 65
+  offset: 0, 0
+  index: -1
+crown
+  rotate: false
+  xy: 520, 78
+  size: 96, 77
+  orig: 96, 77
+  offset: 0, 0
+  index: -1
+light_01
+  rotate: false
+  xy: 949, 516
+  size: 73, 73
+  orig: 73, 73
+  offset: 0, 0
+  index: -1

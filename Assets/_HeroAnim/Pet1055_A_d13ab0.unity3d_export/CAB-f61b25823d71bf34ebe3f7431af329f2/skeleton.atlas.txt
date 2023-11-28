@@ -1,0 +1,419 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm B Down
+  rotate: false
+  xy: 774, 911
+  size: 27, 21
+  orig: 27, 21
+  offset: 0, 0
+  index: -1
+Arm B Up
+  rotate: false
+  xy: 326, 175
+  size: 36, 19
+  orig: 36, 19
+  offset: 0, 0
+  index: -1
+Arm F Down
+  rotate: false
+  xy: 646, 673
+  size: 33, 27
+  orig: 33, 27
+  offset: 0, 0
+  index: -1
+Arm F Up
+  rotate: true
+  xy: 309, 168
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Attack_fx/A/A1
+  rotate: false
+  xy: 2, 755
+  size: 250, 159
+  orig: 250, 159
+  offset: 0, 0
+  index: -1
+BackHair
+  rotate: false
+  xy: 513, 800
+  size: 114, 103
+  orig: 114, 103
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 237, 104
+  size: 53, 62
+  orig: 53, 62
+  offset: 0, 0
+  index: -1
+Box
+  rotate: false
+  xy: 147, 17
+  size: 59, 66
+  orig: 59, 66
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: true
+  xy: 712, 864
+  size: 41, 34
+  orig: 41, 34
+  offset: 0, 0
+  index: -1
+Coat
+  rotate: false
+  xy: 292, 122
+  size: 20, 44
+  orig: 20, 44
+  offset: 0, 0
+  index: -1
+Coat Collar B
+  rotate: true
+  xy: 712, 821
+  size: 41, 29
+  orig: 41, 29
+  offset: 0, 0
+  index: -1
+Dress B L
+  rotate: false
+  xy: 327, 257
+  size: 43, 58
+  orig: 43, 58
+  offset: 0, 0
+  index: -1
+Dress B R
+  rotate: false
+  xy: 327, 196
+  size: 40, 59
+  orig: 40, 59
+  offset: 0, 0
+  index: -1
+Ear B
+  rotate: false
+  xy: 147, 85
+  size: 57, 78
+  orig: 57, 78
+  offset: 0, 0
+  index: -1
+Ear F
+  rotate: false
+  xy: 629, 810
+  size: 53, 93
+  orig: 53, 93
+  offset: 0, 0
+  index: -1
+Eyeglasses
+  rotate: true
+  xy: 684, 826
+  size: 77, 26
+  orig: 77, 26
+  offset: 0, 0
+  index: -1
+FKnife A
+  rotate: true
+  xy: 299, 379
+  size: 48, 75
+  orig: 48, 75
+  offset: 0, 0
+  index: -1
+FKnife B
+  rotate: false
+  xy: 208, 16
+  size: 35, 71
+  orig: 35, 71
+  offset: 0, 0
+  index: -1
+FKnife C
+  rotate: false
+  xy: 206, 89
+  size: 29, 74
+  orig: 29, 74
+  offset: 0, 0
+  index: -1
+FKnife D
+  rotate: false
+  xy: 643, 740
+  size: 33, 68
+  orig: 33, 68
+  offset: 0, 0
+  index: -1
+Hand B
+  rotate: false
+  xy: 513, 911
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 911, 924
+  size: 107, 97
+  orig: 107, 97
+  offset: 0, 0
+  index: -1
+Knife B
+  rotate: true
+  xy: 580, 673
+  size: 125, 28
+  orig: 125, 28
+  offset: 0, 0
+  index: -1
+Knife B Attack
+  rotate: true
+  xy: 134, 363
+  size: 49, 163
+  orig: 49, 163
+  offset: 0, 0
+  index: -1
+Knife B SkillAfter
+  rotate: false
+  xy: 540, 945
+  size: 205, 76
+  orig: 205, 76
+  offset: 0, 0
+  index: -1
+Knife F
+  rotate: false
+  xy: 508, 641
+  size: 42, 148
+  orig: 42, 148
+  offset: 0, 0
+  index: -1
+Knife F Attack
+  rotate: false
+  xy: 487, 480
+  size: 43, 155
+  orig: 43, 155
+  offset: 0, 0
+  index: -1
+Knife F SkillAfter
+  rotate: false
+  xy: 341, 931
+  size: 197, 90
+  orig: 197, 90
+  offset: 0, 0
+  index: -1
+Knife Holding Skill
+  rotate: true
+  xy: 610, 674
+  size: 52, 34
+  orig: 52, 34
+  offset: 0, 0
+  index: -1
+KnifeSkill_n
+  rotate: false
+  xy: 2, 916
+  size: 337, 105
+  orig: 337, 105
+  offset: 0, 0
+  index: -1
+Leg B Down
+  rotate: true
+  xy: 742, 909
+  size: 23, 30
+  orig: 23, 30
+  offset: 0, 0
+  index: -1
+Leg B Up
+  rotate: false
+  xy: 646, 702
+  size: 28, 36
+  orig: 28, 36
+  offset: 0, 0
+  index: -1
+Leg F
+  rotate: true
+  xy: 232, 168
+  size: 31, 75
+  orig: 31, 75
+  offset: 0, 0
+  index: -1
+Machine Bet
+  rotate: false
+  xy: 540, 905
+  size: 168, 38
+  orig: 168, 38
+  offset: 0, 0
+  index: -1
+Machine L
+  rotate: false
+  xy: 327, 317
+  size: 53, 60
+  orig: 53, 60
+  offset: 0, 0
+  index: -1
+Machine R
+  rotate: true
+  xy: 384, 433
+  size: 49, 85
+  orig: 49, 85
+  offset: 0, 0
+  index: -1
+Paper
+  rotate: false
+  xy: 135, 165
+  size: 95, 37
+  orig: 95, 37
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 552, 658
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+ahoge
+  rotate: false
+  xy: 710, 907
+  size: 30, 36
+  orig: 30, 36
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: true
+  xy: 610, 728
+  size: 70, 31
+  orig: 70, 31
+  offset: 0, 0
+  index: -1
+eye2(Close)
+  rotate: true
+  xy: 532, 573
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+eye2(Hurt)
+  rotate: true
+  xy: 532, 507
+  size: 64, 22
+  orig: 64, 22
+  offset: 0, 0
+  index: -1
+mo1
+  rotate: false
+  xy: 341, 918
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+mo2
+  rotate: false
+  xy: 803, 917
+  size: 30, 15
+  orig: 30, 15
+  offset: 0, 0
+  index: -1
+skillVfx/A/A1
+  rotate: true
+  xy: 384, 484
+  size: 151, 101
+  orig: 151, 101
+  offset: 0, 0
+  index: -1
+skillVfx/A/A2
+  rotate: false
+  xy: 361, 791
+  size: 150, 138
+  orig: 150, 138
+  offset: 0, 0
+  index: -1
+skillVfx/A/A3
+  rotate: true
+  xy: 372, 637
+  size: 152, 134
+  orig: 152, 134
+  offset: 0, 0
+  index: -1
+skillVfx/A/A4
+  rotate: false
+  xy: 2, 2
+  size: 143, 154
+  orig: 143, 154
+  offset: 0, 0
+  index: -1
+skillVfx/B/B1
+  rotate: true
+  xy: 747, 934
+  size: 87, 162
+  orig: 87, 162
+  offset: 0, 0
+  index: -1
+skillVfx/B/B2
+  rotate: false
+  xy: 298, 429
+  size: 84, 162
+  orig: 84, 162
+  offset: 0, 0
+  index: -1
+skillVfx/B/B3
+  rotate: false
+  xy: 135, 204
+  size: 96, 157
+  orig: 96, 157
+  offset: 0, 0
+  index: -1
+skillVfx/B/B4
+  rotate: false
+  xy: 254, 756
+  size: 105, 158
+  orig: 105, 158
+  offset: 0, 0
+  index: -1
+skillVfx/B/B5
+  rotate: false
+  xy: 267, 593
+  size: 103, 161
+  orig: 103, 161
+  offset: 0, 0
+  index: -1
+skillVfx/B/B6
+  rotate: false
+  xy: 233, 201
+  size: 92, 160
+  orig: 92, 160
+  offset: 0, 0
+  index: -1
+skillVfx/C/C1
+  rotate: false
+  xy: 2, 553
+  size: 129, 200
+  orig: 129, 200
+  offset: 0, 0
+  index: -1
+skillVfx/C/C2
+  rotate: false
+  xy: 133, 578
+  size: 132, 175
+  orig: 132, 175
+  offset: 0, 0
+  index: -1
+skillVfx/C/C3
+  rotate: false
+  xy: 2, 158
+  size: 131, 194
+  orig: 131, 194
+  offset: 0, 0
+  index: -1
+skillVfx/C/C4
+  rotate: false
+  xy: 2, 354
+  size: 130, 197
+  orig: 130, 197
+  offset: 0, 0
+  index: -1
+skillVfx/EF_attack_00
+  rotate: false
+  xy: 134, 414
+  size: 162, 162
+  orig: 162, 162
+  offset: 0, 0
+  index: -1

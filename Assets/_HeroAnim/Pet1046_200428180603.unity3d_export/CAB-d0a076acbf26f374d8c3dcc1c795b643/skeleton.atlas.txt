@@ -1,0 +1,300 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 406, 451
+  size: 100, 59
+  orig: 100, 59
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 396, 393
+  size: 100, 56
+  orig: 100, 56
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 2, 391
+  size: 220, 119
+  orig: 220, 119
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 2, 270
+  size: 220, 119
+  orig: 220, 119
+  offset: 0, 0
+  index: -1
+Along
+  rotate: false
+  xy: 162, 33
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+Arrow
+  rotate: true
+  xy: 104, 85
+  size: 92, 21
+  orig: 92, 21
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 127, 128
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 127, 76
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 179, 123
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 179, 71
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 122, 32
+  size: 38, 42
+  orig: 38, 42
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 231, 113
+  size: 50, 47
+  orig: 50, 47
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 2, 87
+  size: 100, 90
+  orig: 100, 90
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 224, 356
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+C4
+  rotate: false
+  xy: 224, 272
+  size: 80, 82
+  orig: 80, 82
+  offset: 0, 0
+  index: -1
+D1
+  rotate: false
+  xy: 2, 2
+  size: 50, 83
+  orig: 50, 83
+  offset: 0, 0
+  index: -1
+D2
+  rotate: false
+  xy: 194, 175
+  size: 50, 93
+  orig: 50, 93
+  offset: 0, 0
+  index: -1
+D4
+  rotate: true
+  xy: 396, 341
+  size: 50, 100
+  orig: 50, 100
+  offset: 0, 0
+  index: -1
+Dress
+  rotate: true
+  xy: 54, 21
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+Eye(open)
+  rotate: true
+  xy: 200, 36
+  size: 33, 25
+  orig: 33, 25
+  offset: 0, 0
+  index: -1
+Eye4(Close)
+  rotate: true
+  xy: 270, 37
+  size: 30, 18
+  orig: 30, 18
+  offset: 0, 0
+  index: -1
+Eye6(Hurt)
+  rotate: true
+  xy: 122, 2
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+Mei
+  rotate: true
+  xy: 498, 390
+  size: 59, 11
+  orig: 59, 11
+  offset: 0, 0
+  index: -1
+Mo 1
+  rotate: false
+  xy: 2, 179
+  size: 112, 89
+  orig: 112, 89
+  offset: 0, 0
+  index: -1
+PonyTail
+  rotate: false
+  xy: 326, 364
+  size: 68, 92
+  orig: 68, 92
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 293, 130
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+ShouldRibbon
+  rotate: false
+  xy: 245, 9
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+b Arm
+  rotate: true
+  xy: 231, 69
+  size: 42, 54
+  orig: 42, 54
+  offset: 0, 0
+  index: -1
+b HeadRibbon
+  rotate: false
+  xy: 93, 28
+  size: 27, 55
+  orig: 27, 55
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 342, 303
+  size: 27, 59
+  orig: 27, 59
+  offset: 0, 0
+  index: -1
+b ribbon
+  rotate: false
+  xy: 227, 36
+  size: 41, 31
+  orig: 41, 31
+  offset: 0, 0
+  index: -1
+bow
+  rotate: false
+  xy: 224, 458
+  size: 180, 52
+  orig: 180, 52
+  offset: 0, 0
+  index: -1
+f Arm
+  rotate: false
+  xy: 371, 302
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+f HeadRibbon
+  rotate: false
+  xy: 116, 180
+  size: 76, 88
+  orig: 76, 88
+  offset: 0, 0
+  index: -1
+f arm attack
+  rotate: true
+  xy: 162, 2
+  size: 29, 37
+  orig: 29, 37
+  offset: 0, 0
+  index: -1
+f finger
+  rotate: false
+  xy: 144, 12
+  size: 16, 18
+  orig: 16, 18
+  offset: 0, 0
+  index: -1
+f hand
+  rotate: false
+  xy: 371, 334
+  size: 23, 28
+  orig: 23, 28
+  offset: 0, 0
+  index: -1
+f hand attack
+  rotate: false
+  xy: 306, 272
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: false
+  xy: 306, 293
+  size: 34, 61
+  orig: 34, 61
+  offset: 0, 0
+  index: -1
+f ribbon
+  rotate: false
+  xy: 201, 9
+  size: 42, 25
+  orig: 42, 25
+  offset: 0, 0
+  index: -1
+mo 2
+  rotate: false
+  xy: 54, 2
+  size: 33, 17
+  orig: 33, 17
+  offset: 0, 0
+  index: -1
+quiver
+  rotate: true
+  xy: 246, 162
+  size: 108, 45
+  orig: 108, 45
+  offset: 0, 0
+  index: -1

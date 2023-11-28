@@ -1,0 +1,412 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: false
+  xy: 162, 68
+  size: 60, 59
+  orig: 60, 59
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 237, 294
+  size: 74, 73
+  orig: 74, 73
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 315, 227
+  size: 72, 72
+  orig: 72, 72
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 307, 156
+  size: 65, 69
+  orig: 65, 69
+  offset: 0, 0
+  index: -1
+B0
+  rotate: false
+  xy: 205, 397
+  size: 135, 113
+  orig: 135, 113
+  offset: 0, 0
+  index: -1
+B1
+  rotate: true
+  xy: 2, 55
+  size: 155, 94
+  orig: 155, 94
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 2, 338
+  size: 190, 86
+  orig: 190, 86
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 2, 426
+  size: 201, 84
+  orig: 201, 84
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 194, 369
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+arm(L)
+  rotate: false
+  xy: 165, 2
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
+arm(R)
+  rotate: false
+  xy: 487, 193
+  size: 20, 36
+  orig: 20, 36
+  offset: 0, 0
+  index: -1
+armUp(L)
+  rotate: true
+  xy: 309, 5
+  size: 14, 35
+  orig: 14, 35
+  offset: 0, 0
+  index: -1
+armUp(R)
+  rotate: true
+  xy: 479, 172
+  size: 15, 31
+  orig: 15, 31
+  offset: 0, 0
+  index: -1
+bat(L)
+  rotate: true
+  xy: 194, 340
+  size: 27, 41
+  orig: 27, 41
+  offset: 0, 0
+  index: -1
+bat(R)
+  rotate: false
+  xy: 374, 154
+  size: 47, 68
+  orig: 47, 68
+  offset: 0, 0
+  index: -1
+batGlow(L)
+  rotate: false
+  xy: 197, 12
+  size: 44, 54
+  orig: 44, 54
+  offset: 0, 0
+  index: -1
+batGlow(R)
+  rotate: true
+  xy: 237, 232
+  size: 60, 76
+  orig: 60, 76
+  offset: 0, 0
+  index: -1
+batWingA(L)
+  rotate: false
+  xy: 370, 99
+  size: 19, 24
+  orig: 19, 24
+  offset: 0, 0
+  index: -1
+batWingA(R)
+  rotate: false
+  xy: 452, 189
+  size: 33, 40
+  orig: 33, 40
+  offset: 0, 0
+  index: -1
+batWingB(L)
+  rotate: false
+  xy: 287, 2
+  size: 20, 17
+  orig: 20, 17
+  offset: 0, 0
+  index: -1
+batWingB(R)
+  rotate: true
+  xy: 396, 130
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 243, 10
+  size: 42, 65
+  orig: 42, 65
+  offset: 0, 0
+  index: -1
+bow
+  rotate: true
+  xy: 452, 149
+  size: 38, 25
+  orig: 38, 25
+  offset: 0, 0
+  index: -1
+candy A
+  rotate: true
+  xy: 347, 99
+  size: 35, 21
+  orig: 35, 21
+  offset: 0, 0
+  index: -1
+candyB
+  rotate: false
+  xy: 469, 353
+  size: 32, 53
+  orig: 32, 53
+  offset: 0, 0
+  index: -1
+candyC
+  rotate: false
+  xy: 480, 264
+  size: 30, 20
+  orig: 30, 20
+  offset: 0, 0
+  index: -1
+candyD
+  rotate: true
+  xy: 479, 143
+  size: 27, 29
+  orig: 27, 29
+  offset: 0, 0
+  index: -1
+candyInside
+  rotate: true
+  xy: 224, 77
+  size: 71, 52
+  orig: 71, 52
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 370, 125
+  size: 24, 27
+  orig: 24, 27
+  offset: 0, 0
+  index: -1
+cloak(R)
+  rotate: false
+  xy: 336, 355
+  size: 94, 39
+  orig: 94, 39
+  offset: 0, 0
+  index: -1
+cloakBack(L)
+  rotate: true
+  xy: 405, 303
+  size: 50, 30
+  orig: 50, 30
+  offset: 0, 0
+  index: -1
+cloakBack(R)
+  rotate: true
+  xy: 224, 150
+  size: 79, 53
+  orig: 79, 53
+  offset: 0, 0
+  index: -1
+ear(L)
+  rotate: true
+  xy: 389, 224
+  size: 75, 44
+  orig: 75, 44
+  offset: 0, 0
+  index: -1
+ear(R)
+  rotate: false
+  xy: 2, 3
+  size: 93, 50
+  orig: 93, 50
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 469, 445
+  size: 65, 41
+  orig: 65, 41
+  offset: 0, 0
+  index: -1
+eye(Close)
+  rotate: false
+  xy: 97, 4
+  size: 66, 32
+  orig: 66, 32
+  offset: 0, 0
+  index: -1
+eye(Die)
+  rotate: true
+  xy: 335, 21
+  size: 65, 30
+  orig: 65, 30
+  offset: 0, 0
+  index: -1
+eye(Hurt)
+  rotate: true
+  xy: 287, 21
+  size: 65, 46
+  orig: 65, 46
+  offset: 0, 0
+  index: -1
+flame A
+  rotate: true
+  xy: 437, 309
+  size: 42, 66
+  orig: 42, 66
+  offset: 0, 0
+  index: -1
+flame B
+  rotate: true
+  xy: 98, 38
+  size: 48, 61
+  orig: 48, 61
+  offset: 0, 0
+  index: -1
+flame C
+  rotate: true
+  xy: 278, 88
+  size: 46, 67
+  orig: 46, 67
+  offset: 0, 0
+  index: -1
+flame D
+  rotate: false
+  xy: 435, 231
+  size: 43, 53
+  orig: 43, 53
+  offset: 0, 0
+  index: -1
+hairBack
+  rotate: false
+  xy: 156, 231
+  size: 79, 105
+  orig: 79, 105
+  offset: 0, 0
+  index: -1
+hatBack
+  rotate: true
+  xy: 162, 129
+  size: 100, 60
+  orig: 100, 60
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 212
+  size: 152, 124
+  orig: 152, 124
+  offset: 0, 0
+  index: -1
+leg(L)
+  rotate: true
+  xy: 452, 286
+  size: 21, 58
+  orig: 21, 58
+  offset: 0, 0
+  index: -1
+leg(R)
+  rotate: false
+  xy: 279, 156
+  size: 26, 74
+  orig: 26, 74
+  offset: 0, 0
+  index: -1
+mo
+  rotate: false
+  xy: 435, 286
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+mo2
+  rotate: true
+  xy: 480, 231
+  size: 31, 19
+  orig: 31, 19
+  offset: 0, 0
+  index: -1
+mo3
+  rotate: true
+  xy: 194, 399
+  size: 25, 6
+  orig: 25, 6
+  offset: 0, 0
+  index: -1
+pumkin
+  rotate: false
+  xy: 342, 396
+  size: 125, 114
+  orig: 125, 114
+  offset: 0, 0
+  index: -1
+pumkinAngry
+  rotate: false
+  xy: 432, 357
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1
+pumkinEye
+  rotate: true
+  xy: 423, 152
+  size: 70, 27
+  orig: 70, 27
+  offset: 0, 0
+  index: -1
+pumkinEye(Sad)
+  rotate: false
+  xy: 279, 136
+  size: 74, 18
+  orig: 74, 18
+  offset: 0, 0
+  index: -1
+ribbon(L)
+  rotate: true
+  xy: 313, 301
+  size: 52, 90
+  orig: 52, 90
+  offset: 0, 0
+  index: -1
+ribbon(R)
+  rotate: true
+  xy: 98, 88
+  size: 122, 62
+  orig: 122, 62
+  offset: 0, 0
+  index: -1
+spider
+  rotate: true
+  xy: 423, 129
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 469, 408
+  size: 41, 35
+  orig: 41, 35
+  offset: 0, 0
+  index: -1

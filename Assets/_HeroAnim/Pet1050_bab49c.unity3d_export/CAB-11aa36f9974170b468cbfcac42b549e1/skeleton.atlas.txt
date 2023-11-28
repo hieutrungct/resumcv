@@ -1,0 +1,587 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0
+  rotate: false
+  xy: 498, 497
+  size: 171, 168
+  orig: 171, 168
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 288, 631
+  size: 191, 208
+  orig: 191, 208
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 62
+  size: 197, 217
+  orig: 197, 217
+  offset: 0, 0
+  index: -1
+Arm(L)
+  rotate: false
+  xy: 544, 230
+  size: 50, 29
+  orig: 50, 29
+  offset: 0, 0
+  index: -1
+Arm(R)
+  rotate: false
+  xy: 144, 33
+  size: 55, 27
+  orig: 55, 27
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 478, 379
+  size: 116, 116
+  orig: 116, 116
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 478, 261
+  size: 116, 116
+  orig: 116, 116
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 664, 377
+  size: 116, 116
+  orig: 116, 116
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 596, 249
+  size: 116, 116
+  orig: 116, 116
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 714, 259
+  size: 116, 116
+  orig: 116, 116
+  offset: 0, 0
+  index: -1
+BackHair_A
+  rotate: false
+  xy: 831, 578
+  size: 102, 84
+  orig: 102, 84
+  offset: 0, 0
+  index: -1
+BackHair_B
+  rotate: true
+  xy: 799, 469
+  size: 107, 110
+  orig: 107, 110
+  offset: 0, 0
+  index: -1
+BackHair_C
+  rotate: true
+  xy: 935, 636
+  size: 96, 83
+  orig: 96, 83
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 329, 2
+  size: 41, 49
+  orig: 41, 49
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: false
+  xy: 2, 2
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+Crystal
+  rotate: false
+  xy: 431, 76
+  size: 34, 48
+  orig: 34, 48
+  offset: 0, 0
+  index: -1
+EnergyBall_A_Attack
+  rotate: false
+  xy: 911, 475
+  size: 84, 55
+  orig: 84, 55
+  offset: 0, 0
+  index: -1
+EnergyBall_B_Attack
+  rotate: true
+  xy: 329, 45
+  size: 61, 53
+  orig: 61, 53
+  offset: 0, 0
+  index: -1
+EnergyBall_C_Attack
+  rotate: false
+  xy: 399, 213
+  size: 72, 46
+  orig: 72, 46
+  offset: 0, 0
+  index: -1
+EnergyDust_A_Attack
+  rotate: true
+  xy: 137, 7
+  size: 24, 34
+  orig: 24, 34
+  offset: 0, 0
+  index: -1
+EnergyDust_B_Attack
+  rotate: false
+  xy: 384, 44
+  size: 45, 39
+  orig: 45, 39
+  offset: 0, 0
+  index: -1
+EyeBrow_Normal
+  rotate: true
+  xy: 478, 513
+  size: 58, 16
+  orig: 58, 16
+  offset: 0, 0
+  index: -1
+Eye_Close
+  rotate: true
+  xy: 1009, 959
+  size: 63, 12
+  orig: 63, 12
+  offset: 0, 0
+  index: -1
+Eye_Normal
+  rotate: true
+  xy: 875, 398
+  size: 69, 29
+  orig: 69, 29
+  offset: 0, 0
+  index: -1
+Eye_Skill
+  rotate: false
+  xy: 46, 8
+  size: 66, 24
+  orig: 66, 24
+  offset: 0, 0
+  index: -1
+FB1
+  rotate: false
+  xy: 384, 132
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+FB2
+  rotate: false
+  xy: 384, 85
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+FB3
+  rotate: false
+  xy: 833, 226
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+FF1
+  rotate: false
+  xy: 2, 824
+  size: 284, 198
+  orig: 284, 198
+  offset: 0, 0
+  index: -1
+FF10
+  rotate: false
+  xy: 498, 667
+  size: 341, 117
+  orig: 341, 117
+  offset: 0, 0
+  index: -1
+FF2
+  rotate: false
+  xy: 2, 624
+  size: 284, 198
+  orig: 284, 198
+  offset: 0, 0
+  index: -1
+FF3
+  rotate: false
+  xy: 288, 824
+  size: 284, 198
+  orig: 284, 198
+  offset: 0, 0
+  index: -1
+FF4
+  rotate: true
+  xy: 2, 281
+  size: 341, 117
+  orig: 341, 117
+  offset: 0, 0
+  index: -1
+FF5
+  rotate: false
+  xy: 574, 905
+  size: 341, 117
+  orig: 341, 117
+  offset: 0, 0
+  index: -1
+FF6
+  rotate: true
+  xy: 121, 281
+  size: 341, 117
+  orig: 341, 117
+  offset: 0, 0
+  index: -1
+FF7
+  rotate: false
+  xy: 574, 786
+  size: 341, 117
+  orig: 341, 117
+  offset: 0, 0
+  index: -1
+FF8
+  rotate: true
+  xy: 240, 281
+  size: 341, 117
+  orig: 341, 117
+  offset: 0, 0
+  index: -1
+FF9
+  rotate: true
+  xy: 359, 288
+  size: 341, 117
+  orig: 341, 117
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 782, 398
+  size: 91, 69
+  orig: 91, 69
+  offset: 0, 0
+  index: -1
+FrontHair
+  rotate: false
+  xy: 935, 734
+  size: 87, 56
+  orig: 87, 56
+  offset: 0, 0
+  index: -1
+Gun(L)
+  rotate: false
+  xy: 671, 495
+  size: 126, 87
+  orig: 126, 87
+  offset: 0, 0
+  index: -1
+Gun(R)
+  rotate: true
+  xy: 841, 664
+  size: 120, 92
+  orig: 120, 92
+  offset: 0, 0
+  index: -1
+Gun(R)Add_A_Skill
+  rotate: true
+  xy: 997, 471
+  size: 59, 25
+  orig: 59, 25
+  offset: 0, 0
+  index: -1
+Gun(R)Add_B_Skill
+  rotate: true
+  xy: 478, 573
+  size: 56, 18
+  orig: 56, 18
+  offset: 0, 0
+  index: -1
+Gun(R)Smoke_A_Skill
+  rotate: false
+  xy: 911, 532
+  size: 111, 27
+  orig: 111, 27
+  offset: 0, 0
+  index: -1
+Gun(R)Smoke_B_Skill
+  rotate: false
+  xy: 359, 261
+  size: 117, 25
+  orig: 117, 25
+  offset: 0, 0
+  index: -1
+Gun(R)_Skill
+  rotate: true
+  xy: 917, 864
+  size: 158, 90
+  orig: 158, 90
+  offset: 0, 0
+  index: -1
+HairDeco(L)_A
+  rotate: false
+  xy: 661, 220
+  size: 51, 27
+  orig: 51, 27
+  offset: 0, 0
+  index: -1
+HairDeco(L)_B
+  rotate: false
+  xy: 431, 31
+  size: 35, 43
+  orig: 35, 43
+  offset: 0, 0
+  index: -1
+HairDeco(R)_A
+  rotate: true
+  xy: 714, 192
+  size: 37, 45
+  orig: 37, 45
+  offset: 0, 0
+  index: -1
+HairDeco(R)_B
+  rotate: true
+  xy: 832, 273
+  size: 62, 45
+  orig: 62, 45
+  offset: 0, 0
+  index: -1
+HairDeco(R)_C
+  rotate: true
+  xy: 425, 2
+  size: 27, 45
+  orig: 27, 45
+  offset: 0, 0
+  index: -1
+HairTail(L)
+  rotate: false
+  xy: 329, 190
+  size: 68, 69
+  orig: 68, 69
+  offset: 0, 0
+  index: -1
+HairTail(R)
+  rotate: false
+  xy: 935, 561
+  size: 84, 73
+  orig: 84, 73
+  offset: 0, 0
+  index: -1
+Hand(L)
+  rotate: false
+  xy: 173, 12
+  size: 21, 19
+  orig: 21, 19
+  offset: 0, 0
+  index: -1
+Hand(R)
+  rotate: false
+  xy: 114, 11
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+HandStand(L)
+  rotate: false
+  xy: 802, 187
+  size: 32, 36
+  orig: 32, 36
+  offset: 0, 0
+  index: -1
+HandStand(R)
+  rotate: true
+  xy: 761, 192
+  size: 31, 39
+  orig: 31, 39
+  offset: 0, 0
+  index: -1
+Leg(L)
+  rotate: true
+  xy: 714, 231
+  size: 26, 61
+  orig: 26, 61
+  offset: 0, 0
+  index: -1
+Leg(R)
+  rotate: true
+  xy: 399, 179
+  size: 32, 65
+  orig: 32, 65
+  offset: 0, 0
+  index: -1
+LegDeco(L)_A
+  rotate: false
+  xy: 544, 205
+  size: 50, 23
+  orig: 50, 23
+  offset: 0, 0
+  index: -1
+LegDeco(L)_B
+  rotate: false
+  xy: 879, 292
+  size: 27, 43
+  orig: 27, 43
+  offset: 0, 0
+  index: -1
+LegDeco(R)_A
+  rotate: true
+  xy: 886, 341
+  size: 55, 23
+  orig: 55, 23
+  offset: 0, 0
+  index: -1
+LegDeco(R)_B
+  rotate: true
+  xy: 431, 126
+  size: 51, 31
+  orig: 51, 31
+  offset: 0, 0
+  index: -1
+Mouth_Attack
+  rotate: false
+  xy: 879, 273
+  size: 21, 17
+  orig: 21, 17
+  offset: 0, 0
+  index: -1
+Mouth_Hurt
+  rotate: false
+  xy: 782, 377
+  size: 32, 19
+  orig: 32, 19
+  offset: 0, 0
+  index: -1
+Mouth_Normal
+  rotate: false
+  xy: 664, 367
+  size: 16, 8
+  orig: 16, 8
+  offset: 0, 0
+  index: -1
+Mouth_Skill
+  rotate: true
+  xy: 695, 193
+  size: 25, 17
+  orig: 25, 17
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 34
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+SideHair(L)
+  rotate: true
+  xy: 473, 216
+  size: 43, 69
+  orig: 43, 69
+  offset: 0, 0
+  index: -1
+SideHair(R)
+  rotate: false
+  xy: 329, 108
+  size: 53, 80
+  orig: 53, 80
+  offset: 0, 0
+  index: -1
+SideHairDeco(L)
+  rotate: true
+  xy: 836, 187
+  size: 37, 39
+  orig: 37, 39
+  offset: 0, 0
+  index: -1
+SideHairDeco(R)
+  rotate: true
+  xy: 380, 2
+  size: 40, 43
+  orig: 40, 43
+  offset: 0, 0
+  index: -1
+Skirt
+  rotate: false
+  xy: 596, 220
+  size: 63, 27
+  orig: 63, 27
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 917, 792
+  size: 93, 70
+  orig: 93, 70
+  offset: 0, 0
+  index: -1
+Thunder_A_Attack
+  rotate: false
+  xy: 777, 225
+  size: 54, 32
+  orig: 54, 32
+  offset: 0, 0
+  index: -1
+Thunder_B_Attack
+  rotate: false
+  xy: 832, 337
+  size: 52, 59
+  orig: 52, 59
+  offset: 0, 0
+  index: -1
+Thunder_C_Attack
+  rotate: false
+  xy: 596, 198
+  size: 49, 20
+  orig: 49, 20
+  offset: 0, 0
+  index: -1
+Thunder_D_Attack
+  rotate: true
+  xy: 647, 187
+  size: 31, 46
+  orig: 31, 46
+  offset: 0, 0
+  index: -1
+Thunder_E_Attack
+  rotate: false
+  xy: 498, 786
+  size: 62, 36
+  orig: 62, 36
+  offset: 0, 0
+  index: -1
+x1
+  rotate: false
+  xy: 671, 584
+  size: 158, 81
+  orig: 158, 81
+  offset: 0, 0
+  index: -1
+x2
+  rotate: true
+  xy: 201, 19
+  size: 260, 126
+  orig: 260, 126
+  offset: 0, 0
+  index: -1
+x3
+  rotate: true
+  xy: 596, 367
+  size: 128, 66
+  orig: 128, 66
+  offset: 0, 0
+  index: -1

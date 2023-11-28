@@ -1,0 +1,251 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 2, 356
+  size: 167, 154
+  orig: 167, 154
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 2, 200
+  size: 167, 154
+  orig: 167, 154
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 171, 356
+  size: 167, 154
+  orig: 167, 154
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 2, 44
+  size: 167, 154
+  orig: 167, 154
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 171, 200
+  size: 167, 154
+  orig: 167, 154
+  offset: 0, 0
+  index: -1
+A6
+  rotate: false
+  xy: 340, 356
+  size: 167, 154
+  orig: 167, 154
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: true
+  xy: 493, 193
+  size: 28, 17
+  orig: 28, 17
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: false
+  xy: 478, 104
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: false
+  xy: 473, 223
+  size: 36, 27
+  orig: 36, 27
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 420, 2
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+Layer 10
+  rotate: false
+  xy: 336, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 11
+  rotate: false
+  xy: 378, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 12
+  rotate: false
+  xy: 473, 252
+  size: 37, 50
+  orig: 37, 50
+  offset: 0, 0
+  index: -1
+Layer 13
+  rotate: false
+  xy: 438, 100
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+Layer 14
+  rotate: true
+  xy: 438, 60
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+Layer 15
+  rotate: true
+  xy: 460, 20
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+Layer 2
+  rotate: false
+  xy: 473, 304
+  size: 37, 50
+  orig: 37, 50
+  offset: 0, 0
+  index: -1
+Layer 3
+  rotate: true
+  xy: 2, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 4
+  rotate: true
+  xy: 54, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 5
+  rotate: true
+  xy: 106, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 6
+  rotate: true
+  xy: 158, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: false
+  xy: 210, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 8
+  rotate: false
+  xy: 252, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Layer 9
+  rotate: false
+  xy: 294, 2
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 171, 50
+  size: 10, 6
+  orig: 10, 6
+  offset: 0, 0
+  index: -1
+Mouth hurt
+  rotate: true
+  xy: 334, 175
+  size: 23, 4
+  orig: 23, 4
+  offset: 0, 0
+  index: -1
+R Hand1
+  rotate: false
+  xy: 468, 187
+  size: 23, 34
+  orig: 23, 34
+  offset: 0, 0
+  index: -1
+R Hand2
+  rotate: true
+  xy: 460, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 334, 54
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 478, 124
+  size: 13, 28
+  orig: 13, 28
+  offset: 0, 0
+  index: -1
+b arm1
+  rotate: false
+  xy: 468, 154
+  size: 18, 31
+  orig: 18, 31
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: true
+  xy: 171, 58
+  size: 140, 161
+  orig: 140, 161
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 334, 74
+  size: 76, 102
+  orig: 76, 102
+  offset: 0, 0
+  index: -1
+doll
+  rotate: false
+  xy: 340, 152
+  size: 126, 86
+  orig: 126, 86
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 340, 240
+  size: 131, 114
+  orig: 131, 114
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,321 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 283, 264
+  size: 80, 73
+  orig: 80, 73
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 104, 14
+  size: 80, 90
+  orig: 80, 90
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 104, 106
+  size: 80, 92
+  orig: 80, 92
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 201, 203
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 2, 88
+  size: 100, 101
+  orig: 100, 101
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 186, 2
+  size: 80, 81
+  orig: 80, 81
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 201, 265
+  size: 80, 81
+  orig: 80, 81
+  offset: 0, 0
+  index: -1
+C4
+  rotate: false
+  xy: 263, 182
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+Chain
+  rotate: false
+  xy: 305, 490
+  size: 150, 20
+  orig: 150, 20
+  offset: 0, 0
+  index: -1
+D1
+  rotate: false
+  xy: 242, 100
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+D2
+  rotate: false
+  xy: 268, 18
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+D3
+  rotate: false
+  xy: 324, 100
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+D4
+  rotate: false
+  xy: 345, 182
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+D5
+  rotate: false
+  xy: 350, 28
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+D6
+  rotate: false
+  xy: 99, 200
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Eye1
+  rotate: true
+  xy: 365, 265
+  size: 72, 43
+  orig: 72, 43
+  offset: 0, 0
+  index: -1
+Eye4(Close)
+  rotate: true
+  xy: 401, 342
+  size: 66, 33
+  orig: 66, 33
+  offset: 0, 0
+  index: -1
+Eye6(Hurt)
+  rotate: true
+  xy: 410, 279
+  size: 61, 40
+  orig: 61, 40
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 242, 91
+  size: 16, 7
+  orig: 16, 7
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: true
+  xy: 487, 356
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 305, 462
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 457, 391
+  size: 52, 46
+  orig: 52, 46
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: false
+  xy: 2, 392
+  size: 150, 118
+  orig: 150, 118
+  offset: 0, 0
+  index: -1
+b head access
+  rotate: true
+  xy: 201, 348
+  size: 46, 75
+  orig: 46, 75
+  offset: 0, 0
+  index: -1
+b head access b
+  rotate: false
+  xy: 427, 199
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 406, 113
+  size: 40, 67
+  orig: 40, 67
+  offset: 0, 0
+  index: -1
+b waist access
+  rotate: true
+  xy: 419, 423
+  size: 37, 36
+  orig: 37, 36
+  offset: 0, 0
+  index: -1
+b wire
+  rotate: true
+  xy: 154, 396
+  size: 50, 122
+  orig: 50, 122
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 422, 12
+  size: 38, 48
+  orig: 38, 48
+  offset: 0, 0
+  index: -1
+book
+  rotate: false
+  xy: 436, 345
+  size: 49, 44
+  orig: 49, 44
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 422, 62
+  size: 31, 49
+  orig: 31, 49
+  offset: 0, 0
+  index: -1
+dress
+  rotate: false
+  xy: 427, 234
+  size: 31, 43
+  orig: 31, 43
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: true
+  xy: 144, 302
+  size: 37, 40
+  orig: 37, 40
+  offset: 0, 0
+  index: -1
+f hair
+  rotate: false
+  xy: 2, 191
+  size: 95, 109
+  orig: 95, 109
+  offset: 0, 0
+  index: -1
+f hand
+  rotate: false
+  xy: 427, 182
+  size: 18, 15
+  orig: 18, 15
+  offset: 0, 0
+  index: -1
+f head access
+  rotate: false
+  xy: 186, 85
+  size: 54, 113
+  orig: 54, 113
+  offset: 0, 0
+  index: -1
+f head access b
+  rotate: false
+  xy: 452, 289
+  size: 34, 54
+  orig: 34, 54
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: false
+  xy: 457, 439
+  size: 53, 71
+  orig: 53, 71
+  offset: 0, 0
+  index: -1
+f waist access
+  rotate: true
+  xy: 154, 341
+  size: 53, 45
+  orig: 53, 45
+  offset: 0, 0
+  index: -1
+f wire a
+  rotate: true
+  xy: 305, 410
+  size: 50, 112
+  orig: 50, 112
+  offset: 0, 0
+  index: -1
+f wire b
+  rotate: false
+  xy: 278, 355
+  size: 25, 91
+  orig: 25, 91
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 305, 339
+  size: 94, 69
+  orig: 94, 69
+  offset: 0, 0
+  index: -1
+lace
+  rotate: false
+  xy: 154, 448
+  size: 149, 62
+  orig: 149, 62
+  offset: 0, 0
+  index: -1
+robot
+  rotate: false
+  xy: 2, 302
+  size: 140, 88
+  orig: 140, 88
+  offset: 0, 0
+  index: -1
+robot_light
+  rotate: false
+  xy: 2, 10
+  size: 100, 76
+  orig: 100, 76
+  offset: 0, 0
+  index: -1

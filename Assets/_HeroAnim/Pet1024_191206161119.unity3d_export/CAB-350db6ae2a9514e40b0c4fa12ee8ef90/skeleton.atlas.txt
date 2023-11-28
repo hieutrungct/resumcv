@@ -1,0 +1,237 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: false
+  xy: 157, 124
+  size: 66, 167
+  orig: 66, 167
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 2, 123
+  size: 82, 168
+  orig: 82, 168
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 86, 124
+  size: 69, 167
+  orig: 69, 167
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 277, 341
+  size: 66, 153
+  orig: 66, 153
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 449, 360
+  size: 52, 148
+  orig: 52, 148
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 225, 124
+  size: 54, 167
+  orig: 54, 167
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 281, 194
+  size: 144, 72
+  orig: 144, 72
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 281, 268
+  size: 148, 71
+  orig: 148, 71
+  offset: 0, 0
+  index: -1
+C0
+  rotate: false
+  xy: 2, 403
+  size: 273, 105
+  orig: 273, 105
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 2, 293
+  size: 228, 108
+  orig: 228, 108
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 277, 409
+  size: 170, 99
+  orig: 170, 99
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 105, 35
+  size: 149, 87
+  orig: 149, 87
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: false
+  xy: 292, 45
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: false
+  xy: 359, 42
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: false
+  xy: 344, 98
+  size: 71, 30
+  orig: 71, 30
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: true
+  xy: 257, 307
+  size: 14, 8
+  orig: 14, 8
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: true
+  xy: 492, 325
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 105, 15
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm down
+  rotate: false
+  xy: 492, 290
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+b arm up
+  rotate: false
+  xy: 432, 375
+  size: 15, 32
+  orig: 15, 32
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: true
+  xy: 281, 130
+  size: 62, 141
+  orig: 62, 141
+  offset: 0, 0
+  index: -1
+b leg down
+  rotate: true
+  xy: 449, 337
+  size: 21, 38
+  orig: 21, 38
+  offset: 0, 0
+  index: -1
+b leg up
+  rotate: true
+  xy: 431, 269
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 292, 66
+  size: 50, 62
+  orig: 50, 62
+  offset: 0, 0
+  index: -1
+f arm down
+  rotate: false
+  xy: 468, 301
+  size: 22, 34
+  orig: 22, 34
+  offset: 0, 0
+  index: -1
+f arm up
+  rotate: true
+  xy: 432, 342
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+f hair
+  rotate: false
+  xy: 232, 323
+  size: 38, 78
+  orig: 38, 78
+  offset: 0, 0
+  index: -1
+f leg down
+  rotate: true
+  xy: 207, 9
+  size: 24, 45
+  orig: 24, 45
+  offset: 0, 0
+  index: -1
+f leg up
+  rotate: false
+  xy: 431, 300
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 344, 66
+  size: 62, 30
+  orig: 62, 30
+  offset: 0, 0
+  index: -1
+hand_skill
+  rotate: true
+  xy: 232, 293
+  size: 28, 23
+  orig: 28, 23
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 2
+  size: 119, 101
+  orig: 119, 101
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 256, 41
+  size: 34, 81
+  orig: 34, 81
+  offset: 0, 0
+  index: -1

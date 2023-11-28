@@ -1,0 +1,426 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: true
+  xy: 356, 54
+  size: 137, 118
+  orig: 137, 118
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 828, 338
+  size: 178, 172
+  orig: 178, 172
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 222, 193
+  size: 150, 148
+  orig: 150, 148
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 374, 194
+  size: 150, 147
+  orig: 150, 147
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 526, 194
+  size: 140, 147
+  orig: 140, 147
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 970, 215
+  size: 41, 121
+  orig: 41, 121
+  offset: 0, 0
+  index: -1
+B2
+  rotate: true
+  xy: 355, 25
+  size: 27, 114
+  orig: 27, 114
+  offset: 0, 0
+  index: -1
+B3
+  rotate: true
+  xy: 476, 62
+  size: 25, 102
+  orig: 25, 102
+  offset: 0, 0
+  index: -1
+B4
+  rotate: true
+  xy: 879, 91
+  size: 24, 77
+  orig: 24, 77
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 115, 2
+  size: 86, 37
+  orig: 86, 37
+  offset: 0, 0
+  index: -1
+C2
+  rotate: true
+  xy: 2, 26
+  size: 63, 111
+  orig: 63, 111
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 817, 93
+  size: 60, 88
+  orig: 60, 88
+  offset: 0, 0
+  index: -1
+C4
+  rotate: false
+  xy: 203, 2
+  size: 66, 62
+  orig: 66, 62
+  offset: 0, 0
+  index: -1
+D1
+  rotate: false
+  xy: 2, 91
+  size: 200, 167
+  orig: 200, 167
+  offset: 0, 0
+  index: -1
+D2
+  rotate: false
+  xy: 222, 343
+  size: 200, 167
+  orig: 200, 167
+  offset: 0, 0
+  index: -1
+D3
+  rotate: false
+  xy: 424, 343
+  size: 200, 167
+  orig: 200, 167
+  offset: 0, 0
+  index: -1
+D4
+  rotate: false
+  xy: 626, 343
+  size: 200, 167
+  orig: 200, 167
+  offset: 0, 0
+  index: -1
+D5
+  rotate: false
+  xy: 818, 211
+  size: 150, 125
+  orig: 150, 125
+  offset: 0, 0
+  index: -1
+D6
+  rotate: false
+  xy: 204, 66
+  size: 150, 125
+  orig: 150, 125
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 818, 183
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 556, 34
+  size: 45, 26
+  orig: 45, 26
+  offset: 0, 0
+  index: -1
+b finger
+  rotate: false
+  xy: 646, 171
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+b fur
+  rotate: true
+  xy: 873, 52
+  size: 37, 43
+  orig: 37, 43
+  offset: 0, 0
+  index: -1
+b fur down
+  rotate: false
+  xy: 568, 114
+  size: 76, 78
+  orig: 76, 78
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: true
+  xy: 668, 78
+  size: 130, 147
+  orig: 130, 147
+  offset: 0, 0
+  index: -1
+b hat
+  rotate: true
+  xy: 271, 18
+  size: 46, 82
+  orig: 46, 82
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: true
+  xy: 958, 82
+  size: 25, 54
+  orig: 25, 54
+  offset: 0, 0
+  index: -1
+b shoulder
+  rotate: false
+  xy: 2, 5
+  size: 42, 19
+  orig: 42, 19
+  offset: 0, 0
+  index: -1
+b thick leg
+  rotate: true
+  xy: 543, 2
+  size: 30, 53
+  orig: 30, 53
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 580, 65
+  size: 47, 77
+  orig: 47, 77
+  offset: 0, 0
+  index: -1
+chair
+  rotate: false
+  xy: 2, 260
+  size: 218, 250
+  orig: 218, 250
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 918, 50
+  size: 39, 36
+  orig: 39, 36
+  offset: 0, 0
+  index: -1
+dress
+  rotate: true
+  xy: 951, 130
+  size: 51, 71
+  orig: 51, 71
+  offset: 0, 0
+  index: -1
+emo hreat
+  rotate: true
+  xy: 970, 183
+  size: 30, 24
+  orig: 30, 24
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 659, 8
+  size: 70, 27
+  orig: 70, 27
+  offset: 0, 0
+  index: -1
+eye2
+  rotate: false
+  xy: 958, 109
+  size: 64, 19
+  orig: 64, 19
+  offset: 0, 0
+  index: -1
+eye3
+  rotate: false
+  xy: 731, 10
+  size: 60, 25
+  orig: 60, 25
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: false
+  xy: 646, 134
+  size: 19, 35
+  orig: 19, 35
+  offset: 0, 0
+  index: -1
+f arm2
+  rotate: true
+  xy: 956, 52
+  size: 28, 39
+  orig: 28, 39
+  offset: 0, 0
+  index: -1
+f fur
+  rotate: false
+  xy: 603, 25
+  size: 54, 38
+  orig: 54, 38
+  offset: 0, 0
+  index: -1
+f fur down
+  rotate: false
+  xy: 476, 89
+  size: 90, 103
+  orig: 90, 103
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: false
+  xy: 817, 66
+  size: 54, 25
+  orig: 54, 25
+  offset: 0, 0
+  index: -1
+f thick leg
+  rotate: true
+  xy: 815, 33
+  size: 31, 53
+  orig: 31, 53
+  offset: 0, 0
+  index: -1
+glasses_A(die)
+  rotate: false
+  xy: 1008, 501
+  size: 14, 9
+  orig: 14, 9
+  offset: 0, 0
+  index: -1
+glasses_B(die)
+  rotate: false
+  xy: 204, 242
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+glasses_C(die)
+  rotate: false
+  xy: 568, 89
+  size: 9, 10
+  orig: 9, 10
+  offset: 0, 0
+  index: -1
+glasses_D(die)
+  rotate: false
+  xy: 996, 198
+  size: 26, 15
+  orig: 26, 15
+  offset: 0, 0
+  index: -1
+glasses_E(die)
+  rotate: false
+  xy: 568, 101
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+glasses_F(die)
+  rotate: false
+  xy: 271, 6
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 668, 210
+  size: 148, 131
+  orig: 148, 131
+  offset: 0, 0
+  index: -1
+head ribbon
+  rotate: true
+  xy: 738, 37
+  size: 39, 75
+  orig: 39, 75
+  offset: 0, 0
+  index: -1
+mo1
+  rotate: true
+  xy: 1014, 90
+  size: 17, 8
+  orig: 17, 8
+  offset: 0, 0
+  index: -1
+mo2
+  rotate: false
+  xy: 996, 183
+  size: 12, 13
+  orig: 12, 13
+  offset: 0, 0
+  index: -1
+mo3
+  rotate: false
+  xy: 46, 6
+  size: 32, 18
+  orig: 32, 18
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: false
+  xy: 879, 117
+  size: 70, 64
+  orig: 70, 64
+  offset: 0, 0
+  index: -1
+waist ribbon
+  rotate: true
+  xy: 115, 41
+  size: 48, 81
+  orig: 48, 81
+  offset: 0, 0
+  index: -1
+wine
+  rotate: true
+  xy: 870, 23
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1
+wine bottle
+  rotate: false
+  xy: 471, 2
+  size: 70, 30
+  orig: 70, 30
+  offset: 0, 0
+  index: -1
+wine glass
+  rotate: true
+  xy: 659, 37
+  size: 39, 77
+  orig: 39, 77
+  offset: 0, 0
+  index: -1
+wine(die)
+  rotate: false
+  xy: 476, 34
+  size: 78, 26
+  orig: 78, 26
+  offset: 0, 0
+  index: -1

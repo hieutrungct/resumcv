@@ -1,0 +1,272 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0
+  rotate: false
+  xy: 134, 2
+  size: 59, 92
+  orig: 59, 92
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 209, 375
+  size: 137, 133
+  orig: 137, 133
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 2, 68
+  size: 147, 122
+  orig: 147, 122
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 348, 401
+  size: 148, 107
+  orig: 148, 107
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 141, 229
+  size: 138, 102
+  orig: 138, 102
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 348, 303
+  size: 122, 96
+  orig: 122, 96
+  offset: 0, 0
+  index: -1
+Eye(Close)
+  rotate: true
+  xy: 309, 170
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+Eye(Hurt)
+  rotate: false
+  xy: 330, 155
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+Mo5
+  rotate: true
+  xy: 492, 366
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 472, 299
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 355, 96
+  size: 26, 24
+  orig: 26, 24
+  offset: 0, 0
+  index: -1
+b arm up
+  rotate: false
+  xy: 315, 93
+  size: 38, 29
+  orig: 38, 29
+  offset: 0, 0
+  index: -1
+b body
+  rotate: false
+  xy: 232, 118
+  size: 43, 29
+  orig: 43, 29
+  offset: 0, 0
+  index: -1
+b chess
+  rotate: false
+  xy: 276, 60
+  size: 29, 45
+  orig: 29, 45
+  offset: 0, 0
+  index: -1
+b dress
+  rotate: false
+  xy: 2, 3
+  size: 130, 63
+  orig: 130, 63
+  offset: 0, 0
+  index: -1
+b ear
+  rotate: true
+  xy: 195, 35
+  size: 80, 40
+  orig: 80, 40
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: false
+  xy: 2, 369
+  size: 205, 139
+  orig: 205, 139
+  offset: 0, 0
+  index: -1
+b hand
+  rotate: false
+  xy: 432, 127
+  size: 20, 25
+  orig: 20, 25
+  offset: 0, 0
+  index: -1
+b hand2
+  rotate: true
+  xy: 358, 122
+  size: 31, 32
+  orig: 31, 32
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: true
+  xy: 403, 176
+  size: 31, 66
+  orig: 31, 66
+  offset: 0, 0
+  index: -1
+b wing
+  rotate: false
+  xy: 393, 154
+  size: 57, 20
+  orig: 57, 20
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 232, 149
+  size: 78, 42
+  orig: 78, 42
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 277, 107
+  size: 53, 36
+  orig: 53, 36
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 330, 178
+  size: 71, 29
+  orig: 71, 29
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: false
+  xy: 315, 124
+  size: 41, 29
+  orig: 41, 29
+  offset: 0, 0
+  index: -1
+f arm up
+  rotate: false
+  xy: 392, 121
+  size: 38, 31
+  orig: 38, 31
+  offset: 0, 0
+  index: -1
+f chess
+  rotate: false
+  xy: 237, 56
+  size: 37, 60
+  orig: 37, 60
+  offset: 0, 0
+  index: -1
+f dress
+  rotate: true
+  xy: 180, 117
+  size: 110, 50
+  orig: 110, 50
+  offset: 0, 0
+  index: -1
+f ear
+  rotate: false
+  xy: 459, 210
+  size: 45, 87
+  orig: 45, 87
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: true
+  xy: 195, 2
+  size: 31, 65
+  orig: 31, 65
+  offset: 0, 0
+  index: -1
+f wing
+  rotate: true
+  xy: 276, 162
+  size: 74, 31
+  orig: 74, 31
+  offset: 0, 0
+  index: -1
+glow
+  rotate: true
+  xy: 126, 96
+  size: 119, 52
+  orig: 119, 52
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 337, 209
+  size: 120, 92
+  orig: 120, 92
+  offset: 0, 0
+  index: -1
+mo1
+  rotate: true
+  xy: 454, 148
+  size: 26, 15
+  orig: 26, 15
+  offset: 0, 0
+  index: -1
+mo2
+  rotate: true
+  xy: 337, 359
+  size: 14, 8
+  orig: 14, 8
+  offset: 0, 0
+  index: -1
+queenA
+  rotate: true
+  xy: 245, 238
+  size: 135, 90
+  orig: 135, 90
+  offset: 0, 0
+  index: -1
+queenB
+  rotate: false
+  xy: 2, 217
+  size: 137, 150
+  orig: 137, 150
+  offset: 0, 0
+  index: -1
+skillhand
+  rotate: true
+  xy: 471, 145
+  size: 63, 39
+  orig: 63, 39
+  offset: 0, 0
+  index: -1

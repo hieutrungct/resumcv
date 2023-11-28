@@ -1,0 +1,272 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0
+  rotate: false
+  xy: 167, 391
+  size: 94, 119
+  orig: 94, 119
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 263, 397
+  size: 94, 113
+  orig: 94, 113
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 2, 151
+  size: 94, 119
+  orig: 94, 119
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 129, 277
+  size: 94, 101
+  orig: 94, 101
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 290, 86
+  size: 94, 94
+  orig: 94, 94
+  offset: 0, 0
+  index: -1
+5
+  rotate: true
+  xy: 327, 301
+  size: 94, 92
+  orig: 94, 92
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 356, 205
+  size: 94, 90
+  orig: 94, 90
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 289, 182
+  size: 65, 100
+  orig: 65, 100
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 386, 111
+  size: 71, 92
+  orig: 71, 92
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 421, 324
+  size: 69, 77
+  orig: 69, 77
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 386, 44
+  size: 69, 65
+  orig: 69, 65
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 359, 403
+  size: 93, 107
+  orig: 93, 107
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 193, 170
+  size: 94, 105
+  orig: 94, 105
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 194, 63
+  size: 94, 105
+  orig: 94, 105
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 232, 284
+  size: 93, 105
+  orig: 93, 105
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 98, 55
+  size: 94, 106
+  orig: 94, 106
+  offset: 0, 0
+  index: -1
+B6
+  rotate: false
+  xy: 2, 42
+  size: 94, 107
+  orig: 94, 107
+  offset: 0, 0
+  index: -1
+B7
+  rotate: false
+  xy: 98, 163
+  size: 93, 107
+  orig: 93, 107
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: false
+  xy: 421, 305
+  size: 63, 17
+  orig: 63, 17
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: true
+  xy: 228, 2
+  size: 59, 19
+  orig: 59, 19
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: false
+  xy: 2, 13
+  size: 63, 27
+  orig: 63, 27
+  offset: 0, 0
+  index: -1
+L Hand2
+  rotate: true
+  xy: 320, 67
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+L hand1
+  rotate: true
+  xy: 492, 356
+  size: 27, 17
+  orig: 27, 17
+  offset: 0, 0
+  index: -1
+Mouth Open
+  rotate: false
+  xy: 167, 373
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+R Hand1
+  rotate: false
+  xy: 290, 65
+  size: 28, 19
+  orig: 28, 19
+  offset: 0, 0
+  index: -1
+R hand2
+  rotate: true
+  xy: 356, 182
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 454, 410
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b bunches
+  rotate: true
+  xy: 98, 2
+  size: 51, 37
+  orig: 51, 37
+  offset: 0, 0
+  index: -1
+b cloth
+  rotate: false
+  xy: 474, 488
+  size: 36, 22
+  orig: 36, 22
+  offset: 0, 0
+  index: -1
+b hand
+  rotate: true
+  xy: 474, 419
+  size: 28, 23
+  orig: 28, 23
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 200, 2
+  size: 26, 59
+  orig: 26, 59
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 137, 4
+  size: 49, 61
+  orig: 49, 61
+  offset: 0, 0
+  index: -1
+f cloth
+  rotate: true
+  xy: 474, 449
+  size: 37, 27
+  orig: 37, 27
+  offset: 0, 0
+  index: -1
+f foot
+  rotate: true
+  xy: 492, 385
+  size: 32, 18
+  orig: 32, 18
+  offset: 0, 0
+  index: -1
+f hand
+  rotate: false
+  xy: 67, 14
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: false
+  xy: 249, 16
+  size: 23, 45
+  orig: 23, 45
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 272
+  size: 125, 99
+  orig: 125, 99
+  offset: 0, 0
+  index: -1
+rope
+  rotate: false
+  xy: 2, 373
+  size: 163, 137
+  orig: 163, 137
+  offset: 0, 0
+  index: -1

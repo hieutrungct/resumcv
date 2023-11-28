@@ -1,0 +1,300 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: true
+  xy: 264, 244
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 439, 168
+  size: 58, 40
+  orig: 58, 40
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 439, 210
+  size: 58, 47
+  orig: 58, 47
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 300, 242
+  size: 137, 135
+  orig: 137, 135
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 293, 379
+  size: 150, 131
+  orig: 150, 131
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 126, 379
+  size: 165, 131
+  orig: 165, 131
+  offset: 0, 0
+  index: -1
+D1
+  rotate: false
+  xy: 445, 396
+  size: 54, 114
+  orig: 54, 114
+  offset: 0, 0
+  index: -1
+D2
+  rotate: false
+  xy: 193, 164
+  size: 69, 118
+  orig: 69, 118
+  offset: 0, 0
+  index: -1
+E1
+  rotate: true
+  xy: 2, 40
+  size: 227, 103
+  orig: 227, 103
+  offset: 0, 0
+  index: -1
+E2
+  rotate: false
+  xy: 2, 269
+  size: 122, 241
+  orig: 122, 241
+  offset: 0, 0
+  index: -1
+E3
+  rotate: false
+  xy: 107, 115
+  size: 84, 152
+  orig: 84, 152
+  offset: 0, 0
+  index: -1
+E4
+  rotate: true
+  xy: 126, 284
+  size: 93, 172
+  orig: 93, 172
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 390, 100
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+armUp_B
+  rotate: true
+  xy: 265, 54
+  size: 23, 33
+  orig: 23, 33
+  offset: 0, 0
+  index: -1
+armUp_F
+  rotate: true
+  xy: 317, 79
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+armUp_F_blood
+  rotate: true
+  xy: 499, 250
+  size: 7, 11
+  orig: 7, 11
+  offset: 0, 0
+  index: -1
+arm_B
+  rotate: false
+  xy: 366, 100
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+arm_B_Blood
+  rotate: false
+  xy: 47, 7
+  size: 56, 31
+  orig: 56, 31
+  offset: 0, 0
+  index: -1
+arm_B_knift
+  rotate: false
+  xy: 193, 139
+  size: 69, 23
+  orig: 69, 23
+  offset: 0, 0
+  index: -1
+arm_F
+  rotate: true
+  xy: 300, 49
+  size: 28, 30
+  orig: 28, 30
+  offset: 0, 0
+  index: -1
+arm_F_blood
+  rotate: true
+  xy: 418, 96
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+bloodBody
+  rotate: true
+  xy: 437, 95
+  size: 16, 20
+  orig: 16, 20
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 107, 46
+  size: 64, 67
+  orig: 64, 67
+  offset: 0, 0
+  index: -1
+body_Blood
+  rotate: true
+  xy: 2, 2
+  size: 36, 43
+  orig: 36, 43
+  offset: 0, 0
+  index: -1
+bottle
+  rotate: false
+  xy: 265, 79
+  size: 50, 30
+  orig: 50, 30
+  offset: 0, 0
+  index: -1
+drop
+  rotate: false
+  xy: 501, 492
+  size: 9, 18
+  orig: 9, 18
+  offset: 0, 0
+  index: -1
+emo(Kill)
+  rotate: false
+  xy: 173, 53
+  size: 62, 54
+  orig: 62, 54
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 193, 109
+  size: 66, 28
+  orig: 66, 28
+  offset: 0, 0
+  index: -1
+eye(Close)
+  rotate: true
+  xy: 418, 174
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+eye(Hurt)
+  rotate: false
+  xy: 439, 113
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+eye_red(Kill)
+  rotate: true
+  xy: 418, 114
+  size: 58, 19
+  orig: 58, 19
+  offset: 0, 0
+  index: -1
+eyeblow(Kill)
+  rotate: false
+  xy: 261, 111
+  size: 68, 14
+  orig: 68, 14
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 264, 127
+  size: 124, 113
+  orig: 124, 113
+  offset: 0, 0
+  index: -1
+head_Blood
+  rotate: false
+  xy: 445, 379
+  size: 52, 15
+  orig: 52, 15
+  offset: 0, 0
+  index: -1
+leg_B
+  rotate: false
+  xy: 237, 52
+  size: 26, 55
+  orig: 26, 55
+  offset: 0, 0
+  index: -1
+leg_B_blood
+  rotate: false
+  xy: 350, 87
+  size: 8, 18
+  orig: 8, 18
+  offset: 0, 0
+  index: -1
+leg_F
+  rotate: true
+  xy: 439, 136
+  size: 30, 57
+  orig: 30, 57
+  offset: 0, 0
+  index: -1
+leg_F_blood
+  rotate: false
+  xy: 501, 477
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 126, 269
+  size: 13, 8
+  orig: 13, 8
+  offset: 0, 0
+  index: -1
+mouth(Laugh)
+  rotate: true
+  xy: 332, 54
+  size: 23, 18
+  orig: 23, 18
+  offset: 0, 0
+  index: -1
+mouth(Open)
+  rotate: false
+  xy: 331, 107
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 439, 259
+  size: 71, 118
+  orig: 71, 118
+  offset: 0, 0
+  index: -1

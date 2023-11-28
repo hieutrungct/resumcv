@@ -1,0 +1,615 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm Down B
+  rotate: true
+  xy: 896, 52
+  size: 39, 22
+  orig: 39, 22
+  offset: 0, 0
+  index: -1
+Arm Down F
+  rotate: true
+  xy: 1001, 167
+  size: 32, 21
+  orig: 32, 21
+  offset: 0, 0
+  index: -1
+Arm Up Attack
+  rotate: true
+  xy: 401, 2
+  size: 18, 40
+  orig: 18, 40
+  offset: 0, 0
+  index: -1
+Arm Up F
+  rotate: true
+  xy: 936, 885
+  size: 36, 19
+  orig: 36, 19
+  offset: 0, 0
+  index: -1
+ArmUp B
+  rotate: true
+  xy: 217, 94
+  size: 15, 32
+  orig: 15, 32
+  offset: 0, 0
+  index: -1
+Attack_fx/A1
+  rotate: false
+  xy: 433, 485
+  size: 166, 130
+  orig: 166, 130
+  offset: 0, 0
+  index: -1
+Attack_fx/A2
+  rotate: false
+  xy: 706, 468
+  size: 166, 130
+  orig: 166, 130
+  offset: 0, 0
+  index: -1
+Attack_fx/A3
+  rotate: false
+  xy: 433, 353
+  size: 166, 130
+  orig: 166, 130
+  offset: 0, 0
+  index: -1
+Attack_fx/A4
+  rotate: false
+  xy: 312, 278
+  size: 104, 82
+  orig: 104, 82
+  offset: 0, 0
+  index: -1
+Attack_fx/A5
+  rotate: false
+  xy: 570, 260
+  size: 104, 82
+  orig: 104, 82
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 778, 217
+  size: 72, 57
+  orig: 72, 57
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: false
+  xy: 835, 288
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+EffectA_Lvlmax
+  rotate: true
+  xy: 217, 111
+  size: 107, 91
+  orig: 107, 91
+  offset: 0, 0
+  index: -1
+EffectB_Lvlmax
+  rotate: true
+  xy: 490, 698
+  size: 92, 207
+  orig: 92, 207
+  offset: 0, 0
+  index: -1
+Eye1
+  rotate: true
+  xy: 698, 847
+  size: 68, 28
+  orig: 68, 28
+  offset: 0, 0
+  index: -1
+Eye2
+  rotate: true
+  xy: 653, 191
+  size: 67, 21
+  orig: 67, 21
+  offset: 0, 0
+  index: -1
+Eye3
+  rotate: false
+  xy: 330, 2
+  size: 69, 18
+  orig: 69, 18
+  offset: 0, 0
+  index: -1
+Eyebrow
+  rotate: true
+  xy: 161, 381
+  size: 59, 10
+  orig: 59, 10
+  offset: 0, 0
+  index: -1
+Hand B
+  rotate: false
+  xy: 820, 2
+  size: 26, 24
+  orig: 26, 24
+  offset: 0, 0
+  index: -1
+Hand B Attack
+  rotate: false
+  xy: 653, 168
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Hand F
+  rotate: false
+  xy: 957, 903
+  size: 26, 23
+  orig: 26, 23
+  offset: 0, 0
+  index: -1
+Hand F Attack
+  rotate: false
+  xy: 600, 10
+  size: 44, 22
+  orig: 44, 22
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 890, 669
+  size: 159, 113
+  orig: 159, 113
+  offset: 0, 0
+  index: -1
+Head Ac(L)
+  rotate: true
+  xy: 848, 166
+  size: 46, 73
+  orig: 46, 73
+  offset: 0, 0
+  index: -1
+Head Ac(R)
+  rotate: true
+  xy: 770, 167
+  size: 48, 76
+  orig: 48, 76
+  offset: 0, 0
+  index: -1
+Head_flower
+  rotate: false
+  xy: 676, 224
+  size: 100, 50
+  orig: 100, 50
+  offset: 0, 0
+  index: -1
+Ice
+  rotate: true
+  xy: 852, 214
+  size: 58, 82
+  orig: 58, 82
+  offset: 0, 0
+  index: -1
+Ice2
+  rotate: false
+  xy: 2, 628
+  size: 158, 394
+  orig: 158, 394
+  offset: 0, 0
+  index: -1
+Ice_Attack
+  rotate: true
+  xy: 275, 4
+  size: 105, 53
+  orig: 105, 53
+  offset: 0, 0
+  index: -1
+Ice_Attack_LvlMax
+  rotate: true
+  xy: 586, 63
+  size: 104, 58
+  orig: 104, 58
+  offset: 0, 0
+  index: -1
+Ice_LvlMax
+  rotate: false
+  xy: 945, 928
+  size: 67, 94
+  orig: 67, 94
+  offset: 0, 0
+  index: -1
+Leg B
+  rotate: true
+  xy: 586, 34
+  size: 27, 60
+  orig: 27, 60
+  offset: 0, 0
+  index: -1
+Leg F
+  rotate: true
+  xy: 923, 168
+  size: 31, 76
+  orig: 31, 76
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 1010, 237
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: true
+  xy: 161, 349
+  size: 30, 10
+  orig: 30, 10
+  offset: 0, 0
+  index: -1
+Mo3
+  rotate: true
+  xy: 936, 849
+  size: 34, 19
+  orig: 34, 19
+  offset: 0, 0
+  index: -1
+Pony((L)
+  rotate: false
+  xy: 722, 6
+  size: 54, 71
+  orig: 54, 71
+  offset: 0, 0
+  index: -1
+Pony(R)
+  rotate: false
+  xy: 820, 28
+  size: 47, 63
+  orig: 47, 63
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 458, 6
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Spoon
+  rotate: false
+  xy: 869, 11
+  size: 25, 80
+  orig: 25, 80
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 676, 166
+  size: 92, 56
+  orig: 92, 56
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/A1
+  rotate: true
+  xy: 324, 452
+  size: 175, 107
+  orig: 175, 107
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/A2
+  rotate: false
+  xy: 490, 792
+  size: 206, 123
+  orig: 206, 123
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/A3
+  rotate: true
+  xy: 601, 440
+  size: 175, 103
+  orig: 175, 103
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/A4
+  rotate: false
+  xy: 707, 600
+  size: 178, 100
+  orig: 178, 100
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/B1
+  rotate: false
+  xy: 706, 391
+  size: 178, 75
+  orig: 178, 75
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/B2
+  rotate: false
+  xy: 490, 917
+  size: 236, 105
+  orig: 236, 105
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/B3
+  rotate: false
+  xy: 728, 830
+  size: 206, 91
+  orig: 206, 91
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/B4
+  rotate: false
+  xy: 778, 19
+  size: 40, 72
+  orig: 40, 72
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/C1
+  rotate: false
+  xy: 418, 290
+  size: 150, 61
+  orig: 150, 61
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/C2
+  rotate: false
+  xy: 490, 617
+  size: 215, 79
+  orig: 215, 79
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/C3
+  rotate: false
+  xy: 706, 325
+  size: 173, 64
+  orig: 173, 64
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E1
+  rotate: false
+  xy: 173, 474
+  size: 149, 153
+  orig: 149, 153
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E2
+  rotate: true
+  xy: 699, 702
+  size: 126, 189
+  orig: 126, 189
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E3
+  rotate: false
+  xy: 2, 361
+  size: 157, 265
+  orig: 157, 265
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E4
+  rotate: false
+  xy: 331, 757
+  size: 157, 265
+  orig: 157, 265
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E5
+  rotate: false
+  xy: 2, 94
+  size: 157, 265
+  orig: 157, 265
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E6
+  rotate: false
+  xy: 162, 757
+  size: 167, 265
+  orig: 167, 265
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E7
+  rotate: true
+  xy: 162, 629
+  size: 126, 272
+  orig: 126, 272
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E8
+  rotate: true
+  xy: 728, 923
+  size: 99, 215
+  orig: 99, 215
+  offset: 0, 0
+  index: -1
+skillVfx/Floor_Explode/E9
+  rotate: false
+  xy: 161, 442
+  size: 10, 184
+  orig: 10, 184
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/B1
+  rotate: false
+  xy: 312, 362
+  size: 106, 88
+  orig: 106, 88
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/B2
+  rotate: false
+  xy: 646, 79
+  size: 80, 85
+  orig: 80, 85
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/B3
+  rotate: false
+  xy: 566, 169
+  size: 85, 89
+  orig: 85, 89
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/B4
+  rotate: true
+  xy: 896, 13
+  size: 37, 20
+  orig: 37, 20
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/B5
+  rotate: true
+  xy: 1010, 248
+  size: 24, 12
+  orig: 24, 12
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/C1
+  rotate: false
+  xy: 773, 93
+  size: 71, 72
+  orig: 71, 72
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/C2
+  rotate: false
+  xy: 2, 2
+  size: 89, 90
+  orig: 89, 90
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/C3
+  rotate: false
+  xy: 93, 2
+  size: 89, 90
+  orig: 89, 90
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/C4
+  rotate: false
+  xy: 184, 2
+  size: 89, 90
+  orig: 89, 90
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/C5
+  rotate: true
+  xy: 936, 201
+  size: 71, 72
+  orig: 71, 72
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/C6
+  rotate: true
+  xy: 846, 93
+  size: 71, 72
+  orig: 71, 72
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Bowl/C7
+  rotate: true
+  xy: 648, 6
+  size: 71, 72
+  orig: 71, 72
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/A1
+  rotate: false
+  xy: 887, 541
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/A2
+  rotate: false
+  xy: 886, 274
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/A3
+  rotate: false
+  xy: 310, 150
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/A4
+  rotate: false
+  xy: 438, 162
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/A5
+  rotate: false
+  xy: 330, 22
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/A6
+  rotate: false
+  xy: 458, 34
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/C1
+  rotate: true
+  xy: 886, 402
+  size: 137, 125
+  orig: 137, 125
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/C2
+  rotate: false
+  xy: 173, 347
+  size: 137, 125
+  orig: 137, 125
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/C3
+  rotate: false
+  xy: 161, 220
+  size: 137, 125
+  orig: 137, 125
+  offset: 0, 0
+  index: -1
+skillVfx/Ice_Stick/C4
+  rotate: false
+  xy: 601, 344
+  size: 103, 94
+  orig: 103, 94
+  offset: 0, 0
+  index: -1
+skillVfx/Jump/A1
+  rotate: true
+  xy: 161, 94
+  size: 124, 54
+  orig: 124, 54
+  offset: 0, 0
+  index: -1
+skillVfx/Jump/A2
+  rotate: false
+  xy: 676, 276
+  size: 157, 47
+  orig: 157, 47
+  offset: 0, 0
+  index: -1
+skillVfx/Jump/A3
+  rotate: true
+  xy: 436, 625
+  size: 130, 52
+  orig: 130, 52
+  offset: 0, 0
+  index: -1
+skillVfx/Jump/A4
+  rotate: true
+  xy: 728, 79
+  size: 85, 43
+  orig: 85, 43
+  offset: 0, 0
+  index: -1

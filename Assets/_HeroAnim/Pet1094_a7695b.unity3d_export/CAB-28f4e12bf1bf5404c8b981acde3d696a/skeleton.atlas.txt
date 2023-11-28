@@ -1,0 +1,398 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: false
+  xy: 2, 136
+  size: 194, 201
+  orig: 194, 201
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 578, 385
+  size: 165, 125
+  orig: 165, 125
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 585, 261
+  size: 103, 122
+  orig: 103, 122
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 522, 126
+  size: 81, 107
+  orig: 81, 107
+  offset: 0, 0
+  index: -1
+A4
+  rotate: true
+  xy: 744, 305
+  size: 66, 81
+  orig: 66, 81
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 827, 316
+  size: 70, 55
+  orig: 70, 55
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 427, 239
+  size: 97, 131
+  orig: 97, 131
+  offset: 0, 0
+  index: -1
+B2
+  rotate: true
+  xy: 745, 373
+  size: 137, 152
+  orig: 137, 152
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 198, 154
+  size: 138, 152
+  orig: 138, 152
+  offset: 0, 0
+  index: -1
+B4
+  rotate: true
+  xy: 422, 372
+  size: 138, 154
+  orig: 138, 154
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 2, 7
+  size: 179, 127
+  orig: 179, 127
+  offset: 0, 0
+  index: -1
+E1
+  rotate: false
+  xy: 230, 373
+  size: 190, 137
+  orig: 190, 137
+  offset: 0, 0
+  index: -1
+F1
+  rotate: false
+  xy: 2, 339
+  size: 226, 171
+  orig: 226, 171
+  offset: 0, 0
+  index: -1
+FXflower
+  rotate: true
+  xy: 943, 287
+  size: 20, 13
+  orig: 20, 13
+  offset: 0, 0
+  index: -1
+FXflower2
+  rotate: true
+  xy: 585, 87
+  size: 37, 18
+  orig: 37, 18
+  offset: 0, 0
+  index: -1
+FXflower3
+  rotate: true
+  xy: 810, 282
+  size: 21, 15
+  orig: 21, 15
+  offset: 0, 0
+  index: -1
+FXflower4
+  rotate: false
+  xy: 258, 2
+  size: 25, 16
+  orig: 25, 16
+  offset: 0, 0
+  index: -1
+FXflower5
+  rotate: false
+  xy: 542, 73
+  size: 35, 27
+  orig: 35, 27
+  offset: 0, 0
+  index: -1
+FXflower6
+  rotate: true
+  xy: 388, 321
+  size: 50, 32
+  orig: 50, 32
+  offset: 0, 0
+  index: -1
+FXflower7
+  rotate: false
+  xy: 971, 333
+  size: 46, 34
+  orig: 46, 34
+  offset: 0, 0
+  index: -1
+FXflower8
+  rotate: false
+  xy: 690, 269
+  size: 50, 35
+  orig: 50, 35
+  offset: 0, 0
+  index: -1
+FXflower9
+  rotate: true
+  xy: 258, 20
+  size: 35, 25
+  orig: 35, 25
+  offset: 0, 0
+  index: -1
+HairFront
+  rotate: false
+  xy: 899, 369
+  size: 114, 141
+  orig: 114, 141
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 183, 57
+  size: 96, 67
+  orig: 96, 67
+  offset: 0, 0
+  index: -1
+PonyDeco_l
+  rotate: false
+  xy: 605, 91
+  size: 26, 23
+  orig: 26, 23
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 198, 126
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+arm up_l copy(idle)
+  rotate: false
+  xy: 406, 79
+  size: 19, 44
+  orig: 19, 44
+  offset: 0, 0
+  index: -1
+arm_l 1(idle)
+  rotate: true
+  xy: 899, 309
+  size: 18, 59
+  orig: 18, 59
+  offset: 0, 0
+  index: -1
+arm_l 3(skill)
+  rotate: false
+  xy: 340, 125
+  size: 75, 32
+  orig: 75, 32
+  offset: 0, 0
+  index: -1
+arm_r 1 copy(idle)
+  rotate: false
+  xy: 517, 59
+  size: 23, 41
+  orig: 23, 41
+  offset: 0, 0
+  index: -1
+arm_r 3(skill)
+  rotate: false
+  xy: 827, 289
+  size: 58, 25
+  orig: 58, 25
+  offset: 0, 0
+  index: -1
+body 1
+  rotate: false
+  xy: 605, 176
+  size: 43, 60
+  orig: 43, 60
+  offset: 0, 0
+  index: -1
+body 3(skill)
+  rotate: false
+  xy: 605, 116
+  size: 38, 58
+  orig: 38, 58
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 481, 59
+  size: 46, 34
+  orig: 46, 34
+  offset: 0, 0
+  index: -1
+chest(skill)
+  rotate: false
+  xy: 198, 310
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+eye 1
+  rotate: false
+  xy: 331, 91
+  size: 73, 32
+  orig: 73, 32
+  offset: 0, 0
+  index: -1
+eye 2
+  rotate: false
+  xy: 522, 102
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+eye 3
+  rotate: false
+  xy: 585, 238
+  size: 72, 21
+  orig: 72, 21
+  offset: 0, 0
+  index: -1
+eyebrow 01
+  rotate: false
+  xy: 183, 2
+  size: 48, 14
+  orig: 48, 14
+  offset: 0, 0
+  index: -1
+finger_l 1(idle)
+  rotate: false
+  xy: 233, 2
+  size: 20, 14
+  orig: 20, 14
+  offset: 0, 0
+  index: -1
+finger_r 3(skill)
+  rotate: false
+  xy: 899, 291
+  size: 21, 16
+  orig: 21, 16
+  offset: 0, 0
+  index: -1
+flower
+  rotate: false
+  xy: 690, 306
+  size: 52, 77
+  orig: 52, 77
+  offset: 0, 0
+  index: -1
+hair
+  rotate: true
+  xy: 427, 107
+  size: 130, 93
+  orig: 130, 93
+  offset: 0, 0
+  index: -1
+hair tail_l
+  rotate: false
+  xy: 526, 235
+  size: 57, 135
+  orig: 57, 135
+  offset: 0, 0
+  index: -1
+hair tail_r
+  rotate: false
+  xy: 338, 159
+  size: 87, 147
+  orig: 87, 147
+  offset: 0, 0
+  index: -1
+leg_l 1
+  rotate: true
+  xy: 742, 272
+  size: 31, 66
+  orig: 31, 66
+  offset: 0, 0
+  index: -1
+leg_l 2(attack)
+  rotate: true
+  xy: 331, 59
+  size: 30, 67
+  orig: 30, 67
+  offset: 0, 0
+  index: -1
+leg_r 1
+  rotate: true
+  xy: 183, 18
+  size: 37, 73
+  orig: 37, 73
+  offset: 0, 0
+  index: -1
+mouth 1
+  rotate: true
+  xy: 887, 296
+  size: 18, 10
+  orig: 18, 10
+  offset: 0, 0
+  index: -1
+mouth 2
+  rotate: false
+  xy: 922, 289
+  size: 19, 18
+  orig: 19, 18
+  offset: 0, 0
+  index: -1
+mouth 3
+  rotate: false
+  xy: 542, 55
+  size: 22, 16
+  orig: 22, 16
+  offset: 0, 0
+  index: -1
+necklace 1
+  rotate: false
+  xy: 659, 241
+  size: 21, 18
+  orig: 21, 18
+  offset: 0, 0
+  index: -1
+skirt 1
+  rotate: false
+  xy: 899, 329
+  size: 70, 38
+  orig: 70, 38
+  offset: 0, 0
+  index: -1
+skirt back 3(skill)
+  rotate: false
+  xy: 427, 76
+  size: 52, 29
+  orig: 52, 29
+  offset: 0, 0
+  index: -1
+skirt(skill)
+  rotate: true
+  xy: 281, 63
+  size: 61, 48
+  orig: 61, 48
+  offset: 0, 0
+  index: -1
+weap 1(idle)
+  rotate: true
+  xy: 230, 308
+  size: 63, 156
+  orig: 63, 156
+  offset: 0, 0
+  index: -1

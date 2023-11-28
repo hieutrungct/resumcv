@@ -1,0 +1,293 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+C1
+  rotate: false
+  xy: 2, 234
+  size: 74, 170
+  orig: 74, 170
+  offset: 0, 0
+  index: -1
+C2
+  rotate: true
+  xy: 151, 436
+  size: 74, 170
+  orig: 74, 170
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 2, 62
+  size: 74, 170
+  orig: 74, 170
+  offset: 0, 0
+  index: -1
+C4
+  rotate: true
+  xy: 323, 436
+  size: 74, 170
+  orig: 74, 170
+  offset: 0, 0
+  index: -1
+Eye
+  rotate: true
+  xy: 149, 3
+  size: 79, 25
+  orig: 79, 25
+  offset: 0, 0
+  index: -1
+Eye4(Close)
+  rotate: false
+  xy: 172, 237
+  size: 69, 20
+  orig: 69, 20
+  offset: 0, 0
+  index: -1
+Eye6(Hurt)
+  rotate: false
+  xy: 428, 411
+  size: 64, 23
+  orig: 64, 23
+  offset: 0, 0
+  index: -1
+Mei1
+  rotate: true
+  xy: 495, 435
+  size: 75, 12
+  orig: 75, 12
+  offset: 0, 0
+  index: -1
+Mei3
+  rotate: true
+  xy: 498, 363
+  size: 70, 12
+  orig: 70, 12
+  offset: 0, 0
+  index: -1
+Mo5
+  rotate: false
+  xy: 2, 2
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 286, 408
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Syringe
+  rotate: true
+  xy: 78, 249
+  size: 155, 78
+  orig: 155, 78
+  offset: 0, 0
+  index: -1
+Syringe star
+  rotate: false
+  xy: 348, 264
+  size: 29, 37
+  orig: 29, 37
+  offset: 0, 0
+  index: -1
+Syringe_bg
+  rotate: true
+  xy: 78, 84
+  size: 163, 63
+  orig: 163, 63
+  offset: 0, 0
+  index: -1
+Syringe_water_a
+  rotate: true
+  xy: 143, 163
+  size: 84, 27
+  orig: 84, 27
+  offset: 0, 0
+  index: -1
+Syringe_water_d
+  rotate: true
+  xy: 329, 230
+  size: 26, 14
+  orig: 26, 14
+  offset: 0, 0
+  index: -1
+Syringe_water_e
+  rotate: true
+  xy: 243, 236
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+b_arm
+  rotate: true
+  xy: 435, 351
+  size: 25, 61
+  orig: 25, 61
+  offset: 0, 0
+  index: -1
+b_effect
+  rotate: true
+  xy: 2, 22
+  size: 38, 65
+  orig: 38, 65
+  offset: 0, 0
+  index: -1
+b_hand
+  rotate: false
+  xy: 454, 334
+  size: 24, 15
+  orig: 24, 15
+  offset: 0, 0
+  index: -1
+b_labcoat1a
+  rotate: true
+  xy: 435, 378
+  size: 31, 59
+  orig: 31, 59
+  offset: 0, 0
+  index: -1
+b_labcoat1b
+  rotate: true
+  xy: 269, 258
+  size: 43, 77
+  orig: 43, 77
+  offset: 0, 0
+  index: -1
+b_labcoat2
+  rotate: false
+  xy: 158, 259
+  size: 109, 73
+  orig: 109, 73
+  offset: 0, 0
+  index: -1
+b_leg
+  rotate: false
+  xy: 202, 176
+  size: 24, 59
+  orig: 24, 59
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 78, 2
+  size: 69, 80
+  orig: 69, 80
+  offset: 0, 0
+  index: -1
+ear ring
+  rotate: false
+  xy: 269, 305
+  size: 15, 27
+  orig: 15, 27
+  offset: 0, 0
+  index: -1
+f_LowerArm
+  rotate: true
+  xy: 269, 229
+  size: 27, 30
+  orig: 27, 30
+  offset: 0, 0
+  index: -1
+f_arm
+  rotate: false
+  xy: 385, 313
+  size: 24, 39
+  orig: 24, 39
+  offset: 0, 0
+  index: -1
+f_effect
+  rotate: false
+  xy: 143, 84
+  size: 43, 77
+  orig: 43, 77
+  offset: 0, 0
+  index: -1
+f_hand
+  rotate: true
+  xy: 411, 329
+  size: 23, 19
+  orig: 23, 19
+  offset: 0, 0
+  index: -1
+f_leg
+  rotate: false
+  xy: 172, 175
+  size: 28, 60
+  orig: 28, 60
+  offset: 0, 0
+  index: -1
+hair b
+  rotate: false
+  xy: 2, 406
+  size: 147, 104
+  orig: 147, 104
+  offset: 0, 0
+  index: -1
+hair f
+  rotate: false
+  xy: 158, 334
+  size: 126, 100
+  orig: 126, 100
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 286, 303
+  size: 97, 51
+  orig: 97, 51
+  offset: 0, 0
+  index: -1
+hat effect1
+  rotate: false
+  xy: 301, 231
+  size: 26, 25
+  orig: 26, 25
+  offset: 0, 0
+  index: -1
+hat effect2
+  rotate: false
+  xy: 228, 216
+  size: 13, 19
+  orig: 13, 19
+  offset: 0, 0
+  index: -1
+hat effect3
+  rotate: false
+  xy: 498, 346
+  size: 12, 15
+  orig: 12, 15
+  offset: 0, 0
+  index: -1
+hat effect4
+  rotate: false
+  xy: 432, 329
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+mo
+  rotate: false
+  xy: 32, 5
+  size: 27, 15
+  orig: 27, 15
+  offset: 0, 0
+  index: -1
+pet
+  rotate: false
+  xy: 286, 356
+  size: 101, 50
+  orig: 101, 50
+  offset: 0, 0
+  index: -1
+pocky
+  rotate: false
+  xy: 389, 354
+  size: 44, 52
+  orig: 44, 52
+  offset: 0, 0
+  index: -1

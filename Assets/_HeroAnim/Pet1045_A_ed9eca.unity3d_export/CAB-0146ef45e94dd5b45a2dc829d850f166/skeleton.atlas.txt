@@ -1,0 +1,615 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: true
+  xy: 574, 861
+  size: 161, 209
+  orig: 161, 209
+  offset: 0, 0
+  index: -1
+A2
+  rotate: true
+  xy: 574, 793
+  size: 66, 193
+  orig: 66, 193
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 369, 464
+  size: 50, 119
+  orig: 50, 119
+  offset: 0, 0
+  index: -1
+Ahoge
+  rotate: true
+  xy: 603, 656
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+ArmDown(L)
+  rotate: false
+  xy: 507, 332
+  size: 15, 25
+  orig: 15, 25
+  offset: 0, 0
+  index: -1
+ArmDown(R)
+  rotate: false
+  xy: 138, 399
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+ArmUp(L)
+  rotate: false
+  xy: 356, 442
+  size: 11, 30
+  orig: 11, 30
+  offset: 0, 0
+  index: -1
+ArmUp(R)
+  rotate: false
+  xy: 588, 658
+  size: 13, 30
+  orig: 13, 30
+  offset: 0, 0
+  index: -1
+ArmUp(R)_Attack
+  rotate: false
+  xy: 556, 690
+  size: 45, 16
+  orig: 45, 16
+  offset: 0, 0
+  index: -1
+Attack_Base
+  rotate: false
+  xy: 2, 399
+  size: 134, 240
+  orig: 134, 240
+  offset: 0, 0
+  index: -1
+Attack_StarA
+  rotate: false
+  xy: 324, 217
+  size: 66, 96
+  orig: 66, 96
+  offset: 0, 0
+  index: -1
+Attack_StarB
+  rotate: true
+  xy: 244, 178
+  size: 47, 76
+  orig: 47, 76
+  offset: 0, 0
+  index: -1
+Attack_StarC
+  rotate: true
+  xy: 884, 726
+  size: 34, 48
+  orig: 34, 48
+  offset: 0, 0
+  index: -1
+Attack_StarD
+  rotate: true
+  xy: 288, 426
+  size: 46, 66
+  orig: 46, 66
+  offset: 0, 0
+  index: -1
+Bag
+  rotate: true
+  xy: 388, 329
+  size: 59, 91
+  orig: 59, 91
+  offset: 0, 0
+  index: -1
+Bag_Elispe(L)
+  rotate: true
+  xy: 556, 478
+  size: 19, 26
+  orig: 19, 26
+  offset: 0, 0
+  index: -1
+Bag_Elispe(R)
+  rotate: false
+  xy: 558, 429
+  size: 19, 27
+  orig: 19, 27
+  offset: 0, 0
+  index: -1
+Bag_Stick
+  rotate: false
+  xy: 74, 169
+  size: 10, 18
+  orig: 10, 18
+  offset: 0, 0
+  index: -1
+Bird
+  rotate: true
+  xy: 965, 891
+  size: 47, 57
+  orig: 47, 57
+  offset: 0, 0
+  index: -1
+BirdWings(L)
+  rotate: true
+  xy: 552, 628
+  size: 22, 34
+  orig: 22, 34
+  offset: 0, 0
+  index: -1
+BirdWings(R)
+  rotate: false
+  xy: 943, 771
+  size: 31, 27
+  orig: 31, 27
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 967, 847
+  size: 42, 55
+  orig: 42, 55
+  offset: 0, 0
+  index: -1
+Body_Attack
+  rotate: false
+  xy: 107, 2
+  size: 43, 60
+  orig: 43, 60
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: true
+  xy: 525, 416
+  size: 40, 31
+  orig: 40, 31
+  offset: 0, 0
+  index: -1
+Chest_Attack
+  rotate: false
+  xy: 492, 223
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+Dress(R)
+  rotate: false
+  xy: 481, 332
+  size: 24, 26
+  orig: 24, 26
+  offset: 0, 0
+  index: -1
+EyeBrow_Attack
+  rotate: false
+  xy: 244, 162
+  size: 56, 14
+  orig: 56, 14
+  offset: 0, 0
+  index: -1
+EyeBrow_Normal
+  rotate: true
+  xy: 508, 359
+  size: 50, 19
+  orig: 50, 19
+  offset: 0, 0
+  index: -1
+Eye_Close
+  rotate: false
+  xy: 755, 701
+  size: 64, 12
+  orig: 64, 12
+  offset: 0, 0
+  index: -1
+Eye_Normal
+  rotate: false
+  xy: 322, 182
+  size: 69, 33
+  orig: 69, 33
+  offset: 0, 0
+  index: -1
+Eye_Skill
+  rotate: true
+  xy: 858, 725
+  size: 66, 24
+  orig: 66, 24
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 388, 390
+  size: 91, 72
+  orig: 91, 72
+  offset: 0, 0
+  index: -1
+Feather_A
+  rotate: false
+  xy: 884, 762
+  size: 57, 36
+  orig: 57, 36
+  offset: 0, 0
+  index: -1
+Feather_B
+  rotate: true
+  xy: 556, 499
+  size: 39, 24
+  orig: 39, 24
+  offset: 0, 0
+  index: -1
+Feather_C
+  rotate: false
+  xy: 481, 411
+  size: 42, 45
+  orig: 42, 45
+  offset: 0, 0
+  index: -1
+Fx_skill_01
+  rotate: true
+  xy: 380, 628
+  size: 59, 170
+  orig: 59, 170
+  offset: 0, 0
+  index: -1
+Fx_skill_02
+  rotate: false
+  xy: 490, 481
+  size: 64, 145
+  orig: 64, 145
+  offset: 0, 0
+  index: -1
+Fx_skill_03
+  rotate: false
+  xy: 324, 315
+  size: 62, 109
+  orig: 62, 109
+  offset: 0, 0
+  index: -1
+Fx_skill_04
+  rotate: false
+  xy: 392, 232
+  size: 56, 95
+  orig: 56, 95
+  offset: 0, 0
+  index: -1
+Fx_skill_B1
+  rotate: true
+  xy: 785, 883
+  size: 139, 178
+  orig: 139, 178
+  offset: 0, 0
+  index: -1
+Fx_skill_B2
+  rotate: false
+  xy: 316, 837
+  size: 256, 185
+  orig: 256, 185
+  offset: 0, 0
+  index: -1
+Fx_skill_B3
+  rotate: false
+  xy: 2, 641
+  size: 294, 191
+  orig: 294, 191
+  offset: 0, 0
+  index: -1
+Fx_skill_B4
+  rotate: false
+  xy: 2, 834
+  size: 312, 188
+  orig: 312, 188
+  offset: 0, 0
+  index: -1
+GolfStick
+  rotate: true
+  xy: 884, 836
+  size: 45, 81
+  orig: 45, 81
+  offset: 0, 0
+  index: -1
+GolfStick_EF
+  rotate: false
+  xy: 288, 474
+  size: 79, 163
+  orig: 79, 163
+  offset: 0, 0
+  index: -1
+HairBack
+  rotate: false
+  xy: 556, 708
+  size: 103, 83
+  orig: 103, 83
+  offset: 0, 0
+  index: -1
+HairBack(L)
+  rotate: true
+  xy: 661, 700
+  size: 91, 92
+  orig: 91, 92
+  offset: 0, 0
+  index: -1
+HairBack(R)
+  rotate: false
+  xy: 369, 516
+  size: 119, 110
+  orig: 119, 110
+  offset: 0, 0
+  index: -1
+HairFront
+  rotate: true
+  xy: 965, 940
+  size: 82, 57
+  orig: 82, 57
+  offset: 0, 0
+  index: -1
+HairSide(L)
+  rotate: false
+  xy: 74, 2
+  size: 31, 62
+  orig: 31, 62
+  offset: 0, 0
+  index: -1
+HairSide(R)
+  rotate: true
+  xy: 86, 153
+  size: 40, 76
+  orig: 40, 76
+  offset: 0, 0
+  index: -1
+HairTail(L)
+  rotate: false
+  xy: 769, 790
+  size: 83, 56
+  orig: 83, 56
+  offset: 0, 0
+  index: -1
+HairTail(R)
+  rotate: false
+  xy: 164, 161
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: -1
+Hand(L)
+  rotate: true
+  xy: 555, 458
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+Hand(R)
+  rotate: true
+  xy: 529, 353
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+HatWings(L)
+  rotate: true
+  xy: 884, 800
+  size: 34, 67
+  orig: 34, 67
+  offset: 0, 0
+  index: -1
+HatWings1(R)
+  rotate: false
+  xy: 74, 66
+  size: 45, 85
+  orig: 45, 85
+  offset: 0, 0
+  index: -1
+HatWings2(R)
+  rotate: false
+  xy: 556, 540
+  size: 23, 40
+  orig: 23, 40
+  offset: 0, 0
+  index: -1
+Hat_Down
+  rotate: true
+  xy: 121, 64
+  size: 87, 34
+  orig: 87, 34
+  offset: 0, 0
+  index: -1
+Hat_Up
+  rotate: true
+  xy: 450, 227
+  size: 100, 40
+  orig: 100, 40
+  offset: 0, 0
+  index: -1
+Leg(L)
+  rotate: false
+  xy: 953, 800
+  size: 21, 34
+  orig: 21, 34
+  offset: 0, 0
+  index: -1
+Leg(L)_Attack
+  rotate: false
+  xy: 556, 802
+  size: 16, 33
+  orig: 16, 33
+  offset: 0, 0
+  index: -1
+Leg(R)
+  rotate: false
+  xy: 492, 291
+  size: 18, 39
+  orig: 18, 39
+  offset: 0, 0
+  index: -1
+Mouth_Attack
+  rotate: true
+  xy: 302, 161
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+Mouth_Hurt
+  rotate: true
+  xy: 512, 298
+  size: 32, 19
+  orig: 32, 19
+  offset: 0, 0
+  index: -1
+Mouth_Normal
+  rotate: false
+  xy: 556, 793
+  size: 16, 7
+  orig: 16, 7
+  offset: 0, 0
+  index: -1
+Mouth_Skill
+  rotate: true
+  xy: 369, 440
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 528, 695
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Skill_BirdEffect
+  rotate: false
+  xy: 2, 12
+  size: 70, 175
+  orig: 70, 175
+  offset: 0, 0
+  index: -1
+TailRing(L)
+  rotate: false
+  xy: 552, 652
+  size: 34, 36
+  orig: 34, 36
+  offset: 0, 0
+  index: -1
+TailRing(R)_Back
+  rotate: true
+  xy: 785, 848
+  size: 33, 97
+  orig: 33, 97
+  offset: 0, 0
+  index: -1
+TailRing(R)_Front
+  rotate: true
+  xy: 854, 793
+  size: 53, 28
+  orig: 53, 28
+  offset: 0, 0
+  index: -1
+Thigh(L)
+  rotate: false
+  xy: 529, 373
+  size: 25, 41
+  orig: 25, 41
+  offset: 0, 0
+  index: -1
+Thigh(L)_Attack
+  rotate: true
+  xy: 603, 684
+  size: 22, 40
+  orig: 22, 40
+  offset: 0, 0
+  index: -1
+Thigh(R)
+  rotate: false
+  xy: 481, 360
+  size: 25, 49
+  orig: 25, 49
+  offset: 0, 0
+  index: -1
+ThighDeco(L)_Back
+  rotate: true
+  xy: 492, 251
+  size: 38, 17
+  orig: 38, 17
+  offset: 0, 0
+  index: -1
+ThighDeco(L)_Front
+  rotate: false
+  xy: 490, 458
+  size: 63, 21
+  orig: 63, 21
+  offset: 0, 0
+  index: -1
+ThighDeco(R)_Back
+  rotate: false
+  xy: 556, 582
+  size: 22, 44
+  orig: 22, 44
+  offset: 0, 0
+  index: -1
+ThighDeco(R)_Front
+  rotate: false
+  xy: 830, 721
+  size: 26, 67
+  orig: 26, 67
+  offset: 0, 0
+  index: -1
+ring_skill
+  rotate: false
+  xy: 380, 689
+  size: 146, 146
+  orig: 146, 146
+  offset: 0, 0
+  index: -1
+star_skill
+  rotate: false
+  xy: 755, 715
+  size: 73, 73
+  orig: 73, 73
+  offset: 0, 0
+  index: -1
+wave_01
+  rotate: true
+  xy: 86, 195
+  size: 202, 76
+  orig: 202, 76
+  offset: 0, 0
+  index: -1
+wave_02
+  rotate: true
+  xy: 2, 189
+  size: 208, 82
+  orig: 208, 82
+  offset: 0, 0
+  index: -1
+wave_03
+  rotate: true
+  xy: 164, 225
+  size: 199, 78
+  orig: 199, 78
+  offset: 0, 0
+  index: -1
+wave_04
+  rotate: true
+  xy: 298, 639
+  size: 193, 80
+  orig: 193, 80
+  offset: 0, 0
+  index: -1
+wave_05
+  rotate: true
+  xy: 244, 227
+  size: 197, 78
+  orig: 197, 78
+  offset: 0, 0
+  index: -1
+wave_b
+  rotate: true
+  xy: 138, 426
+  size: 213, 148
+  orig: 213, 148
+  offset: 0, 0
+  index: -1

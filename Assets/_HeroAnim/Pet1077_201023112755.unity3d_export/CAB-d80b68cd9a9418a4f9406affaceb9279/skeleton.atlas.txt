@@ -1,0 +1,426 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 908, 163
+  size: 114, 68
+  orig: 114, 68
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 84, 4
+  size: 120, 58
+  orig: 120, 58
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 706, 152
+  size: 117, 34
+  orig: 117, 34
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 742, 132
+  size: 124, 21
+  orig: 124, 21
+  offset: 0, 0
+  index: -1
+B leg (dargon)
+  rotate: true
+  xy: 861, 155
+  size: 34, 26
+  orig: 34, 26
+  offset: 0, 0
+  index: -1
+B leg (dargon) 2
+  rotate: false
+  xy: 538, 153
+  size: 19, 39
+  orig: 19, 39
+  offset: 0, 0
+  index: -1
+B leg (wing)
+  rotate: false
+  xy: 996, 324
+  size: 26, 46
+  orig: 26, 46
+  offset: 0, 0
+  index: -1
+B1
+  rotate: true
+  xy: 400, 204
+  size: 114, 68
+  orig: 114, 68
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 214, 34
+  size: 120, 58
+  orig: 120, 58
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 742, 155
+  size: 117, 34
+  orig: 117, 34
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 612, 45
+  size: 124, 21
+  orig: 124, 21
+  offset: 0, 0
+  index: -1
+Breast (wing)
+  rotate: false
+  xy: 336, 57
+  size: 42, 35
+  orig: 42, 35
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 588, 271
+  size: 164, 111
+  orig: 164, 111
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 234, 207
+  size: 164, 111
+  orig: 164, 111
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 214, 94
+  size: 164, 111
+  orig: 164, 111
+  offset: 0, 0
+  index: -1
+C4
+  rotate: false
+  xy: 760, 310
+  size: 164, 111
+  orig: 164, 111
+  offset: 0, 0
+  index: -1
+D1
+  rotate: false
+  xy: 505, 41
+  size: 105, 98
+  orig: 105, 98
+  offset: 0, 0
+  index: -1
+D2
+  rotate: false
+  xy: 234, 320
+  size: 210, 190
+  orig: 210, 190
+  offset: 0, 0
+  index: -1
+D3
+  rotate: false
+  xy: 2, 280
+  size: 230, 230
+  orig: 230, 230
+  offset: 0, 0
+  index: -1
+D4
+  rotate: false
+  xy: 2, 64
+  size: 210, 214
+  orig: 210, 214
+  offset: 0, 0
+  index: -1
+Eye1 open (dargon)
+  rotate: false
+  xy: 792, 95
+  size: 63, 35
+  orig: 63, 35
+  offset: 0, 0
+  index: -1
+Eye1(open) (wing)
+  rotate: false
+  xy: 792, 71
+  size: 62, 22
+  orig: 62, 22
+  offset: 0, 0
+  index: -1
+Eye2(Close) (dargon)
+  rotate: true
+  xy: 1003, 444
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+Eye2(Close) (wing)
+  rotate: true
+  xy: 1003, 377
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye2(Hurt) (dargon)
+  rotate: true
+  xy: 444, 141
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+Eye2(Hurt) (wing)
+  rotate: false
+  xy: 614, 21
+  size: 62, 22
+  orig: 62, 22
+  offset: 0, 0
+  index: -1
+F arm (dargon)
+  rotate: true
+  xy: 574, 3
+  size: 36, 38
+  orig: 36, 38
+  offset: 0, 0
+  index: -1
+F arm (dargon) 2
+  rotate: false
+  xy: 336, 33
+  size: 35, 22
+  orig: 35, 22
+  offset: 0, 0
+  index: -1
+F leg (dargon)
+  rotate: true
+  xy: 505, 2
+  size: 37, 67
+  orig: 37, 67
+  offset: 0, 0
+  index: -1
+F wing (dargon)
+  rotate: true
+  xy: 206, 2
+  size: 30, 93
+  orig: 30, 93
+  offset: 0, 0
+  index: -1
+F wing (dargon) 2
+  rotate: true
+  xy: 2, 2
+  size: 60, 80
+  orig: 60, 80
+  offset: 0, 0
+  index: -1
+Mo 1 (dargon)
+  rotate: false
+  xy: 643, 5
+  size: 24, 14
+  orig: 24, 14
+  offset: 0, 0
+  index: -1
+Mo 2  (dargon)
+  rotate: true
+  xy: 214, 244
+  size: 34, 18
+  orig: 34, 18
+  offset: 0, 0
+  index: -1
+Mo1  (wing)
+  rotate: false
+  xy: 336, 2
+  size: 15, 7
+  orig: 15, 7
+  offset: 0, 0
+  index: -1
+Mo2   (wing)
+  rotate: true
+  xy: 214, 209
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Mo3  (wing)
+  rotate: true
+  xy: 206, 37
+  size: 25, 6
+  orig: 25, 6
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 926, 321
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm (dargon)
+  rotate: true
+  xy: 678, 21
+  size: 22, 49
+  orig: 22, 49
+  offset: 0, 0
+  index: -1
+b arm (wing)
+  rotate: true
+  xy: 614, 2
+  size: 17, 27
+  orig: 17, 27
+  offset: 0, 0
+  index: -1
+b arm (wing)2
+  rotate: false
+  xy: 301, 7
+  size: 33, 25
+  orig: 33, 25
+  offset: 0, 0
+  index: -1
+b hair (wing)
+  rotate: false
+  xy: 754, 191
+  size: 152, 117
+  orig: 152, 117
+  offset: 0, 0
+  index: -1
+b small wing (wing)
+  rotate: true
+  xy: 908, 233
+  size: 75, 114
+  orig: 75, 114
+  offset: 0, 0
+  index: -1
+b wing (dargon)
+  rotate: false
+  xy: 706, 75
+  size: 21, 75
+  orig: 21, 75
+  offset: 0, 0
+  index: -1
+b wing (dargon) 2
+  rotate: true
+  xy: 963, 428
+  size: 82, 38
+  orig: 82, 38
+  offset: 0, 0
+  index: -1
+b wing (wing)
+  rotate: true
+  xy: 760, 423
+  size: 87, 201
+  orig: 87, 201
+  offset: 0, 0
+  index: -1
+ball (dargon)
+  rotate: false
+  xy: 380, 141
+  size: 62, 61
+  orig: 62, 61
+  offset: 0, 0
+  index: -1
+body (dargon)
+  rotate: true
+  xy: 729, 77
+  size: 53, 61
+  orig: 53, 61
+  offset: 0, 0
+  index: -1
+body (wing)
+  rotate: false
+  xy: 963, 372
+  size: 38, 54
+  orig: 38, 54
+  offset: 0, 0
+  index: -1
+breast (dargon)
+  rotate: false
+  xy: 946, 325
+  size: 48, 45
+  orig: 48, 45
+  offset: 0, 0
+  index: -1
+dress (wing)
+  rotate: false
+  xy: 468, 142
+  size: 68, 50
+  orig: 68, 50
+  offset: 0, 0
+  index: -1
+dress (wing) 2
+  rotate: false
+  xy: 946, 391
+  size: 15, 30
+  orig: 15, 30
+  offset: 0, 0
+  index: -1
+f  leg  (wing)
+  rotate: false
+  xy: 559, 277
+  size: 27, 44
+  orig: 27, 44
+  offset: 0, 0
+  index: -1
+f  leg  (wing) 2
+  rotate: true
+  xy: 336, 11
+  size: 20, 32
+  orig: 20, 32
+  offset: 0, 0
+  index: -1
+f arm  (wing)
+  rotate: true
+  xy: 738, 43
+  size: 32, 48
+  orig: 32, 48
+  offset: 0, 0
+  index: -1
+f small wing (wing)
+  rotate: false
+  xy: 470, 194
+  size: 87, 127
+  orig: 87, 127
+  offset: 0, 0
+  index: -1
+f wing  (wing)
+  rotate: false
+  xy: 446, 323
+  size: 140, 187
+  orig: 140, 187
+  offset: 0, 0
+  index: -1
+head (dargon)
+  rotate: true
+  xy: 380, 2
+  size: 137, 123
+  orig: 137, 123
+  offset: 0, 0
+  index: -1
+head (wing)
+  rotate: false
+  xy: 588, 384
+  size: 170, 126
+  orig: 170, 126
+  offset: 0, 0
+  index: -1
+ponytail (dargon)
+  rotate: false
+  xy: 559, 141
+  size: 145, 128
+  orig: 145, 128
+  offset: 0, 0
+  index: -1
+tale (dargon)
+  rotate: false
+  xy: 612, 68
+  size: 92, 71
+  orig: 92, 71
+  offset: 0, 0
+  index: -1

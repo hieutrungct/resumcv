@@ -1,0 +1,307 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 124, 244
+  size: 100, 66
+  orig: 100, 66
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 124, 312
+  size: 100, 85
+  orig: 100, 85
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 254, 327
+  size: 80, 69
+  orig: 80, 69
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 124, 95
+  size: 80, 81
+  orig: 80, 81
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 124, 178
+  size: 100, 64
+  orig: 100, 64
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 2, 48
+  size: 120, 113
+  orig: 120, 113
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 2, 282
+  size: 120, 124
+  orig: 120, 124
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 2, 163
+  size: 120, 117
+  orig: 120, 117
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 148, 399
+  size: 120, 111
+  orig: 120, 111
+  offset: 0, 0
+  index: -1
+Eye2(Close)
+  rotate: true
+  xy: 315, 260
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye2(Hurt)
+  rotate: true
+  xy: 336, 271
+  size: 65, 20
+  orig: 65, 20
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 226, 257
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+b  wand
+  rotate: true
+  xy: 226, 183
+  size: 72, 27
+  orig: 72, 27
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 206, 128
+  size: 19, 48
+  orig: 19, 48
+  offset: 0, 0
+  index: -1
+b collar wnig
+  rotate: true
+  xy: 487, 320
+  size: 31, 23
+  orig: 31, 23
+  offset: 0, 0
+  index: -1
+b finger
+  rotate: false
+  xy: 257, 108
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+b hair
+  rotate: true
+  xy: 270, 398
+  size: 112, 120
+  orig: 112, 120
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 358, 291
+  size: 29, 45
+  orig: 29, 45
+  offset: 0, 0
+  index: -1
+b leg wing
+  rotate: false
+  xy: 421, 272
+  size: 17, 24
+  orig: 17, 24
+  offset: 0, 0
+  index: -1
+b9ird_wing_b
+  rotate: true
+  xy: 45, 4
+  size: 12, 18
+  orig: 12, 18
+  offset: 0, 0
+  index: -1
+bird
+  rotate: false
+  xy: 336, 338
+  size: 51, 58
+  orig: 51, 58
+  offset: 0, 0
+  index: -1
+bird_hurt
+  rotate: true
+  xy: 389, 336
+  size: 51, 58
+  orig: 51, 58
+  offset: 0, 0
+  index: -1
+bird_wing_f
+  rotate: false
+  xy: 393, 276
+  size: 26, 20
+  orig: 26, 20
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 315, 226
+  size: 29, 32
+  orig: 29, 32
+  offset: 0, 0
+  index: -1
+butterfly access
+  rotate: false
+  xy: 2, 408
+  size: 144, 102
+  orig: 144, 102
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 266, 129
+  size: 33, 28
+  orig: 33, 28
+  offset: 0, 0
+  index: -1
+dress
+  rotate: false
+  xy: 124, 51
+  size: 69, 42
+  orig: 69, 42
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 45, 18
+  size: 75, 28
+  orig: 75, 28
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: true
+  xy: 255, 189
+  size: 34, 56
+  orig: 34, 56
+  offset: 0, 0
+  index: -1
+f collar wing
+  rotate: false
+  xy: 449, 353
+  size: 61, 34
+  orig: 61, 34
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: true
+  xy: 2, 2
+  size: 44, 41
+  orig: 44, 41
+  offset: 0, 0
+  index: -1
+f leg wing
+  rotate: false
+  xy: 206, 96
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1
+f leg2
+  rotate: false
+  xy: 449, 334
+  size: 36, 17
+  orig: 36, 17
+  offset: 0, 0
+  index: -1
+f wand
+  rotate: false
+  xy: 255, 225
+  size: 58, 38
+  orig: 58, 38
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 392, 389
+  size: 121, 100
+  orig: 121, 100
+  offset: 0, 0
+  index: -1
+mo 2
+  rotate: false
+  xy: 358, 271
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+mo1
+  rotate: true
+  xy: 494, 492
+  size: 18, 13
+  orig: 18, 13
+  offset: 0, 0
+  index: -1
+mo3
+  rotate: true
+  xy: 195, 68
+  size: 25, 6
+  orig: 25, 6
+  offset: 0, 0
+  index: -1
+waist cloth
+  rotate: true
+  xy: 227, 135
+  size: 46, 37
+  orig: 46, 37
+  offset: 0, 0
+  index: -1
+wand bird
+  rotate: false
+  xy: 254, 265
+  size: 59, 60
+  orig: 59, 60
+  offset: 0, 0
+  index: -1
+wand wing
+  rotate: false
+  xy: 266, 159
+  size: 34, 28
+  orig: 34, 28
+  offset: 0, 0
+  index: -1
+wand wing2
+  rotate: false
+  xy: 237, 104
+  size: 18, 29
+  orig: 18, 29
+  offset: 0, 0
+  index: -1
+wind
+  rotate: false
+  xy: 389, 298
+  size: 48, 36
+  orig: 48, 36
+  offset: 0, 0
+  index: -1

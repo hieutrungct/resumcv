@@ -1,0 +1,398 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm(R)_Skill
+  rotate: false
+  xy: 379, 278
+  size: 29, 17
+  orig: 29, 17
+  offset: 0, 0
+  index: -1
+ArmDown(L)
+  rotate: false
+  xy: 283, 135
+  size: 15, 24
+  orig: 15, 24
+  offset: 0, 0
+  index: -1
+ArmDown(R)
+  rotate: true
+  xy: 283, 189
+  size: 36, 20
+  orig: 36, 20
+  offset: 0, 0
+  index: -1
+ArmUp(L)
+  rotate: false
+  xy: 379, 297
+  size: 41, 16
+  orig: 41, 16
+  offset: 0, 0
+  index: -1
+ArmUp(R)
+  rotate: false
+  xy: 990, 745
+  size: 32, 15
+  orig: 32, 15
+  offset: 0, 0
+  index: -1
+ArmUp(R)_Skill
+  rotate: false
+  xy: 312, 235
+  size: 16, 35
+  orig: 16, 35
+  offset: 0, 0
+  index: -1
+BackHair_A
+  rotate: false
+  xy: 474, 665
+  size: 105, 93
+  orig: 105, 93
+  offset: 0, 0
+  index: -1
+BackHair_B(L)
+  rotate: false
+  xy: 945, 893
+  size: 77, 116
+  orig: 77, 116
+  offset: 0, 0
+  index: -1
+BackHair_B(R)
+  rotate: true
+  xy: 342, 667
+  size: 91, 130
+  orig: 91, 130
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 285, 272
+  size: 51, 41
+  orig: 51, 41
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: false
+  xy: 338, 275
+  size: 39, 38
+  orig: 39, 38
+  offset: 0, 0
+  index: -1
+Cloud_A_Skill
+  rotate: false
+  xy: 338, 518
+  size: 93, 60
+  orig: 93, 60
+  offset: 0, 0
+  index: -1
+Cloud_B_Skill
+  rotate: true
+  xy: 581, 676
+  size: 82, 68
+  orig: 82, 68
+  offset: 0, 0
+  index: -1
+Dress(L)
+  rotate: false
+  xy: 622, 645
+  size: 24, 29
+  orig: 24, 29
+  offset: 0, 0
+  index: -1
+Dress(R)
+  rotate: true
+  xy: 747, 676
+  size: 38, 31
+  orig: 38, 31
+  offset: 0, 0
+  index: -1
+Ear(L)
+  rotate: false
+  xy: 228, 37
+  size: 41, 54
+  orig: 41, 54
+  offset: 0, 0
+  index: -1
+Ear(R)
+  rotate: true
+  xy: 945, 846
+  size: 45, 68
+  orig: 45, 68
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 348, 394
+  size: 78, 72
+  orig: 78, 72
+  offset: 0, 0
+  index: -1
+Face_Access
+  rotate: false
+  xy: 348, 336
+  size: 86, 56
+  orig: 86, 56
+  offset: 0, 0
+  index: -1
+FrontHair
+  rotate: false
+  xy: 472, 626
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+Fx/A1
+  rotate: false
+  xy: 651, 755
+  size: 156, 86
+  orig: 156, 86
+  offset: 0, 0
+  index: -1
+Fx/A2
+  rotate: false
+  xy: 338, 580
+  size: 101, 85
+  orig: 101, 85
+  offset: 0, 0
+  index: -1
+Fx/C1
+  rotate: false
+  xy: 342, 760
+  size: 307, 60
+  orig: 307, 60
+  offset: 0, 0
+  index: -1
+Fx/C2
+  rotate: false
+  xy: 2, 31
+  size: 224, 60
+  orig: 224, 60
+  offset: 0, 0
+  index: -1
+Fx/C3
+  rotate: true
+  xy: 285, 315
+  size: 148, 61
+  orig: 148, 61
+  offset: 0, 0
+  index: -1
+Fx/D1
+  rotate: false
+  xy: 2, 93
+  size: 279, 181
+  orig: 279, 181
+  offset: 0, 0
+  index: -1
+Fx/D2
+  rotate: false
+  xy: 2, 276
+  size: 281, 187
+  orig: 281, 187
+  offset: 0, 0
+  index: -1
+Fx/D3
+  rotate: false
+  xy: 342, 822
+  size: 301, 187
+  orig: 301, 187
+  offset: 0, 0
+  index: -1
+Fx/E1
+  rotate: false
+  xy: 645, 843
+  size: 298, 166
+  orig: 298, 166
+  offset: 0, 0
+  index: -1
+Fx/E2
+  rotate: false
+  xy: 2, 465
+  size: 334, 264
+  orig: 334, 264
+  offset: 0, 0
+  index: -1
+Fx/E3
+  rotate: false
+  xy: 2, 731
+  size: 338, 278
+  orig: 338, 278
+  offset: 0, 0
+  index: -1
+Hand(L)
+  rotate: false
+  xy: 283, 161
+  size: 18, 26
+  orig: 18, 26
+  offset: 0, 0
+  index: -1
+Hand(L)_Skill
+  rotate: false
+  xy: 854, 730
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1
+Hand(L)_atk
+  rotate: false
+  xy: 806, 725
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+Hand(R)
+  rotate: false
+  xy: 878, 729
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+Hand(R)_Skill
+  rotate: false
+  xy: 901, 729
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+Head_Ribbon_A
+  rotate: false
+  xy: 581, 639
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+Head_Ribbon_B
+  rotate: true
+  xy: 990, 784
+  size: 60, 21
+  orig: 60, 21
+  offset: 0, 0
+  index: -1
+Head_Ribbon_C
+  rotate: true
+  xy: 472, 604
+  size: 20, 51
+  orig: 20, 51
+  offset: 0, 0
+  index: -1
+Knife
+  rotate: true
+  xy: 948, 735
+  size: 109, 20
+  orig: 109, 20
+  offset: 0, 0
+  index: -1
+Knife2_Skill
+  rotate: false
+  xy: 348, 315
+  size: 72, 19
+  orig: 72, 19
+  offset: 0, 0
+  index: -1
+Knife_Skill
+  rotate: true
+  xy: 970, 735
+  size: 109, 18
+  orig: 109, 18
+  offset: 0, 0
+  index: -1
+Leg(L)
+  rotate: false
+  xy: 781, 717
+  size: 23, 36
+  orig: 23, 36
+  offset: 0, 0
+  index: -1
+Leg(R)
+  rotate: true
+  xy: 144, 2
+  size: 27, 70
+  orig: 27, 70
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: true
+  xy: 1013, 828
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Mouth_Hurt
+  rotate: false
+  xy: 990, 762
+  size: 32, 20
+  orig: 32, 20
+  offset: 0, 0
+  index: -1
+Mouth_Skill
+  rotate: false
+  xy: 924, 731
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+Pattern_Skill
+  rotate: false
+  xy: 651, 716
+  size: 128, 37
+  orig: 128, 37
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 3
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+SideHair(L)
+  rotate: true
+  xy: 651, 673
+  size: 41, 94
+  orig: 41, 94
+  offset: 0, 0
+  index: -1
+SideHair(R)
+  rotate: true
+  xy: 338, 468
+  size: 48, 92
+  orig: 48, 92
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: true
+  xy: 809, 751
+  size: 90, 137
+  orig: 90, 137
+  offset: 0, 0
+  index: -1
+Thigh(L)
+  rotate: false
+  xy: 283, 227
+  size: 27, 43
+  orig: 27, 43
+  offset: 0, 0
+  index: -1
+Waist
+  rotate: true
+  xy: 538, 627
+  size: 36, 41
+  orig: 36, 41
+  offset: 0, 0
+  index: -1
+Waist_Ribbon
+  rotate: false
+  xy: 829, 729
+  size: 23, 20
+  orig: 23, 20
+  offset: 0, 0
+  index: -1
+Weapon
+  rotate: false
+  xy: 441, 589
+  size: 29, 76
+  orig: 29, 76
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,279 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+B hair
+  rotate: false
+  xy: 178, 2
+  size: 157, 120
+  orig: 157, 120
+  offset: 0, 0
+  index: -1
+B_Arm
+  rotate: false
+  xy: 337, 101
+  size: 32, 21
+  orig: 32, 21
+  offset: 0, 0
+  index: -1
+B_ArmUp
+  rotate: true
+  xy: 985, 237
+  size: 20, 37
+  orig: 20, 37
+  offset: 0, 0
+  index: -1
+B_leg
+  rotate: true
+  xy: 205, 385
+  size: 24, 59
+  orig: 24, 59
+  offset: 0, 0
+  index: -1
+Body_New
+  rotate: false
+  xy: 450, 168
+  size: 69, 51
+  orig: 69, 51
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 667, 335
+  size: 181, 101
+  orig: 181, 101
+  offset: 0, 0
+  index: -1
+C2
+  rotate: false
+  xy: 2, 2
+  size: 174, 120
+  orig: 174, 120
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 204, 258
+  size: 181, 125
+  orig: 181, 125
+  offset: 0, 0
+  index: -1
+C4
+  rotate: false
+  xy: 2, 124
+  size: 184, 132
+  orig: 184, 132
+  offset: 0, 0
+  index: -1
+C5
+  rotate: true
+  xy: 789, 210
+  size: 123, 88
+  orig: 123, 88
+  offset: 0, 0
+  index: -1
+C6
+  rotate: true
+  xy: 572, 204
+  size: 143, 71
+  orig: 143, 71
+  offset: 0, 0
+  index: -1
+Chest_New
+  rotate: false
+  xy: 981, 259
+  size: 38, 46
+  orig: 38, 46
+  offset: 0, 0
+  index: -1
+Eye
+  rotate: false
+  xy: 319, 226
+  size: 66, 30
+  orig: 66, 30
+  offset: 0, 0
+  index: -1
+Eye(Close)
+  rotate: false
+  xy: 900, 115
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+Eye(Hurt)
+  rotate: false
+  xy: 266, 388
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+F_Aho_Hair
+  rotate: true
+  xy: 521, 156
+  size: 63, 43
+  orig: 63, 43
+  offset: 0, 0
+  index: -1
+F_Arm
+  rotate: false
+  xy: 985, 212
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+F_ArmUp
+  rotate: true
+  xy: 339, 124
+  size: 21, 38
+  orig: 21, 38
+  offset: 0, 0
+  index: -1
+F_leg
+  rotate: false
+  xy: 850, 371
+  size: 27, 65
+  orig: 27, 65
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 781, 112
+  size: 117, 96
+  orig: 117, 96
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: true
+  xy: 879, 413
+  size: 23, 11
+  orig: 23, 11
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: true
+  xy: 879, 234
+  size: 21, 17
+  orig: 21, 17
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 319, 124
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+atkVfx/4
+  rotate: false
+  xy: 2, 258
+  size: 200, 125
+  orig: 200, 125
+  offset: 0, 0
+  index: -1
+atkVfx/5
+  rotate: false
+  xy: 205, 411
+  size: 226, 99
+  orig: 226, 99
+  offset: 0, 0
+  index: -1
+atkVfx/6
+  rotate: false
+  xy: 433, 429
+  size: 232, 81
+  orig: 232, 81
+  offset: 0, 0
+  index: -1
+atkVfx/7
+  rotate: false
+  xy: 667, 438
+  size: 224, 72
+  orig: 224, 72
+  offset: 0, 0
+  index: -1
+b_horn
+  rotate: false
+  xy: 981, 307
+  size: 40, 68
+  orig: 40, 68
+  offset: 0, 0
+  index: -1
+b_swordNew
+  rotate: true
+  xy: 645, 242
+  size: 91, 142
+  orig: 91, 142
+  offset: 0, 0
+  index: -1
+f_horn
+  rotate: false
+  xy: 623, 356
+  size: 42, 71
+  orig: 42, 71
+  offset: 0, 0
+  index: -1
+f_swordNew
+  rotate: false
+  xy: 433, 349
+  size: 188, 78
+  orig: 188, 78
+  offset: 0, 0
+  index: -1
+fireGlow
+  rotate: false
+  xy: 879, 257
+  size: 100, 118
+  orig: 100, 118
+  offset: 0, 0
+  index: -1
+skillVfx/0
+  rotate: true
+  xy: 188, 124
+  size: 132, 129
+  orig: 132, 129
+  offset: 0, 0
+  index: -1
+skillVfx/1
+  rotate: true
+  xy: 387, 221
+  size: 126, 183
+  orig: 126, 183
+  offset: 0, 0
+  index: -1
+skillVfx/2
+  rotate: true
+  xy: 893, 377
+  size: 133, 129
+  orig: 133, 129
+  offset: 0, 0
+  index: -1
+skillVfx/3
+  rotate: false
+  xy: 645, 149
+  size: 134, 91
+  orig: 134, 91
+  offset: 0, 0
+  index: -1
+skillVfx/4
+  rotate: true
+  xy: 900, 136
+  size: 119, 83
+  orig: 119, 83
+  offset: 0, 0
+  index: -1
+skillVfx/5
+  rotate: false
+  xy: 339, 147
+  size: 109, 72
+  orig: 109, 72
+  offset: 0, 0
+  index: -1
+skillVfx/slash
+  rotate: false
+  xy: 2, 385
+  size: 201, 125
+  orig: 201, 125
+  offset: 0, 0
+  index: -1

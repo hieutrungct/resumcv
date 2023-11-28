@@ -1,0 +1,300 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Shadow
+  rotate: false
+  xy: 320, 306
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+X0
+  rotate: true
+  xy: 216, 2
+  size: 31, 20
+  orig: 31, 20
+  offset: 0, 0
+  index: -1
+X1
+  rotate: false
+  xy: 331, 90
+  size: 60, 20
+  orig: 60, 20
+  offset: 0, 0
+  index: -1
+X2
+  rotate: false
+  xy: 2, 328
+  size: 288, 81
+  orig: 288, 81
+  offset: 0, 0
+  index: -1
+X3
+  rotate: false
+  xy: 2, 411
+  size: 399, 99
+  orig: 399, 99
+  offset: 0, 0
+  index: -1
+X4
+  rotate: false
+  xy: 320, 274
+  size: 131, 30
+  orig: 131, 30
+  offset: 0, 0
+  index: -1
+X5
+  rotate: false
+  xy: 320, 245
+  size: 129, 27
+  orig: 129, 27
+  offset: 0, 0
+  index: -1
+armUp_B
+  rotate: false
+  xy: 180, 2
+  size: 34, 24
+  orig: 34, 24
+  offset: 0, 0
+  index: -1
+armUp_F
+  rotate: true
+  xy: 393, 71
+  size: 39, 23
+  orig: 39, 23
+  offset: 0, 0
+  index: -1
+arm_B
+  rotate: false
+  xy: 331, 112
+  size: 53, 28
+  orig: 53, 28
+  offset: 0, 0
+  index: -1
+arm_F
+  rotate: false
+  xy: 250, 52
+  size: 32, 43
+  orig: 32, 43
+  offset: 0, 0
+  index: -1
+attack_eff_01
+  rotate: false
+  xy: 474, 365
+  size: 36, 145
+  orig: 36, 145
+  offset: 0, 0
+  index: -1
+attack_eff_02
+  rotate: true
+  xy: 2, 2
+  size: 19, 176
+  orig: 19, 176
+  offset: 0, 0
+  index: -1
+attack_eff_03
+  rotate: false
+  xy: 295, 156
+  size: 14, 176
+  orig: 14, 176
+  offset: 0, 0
+  index: -1
+attack_eff_04
+  rotate: false
+  xy: 311, 156
+  size: 7, 176
+  orig: 7, 176
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 403, 443
+  size: 67, 67
+  orig: 67, 67
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 284, 52
+  size: 43, 32
+  orig: 43, 32
+  offset: 0, 0
+  index: -1
+clothArm_B
+  rotate: true
+  xy: 154, 119
+  size: 25, 15
+  orig: 25, 15
+  offset: 0, 0
+  index: -1
+clothArm_F
+  rotate: false
+  xy: 238, 5
+  size: 38, 21
+  orig: 38, 21
+  offset: 0, 0
+  index: -1
+cloth_B
+  rotate: false
+  xy: 292, 334
+  size: 180, 75
+  orig: 180, 75
+  offset: 0, 0
+  index: -1
+cloth_F
+  rotate: true
+  xy: 295, 98
+  size: 56, 34
+  orig: 56, 34
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 217, 35
+  size: 69, 31
+  orig: 69, 31
+  offset: 0, 0
+  index: -1
+eye(Close)
+  rotate: false
+  xy: 331, 142
+  size: 73, 20
+  orig: 73, 20
+  offset: 0, 0
+  index: -1
+eye(Hurt)
+  rotate: false
+  xy: 403, 418
+  size: 68, 23
+  orig: 68, 23
+  offset: 0, 0
+  index: -1
+hairBack
+  rotate: false
+  xy: 2, 146
+  size: 170, 180
+  orig: 170, 180
+  offset: 0, 0
+  index: -1
+hairBun
+  rotate: false
+  xy: 154, 41
+  size: 61, 63
+  orig: 61, 63
+  offset: 0, 0
+  index: -1
+hairSide
+  rotate: true
+  xy: 320, 201
+  size: 42, 104
+  orig: 42, 104
+  offset: 0, 0
+  index: -1
+hand(Atk)
+  rotate: true
+  xy: 386, 112
+  size: 28, 27
+  orig: 28, 27
+  offset: 0, 0
+  index: -1
+hand_B
+  rotate: false
+  xy: 328, 32
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
+  index: -1
+hand_F
+  rotate: true
+  xy: 393, 49
+  size: 20, 26
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 23
+  size: 150, 121
+  orig: 150, 121
+  offset: 0, 0
+  index: -1
+horn
+  rotate: true
+  xy: 426, 158
+  size: 85, 28
+  orig: 85, 28
+  offset: 0, 0
+  index: -1
+leg_B
+  rotate: true
+  xy: 291, 27
+  size: 23, 35
+  orig: 23, 35
+  offset: 0, 0
+  index: -1
+leg_F
+  rotate: true
+  xy: 250, 28
+  size: 22, 39
+  orig: 22, 39
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 250, 97
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+mouth(Hurt)
+  rotate: true
+  xy: 453, 276
+  size: 28, 7
+  orig: 28, 7
+  offset: 0, 0
+  index: -1
+mouth(Open)
+  rotate: false
+  xy: 474, 343
+  size: 36, 20
+  orig: 36, 20
+  offset: 0, 0
+  index: -1
+still2
+  rotate: true
+  xy: 174, 106
+  size: 220, 91
+  orig: 220, 91
+  offset: 0, 0
+  index: -1
+sword
+  rotate: true
+  xy: 267, 97
+  size: 229, 26
+  orig: 229, 26
+  offset: 0, 0
+  index: -1
+swordAcces
+  rotate: true
+  xy: 320, 164
+  size: 35, 104
+  orig: 35, 104
+  offset: 0, 0
+  index: -1
+thigh_B
+  rotate: false
+  xy: 363, 49
+  size: 28, 39
+  orig: 28, 39
+  offset: 0, 0
+  index: -1
+thigh_F
+  rotate: true
+  xy: 318, 56
+  size: 32, 43
+  orig: 32, 43
+  offset: 0, 0
+  index: -1

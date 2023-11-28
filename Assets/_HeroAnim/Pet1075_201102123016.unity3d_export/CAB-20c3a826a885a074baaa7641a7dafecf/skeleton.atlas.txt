@@ -1,0 +1,300 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01
+  rotate: true
+  xy: 2, 16
+  size: 178, 125
+  orig: 178, 125
+  offset: 0, 0
+  index: -1
+03
+  rotate: true
+  xy: 129, 33
+  size: 161, 134
+  orig: 161, 134
+  offset: 0, 0
+  index: -1
+05
+  rotate: false
+  xy: 196, 380
+  size: 179, 130
+  orig: 179, 130
+  offset: 0, 0
+  index: -1
+07
+  rotate: true
+  xy: 377, 336
+  size: 174, 126
+  orig: 174, 126
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 129, 13
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+arm b
+  rotate: true
+  xy: 361, 214
+  size: 20, 41
+  orig: 20, 41
+  offset: 0, 0
+  index: -1
+arm sleeve b
+  rotate: true
+  xy: 258, 2
+  size: 19, 38
+  orig: 19, 38
+  offset: 0, 0
+  index: -1
+arm sleeve f
+  rotate: false
+  xy: 231, 2
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 310, 235
+  size: 49, 71
+  orig: 49, 71
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 471, 236
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+doll arm_f
+  rotate: false
+  xy: 448, 297
+  size: 14, 16
+  orig: 14, 16
+  offset: 0, 0
+  index: -1
+doll body
+  rotate: false
+  xy: 404, 206
+  size: 40, 28
+  orig: 40, 28
+  offset: 0, 0
+  index: -1
+doll head
+  rotate: false
+  xy: 361, 236
+  size: 55, 59
+  orig: 55, 59
+  offset: 0, 0
+  index: -1
+doll pony
+  rotate: true
+  xy: 374, 297
+  size: 37, 72
+  orig: 37, 72
+  offset: 0, 0
+  index: -1
+ear b
+  rotate: false
+  xy: 418, 236
+  size: 51, 59
+  orig: 51, 59
+  offset: 0, 0
+  index: -1
+ear f
+  rotate: false
+  xy: 253, 229
+  size: 55, 85
+  orig: 55, 85
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: true
+  xy: 265, 23
+  size: 70, 22
+  orig: 70, 22
+  offset: 0, 0
+  index: -1
+eye2
+  rotate: true
+  xy: 289, 30
+  size: 63, 17
+  orig: 63, 17
+  offset: 0, 0
+  index: -1
+eye3
+  rotate: false
+  xy: 448, 315
+  size: 62, 19
+  orig: 62, 19
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: true
+  xy: 471, 282
+  size: 31, 39
+  orig: 31, 39
+  offset: 0, 0
+  index: -1
+finger b
+  rotate: false
+  xy: 324, 29
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 2, 196
+  size: 164, 152
+  orig: 164, 152
+  offset: 0, 0
+  index: -1
+groundVfx
+  rotate: false
+  xy: 196, 316
+  size: 134, 62
+  orig: 134, 62
+  offset: 0, 0
+  index: -1
+hair b
+  rotate: false
+  xy: 2, 350
+  size: 192, 160
+  orig: 192, 160
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 168, 196
+  size: 118, 83
+  orig: 118, 83
+  offset: 0, 0
+  index: -1
+heart a
+  rotate: false
+  xy: 484, 215
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+heart b
+  rotate: true
+  xy: 327, 200
+  size: 33, 31
+  orig: 33, 31
+  offset: 0, 0
+  index: -1
+heart c
+  rotate: true
+  xy: 168, 331
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+knife
+  rotate: false
+  xy: 308, 37
+  size: 14, 56
+  orig: 14, 56
+  offset: 0, 0
+  index: -1
+leg b
+  rotate: false
+  xy: 320, 142
+  size: 22, 56
+  orig: 22, 56
+  offset: 0, 0
+  index: -1
+leg f
+  rotate: true
+  xy: 253, 200
+  size: 27, 72
+  orig: 27, 72
+  offset: 0, 0
+  index: -1
+mirror
+  rotate: false
+  xy: 332, 308
+  size: 40, 70
+  orig: 40, 70
+  offset: 0, 0
+  index: -1
+mirrorLight
+  rotate: false
+  xy: 344, 147
+  size: 17, 51
+  orig: 17, 51
+  offset: 0, 0
+  index: -1
+mo1
+  rotate: false
+  xy: 168, 322
+  size: 16, 7
+  orig: 16, 7
+  offset: 0, 0
+  index: -1
+mo2
+  rotate: false
+  xy: 2, 2
+  size: 20, 12
+  orig: 20, 12
+  offset: 0, 0
+  index: -1
+mo3
+  rotate: true
+  xy: 505, 486
+  size: 24, 5
+  orig: 24, 5
+  offset: 0, 0
+  index: -1
+shoulder b
+  rotate: true
+  xy: 446, 209
+  size: 25, 36
+  orig: 25, 36
+  offset: 0, 0
+  index: -1
+shoulder f
+  rotate: true
+  xy: 324, 48
+  size: 48, 24
+  orig: 48, 24
+  offset: 0, 0
+  index: -1
+tail a
+  rotate: false
+  xy: 265, 142
+  size: 53, 56
+  orig: 53, 56
+  offset: 0, 0
+  index: -1
+tail b
+  rotate: false
+  xy: 265, 95
+  size: 51, 45
+  orig: 51, 45
+  offset: 0, 0
+  index: -1
+tail c
+  rotate: false
+  xy: 318, 98
+  size: 38, 42
+  orig: 38, 42
+  offset: 0, 0
+  index: -1
+tear
+  rotate: true
+  xy: 350, 45
+  size: 51, 21
+  orig: 51, 21
+  offset: 0, 0
+  index: -1

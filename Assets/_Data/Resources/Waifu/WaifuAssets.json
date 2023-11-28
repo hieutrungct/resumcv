@@ -1,0 +1,977 @@
+[
+  {
+    "Index": 1,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1001_191205142335.unity3d_export/Skeleton_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1001",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 2,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1002_200723124751.unity3d_export/CAB-185e0960a612b8f4abf682899ff29c98/Pet1002_200723124751_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1002",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 3,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1003_190926131711.unity3d_export/CAB-28b7258ba5572b64ea1079d22f237b1a/Pet1003_190926131711_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1003",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 4,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1004_200925155922.unity3d_export/CAB-e59f53ad16160214bbe0e89c3b65705b/Pet1004_200925155922_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1004",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 5,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1005_b6cdf1.unity3d_export/CAB-7f6621ef63d5cc441b170209975d8cc6/Pet1005_b6cdf1_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1005",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 6,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1006_190926132057.unity3d_export/CAB-f7bef3ef2eda5c742aac24783fa23cf0/Pet1006_190926132057_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1006",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 7,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1007_190926132143.unity3d_export/CAB-6a4a57879269fc34c930292a91d237c5/Pet1007_190926132143_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1007",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 8,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1008_190926132209.unity3d_export/CAB-56c137b7fd4822a478a6e1e7de3d8fe8/Pet1008_190926132209_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1008",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 9,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1009_190926132228.unity3d_export/CAB-62268e54835a2454e9dfda5d324b5daf/Pet1009_190926132228_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1009",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 10,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1010_190926132302.unity3d_export/CAB-85d97bd102e95c9438f01e0632064596/Pet1010_190926132302_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1010",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 11,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1011_190926132647.unity3d_export/CAB-3e9a479ce956e424b935444c9170f800/Pet1011_190926132647_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1011",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 12,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1012_190926132719.unity3d_export/CAB-303b1959c24dc9042bdd044ede6cd400/Pet1012_190926132719_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1012",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 13,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1013_190926132746.unity3d_000/CAB-ad219cc1c29514b42a94e0b48d86fca5/Pet1013_190926132746_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1013",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 14,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1014_190926132804.unity3d_export/CAB-5e423494f1ed37a439e46677bb19c3de/Pet1014_190926132804_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1014",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 15,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1015_191217165104.unity3d_export/CAB-00fe3efbbc7f4f64a9dedb483aeb9986/Pet1015_191217165104_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1015",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 16,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1016_190926132843.unity3d_export/CAB-0c9ceb32a4352614896881365b96c604/Pet1016_190926132843_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1016",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 17,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1017_190926132909.unity3d_export/CAB-41bd83da2e9cfa84fadb2939faaf2ac8/Pet1017_190926132909_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1017",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 18,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1018_191217151601.unity3d_export/CAB-f390c9cc85a6cfd46b6ba9e01d29aafc/Pet1018_191217151601_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1018",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 19,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1019_191003133723.unity3d_export/CAB-e9d8626dfbfa6444ab6684d050361e1e/Pet1019_191003133723_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1019",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 20,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1020_190926133046.unity3d_export/CAB-1c02c4f356936a34589dd028174ba35e/Pet1020_190926133046_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1020",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 21,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1021_190926133104.unity3d_export/CAB-03c9e649b7a49774890589f1b39d8751/Pet1021_190926133104_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1021",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 22,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1022_190926133201.unity3d_export/CAB-4bd32165692a2f04e96bde9590386f04/Pet1022_190926133201_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1022",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 23,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1023_190926133226.unity3d_export/CAB-e46eafaf7eed44a458a0961f6724f49a/Pet1023_190926133226_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1023",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 24,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1024_191206161119.unity3d_export/CAB-350db6ae2a9514e40b0c4fa12ee8ef90/Pet1024_191206161119_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1024",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 25,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1025_200723124802.unity3d_export/CAB-9cb81cebeb8c5944db2eb7e2280e1308/Pet1025_200723124802_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1025",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 26,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1026_211027115844.unity3d_export/CAB-f26d2c7179a45d34aa62c9041640db1a/Pet1026_211027115844_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1026",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 27,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1027_190927184021.unity3d_export/CAB-6feec73101dad43419bca4e8cb04f817/Pet1027_190927184021_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1027",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 28,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1028_191009112646.unity3d_export/CAB-2230698525cd367449b95b4659360f10/Pet1028_191009112646_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1028",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 29,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1029_191018142226.unity3d_export/CAB-61c8879107bb34e4bb6100abb57a6ae1/Pet1029_191018142226_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1029",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 30,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1030_200103191806.unity3d_export/CAB-c19c9c5f9f1d239448c7bc897f690c1e/Pet1030_200103191806_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1030",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 31,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1031_200922201153.unity3d_export/CAB-769a9a8ee28e60549866b18f939f84f6/Pet1031_200922201153_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1031",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 32,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1032_200213185608.unity3d_export/CAB-4455caedda7075e4d8682c33e45cfb39/Pet1032_200213185608_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1032",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 33,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1033_191120141221.unity3d_export/CAB-32cfe16176dc67547b2ee6f4b279604b/Pet1033_191120141221_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1033",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 34,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1034_191230173009.unity3d_export/CAB-7ffedcd6ec6c97f4ebe292a8bfcd467a/Pet1034_191230173009_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1034",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 35,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1035_191213133017.unity3d_export/CAB-6bda88e83005f9844848d63da1b2066e/Pet1035_191213133017_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1035",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 36,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1036_191016183616.unity3d_export/CAB-3210913661016be4cb39df30f0c3d9bf/Pet1036_191016183616_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1036",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 37,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1038_200709173106.unity3d_export/CAB-7fb81cf0fc288314c88852aab8fda154/Pet1038_200709173106_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1038",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 38,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1039_200221153444.unity3d_export/CAB-353bd061ae579184296e37aa1d7989db/Pet1039_200221153444_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1039",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 39,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1040_200221153455.unity3d_export/CAB-8e96b7636af67f74ea57a7a7123ab183/Pet1040_200221153455_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1040",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 40,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1041_200213202116.unity3d_export/CAB-a97da0d500f08a74d9049b889b2fc7e3/Pet1041_200213202116_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1041",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 41,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1042_201005115825.unity3d_export/CAB-6003e6d24088f0049b1d5d2cb5c541fe/Pet1042_201005115825_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1042",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 42,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1043_200727195553.unity3d_export/CAB-93421be4ab97b234abab2588199a4bbd/Pet1043_200727195553_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1043",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 43,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1044_200120112156.unity3d_export/CAB-a80ab91d308fc2a4ab3d64eca2334f39/Pet1044_200120112156_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1044",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 44,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1045_77abef.unity3d_export000/CAB-36db2cbfdd8569849bb5529bf168a920/Pet1045_77abef_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1045",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 45,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1046_200428180603.unity3d_export/CAB-d0a076acbf26f374d8c3dcc1c795b643/Pet1046_200428180603_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1046",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 46,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1047_200529195607.unity3d_export/CAB-c8763a596258a2e4e80ae0bda3d25435/Pet1047_200529195607_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1047",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 47,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1048_412002.unity3d_export/CAB-ae385ef8cbdf28049b5a970b781ce4aa/Pet1048_412002_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1048",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 48,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1050_bab49c.unity3d_export/CAB-11aa36f9974170b468cbfcac42b549e1/Pet1050_bab49c_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1050",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 49,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1051_200406111802.unity3d_export/CAB-e7d20adb39bd3c04691caf632f05cb2b/Pet1051_200406111802_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1051",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 50,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1053_3ead19.unity3d_export/CAB-976b52b8bbdbbc349aad49df3de614ff/Pet1053_3ead19_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1053",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 51,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1054_200123123422.unity3d_export/CAB-9b252ed4fedec1241bba0281cec36288/Pet1054_200123123422_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1054",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 52,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1055_200914164944.unity3d_export/CAB-7f14668bee62c1d47a804e8f44bd3e61/Pet1055_200914164944_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1055",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 53,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1056_200629130228.unity3d_export/CAB-70a251b9ecf3cbb4191a8ae87c921ff4/Pet1056_200629130228_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1056",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 54,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1057_200904114150.unity3d_export/CAB-552debc5c93684b4296d847858321ef3/Pet1057_200904114150_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1057",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 55,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1059_710a26.unity3d_export/CAB-4ddba32ac2593984db58d177fffff3e1/Pet1059_710a26_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1059",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 56,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1060_211122162857.unity3d_export/CAB-7107af3cec4556841bde61e75fb05f30/Pet1060_211122162857_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1060",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 57,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1061_200320130012.unity3d_export/CAB-7c7dd5d96a84c374ea696bdf0cdfc9d1/Pet1061_200320130012_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1061",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 58,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1062_200320130021.unity3d_export/CAB-8ec5fa605ac095945a914a6d6cc03ce4/Pet1062_200320130021_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1062",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 59,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1063_201022180042.unity3d_export/CAB-49dfc5d0dd868754a905e347d6a986b8/Pet1063_201022180042_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1063",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 60,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1064_201023112747.unity3d_export/CAB-8c4a9b7dedfd0264988d7219b5c4893b/Pet1064_201023112747_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1064",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 61,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1065_200602125039.unity3d_export/CAB-b97558f6f665954479bfff03adf7c7f9/Pet1065_200602125039_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1065",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 62,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1066_200922181625.unity3d_export/CAB-6c37f5c07168d834baf11a9c88a67b43/Pet1066_200922181625_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1066",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 63,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1068_6f4786.unity3d_export/CAB-3e0a8e3d4202b944891a4fd8e55b42f4/Pet1068_6f4786_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1068",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 64,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1069_200730162923.unity3d_export/CAB-bfa29cd39f0c0c64a90d1f52fdc24c35/Pet1069_200730162923_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1069",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  },
+  {
+    "Index": 65,
+    "PathSkeleton": "Assets/_HeroAnim/Pet1070_210210201949.unity3d_export/CAB-feaa0254d5ba42f4c8c275d6e136967f/Pet1070_210210201949_SkeletonData.asset",
+    "OriginScale": {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    "Skin": "Pet1070",
+    "Anim_Idle": "Idle",
+    "Anim_Atk": "Attack",
+    "Anim_Die": "Die",
+    "Anim_Atked": "Attacked",
+    "Anim_Skill": "SkillCast"
+  }
+]

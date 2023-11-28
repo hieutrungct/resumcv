@@ -1,0 +1,405 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A2
+  rotate: false
+  xy: 2, 686
+  size: 354, 325
+  orig: 354, 325
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 134, 374
+  size: 212, 310
+  orig: 212, 310
+  offset: 0, 0
+  index: -1
+A4
+  rotate: true
+  xy: 358, 717
+  size: 162, 273
+  orig: 162, 273
+  offset: 0, 0
+  index: -1
+Apron
+  rotate: true
+  xy: 417, 646
+  size: 49, 41
+  orig: 49, 41
+  offset: 0, 0
+  index: -1
+ApronRibbon F
+  rotate: false
+  xy: 309, 169
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+Arm Down B
+  rotate: true
+  xy: 483, 607
+  size: 22, 39
+  orig: 22, 39
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 595, 655
+  size: 39, 60
+  orig: 39, 60
+  offset: 0, 0
+  index: -1
+Bone i
+  rotate: false
+  xy: 314, 284
+  size: 31, 88
+  orig: 31, 88
+  offset: 0, 0
+  index: -1
+Bone ii
+  rotate: false
+  xy: 904, 754
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+Bone iii
+  rotate: false
+  xy: 218, 158
+  size: 89, 31
+  orig: 89, 31
+  offset: 0, 0
+  index: -1
+Bone iv
+  rotate: false
+  xy: 997, 768
+  size: 25, 77
+  orig: 25, 77
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: true
+  xy: 416, 605
+  size: 39, 42
+  orig: 39, 42
+  offset: 0, 0
+  index: -1
+Cloth B Left
+  rotate: true
+  xy: 148, 21
+  size: 48, 71
+  orig: 48, 71
+  offset: 0, 0
+  index: -1
+Cloth B Right
+  rotate: false
+  xy: 636, 665
+  size: 46, 67
+  orig: 46, 67
+  offset: 0, 0
+  index: -1
+Ear B
+  rotate: false
+  xy: 460, 659
+  size: 68, 56
+  orig: 68, 56
+  offset: 0, 0
+  index: -1
+Ear F
+  rotate: false
+  xy: 148, 71
+  size: 67, 79
+  orig: 67, 79
+  offset: 0, 0
+  index: -1
+Effect B1
+  rotate: false
+  xy: 684, 703
+  size: 63, 29
+  orig: 63, 29
+  offset: 0, 0
+  index: -1
+Effect B2
+  rotate: false
+  xy: 314, 209
+  size: 32, 73
+  orig: 32, 73
+  offset: 0, 0
+  index: -1
+Effect F1
+  rotate: false
+  xy: 348, 457
+  size: 25, 53
+  orig: 25, 53
+  offset: 0, 0
+  index: -1
+Effect F2
+  rotate: true
+  xy: 904, 721
+  size: 31, 72
+  orig: 31, 72
+  offset: 0, 0
+  index: -1
+Eye1
+  rotate: true
+  xy: 997, 698
+  size: 68, 25
+  orig: 68, 25
+  offset: 0, 0
+  index: -1
+Eye2
+  rotate: true
+  xy: 998, 883
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+Eye3
+  rotate: true
+  xy: 998, 946
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Hand B_(Skill)
+  rotate: false
+  xy: 348, 402
+  size: 20, 53
+  orig: 20, 53
+  offset: 0, 0
+  index: -1
+Hand Down B
+  rotate: true
+  xy: 332, 167
+  size: 22, 15
+  orig: 22, 15
+  offset: 0, 0
+  index: -1
+Hand Down B Wrist
+  rotate: false
+  xy: 385, 594
+  size: 18, 20
+  orig: 18, 20
+  offset: 0, 0
+  index: -1
+Hand Down D (Wrist)
+  rotate: true
+  xy: 978, 728
+  size: 24, 16
+  orig: 24, 16
+  offset: 0, 0
+  index: -1
+Hand Down Upper Part
+  rotate: false
+  xy: 749, 697
+  size: 23, 15
+  orig: 23, 15
+  offset: 0, 0
+  index: -1
+Hand F
+  rotate: false
+  xy: 348, 512
+  size: 27, 54
+  orig: 27, 54
+  offset: 0, 0
+  index: -1
+Hand F_(Anim)
+  rotate: true
+  xy: 358, 665
+  size: 30, 57
+  orig: 30, 57
+  offset: 0, 0
+  index: -1
+Hand Up B
+  rotate: false
+  xy: 392, 616
+  size: 22, 47
+  orig: 22, 47
+  offset: 0, 0
+  index: -1
+Hand down C
+  rotate: true
+  xy: 998, 853
+  size: 28, 24
+  orig: 28, 24
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 784, 725
+  size: 154, 118
+  orig: 154, 118
+  offset: 0, 0
+  index: -1
+Leg F_(Atk)
+  rotate: true
+  xy: 684, 671
+  size: 30, 59
+  orig: 30, 59
+  offset: 0, 0
+  index: -1
+Leg down B
+  rotate: false
+  xy: 460, 606
+  size: 21, 51
+  orig: 21, 51
+  offset: 0, 0
+  index: -1
+Leg down F
+  rotate: false
+  xy: 483, 631
+  size: 45, 26
+  orig: 45, 26
+  offset: 0, 0
+  index: -1
+Leg up B
+  rotate: true
+  xy: 348, 568
+  size: 47, 35
+  orig: 47, 35
+  offset: 0, 0
+  index: -1
+Leg up F
+  rotate: false
+  xy: 348, 617
+  size: 42, 46
+  orig: 42, 46
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: true
+  xy: 385, 570
+  size: 22, 10
+  orig: 22, 10
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: false
+  xy: 749, 714
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Mo3
+  rotate: true
+  xy: 134, 134
+  size: 16, 10
+  orig: 16, 10
+  offset: 0, 0
+  index: -1
+Necklace
+  rotate: false
+  xy: 314, 191
+  size: 30, 16
+  orig: 30, 16
+  offset: 0, 0
+  index: -1
+Pony
+  rotate: false
+  xy: 218, 191
+  size: 94, 181
+  orig: 94, 181
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 358, 697
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+Sign
+  rotate: true
+  xy: 530, 636
+  size: 18, 53
+  orig: 18, 53
+  offset: 0, 0
+  index: -1
+Smaller Hand
+  rotate: false
+  xy: 745, 676
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 530, 656
+  size: 63, 59
+  orig: 63, 59
+  offset: 0, 0
+  index: -1
+Wrist F
+  rotate: false
+  xy: 348, 379
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+skillVfx/1
+  rotate: false
+  xy: 633, 734
+  size: 149, 145
+  orig: 149, 145
+  offset: 0, 0
+  index: -1
+skillVfx/A0
+  rotate: true
+  xy: 912, 847
+  size: 164, 84
+  orig: 164, 84
+  offset: 0, 0
+  index: -1
+skillVfx/A1
+  rotate: true
+  xy: 134, 152
+  size: 220, 82
+  orig: 220, 82
+  offset: 0, 0
+  index: -1
+skillVfx/A2
+  rotate: false
+  xy: 2, 44
+  size: 144, 86
+  orig: 144, 86
+  offset: 0, 0
+  index: -1
+skillVfx/A3
+  rotate: false
+  xy: 2, 2
+  size: 136, 40
+  orig: 136, 40
+  offset: 0, 0
+  index: -1
+skillVfx/B0
+  rotate: false
+  xy: 2, 132
+  size: 64, 552
+  orig: 64, 552
+  offset: 0, 0
+  index: -1
+skillVfx/B1
+  rotate: true
+  xy: 358, 947
+  size: 64, 552
+  orig: 64, 552
+  offset: 0, 0
+  index: -1
+skillVfx/B2
+  rotate: false
+  xy: 68, 132
+  size: 64, 552
+  orig: 64, 552
+  offset: 0, 0
+  index: -1
+skillVfx/B3
+  rotate: true
+  xy: 358, 881
+  size: 64, 552
+  orig: 64, 552
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,265 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 2, 366
+  size: 196, 144
+  orig: 196, 144
+  offset: 0, 0
+  index: -1
+A2
+  rotate: true
+  xy: 138, 60
+  size: 151, 69
+  orig: 151, 69
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 308, 274
+  size: 115, 32
+  orig: 115, 32
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 2, 213
+  size: 100, 151
+  orig: 100, 151
+  offset: 0, 0
+  index: -1
+B2
+  rotate: true
+  xy: 200, 410
+  size: 100, 151
+  orig: 100, 151
+  offset: 0, 0
+  index: -1
+B3
+  rotate: true
+  xy: 353, 410
+  size: 100, 151
+  orig: 100, 151
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 104, 213
+  size: 100, 151
+  orig: 100, 151
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 36, 60
+  size: 100, 151
+  orig: 100, 151
+  offset: 0, 0
+  index: -1
+B6
+  rotate: false
+  xy: 206, 257
+  size: 100, 151
+  orig: 100, 151
+  offset: 0, 0
+  index: -1
+Eye4(Close)
+  rotate: false
+  xy: 318, 164
+  size: 63, 29
+  orig: 63, 29
+  offset: 0, 0
+  index: -1
+Eye6(Hurt)
+  rotate: false
+  xy: 318, 195
+  size: 63, 36
+  orig: 63, 36
+  offset: 0, 0
+  index: -1
+Mei1
+  rotate: false
+  xy: 100, 2
+  size: 61, 28
+  orig: 61, 28
+  offset: 0, 0
+  index: -1
+Mei2
+  rotate: false
+  xy: 36, 2
+  size: 62, 28
+  orig: 62, 28
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 308, 267
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: false
+  xy: 260, 8
+  size: 32, 23
+  orig: 32, 23
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 36, 32
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+angry emoji
+  rotate: false
+  xy: 384, 230
+  size: 44, 42
+  orig: 44, 42
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: true
+  xy: 383, 157
+  size: 21, 35
+  orig: 21, 35
+  offset: 0, 0
+  index: -1
+b hairtail
+  rotate: false
+  xy: 209, 69
+  size: 84, 76
+  orig: 84, 76
+  offset: 0, 0
+  index: -1
+b hand
+  rotate: false
+  xy: 430, 237
+  size: 34, 43
+  orig: 34, 43
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: true
+  xy: 163, 2
+  size: 28, 57
+  orig: 28, 57
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 435, 355
+  size: 59, 53
+  orig: 59, 53
+  offset: 0, 0
+  index: -1
+body down
+  rotate: false
+  xy: 209, 32
+  size: 41, 35
+  orig: 41, 35
+  offset: 0, 0
+  index: -1
+dress
+  rotate: true
+  xy: 435, 306
+  size: 47, 62
+  orig: 47, 62
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 318, 233
+  size: 64, 39
+  orig: 64, 39
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: false
+  xy: 222, 5
+  size: 36, 25
+  orig: 36, 25
+  offset: 0, 0
+  index: -1
+f hairtail
+  rotate: false
+  xy: 209, 147
+  size: 107, 108
+  orig: 107, 108
+  offset: 0, 0
+  index: -1
+f hand
+  rotate: true
+  xy: 383, 180
+  size: 48, 37
+  orig: 48, 37
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: true
+  xy: 425, 282
+  size: 22, 50
+  orig: 22, 50
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 308, 308
+  size: 125, 100
+  orig: 125, 100
+  offset: 0, 0
+  index: -1
+gum
+  rotate: false
+  xy: 178, 37
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+hair back
+  rotate: false
+  xy: 295, 86
+  size: 33, 59
+  orig: 33, 59
+  offset: 0, 0
+  index: -1
+knife
+  rotate: false
+  xy: 2, 2
+  size: 32, 209
+  orig: 32, 209
+  offset: 0, 0
+  index: -1
+tiger
+  rotate: false
+  xy: 252, 33
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+tiger eye 1
+  rotate: false
+  xy: 295, 67
+  size: 25, 17
+  orig: 25, 17
+  offset: 0, 0
+  index: -1
+tiger eye 2
+  rotate: true
+  xy: 496, 359
+  size: 23, 13
+  orig: 23, 13
+  offset: 0, 0
+  index: -1
+tiger eye 3
+  rotate: true
+  xy: 496, 384
+  size: 24, 14
+  orig: 24, 14
+  offset: 0, 0
+  index: -1

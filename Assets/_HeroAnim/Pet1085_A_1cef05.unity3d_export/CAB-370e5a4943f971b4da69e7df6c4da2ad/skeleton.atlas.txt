@@ -1,0 +1,314 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm f
+  rotate: false
+  xy: 275, 112
+  size: 56, 75
+  orig: 56, 75
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 423, 113
+  size: 72, 39
+  orig: 72, 39
+  offset: 0, 0
+  index: -1
+Bubble A
+  rotate: false
+  xy: 459, 187
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+Bubble B
+  rotate: false
+  xy: 272, 30
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Carrot
+  rotate: false
+  xy: 275, 74
+  size: 75, 36
+  orig: 75, 36
+  offset: 0, 0
+  index: -1
+Dress
+  rotate: false
+  xy: 472, 230
+  size: 38, 40
+  orig: 38, 40
+  offset: 0, 0
+  index: -1
+Ear b
+  rotate: false
+  xy: 365, 187
+  size: 92, 44
+  orig: 92, 44
+  offset: 0, 0
+  index: -1
+Ear f
+  rotate: false
+  xy: 312, 189
+  size: 51, 91
+  orig: 51, 91
+  offset: 0, 0
+  index: -1
+Eye1
+  rotate: false
+  xy: 2, 2
+  size: 72, 31
+  orig: 72, 31
+  offset: 0, 0
+  index: -1
+Eye2(Hurt)
+  rotate: true
+  xy: 333, 126
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+Eye3(Close)
+  rotate: false
+  xy: 190, 174
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Hamlet
+  rotate: false
+  xy: 191, 294
+  size: 131, 115
+  orig: 131, 115
+  offset: 0, 0
+  index: -1
+Hand b
+  rotate: false
+  xy: 227, 41
+  size: 20, 24
+  orig: 20, 24
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 362, 284
+  size: 114, 91
+  orig: 114, 91
+  offset: 0, 0
+  index: -1
+Leg
+  rotate: false
+  xy: 230, 2
+  size: 45, 26
+  orig: 45, 26
+  offset: 0, 0
+  index: -1
+Leg thigh
+  rotate: false
+  xy: 478, 318
+  size: 32, 57
+  orig: 32, 57
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: true
+  xy: 257, 176
+  size: 17, 15
+  orig: 17, 15
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: false
+  xy: 238, 73
+  size: 34, 18
+  orig: 34, 18
+  offset: 0, 0
+  index: -1
+Mo3
+  rotate: false
+  xy: 76, 2
+  size: 26, 6
+  orig: 26, 6
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: false
+  xy: 76, 10
+  size: 64, 23
+  orig: 64, 23
+  offset: 0, 0
+  index: -1
+Pony b
+  rotate: false
+  xy: 365, 233
+  size: 100, 49
+  orig: 100, 49
+  offset: 0, 0
+  index: -1
+Pony deco f
+  rotate: false
+  xy: 238, 93
+  size: 35, 79
+  orig: 35, 79
+  offset: 0, 0
+  index: -1
+Pony f
+  rotate: false
+  xy: 143, 67
+  size: 93, 105
+  orig: 93, 105
+  offset: 0, 0
+  index: -1
+Rocket
+  rotate: false
+  xy: 2, 63
+  size: 139, 109
+  orig: 139, 109
+  offset: 0, 0
+  index: -1
+Rocket fire
+  rotate: false
+  xy: 420, 63
+  size: 50, 48
+  orig: 50, 48
+  offset: 0, 0
+  index: -1
+Rocket star A
+  rotate: true
+  xy: 277, 2
+  size: 26, 28
+  orig: 26, 28
+  offset: 0, 0
+  index: -1
+Rocket star B
+  rotate: true
+  xy: 249, 30
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+Rocket wing
+  rotate: false
+  xy: 144, 29
+  size: 81, 36
+  orig: 81, 36
+  offset: 0, 0
+  index: -1
+Rocket wing red
+  rotate: false
+  xy: 142, 3
+  size: 45, 24
+  orig: 45, 24
+  offset: 0, 0
+  index: -1
+RocketB
+  rotate: true
+  xy: 357, 135
+  size: 50, 64
+  orig: 50, 64
+  offset: 0, 0
+  index: -1
+Rocket_base
+  rotate: false
+  xy: 464, 131
+  size: 41, 54
+  orig: 41, 54
+  offset: 0, 0
+  index: -1
+Rocket_cover
+  rotate: false
+  xy: 414, 7
+  size: 56, 54
+  orig: 56, 54
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 35
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+Stick
+  rotate: false
+  xy: 324, 282
+  size: 36, 127
+  orig: 36, 127
+  offset: 0, 0
+  index: -1
+Stick liquid
+  rotate: true
+  xy: 189, 5
+  size: 22, 39
+  orig: 22, 39
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 249, 51
+  size: 22, 20
+  orig: 22, 20
+  offset: 0, 0
+  index: -1
+air
+  rotate: true
+  xy: 357, 84
+  size: 49, 61
+  orig: 49, 61
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 478, 272
+  size: 44, 27
+  orig: 44, 27
+  offset: 0, 0
+  index: -1
+fx_attack1/1
+  rotate: false
+  xy: 378, 377
+  size: 132, 133
+  orig: 132, 133
+  offset: 0, 0
+  index: -1
+fx_attack1/A2
+  rotate: false
+  xy: 352, 30
+  size: 60, 52
+  orig: 60, 52
+  offset: 0, 0
+  index: -1
+fx_skill1/2
+  rotate: false
+  xy: 2, 174
+  size: 186, 154
+  orig: 186, 154
+  offset: 0, 0
+  index: -1
+fx_skill1/gp1
+  rotate: true
+  xy: 190, 195
+  size: 97, 120
+  orig: 97, 120
+  offset: 0, 0
+  index: -1
+fx_skill1/gp2
+  rotate: false
+  xy: 191, 411
+  size: 185, 99
+  orig: 185, 99
+  offset: 0, 0
+  index: -1
+fx_skill1/hit3
+  rotate: false
+  xy: 2, 330
+  size: 187, 180
+  orig: 187, 180
+  offset: 0, 0
+  index: -1

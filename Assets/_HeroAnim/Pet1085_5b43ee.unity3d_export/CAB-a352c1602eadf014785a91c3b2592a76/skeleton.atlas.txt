@@ -1,0 +1,447 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: true
+  xy: 969, 525
+  size: 58, 47
+  orig: 58, 47
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 856, 568
+  size: 94, 86
+  orig: 94, 86
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 394, 180
+  size: 137, 135
+  orig: 137, 135
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 423, 439
+  size: 150, 131
+  orig: 150, 131
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 227, 185
+  size: 165, 131
+  orig: 165, 131
+  offset: 0, 0
+  index: -1
+A6
+  rotate: false
+  xy: 2, 9
+  size: 170, 109
+  orig: 170, 109
+  offset: 0, 0
+  index: -1
+Arm b
+  rotate: false
+  xy: 367, 59
+  size: 59, 54
+  orig: 59, 54
+  offset: 0, 0
+  index: -1
+Arm b2
+  rotate: true
+  xy: 724, 323
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+Arm f
+  rotate: true
+  xy: 943, 791
+  size: 76, 58
+  orig: 76, 58
+  offset: 0, 0
+  index: -1
+Arm f2
+  rotate: true
+  xy: 656, 317
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+Arm f3
+  rotate: false
+  xy: 952, 585
+  size: 63, 69
+  orig: 63, 69
+  offset: 0, 0
+  index: -1
+Arm up f
+  rotate: false
+  xy: 339, 8
+  size: 52, 26
+  orig: 52, 26
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 575, 460
+  size: 108, 108
+  orig: 108, 108
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 685, 460
+  size: 104, 108
+  orig: 104, 108
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 582, 350
+  size: 104, 108
+  orig: 104, 108
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 627, 570
+  size: 227, 214
+  orig: 227, 214
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 382, 572
+  size: 243, 222
+  orig: 243, 222
+  offset: 0, 0
+  index: -1
+B6
+  rotate: false
+  xy: 693, 786
+  size: 248, 229
+  orig: 248, 229
+  offset: 0, 0
+  index: -1
+Bag
+  rotate: false
+  xy: 845, 484
+  size: 87, 82
+  orig: 87, 82
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 507, 121
+  size: 42, 57
+  orig: 42, 57
+  offset: 0, 0
+  index: -1
+Bubble A
+  rotate: true
+  xy: 651, 271
+  size: 44, 40
+  orig: 44, 40
+  offset: 0, 0
+  index: -1
+Bubble B
+  rotate: false
+  xy: 753, 322
+  size: 21, 19
+  orig: 21, 19
+  offset: 0, 0
+  index: -1
+C1
+  rotate: true
+  xy: 227, 318
+  size: 222, 194
+  orig: 222, 194
+  offset: 0, 0
+  index: -1
+C2
+  rotate: true
+  xy: 2, 440
+  size: 350, 219
+  orig: 350, 219
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 2, 792
+  size: 347, 223
+  orig: 347, 223
+  offset: 0, 0
+  index: -1
+C4
+  rotate: true
+  xy: 2, 120
+  size: 318, 223
+  orig: 318, 223
+  offset: 0, 0
+  index: -1
+C5
+  rotate: false
+  xy: 351, 796
+  size: 340, 219
+  orig: 340, 219
+  offset: 0, 0
+  index: -1
+C6
+  rotate: true
+  xy: 223, 542
+  size: 248, 157
+  orig: 248, 157
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: false
+  xy: 969, 499
+  size: 49, 24
+  orig: 49, 24
+  offset: 0, 0
+  index: -1
+Chest rope
+  rotate: true
+  xy: 627, 786
+  size: 8, 33
+  orig: 8, 33
+  offset: 0, 0
+  index: -1
+Chest rope2
+  rotate: true
+  xy: 551, 125
+  size: 14, 32
+  orig: 14, 32
+  offset: 0, 0
+  index: -1
+D1
+  rotate: true
+  xy: 533, 197
+  size: 118, 82
+  orig: 118, 82
+  offset: 0, 0
+  index: -1
+D2
+  rotate: true
+  xy: 174, 2
+  size: 116, 83
+  orig: 116, 83
+  offset: 0, 0
+  index: -1
+D3
+  rotate: false
+  xy: 259, 36
+  size: 106, 89
+  orig: 106, 89
+  offset: 0, 0
+  index: -1
+Dress
+  rotate: true
+  xy: 934, 498
+  size: 68, 33
+  orig: 68, 33
+  offset: 0, 0
+  index: -1
+Ear b
+  rotate: false
+  xy: 440, 124
+  size: 65, 54
+  orig: 65, 54
+  offset: 0, 0
+  index: -1
+Ear f
+  rotate: false
+  xy: 946, 706
+  size: 49, 83
+  orig: 49, 83
+  offset: 0, 0
+  index: -1
+Eye1
+  rotate: false
+  xy: 582, 317
+  size: 72, 31
+  orig: 72, 31
+  offset: 0, 0
+  index: -1
+Eye2(Hurt)
+  rotate: false
+  xy: 367, 36
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+Eye3(Close)
+  rotate: true
+  xy: 1003, 808
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Gun b
+  rotate: false
+  xy: 946, 656
+  size: 43, 48
+  orig: 43, 48
+  offset: 0, 0
+  index: -1
+Gun f
+  rotate: true
+  xy: 369, 115
+  size: 63, 69
+  orig: 63, 69
+  offset: 0, 0
+  index: -1
+Hamlet
+  rotate: false
+  xy: 423, 317
+  size: 157, 120
+  orig: 157, 120
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 688, 343
+  size: 115, 91
+  orig: 115, 91
+  offset: 0, 0
+  index: -1
+Jacket b
+  rotate: false
+  xy: 991, 656
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+Jacket f
+  rotate: true
+  xy: 393, 7
+  size: 27, 30
+  orig: 27, 30
+  offset: 0, 0
+  index: -1
+Leg b
+  rotate: true
+  xy: 259, 2
+  size: 32, 78
+  orig: 32, 78
+  offset: 0, 0
+  index: -1
+Leg f
+  rotate: false
+  xy: 382, 544
+  size: 33, 26
+  orig: 33, 26
+  offset: 0, 0
+  index: -1
+Leg thigh f
+  rotate: true
+  xy: 651, 199
+  size: 27, 42
+  orig: 27, 42
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 1003, 793
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+Mo2(whistle)
+  rotate: false
+  xy: 997, 683
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+Mo3
+  rotate: false
+  xy: 688, 322
+  size: 34, 19
+  orig: 34, 19
+  offset: 0, 0
+  index: -1
+Mo4
+  rotate: true
+  xy: 781, 433
+  size: 25, 7
+  orig: 25, 7
+  offset: 0, 0
+  index: -1
+Neck fur
+  rotate: false
+  xy: 791, 461
+  size: 51, 17
+  orig: 51, 17
+  offset: 0, 0
+  index: -1
+Pony F
+  rotate: false
+  xy: 856, 656
+  size: 88, 128
+  orig: 88, 128
+  offset: 0, 0
+  index: -1
+Pony b
+  rotate: false
+  xy: 791, 480
+  size: 52, 88
+  orig: 52, 88
+  offset: 0, 0
+  index: -1
+Pony deco b
+  rotate: false
+  xy: 651, 228
+  size: 38, 41
+  orig: 38, 41
+  offset: 0, 0
+  index: -1
+Pony deco f
+  rotate: false
+  xy: 551, 141
+  size: 45, 54
+  orig: 45, 54
+  offset: 0, 0
+  index: -1
+Rope b
+  rotate: true
+  xy: 227, 127
+  size: 56, 140
+  orig: 56, 140
+  offset: 0, 0
+  index: -1
+Rope b liquid
+  rotate: false
+  xy: 997, 714
+  size: 25, 75
+  orig: 25, 75
+  offset: 0, 0
+  index: -1
+Rope f
+  rotate: false
+  xy: 943, 869
+  size: 47, 146
+  orig: 47, 146
+  offset: 0, 0
+  index: -1
+Rope f liquid
+  rotate: false
+  xy: 617, 202
+  size: 32, 113
+  orig: 32, 113
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 992, 875
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,279 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Face
+  rotate: false
+  xy: 174, 257
+  size: 155, 105
+  orig: 155, 105
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 174, 367
+  size: 15, 10
+  orig: 15, 10
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: false
+  xy: 378, 64
+  size: 29, 17
+  orig: 29, 17
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 303, 13
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+arm(L)
+  rotate: true
+  xy: 331, 13
+  size: 47, 27
+  orig: 47, 27
+  offset: 0, 0
+  index: -1
+arm(R)
+  rotate: true
+  xy: 167, 2
+  size: 29, 51
+  orig: 29, 51
+  offset: 0, 0
+  index: -1
+armup(L)
+  rotate: false
+  xy: 451, 126
+  size: 39, 23
+  orig: 39, 23
+  offset: 0, 0
+  index: -1
+armup(R)
+  rotate: true
+  xy: 385, 27
+  size: 35, 32
+  orig: 35, 32
+  offset: 0, 0
+  index: -1
+bag
+  rotate: true
+  xy: 360, 17
+  size: 43, 23
+  orig: 43, 23
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 433, 301
+  size: 56, 62
+  orig: 56, 62
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 331, 62
+  size: 51, 45
+  orig: 51, 45
+  offset: 0, 0
+  index: -1
+chestDown
+  rotate: true
+  xy: 488, 161
+  size: 28, 22
+  orig: 28, 22
+  offset: 0, 0
+  index: -1
+chicken/chickenA
+  rotate: false
+  xy: 433, 244
+  size: 54, 55
+  orig: 54, 55
+  offset: 0, 0
+  index: -1
+chicken/chickenA_arm(L)
+  rotate: false
+  xy: 491, 335
+  size: 19, 28
+  orig: 19, 28
+  offset: 0, 0
+  index: -1
+chicken/chickenA_arm(R)
+  rotate: false
+  xy: 491, 311
+  size: 19, 22
+  orig: 19, 22
+  offset: 0, 0
+  index: -1
+chicken/chickenB
+  rotate: true
+  xy: 433, 191
+  size: 51, 54
+  orig: 51, 54
+  offset: 0, 0
+  index: -1
+chicken/chickenB_arm(L)
+  rotate: false
+  xy: 131, 2
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+chicken/chickenB_arm(R)
+  rotate: true
+  xy: 432, 110
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+dressA
+  rotate: false
+  xy: 405, 128
+  size: 44, 46
+  orig: 44, 46
+  offset: 0, 0
+  index: -1
+dressB
+  rotate: false
+  xy: 403, 90
+  size: 27, 35
+  orig: 27, 35
+  offset: 0, 0
+  index: -1
+eye_close
+  rotate: false
+  xy: 67, 5
+  size: 62, 18
+  orig: 62, 18
+  offset: 0, 0
+  index: -1
+eye_hurt
+  rotate: false
+  xy: 2, 2
+  size: 63, 21
+  orig: 63, 21
+  offset: 0, 0
+  index: -1
+eye_open
+  rotate: false
+  xy: 328, 177
+  size: 75, 31
+  orig: 75, 31
+  offset: 0, 0
+  index: -1
+eyebrow
+  rotate: false
+  xy: 292, 2
+  size: 60, 9
+  orig: 60, 9
+  offset: 0, 0
+  index: -1
+fx_attack1/4
+  rotate: false
+  xy: 2, 379
+  size: 214, 131
+  orig: 214, 131
+  offset: 0, 0
+  index: -1
+fx_attack1/fx_sttackLight
+  rotate: false
+  xy: 218, 364
+  size: 146, 146
+  orig: 146, 146
+  offset: 0, 0
+  index: -1
+fx_skill1/1
+  rotate: false
+  xy: 2, 205
+  size: 170, 172
+  orig: 170, 172
+  offset: 0, 0
+  index: -1
+fx_skill1/2
+  rotate: false
+  xy: 2, 25
+  size: 163, 178
+  orig: 163, 178
+  offset: 0, 0
+  index: -1
+fx_skill1/4
+  rotate: false
+  xy: 174, 155
+  size: 152, 100
+  orig: 152, 100
+  offset: 0, 0
+  index: -1
+fx_skill1/5
+  rotate: true
+  xy: 331, 210
+  size: 152, 100
+  orig: 152, 100
+  offset: 0, 0
+  index: -1
+fx_skill2/5
+  rotate: false
+  xy: 167, 33
+  size: 134, 120
+  orig: 134, 120
+  offset: 0, 0
+  index: -1
+hairBack
+  rotate: true
+  xy: 366, 365
+  size: 145, 135
+  orig: 145, 135
+  offset: 0, 0
+  index: -1
+hand(L)
+  rotate: false
+  xy: 385, 2
+  size: 30, 23
+  orig: 30, 23
+  offset: 0, 0
+  index: -1
+leg(L)
+  rotate: true
+  xy: 378, 83
+  size: 42, 23
+  orig: 42, 23
+  offset: 0, 0
+  index: -1
+leg(R)
+  rotate: true
+  xy: 220, 8
+  size: 23, 70
+  orig: 23, 70
+  offset: 0, 0
+  index: -1
+light
+  rotate: true
+  xy: 371, 127
+  size: 48, 32
+  orig: 48, 32
+  offset: 0, 0
+  index: -1
+quiltBack
+  rotate: false
+  xy: 405, 176
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+sideHair
+  rotate: false
+  xy: 331, 115
+  size: 38, 60
+  orig: 38, 60
+  offset: 0, 0
+  index: -1
+thigh(L)
+  rotate: false
+  xy: 451, 151
+  size: 35, 38
+  orig: 35, 38
+  offset: 0, 0
+  index: -1

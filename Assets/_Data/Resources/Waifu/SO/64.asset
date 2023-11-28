@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5f4340e26fb7c4187a8ec161995e25, type: 3}
+  m_Name: 64
+  m_EditorClassIdentifier: 
+  FunnyCheck: 0
+  Index: 64
+  SkeletonDataAsset: {fileID: 11400000, guid: 60c8ce9d4bd8b0444ae40f737903efd4, type: 2}
+  OriginScale: {x: -1, y: 1, z: 1}
+  Skin: Pet1069
+  Anim_Idle: Idle
+  Anim_Atk: Attack
+  Anim_Die: Die
+  Anim_Atked: Attacked
+  Anim_Skill: SkillCast

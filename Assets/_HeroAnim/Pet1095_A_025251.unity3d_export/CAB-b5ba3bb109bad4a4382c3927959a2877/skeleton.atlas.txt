@@ -1,0 +1,405 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+AtkVfx/Cloud_A_Skill
+  rotate: true
+  xy: 702, 315
+  size: 93, 60
+  orig: 93, 60
+  offset: 0, 0
+  index: -1
+AtkVfx/Cloud_B_Skill
+  rotate: false
+  xy: 493, 288
+  size: 82, 68
+  orig: 82, 68
+  offset: 0, 0
+  index: -1
+AtkVfx/rpg_bite01_01
+  rotate: false
+  xy: 776, 378
+  size: 86, 163
+  orig: 86, 163
+  offset: 0, 0
+  index: -1
+AtkVfx/rpg_bite01_03
+  rotate: false
+  xy: 887, 777
+  size: 85, 245
+  orig: 85, 245
+  offset: 0, 0
+  index: -1
+AtkVfx/rpg_bite01_05
+  rotate: true
+  xy: 300, 461
+  size: 86, 265
+  orig: 86, 265
+  offset: 0, 0
+  index: -1
+AtkVfx/rpg_bite01_06
+  rotate: false
+  xy: 776, 543
+  size: 84, 238
+  orig: 84, 238
+  offset: 0, 0
+  index: -1
+Pet1095_A/Arm 2 b
+  rotate: false
+  xy: 729, 188
+  size: 91, 99
+  orig: 91, 99
+  offset: 0, 0
+  index: -1
+Pet1095_A/Arm 2 f
+  rotate: false
+  xy: 493, 358
+  size: 82, 101
+  orig: 82, 101
+  offset: 0, 0
+  index: -1
+Pet1095_A/Arm b
+  rotate: true
+  xy: 467, 112
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+Pet1095_A/Arm f
+  rotate: false
+  xy: 971, 303
+  size: 30, 33
+  orig: 30, 33
+  offset: 0, 0
+  index: -1
+Pet1095_A/Body
+  rotate: false
+  xy: 657, 117
+  size: 41, 50
+  orig: 41, 50
+  offset: 0, 0
+  index: -1
+Pet1095_A/Chest
+  rotate: false
+  xy: 700, 124
+  size: 42, 43
+  orig: 42, 43
+  offset: 0, 0
+  index: -1
+Pet1095_A/Ear b
+  rotate: true
+  xy: 974, 924
+  size: 46, 48
+  orig: 46, 48
+  offset: 0, 0
+  index: -1
+Pet1095_A/Ear f
+  rotate: false
+  xy: 974, 790
+  size: 42, 62
+  orig: 42, 62
+  offset: 0, 0
+  index: -1
+Pet1095_A/Eye 1
+  rotate: false
+  xy: 467, 2
+  size: 74, 28
+  orig: 74, 28
+  offset: 0, 0
+  index: -1
+Pet1095_A/Eye2(Hurt)
+  rotate: true
+  xy: 943, 190
+  size: 63, 23
+  orig: 63, 23
+  offset: 0, 0
+  index: -1
+Pet1095_A/Eye3(Close)
+  rotate: false
+  xy: 37, 3
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Pet1095_A/Hair b
+  rotate: false
+  xy: 287, 297
+  size: 204, 162
+  orig: 204, 162
+  offset: 0, 0
+  index: -1
+Pet1095_A/Head
+  rotate: false
+  xy: 355, 30
+  size: 110, 98
+  orig: 110, 98
+  offset: 0, 0
+  index: -1
+Pet1095_A/Head Deco a
+  rotate: false
+  xy: 609, 115
+  size: 46, 52
+  orig: 46, 52
+  offset: 0, 0
+  index: -1
+Pet1095_A/Head Deco b
+  rotate: true
+  xy: 974, 854
+  size: 68, 45
+  orig: 68, 45
+  offset: 0, 0
+  index: -1
+Pet1095_A/Head Deco c
+  rotate: false
+  xy: 394, 6
+  size: 39, 22
+  orig: 39, 22
+  offset: 0, 0
+  index: -1
+Pet1095_A/Head Deco d
+  rotate: false
+  xy: 822, 176
+  size: 35, 39
+  orig: 35, 39
+  offset: 0, 0
+  index: -1
+Pet1095_A/Head flower
+  rotate: false
+  xy: 467, 32
+  size: 62, 69
+  orig: 62, 69
+  offset: 0, 0
+  index: -1
+Pet1095_A/Leg b
+  rotate: false
+  xy: 531, 41
+  size: 29, 60
+  orig: 29, 60
+  offset: 0, 0
+  index: -1
+Pet1095_A/Leg f
+  rotate: false
+  xy: 822, 217
+  size: 36, 70
+  orig: 36, 70
+  offset: 0, 0
+  index: -1
+Pet1095_A/Mouth 1
+  rotate: false
+  xy: 467, 103
+  size: 15, 7
+  orig: 15, 7
+  offset: 0, 0
+  index: -1
+Pet1095_A/Mouth 2
+  rotate: false
+  xy: 702, 294
+  size: 32, 19
+  orig: 32, 19
+  offset: 0, 0
+  index: -1
+Pet1095_A/Mouth 3
+  rotate: false
+  xy: 1007, 770
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+Pet1095_A/Sleeve Deco f
+  rotate: true
+  xy: 355, 2
+  size: 26, 37
+  orig: 26, 37
+  offset: 0, 0
+  index: -1
+Pet1095_A/Sleeve b
+  rotate: false
+  xy: 231, 137
+  size: 43, 78
+  orig: 43, 78
+  offset: 0, 0
+  index: -1
+Pet1095_A/Sleeve deco b
+  rotate: true
+  xy: 2, 2
+  size: 20, 33
+  orig: 20, 33
+  offset: 0, 0
+  index: -1
+Pet1095_A/Sleeve f
+  rotate: true
+  xy: 860, 190
+  size: 63, 81
+  orig: 63, 81
+  offset: 0, 0
+  index: -1
+Pet1095_A/Tail
+  rotate: true
+  xy: 764, 289
+  size: 87, 94
+  orig: 87, 94
+  offset: 0, 0
+  index: -1
+Pet1095_A/Waist Deco b
+  rotate: false
+  xy: 543, 2
+  size: 38, 37
+  orig: 38, 37
+  offset: 0, 0
+  index: -1
+Pet1095_A/Waist Deco f
+  rotate: true
+  xy: 974, 972
+  size: 50, 48
+  orig: 50, 48
+  offset: 0, 0
+  index: -1
+Pet1095_A/Weapon b
+  rotate: false
+  xy: 563, 104
+  size: 44, 58
+  orig: 44, 58
+  offset: 0, 0
+  index: -1
+Pet1095_A/Weapon f
+  rotate: true
+  xy: 490, 103
+  size: 59, 71
+  orig: 59, 71
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 987, 478
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+SkillVfx/0
+  rotate: false
+  xy: 2, 472
+  size: 296, 245
+  orig: 296, 245
+  offset: 0, 0
+  index: -1
+SkillVfx/1
+  rotate: true
+  xy: 610, 783
+  size: 239, 275
+  orig: 239, 275
+  offset: 0, 0
+  index: -1
+SkillVfx/2
+  rotate: false
+  xy: 2, 24
+  size: 227, 191
+  orig: 227, 191
+  offset: 0, 0
+  index: -1
+SkillVfx/3
+  rotate: false
+  xy: 307, 785
+  size: 301, 237
+  orig: 301, 237
+  offset: 0, 0
+  index: -1
+SkillVfx/4
+  rotate: false
+  xy: 307, 549
+  size: 268, 234
+  orig: 268, 234
+  offset: 0, 0
+  index: -1
+SkillVfx/5
+  rotate: false
+  xy: 2, 217
+  size: 283, 253
+  orig: 283, 253
+  offset: 0, 0
+  index: -1
+SkillVfx/Ball00
+  rotate: true
+  xy: 864, 338
+  size: 117, 122
+  orig: 117, 122
+  offset: 0, 0
+  index: -1
+SkillVfx/Ball01
+  rotate: false
+  xy: 490, 164
+  size: 117, 122
+  orig: 117, 122
+  offset: 0, 0
+  index: -1
+SkillVfx/Ball02
+  rotate: false
+  xy: 864, 457
+  size: 121, 121
+  orig: 121, 121
+  offset: 0, 0
+  index: -1
+SkillVfx/Ball03
+  rotate: false
+  xy: 609, 169
+  size: 118, 122
+  orig: 118, 122
+  offset: 0, 0
+  index: -1
+SkillVfx/Ball04
+  rotate: true
+  xy: 231, 20
+  size: 108, 122
+  orig: 108, 122
+  offset: 0, 0
+  index: -1
+SkillVfx/Ball05
+  rotate: true
+  xy: 577, 293
+  size: 115, 123
+  orig: 115, 123
+  offset: 0, 0
+  index: -1
+SkillVfx/BallGlow
+  rotate: false
+  xy: 2, 719
+  size: 303, 303
+  orig: 303, 303
+  offset: 0, 0
+  index: -1
+SkillVfx/Charge01_01
+  rotate: false
+  xy: 577, 579
+  size: 197, 202
+  orig: 197, 202
+  offset: 0, 0
+  index: -1
+SkillVfx/Charge01_02
+  rotate: false
+  xy: 577, 410
+  size: 197, 167
+  orig: 197, 167
+  offset: 0, 0
+  index: -1
+SkillVfx/Charge01_03
+  rotate: false
+  xy: 287, 130
+  size: 201, 165
+  orig: 201, 165
+  offset: 0, 0
+  index: -1
+SkillVfx/Charge01_04
+  rotate: true
+  xy: 862, 580
+  size: 195, 143
+  orig: 195, 143
+  offset: 0, 0
+  index: -1
+pinecone
+  rotate: true
+  xy: 860, 255
+  size: 81, 109
+  orig: 81, 109
+  offset: 0, 0
+  index: -1

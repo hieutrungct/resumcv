@@ -1,0 +1,566 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Attack/Atk00
+  rotate: true
+  xy: 436, 387
+  size: 277, 211
+  orig: 277, 211
+  offset: 0, 0
+  index: -1
+Attack/Atk01
+  rotate: true
+  xy: 853, 652
+  size: 370, 133
+  orig: 370, 133
+  offset: 0, 0
+  index: -1
+Attack/Atk02
+  rotate: false
+  xy: 2, 11
+  size: 285, 51
+  orig: 285, 51
+  offset: 0, 0
+  index: -1
+Attack/Atk03
+  rotate: false
+  xy: 436, 305
+  size: 182, 30
+  orig: 182, 30
+  offset: 0, 0
+  index: -1
+Attack/Atk04
+  rotate: false
+  xy: 988, 725
+  size: 30, 42
+  orig: 30, 42
+  offset: 0, 0
+  index: -1
+Attack/ele1
+  rotate: false
+  xy: 850, 550
+  size: 152, 100
+  orig: 152, 100
+  offset: 0, 0
+  index: -1
+Attack/ele2
+  rotate: false
+  xy: 850, 448
+  size: 152, 100
+  orig: 152, 100
+  offset: 0, 0
+  index: -1
+Attack/ele3
+  rotate: false
+  xy: 436, 203
+  size: 152, 100
+  orig: 152, 100
+  offset: 0, 0
+  index: -1
+Attack/ele4
+  rotate: false
+  xy: 423, 101
+  size: 152, 100
+  orig: 152, 100
+  offset: 0, 0
+  index: -1
+Attack/ele5
+  rotate: false
+  xy: 850, 346
+  size: 152, 100
+  orig: 152, 100
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 988, 922
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+Skill/0
+  rotate: false
+  xy: 289, 2
+  size: 112, 97
+  orig: 112, 97
+  offset: 0, 0
+  index: -1
+Skill/1
+  rotate: false
+  xy: 403, 33
+  size: 129, 66
+  orig: 129, 66
+  offset: 0, 0
+  index: -1
+Skill/19
+  rotate: false
+  xy: 308, 289
+  size: 126, 364
+  orig: 126, 364
+  offset: 0, 0
+  index: -1
+Skill/2
+  rotate: true
+  xy: 774, 432
+  size: 125, 74
+  orig: 125, 74
+  offset: 0, 0
+  index: -1
+Skill/20
+  rotate: false
+  xy: 2, 655
+  size: 316, 367
+  orig: 316, 367
+  offset: 0, 0
+  index: -1
+Skill/21
+  rotate: false
+  xy: 320, 666
+  size: 279, 356
+  orig: 279, 356
+  offset: 0, 0
+  index: -1
+Skill/22
+  rotate: false
+  xy: 2, 317
+  size: 304, 336
+  orig: 304, 336
+  offset: 0, 0
+  index: -1
+Skill/23
+  rotate: false
+  xy: 601, 696
+  size: 250, 326
+  orig: 250, 326
+  offset: 0, 0
+  index: -1
+Skill/24
+  rotate: false
+  xy: 2, 64
+  size: 258, 251
+  orig: 258, 251
+  offset: 0, 0
+  index: -1
+Skill/bladeLight
+  rotate: true
+  xy: 749, 242
+  size: 70, 91
+  orig: 70, 91
+  offset: 0, 0
+  index: -1
+Skill/flash
+  rotate: false
+  xy: 661, 248
+  size: 86, 78
+  orig: 86, 78
+  offset: 0, 0
+  index: -1
+Skill/ground0
+  rotate: false
+  xy: 774, 314
+  size: 74, 116
+  orig: 74, 116
+  offset: 0, 0
+  index: -1
+Skill/ground1
+  rotate: false
+  xy: 302, 150
+  size: 119, 137
+  orig: 119, 137
+  offset: 0, 0
+  index: -1
+Skill/ground2
+  rotate: false
+  xy: 649, 420
+  size: 123, 137
+  orig: 123, 137
+  offset: 0, 0
+  index: -1
+Skill/ground3
+  rotate: true
+  xy: 649, 328
+  size: 90, 123
+  orig: 90, 123
+  offset: 0, 0
+  index: -1
+angle_(L)
+  rotate: true
+  xy: 620, 305
+  size: 21, 39
+  orig: 21, 39
+  offset: 0, 0
+  index: -1
+angle_(R)
+  rotate: true
+  xy: 933, 210
+  size: 60, 39
+  orig: 60, 39
+  offset: 0, 0
+  index: -1
+angry_sign
+  rotate: false
+  xy: 666, 23
+  size: 38, 39
+  orig: 38, 39
+  offset: 0, 0
+  index: -1
+armUp_(R)
+  rotate: false
+  xy: 988, 769
+  size: 34, 22
+  orig: 34, 22
+  offset: 0, 0
+  index: -1
+arm_(L)
+  rotate: true
+  xy: 470, 3
+  size: 28, 62
+  orig: 28, 62
+  offset: 0, 0
+  index: -1
+arm_(L)Skill
+  rotate: false
+  xy: 660, 130
+  size: 74, 40
+  orig: 74, 40
+  offset: 0, 0
+  index: -1
+arm_(R)
+  rotate: false
+  xy: 967, 134
+  size: 49, 32
+  orig: 49, 32
+  offset: 0, 0
+  index: -1
+arm_(R)Atk
+  rotate: false
+  xy: 666, 64
+  size: 37, 64
+  orig: 37, 64
+  offset: 0, 0
+  index: -1
+armrest_(L)
+  rotate: true
+  xy: 824, 45
+  size: 41, 36
+  orig: 41, 36
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 769, 81
+  size: 45, 38
+  orig: 45, 38
+  offset: 0, 0
+  index: -1
+bulletSkill
+  rotate: true
+  xy: 1004, 637
+  size: 13, 18
+  orig: 13, 18
+  offset: 0, 0
+  index: -1
+car/armrest_(R)
+  rotate: false
+  xy: 534, 2
+  size: 49, 16
+  orig: 49, 16
+  offset: 0, 0
+  index: -1
+car/car_head
+  rotate: true
+  xy: 838, 136
+  size: 73, 83
+  orig: 73, 83
+  offset: 0, 0
+  index: -1
+car/gas_channel
+  rotate: false
+  xy: 705, 81
+  size: 62, 38
+  orig: 62, 38
+  offset: 0, 0
+  index: -1
+car/leg_step
+  rotate: false
+  xy: 826, 3
+  size: 37, 40
+  orig: 37, 40
+  offset: 0, 0
+  index: -1
+car/seat
+  rotate: false
+  xy: 577, 136
+  size: 81, 37
+  orig: 81, 37
+  offset: 0, 0
+  index: -1
+car/wheel
+  rotate: false
+  xy: 850, 272
+  size: 118, 72
+  orig: 118, 72
+  offset: 0, 0
+  index: -1
+car/wheelVfx
+  rotate: false
+  xy: 1008, 1000
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+chest_n
+  rotate: false
+  xy: 816, 88
+  size: 41, 46
+  orig: 41, 46
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 534, 20
+  size: 79, 42
+  orig: 79, 42
+  offset: 0, 0
+  index: -1
+eye(Close)
+  rotate: false
+  xy: 403, 3
+  size: 65, 28
+  orig: 65, 28
+  offset: 0, 0
+  index: -1
+eye(Hurt)
+  rotate: false
+  xy: 766, 2
+  size: 58, 36
+  orig: 58, 36
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 749, 165
+  size: 87, 75
+  orig: 87, 75
+  offset: 0, 0
+  index: -1
+fire/0
+  rotate: false
+  xy: 578, 28
+  size: 42, 74
+  orig: 42, 74
+  offset: 0, 0
+  index: -1
+fire/1
+  rotate: false
+  xy: 622, 28
+  size: 42, 74
+  orig: 42, 74
+  offset: 0, 0
+  index: -1
+fire/2
+  rotate: false
+  xy: 923, 134
+  size: 42, 74
+  orig: 42, 74
+  offset: 0, 0
+  index: -1
+fire/3
+  rotate: true
+  xy: 736, 121
+  size: 42, 74
+  orig: 42, 74
+  offset: 0, 0
+  index: -1
+front_hair
+  rotate: true
+  xy: 590, 205
+  size: 98, 69
+  orig: 98, 69
+  offset: 0, 0
+  index: -1
+gunSkill
+  rotate: false
+  xy: 661, 172
+  size: 86, 74
+  orig: 86, 74
+  offset: 0, 0
+  index: -1
+hair_back
+  rotate: false
+  xy: 649, 559
+  size: 199, 135
+  orig: 199, 135
+  offset: 0, 0
+  index: -1
+hand(L)Die
+  rotate: true
+  xy: 601, 666
+  size: 28, 34
+  orig: 28, 34
+  offset: 0, 0
+  index: -1
+hand_(L)
+  rotate: false
+  xy: 706, 11
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+hand_(L)Skill
+  rotate: false
+  xy: 988, 652
+  size: 31, 28
+  orig: 31, 28
+  offset: 0, 0
+  index: -1
+hand_(R)
+  rotate: true
+  xy: 892, 67
+  size: 28, 27
+  orig: 28, 27
+  offset: 0, 0
+  index: -1
+hand_(R)Atk
+  rotate: false
+  xy: 862, 65
+  size: 28, 30
+  orig: 28, 30
+  offset: 0, 0
+  index: -1
+jacket_back
+  rotate: false
+  xy: 842, 211
+  size: 89, 59
+  orig: 89, 59
+  offset: 0, 0
+  index: -1
+jacket_back_(L)
+  rotate: true
+  xy: 974, 231
+  size: 64, 41
+  orig: 64, 41
+  offset: 0, 0
+  index: -1
+katana
+  rotate: true
+  xy: 262, 113
+  size: 202, 38
+  orig: 202, 38
+  offset: 0, 0
+  index: -1
+katanaAtk
+  rotate: false
+  xy: 436, 337
+  size: 207, 48
+  orig: 207, 48
+  offset: 0, 0
+  index: -1
+leg_(L)
+  rotate: true
+  xy: 590, 175
+  size: 28, 69
+  orig: 28, 69
+  offset: 0, 0
+  index: -1
+leg_(R)
+  rotate: true
+  xy: 577, 104
+  size: 30, 74
+  orig: 30, 74
+  offset: 0, 0
+  index: -1
+leg_(R)_DECO
+  rotate: false
+  xy: 988, 682
+  size: 26, 41
+  orig: 26, 41
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 423, 266
+  size: 21, 11
+  orig: 21, 11
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: false
+  xy: 974, 212
+  size: 28, 17
+  orig: 28, 17
+  offset: 0, 0
+  index: -1
+mouth3
+  rotate: true
+  xy: 262, 80
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+rope
+  rotate: false
+  xy: 302, 111
+  size: 113, 37
+  orig: 113, 37
+  offset: 0, 0
+  index: -1
+sidehair_(L)
+  rotate: true
+  xy: 967, 168
+  size: 40, 55
+  orig: 40, 55
+  offset: 0, 0
+  index: -1
+sidehair_(R)_A
+  rotate: false
+  xy: 988, 849
+  size: 30, 71
+  orig: 30, 71
+  offset: 0, 0
+  index: -1
+sidehair_(R)_B
+  rotate: false
+  xy: 766, 40
+  size: 56, 39
+  orig: 56, 39
+  offset: 0, 0
+  index: -1
+skirt
+  rotate: false
+  xy: 706, 39
+  size: 58, 40
+  orig: 58, 40
+  offset: 0, 0
+  index: -1
+sode_(L)
+  rotate: true
+  xy: 737, 8
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+sode_(R)Atk
+  rotate: true
+  xy: 970, 297
+  size: 47, 52
+  orig: 47, 52
+  offset: 0, 0
+  index: -1
+sode_(R)_UP
+  rotate: true
+  xy: 988, 793
+  size: 54, 30
+  orig: 54, 30
+  offset: 0, 0
+  index: -1
+sode_(R)_down
+  rotate: false
+  xy: 859, 97
+  size: 45, 37
+  orig: 45, 37
+  offset: 0, 0
+  index: -1

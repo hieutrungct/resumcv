@@ -1,0 +1,475 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A-b Hand
+  rotate: false
+  xy: 875, 264
+  size: 18, 20
+  orig: 18, 20
+  offset: 0, 0
+  index: -1
+A-b arm
+  rotate: true
+  xy: 595, 2
+  size: 35, 33
+  orig: 35, 33
+  offset: 0, 0
+  index: -1
+A-b hair
+  rotate: false
+  xy: 579, 168
+  size: 75, 59
+  orig: 75, 59
+  offset: 0, 0
+  index: -1
+A-b leg
+  rotate: false
+  xy: 657, 2
+  size: 20, 42
+  orig: 20, 42
+  offset: 0, 0
+  index: -1
+A-b leg thick
+  rotate: true
+  xy: 630, 2
+  size: 42, 25
+  orig: 42, 25
+  offset: 0, 0
+  index: -1
+A-b shawl
+  rotate: false
+  xy: 734, 190
+  size: 50, 47
+  orig: 50, 47
+  offset: 0, 0
+  index: -1
+A-b shoulder
+  rotate: true
+  xy: 229, 340
+  size: 18, 31
+  orig: 18, 31
+  offset: 0, 0
+  index: -1
+A-b wing in
+  rotate: false
+  xy: 552, 2
+  size: 41, 24
+  orig: 41, 24
+  offset: 0, 0
+  index: -1
+A-b wing out
+  rotate: false
+  xy: 811, 239
+  size: 25, 37
+  orig: 25, 37
+  offset: 0, 0
+  index: -1
+A-body
+  rotate: false
+  xy: 656, 120
+  size: 43, 55
+  orig: 43, 55
+  offset: 0, 0
+  index: -1
+A-chain long
+  rotate: false
+  xy: 385, 125
+  size: 145, 41
+  orig: 145, 41
+  offset: 0, 0
+  index: -1
+A-chain short
+  rotate: true
+  xy: 286, 2
+  size: 15, 48
+  orig: 15, 48
+  offset: 0, 0
+  index: -1
+A-chest
+  rotate: true
+  xy: 701, 128
+  size: 47, 33
+  orig: 47, 33
+  offset: 0, 0
+  index: -1
+A-eye1
+  rotate: false
+  xy: 828, 286
+  size: 62, 16
+  orig: 62, 16
+  offset: 0, 0
+  index: -1
+A-eye2
+  rotate: false
+  xy: 440, 2
+  size: 52, 13
+  orig: 52, 13
+  offset: 0, 0
+  index: -1
+A-eye3
+  rotate: false
+  xy: 656, 100
+  size: 48, 18
+  orig: 48, 18
+  offset: 0, 0
+  index: -1
+A-f Arm
+  rotate: false
+  xy: 838, 251
+  size: 35, 33
+  orig: 35, 33
+  offset: 0, 0
+  index: -1
+A-f Hand
+  rotate: true
+  xy: 1001, 388
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+A-f Leg
+  rotate: false
+  xy: 552, 28
+  size: 32, 71
+  orig: 32, 71
+  offset: 0, 0
+  index: -1
+A-f hair
+  rotate: true
+  xy: 732, 239
+  size: 37, 77
+  orig: 37, 77
+  offset: 0, 0
+  index: -1
+A-f shawl
+  rotate: true
+  xy: 779, 144
+  size: 44, 39
+  orig: 44, 39
+  offset: 0, 0
+  index: -1
+A-f shoulder
+  rotate: true
+  xy: 336, 2
+  size: 15, 30
+  orig: 15, 30
+  offset: 0, 0
+  index: -1
+A-f wing in
+  rotate: true
+  xy: 586, 39
+  size: 60, 28
+  orig: 60, 28
+  offset: 0, 0
+  index: -1
+A-f wing out
+  rotate: true
+  xy: 1001, 412
+  size: 46, 21
+  orig: 46, 21
+  offset: 0, 0
+  index: -1
+A-hat
+  rotate: false
+  xy: 154, 5
+  size: 130, 102
+  orig: 130, 102
+  offset: 0, 0
+  index: -1
+A-hat fur
+  rotate: false
+  xy: 656, 177
+  size: 43, 57
+  orig: 43, 57
+  offset: 0, 0
+  index: -1
+A-head
+  rotate: false
+  xy: 267, 112
+  size: 116, 64
+  orig: 116, 64
+  offset: 0, 0
+  index: -1
+A-mo1
+  rotate: true
+  xy: 511, 2
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+A-mo2
+  rotate: false
+  xy: 411, 2
+  size: 27, 14
+  orig: 27, 14
+  offset: 0, 0
+  index: -1
+A-shawl down
+  rotate: false
+  xy: 828, 304
+  size: 119, 72
+  orig: 119, 72
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 389, 229
+  size: 162, 128
+  orig: 162, 128
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 428, 359
+  size: 196, 151
+  orig: 196, 151
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 2, 331
+  size: 197, 179
+  orig: 197, 179
+  offset: 0, 0
+  index: -1
+A4
+  rotate: true
+  xy: 389, 168
+  size: 59, 188
+  orig: 59, 188
+  offset: 0, 0
+  index: -1
+B1
+  rotate: true
+  xy: 828, 378
+  size: 132, 171
+  orig: 132, 171
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 626, 365
+  size: 200, 145
+  orig: 200, 145
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 626, 278
+  size: 200, 85
+  orig: 200, 85
+  offset: 0, 0
+  index: -1
+B4
+  rotate: true
+  xy: 154, 109
+  size: 220, 111
+  orig: 220, 111
+  offset: 0, 0
+  index: -1
+Blue arm
+  rotate: false
+  xy: 472, 17
+  size: 78, 78
+  orig: 78, 78
+  offset: 0, 0
+  index: -1
+Blue hand
+  rotate: false
+  xy: 286, 19
+  size: 95, 91
+  orig: 95, 91
+  offset: 0, 0
+  index: -1
+Blue hand back
+  rotate: false
+  xy: 553, 274
+  size: 65, 83
+  orig: 65, 83
+  offset: 0, 0
+  index: -1
+Blue hand_thump
+  rotate: false
+  xy: 661, 52
+  size: 28, 46
+  orig: 28, 46
+  offset: 0, 0
+  index: -1
+Blue shoulder
+  rotate: true
+  xy: 532, 101
+  size: 65, 83
+  orig: 65, 83
+  offset: 0, 0
+  index: -1
+C1
+  rotate: false
+  xy: 2, 104
+  size: 150, 225
+  orig: 150, 225
+  offset: 0, 0
+  index: -1
+C2
+  rotate: true
+  xy: 201, 360
+  size: 150, 225
+  orig: 150, 225
+  offset: 0, 0
+  index: -1
+C3
+  rotate: false
+  xy: 267, 178
+  size: 120, 180
+  orig: 120, 180
+  offset: 0, 0
+  index: -1
+C4
+  rotate: true
+  xy: 2, 2
+  size: 100, 150
+  orig: 100, 150
+  offset: 0, 0
+  index: -1
+Ring
+  rotate: false
+  xy: 617, 100
+  size: 37, 66
+  orig: 37, 66
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 385, 97
+  size: 140, 26
+  orig: 140, 26
+  offset: 0, 0
+  index: -1
+V-b ear
+  rotate: false
+  xy: 786, 190
+  size: 30, 47
+  orig: 30, 47
+  offset: 0, 0
+  index: -1
+V-b hair L
+  rotate: true
+  xy: 383, 18
+  size: 77, 87
+  orig: 77, 87
+  offset: 0, 0
+  index: -1
+V-b hair R
+  rotate: true
+  xy: 553, 229
+  size: 43, 99
+  orig: 43, 99
+  offset: 0, 0
+  index: -1
+V-b hairaccess
+  rotate: false
+  xy: 201, 331
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+V-body shape
+  rotate: true
+  xy: 654, 236
+  size: 40, 76
+  orig: 40, 76
+  offset: 0, 0
+  index: -1
+V-eye1
+  rotate: false
+  xy: 892, 286
+  size: 49, 16
+  orig: 49, 16
+  offset: 0, 0
+  index: -1
+V-eye2
+  rotate: true
+  xy: 1001, 460
+  size: 50, 21
+  orig: 50, 21
+  offset: 0, 0
+  index: -1
+V-eye3
+  rotate: true
+  xy: 818, 191
+  size: 46, 18
+  orig: 46, 18
+  offset: 0, 0
+  index: -1
+V-eye4
+  rotate: false
+  xy: 368, 2
+  size: 41, 14
+  orig: 41, 14
+  offset: 0, 0
+  index: -1
+V-f ear
+  rotate: false
+  xy: 736, 143
+  size: 41, 45
+  orig: 41, 45
+  offset: 0, 0
+  index: -1
+V-f hair access
+  rotate: false
+  xy: 616, 46
+  size: 43, 52
+  orig: 43, 52
+  offset: 0, 0
+  index: -1
+V-head
+  rotate: true
+  xy: 949, 280
+  size: 96, 73
+  orig: 96, 73
+  offset: 0, 0
+  index: -1
+V-mo1
+  rotate: false
+  xy: 229, 331
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+V-mo2
+  rotate: false
+  xy: 494, 2
+  size: 15, 13
+  orig: 15, 13
+  offset: 0, 0
+  index: -1
+V-mo3
+  rotate: false
+  xy: 838, 234
+  size: 26, 15
+  orig: 26, 15
+  offset: 0, 0
+  index: -1
+V-tear
+  rotate: true
+  xy: 736, 129
+  size: 12, 21
+  orig: 12, 21
+  offset: 0, 0
+  index: -1
+V-tear2
+  rotate: false
+  xy: 691, 79
+  size: 10, 19
+  orig: 10, 19
+  offset: 0, 0
+  index: -1
+hat_back
+  rotate: true
+  xy: 701, 177
+  size: 57, 31
+  orig: 57, 31
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,412 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+B Arm
+  rotate: true
+  xy: 991, 439
+  size: 42, 31
+  orig: 42, 31
+  offset: 0, 0
+  index: -1
+B ArmUp
+  rotate: false
+  xy: 996, 935
+  size: 26, 28
+  orig: 26, 28
+  offset: 0, 0
+  index: -1
+B Fur
+  rotate: false
+  xy: 948, 441
+  size: 41, 40
+  orig: 41, 40
+  offset: 0, 0
+  index: -1
+B Leg
+  rotate: false
+  xy: 996, 965
+  size: 26, 57
+  orig: 26, 57
+  offset: 0, 0
+  index: -1
+B Shawl
+  rotate: false
+  xy: 704, 184
+  size: 99, 47
+  orig: 99, 47
+  offset: 0, 0
+  index: -1
+Bag
+  rotate: true
+  xy: 926, 667
+  size: 49, 53
+  orig: 49, 53
+  offset: 0, 0
+  index: -1
+Bag Rope
+  rotate: false
+  xy: 903, 249
+  size: 38, 56
+  orig: 38, 56
+  offset: 0, 0
+  index: -1
+Bag_eye1
+  rotate: false
+  xy: 958, 740
+  size: 27, 23
+  orig: 27, 23
+  offset: 0, 0
+  index: -1
+Bag_eye2
+  rotate: true
+  xy: 804, 544
+  size: 33, 24
+  orig: 33, 24
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 954, 534
+  size: 62, 47
+  orig: 62, 47
+  offset: 0, 0
+  index: -1
+Body Deco
+  rotate: false
+  xy: 543, 695
+  size: 9, 24
+  orig: 9, 24
+  offset: 0, 0
+  index: -1
+Chest
+  rotate: false
+  xy: 948, 483
+  size: 44, 49
+  orig: 44, 49
+  offset: 0, 0
+  index: -1
+Dress L
+  rotate: false
+  xy: 450, 2
+  size: 63, 82
+  orig: 63, 82
+  offset: 0, 0
+  index: -1
+Dress R
+  rotate: true
+  xy: 875, 804
+  size: 40, 82
+  orig: 40, 82
+  offset: 0, 0
+  index: -1
+Eye1
+  rotate: false
+  xy: 954, 583
+  size: 68, 28
+  orig: 68, 28
+  offset: 0, 0
+  index: -1
+Eye2(Close)
+  rotate: true
+  xy: 296, 26
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye2(Hurt)
+  rotate: true
+  xy: 515, 23
+  size: 61, 22
+  orig: 61, 22
+  offset: 0, 0
+  index: -1
+F Arm
+  rotate: false
+  xy: 996, 911
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+F ArmUp
+  rotate: false
+  xy: 958, 718
+  size: 25, 20
+  orig: 25, 20
+  offset: 0, 0
+  index: -1
+F Finger
+  rotate: false
+  xy: 296, 3
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+F Fur
+  rotate: false
+  xy: 958, 765
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+F Hand
+  rotate: false
+  xy: 515, 2
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1
+F leg
+  rotate: true
+  xy: 450, 86
+  size: 32, 91
+  orig: 32, 91
+  offset: 0, 0
+  index: -1
+Fx Star A
+  rotate: false
+  xy: 677, 114
+  size: 23, 42
+  orig: 23, 42
+  offset: 0, 0
+  index: -1
+Fx Star B
+  rotate: false
+  xy: 677, 158
+  size: 25, 41
+  orig: 25, 41
+  offset: 0, 0
+  index: -1
+Fx Star C
+  rotate: true
+  xy: 704, 161
+  size: 21, 41
+  orig: 21, 41
+  offset: 0, 0
+  index: -1
+Hair Side
+  rotate: false
+  xy: 959, 804
+  size: 33, 40
+  orig: 33, 40
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 875, 846
+  size: 176, 119
+  orig: 176, 119
+  offset: 0, 0
+  index: -1
+Head Deco A
+  rotate: true
+  xy: 903, 232
+  size: 15, 33
+  orig: 15, 33
+  offset: 0, 0
+  index: -1
+Head Deco B
+  rotate: false
+  xy: 805, 195
+  size: 16, 36
+  orig: 16, 36
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 753, 366
+  size: 15, 10
+  orig: 15, 10
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: true
+  xy: 804, 386
+  size: 34, 18
+  orig: 34, 18
+  offset: 0, 0
+  index: -1
+Mo3
+  rotate: false
+  xy: 994, 484
+  size: 25, 7
+  orig: 25, 7
+  offset: 0, 0
+  index: -1
+Monster/M_body
+  rotate: false
+  xy: 2, 721
+  size: 553, 301
+  orig: 553, 301
+  offset: 0, 0
+  index: -1
+Monster/M_dropA
+  rotate: true
+  xy: 994, 493
+  size: 39, 28
+  orig: 39, 28
+  offset: 0, 0
+  index: -1
+Monster/M_dropB
+  rotate: false
+  xy: 928, 422
+  size: 21, 13
+  orig: 21, 13
+  offset: 0, 0
+  index: -1
+Monster/M_eye
+  rotate: false
+  xy: 954, 613
+  size: 68, 52
+  orig: 68, 52
+  offset: 0, 0
+  index: -1
+Monster/M_eyeWhite
+  rotate: false
+  xy: 188, 3
+  size: 106, 88
+  orig: 106, 88
+  offset: 0, 0
+  index: -1
+Monster/M_head1
+  rotate: false
+  xy: 2, 407
+  size: 314, 312
+  orig: 314, 312
+  offset: 0, 0
+  index: -1
+Monster/M_head2
+  rotate: false
+  xy: 2, 93
+  size: 314, 312
+  orig: 314, 312
+  offset: 0, 0
+  index: -1
+Monster/M_liquid
+  rotate: true
+  xy: 824, 229
+  size: 76, 77
+  orig: 76, 77
+  offset: 0, 0
+  index: -1
+Monster/M_mouth
+  rotate: false
+  xy: 543, 366
+  size: 208, 211
+  orig: 208, 211
+  offset: 0, 0
+  index: -1
+Pony
+  rotate: true
+  xy: 834, 667
+  size: 130, 90
+  orig: 130, 90
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 928, 437
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+Shawl Chain
+  rotate: true
+  xy: 926, 718
+  size: 84, 30
+  orig: 84, 30
+  offset: 0, 0
+  index: -1
+attack/0
+  rotate: false
+  xy: 543, 201
+  size: 159, 163
+  orig: 159, 163
+  offset: 0, 0
+  index: -1
+attack/1
+  rotate: false
+  xy: 2, 3
+  size: 184, 88
+  orig: 184, 88
+  offset: 0, 0
+  index: -1
+attack/2
+  rotate: true
+  xy: 753, 378
+  size: 199, 49
+  orig: 199, 49
+  offset: 0, 0
+  index: -1
+skill/1
+  rotate: false
+  xy: 834, 539
+  size: 118, 126
+  orig: 118, 126
+  offset: 0, 0
+  index: -1
+skill/2
+  rotate: false
+  xy: 557, 579
+  size: 275, 218
+  orig: 275, 218
+  offset: 0, 0
+  index: -1
+skill/3
+  rotate: true
+  xy: 318, 120
+  size: 287, 223
+  orig: 287, 223
+  offset: 0, 0
+  index: -1
+skill/4
+  rotate: true
+  xy: 318, 409
+  size: 310, 223
+  orig: 310, 223
+  offset: 0, 0
+  index: -1
+skill/5
+  rotate: false
+  xy: 557, 799
+  size: 316, 223
+  orig: 316, 223
+  offset: 0, 0
+  index: -1
+skillFlash/10
+  rotate: false
+  xy: 318, 2
+  size: 130, 116
+  orig: 130, 116
+  offset: 0, 0
+  index: -1
+skillFlash/11
+  rotate: true
+  xy: 824, 307
+  size: 113, 111
+  orig: 113, 111
+  offset: 0, 0
+  index: -1
+skillFlash/7
+  rotate: false
+  xy: 804, 422
+  size: 122, 115
+  orig: 122, 115
+  offset: 0, 0
+  index: -1
+skillFlash/8
+  rotate: true
+  xy: 704, 233
+  size: 131, 118
+  orig: 131, 118
+  offset: 0, 0
+  index: -1
+skillFlash/9
+  rotate: false
+  xy: 543, 79
+  size: 132, 120
+  orig: 132, 120
+  offset: 0, 0
+  index: -1
