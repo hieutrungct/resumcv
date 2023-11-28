@@ -9,11 +9,11 @@ namespace RubikCasual.Combat.Character
     public class CharacterCombatUI : MonoBehaviour
     {
         public int id, idHero;
-        public SkeletonGraphic characterInCombat;
+        public GameObject slotCharacterInCombat;
         public Slider healthSlider;
         public Sprite healthSpriteHero, healthSpriteEnemy;
         public Image fill;
-        public bool isHero, doneTurn;
+        public bool isHero;
 
     }
 
