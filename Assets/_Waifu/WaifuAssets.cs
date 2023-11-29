@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NTPackage;
 using NTPackage.Functions;
+using RubikCasual.Waifu;
 using SimpleJSON;
 using Sirenix.OdinInspector;
 using Spine.Unity;
@@ -37,6 +38,8 @@ namespace Rubik.Waifu
 
         public TextAsset AssetData;
         public List<WaifuAssetData> WaifuAssetDatas;
+        public InfoWaifuAssets infoWaifuAssets;
+        public static WaifuAssets instance;
 
         [Button]
         public override void LoadComponents()
@@ -53,6 +56,7 @@ namespace Rubik.Waifu
 
         protected override void Start()
         {
+            instance = this;
             this.WaifuAssetDatas = new List<WaifuAssetData>();
             this.CacheHolder = new NTDictionary<string, Transform>();
             foreach (JSONNode item in JSON.Parse(this.AssetData.text))
@@ -60,25 +64,26 @@ namespace Rubik.Waifu
                 WaifuAssetData waifuAssetData = JsonUtility.FromJson<WaifuAssetData>(item.ToString());
                 this.WaifuAssetDatas.Add(waifuAssetData);
             }
+            infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("Character").text);
         }
 
         public WaifuSO WaifuSO;
         [Button]
         public void TestGetSO()
         {
-            this.WaifuSO = this.GetWaifuSOByIndex(1.ToString());
+            this.WaifuSO = this.GetWaifuSOByIndex(Random.Range(0, 65).ToString());
         }
         public Transform Holder2D;
         [Button]
         public void TestGet2D()
         {
-            this.Get2D(1.ToString()).transform.SetParent(this.Holder2D);
+            this.Get2D(Random.Range(0, 65).ToString()).transform.SetParent(this.Holder2D);
         }
         public Transform HolderUI;
         [Button]
         public void TestGetUI()
         {
-            this.GetUI(1.ToString(), this.HolderUI);
+            this.GetUI(Random.Range(0, 65).ToString());
         }
 
         public WaifuSO GetWaifuSOByIndex(string index)
