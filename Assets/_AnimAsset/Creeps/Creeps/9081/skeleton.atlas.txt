@@ -1,0 +1,160 @@
+
+skeleton.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: true
+  xy: 120, 20
+  size: 104, 89
+  orig: 104, 89
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 2, 23
+  size: 116, 101
+  orig: 116, 101
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 340, 161
+  size: 117, 93
+  orig: 117, 93
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 211, 6
+  size: 117, 82
+  orig: 117, 82
+  offset: 0, 0
+  index: -1
+B0
+  rotate: false
+  xy: 2, 126
+  size: 176, 66
+  orig: 176, 66
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 2, 194
+  size: 207, 60
+  orig: 207, 60
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 330, 16
+  size: 65, 73
+  orig: 65, 73
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 3
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 316, 91
+  size: 103, 68
+  orig: 103, 68
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 316, 163
+  size: 22, 24
+  orig: 22, 24
+  offset: 0, 0
+  index: -1
+f_foot
+  rotate: false
+  xy: 397, 51
+  size: 22, 38
+  orig: 22, 38
+  offset: 0, 0
+  index: -1
+f_wing
+  rotate: true
+  xy: 211, 189
+  size: 65, 127
+  orig: 65, 127
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 211, 90
+  size: 103, 97
+  orig: 103, 97
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 459, 175
+  size: 31, 79
+  orig: 31, 79
+  offset: 0, 0
+  index: -1
+tail
+  rotate: true
+  xy: 180, 136
+  size: 56, 26
+  orig: 56, 26
+  offset: 0, 0
+  index: -1
+water A
+  rotate: false
+  xy: 330, 2
+  size: 13, 12
+  orig: 13, 12
+  offset: 0, 0
+  index: -1
+water B
+  rotate: false
+  xy: 104, 6
+  size: 11, 15
+  orig: 11, 15
+  offset: 0, 0
+  index: -1
+water C
+  rotate: false
+  xy: 421, 71
+  size: 28, 30
+  orig: 28, 30
+  offset: 0, 0
+  index: -1
+water D
+  rotate: false
+  xy: 456, 133
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+water E
+  rotate: false
+  xy: 421, 103
+  size: 33, 56
+  orig: 33, 56
+  offset: 0, 0
+  index: -1
+water F
+  rotate: true
+  xy: 397, 19
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
+water G
+  rotate: false
+  xy: 459, 154
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1

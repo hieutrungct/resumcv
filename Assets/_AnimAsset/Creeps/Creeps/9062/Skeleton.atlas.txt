@@ -1,0 +1,181 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A1
+  rotate: false
+  xy: 332, 384
+  size: 163, 126
+  orig: 163, 126
+  offset: 0, 0
+  index: -1
+A2
+  rotate: true
+  xy: 157, 143
+  size: 100, 123
+  orig: 100, 123
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 137, 64
+  size: 77, 105
+  orig: 77, 105
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 244, 63
+  size: 64, 78
+  orig: 64, 78
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 364, 153
+  size: 72, 57
+  orig: 72, 57
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 2, 55
+  size: 133, 103
+  orig: 133, 103
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 2, 160
+  size: 153, 172
+  orig: 153, 172
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 2, 334
+  size: 160, 176
+  orig: 160, 176
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 282, 153
+  size: 80, 90
+  orig: 80, 90
+  offset: 0, 0
+  index: -1
+B5
+  rotate: false
+  xy: 164, 355
+  size: 166, 155
+  orig: 166, 155
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: true
+  xy: 440, 218
+  size: 66, 19
+  orig: 66, 19
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: false
+  xy: 371, 130
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: true
+  xy: 463, 318
+  size: 64, 29
+  orig: 64, 29
+  offset: 0, 0
+  index: -1
+Hammer1
+  rotate: false
+  xy: 310, 75
+  size: 59, 76
+  orig: 59, 76
+  offset: 0, 0
+  index: -1
+Hammer2
+  rotate: true
+  xy: 497, 478
+  size: 32, 12
+  orig: 32, 12
+  offset: 0, 0
+  index: -1
+L Hand 1
+  rotate: true
+  xy: 293, 274
+  size: 20, 37
+  orig: 20, 37
+  offset: 0, 0
+  index: -1
+R Hand1
+  rotate: true
+  xy: 67, 11
+  size: 22, 32
+  orig: 22, 32
+  offset: 0, 0
+  index: -1
+R Hand2
+  rotate: true
+  xy: 332, 270
+  size: 14, 30
+  orig: 14, 30
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 35
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 371, 90
+  size: 14, 38
+  orig: 14, 38
+  offset: 0, 0
+  index: -1
+b leg
+  rotate: false
+  xy: 293, 296
+  size: 33, 57
+  orig: 33, 57
+  offset: 0, 0
+  index: -1
+b_Hair
+  rotate: true
+  xy: 332, 286
+  size: 96, 129
+  orig: 96, 129
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 364, 212
+  size: 74, 72
+  orig: 74, 72
+  offset: 0, 0
+  index: -1
+f leg
+  rotate: true
+  xy: 2, 2
+  size: 31, 63
+  orig: 31, 63
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 164, 245
+  size: 127, 108
+  orig: 127, 108
+  offset: 0, 0
+  index: -1

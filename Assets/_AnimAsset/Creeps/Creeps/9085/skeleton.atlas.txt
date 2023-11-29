@@ -1,0 +1,104 @@
+
+skeleton.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Shadow
+  rotate: false
+  xy: 2, 47
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+b coin
+  rotate: false
+  xy: 197, 89
+  size: 101, 65
+  orig: 101, 65
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 197, 156
+  size: 143, 98
+  orig: 143, 98
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 67
+  size: 193, 187
+  orig: 193, 187
+  offset: 0, 0
+  index: -1
+coin1
+  rotate: false
+  xy: 467, 222
+  size: 36, 32
+  orig: 36, 32
+  offset: 0, 0
+  index: -1
+coin2
+  rotate: true
+  xy: 300, 110
+  size: 44, 37
+  orig: 44, 37
+  offset: 0, 0
+  index: -1
+coin3
+  rotate: false
+  xy: 382, 213
+  size: 40, 41
+  orig: 40, 41
+  offset: 0, 0
+  index: -1
+coin4
+  rotate: true
+  xy: 49, 2
+  size: 43, 38
+  orig: 43, 38
+  offset: 0, 0
+  index: -1
+ear1
+  rotate: false
+  xy: 342, 204
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+ear2
+  rotate: true
+  xy: 197, 54
+  size: 33, 35
+  orig: 33, 35
+  offset: 0, 0
+  index: -1
+eye hurt
+  rotate: false
+  xy: 2, 2
+  size: 45, 43
+  orig: 45, 43
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 342, 156
+  size: 35, 46
+  orig: 35, 46
+  offset: 0, 0
+  index: -1
+nose drop
+  rotate: true
+  xy: 339, 110
+  size: 44, 25
+  orig: 44, 25
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 424, 214
+  size: 41, 40
+  orig: 41, 40
+  offset: 0, 0
+  index: -1

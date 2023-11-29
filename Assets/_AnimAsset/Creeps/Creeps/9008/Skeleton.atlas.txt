@@ -1,0 +1,125 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A3
+  rotate: false
+  xy: 2, 310
+  size: 185, 187
+  orig: 185, 187
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 2, 121
+  size: 185, 187
+  orig: 185, 187
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 189, 310
+  size: 185, 187
+  orig: 185, 187
+  offset: 0, 0
+  index: -1
+A6
+  rotate: false
+  xy: 189, 121
+  size: 185, 187
+  orig: 185, 187
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 116, 33
+  size: 88, 86
+  orig: 88, 86
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 405, 269
+  size: 88, 86
+  orig: 88, 86
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 206, 33
+  size: 88, 86
+  orig: 88, 86
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 296, 33
+  size: 88, 86
+  orig: 88, 86
+  offset: 0, 0
+  index: -1
+L horn
+  rotate: true
+  xy: 405, 203
+  size: 64, 79
+  orig: 64, 79
+  offset: 0, 0
+  index: -1
+L horn2
+  rotate: true
+  xy: 459, 160
+  size: 41, 32
+  orig: 41, 32
+  offset: 0, 0
+  index: -1
+Light1
+  rotate: true
+  xy: 116, 19
+  size: 12, 67
+  orig: 12, 67
+  offset: 0, 0
+  index: -1
+Light2
+  rotate: false
+  xy: 386, 78
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+R horn
+  rotate: true
+  xy: 376, 138
+  size: 62, 81
+  orig: 62, 81
+  offset: 0, 0
+  index: -1
+R horn2
+  rotate: false
+  xy: 386, 40
+  size: 47, 36
+  orig: 47, 36
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 376, 202
+  size: 153, 27
+  orig: 153, 27
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 376, 357
+  size: 134, 140
+  orig: 134, 140
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 2, 2
+  size: 112, 117
+  orig: 112, 117
+  offset: 0, 0
+  index: -1

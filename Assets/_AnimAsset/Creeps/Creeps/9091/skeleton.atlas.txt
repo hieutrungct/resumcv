@@ -1,0 +1,167 @@
+
+skeleton.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: false
+  xy: 183, 29
+  size: 49, 32
+  orig: 49, 32
+  offset: 0, 0
+  index: -1
+A10
+  rotate: false
+  xy: 211, 216
+  size: 120, 36
+  orig: 120, 36
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 455, 215
+  size: 49, 37
+  orig: 49, 37
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 195, 103
+  size: 63, 81
+  orig: 63, 81
+  offset: 0, 0
+  index: -1
+A6
+  rotate: true
+  xy: 111, 107
+  size: 77, 82
+  orig: 77, 82
+  offset: 0, 0
+  index: -1
+A7
+  rotate: false
+  xy: 99, 26
+  size: 82, 79
+  orig: 82, 79
+  offset: 0, 0
+  index: -1
+A8
+  rotate: false
+  xy: 111, 186
+  size: 98, 66
+  orig: 98, 66
+  offset: 0, 0
+  index: -1
+A9
+  rotate: false
+  xy: 333, 217
+  size: 120, 35
+  orig: 120, 35
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 2, 42
+  size: 95, 81
+  orig: 95, 81
+  offset: 0, 0
+  index: -1
+BDY
+  rotate: false
+  xy: 260, 112
+  size: 54, 82
+  orig: 54, 82
+  offset: 0, 0
+  index: -1
+HEAD
+  rotate: false
+  xy: 2, 125
+  size: 107, 127
+  orig: 107, 127
+  offset: 0, 0
+  index: -1
+L_Hand
+  rotate: false
+  xy: 183, 63
+  size: 46, 38
+  orig: 46, 38
+  offset: 0, 0
+  index: -1
+L_LEG
+  rotate: true
+  xy: 260, 81
+  size: 29, 53
+  orig: 29, 53
+  offset: 0, 0
+  index: -1
+L_arm
+  rotate: false
+  xy: 234, 24
+  size: 30, 19
+  orig: 30, 19
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 97, 2
+  size: 44, 22
+  orig: 44, 22
+  offset: 0, 0
+  index: -1
+MO
+  rotate: true
+  xy: 234, 45
+  size: 31, 19
+  orig: 31, 19
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 183, 11
+  size: 38, 16
+  orig: 38, 16
+  offset: 0, 0
+  index: -1
+Mo2
+  rotate: false
+  xy: 313, 201
+  size: 19, 13
+  orig: 19, 13
+  offset: 0, 0
+  index: -1
+R_LEG
+  rotate: true
+  xy: 2, 10
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+R_arm
+  rotate: true
+  xy: 143, 2
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+R_hand
+  rotate: true
+  xy: 62, 14
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+SMOKE
+  rotate: false
+  xy: 231, 78
+  size: 27, 23
+  orig: 27, 23
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 211, 196
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1

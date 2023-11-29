@@ -1,0 +1,153 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: true
+  xy: 2, 45
+  size: 105, 152
+  orig: 105, 152
+  offset: 0, 0
+  index: -1
+A1
+  rotate: false
+  xy: 2, 313
+  size: 188, 195
+  orig: 188, 195
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 192, 248
+  size: 127, 126
+  orig: 127, 126
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 156, 2
+  size: 117, 116
+  orig: 117, 116
+  offset: 0, 0
+  index: -1
+A4
+  rotate: false
+  xy: 161, 120
+  size: 127, 126
+  orig: 127, 126
+  offset: 0, 0
+  index: -1
+A5
+  rotate: false
+  xy: 192, 376
+  size: 133, 132
+  orig: 133, 132
+  offset: 0, 0
+  index: -1
+A6
+  rotate: false
+  xy: 327, 380
+  size: 127, 128
+  orig: 127, 128
+  offset: 0, 0
+  index: -1
+A7
+  rotate: false
+  xy: 2, 152
+  size: 157, 159
+  orig: 157, 159
+  offset: 0, 0
+  index: -1
+B0
+  rotate: true
+  xy: 290, 132
+  size: 114, 108
+  orig: 114, 108
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 275, 7
+  size: 105, 111
+  orig: 105, 111
+  offset: 0, 0
+  index: -1
+B2
+  rotate: true
+  xy: 456, 369
+  size: 66, 51
+  orig: 66, 51
+  offset: 0, 0
+  index: -1
+EYE01
+  rotate: false
+  xy: 2, 9
+  size: 45, 14
+  orig: 45, 14
+  offset: 0, 0
+  index: -1
+EYE02
+  rotate: false
+  xy: 104, 25
+  size: 37, 18
+  orig: 37, 18
+  offset: 0, 0
+  index: -1
+HEAD
+  rotate: true
+  xy: 382, 57
+  size: 73, 68
+  orig: 73, 68
+  offset: 0, 0
+  index: -1
+L_Ear
+  rotate: false
+  xy: 321, 309
+  size: 38, 65
+  orig: 38, 65
+  offset: 0, 0
+  index: -1
+L_WING
+  rotate: false
+  xy: 382, 9
+  size: 62, 46
+  orig: 62, 46
+  offset: 0, 0
+  index: -1
+MO
+  rotate: true
+  xy: 321, 255
+  size: 52, 30
+  orig: 52, 30
+  offset: 0, 0
+  index: -1
+R_Ear
+  rotate: false
+  xy: 361, 316
+  size: 38, 62
+  orig: 38, 62
+  offset: 0, 0
+  index: -1
+R_WING
+  rotate: true
+  xy: 456, 437
+  size: 71, 54
+  orig: 71, 54
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 25
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+TAIL
+  rotate: true
+  xy: 161, 259
+  size: 52, 26
+  orig: 52, 26
+  offset: 0, 0
+  index: -1

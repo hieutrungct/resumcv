@@ -1,0 +1,160 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0
+  rotate: false
+  xy: 2, 188
+  size: 239, 152
+  orig: 239, 152
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 2, 342
+  size: 291, 152
+  orig: 291, 152
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 2, 108
+  size: 291, 78
+  orig: 291, 78
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 51
+  size: 275, 55
+  orig: 275, 55
+  offset: 0, 0
+  index: -1
+A1
+  rotate: true
+  xy: 295, 86
+  size: 115, 79
+  orig: 115, 79
+  offset: 0, 0
+  index: -1
+A2
+  rotate: false
+  xy: 295, 346
+  size: 165, 148
+  orig: 165, 148
+  offset: 0, 0
+  index: -1
+A3
+  rotate: false
+  xy: 243, 203
+  size: 102, 137
+  orig: 102, 137
+  offset: 0, 0
+  index: -1
+B_Hair1
+  rotate: false
+  xy: 376, 105
+  size: 64, 123
+  orig: 64, 123
+  offset: 0, 0
+  index: -1
+B_Hair2
+  rotate: false
+  xy: 442, 105
+  size: 64, 123
+  orig: 64, 123
+  offset: 0, 0
+  index: -1
+B_Leg
+  rotate: false
+  xy: 373, 21
+  size: 27, 59
+  orig: 27, 59
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 279, 14
+  size: 71, 70
+  orig: 71, 70
+  offset: 0, 0
+  index: -1
+Eye Close
+  rotate: true
+  xy: 352, 19
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+Eye Hurt
+  rotate: false
+  xy: 376, 82
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1
+Eye Open
+  rotate: true
+  xy: 482, 428
+  size: 66, 25
+  orig: 66, 25
+  offset: 0, 0
+  index: -1
+F_Leg
+  rotate: true
+  xy: 178, 17
+  size: 32, 61
+  orig: 32, 61
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 347, 230
+  size: 114, 100
+  orig: 114, 100
+  offset: 0, 0
+  index: -1
+L hand
+  rotate: true
+  xy: 439, 83
+  size: 20, 38
+  orig: 20, 38
+  offset: 0, 0
+  index: -1
+L hand2
+  rotate: false
+  xy: 347, 205
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+Mo1
+  rotate: false
+  xy: 243, 188
+  size: 18, 13
+  orig: 18, 13
+  offset: 0, 0
+  index: -1
+Mouth open
+  rotate: true
+  xy: 462, 359
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 462, 394
+  size: 100, 18
+  orig: 100, 18
+  offset: 0, 0
+  index: -1
+Weapon
+  rotate: false
+  xy: 2, 2
+  size: 174, 47
+  orig: 174, 47
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,139 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0
+  rotate: false
+  xy: 2, 7
+  size: 115, 69
+  orig: 115, 69
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 189, 183
+  size: 168, 102
+  orig: 168, 102
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 2, 189
+  size: 185, 109
+  orig: 185, 109
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 225, 398
+  size: 185, 109
+  orig: 185, 109
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 78
+  size: 185, 109
+  orig: 185, 109
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 225, 287
+  size: 185, 109
+  orig: 185, 109
+  offset: 0, 0
+  index: -1
+A1
+  rotate: true
+  xy: 414, 90
+  size: 82, 96
+  orig: 82, 96
+  offset: 0, 0
+  index: -1
+A2
+  rotate: true
+  xy: 412, 385
+  size: 122, 96
+  orig: 122, 96
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 412, 261
+  size: 122, 96
+  orig: 122, 96
+  offset: 0, 0
+  index: -1
+A4
+  rotate: true
+  xy: 414, 174
+  size: 85, 96
+  orig: 85, 96
+  offset: 0, 0
+  index: -1
+A5
+  rotate: true
+  xy: 256, 4
+  size: 55, 58
+  orig: 55, 58
+  offset: 0, 0
+  index: -1
+BodyLight
+  rotate: false
+  xy: 316, 17
+  size: 44, 41
+  orig: 44, 41
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 316, 60
+  size: 107, 19
+  orig: 107, 19
+  offset: 0, 0
+  index: -1
+b arm
+  rotate: false
+  xy: 359, 200
+  size: 44, 85
+  orig: 44, 85
+  offset: 0, 0
+  index: -1
+b hand
+  rotate: true
+  xy: 175, 2
+  size: 57, 79
+  orig: 57, 79
+  offset: 0, 0
+  index: -1
+b hand light
+  rotate: false
+  xy: 119, 16
+  size: 54, 60
+  orig: 54, 60
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 300
+  size: 221, 207
+  orig: 221, 207
+  offset: 0, 0
+  index: -1
+f arm
+  rotate: true
+  xy: 189, 61
+  size: 120, 125
+  orig: 120, 125
+  offset: 0, 0
+  index: -1
+f arm light
+  rotate: false
+  xy: 316, 81
+  size: 96, 100
+  orig: 96, 100
+  offset: 0, 0
+  index: -1

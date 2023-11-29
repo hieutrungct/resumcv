@@ -1,0 +1,104 @@
+
+Skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A0
+  rotate: false
+  xy: 418, 112
+  size: 87, 118
+  orig: 87, 118
+  offset: 0, 0
+  index: -1
+A1
+  rotate: true
+  xy: 2, 79
+  size: 123, 137
+  orig: 123, 137
+  offset: 0, 0
+  index: -1
+A2
+  rotate: true
+  xy: 143, 109
+  size: 124, 137
+  orig: 124, 137
+  offset: 0, 0
+  index: -1
+A3
+  rotate: true
+  xy: 2, 204
+  size: 124, 139
+  orig: 124, 139
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 286, 23
+  size: 88, 96
+  orig: 88, 96
+  offset: 0, 0
+  index: -1
+B2
+  rotate: false
+  xy: 282, 121
+  size: 134, 109
+  orig: 134, 109
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 356, 232
+  size: 146, 122
+  orig: 146, 122
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 202, 235
+  size: 152, 125
+  orig: 152, 125
+  offset: 0, 0
+  index: -1
+B5
+  rotate: true
+  xy: 369, 356
+  size: 154, 124
+  orig: 154, 124
+  offset: 0, 0
+  index: -1
+B6
+  rotate: false
+  xy: 141, 9
+  size: 143, 98
+  orig: 143, 98
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 495, 435
+  size: 75, 13
+  orig: 75, 13
+  offset: 0, 0
+  index: -1
+body light
+  rotate: false
+  xy: 2, 330
+  size: 198, 180
+  orig: 198, 180
+  offset: 0, 0
+  index: -1
+f wing1
+  rotate: true
+  xy: 2, 2
+  size: 75, 105
+  orig: 75, 105
+  offset: 0, 0
+  index: -1
+head light
+  rotate: false
+  xy: 202, 362
+  size: 165, 148
+  orig: 165, 148
+  offset: 0, 0
+  index: -1
