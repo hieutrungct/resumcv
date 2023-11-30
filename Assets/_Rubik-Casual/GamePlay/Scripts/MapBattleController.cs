@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class MapBattleController : MonoBehaviour
 {
-    public List<PositionHeroSlot> lsPosHeroSlot, lsPosEnemySlot;
+    public List<ListSlotPos> lsPosEnemySlot;
+    public ListSlotPos lsPosHeroSlot;
     public static MapBattleController instance;
     void Start()
     {

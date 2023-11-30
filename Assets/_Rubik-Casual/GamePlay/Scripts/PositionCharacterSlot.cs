@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace RubikCasual.Battle
 {
-    public class PositionHeroSlot : MonoBehaviour
+    public class PositionCharacterSlot : MonoBehaviour
     {
-
+        public int id;
     }
 
 }

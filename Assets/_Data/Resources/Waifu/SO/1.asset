@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5f4340e26fb7c4187a8ec161995e25, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  FunnyCheck: 1
+  FunnyCheck: 0
   Index: 1
   SkeletonDataAsset: {fileID: 11400000, guid: 1a86c523b9b361c43818ffce1270730e, type: 2}
   OriginScale: {x: -1, y: 1, z: 1}

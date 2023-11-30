@@ -30,7 +30,6 @@ namespace Rubik.Waifu
         public const string Path_Assets_SO = "Assets/_Data/Resources/Waifu/SO";
         public const string Path_Resources_SO = "Waifu/SO";
 
-
         public NTDictionary<string, Transform> CacheHolder;
         public Transform Holder;
 
@@ -38,7 +37,9 @@ namespace Rubik.Waifu
 
         public TextAsset AssetData;
         public List<WaifuAssetData> WaifuAssetDatas;
+
         public InfoWaifuAssets infoWaifuAssets;
+        public List<int> lsIdHero = new List<int>();
         public static WaifuAssets instance;
 
         [Button]
@@ -57,33 +58,51 @@ namespace Rubik.Waifu
         protected override void Start()
         {
             instance = this;
-            this.WaifuAssetDatas = new List<WaifuAssetData>();
+            GetAssets();
             this.CacheHolder = new NTDictionary<string, Transform>();
+            infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("Character").text);
+
+            lsIdHero.Clear();
+            for (int i = 1; i < 66; i++)
+            {
+                try
+                {
+                    SkeletonAnimation WaifuHero = this.Get2D(i.ToString());
+                    lsIdHero.Add(i);
+                }
+                catch (System.Exception)
+                {
+
+                }
+            }
+        }
+        void GetAssets()
+        {
+            this.WaifuAssetDatas = new List<WaifuAssetData>();
+
             foreach (JSONNode item in JSON.Parse(this.AssetData.text))
             {
                 WaifuAssetData waifuAssetData = JsonUtility.FromJson<WaifuAssetData>(item.ToString());
                 this.WaifuAssetDatas.Add(waifuAssetData);
             }
-            infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("Character").text);
         }
-
         public WaifuSO WaifuSO;
         [Button]
-        public void TestGetSO()
+        public void TestGetSO(string index)
         {
-            this.WaifuSO = this.GetWaifuSOByIndex(Random.Range(0, 65).ToString());
+            this.WaifuSO = this.GetWaifuSOByIndex(index);
         }
         public Transform Holder2D;
         [Button]
-        public void TestGet2D()
+        public void TestGet2D(string index)
         {
-            this.Get2D(Random.Range(0, 65).ToString()).transform.SetParent(this.Holder2D);
+            this.Get2D(index).transform.SetParent(this.Holder2D);
         }
         public Transform HolderUI;
         [Button]
-        public void TestGetUI()
+        public void TestGetUI(string index)
         {
-            this.GetUI(Random.Range(0, 65).ToString());
+            this.GetUI(index);
         }
 
         public WaifuSO GetWaifuSOByIndex(string index)
@@ -109,6 +128,7 @@ namespace Rubik.Waifu
                 return null;
             }
         }
+
 
         public SkeletonAnimation Get2D(string index)
         {
@@ -153,6 +173,8 @@ namespace Rubik.Waifu
             skeletonGraphic.Skeleton.SetSkin(waifuSO.Skin);
             return skeletonGraphic;
         }
+
+
 
         public Vector3 GetOriginalScall(string index)
         {
@@ -223,6 +245,7 @@ namespace Rubik.Waifu
                 Selection.activeObject = waifuSO;
             }
         }
+
 #endif
     }
 }

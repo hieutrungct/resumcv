@@ -1,0 +1,1367 @@
+[
+    {
+        "Index": 9001,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9001/9001_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9001",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9002,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9002/9002_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9002",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9003,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9003/9003_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9003",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9004,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9004/9004_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9004",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9005,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9005/9005_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9005",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9006,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9006/9006_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9006",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9007,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9007/9007_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9007",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9008,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9008/9008_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9008",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9009,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9009/9009_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9009",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9010,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9010/9010_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9010",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9011,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9011/9011_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9011",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9012,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9012/9012_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9012",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9013,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9013/9013_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9013",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9014,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9014/9014_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9014",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9015,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9015/9015_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9015",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9016,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9016/9016_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9016",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9017,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9017/9017_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9017",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9018,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9018/9018_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9018",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9019,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9019/9019_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9019",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9020,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9020/9020_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9020",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9021,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9021/9021_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9021",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9022,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9022/9022_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9022",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9023,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9023/9023_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9023",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9024,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9024/9024_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9024",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9025,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9025/9025_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9025",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9026,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9026/9026_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9026",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9027,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9027/9027_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9027",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9028,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9028/9028_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9028",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9029,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9029/9029_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9029",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9030,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9030/9030_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9030",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9031,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9031/9031_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9031",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9032,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9032/9032_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9032",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9033,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9033/9033_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9033",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9034,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9034/9034_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9034",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9035,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9035/9035_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9035",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9036,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9036/9036_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9036",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9037,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9037/9037_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9037",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9038,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9038/9038_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9038",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9039,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9039/9039_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9039",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9040,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9040/9040_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9040",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9041,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9041/9041_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9041",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9042,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9042/9042_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9042",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9043,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9043/9043_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9043",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9044,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9044/9044_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9044",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9045,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9045/9045_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9045",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9046,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9046/9046_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9046",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9047,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9047/9047_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9047",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9049,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9049/9049_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9049",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9050,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9050/9050_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9050",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9051,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9051/9051_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9051",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9052,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9052/9052_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9052",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9053,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9053/9053_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9053",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9054,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9054/9054_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9054",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9055,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9055/9055_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9055",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9056,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9056/9056_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9056",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9057,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9057/9057_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9057",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9058,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9058/9058_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9058",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9059,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9059/9059_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9059",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9060,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9060/9060_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9060",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9061,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9061/9061_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9061",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9062,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9062/9062_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9062",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9063,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9063/9063_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9063",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9064,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9064/9064_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9064",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9065,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9065/9065_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9065",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9066,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9066/9066_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9066",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9067,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9067/9067_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9067",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9068,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9068/9068_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9068",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9069,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9069/9069_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9069",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9070,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9070/9070_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9070",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9071,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9071/9071_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9071",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9072,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9072/9072_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9072",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9073,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9073/9073_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9073",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9074,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9074/9074_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9074",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9075,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9075/9075_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9075",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9076,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9076/9076_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9076",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9077,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9077/9077_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9077",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9078,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9078/9078_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9078",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9079,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9079/9079_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9079",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9080,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9080/9080_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9080",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9081,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9081/9081_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9081",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9082,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9082/9082_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9082",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9083,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9083/9083_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9083",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9084,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9084/9084_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9084",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9085,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9085/9085_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9085",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9086,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9086/9086_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9086",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9087,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9087/9087_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9087",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9088,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9088/9088_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9088",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9089,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9089/9089_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9089",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9090,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9090/9090_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9090",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9091,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9091/9091_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9091",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    },
+    {
+        "Index": 9092,
+        "PathSkeleton": "Assets/_AnimAsset/Creeps/Creeps/9092/9092_SkeletonData.asset",
+        "OriginScale": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        },
+        "Skin": "Pet9092",
+        "Anim_Idle": "Idle",
+        "Anim_Atk": "Attack",
+        "Anim_Die": "Die",
+        "Anim_Atked": "Attacked",
+        "Anim_Skill": "SkillCast"
+    }
+]
