@@ -55,7 +55,7 @@ namespace Rubik.Waifu
             this.Holder = transform.Find("Holder").GetComponent<Transform>();
         }
 
-        protected override void Start()
+        protected override void Awake()
         {
             instance = this;
             GetAssets();
