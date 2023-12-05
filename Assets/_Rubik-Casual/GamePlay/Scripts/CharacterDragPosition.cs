@@ -112,27 +112,16 @@ namespace Rubik.Axie
         //         Rubik_Casual.UI.UIController.Instance.characterInfo.ShowInfo(AxieInit.instance.GetAxieStats(idChar), GameControl.Instance.connectManager.GetChessByID(_ID).Equips, _ID, GetStar());
         //     }
         // }
-        SkeletonAnimation SpawnCharacter(Transform poscharacterInBattle, SkeletonAnimation WaifuCharacter)
-        {
-            SkeletonAnimation character = Instantiate(WaifuCharacter);
-            character.transform.localScale = this.gameObject.transform.localScale / 110f;
-            character.gameObject.transform.SetParent(poscharacterInBattle);
-            character.gameObject.transform.position = poscharacterInBattle.position;
-            character.loop = true;
-            character.AnimationName = "Idle";
 
-            character.gameObject.GetComponent<MeshRenderer>().sortingLayerName = "Character";
-            return character;
-        }
-        SkeletonAnimation character;
+
         public void OnMouseEnter()
         {
-            character = SpawnCharacter(posCharacter, CharacterSke);
+
         }
         public void OnMouseExit()
         {
 
-            Destroy(character.gameObject);
+
         }
         public void RefeshCharacterLayout()
         {
