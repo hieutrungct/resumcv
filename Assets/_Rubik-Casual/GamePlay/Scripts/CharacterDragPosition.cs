@@ -4,6 +4,7 @@ using UnityEngine;
 using Spine.Unity;
 using UnityEngine.EventSystems;
 using Rubik.Waifu;
+using RubikCasual.Battle;
 
 namespace Rubik.Axie
 {
@@ -15,12 +16,12 @@ namespace Rubik.Axie
         public Transform posCharacter;
         public Vector2 oriPos, shopPos;
 
-        private bool dragging = false, isStartDragging = false;
+        private bool dragging = false, isStartDragging = false, isSwap = false;
         public SkeletonAnimation charAnim;
         public int indexOfCharacter;
         // public CardCharacter thisCardCharacter;
         public bool isInDeck = false;
-        public int star;
+        public int star, oriIndex;
         public string idChar, _ID;
         public List<GameObject> lsStars = new List<GameObject>();
         List<GameObject> lsChars = new List<GameObject>();
@@ -138,21 +139,22 @@ namespace Rubik.Axie
         }
         public void OnMouseDrag()
         {
-            // if (!GameControl.Instance.isDragHero)
-            // {
-            //     gameObject.transform.position = oriPos;
-            //     GetComponent<MeshRenderer>().sortingOrder = 10;
-            //     GetComponent<MeshRenderer>().sortingLayerName = "Character";
-            //     return;
-            // }
+            if (BattleController.instance.gameState != GameState.WAIT_BATTLE)
+            {
+                gameObject.transform.position = oriPos;
+                GetComponent<MeshRenderer>().sortingOrder = 10;
+                GetComponent<MeshRenderer>().sortingLayerName = "Character";
+                return;
+            }
 
             //Debug.Log("Draw");
             dragging = true;
-            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            gameObject.transform.position = new Vector2(mouseWorldPosition.x, mouseWorldPosition.y);
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            gameObject.transform.position = new Vector2(mousePosition.x, mousePosition.y);
             GetComponent<MeshRenderer>().sortingOrder = 100;
             GetComponent<MeshRenderer>().sortingLayerName = "Character";
-            // int temp = GameControl.Instance.CheckNearPos(mousePosition);
+            // int temp = GameControl.instance.CheckNearPos(mousePosition);
+
             // if (temp == -1 || GameControl.Instance.gameState == GameState.BATTLE)
             // {
             //     // GameControl.Instance.HeroPos[temp].posImage.sprite = SpriteHelper.Instance.lsPosSprite[1];
@@ -165,9 +167,22 @@ namespace Rubik.Axie
             // }
         }
         bool isOver = false;
-        private void OnMouseOver()
+        private void OnMouseUp()
         {
-
+            // if (!isSwap)
+            // {
+            //     gameObject.transform.position = oriPos;
+            //     GetComponent<MeshRenderer>().sortingOrder = 10;
+            //     GetComponent<MeshRenderer>().sortingLayerName = "Character";
+            //     return;
+            // }
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            int temp = GameControl.instance.CheckNearPos(mousePosition);
+            gameObject.transform.position = oriPos;
+            GameControl.instance.swapCharacter(oriIndex, temp);
+            oriIndex = temp;
+            oriPos = gameObject.transform.position;
+            Debug.Log(oriIndex);
         }
         // public void OnMouseUp()
         // {

@@ -20,6 +20,7 @@ namespace RubikCasual.Battle
         public CharacterInBattle characterInBattle;
         public WaifuAssets waifuAssets;
         public EnemyAssets enemyAssets;
+        public GamePlayUI gamePlayUI;
         public List<SlotInArea> HeroInArea;
         public List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
         const string Anim_Character_Attack = "Attack",
@@ -29,7 +30,8 @@ namespace RubikCasual.Battle
         Anim_Character_Skill = "SkillCast";
         const string Layer_Attack = "Character_Attack", Layer_Attacked = "Character_Attacked";
         bool isEndBattle = false;
-        GameState gameState;
+        public static BattleController instance;
+        public GameState gameState;
         [Button]
         void UpSpeed()
         {
@@ -42,7 +44,8 @@ namespace RubikCasual.Battle
         }
         void Start()
         {
-            gameState = GameState.START;
+            instance = this;
+            gameState = GameState.WAIT_BATTLE;
             CreateBattlefield();
             // Cooldown();
         }
@@ -50,13 +53,19 @@ namespace RubikCasual.Battle
         {
             StartCoroutine(BaseState(gameState));
         }
+
+        public void StartGame()
+        {
+            gameState = GameState.START;
+        }
         IEnumerator BaseState(GameState state)
         {
 
             switch (state)
             {
                 case GameState.START:
-                    yield return new WaitForSeconds(durations * 2);
+
+                    yield return new WaitForSeconds(durations * 10);
                     gameState = GameState.BATTLE;
                     break;
                 case GameState.WAIT_BATTLE:
@@ -102,12 +111,14 @@ namespace RubikCasual.Battle
                 {
                     CharacterInBattle heroInBattle = Instantiate(characterInBattle, posSlot.gameObject.transform);
                     heroInBattle.gameObject.transform.position = posSlot.gameObject.transform.position;
+                    heroInBattle.indexOfSlot = index;
 
                     SkeletonAnimation Hero = SpawnCharacter(heroInBattle.PosCharacter, waifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString()));
 
                     CharacterDragPosition CharacterHero = Hero.gameObject.AddComponent<CharacterDragPosition>();
                     CharacterHero.CharacterSke = waifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString());
                     CharacterHero.posCharacter = posSlot.gameObject.transform;
+                    CharacterHero.oriIndex = index;
                     heroInBattle.skeletonCharacterAnimation = Hero;
                     heroInBattle.infoWaifuAsset = waifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.Index == lsHeroInArea[index].idCharacter);
 
@@ -219,7 +230,7 @@ namespace RubikCasual.Battle
 
                             if (Enemy.cooldownSkillBar.value == 1)
                             {
-                                // CharacterUseSkill();
+                                CharacterUseSkill(Enemy);
                                 Enemy.cooldownSkillBar.value = 0;
                             }
                             else
@@ -262,15 +273,15 @@ namespace RubikCasual.Battle
             }
         }
         float durations = 0.5f;
-        void CompleteAnimation(SkeletonAnimation skeletonAnimation, int layerIndex)
-        {
-            
 
-        }
         void CharacterUseSkill(CharacterInBattle CharacterAttack)
         {
             CharacterAttack.skeletonCharacterAnimation.AnimationName = Anim_Character_Skill;
-            CompleteAnimation(CharacterAttack.skeletonCharacterAnimation, 4);
+            CharacterAttack.skeletonCharacterAnimation.AnimationState.SetAnimation(0, Anim_Character_Skill, false);
+            CharacterAttack.skeletonCharacterAnimation.AnimationState.Complete += delegate
+            {
+                CharacterAttack.skeletonCharacterAnimation.AnimationName = Anim_Character_Idle;
+            };
 
 
 
@@ -294,21 +305,33 @@ namespace RubikCasual.Battle
             CharacterInBattle CharacterInBattleAttacked = CharacterAttacked.GetComponent<CharacterInBattle>();
 
             CharacterAttackAnim.AnimationName = Anim_Character_Attack;
-
+            CharacterAttackAnim.AnimationState.SetAnimation(0, Anim_Character_Attack, false);
+            CharacterAttackAnim.AnimationState.Complete += delegate
+            {
+                CharacterAttackAnim.AnimationName = Anim_Character_Idle;
+            };
             yield return new WaitForSeconds(delay / 2);
             CharacterAttackedAnim.AnimationName = Anim_Charater_Attacked;
-
+            CharacterAttackedAnim.AnimationState.SetAnimation(0, Anim_Charater_Attacked, false);
+            CharacterAttackedAnim.AnimationState.Complete += delegate
+            {
+                CharacterAttackedAnim.AnimationName = Anim_Character_Idle;
+            };
             Calculator.Calculate(CharacterInBattleAttack, CharacterInBattleAttacked);
 
             yield return new WaitForSeconds(delay / 2);
-            CharacterAttackedAnim.AnimationName = Anim_Character_Idle;
-            CharacterAttackAnim.AnimationName = Anim_Character_Idle;
+
+
             if (CharacterInBattleAttacked.HpNow == 0)
             {
                 CharacterAttackedAnim.AnimationName = Anim_Character_Die;
-                CharacterAttack.GetComponent<CharacterInBattle>().isAttack = true;
-                yield return new WaitForSeconds(delay * 3 / 2f);
-                Destroy(CharacterAttacked);
+                CharacterAttackedAnim.AnimationState.SetAnimation(0, Anim_Character_Die, false);
+                CharacterAttackedAnim.AnimationState.Complete += delegate
+                {
+                    CharacterAttack.GetComponent<CharacterInBattle>().isAttack = true;
+                    Destroy(CharacterAttacked);
+                };
+
             }
             else
             {
@@ -410,7 +433,7 @@ namespace RubikCasual.Battle
             SpawnEnemyEndBattle();
             isEndBattle = false;
             isRangeRemoved = false;
-            gameState = GameState.START;
+            gameState = GameState.WAIT_BATTLE;
 
         }
 

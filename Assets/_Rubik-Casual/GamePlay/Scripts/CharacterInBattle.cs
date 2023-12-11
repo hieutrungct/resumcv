@@ -10,6 +10,7 @@ namespace RubikCasual.Battle
 {
     public class CharacterInBattle : MonoBehaviour
     {
+        public int indexOfSlot;
         public InfoWaifuAsset infoWaifuAsset;
         public SkeletonAnimation skeletonCharacterAnimation;
         public float HpNow, Rage;

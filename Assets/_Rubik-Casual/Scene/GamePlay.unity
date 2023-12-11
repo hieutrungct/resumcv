@@ -1568,6 +1568,7 @@ MonoBehaviour:
     idCharacter: 8
   lsSlotGbEnemy: []
   lsSlotGbHero: []
+  gameState: 0
 --- !u!4 &1063408272
 Transform:
   m_ObjectHideFlags: 0
