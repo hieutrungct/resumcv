@@ -169,20 +169,28 @@ namespace Rubik.Axie
         bool isOver = false;
         private void OnMouseUp()
         {
-            // if (!isSwap)
-            // {
-            //     gameObject.transform.position = oriPos;
-            //     GetComponent<MeshRenderer>().sortingOrder = 10;
-            //     GetComponent<MeshRenderer>().sortingLayerName = "Character";
-            //     return;
-            // }
+            if (BattleController.instance.gameState != GameState.WAIT_BATTLE)
+            {
+                gameObject.transform.position = oriPos;
+                GetComponent<MeshRenderer>().sortingOrder = 10;
+                GetComponent<MeshRenderer>().sortingLayerName = "Character";
+                return;
+            }
+            gameObject.transform.position = oriPos;
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             int temp = GameControl.instance.CheckNearPos(mousePosition);
-            gameObject.transform.position = oriPos;
-            GameControl.instance.swapCharacter(oriIndex, temp);
-            oriIndex = temp;
+            Debug.Log(temp);
+            if (temp != -1)
+            {
+                GameControl.instance.swapCharacter(oriIndex, temp);
+                oriIndex = temp;
+            }
+
             oriPos = gameObject.transform.position;
-            Debug.Log(oriIndex);
+
+
+            GetComponent<MeshRenderer>().sortingOrder = 10;
+            GetComponent<MeshRenderer>().sortingLayerName = "Character";
         }
         // public void OnMouseUp()
         // {

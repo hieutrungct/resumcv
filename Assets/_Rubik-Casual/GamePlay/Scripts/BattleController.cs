@@ -51,6 +51,7 @@ namespace RubikCasual.Battle
         }
         void Update()
         {
+            CheckHeroInBattle();
             StartCoroutine(BaseState(gameState));
         }
 
@@ -83,10 +84,23 @@ namespace RubikCasual.Battle
         {
             CreateAreaHeroStart(HeroInArea);
             CreateAreaEnemyStart();
-
-
         }
-
+        void CheckHeroInBattle()
+        {
+            int count = 0;
+            foreach (var item in lsSlotGbHero)
+            {
+                if (item == null)
+                {
+                    count++;
+                }
+            }
+            if (count == 5)
+            {
+                gameState = GameState.WAIT_BATTLE;
+                Debug.Log("Hết Hero");
+            }
+        }
         SkeletonAnimation SpawnCharacter(Transform poscharacterInBattle, SkeletonAnimation WaifuCharacter)
         {
             SkeletonAnimation character = Instantiate(WaifuCharacter);
@@ -130,7 +144,10 @@ namespace RubikCasual.Battle
 
                     lsSlotGbHero.Add(heroInBattle.gameObject);
                 }
-
+                else
+                {
+                    lsSlotGbHero.Add(null);
+                }
 
             }
         }
