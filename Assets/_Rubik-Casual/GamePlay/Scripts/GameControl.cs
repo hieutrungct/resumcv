@@ -12,7 +12,8 @@ namespace RubikCasual.Battle
         START = 0,
         WAIT_BATTLE = 1,
         BATTLE = 2,
-        END = 3
+        END_BATTLE = 3,
+        END = 4
     }
     public class GameControl : MonoBehaviour
     {

@@ -50,6 +50,12 @@ TagManager:
   - name: Character
     uniqueID: 1833684843
     locked: 0
+  - name: Item
+    uniqueID: 3115843749
+    locked: 0
   - name: Map
     uniqueID: 3431834279
+    locked: 0
+  - name: ShowPopup
+    uniqueID: 166257473
     locked: 0

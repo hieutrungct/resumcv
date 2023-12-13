@@ -17,6 +17,7 @@ namespace RubikCasual.Battle
         public Transform PosCharacter;
         public Slider healthBar, cooldownAttackBar, cooldownSkillBar;
         public bool isAttack;
+        public bool isUseSkill;
 
     }
 }
