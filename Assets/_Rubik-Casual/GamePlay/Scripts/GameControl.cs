@@ -40,6 +40,39 @@ namespace RubikCasual.Battle
             }
             return -1;
         }
+        public int CheckItemNearPosHero(Vector2 pos)
+        {
+            int index = 0;
+            foreach (var hero in BattleController.instance.mapBattleController.lsPosHeroSlot.lsPosCharacterSlot)
+            {
+                // CharacterInBattle hero = gbhero.GetComponent<CharacterInBattle>();
+                if (pos.x < hero.transform.position.x + 1f && pos.x > hero.transform.position.x - 1f && pos.y < hero.transform.position.y + 3f && pos.y > hero.transform.position.y )
+                {
+                    //Debug.Log(pos);
+                    return index;
+                }
+                index++;
+            }
+            return -1;
+        }
+        public int CheckItemNearPosEnemy(Vector2 pos)
+        {
+            int index = 0;
+            for (int i = 0; i < BattleController.instance.mapBattleController.lsPosEnemySlot.Count; i++)
+            {
+                foreach (var Enemy in BattleController.instance.mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot)
+                {
+                    // CharacterInBattle hero = gbhero.GetComponent<CharacterInBattle>();
+                    if (pos.x < Enemy.transform.position.x + 1f && pos.x > Enemy.transform.position.x - 1f && pos.y < Enemy.transform.position.y + 3f && pos.y > Enemy.transform.position.y )
+                    {
+                        //Debug.Log(pos);
+                        return index;
+                    }
+                    index++;
+                }
+            }
+            return -1;
+        }
         public void swapCharacter(int indexOri, int indexSwap)
         {
             MapBattleController map = BattleController.instance.mapBattleController;

@@ -349,7 +349,7 @@ namespace RubikCasual.Battle
                             {
                                 AnimEnemy.AnimationName = Anim_Character_Idle;
                             };
-                            Calculator.Calculate(CharacterAttack, lsSlotGbEnemy[count].GetComponent<CharacterInBattle>());
+                            Calculator.CalculateHealth(CharacterAttack, lsSlotGbEnemy[count].GetComponent<CharacterInBattle>());
                         }
                     }
 
@@ -388,7 +388,7 @@ namespace RubikCasual.Battle
             {
                 CharacterAttackedAnim.AnimationName = Anim_Character_Idle;
             };
-            Calculator.Calculate(CharacterInBattleAttack, CharacterInBattleAttacked);
+            Calculator.CalculateHealth(CharacterInBattleAttack, CharacterInBattleAttacked);
 
             yield return new WaitForSeconds(delay / 2);
 

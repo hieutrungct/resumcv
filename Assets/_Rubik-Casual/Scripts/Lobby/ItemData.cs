@@ -5,6 +5,12 @@ using System;
 using System.Linq;
 namespace RubikCasual.DailyItem
 {
+    public enum TypeItem
+    {
+        None = 0,
+        Heal = 1,
+        Poison = 2,
+    }
     [CreateAssetMenu(fileName = "NewlistItem", menuName = "ScriptableObject/listItem")]
     public class ItemData : ScriptableObject
     {
@@ -19,8 +25,9 @@ namespace RubikCasual.DailyItem
     {
         public int id;
         public string name;
-        public string Skin;
+        public TypeItem type;
         public int numberItem;
+        public int Dame;
         public Sprite imageItem;
     }
     [Serializable]

@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using RubikCasual.DailyItem;
+using RubikCasual.Lobby;
 using UnityEngine;
 
 namespace RubikCasual.Battle.Calculate
 {
     public class Calculator
     {
-        public static void Calculate(CharacterInBattle CharacterInBattleAttack, CharacterInBattle CharacterInBattleAttacked)
+        public static void CalculateHealth(CharacterInBattle CharacterInBattleAttack, CharacterInBattle CharacterInBattleAttacked)
         {
             CharacterInBattleAttacked.HpNow = HealthAmount(CharacterInBattleAttack.infoWaifuAsset.DmgPhysic, CharacterInBattleAttacked.HpNow, CharacterInBattleAttacked.infoWaifuAsset.Def);
             CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
@@ -20,6 +24,22 @@ namespace RubikCasual.Battle.Calculate
                 HealthAttacked = 0;
             }
             return HealthAttacked;
+        }
+        public static void CheckItemCalculate(int idItem, CharacterInBattle CharacterInBattleAttacked)
+        {
+            infoItem infoItem = UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem);
+            string Type = infoItem.type.ToString();
+            switch (Type)
+            {
+                case "Heal":
+                    CharacterInBattleAttacked.HpNow = HealthAmount(-infoItem.Dame, CharacterInBattleAttacked.HpNow, 0);
+                    CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
+                    break;
+                case "Poison":
+                    CharacterInBattleAttacked.HpNow = HealthAmount(infoItem.Dame, CharacterInBattleAttacked.HpNow, 0);
+                    CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
+                    break;
+            }
         }
     }
 }

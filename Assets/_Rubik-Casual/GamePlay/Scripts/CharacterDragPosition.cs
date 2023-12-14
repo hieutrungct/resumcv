@@ -179,7 +179,7 @@ namespace Rubik.Axie
             gameObject.transform.position = oriPos;
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             int temp = GameControl.instance.CheckNearPos(mousePosition);
-            Debug.Log(temp);
+            // Debug.Log(temp);
             if (temp != -1)
             {
                 GameControl.instance.swapCharacter(oriIndex, temp);

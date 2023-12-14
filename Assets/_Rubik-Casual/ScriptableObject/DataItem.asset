@@ -15,29 +15,64 @@ MonoBehaviour:
   InfoItems:
   - id: 1
     name: Coins
-    Skin: 
+    type: 0
     numberItem: 0
+    Dame: 0
     imageItem: {fileID: 21300000, guid: ffe128a5f047f43d9a494e099634504e, type: 3}
   - id: 2
     name: Gems
-    Skin: 
+    type: 0
     numberItem: 0
+    Dame: 0
     imageItem: {fileID: 21300000, guid: 8661490d01fe14ee3a29db3d39f643fd, type: 3}
   - id: 3
     name: Energy
-    Skin: 
+    type: 0
     numberItem: 0
+    Dame: 0
     imageItem: {fileID: 21300000, guid: 2a395c4f5dd914dd2b50468e92772309, type: 3}
   - id: 4
     name: Boxing
-    Skin: 
+    type: 0
     numberItem: 0
+    Dame: 0
     imageItem: {fileID: 21300000, guid: 7f5077902f34e4dcda6e69df4ced83a7, type: 3}
   - id: 5
     name: Book
-    Skin: 
+    type: 0
     numberItem: 0
+    Dame: 0
     imageItem: {fileID: 21300000, guid: 949f7004ed54344bebb60dbafccfa660, type: 3}
+  - id: 6
+    name: Potion_Mana
+    type: 1
+    numberItem: 0
+    Dame: 10
+    imageItem: {fileID: 21300000, guid: bee99074e3aaa4f10b57618376e3c07a, type: 3}
+  - id: 7
+    name: Potion_Hp
+    type: 1
+    numberItem: 0
+    Dame: 12
+    imageItem: {fileID: 21300000, guid: 793419d20ed1c4c928ffd26adec2578e, type: 3}
+  - id: 8
+    name: Potion_Hp2
+    type: 2
+    numberItem: 0
+    Dame: 14
+    imageItem: {fileID: 21300000, guid: af5433a9a526248eb8b87c0b514b9a00, type: 3}
+  - id: 9
+    name: Potion_Hp3
+    type: 1
+    numberItem: 0
+    Dame: 16
+    imageItem: {fileID: 21300000, guid: 5a0d82360083945039a386d0b8ed300f, type: 3}
+  - id: 10
+    name: 
+    type: 2
+    numberItem: 0
+    Dame: 18
+    imageItem: {fileID: 21300000, guid: 9f43c6911bfdb489fad5cd24622b5182, type: 3}
   daySlots:
   - idItem: 1
     numberItemBonus: 500

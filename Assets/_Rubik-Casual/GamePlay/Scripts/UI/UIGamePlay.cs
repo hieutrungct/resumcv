@@ -8,8 +8,15 @@ namespace RubikCasual.Battle.UI
     public class UIGamePlay : MonoBehaviour
     {
         public PopupContinue popupContinue;
+        public InventorryUIPanel inventorryUIPanel;
+        public GameObject TxtDame;
         public Canvas canvasUIGamePlay;
+        public static UIGamePlay instance;
         const string Name_Sorting_Layer = "ShowPopup", Name_Sorting_Layer_origin = "Battle";
+        void Awake()
+        {
+            instance = this;
+        }
         void Start()
         {
             ClickBtnContinue();
@@ -18,6 +25,7 @@ namespace RubikCasual.Battle.UI
         {
 
             ShowPopupContinue();
+            ShowInventory();
         }
         void ShowPopupContinue()
         {
@@ -25,6 +33,18 @@ namespace RubikCasual.Battle.UI
             {
                 canvasUIGamePlay.sortingLayerName = Name_Sorting_Layer;
                 popupContinue.gameObject.SetActive(true);
+            }
+        }
+        void ShowInventory()
+        {
+            if (BattleController.instance.gameState == GameState.WAIT_BATTLE)
+            {
+                canvasUIGamePlay.sortingLayerName = Name_Sorting_Layer;
+                inventorryUIPanel.gameObject.SetActive(true);
+            }
+            else
+            {
+                inventorryUIPanel.gameObject.SetActive(false);
             }
         }
         void ClickBtnContinue()
