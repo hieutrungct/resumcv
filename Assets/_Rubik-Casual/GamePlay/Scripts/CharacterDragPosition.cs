@@ -149,10 +149,20 @@ namespace Rubik.Axie
 
             //Debug.Log("Draw");
             dragging = true;
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            gameObject.transform.position = new Vector2(mousePosition.x, mousePosition.y);
+            if (!dragging) return;
+
+            // Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            if (dragging)
+            {
+                Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f);
+                Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                Vector3 newPos = objPosition + offset;
+                transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime * moveSpeed);
+                // transform.position = newPos;
+            }
             GetComponent<MeshRenderer>().sortingOrder = 100;
-            GetComponent<MeshRenderer>().sortingLayerName = "Character";
+            GetComponent<MeshRenderer>().sortingLayerName = "ShowPopup";
             // int temp = GameControl.instance.CheckNearPos(mousePosition);
 
             // if (temp == -1 || GameControl.Instance.gameState == GameState.BATTLE)
@@ -166,6 +176,15 @@ namespace Rubik.Axie
             //     GameControl.Instance.HightlightInPos(temp, SpriteHelper.Instance.lsPosSprite[1]);
             // }
         }
+        private void OnMouseDown()
+        {
+            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f);
+            Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            offset = transform.position - objPosition;
+            dragging = true;
+        }
+        private Vector3 offset;
+        float moveSpeed = 20f;
         bool isOver = false;
         private void OnMouseUp()
         {
@@ -176,21 +195,22 @@ namespace Rubik.Axie
                 GetComponent<MeshRenderer>().sortingLayerName = "Character";
                 return;
             }
+
+
+            int temp = GameControl.instance.CheckNearPos(gameObject.transform.position);
             gameObject.transform.position = oriPos;
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            int temp = GameControl.instance.CheckNearPos(mousePosition);
             // Debug.Log(temp);
             if (temp != -1)
             {
                 GameControl.instance.swapCharacter(oriIndex, temp);
                 oriIndex = temp;
+                oriPos = gameObject.transform.position;
             }
-
-            oriPos = gameObject.transform.position;
 
 
             GetComponent<MeshRenderer>().sortingOrder = 10;
             GetComponent<MeshRenderer>().sortingLayerName = "Character";
+            dragging = false;
         }
         // public void OnMouseUp()
         // {

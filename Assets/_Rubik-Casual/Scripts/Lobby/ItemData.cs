@@ -10,6 +10,7 @@ namespace RubikCasual.DailyItem
         None = 0,
         Heal = 1,
         Poison = 2,
+        Mana = 3,
     }
     [CreateAssetMenu(fileName = "NewlistItem", menuName = "ScriptableObject/listItem")]
     public class ItemData : ScriptableObject

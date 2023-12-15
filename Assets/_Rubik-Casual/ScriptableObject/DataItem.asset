@@ -45,7 +45,7 @@ MonoBehaviour:
     imageItem: {fileID: 21300000, guid: 949f7004ed54344bebb60dbafccfa660, type: 3}
   - id: 6
     name: Potion_Mana
-    type: 1
+    type: 3
     numberItem: 0
     Dame: 10
     imageItem: {fileID: 21300000, guid: bee99074e3aaa4f10b57618376e3c07a, type: 3}

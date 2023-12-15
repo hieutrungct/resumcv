@@ -7,6 +7,7 @@ using RubikCasual.Lobby;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using RubikCasual.Tool;
 namespace RubikCasual.Battle.Inventory
 {
     public class ItemDragPosition : MonoBehaviour
@@ -55,7 +56,7 @@ namespace RubikCasual.Battle.Inventory
                         if (UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Heal")
                         {
                             Calculator.CheckItemCalculate(idItem, BattleController.instance.lsSlotGbEnemy[indexCheckEnemy].GetComponent<CharacterInBattle>());
-                            StartCoroutine(ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
+                            StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
                         }
                         else
                         {
@@ -73,7 +74,7 @@ namespace RubikCasual.Battle.Inventory
                     if (UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Poison")
                     {
                         Calculator.CheckItemCalculate(idItem, BattleController.instance.lsSlotGbHero[indexCheckHero].GetComponent<CharacterInBattle>());
-                        StartCoroutine(ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
+                        StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
                     }
                     else
                     {
@@ -85,35 +86,7 @@ namespace RubikCasual.Battle.Inventory
             }
         }
         float duration = 0.5f, valueMoveTxtDame = 0.5f;
-        IEnumerator ShowTxtDame(GameObject gb, GameObject gbTxtDame, Vector3 posTxtDame, float DameItem, string typeItem)
-        {
-            switch (typeItem)
-            {
-                case "Heal":
-                    GameObject txtDame = Instantiate(gbTxtDame, gb.transform);
-                    txtDame.transform.position = new Vector2(posTxtDame.x, posTxtDame.y);
-                    txtDame.GetComponent<TextMeshProUGUI>().text = "+" + DameItem.ToString();
-                    txtDame.GetComponent<TextMeshProUGUI>().color = Color.green;
-                    txtDame.transform.DOMoveY(valueMoveTxtDame * 1.1f, duration);
-                    gb.GetComponent<SlotInventory>().Icon.GetComponent<UnityEngine.UI.Image>().enabled = false;
-                    yield return new WaitForSeconds(duration);
-                    Destroy(txtDame);
-                    Destroy(gb);
-                    break;
 
-                case "Poison":
-                    GameObject txtDame2 = Instantiate(gbTxtDame, gb.transform);
-                    txtDame2.transform.position = new Vector2(posTxtDame.x, posTxtDame.y);
-                    txtDame2.GetComponent<TextMeshProUGUI>().text = "-" + DameItem.ToString();
-                    txtDame2.GetComponent<TextMeshProUGUI>().color = Color.red;
-                    txtDame2.transform.DOMoveY(valueMoveTxtDame, duration);
-                    gb.GetComponent<SlotInventory>().Icon.GetComponent<UnityEngine.UI.Image>().enabled = false;
-                    yield return new WaitForSeconds(duration);
-                    Destroy(txtDame2);
-                    Destroy(gb);
-                    break;
-            }
-        }
     }
 
 }

@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 namespace RubikCasual.Tool
 {
     public class MovePopup : MonoBehaviour
     {
-        static float durations = 0.5f;
+        static float durations = 0.5f, valueMoveTxtDame = 0.5f;
         private static MovePopup instance;
         void Start()
         {
@@ -28,6 +29,58 @@ namespace RubikCasual.Tool
         {
             yield return new WaitForSeconds(delay);
             gbTagetclone.SetActive(false);
+        }
+        public static IEnumerator ShowTxtDame(GameObject gbParentClone, GameObject gbTxtDame, Vector3 posTxtDame, float DameItem, string typeItem)
+        {
+            switch (typeItem)
+            {
+                case "Heal":
+                    GameObject txtDame = Instantiate(gbTxtDame, gbParentClone.transform);
+                    txtDame.transform.position = new Vector2(posTxtDame.x, posTxtDame.y);
+                    txtDame.GetComponent<TextMeshProUGUI>().text = "+" + DameItem.ToString();
+                    txtDame.GetComponent<TextMeshProUGUI>().color = Color.green;
+                    // Debug.Log(txtDame.transform.position.y);
+
+                    txtDame.transform.DOMoveY(txtDame.transform.position.y + valueMoveTxtDame, durations);
+
+                    gbParentClone.GetComponent<SlotInventory>().Icon.GetComponent<UnityEngine.UI.Image>().enabled = false;
+                    yield return new WaitForSeconds(durations);
+
+                    Destroy(txtDame);
+                    Destroy(gbParentClone);
+                    break;
+
+                case "Poison":
+                    GameObject txtDame2 = Instantiate(gbTxtDame, gbParentClone.transform);
+                    txtDame2.transform.position = new Vector2(posTxtDame.x, posTxtDame.y);
+                    txtDame2.GetComponent<TextMeshProUGUI>().text = "-" + DameItem.ToString();
+                    txtDame2.GetComponent<TextMeshProUGUI>().color = Color.red;
+                    // Debug.Log(txtDame2.transform.position.y);
+
+                    txtDame2.transform.DOMoveY(txtDame2.transform.position.y + valueMoveTxtDame, durations);
+
+                    gbParentClone.GetComponent<SlotInventory>().Icon.GetComponent<UnityEngine.UI.Image>().enabled = false;
+                    yield return new WaitForSeconds(durations);
+
+                    Destroy(txtDame2);
+                    Destroy(gbParentClone);
+                    break;
+                case "Mana":
+                    GameObject txtDame3 = Instantiate(gbTxtDame, gbParentClone.transform);
+                    txtDame3.transform.position = new Vector2(posTxtDame.x, posTxtDame.y);
+                    txtDame3.GetComponent<TextMeshProUGUI>().text = "+" + DameItem.ToString();
+                    txtDame3.GetComponent<TextMeshProUGUI>().color = Color.yellow;
+                    // Debug.Log(txtDame2.transform.position.y);
+
+                    txtDame3.transform.DOMoveY(txtDame3.transform.position.y + valueMoveTxtDame, durations);
+
+                    gbParentClone.GetComponent<SlotInventory>().Icon.GetComponent<UnityEngine.UI.Image>().enabled = false;
+                    yield return new WaitForSeconds(durations);
+
+                    Destroy(txtDame3);
+                    Destroy(gbParentClone);
+                    break;
+            }
         }
     }
 }

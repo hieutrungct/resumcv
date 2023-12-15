@@ -12,6 +12,7 @@ namespace RubikCasual.Battle.Calculate
     {
         public static void CalculateHealth(CharacterInBattle CharacterInBattleAttack, CharacterInBattle CharacterInBattleAttacked)
         {
+
             CharacterInBattleAttacked.HpNow = HealthAmount(CharacterInBattleAttack.infoWaifuAsset.DmgPhysic, CharacterInBattleAttacked.HpNow, CharacterInBattleAttacked.infoWaifuAsset.Def);
             CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
 
@@ -25,6 +26,7 @@ namespace RubikCasual.Battle.Calculate
             }
             return HealthAttacked;
         }
+
         public static void CheckItemCalculate(int idItem, CharacterInBattle CharacterInBattleAttacked)
         {
             infoItem infoItem = UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem);
@@ -38,6 +40,10 @@ namespace RubikCasual.Battle.Calculate
                 case "Poison":
                     CharacterInBattleAttacked.HpNow = HealthAmount(infoItem.Dame, CharacterInBattleAttacked.HpNow, 0);
                     CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
+                    break;
+                case "Mana":
+                    float valueOldCooldownSkillBar = CharacterInBattleAttacked.cooldownSkillBar.value;
+                    CharacterInBattleAttacked.cooldownSkillBar.value = valueOldCooldownSkillBar + infoItem.Dame / 100f;
                     break;
             }
         }
