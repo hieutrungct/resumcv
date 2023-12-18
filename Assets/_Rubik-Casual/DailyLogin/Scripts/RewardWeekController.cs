@@ -19,7 +19,6 @@ namespace RubikCasual.RewardWeek
         public Transform slotDay7Transform;
         public GameObject CloseBtn, dailyLoginItem, day7LoginBonus;
         public bool checkCloseBtn = false;
-        bool check = false;
         List<DailyLoginItem> listDailyLoginItems = new List<DailyLoginItem>();
         Day7LoginBonus lastDayLoginBonnus = new Day7LoginBonus();
         int curentTime;

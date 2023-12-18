@@ -17,7 +17,6 @@ namespace RubikCasual.Battle
     }
     public class GameControl : MonoBehaviour
     {
-        float duaration = 10f;
 
         public static GameControl instance;
 
@@ -46,7 +45,7 @@ namespace RubikCasual.Battle
             foreach (var hero in BattleController.instance.mapBattleController.lsPosHeroSlot.lsPosCharacterSlot)
             {
                 // CharacterInBattle hero = gbhero.GetComponent<CharacterInBattle>();
-                if (pos.x < hero.transform.position.x + 1f && pos.x > hero.transform.position.x - 1f && pos.y < hero.transform.position.y + 3f && pos.y > hero.transform.position.y )
+                if (pos.x < hero.transform.position.x + 1f && pos.x > hero.transform.position.x - 1f && pos.y < hero.transform.position.y + 3f && pos.y > hero.transform.position.y)
                 {
                     //Debug.Log(pos);
                     return index;
@@ -63,7 +62,7 @@ namespace RubikCasual.Battle
                 foreach (var Enemy in BattleController.instance.mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot)
                 {
                     // CharacterInBattle hero = gbhero.GetComponent<CharacterInBattle>();
-                    if (pos.x < Enemy.transform.position.x + 1f && pos.x > Enemy.transform.position.x - 1f && pos.y < Enemy.transform.position.y + 3f && pos.y > Enemy.transform.position.y )
+                    if (pos.x < Enemy.transform.position.x + 1f && pos.x > Enemy.transform.position.x - 1f && pos.y < Enemy.transform.position.y + 3f && pos.y > Enemy.transform.position.y)
                     {
                         //Debug.Log(pos);
                         return index;

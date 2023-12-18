@@ -50,6 +50,12 @@ TagManager:
   - name: Character
     uniqueID: 1833684843
     locked: 0
+  - name: Character_Attacked
+    uniqueID: 787228575
+    locked: 0
+  - name: Character_Attack
+    uniqueID: 1007127865
+    locked: 0
   - name: Item
     uniqueID: 3115843749
     locked: 0

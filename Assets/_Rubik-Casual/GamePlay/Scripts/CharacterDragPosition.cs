@@ -16,7 +16,7 @@ namespace Rubik.Axie
         public Transform posCharacter;
         public Vector2 oriPos, shopPos;
 
-        private bool dragging = false, isStartDragging = false, isSwap = false;
+        private bool dragging = false;
         public SkeletonAnimation charAnim;
         public int indexOfCharacter;
         // public CardCharacter thisCardCharacter;
@@ -24,7 +24,6 @@ namespace Rubik.Axie
         public int star, oriIndex;
         public string idChar, _ID;
         public List<GameObject> lsStars = new List<GameObject>();
-        List<GameObject> lsChars = new List<GameObject>();
         // public ChessData_AAC chessInfo;
         void Start()
         {
@@ -185,7 +184,6 @@ namespace Rubik.Axie
         }
         private Vector3 offset;
         float moveSpeed = 20f;
-        bool isOver = false;
         private void OnMouseUp()
         {
             if (BattleController.instance.gameState != GameState.WAIT_BATTLE)

@@ -28,8 +28,7 @@ namespace RubikCasual.StageLevel
         public ItemData itemdata;
         public StageDataController stageDataController;
         public EnemyDataController enemyDataController;
-        int idStage, count = 0;
-        bool isCreateLevelDone;
+        int idStage;
         GameObject stageLevelClone;
         public static StageLevelController instance;
 
@@ -183,7 +182,7 @@ namespace RubikCasual.StageLevel
 
                 listLevelUIClone.Add(levelUIClone);
             }
-            isCreateLevelDone = true;
+            
         }
         void createInfoLevel(int idInfoLevel, int idStage)
         {

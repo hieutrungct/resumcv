@@ -1,15 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Spine;
 using Spine.Unity;
 using Spine.Unity.Editor;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-using System;
-using Spine.Unity;
 
 namespace Rubik_Casual
 {

@@ -85,7 +85,7 @@ namespace RubikCasual.Battle.Inventory
                 }
             }
         }
-        float duration = 0.5f, valueMoveTxtDame = 0.5f;
+       
 
     }
 
