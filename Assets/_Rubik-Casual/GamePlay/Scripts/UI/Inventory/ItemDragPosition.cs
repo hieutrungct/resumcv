@@ -14,6 +14,7 @@ namespace RubikCasual.Battle.Inventory
     {
         public Vector2 oriPos;
         public int idItem;
+        float duration = 0.5f, valueAnother = 0.5f;
         public InventorryUIPanel inventorryUI;
         void Start()
         {
@@ -23,7 +24,9 @@ namespace RubikCasual.Battle.Inventory
         {
             if (BattleController.instance.gameState != GameState.WAIT_BATTLE)
             {
+                GetComponent<SlotInventory>().Icon.transform.DOComplete();
                 gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
+                GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
                 return;
             }
 
@@ -32,8 +35,10 @@ namespace RubikCasual.Battle.Inventory
             gameObject.transform.SetParent(inventorryUI.lsSlotInventory[inventorryUI.lsSlotInventory.Count - 1].transform);
             // int temp = GameControl.instance.CheckNearPos(mousePosition);
         }
+
         public void OnMouseUp()
         {
+            GetComponent<SlotInventory>().Icon.transform.DOComplete();
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             oriPos = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
@@ -47,6 +52,7 @@ namespace RubikCasual.Battle.Inventory
                 if (indexCheckEnemy == -1)
                 {
                     gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
+                    GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
                     return;
                 }
                 else
@@ -61,6 +67,7 @@ namespace RubikCasual.Battle.Inventory
                         else
                         {
                             gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
+                            GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
                             return;
                         }
 
@@ -79,13 +86,20 @@ namespace RubikCasual.Battle.Inventory
                     else
                     {
                         gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
+                        GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
                         return;
                     }
 
                 }
+                else
+                {
+                    gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
+                    GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
+
+                }
             }
         }
-       
+
 
     }
 
