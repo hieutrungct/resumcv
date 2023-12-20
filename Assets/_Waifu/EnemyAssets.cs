@@ -237,6 +237,7 @@ namespace Rubik.Waifu
                 waifuSO.Anim_Die = item.Anim_Die;
                 waifuSO.Anim_Atked = item.Anim_Atked;
                 waifuSO.Anim_Skill = item.Anim_Skill;
+                waifuSO.Is_Boss = item.Is_Boss;
                 AssetDatabase.CreateAsset(waifuSO, path);
                 AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();

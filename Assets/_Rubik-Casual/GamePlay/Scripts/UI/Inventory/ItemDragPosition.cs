@@ -14,7 +14,7 @@ namespace RubikCasual.Battle.Inventory
     {
         public Vector2 oriPos;
         public int idItem;
-        float duration = 0.5f, valueAnother = 0.5f;
+        float duration = 0.5f, valueAnother = 0.1f;
         public InventorryUIPanel inventorryUI;
         void Start()
         {

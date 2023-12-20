@@ -2772,7 +2772,7 @@ MonoBehaviour:
   mapBattleController: {fileID: 639942834}
   dameSlotTxtController: {fileID: 989974086}
   HeroInBattle: {fileID: 395090608089745406, guid: 1546607ea83eefb41ab4a76d5319b6b8, type: 3}
-  EnemyInBattle: {fileID: 395090608089745406, guid: a4bf1fb372a2e32419dc75354d9e9da7, type: 3}
+  EnemyInBattle: {fileID: 395090608089745406, guid: 5ad320a0311ddef44986f5c1cf3db390, type: 3}
   waifuAssets: {fileID: 1652840438}
   enemyAssets: {fileID: 85634323}
   gamePlayUI: {fileID: 1418891507}
@@ -2791,6 +2791,7 @@ MonoBehaviour:
   lsSlotGbHero: []
   isUpdateDmgEnemy: 0
   gameState: 0
+  OldDmgPhysicUpdate: 10
 --- !u!4 &1063408272
 Transform:
   m_ObjectHideFlags: 0

@@ -22,3 +22,4 @@ MonoBehaviour:
   Anim_Die: Die
   Anim_Atked: Attacked
   Anim_Skill: SkillCast
+  Is_Boss: 0
