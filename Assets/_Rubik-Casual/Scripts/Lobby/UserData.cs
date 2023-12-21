@@ -9,32 +9,26 @@ using UnityEngine;
 namespace RubikCasual.Lobby
 {
     [Serializable]
-    public class Data
+    public class InfoUserData
     {
         public string UserName, UserId;
         public float Gold, Gem, Level, Energy, Hp, Exp, Rank;
         public List<float> lsIdSlotCharacter = new List<float>();
-        public bool isChange = false;
     }
     public class UserData : MonoBehaviour
     {
-        public Data data;
+        public InfoUserData data;
         public ItemData itemData;
         public Rubik_Casual.CharacterInfo characterInfo;
         public static UserData instance;
         void Awake()
         {
             instance = this;
-            DontDestroyOnLoad(this);
-
+            setData();
         }
         void Update()
         {
-            if (data.lsIdSlotCharacter != itemData.lsIdSlotSetupCharacter)
-            {
-                setData();
 
-            }
         }
         void setData()
         {
@@ -43,7 +37,7 @@ namespace RubikCasual.Lobby
             data.Gem = itemData.datalobby.FirstOrDefault(f => f.name == "Gems").numberItem;
             data.Energy = itemData.datalobby.FirstOrDefault(f => f.name == "Energy").numberItem;
             data.lsIdSlotCharacter = itemData.lsIdSlotSetupCharacter;
-            data.isChange = true;
+
         }
     }
 }

@@ -8,5 +8,6 @@ namespace RubikCasual.Battle.UI
     public class PopupContinue : MonoBehaviour
     {
         public Button btnContinue;
+        
     }
 }

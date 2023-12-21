@@ -25,11 +25,11 @@ namespace RubikCasual.Lobby
         }
         void Update()
         {
-            if (userData.data.isChange)
-            {
-                SetUpSlotStart();
-                userData.data.isChange = false;
-            }
+            // if (userData.data.isChange)
+            // {
+            //     SetUpSlotStart();
+            //     userData.data.isChange = false;
+            // }
         }
         void SetUpSlotStart()
         {
