@@ -9,7 +9,7 @@ using Spine.Unity;
 using UnityEditor;
 using UnityEngine;
 
-namespace Rubik.Waifu
+namespace RubikCasual.Data.Waifu
 {
     [System.Serializable]
     public class WaifuAssetData
@@ -23,7 +23,6 @@ namespace Rubik.Waifu
         public string Anim_Die;
         public string Anim_Atked;
         public string Anim_Skill;
-        public bool Is_Boss;
     }
 
     public class WaifuAssets : NTBehaviour
@@ -61,7 +60,7 @@ namespace Rubik.Waifu
             instance = this;
             GetAssets();
             this.CacheHolder = new NTDictionary<string, Transform>();
-            infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("Character").text);
+            infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoWaifuAssets").text);
 
             lsIdHero.Clear();
             for (int i = 1; i < 66; i++)

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Rubik.Waifu;
 using RubikCasual.Waifu;
 using Spine.Unity;
 using UnityEngine;

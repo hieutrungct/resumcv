@@ -1,7 +1,7 @@
 using Spine.Unity;
 using UnityEngine;
 
-namespace Rubik.Waifu
+namespace RubikCasual.Waifu
 {
     [CreateAssetMenu(fileName = "NewWaifuSO", menuName = "ScriptableObject/WaifuSO/New WaifuSO", order = 0)]
     public class WaifuSO : ScriptableObject

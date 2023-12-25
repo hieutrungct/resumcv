@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
 using UnityEngine.EventSystems;
-using Rubik.Waifu;
 using RubikCasual.Battle;
 
 namespace Rubik.Axie

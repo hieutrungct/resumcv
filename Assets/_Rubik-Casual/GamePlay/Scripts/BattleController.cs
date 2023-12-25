@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using DG.Tweening;
 using Rubik.Axie;
-using Rubik.Waifu;
 using RubikCasual.Battle.Calculate;
 using RubikCasual.Battle.Inventory;
 using RubikCasual.Battle.UI;
+using RubikCasual.Data.Waifu;
 using RubikCasual.Lobby;
 using RubikCasual.Tool;
 using Sirenix.OdinInspector;
@@ -168,7 +168,7 @@ namespace RubikCasual.Battle
                     CharacterHero.posCharacter = posSlot.gameObject.transform;
                     CharacterHero.oriIndex = index;
                     heroInBattle.skeletonCharacterAnimation = Hero;
-                    heroInBattle.infoWaifuAsset = waifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.Index == lsHeroInArea[index].idCharacter);
+                    heroInBattle.infoWaifuAsset = waifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == lsHeroInArea[index].idCharacter);
 
                     heroInBattle.cooldownAttackBar.value = 0;
                     heroInBattle.cooldownSkillBar.value = 0;
@@ -239,7 +239,7 @@ namespace RubikCasual.Battle
                         enemyInBattle.Rage = 0;
                         enemyInBattle.HpNow = 300f;
                         enemyInBattle.infoWaifuAsset.HP = 300f;
-                        enemyInBattle.infoWaifuAsset.DmgPhysic = 10f;
+                        enemyInBattle.infoWaifuAsset.ATK = 10f;
                         lsSlotGbEnemy.Add(enemyInBattle.gameObject);
                     }
                     else
@@ -696,7 +696,7 @@ namespace RubikCasual.Battle
             }
 
         }
-        public float OldDmgPhysicUpdate = 10f;
+        public float OldATKUpdate = 10f;
         void SpawnEnemyEndBattle()
         {
             if (lsSlotGbEnemy.Count < 25)
@@ -738,18 +738,18 @@ namespace RubikCasual.Battle
                             enemyInBattle.Rage = 0;
                             enemyInBattle.HpNow = 300f;
                             enemyInBattle.infoWaifuAsset.HP = 300f;
-                            enemyInBattle.infoWaifuAsset.DmgPhysic = OldDmgPhysicUpdate;
+                            enemyInBattle.infoWaifuAsset.ATK = OldATKUpdate;
                             // for (int j = 0; j < 5; j++)
                             // {
-                            //     enemyInBattle.infoWaifuAsset.DmgPhysic = lsSlotGbEnemy[19].GetComponent<CharacterInBattle>().infoWaifuAsset.DmgPhysic;
+                            //     enemyInBattle.infoWaifuAsset.ATK = lsSlotGbEnemy[19].GetComponent<CharacterInBattle>().infoWaifuAsset.ATK;
                             // }
 
                             if (CountState % 2 == 0)
                             {
 
-                                enemyInBattle.infoWaifuAsset.DmgPhysic = OldDmgPhysicUpdate * 2;
+                                enemyInBattle.infoWaifuAsset.ATK = OldATKUpdate * 2;
 
-                                // UnityEngine.Debug.Log(enemyInBattle.infoWaifuAsset.DmgPhysic);
+                                // UnityEngine.Debug.Log(enemyInBattle.infoWaifuAsset.ATK);
                             }
                             lsSlotGbEnemy.Add(enemyInBattle.gameObject);
                         }
@@ -778,7 +778,7 @@ namespace RubikCasual.Battle
                     }
                     if (CountState % 2 == 0)
                     {
-                        OldDmgPhysicUpdate = OldDmgPhysicUpdate * 2;
+                        OldATKUpdate = OldATKUpdate * 2;
                     }
                 }
                 else
@@ -812,12 +812,12 @@ namespace RubikCasual.Battle
                             enemyBossInBattle.Rage = 0;
                             enemyBossInBattle.HpNow = 300f;
                             enemyBossInBattle.infoWaifuAsset.HP = 300f;
-                            enemyBossInBattle.infoWaifuAsset.DmgPhysic = OldDmgPhysicUpdate;
+                            enemyBossInBattle.infoWaifuAsset.ATK = OldATKUpdate;
 
                             if ((CountState + mapBattleController.lsPosEnemySlot.Count) % 10 == 0)
                             {
 
-                                enemyBossInBattle.infoWaifuAsset.DmgPhysic = OldDmgPhysicUpdate * 2;
+                                enemyBossInBattle.infoWaifuAsset.ATK = OldATKUpdate * 2;
 
                             }
                             lsSlotGbEnemy.Add(enemyBossInBattle.gameObject);

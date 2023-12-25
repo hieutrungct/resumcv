@@ -9,7 +9,7 @@ using Spine.Unity;
 using UnityEditor;
 using UnityEngine;
 
-namespace Rubik.Waifu
+namespace RubikCasual.Data.Waifu
 {
     [System.Serializable]
     public class EnemyAssetData
@@ -23,6 +23,7 @@ namespace Rubik.Waifu
         public string Anim_Die;
         public string Anim_Atked;
         public string Anim_Skill;
+        public bool Is_Boss;
     }
 
     public class EnemyAssets : NTBehaviour
@@ -36,9 +37,10 @@ namespace Rubik.Waifu
         public NTDictionary<string, WaifuSO> WaifuSODic;
 
         public TextAsset AssetEnemyData;
-        public List<WaifuAssetData> WaifuEnemyAssetDatas;
+        public List<EnemyAssetData> WaifuEnemyAssetDatas;
 
         public List<int> lsIdEnemy = new List<int>();
+        public InfoWaifuAssets infoEnemyAssets;
         public static EnemyAssets instance;
 
         [Button]
@@ -59,6 +61,7 @@ namespace Rubik.Waifu
             instance = this;
             GetAssets();
             this.CacheHolder = new NTDictionary<string, Transform>();
+            // infoEnemyAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoEnemyAssets").text);
 
             lsIdEnemy.Clear();
             for (int i = 9001; i < 9093; i++)
@@ -76,12 +79,12 @@ namespace Rubik.Waifu
         }
         void GetAssets()
         {
-            this.WaifuEnemyAssetDatas = new List<WaifuAssetData>();
+            this.WaifuEnemyAssetDatas = new List<EnemyAssetData>();
 
 
             foreach (JSONNode item in JSON.Parse(this.AssetEnemyData.text))
             {
-                WaifuAssetData waifuEnemyAssetData = JsonUtility.FromJson<WaifuAssetData>(item.ToString());
+                EnemyAssetData waifuEnemyAssetData = JsonUtility.FromJson<EnemyAssetData>(item.ToString());
                 this.WaifuEnemyAssetDatas.Add(waifuEnemyAssetData);
             }
         }
@@ -223,7 +226,7 @@ namespace Rubik.Waifu
         [Button]
         public void LoadSOE()
         {
-            foreach (WaifuAssetData item in this.WaifuEnemyAssetDatas)
+            foreach (EnemyAssetData item in this.WaifuEnemyAssetDatas)
             {
                 string path = Path_Assets_SOE + "/" + item.Index + ".asset";
                 WaifuSO waifuSO = AssetDatabase.LoadAssetAtPath<WaifuSO>(Path_Assets_SOE);

@@ -13,7 +13,7 @@ namespace RubikCasual.Battle.Calculate
         public static void CalculateHealth(CharacterInBattle CharacterInBattleAttack, CharacterInBattle CharacterInBattleAttacked)
         {
 
-            CharacterInBattleAttacked.HpNow = HealthAmount(CharacterInBattleAttack.infoWaifuAsset.DmgPhysic, CharacterInBattleAttacked.HpNow, CharacterInBattleAttacked.infoWaifuAsset.Def);
+            CharacterInBattleAttacked.HpNow = HealthAmount(CharacterInBattleAttack.infoWaifuAsset.ATK, CharacterInBattleAttacked.HpNow, CharacterInBattleAttacked.infoWaifuAsset.DEF);
             CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
 
         }

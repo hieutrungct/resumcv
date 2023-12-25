@@ -14,31 +14,32 @@ namespace Rubik.Axie
 
         void Update()
         {
-            NamePNG = skeletonAnimation.initialSkinName.Replace("Pet", "");
+            string[] lsName = skeletonAnimation.skeletonDataAsset.name.Split("_");
+
+            if (lsName.Length == 4)
+            {
+                if (skeletonAnimation.initialSkinName == (lsName[0] + "_" + lsName[1]))
+                {
+                    NamePNG = skeletonAnimation.initialSkinName.Replace("Pet", "");
+                }
+                else
+                {
+
+                    NamePNG = lsName[0] + "_" + lsName[1];
+                }
+
+            }
+            else
+            {
+                NamePNG = skeletonAnimation.initialSkinName.Replace("Pet", "");
+            }
+
+
+
         }
         public TMP_InputField txtName;
-        // [Button]
-        // public void Capture()
-        // {
-        //     Camera Cam = GetComponent<Camera>();
-
-        //     RenderTexture currentRT = RenderTexture.active;
-        //     RenderTexture.active = Cam.targetTexture;
-
-        //     Cam.Render();
-
-        //     Texture2D Image = new Texture2D(Cam.targetTexture.width, Cam.targetTexture.height);
-        //     Image.ReadPixels(new Rect(0, 0, Cam.targetTexture.width, Cam.targetTexture.height), 0, 0);
-        //     Image.Apply();
-        //     RenderTexture.active = currentRT;
-
-        //     var Bytes = Image.EncodeToPNG();
-        //     Destroy(Image);
-
-        //     File.WriteAllBytes(Application.dataPath + "/CamCapture/" + NamePNG + ".png", Bytes);
-        // }
         [Button]
-        public void CaptureCreep()
+        public void Capture()
         {
             Camera Cam = GetComponent<Camera>();
 
@@ -55,8 +56,28 @@ namespace Rubik.Axie
             var Bytes = Image.EncodeToPNG();
             Destroy(Image);
 
-            File.WriteAllBytes(Application.dataPath + "/CamCapture/Creeps/" + NamePNG + ".png", Bytes);
+            File.WriteAllBytes(Application.dataPath + "/CamCapture/Waifu/" + NamePNG + ".png", Bytes);
         }
+        // [Button]
+        // public void CaptureCreep()
+        // {
+        //     Camera Cam = GetComponent<Camera>();
+
+        //     RenderTexture currentRT = RenderTexture.active;
+        //     RenderTexture.active = Cam.targetTexture;
+
+        //     Cam.Render();
+
+        //     Texture2D Image = new Texture2D(Cam.targetTexture.width, Cam.targetTexture.height);
+        //     Image.ReadPixels(new Rect(0, 0, Cam.targetTexture.width, Cam.targetTexture.height), 0, 0);
+        //     Image.Apply();
+        //     RenderTexture.active = currentRT;
+
+        //     var Bytes = Image.EncodeToPNG();
+        //     Destroy(Image);
+
+        //     File.WriteAllBytes(Application.dataPath + "/CamCapture/Creeps/" + NamePNG + ".png", Bytes);
+        // }
         // [Button]
         // public void CaptureBoss()
         // {
