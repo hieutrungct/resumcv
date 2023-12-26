@@ -3177,7 +3177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2693401d4d211f04ba5437343c05e4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  funnyCheck: 0
   userData:
     UserName: 
     UserId: 
@@ -3846,6 +3845,7 @@ MonoBehaviour:
   playerData: {fileID: 0}
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   characterAssets: {fileID: 0}
+  AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
 --- !u!114 &1652840438 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 777755366826034196, guid: 303af4a49e647f64e99f097895c4d260, type: 3}
