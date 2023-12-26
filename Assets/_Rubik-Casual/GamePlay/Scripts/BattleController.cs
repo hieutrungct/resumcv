@@ -7,6 +7,8 @@ using Rubik.Axie;
 using RubikCasual.Battle.Calculate;
 using RubikCasual.Battle.Inventory;
 using RubikCasual.Battle.UI;
+using RubikCasual.Data;
+using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
 using RubikCasual.Lobby;
 using RubikCasual.Tool;
@@ -15,7 +17,6 @@ using Spine;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace RubikCasual.Battle
@@ -27,6 +28,7 @@ namespace RubikCasual.Battle
         public WaifuAssets waifuAssets;
         public EnemyAssets enemyAssets;
         public GamePlayUI gamePlayUI;
+        public PlayerAssetsLoader playerAssetsLoader;
         public List<SlotInArea> HeroInArea;
         public List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
         const string Anim_Character_Attack = "Attack",
@@ -39,7 +41,7 @@ namespace RubikCasual.Battle
         Layer_Character = "Character";
         bool isEndBattle = false, isRangeRemoved = false;
         public bool isUpdateDmgEnemy = false;
-        int CountState = 1;
+        int CountState = 1, numberSlot = 5;
         public static BattleController instance;
         public GameState gameState;
         [Button]
@@ -56,7 +58,7 @@ namespace RubikCasual.Battle
         {
             instance = this;
             gameState = GameState.WAIT_BATTLE;
-            CreateBattlefield();
+            StartCoroutine(CreateBattlefield());
             // Cooldown();
         }
         void Update()
@@ -76,7 +78,8 @@ namespace RubikCasual.Battle
         public void ResetGame()
         {
             CountState = 1;
-            CreateBattlefield();
+            CreateAreaHeroStart(HeroInArea);
+            CreateAreaEnemyStart();
 
         }
 
@@ -91,25 +94,42 @@ namespace RubikCasual.Battle
                 case GameState.WAIT_BATTLE:
 
                     gamePlayUI.txtTime.text = CountState.ToString();
-                    yield return new WaitForSeconds(durations * 2);
-                    UpdateHpBarEnemyForState(true);
                     break;
                 case GameState.BATTLE:
                     Atack();
                     break;
                 case GameState.END_BATTLE:
-
+                    UnityEngine.Debug.Log("End Battle");
                     EndBattleMoveCharacter();
-
+                    yield return new WaitForSeconds(durations * 2);
+                    UpdateHpBarEnemyForState(true);
                     break;
                 case GameState.END:
 
                     break;
             }
         }
-        void CreateBattlefield()
+        public List<float> lsIdTeam = new List<float>();
+        IEnumerator CreateBattlefield()
         {
+            yield return new WaitForSeconds(0.25f);
+            HeroInArea.Clear();
+            lsIdTeam = DataController.instance.playerData.userData.CurentTeam;
 
+            for (int i = 0; i < numberSlot; i++)
+            {
+                SlotInArea slotInArea = new SlotInArea();
+                if (lsIdTeam.Count > i)
+                {
+                    slotInArea.idCharacter = lsIdTeam[i];
+                }
+                else
+                {
+                    slotInArea.idCharacter = 0;
+                }
+                slotInArea.slotCharacter = i + 1;
+                HeroInArea.Add(slotInArea);
+            }
             CreateAreaHeroStart(HeroInArea);
             CreateAreaEnemyStart();
         }
@@ -231,15 +251,14 @@ namespace RubikCasual.Battle
 
                         enemyInBattle.gameObject.transform.localScale = new Vector3(-enemyInBattle.gameObject.transform.localScale.x, enemyInBattle.gameObject.transform.localScale.y, enemyInBattle.gameObject.transform.localScale.z);
                         enemyInBattle.skeletonCharacterAnimation = Enemy;
+                        enemyInBattle.infoWaifuAsset = enemyAssets.infoEnemyAssets.lsInfoWaifuAssets.Find(f => f.Code == enemyAssets.lsIdEnemy[indexRand]);
 
 
                         enemyInBattle.cooldownAttackBar.value = 0;
                         enemyInBattle.cooldownSkillBar.value = 0;
                         enemyInBattle.healthBar.value = 1;
                         enemyInBattle.Rage = 0;
-                        enemyInBattle.HpNow = 300f;
-                        enemyInBattle.infoWaifuAsset.HP = 300f;
-                        enemyInBattle.infoWaifuAsset.ATK = 10f;
+                        enemyInBattle.HpNow = enemyInBattle.infoWaifuAsset.HP;
                         lsSlotGbEnemy.Add(enemyInBattle.gameObject);
                     }
                     else
@@ -256,7 +275,7 @@ namespace RubikCasual.Battle
                             ItemClone.transform.position = new Vector3(ItemClone.transform.position.x, ItemClone.transform.position.y + durations, ItemClone.transform.position.z);
                             SlotInventory Item = ItemClone.GetComponent<SlotInventory>();
                             Item.idItem = Item.lsIdItem[randIdItem];
-                            Item.Icon.GetComponent<Image>().sprite = UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == Item.lsIdItem[randIdItem]).imageItem;
+                            Item.Icon.GetComponent<Image>().sprite = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == Item.lsIdItem[randIdItem]).imageItem;
 
                             Destroy(ItemClone.GetComponent<ItemDragPosition>());
                             lsSlotGbEnemy.Add(ItemClone);
@@ -678,7 +697,7 @@ namespace RubikCasual.Battle
             {
                 int idItem = gb.GetComponent<SlotInventory>().idItem;
                 Calculator.CheckItemCalculate(idItem, lsSlotGbHero[i].GetComponent<CharacterInBattle>());
-                StartCoroutine(MovePopup.ShowTxtDame(gb, UIGamePlay.instance.TxtDame, mapBattleController.lsPosHeroSlot.lsPosCharacterSlot[i].transform.position, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
+                StartCoroutine(MovePopup.ShowTxtDame(gb, UIGamePlay.instance.TxtDame, mapBattleController.lsPosHeroSlot.lsPosCharacterSlot[i].transform.position, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
                 if (lsSlotGbHero[i].GetComponent<CharacterInBattle>().HpNow <= 0)
                 {
                     SkeletonAnimation heroAnim = lsSlotGbHero[i].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
@@ -696,7 +715,7 @@ namespace RubikCasual.Battle
             }
 
         }
-        public float OldATKUpdate = 10f;
+        public float OldATKUpdate = 5f;
         void SpawnEnemyEndBattle()
         {
             if (lsSlotGbEnemy.Count < 25)
@@ -730,14 +749,14 @@ namespace RubikCasual.Battle
 
                             enemyInBattle.gameObject.transform.localScale = new Vector3(-enemyInBattle.gameObject.transform.localScale.x, enemyInBattle.gameObject.transform.localScale.y, enemyInBattle.gameObject.transform.localScale.z);
                             enemyInBattle.skeletonCharacterAnimation = Enemy;
+                            enemyInBattle.infoWaifuAsset = enemyAssets.infoEnemyAssets.lsInfoWaifuAssets.Find(f => f.Code == enemyAssets.lsIdEnemy[indexRand]);
 
 
                             enemyInBattle.cooldownAttackBar.value = 0;
                             enemyInBattle.cooldownSkillBar.value = 0;
                             enemyInBattle.healthBar.value = 1;
                             enemyInBattle.Rage = 0;
-                            enemyInBattle.HpNow = 300f;
-                            enemyInBattle.infoWaifuAsset.HP = 300f;
+                            enemyInBattle.HpNow = enemyInBattle.infoWaifuAsset.HP;
                             enemyInBattle.infoWaifuAsset.ATK = OldATKUpdate;
                             // for (int j = 0; j < 5; j++)
                             // {
@@ -747,7 +766,7 @@ namespace RubikCasual.Battle
                             if (CountState % 2 == 0)
                             {
 
-                                enemyInBattle.infoWaifuAsset.ATK = OldATKUpdate * 2;
+                                enemyInBattle.infoWaifuAsset.ATK = OldATKUpdate * 1.1f;
 
                                 // UnityEngine.Debug.Log(enemyInBattle.infoWaifuAsset.ATK);
                             }
@@ -767,7 +786,7 @@ namespace RubikCasual.Battle
                                 ItemClone.transform.position = new Vector3(ItemClone.transform.position.x, ItemClone.transform.position.y + durations, ItemClone.transform.position.z);
                                 SlotInventory Item = ItemClone.GetComponent<SlotInventory>();
                                 Item.idItem = Item.lsIdItem[randIdItem];
-                                Item.Icon.GetComponent<Image>().sprite = UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == Item.lsIdItem[randIdItem]).imageItem;
+                                Item.Icon.GetComponent<Image>().sprite = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == Item.lsIdItem[randIdItem]).imageItem;
 
                                 Destroy(ItemClone.GetComponent<ItemDragPosition>());
                                 lsSlotGbEnemy.Add(ItemClone);
@@ -778,7 +797,7 @@ namespace RubikCasual.Battle
                     }
                     if (CountState % 2 == 0)
                     {
-                        OldATKUpdate = OldATKUpdate * 2;
+                        OldATKUpdate = OldATKUpdate * 1.1f;
                     }
                 }
                 else
@@ -804,20 +823,20 @@ namespace RubikCasual.Battle
 
                             enemyBossInBattle.gameObject.transform.localScale = new Vector3(-enemyBossInBattle.gameObject.transform.localScale.x, enemyBossInBattle.gameObject.transform.localScale.y, enemyBossInBattle.gameObject.transform.localScale.z);
                             enemyBossInBattle.skeletonCharacterAnimation = Enemy;
+                            enemyBossInBattle.infoWaifuAsset = enemyAssets.infoEnemyAssets.lsInfoWaifuAssets.Find(f => f.Code == enemyAssets.lsIdEnemy[indexRand]);
 
 
                             enemyBossInBattle.cooldownAttackBar.value = 0;
                             enemyBossInBattle.cooldownSkillBar.value = 0;
                             enemyBossInBattle.healthBar.value = 1;
                             enemyBossInBattle.Rage = 0;
-                            enemyBossInBattle.HpNow = 300f;
-                            enemyBossInBattle.infoWaifuAsset.HP = 300f;
+                            enemyBossInBattle.HpNow = enemyBossInBattle.infoWaifuAsset.HP;
                             enemyBossInBattle.infoWaifuAsset.ATK = OldATKUpdate;
 
                             if ((CountState + mapBattleController.lsPosEnemySlot.Count) % 10 == 0)
                             {
 
-                                enemyBossInBattle.infoWaifuAsset.ATK = OldATKUpdate * 2;
+                                enemyBossInBattle.infoWaifuAsset.ATK = OldATKUpdate * 1.1f;
 
                             }
                             lsSlotGbEnemy.Add(enemyBossInBattle.gameObject);

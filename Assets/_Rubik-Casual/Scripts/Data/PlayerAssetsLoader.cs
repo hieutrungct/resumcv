@@ -11,8 +11,14 @@ namespace RubikCasual.Data.Player
     {
         public PlayerData playerData;
         private PlayerData previousData;
+        public static PlayerAssetsLoader instance;
+        void Awake()
+        {
+            instance = this;
+        }
         void Start()
         {
+
             BtnLoadJson();
             LoadPlayerDataToJson("PlayerData");
         }
@@ -25,15 +31,15 @@ namespace RubikCasual.Data.Player
             }
 
         }
-        IEnumerator setData()
-        {
-            yield return new WaitForSeconds(0.25f);
-            playerData.userData.UserName = "po123lop123";
-            playerData.userData.Gold = Data.instance.itemData.datalobby.FirstOrDefault(f => f.name == "Coins").numberItem;
-            playerData.userData.Gem = Data.instance.itemData.datalobby.FirstOrDefault(f => f.name == "Gems").numberItem;
-            playerData.userData.Energy = Data.instance.itemData.datalobby.FirstOrDefault(f => f.name == "Energy").numberItem;
-            playerData.userData.CurentTeam = Data.instance.itemData.lsIdSlotSetupCharacter;
-        }
+        // IEnumerator setData()
+        // {
+        //     yield return new WaitForSeconds(0.25f);
+        //     playerData.userData.UserName = "po123lop123";
+        //     playerData.userData.Gold = Data.instance.itemData.datalobby.FirstOrDefault(f => f.name == "Coins").numberItem;
+        //     playerData.userData.Gem = Data.instance.itemData.datalobby.FirstOrDefault(f => f.name == "Gems").numberItem;
+        //     playerData.userData.Energy = Data.instance.itemData.datalobby.FirstOrDefault(f => f.name == "Energy").numberItem;
+        //     playerData.userData.CurentTeam = Data.instance.itemData.lsIdSlotSetupCharacter;
+        // }
 
         [Button]
         void BtnLoadJson()

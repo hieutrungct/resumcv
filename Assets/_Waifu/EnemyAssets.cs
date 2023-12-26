@@ -61,7 +61,7 @@ namespace RubikCasual.Data.Waifu
             instance = this;
             GetAssets();
             this.CacheHolder = new NTDictionary<string, Transform>();
-            // infoEnemyAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoEnemyAssets").text);
+            infoEnemyAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoEnemyAssets").text);
 
             lsIdEnemy.Clear();
             for (int i = 9001; i < 9093; i++)

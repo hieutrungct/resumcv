@@ -1,0 +1,783 @@
+[
+ {
+  "Stage": 1,
+  "Slot0": "IndexItem: 7",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 7",
+  "Slot3": "IndexCreep: 9037",
+  "Slot4": "IndexCreep: 9013",
+  "Attribute": 1
+ },
+ {
+  "Stage": 2,
+  "Slot0": "IndexCreep: 9038",
+  "Slot1": "IndexCreep: 9016",
+  "Slot2": "IndexItem: 10",
+  "Slot3": "IndexCreep: 9015",
+  "Slot4": "IndexItem: 10",
+  "Attribute": 1
+ },
+ {
+  "Stage": 3,
+  "Slot0": "null",
+  "Slot1": "IndexCreep: 9014",
+  "Slot2": "IndexCreep: 9025",
+  "Slot3": "IndexCreep: 9035",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 4,
+  "Slot0": "IndexCreep: 9029",
+  "Slot1": "IndexCreep: 9022",
+  "Slot2": "null",
+  "Slot3": "null",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 5,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexCreep: 9022",
+  "Slot2": "IndexItem: 10",
+  "Slot3": "null",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 6,
+  "Slot0": "IndexItem: 10",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 8",
+  "Slot3": "null",
+  "Slot4": "IndexItem: 8",
+  "Attribute": 1
+ },
+ {
+  "Stage": 7,
+  "Slot0": "IndexCreep: 9042",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 8",
+  "Slot3": "IndexCreep: 9028",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 8,
+  "Slot0": "IndexItem: 8",
+  "Slot1": "null",
+  "Slot2": "null",
+  "Slot3": "IndexItem: 7",
+  "Slot4": "IndexCreep: 9032",
+  "Attribute": 1
+ },
+ {
+  "Stage": 9,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexItem: 9",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 10,
+  "Slot2": "IndexBoss: 9003",
+  "Attribute": 1.1
+ },
+ {
+  "Stage": 11,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "IndexItem: 6",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 12,
+  "Slot0": "IndexCreep: 9041",
+  "Slot1": "IndexCreep: 9041",
+  "Slot2": "IndexCreep: 9044",
+  "Slot3": "null",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 13,
+  "Slot0": "null",
+  "Slot1": "IndexItem: 9",
+  "Slot2": "IndexItem: 7",
+  "Slot3": "IndexCreep: 9013",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 14,
+  "Slot0": "IndexItem: 7",
+  "Slot1": "IndexCreep: 9029",
+  "Slot2": "IndexCreep: 9025",
+  "Slot3": "IndexCreep: 9016",
+  "Slot4": "IndexCreep: 9046",
+  "Attribute": 1
+ },
+ {
+  "Stage": 15,
+  "Slot0": "IndexCreep: 9046",
+  "Slot1": "IndexCreep: 9016",
+  "Slot2": "IndexCreep: 9025",
+  "Slot3": "IndexCreep: 9043",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 16,
+  "Slot0": "null",
+  "Slot1": "IndexCreep: 9039",
+  "Slot2": "IndexCreep: 9032",
+  "Slot3": "null",
+  "Slot4": "IndexCreep: 9028",
+  "Attribute": 1
+ },
+ {
+  "Stage": 17,
+  "Slot0": "null",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9017",
+  "Slot3": "IndexItem: 7",
+  "Slot4": "IndexCreep: 9033",
+  "Attribute": 1
+ },
+ {
+  "Stage": 18,
+  "Slot0": "IndexItem: 7",
+  "Slot1": "IndexCreep: 9045",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexCreep: 9043",
+  "Slot4": "IndexCreep: 9041",
+  "Attribute": 1
+ },
+ {
+  "Stage": 19,
+  "Slot0": "IndexItem: 7",
+  "Slot1": "IndexCreep: 9040",
+  "Slot2": "null",
+  "Slot3": "null",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 20,
+  "Slot0": "IndexItem: 10",
+  "Slot1": "null",
+  "Slot2": "null",
+  "Slot3": "null",
+  "Slot4": "IndexCreep: 9023",
+  "Attribute": 1
+ },
+ {
+  "Stage": 21,
+  "Slot0": "IndexItem: 8",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9022",
+  "Slot3": "null",
+  "Slot4": "IndexCreep: 9021",
+  "Attribute": 1
+ },
+ {
+  "Stage": 22,
+  "Slot0": "IndexCreep: 9038",
+  "Slot1": "IndexCreep: 9026",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexCreep: 9040",
+  "Slot4": "IndexItem: 10",
+  "Attribute": 1
+ },
+ {
+  "Stage": 23,
+  "Slot0": "null",
+  "Slot1": "IndexItem: 6",
+  "Slot2": "null",
+  "Slot3": "IndexItem: 10",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 24,
+  "Slot0": "IndexItem: 8",
+  "Slot1": "null",
+  "Slot2": "null",
+  "Slot3": "IndexItem: 8",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 25,
+  "Slot0": "IndexCreep: 9029",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9034",
+  "Slot3": "IndexCreep: 9013",
+  "Slot4": "IndexCreep: 9015",
+  "Attribute": 1
+ },
+ {
+  "Stage": 26,
+  "Slot0": "IndexCreep: 9043",
+  "Slot1": "IndexCreep: 9022",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9024",
+  "Slot4": "IndexItem: 8",
+  "Attribute": 1
+ },
+ {
+  "Stage": 27,
+  "Slot0": "IndexCreep: 9042",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9034",
+  "Slot3": "IndexItem: 8",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 28,
+  "Slot0": "null",
+  "Slot1": "IndexCreep: 9029",
+  "Slot2": "IndexCreep: 9030",
+  "Slot3": "null",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 29,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexItem: 9",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 30,
+  "Slot2": "IndexBoss: 9007",
+  "Attribute": 1.1
+ },
+ {
+  "Stage": 31,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexItem: 6",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 32,
+  "Slot0": "null",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9039",
+  "Slot3": "IndexCreep: 9030",
+  "Slot4": "IndexCreep: 9025",
+  "Attribute": 1
+ },
+ {
+  "Stage": 33,
+  "Slot0": "IndexCreep: 9025",
+  "Slot1": "IndexCreep: 9033",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9025",
+  "Slot4": "IndexCreep: 9036",
+  "Attribute": 1
+ },
+ {
+  "Stage": 34,
+  "Slot0": "null",
+  "Slot1": "IndexCreep: 9046",
+  "Slot2": "null",
+  "Slot3": "IndexItem: 8",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 35,
+  "Slot0": "IndexCreep: 9024",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 8",
+  "Slot3": "IndexCreep: 9013",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 36,
+  "Slot0": "IndexItem: 10",
+  "Slot1": "IndexCreep: 9021",
+  "Slot2": "IndexCreep: 9021",
+  "Slot3": "null",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 37,
+  "Slot0": "null",
+  "Slot1": "IndexItem: 7",
+  "Slot2": "null",
+  "Slot3": "null",
+  "Slot4": "IndexCreep: 9027",
+  "Attribute": 1
+ },
+ {
+  "Stage": 38,
+  "Slot0": "IndexCreep: 9017",
+  "Slot1": "IndexCreep: 9035",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9040",
+  "Slot4": "IndexItem: 8",
+  "Attribute": 1
+ },
+ {
+  "Stage": 39,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "IndexCreep: 9046",
+  "Slot2": "IndexCreep: 9031",
+  "Slot3": "null",
+  "Slot4": "IndexCreep: 9030",
+  "Attribute": 1
+ },
+ {
+  "Stage": 40,
+  "Slot0": "IndexCreep: 9028",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9044",
+  "Slot3": "null",
+  "Slot4": "IndexItem: 10",
+  "Attribute": 1
+ },
+ {
+  "Stage": 41,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "null",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 42,
+  "Slot0": "null",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexItem: 10",
+  "Slot4": "IndexCreep: 9038",
+  "Attribute": 1
+ },
+ {
+  "Stage": 43,
+  "Slot0": "IndexCreep: 9040",
+  "Slot1": "IndexCreep: 9043",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9015",
+  "Slot4": "IndexCreep: 9015",
+  "Attribute": 1
+ },
+ {
+  "Stage": 44,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexItem: 9",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexItem: 6",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 45,
+  "Slot2": "IndexBoss: 9011",
+  "Attribute": 1.1
+ },
+ {
+  "Stage": 46,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "IndexItem: 9",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 47,
+  "Slot0": "IndexItem: 8",
+  "Slot1": "IndexCreep: 9036",
+  "Slot2": "IndexItem: 7",
+  "Slot3": "IndexCreep: 9022",
+  "Slot4": "IndexCreep: 9014",
+  "Attribute": 1
+ },
+ {
+  "Stage": 48,
+  "Slot0": "IndexCreep: 9032",
+  "Slot1": "IndexItem: 8",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9017",
+  "Slot4": "IndexCreep: 9034",
+  "Attribute": 1
+ },
+ {
+  "Stage": 49,
+  "Slot0": "IndexItem: 7",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexCreep: 9037",
+  "Slot4": "IndexCreep: 9037",
+  "Attribute": 1
+ },
+ {
+  "Stage": 50,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexItem: 10",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexCreep: 9035",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 51,
+  "Slot0": "null",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9023",
+  "Slot3": "IndexCreep: 9047",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 52,
+  "Slot0": "null",
+  "Slot1": "IndexItem: 8",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexCreep: 9014",
+  "Slot4": "IndexItem: 10",
+  "Attribute": 1
+ },
+ {
+  "Stage": 53,
+  "Slot0": "null",
+  "Slot1": "IndexItem: 7",
+  "Slot2": "IndexCreep: 9025",
+  "Slot3": "IndexItem: 7",
+  "Slot4": "IndexCreep: 9026",
+  "Attribute": 1
+ },
+ {
+  "Stage": 54,
+  "Slot0": "IndexCreep: 9026",
+  "Slot1": "IndexCreep: 9014",
+  "Slot2": "IndexCreep: 9046",
+  "Slot3": "null",
+  "Slot4": "IndexCreep: 9028",
+  "Attribute": 1
+ },
+ {
+  "Stage": 55,
+  "Slot0": "IndexCreep: 9024",
+  "Slot1": "IndexItem: 8",
+  "Slot2": "IndexCreep: 9033",
+  "Slot3": "IndexCreep: 9031",
+  "Slot4": "IndexCreep: 9040",
+  "Attribute": 1
+ },
+ {
+  "Stage": 56,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "IndexCreep: 9016",
+  "Slot2": "IndexCreep: 9017",
+  "Slot3": "IndexCreep: 9033",
+  "Slot4": "IndexCreep: 9024",
+  "Attribute": 1
+ },
+ {
+  "Stage": 57,
+  "Slot0": "IndexItem: 8",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 7",
+  "Slot3": "IndexCreep: 9042",
+  "Slot4": "IndexCreep: 9037",
+  "Attribute": 1
+ },
+ {
+  "Stage": 58,
+  "Slot0": "IndexCreep: 9036",
+  "Slot1": "IndexCreep: 9035",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexCreep: 9029",
+  "Slot4": "IndexCreep: 9039",
+  "Attribute": 1
+ },
+ {
+  "Stage": 59,
+  "Slot0": "IndexCreep: 9035",
+  "Slot1": "IndexCreep: 9029",
+  "Slot2": "null",
+  "Slot3": "null",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 60,
+  "Slot0": "null",
+  "Slot1": "IndexItem: 10",
+  "Slot2": "IndexItem: 10",
+  "Slot3": "null",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 61,
+  "Slot0": "IndexCreep: 9033",
+  "Slot1": "null",
+  "Slot2": "IndexCreep: 9015",
+  "Slot3": "IndexItem: 7",
+  "Slot4": "IndexCreep: 9021",
+  "Attribute": 1
+ },
+ {
+  "Stage": 62,
+  "Slot0": "IndexCreep: 9036",
+  "Slot1": "IndexItem: 8",
+  "Slot2": "IndexItem: 8",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexCreep: 9035",
+  "Attribute": 1
+ },
+ {
+  "Stage": 63,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "IndexCreep: 9039",
+  "Slot2": "IndexCreep: 9044",
+  "Slot3": "IndexCreep: 9014",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 64,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "IndexItem: 6",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 65,
+  "Slot2": "IndexBoss: 9013",
+  "Attribute": 1.1
+ },
+ {
+  "Stage": 66,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexItem: 9",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexItem: 6",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 67,
+  "Slot0": "IndexItem: 10",
+  "Slot1": "IndexCreep: 9026",
+  "Slot2": "IndexCreep: 9030",
+  "Slot3": "IndexCreep: 9041",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 68,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexCreep: 9023",
+  "Slot2": "IndexItem: 10",
+  "Slot3": "null",
+  "Slot4": "IndexItem: 10",
+  "Attribute": 1
+ },
+ {
+  "Stage": 69,
+  "Slot0": "IndexCreep: 9042",
+  "Slot1": "IndexCreep: 9015",
+  "Slot2": "IndexCreep: 9046",
+  "Slot3": "IndexCreep: 9026",
+  "Slot4": "IndexCreep: 9032",
+  "Attribute": 1
+ },
+ {
+  "Stage": 70,
+  "Slot0": "IndexCreep: 9025",
+  "Slot1": "IndexCreep: 9040",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9036",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 71,
+  "Slot0": "null",
+  "Slot1": "IndexCreep: 9015",
+  "Slot2": "IndexCreep: 9025",
+  "Slot3": "IndexCreep: 9024",
+  "Slot4": "IndexCreep: 9047",
+  "Attribute": 1
+ },
+ {
+  "Stage": 72,
+  "Slot0": "IndexItem: 8",
+  "Slot1": "IndexItem: 8",
+  "Slot2": "IndexCreep: 9036",
+  "Slot3": "IndexItem: 7",
+  "Slot4": "IndexCreep: 9035",
+  "Attribute": 1
+ },
+ {
+  "Stage": 73,
+  "Slot0": "IndexCreep: 9043",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexItem: 10",
+  "Slot4": "IndexItem: 10",
+  "Attribute": 1
+ },
+ {
+  "Stage": 74,
+  "Slot0": "null",
+  "Slot1": "IndexCreep: 9015",
+  "Slot2": "IndexCreep: 9016",
+  "Slot3": "null",
+  "Slot4": "IndexCreep: 9030",
+  "Attribute": 1
+ },
+ {
+  "Stage": 75,
+  "Slot0": "IndexItem: 7",
+  "Slot1": "IndexItem: 8",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexItem: 10",
+  "Slot4": "IndexItem: 6",
+  "Attribute": 1
+ },
+ {
+  "Stage": 76,
+  "Slot0": "IndexCreep: 9034",
+  "Slot1": "IndexCreep: 9038",
+  "Slot2": "IndexCreep: 9046",
+  "Slot3": "IndexCreep: 9041",
+  "Slot4": "IndexCreep: 9023",
+  "Attribute": 1
+ },
+ {
+  "Stage": 77,
+  "Slot0": "null",
+  "Slot1": "IndexItem: 8",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9045",
+  "Slot4": "IndexCreep: 9026",
+  "Attribute": 1
+ },
+ {
+  "Stage": 78,
+  "Slot0": "null",
+  "Slot1": "IndexCreep: 9041",
+  "Slot2": "IndexCreep: 9030",
+  "Slot3": "IndexCreep: 9016",
+  "Slot4": "IndexCreep: 9025",
+  "Attribute": 1
+ },
+ {
+  "Stage": 79,
+  "Slot0": "IndexItem: 6",
+  "Slot1": "IndexItem: 6",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexItem: 9",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 80,
+  "Slot2": "IndexBoss: 9010",
+  "Attribute": 1.1
+ },
+ {
+  "Stage": 81,
+  "Slot0": "IndexItem: 9",
+  "Slot1": "IndexItem: 6",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexItem: 6",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ },
+ {
+  "Stage": 82,
+  "Slot0": "IndexItem: 10",
+  "Slot1": "IndexCreep: 9019",
+  "Slot2": "IndexCreep: 9029",
+  "Slot3": "null",
+  "Slot4": "IndexItem: 10",
+  "Attribute": 1
+ },
+ {
+  "Stage": 83,
+  "Slot0": "IndexCreep: 9016",
+  "Slot1": "IndexCreep: 9036",
+  "Slot2": "null",
+  "Slot3": "IndexItem: 10",
+  "Slot4": "IndexCreep: 9034",
+  "Attribute": 1
+ },
+ {
+  "Stage": 84,
+  "Slot0": "IndexItem: 10",
+  "Slot1": "IndexCreep: 9025",
+  "Slot2": "IndexCreep: 9026",
+  "Slot3": "IndexItem: 8",
+  "Slot4": "null",
+  "Attribute": 1
+ },
+ {
+  "Stage": 85,
+  "Slot0": "IndexCreep: 9031",
+  "Slot1": "null",
+  "Slot2": "IndexItem: 6",
+  "Slot3": "IndexCreep: 9014",
+  "Slot4": "IndexCreep: 9047",
+  "Attribute": 1
+ },
+ {
+  "Stage": 86,
+  "Slot0": "IndexCreep: 9018",
+  "Slot1": "IndexCreep: 9045",
+  "Slot2": "IndexCreep: 9047",
+  "Slot3": "IndexItem: 7",
+  "Slot4": "IndexCreep: 9034",
+  "Attribute": 1
+ },
+ {
+  "Stage": 87,
+  "Slot0": "IndexCreep: 9031",
+  "Slot1": "IndexCreep: 9026",
+  "Slot2": "IndexItem: 9",
+  "Slot3": "IndexCreep: 9017",
+  "Slot4": "IndexCreep: 9035",
+  "Attribute": 1
+ },
+ {
+  "Stage": 88,
+  "Slot0": "IndexCreep: 9047",
+  "Slot1": "null",
+  "Slot2": "null",
+  "Slot3": "IndexCreep: 9031",
+  "Slot4": "IndexItem: 7",
+  "Attribute": 1
+ },
+ {
+  "Stage": 89,
+  "Slot0": "IndexCreep: 9031",
+  "Slot1": "IndexCreep: 9026",
+  "Slot2": "IndexCreep: 9013",
+  "Slot3": "IndexItem: 6",
+  "Slot4": "IndexItem: 9",
+  "Attribute": 1
+ }
+]

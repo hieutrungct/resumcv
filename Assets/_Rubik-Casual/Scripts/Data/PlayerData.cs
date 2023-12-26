@@ -14,12 +14,14 @@ namespace RubikCasual.Data.Player
         public int indexOfSlot, Index;
         public float HpNow, Rage;
     }
+    [Serializable]
     public class StagePlay
     {
         public int Index;
         public List<WaifuInBattleSage> CurentTeam = new List<WaifuInBattleSage>();
         public Dictionary<int, int> InventoryInStage = new Dictionary<int, int>();
     }
+    [Serializable]
     public class PlayerOwnsWaifu
     {
         public int Index, Star, Exp, IndexSkin, IndexEvolution;
@@ -32,11 +34,12 @@ namespace RubikCasual.Data.Player
         public List<float> CurentTeam = new List<float>();
     }
     [Serializable]
-    public class PlayerData 
+    public class PlayerData
     {
         public UserData userData;
-        public StagePlay stagePlay;
-        [SerializeField] NTDictionary<int, int> Inventory = new NTDictionary<int, int>();
+        // public StagePlay stagePlay;
+        public List<PlayerOwnsWaifu> lsPlayerOwnsWaifu = new List<PlayerOwnsWaifu>();
+        public NTDictionary<int, int> Inventory = new NTDictionary<int, int>();
         public int CurentStage;
 
     }

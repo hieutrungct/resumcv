@@ -35,10 +35,18 @@ namespace RubikCasual.Battle.Calculate
             {
                 case "Heal":
                     CharacterInBattleAttacked.HpNow = HealthAmount(-infoItem.Dame, CharacterInBattleAttacked.HpNow, 0);
+                    if (CharacterInBattleAttacked.HpNow > CharacterInBattleAttacked.infoWaifuAsset.HP)
+                    {
+                        CharacterInBattleAttacked.HpNow = CharacterInBattleAttacked.infoWaifuAsset.HP;
+                    }
                     CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
                     break;
                 case "Poison":
                     CharacterInBattleAttacked.HpNow = HealthAmount(infoItem.Dame, CharacterInBattleAttacked.HpNow, 0);
+                    if (CharacterInBattleAttacked.HpNow > CharacterInBattleAttacked.infoWaifuAsset.HP)
+                    {
+                        CharacterInBattleAttacked.HpNow = CharacterInBattleAttacked.infoWaifuAsset.HP;
+                    }
                     CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / CharacterInBattleAttacked.infoWaifuAsset.HP;
                     break;
                 case "Mana":
