@@ -3143,7 +3143,7 @@ GameObject:
   - component: {fileID: 1261548531}
   - component: {fileID: 1261548532}
   m_Layer: 0
-  m_Name: PlayerData
+  m_Name: PlayerDataLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3174,24 +3174,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261548530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2693401d4d211f04ba5437343c05e4c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 33c2ca0874669df4e92e1d0972f57a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userData:
-    UserName: 
-    UserId: 
-    Gold: 0
-    Gem: 0
-    Level: 0
-    Energy: 0
-    Hp: 0
-    Exp: 0
-    Rank: 0
-    CurentTeam: []
-  Inventory:
-    Keys: 
-    Values: 
-  CurentStage: 0
+  playerData:
+    userData:
+      UserName: 
+      UserId: 
+      Gold: 0
+      Gem: 0
+      Level: 0
+      Energy: 0
+      Hp: 0
+      Exp: 0
+      Rank: 0
+      CurentTeam: []
+    Inventory:
+      Keys: 
+      Values: 
+    CurentStage: 0
 --- !u!1 &1274826418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,7 +3843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef58818d9633fb640a57eeb73ed6a513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 0}
+  playerAssetsLoader: {fileID: 1261548532}
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   characterAssets: {fileID: 0}
   AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
