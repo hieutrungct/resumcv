@@ -15,7 +15,7 @@ namespace RubikCasual.Data
         public ItemData itemData;
         public CharacterAssets characterAssets;
         public TextAsset AssetPlayerData;
-
+        public StageAssets stageAssets;
         public static DataController instance;
         void Awake()
         {
@@ -27,18 +27,21 @@ namespace RubikCasual.Data
         // {
         // }
 
-        [Button]
-        void BtnSavePlayerData()
-        {
-            SaveDataToJson(playerData, "PlayerData");
-            Debug.Log(playerData.userData.Hp);
-        }
         IEnumerator LoadData()
         {
             yield return new WaitForSeconds(0.25f);
             characterAssets = CharacterAssets.instance;
+            stageAssets = StageAssets.instance;
             LoadPlayerDataToJson("PlayerData");
         }
+        [Button]
+        void BtnSavePlayerData()
+        {
+            Debug.Log(playerData.userData.Hp);
+            SaveDataToJson(playerData, "PlayerData");
+
+        }
+
         void LoadPlayerDataToJson(string nameFile)
         {
             string filePath = Application.dataPath + $"/_Rubik-Casual/Resources/{nameFile}.json";

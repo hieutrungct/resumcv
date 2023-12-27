@@ -8,6 +8,8 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using RubikCasual.Tool;
+using RubikCasual.Data;
+using Spine.Unity;
 namespace RubikCasual.Battle.Inventory
 {
     public class ItemDragPosition : MonoBehaviour
@@ -59,10 +61,24 @@ namespace RubikCasual.Battle.Inventory
                 {
                     if (BattleController.instance.lsSlotGbEnemy[indexCheckEnemy] != null)
                     {
-                        if (UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Heal")
+                        if (DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Heal")
                         {
-                            Calculator.CheckItemCalculate(idItem, BattleController.instance.lsSlotGbEnemy[indexCheckEnemy].GetComponent<CharacterInBattle>());
-                            StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
+                            CharacterInBattle EnemyInBattle = BattleController.instance.lsSlotGbEnemy[indexCheckEnemy].GetComponent<CharacterInBattle>();
+                            SkeletonAnimation enemy = EnemyInBattle.skeletonCharacterAnimation;
+
+                            Calculator.CheckItemCalculate(idItem, EnemyInBattle);
+
+                            if (EnemyInBattle.HpNow == 0)
+                            {
+                                enemy.AnimationName = NameAnim.Anim_Character_Die;
+                                enemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
+                                enemy.AnimationState.Complete += delegate
+                                {
+                                    EnemyInBattle.healthBar.gameObject.transform.SetParent(EnemyInBattle.cooldownAttackBar.transform.parent);
+                                    Destroy(EnemyInBattle.gameObject);
+                                };
+                            }
+                            StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
                         }
                         else
                         {
@@ -78,10 +94,10 @@ namespace RubikCasual.Battle.Inventory
             {
                 if (BattleController.instance.lsSlotGbHero[indexCheckHero] != null)
                 {
-                    if (UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Poison")
+                    if (DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Poison")
                     {
                         Calculator.CheckItemCalculate(idItem, BattleController.instance.lsSlotGbHero[indexCheckHero].GetComponent<CharacterInBattle>());
-                        StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
+                        StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
                     }
                     else
                     {

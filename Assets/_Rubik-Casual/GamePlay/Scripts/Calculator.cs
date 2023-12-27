@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using RubikCasual.DailyItem;
+using RubikCasual.Data;
 using RubikCasual.Lobby;
 using UnityEngine;
 
@@ -29,7 +30,7 @@ namespace RubikCasual.Battle.Calculate
 
         public static void CheckItemCalculate(int idItem, CharacterInBattle CharacterInBattleAttacked)
         {
-            infoItem infoItem = UserData.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem);
+            infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem);
             string Type = infoItem.type.ToString();
             switch (Type)
             {

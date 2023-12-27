@@ -39,7 +39,6 @@ namespace RubikCasual.Data.Waifu
         public List<WaifuAssetData> WaifuAssetDatas;
 
         public InfoWaifuAssets infoWaifuAssets;
-        public List<int> lsIdHero = new List<int>();
         public static WaifuAssets instance;
 
         [Button]
@@ -62,19 +61,7 @@ namespace RubikCasual.Data.Waifu
             this.CacheHolder = new NTDictionary<string, Transform>();
             infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoWaifuAssets").text);
 
-            lsIdHero.Clear();
-            for (int i = 1; i < 66; i++)
-            {
-                try
-                {
-                    SkeletonAnimation WaifuHero = this.Get2D(i.ToString());
-                    lsIdHero.Add(i);
-                }
-                catch (System.Exception)
-                {
-
-                }
-            }
+           
         }
         void GetAssets()
         {

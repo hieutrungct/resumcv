@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using RubikCasual.Battle.Inventory;
+using RubikCasual.Data;
 using RubikCasual.Lobby;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,7 +14,6 @@ namespace RubikCasual.Battle.UI
     {
         public List<GameObject> lsSlotInventory;
         public GameObject itemInventory;
-        public UserData userData;
         public static InventorryUIPanel instance;
         void Awake()
         {
@@ -22,7 +22,6 @@ namespace RubikCasual.Battle.UI
         }
         void Start()
         {
-            userData = UserData.instance;
             BtnTestInventory();
         }
         [Button]
@@ -49,7 +48,7 @@ namespace RubikCasual.Battle.UI
                     SlotInventory Item = ItemClone.GetComponent<SlotInventory>();
                     Item.idItem = idItem;
                     Item.IdSlot = idSlot;
-                    Item.Icon.GetComponent<Image>().sprite = userData.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).imageItem;
+                    Item.Icon.GetComponent<Image>().sprite = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).imageItem;
                     ItemClone.GetComponent<ItemDragPosition>().idItem = idItem;
                 }
             }
