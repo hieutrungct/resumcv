@@ -35,9 +35,9 @@ namespace RubikCasual.Data
             LoadPlayerDataToJson("PlayerData");
         }
         [Button]
-        void BtnSavePlayerData()
+        public void BtnSavePlayerData()
         {
-            Debug.Log(playerData.userData.Hp);
+            
             SaveDataToJson(playerData, "PlayerData");
 
         }

@@ -59,16 +59,7 @@ MonoBehaviour:
     Keys: []
     Values: []
   AssetData: {fileID: 4900000, guid: b684f3863c99f284cacc76966eb6c36c, type: 3}
-  WaifuAssetDatas:
-  - Index: 0
-    PathSkeleton: 
-    OriginScale: {x: 0, y: 0, z: 0}
-    Skin: 
-    Anim_Idle: 
-    Anim_Atk: 
-    Anim_Die: 
-    Anim_Atked: 
-    Anim_Skill: 
+  WaifuAssetDatas: []
   infoWaifuAssets:
     lsInfoWaifuAssets: []
   WaifuSO: {fileID: 0}
@@ -128,6 +119,7 @@ MonoBehaviour:
   funnyCheck: 0
   AssetsName: 0
   WaifuAssets: {fileID: 777755366826034196}
+  enemyAssets: {fileID: 713408909120885979}
 --- !u!1 &777755368032488121
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +211,8 @@ MonoBehaviour:
     Values: []
   AssetEnemyData: {fileID: 4900000, guid: 72e74cb497407f949ae1acc470e7afa8, type: 3}
   WaifuEnemyAssetDatas: []
-  infoWaifuAssets:
+  lsIdEnemy: 
+  infoEnemyAssets:
     lsInfoWaifuAssets: []
   WaifuSO: {fileID: 0}
   Holder2D: {fileID: 0}

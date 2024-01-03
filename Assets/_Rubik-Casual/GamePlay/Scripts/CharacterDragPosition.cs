@@ -185,7 +185,9 @@ namespace Rubik.Axie
         float moveSpeed = 20f;
         private void OnMouseUp()
         {
-            if (BattleController.instance.gameState != GameState.WAIT_BATTLE)
+            int temp = GameControl.instance.CheckNearPos(gameObject.transform.position);
+
+            if (temp == -1 || BattleController.instance.gameState != GameState.WAIT_BATTLE || (BattleController.instance.lsSlotGbHero[temp] != null && BattleController.instance.lsSlotGbHero[temp].GetComponent<CharacterInBattle>().HpNow == 0))
             {
                 gameObject.transform.position = oriPos;
                 GetComponent<MeshRenderer>().sortingOrder = 10;
@@ -193,17 +195,11 @@ namespace Rubik.Axie
                 return;
             }
 
-
-            int temp = GameControl.instance.CheckNearPos(gameObject.transform.position);
             gameObject.transform.position = oriPos;
-            // Debug.Log(temp);
-            if (temp != -1)
-            {
-                GameControl.instance.swapCharacter(oriIndex, temp);
-                oriIndex = temp;
-                oriPos = gameObject.transform.position;
-            }
 
+            GameControl.instance.swapCharacter(oriIndex, temp);
+            oriIndex = temp;
+            oriPos = gameObject.transform.position;
 
             GetComponent<MeshRenderer>().sortingOrder = 10;
             GetComponent<MeshRenderer>().sortingLayerName = "Character";
