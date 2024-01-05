@@ -37,14 +37,14 @@ namespace RubikCasual.Data
         [Button]
         public void BtnSavePlayerData()
         {
-            
+
             SaveDataToJson(playerData, "PlayerData");
 
         }
 
         void LoadPlayerDataToJson(string nameFile)
         {
-            string filePath = Application.dataPath + $"/_Rubik-Casual/Resources/{nameFile}.json";
+            string filePath = Application.dataPath + $"/_Data/Resources/{nameFile}.json";
             if (System.IO.File.Exists(filePath))
             {
                 string json = System.IO.File.ReadAllText(filePath);
@@ -70,7 +70,7 @@ namespace RubikCasual.Data
             string json = JsonUtility.ToJson(obj);
 
             // Lưu JSON vào tệp
-            System.IO.File.WriteAllText(Application.dataPath + $"/_Rubik-Casual/Resources/{nameFile}.json", json);
+            System.IO.File.WriteAllText(Application.dataPath + $"/_Data/Resources/{nameFile}.json", json);
         }
 
 

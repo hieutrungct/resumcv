@@ -15,6 +15,19 @@ namespace RubikCasual.Tool
         {
             instance = this;
         }
+        public static int RandomIntWithList(List<int> lsIntInput)
+        {
+            List<int> lsIntRandom = new List<int>();
+            foreach (int item in lsIntInput)
+            {
+                if (item != 0)
+                {
+                    lsIntRandom.Add(item);
+                }
+            }
+            int NumberRandom = lsIntRandom[UnityEngine.Random.Range(0, lsIntRandom.Count)];
+            return NumberRandom;
+        }
         public static void TransPopupHorizontal(GameObject gbTaget, GameObject gbPopupOpen)
         {
             gbPopupOpen.SetActive(true);
