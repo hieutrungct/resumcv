@@ -394,22 +394,26 @@ namespace RubikCasual.Battle
                         lsIndexHero.Add(index);
                     }
                 }
+
+                // Debug.Log(MovePopup.RandomIntWithList(lsIndexHero));
+
                 CharacterInBattle Enemy = lsSlotGbEnemy[2].GetComponent<CharacterInBattle>();
                 float randomCooldownTimeEnemy = (float)UnityEngine.Random.Range(1, 10);
 
                 if (!Enemy.isAttack)
                 {
-                    CharacterInBattle Hero = lsSlotGbHero.Find(f => f != null && f.GetComponent<CharacterInBattle>().infoWaifuAsset.ID == MovePopup.RandomIntWithList(lsIndexHero)).GetComponent<CharacterInBattle>();
+                    float IdRandom = MovePopup.RandomIntWithList(lsIndexHero);
+                    CharacterInBattle Hero = lsSlotGbHero.Find(f => f != null && f.GetComponent<CharacterInBattle>().infoWaifuAsset.ID == IdRandom).GetComponent<CharacterInBattle>();
                     if (Enemy.cooldownSkillBar.value == 1)
                     {
-                        BossUseSkill(Enemy);
+                        SetAnimCharacter.BossUseSkill(Enemy, dameSlotTxtController, lsSlotGbHero, durations);
                         // Enemy.cooldownSkillBar.value = 0;
                     }
                     else
                     {
                         if (Enemy.cooldownAttackBar.value == 1)
                         {
-                            CharacterAtackAnimation(Hero.gameObject, Enemy.gameObject);
+                            SetAnimCharacter.CharacterAtackAnimation(Hero.gameObject, Enemy.gameObject, dameSlotTxtController, durations);
                             // Debug.Log((i + 1) + " enemy atack");
                             Enemy.cooldownAttackBar.value = 0;
                         }
@@ -432,13 +436,13 @@ namespace RubikCasual.Battle
 
                             if (Hero.cooldownSkillBar.value == 1)
                             {
-                                CharacterUseSkill(Hero);
+                                SetAnimCharacter.CharacterUseSkill(Hero, dameSlotTxtController, lsSlotGbEnemy, durations);
                             }
                             else
                             {
                                 if (Hero.cooldownAttackBar.value == 1)
                                 {
-                                    CharacterAtackAnimation(Enemy.gameObject, Hero.gameObject);
+                                    SetAnimCharacter.CharacterAtackAnimation(Enemy.gameObject, Hero.gameObject, dameSlotTxtController, durations);
                                     // Debug.Log((i + 1) + " hero atack");
                                     Hero.cooldownAttackBar.value = 0;
                                 }
@@ -470,13 +474,13 @@ namespace RubikCasual.Battle
                             {
                                 if (Hero.cooldownSkillBar.value == 1)
                                 {
-                                    CharacterUseSkill(Hero);
+                                    SetAnimCharacter.CharacterUseSkill(Hero, dameSlotTxtController, lsSlotGbEnemy, durations);
                                 }
                                 else
                                 {
                                     if (Hero.cooldownAttackBar.value == 1)
                                     {
-                                        CharacterAtackAnimation(Enemy.gameObject, Hero.gameObject);
+                                        SetAnimCharacter.CharacterAtackAnimation(Enemy.gameObject, Hero.gameObject, dameSlotTxtController, durations);
                                         // Debug.Log((i + 1) + " hero atack");
                                         Hero.cooldownAttackBar.value = 0;
                                     }
@@ -495,7 +499,7 @@ namespace RubikCasual.Battle
                                 {
                                     if (Enemy.cooldownAttackBar.value == 1)
                                     {
-                                        CharacterAtackAnimation(Hero.gameObject, Enemy.gameObject);
+                                        SetAnimCharacter.CharacterAtackAnimation(Hero.gameObject, Enemy.gameObject,dameSlotTxtController,durations);
                                         // Debug.Log((i + 1) + " enemy atack");
                                         Enemy.cooldownAttackBar.value = 0;
                                     }
@@ -565,230 +569,8 @@ namespace RubikCasual.Battle
         }
         float durations = 0.5f;
 
-        void BossUseSkill(CharacterInBattle EnemyInBattle)
-        {
-            EnemyInBattle.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Skill;
-            // EnemyInBattle.skeletonCharacterAnimation.GetComponent<MeshRenderer>().sortingLayerName = Layer_Attack;
-            EnemyInBattle.skeletonCharacterAnimation.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
-            EnemyInBattle.isUseSkill = true;
-            EnemyInBattle.skeletonCharacterAnimation.AnimationState.Complete += delegate
-            {
-                EnemyInBattle.isUseSkill = false;
-                EnemyInBattle.cooldownSkillBar.value = 0;
-                EnemyInBattle.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
-            };
-
-            for (int i = 0; i < lsSlotGbHero.Count; i++)
-            {
-                int index = i;
-                if (lsSlotGbHero[index] != null && lsSlotGbHero[index].GetComponent<CharacterInBattle>() != null)
-                {
-                    CharacterInBattle HeroInBattle = lsSlotGbHero[index].GetComponent<CharacterInBattle>();
-                    SkeletonAnimation AnimHero = HeroInBattle.skeletonCharacterAnimation;
-                    AnimHero.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
-                    AnimHero.AnimationName = NameAnim.Anim_Character_Attacked;
-                    AnimHero.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
-                    AnimHero.AnimationState.Complete += delegate
-                    {
-                        AnimHero.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
-                        AnimHero.AnimationName = NameAnim.Anim_Character_Idle;
-                    };
 
 
-                    float OldHp = HeroInBattle.HpNow;
-                    Calculator.CalculateHealth(EnemyInBattle, HeroInBattle);
-
-                    GameObject txtDame = Instantiate(UIGamePlay.instance.TxtDame, dameSlotTxtController.lsPosHeroSlot.lsPosCharacterSlot[index].transform);
-
-                    txtDame.GetComponent<TextMeshProUGUI>().text = "-" + ((int)(OldHp - HeroInBattle.HpNow)).ToString();
-                    Tween animTxtDame = txtDame.transform.DOMoveY(txtDame.transform.position.y + durations, durations);
-                    txtDame.GetComponent<TextMeshProUGUI>().color = Color.red;
-                    animTxtDame.OnComplete(() =>
-                    {
-                        Destroy(txtDame);
-                    });
-                    CheckHpEnemy(lsSlotGbHero[index]);
-                }
-            }
-
-        }
-        void CharacterUseSkill(CharacterInBattle CharacterAttack)
-        {
-            CharacterAttack.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Skill;
-            CharacterAttack.skeletonCharacterAnimation.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attack;
-            CharacterAttack.skeletonCharacterAnimation.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
-            CharacterAttack.isUseSkill = true;
-            CharacterAttack.cooldownSkillBar.value = 0;
-            CharacterAttack.skeletonCharacterAnimation.AnimationState.Complete += delegate
-            {
-                CharacterAttack.isUseSkill = false;
-
-                CharacterAttack.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
-            };
-
-            int count = 0;
-            for (int i = 0; i < 6; i++)
-            {
-                for (int j = 0; j < mapBattleController.lsPosEnemySlot[0].lsPosCharacterSlot.Count; j++)
-                {
-                    if ((count - CharacterAttack.indexOfSlot) % 5 == 0)
-                    {
-                        // UnityEngine.Debug.Log(count);
-                        if (lsSlotGbEnemy[count] != null && lsSlotGbEnemy[count].GetComponent<CharacterInBattle>() != null)
-                        {
-
-                            SkeletonAnimation AnimEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
-                            AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
-                            AnimEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
-                            AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
-                            AnimEnemy.AnimationState.Complete += delegate
-                            {
-                                // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                                AnimEnemy.AnimationName = NameAnim.Anim_Character_Idle;
-                            };
-                            CharacterInBattle CharacterInBattleAttacked = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>();
-
-                            float OldHp = CharacterInBattleAttacked.HpNow;
-                            Calculator.CalculateHealth(CharacterAttack, CharacterInBattleAttacked);
-
-                            GameObject txtDame = Instantiate(UIGamePlay.instance.TxtDame, dameSlotTxtController.lsPosEnemySlot[i].lsPosCharacterSlot[j].transform);
-
-                            txtDame.GetComponent<TextMeshProUGUI>().text = "-" + ((int)(OldHp - lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().HpNow)).ToString();
-                            Tween animTxtDame = txtDame.transform.DOMoveY(txtDame.transform.position.y + durations, durations);
-                            txtDame.GetComponent<TextMeshProUGUI>().color = Color.red;
-                            CheckHpEnemy(lsSlotGbEnemy[count]);
-                            animTxtDame.OnComplete(() =>
-                            {
-                                Destroy(txtDame);
-                            });
-                        }
-                    }
-
-                    count++;
-                }
-            }
-
-        }
-
-        void CharacterAtackAnimation(GameObject CharacterAttacked, GameObject CharacterAttack)
-        {
-
-            if (CharacterAttacked == null)
-            {
-                CharacterAttack.GetComponent<CharacterInBattle>().isAttack = false;
-                return;
-            }
-            CharacterAttack.GetComponent<CharacterInBattle>().isAttack = true;
-            float valueSliderBarCharacterAttack = CharacterAttack.GetComponent<CharacterInBattle>().cooldownSkillBar.value;
-            CharacterAttack.GetComponent<CharacterInBattle>().cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.25f;
-
-            float valueSliderBarCharacterAttacked = CharacterAttacked.GetComponent<CharacterInBattle>().cooldownSkillBar.value;
-            CharacterAttacked.GetComponent<CharacterInBattle>().cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.5f;
-
-            StartCoroutine(MoveBackDelay(CharacterAttack, CharacterAttacked, durations));
-        }
-        IEnumerator MoveBackDelay(GameObject CharacterAttack, GameObject CharacterAttacked, float delay)
-        {
-
-            SkeletonAnimation CharacterAttackAnim = CharacterAttack.GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
-            SkeletonAnimation CharacterAttackedAnim = CharacterAttacked.GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
-            CharacterInBattle CharacterInBattleAttack = CharacterAttack.GetComponent<CharacterInBattle>();
-            CharacterInBattle CharacterInBattleAttacked = CharacterAttacked.GetComponent<CharacterInBattle>();
-
-            // CharacterAttackAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Attack;
-            // CharacterAttackedAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Attacked;
-
-            CharacterAttackAnim.AnimationName = NameAnim.Anim_Character_Attack;
-
-            CharacterAttackAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attack, false);
-            CharacterAttackAnim.AnimationState.Complete += delegate
-            {
-                // CharacterAttackAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                CharacterAttackAnim.AnimationName = NameAnim.Anim_Character_Idle;
-            };
-            yield return new WaitForSeconds(delay / 2);
-            CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Attacked;
-            CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
-            CharacterAttackedAnim.AnimationState.Complete += delegate
-            {
-                // CharacterAttackedAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Idle;
-            };
-            float OldHp = CharacterInBattleAttacked.HpNow;
-            Calculator.CalculateHealth(CharacterInBattleAttack, CharacterInBattleAttacked);
-            if (CharacterInBattleAttacked.txtHealthBar != null)
-            {
-                CharacterInBattleAttacked.txtHealthBar.text = CharacterInBattleAttacked.HpNow.ToString() + "/" + CharacterInBattleAttacked.infoWaifuAsset.HP.ToString();
-            }
-
-            Transform TransTxt;
-            if (CharacterInBattleAttacked.isEnemy)
-            {
-                TransTxt = dameSlotTxtController.lsPosEnemySlot[0].lsPosCharacterSlot[CharacterInBattleAttacked.indexOfSlot].transform;
-            }
-            else
-            {
-                TransTxt = dameSlotTxtController.lsPosHeroSlot.lsPosCharacterSlot[CharacterInBattleAttacked.indexOfSlot].transform;
-            }
-            GameObject txtDame = Instantiate(UIGamePlay.instance.TxtDame, TransTxt);
-            txtDame.GetComponent<TextMeshProUGUI>().text = "-" + ((int)(OldHp - CharacterInBattleAttacked.HpNow)).ToString();
-            txtDame.GetComponent<TextMeshProUGUI>().color = Color.red;
-            txtDame.transform.DOMoveY(txtDame.transform.position.y + delay, delay);
-
-            yield return new WaitForSeconds(delay / 2);
-
-
-            if (CharacterInBattleAttacked.HpNow == 0)
-            {
-
-                CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Die;
-                CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
-                CharacterAttackedAnim.AnimationState.Complete += delegate
-                {
-                    CharacterInBattleAttack.isAttack = true;
-                    CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownAttackBar.transform.parent);
-                    if (CharacterInBattleAttacked.isBoss)
-                    {
-                        CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownAttackBar.transform.parent);
-                    }
-                    Destroy(CharacterAttacked);
-                };
-
-            }
-            else
-            {
-                if (CharacterAttack != null)
-                {
-                    CharacterAttack.GetComponent<CharacterInBattle>().isAttack = false;
-                }
-
-            }
-
-            yield return new WaitForSeconds(delay / 2);
-            Destroy(txtDame);
-
-        }
-        void CheckHpEnemy(GameObject gbEnemy)
-        {
-            CharacterInBattle enemyInBattle = gbEnemy.GetComponent<CharacterInBattle>();
-            SkeletonAnimation enemyAnim = enemyInBattle.skeletonCharacterAnimation;
-            if (enemyInBattle.HpNow == 0)
-            {
-
-                enemyAnim.AnimationName = NameAnim.Anim_Character_Die;
-                enemyAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
-                enemyAnim.AnimationState.Complete += delegate
-                {
-                    enemyInBattle.healthBar.gameObject.transform.SetParent(enemyInBattle.cooldownAttackBar.transform.parent);
-                    if (enemyInBattle.isBoss)
-                    {
-                        enemyInBattle.cooldownSkillBar.gameObject.transform.SetParent(enemyInBattle.cooldownAttackBar.transform.parent);
-                    }
-                    // UnityEngine.Debug.Log(enemyAnim.skeletonDataAsset.name);
-                    Destroy(gbEnemy);
-                };
-            }
-        }
 
         void EndBattleMoveCharacter()
         {
