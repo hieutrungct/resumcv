@@ -9,11 +9,11 @@ namespace RubikCasual.Battle
 {
     public enum GameState
     {
-        START = 0,
-        WAIT_BATTLE = 1,
-        BATTLE = 2,
-        END_BATTLE = 3,
-        END = 4
+        START = 0, 
+        WAIT_BATTLE = 2,
+        BATTLE = 3,
+        END_BATTLE = 4,
+        END = 5
     }
     public class GameControl : MonoBehaviour
     {

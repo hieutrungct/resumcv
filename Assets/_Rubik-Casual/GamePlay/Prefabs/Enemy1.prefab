@@ -282,6 +282,9 @@ MonoBehaviour:
     Rare: 
   skeletonCharacterAnimation: {fileID: 0}
   HpNow: 0
+  Hp: 0
+  Def: 0
+  Atk: 0
   Rage: 0
   PosCharacter: {fileID: 8869537431340426607}
   healthBar: {fileID: 79838050539968148}

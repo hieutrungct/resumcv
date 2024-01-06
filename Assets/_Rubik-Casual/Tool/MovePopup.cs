@@ -95,5 +95,18 @@ namespace RubikCasual.Tool
                     break;
             }
         }
+        public static IEnumerator StartCooldown(UnityEngine.UI.Slider slider, float cooldownTime)
+        {
+            float timer = 0f;
+            while (timer < cooldownTime)
+            {
+                timer += Time.deltaTime;
+                slider.value = timer / cooldownTime;
+                yield return null;
+            }
+
+            slider.value = 1f;
+        }
+
     }
 }

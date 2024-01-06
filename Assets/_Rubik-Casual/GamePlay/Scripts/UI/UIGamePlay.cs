@@ -37,15 +37,8 @@ namespace RubikCasual.Battle.UI
         }
         void ShowInventory()
         {
-            if (BattleController.instance.gameState == GameState.WAIT_BATTLE)
-            {
-                canvasUIGamePlay.sortingLayerName = Name_Sorting_Layer;
-                inventorryUIPanel.gameObject.SetActive(true);
-            }
-            else
-            {
-                inventorryUIPanel.gameObject.SetActive(false);
-            }
+            canvasUIGamePlay.sortingLayerName = Name_Sorting_Layer;
+            inventorryUIPanel.gameObject.SetActive(true);
         }
         void ClickBtnContinue()
         {

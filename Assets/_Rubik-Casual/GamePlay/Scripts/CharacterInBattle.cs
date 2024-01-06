@@ -13,7 +13,7 @@ namespace RubikCasual.Battle
         public int indexOfSlot;
         public InfoWaifuAsset infoWaifuAsset;
         public SkeletonAnimation skeletonCharacterAnimation;
-        public float HpNow, Rage;
+        public float HpNow, Hp, Def, Atk, Rage;
         public Transform PosCharacter;
         public Slider healthBar, cooldownAttackBar, cooldownSkillBar;
         public TextMeshProUGUI txtHealthBar;
