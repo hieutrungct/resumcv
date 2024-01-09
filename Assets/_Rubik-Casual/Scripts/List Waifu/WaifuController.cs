@@ -4,6 +4,7 @@ using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Tool;
+using RubikCasual.Waifu;
 using TMPro;
 using UnityEngine;
 namespace Rubik.ListWaifu
@@ -15,7 +16,7 @@ namespace Rubik.ListWaifu
         public DataController listWaifu;
         public WaifuItem slot_Waifu;
         public Transform transformSlot;
-        public WaiFuInfoPopUp WaifuInfoPopup;
+        public WaiFuInfoPopUp waifuInfoPopup;
         public List<PlayerOwnsWaifu> Waifus;
         private List<PlayerOwnsWaifu> sortedWaifus;
         //list
@@ -34,6 +35,7 @@ namespace Rubik.ListWaifu
             sortedWaifus = new List<PlayerOwnsWaifu>(Waifus);
             SortRarityAndLevel();
         }
+        
 
         void CreateWaifu()
         {
@@ -41,6 +43,7 @@ namespace Rubik.ListWaifu
             for (int i = 0; i < listWaifu.playerData.lsPlayerOwnsWaifu.Count; i++)
             {
                 WaifuItem slotWaifu = Instantiate(slot_Waifu, transformSlot);
+                //Debug.Log("Id của waifu " + listWaifu.playerData.lsPlayerOwnsWaifu[i].Index.ToString());
                 slotWaifu.SetUp(listWaifu.playerData.lsPlayerOwnsWaifu[i]);
             }
 
@@ -164,7 +167,7 @@ namespace Rubik.ListWaifu
 
         public void ShowWaifuInfoPopup(PlayerOwnsWaifu Waifu)
         {
-            //WaifuInfoPopup.ShowWaifufoPopup(Waifu);
+            waifuInfoPopup.ShowCharaterfoPopup(Waifu);
         }
 
         public int CheckIndexOfWaifu(PlayerOwnsWaifu Waifu)

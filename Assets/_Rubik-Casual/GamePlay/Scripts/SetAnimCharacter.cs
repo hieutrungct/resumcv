@@ -72,7 +72,7 @@ namespace RubikCasual.Battle
 
                 CharacterAttack.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
             };
-
+//tinh ton ênmy dinh eff
             int count = 0;
             for (int i = 0; i < 6; i++)
             {

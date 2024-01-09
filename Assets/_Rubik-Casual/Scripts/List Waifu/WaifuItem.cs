@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using DG.Tweening;
 using Rubik_Casual;
+using RubikCasual.Battle;
+using RubikCasual.Data;
 using RubikCasual.Data.Player;
+using RubikCasual.Data.Waifu;
+using RubikCasual.Waifu;
 using Spine.Unity;
 using Spine.Unity.Editor;
 using TMPro;
@@ -13,62 +17,69 @@ namespace Rubik.ListWaifu
     public class WaifuItem : MonoBehaviour
     {
         public Image avaCard,attackType,avaBox, BackGlow,Glow,Role;
-        public SkeletonGraphic hero;
+        public SkeletonGraphic UI_Waifu;
+        private SkeletonAnimation ui_Waifu;
         public TextMeshProUGUI nameTxt, levelTxt;
         [SerializeField] GameObject[] stars;
         [SerializeField] BtnOnClick btnClick;
         //[SerializeField] public GameObject inDeck;
         private PlayerOwnsWaifu _waifu;
+        public WaifuAssets waifuAssets;
         
         public void SetUp(PlayerOwnsWaifu waifu)
         {
             _waifu = waifu;
-            // //avaCard.sprite = Common.GetAvatar(character.Name);
-            // //avaCard.sprite = AssetLoader.Instance.GetAvatarById(character.Name);
-    
-            hero.skeletonDataAsset = AssetLoader.instance.GetAvaById(waifu.Index.ToString());
-            hero.initialSkinName = hero.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
-            hero.startingAnimation = hero.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
+            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(_waifu.Index);
+            //Debug.Log("class" + infoWaifu.Code);
 
-            // //hero.skeletonDataAsset.GetSkeletonData(true);
-            // //SpineEditorUtilities.ReloadSkeletonDataAsset(hero.skeletonDataAsset);
-            SpineEditorUtilities.ReinitializeComponent(hero);
+            //ui_Waifu = SpawnCharacter(gameObject.transform, waifuAssets.Get2D(_waifu.Index.ToString()));
+            //ui_Waifu =  waifuAssets.Get2D(_waifu.Index.ToString());
+            SkeletonDataAsset skeletonDataAsset = waifuAssets.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
+            UI_Waifu.skeletonDataAsset = skeletonDataAsset;
+
+            UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            UI_Waifu.startingAnimation = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
+
+            
+            SpineEditorUtilities.ReinitializeComponent(UI_Waifu);
+
+
             
             // // avaCard.SetNativeSize();
 
-            // if (avaBox != null)
-            // {
+            if (avaBox != null)
+            {
                 
-            //     switch(character.Rarity)
-            //     {
-            //         case Rare.UnCommon:
-            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[0];
-            //             break;
-            //         case Rare.Common:
-            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
-            //             Glow.GetComponent<Image>().color = new Color(0.043f, 0.455f, 0.808f, 1f);
-            //             BackGlow.GetComponent<Image>().color = new Color(0.474f, 0.918f, 1f, 1f);
-            //             break;
-            //         case Rare.Rare:
-            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
-            //             Glow.GetComponent<Image>().color = new Color(0f, 0.698f, 0.443f, 1f);
-            //             BackGlow.GetComponent<Image>().color = new Color(1f, 0.953f, 0f, 1f);
-            //             break;
-            //         case Rare.Epic:
-            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
-            //             Glow.GetComponent<Image>().color = new Color(0.886f, 0.58f, 0.173f, 1f);
-            //             BackGlow.GetComponent<Image>().color = new Color(1f, 0.313f, 0f, 1f);
-            //             break;
-            //         case Rare.Legend:
-            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
-            //             Glow.GetComponent<Image>().color = new Color(0.737f, 0.267f, 0.773f, 1f);
-            //             BackGlow.GetComponent<Image>().color = new Color(0.929f, 0.459f, 1f, 1f);
-            //             break;
-            //     }
+                switch(infoWaifu.Rare)
+                {
+                    // case Rare.UnCommon:
+                    //     avaBox.sprite = AssetLoader.Instance.RarrityBox[0];
+                    //     break;
+                    case "R":
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
+                        Glow.GetComponent<Image>().color = new Color(0.043f, 0.455f, 0.808f, 1f);
+                        BackGlow.GetComponent<Image>().color = new Color(0.474f, 0.918f, 1f, 1f);
+                        break;
+                    // case Rare.Rare:
+                    //     avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
+                    //     Glow.GetComponent<Image>().color = new Color(0f, 0.698f, 0.443f, 1f);
+                    //     BackGlow.GetComponent<Image>().color = new Color(1f, 0.953f, 0f, 1f);
+                    //     break;
+                    case "SR":
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
+                        Glow.GetComponent<Image>().color = new Color(0.886f, 0.58f, 0.173f, 1f);
+                        BackGlow.GetComponent<Image>().color = new Color(1f, 0.313f, 0f, 1f);
+                        break;
+                    case "SSR":
+                        avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
+                        Glow.GetComponent<Image>().color = new Color(0.737f, 0.267f, 0.773f, 1f);
+                        BackGlow.GetComponent<Image>().color = new Color(0.929f, 0.459f, 1f, 1f);
+                        break;
+                }
                  
-            // }
+            }
 
-            // Role.sprite = AssetLoader.Instance.AttackSprite[character.Role];
+            //Role.sprite = AssetLoader.Instance.AttackSprite[infoWaifu.Class];
             
             // if (attackType != null)
             // {
@@ -83,7 +94,7 @@ namespace Rubik.ListWaifu
             //     }
             // }
            
-            //nameTxt.text = character.Name.ToString();
+            //nameTxt.text = infoWaifu.Name.ToString();
             levelTxt.text = "" + waifu.level;
             for(int i = 0; i < waifu.Star; i++)
             {
@@ -107,6 +118,9 @@ namespace Rubik.ListWaifu
             //inDeck.SetActive(character.isInDeck);
 
         }
+        
+        
+
     }
 }
 

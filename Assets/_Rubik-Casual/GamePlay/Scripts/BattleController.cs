@@ -413,8 +413,14 @@ namespace RubikCasual.Battle
                     {
                         if (Enemy.cooldownAttackBar.value == 1)
                         {
+                            //display nim
                             SetAnimCharacter.CharacterAtackAnimation(Hero.gameObject, Enemy.gameObject, dameSlotTxtController, durations);
                             // Debug.Log((i + 1) + " enemy atack");
+                            //backdelay
+
+                            //update battle réulr
+
+                            
                             Enemy.cooldownAttackBar.value = 0;
                         }
                         if (Enemy.cooldownAttackBar.value == 0)

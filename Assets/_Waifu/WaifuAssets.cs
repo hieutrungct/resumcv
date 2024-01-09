@@ -122,6 +122,7 @@ namespace RubikCasual.Data.Waifu
             WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
             if (waifuSO == null) return null;
             SkeletonAnimation skeletonAnimation;
+            
             try
             {
                 skeletonAnimation = this.CacheHolder.Get(index + "2D").GetComponent<SkeletonAnimation>();
@@ -129,10 +130,25 @@ namespace RubikCasual.Data.Waifu
             }
             catch (System.Exception)
             {
+                // skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
+                // skeletonAnimation.transform.SetParent(this.Holder);
+                // skeletonAnimation.transform.name = index + "2D";
+                // this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
+
+                // Nếu chưa tồn tại, tạo một đối tượng mới mà không có cha (parent)
                 skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
-                skeletonAnimation.transform.SetParent(this.Holder);
+                
+                // Đặt vị trí và quy mô theo mong muốn
+                skeletonAnimation.transform.position = Vector3.zero; // Đặt vị trí về zero hoặc vị trí mong muốn
+                skeletonAnimation.transform.localScale = waifuSO.OriginScale; // Đặt quy mô theo mong muốn
+
+                // Đặt tên cho đối tượng
                 skeletonAnimation.transform.name = index + "2D";
+
+                // Thêm đối tượng vào CacheHolder
                 this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
+                skeletonAnimation.gameObject.SetActive(false);
+
             }
             skeletonAnimation.initialSkinName = waifuSO.Skin;
             skeletonAnimation.Skeleton.SetSkin(waifuSO.Skin);

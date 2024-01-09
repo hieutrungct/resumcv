@@ -29,6 +29,7 @@ namespace Rubik_Casual
             hero.skeletonDataAsset = AssetLoader.instance.GetAvaById(character.Nameid);
             hero.initialSkinName = hero.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             hero.startingAnimation = hero.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
+            
             //hero.skeletonDataAsset.GetSkeletonData(true);
             //SpineEditorUtilities.ReloadSkeletonDataAsset(hero.skeletonDataAsset);
             SpineEditorUtilities.ReinitializeComponent(hero);

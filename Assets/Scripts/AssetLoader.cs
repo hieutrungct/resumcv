@@ -29,8 +29,9 @@ namespace Rubik_Casual
         public override void Awake()
         {
             instance = this;
-            Avatars = Resources.LoadAll<Sprite>("Character").ToList();
+            Avatars = Resources.LoadAll<Sprite>("CamCapture/Waifu").ToList();
             Hero = Resources.LoadAll<SkeletonDataAsset>("Character").ToList();
+
             Enemy = Resources.LoadAll<SkeletonDataAsset>("Enemy").ToList();
             foreach (Sprite sprite in Avatars)
             {

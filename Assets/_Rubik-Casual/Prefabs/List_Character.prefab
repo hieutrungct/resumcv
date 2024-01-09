@@ -258,7 +258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7919158160194960999}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
         m_MethodName: ClosePopup
         m_Mode: 1
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac392b54343a2e94ea5439c288a8ce0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myData: {fileID: 0}
+  myData: {fileID: 11400000, guid: 9a944bca1aff57244a1738f290bf62aa, type: 2}
 --- !u!1 &664102492740442024
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7919158160194960999}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedLever
         m_Mode: 1
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7919158160194960999}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedPower
         m_Mode: 1
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7919158160194960999}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedRarity
         m_Mode: 1
@@ -2037,9 +2037,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7919158160194960998}
-  - component: {fileID: 7919158160194960999}
+  - component: {fileID: 868648916}
   m_Layer: 0
-  m_Name: CharacterController
+  m_Name: WaifuController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2060,7 +2060,7 @@ Transform:
   m_Father: {fileID: 664102492689521541}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7919158160194960999
+--- !u!114 &868648916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2069,19 +2069,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 7919158160194960992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50c8a188b11bf24085a365a723c3fa1, type: 3}
+  m_Script: {fileID: 11500000, guid: e88d58d8f611c7f459fc89bde9609df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gbTaget: {fileID: 0}
   gbPopupOpen: {fileID: 664102492689521540}
-  listCharacter: {fileID: 11400000, guid: 9a944bca1aff57244a1738f290bf62aa, type: 2}
-  slot_Character: {fileID: 7408709695027442042, guid: e150ba8a1e4e32d40b714555d809c99c, type: 3}
+  listWaifu: {fileID: 0}
+  slot_Waifu: {fileID: 8337258516667912828, guid: df3ba99a6df6f234aaa76c24ae60ef83, type: 3}
   transformSlot: {fileID: 664102492740442025}
-  characterInfoPopup: {fileID: 0}
-  characters: []
+  WaifuInfoPopup: {fileID: 0}
+  Waifus: []
   textListSortLever: {fileID: 664102493052607846}
   textListSortRarity: {fileID: 3565818026845054191}
   textListSortPower: {fileID: 3565818025517922691}
+  lsWaifuData:
+    lsInfoWaifuAssets: []
 --- !u!1 &7919158160987775948
 GameObject:
   m_ObjectHideFlags: 0

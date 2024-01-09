@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using RubikCasual.Character_ACC;
 using RubikCasual.DailyItem;
 using RubikCasual.Data.Player;
+using RubikCasual.Data.Waifu;
 using RubikCasual.Lobby;
+using RubikCasual.Waifu;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -22,6 +24,18 @@ namespace RubikCasual.Data
             instance = this;
             DontDestroyOnLoad(this);
             StartCoroutine(LoadData());
+        }
+        
+        public InfoWaifuAsset GetInfoWaifuAssetsByIndex(int index)
+        {
+            foreach (var item in WaifuAssets.instance.infoWaifuAssets.lsInfoWaifuAssets)
+            {
+                //Debug.Log("Trả về ID" + item.ID);
+                if(item.ID == index){
+                    return item;
+                }
+            }
+            return null;
         }
         // void Start()
         // {
