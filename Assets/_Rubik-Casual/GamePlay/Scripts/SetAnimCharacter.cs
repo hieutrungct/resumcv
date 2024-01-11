@@ -81,7 +81,7 @@ namespace RubikCasual.Battle
             {
                 CharacterInBattle EnemyBossInBattle = lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>();
                 SkeletonAnimation AnimEnemy = EnemyBossInBattle.skeletonCharacterAnimation;
-                AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
+                // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
                 AnimEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
                 AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                 AnimEnemy.AnimationState.Complete += delegate
@@ -299,6 +299,8 @@ namespace RubikCasual.Battle
                 CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Die;
                 CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
 
+                CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(BattleController.instance.dameSlotTxtController.transform);
+                CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(CharacterInBattleAttacked.healthBar.transform);
 
                 CharacterAttackedAnim.AnimationState.Complete += delegate
                 {
@@ -314,7 +316,6 @@ namespace RubikCasual.Battle
             }
             else
             {
-
                 CharacterInBattleAttack.isAttack = false;
 
             }

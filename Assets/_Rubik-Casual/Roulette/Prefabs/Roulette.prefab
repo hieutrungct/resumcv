@@ -25122,7 +25122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7378618465435200590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25162,7 +25162,11 @@ MonoBehaviour:
   gbSpin: {fileID: 7378618466407828575}
   gbArrowFocus: {fileID: 7378618466866186456}
   btnSpin: {fileID: 0}
-  rotationSpeed: 0.5
+  durations: 0.5
+  DegreeTarget: 0
+  Loop: 10
+  DistanceSpin: 10
+  radRemaining: 0
 --- !u!1 &7378618465458577032
 GameObject:
   m_ObjectHideFlags: 0

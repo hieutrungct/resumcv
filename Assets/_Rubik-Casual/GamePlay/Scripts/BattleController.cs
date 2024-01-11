@@ -293,7 +293,7 @@ namespace RubikCasual.Battle
                     heroInBattle.infoWaifuAsset = waifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == lsHeroInArea[index].idCharacter);
 
                     heroInBattle.cooldownAttackBar.value = 1f;
-                    heroInBattle.cooldownSkillBar.value = 1f;
+                    heroInBattle.cooldownSkillBar.value = 0f;
                     heroInBattle.healthBar.value = 1f;
                     heroInBattle.Rage = 0;
                     heroInBattle.Hp = heroInBattle.infoWaifuAsset.HP;
@@ -388,7 +388,10 @@ namespace RubikCasual.Battle
 
                                 enemyInBattle.cooldownAttackBar.gameObject.SetActive(false);
                                 enemyInBattle.cooldownSkillBar.gameObject.SetActive(false);
-
+                                if (index == 0)
+                                {
+                                    enemyInBattle.cooldownAttackBar.gameObject.SetActive(true);
+                                }
                                 SkeletonAnimation Enemy = SpawnCharacter(enemyInBattle, enemyAssets.Get2D(idValueInSlot.ToString()));
                                 // Enemy.GetComponent<MeshRenderer>().sortingLayerName = "Enemy";
 
@@ -606,11 +609,6 @@ namespace RubikCasual.Battle
                 {
                     CharacterInBattle enemyInBattle = lsSlotGbEnemy[index].GetComponent<CharacterInBattle>();
                     enemyInBattle.healthBar.gameObject.transform.SetParent(dameSlotTxtController.transform);
-
-                    if (enemyInBattle.HpNow == 0)
-                    {
-                        enemyInBattle.healthBar.gameObject.transform.SetParent(enemyInBattle.cooldownAttackBar.gameObject.transform.parent);
-                    }
 
                 }
             }
