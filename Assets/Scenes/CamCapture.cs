@@ -9,55 +9,35 @@ namespace Rubik.Axie
 {
     public class CamCapture : MonoBehaviour
     {
-        public string NamePNG = "default";
-        public SkeletonAnimation skeletonAnimation;
+        // public string NamePNG = "default";
+        // public SkeletonAnimation skeletonAnimation;
 
         void Update()
         {
-            string[] lsName = skeletonAnimation.skeletonDataAsset.name.Split("_");
-
-            if (lsName.Length == 4)
-            {
-                if (skeletonAnimation.initialSkinName == (lsName[0] + "_" + lsName[1]))
-                {
-                    NamePNG = skeletonAnimation.initialSkinName.Replace("Pet", "");
-                }
-                else
-                {
-
-                    NamePNG = lsName[0] + "_" + lsName[1];
-                }
-
-            }
-            else
-            {
-                NamePNG = skeletonAnimation.initialSkinName.Replace("Pet", "");
-            }
-            // NamePNG = skeletonAnimation.initialSkinName.Replace("Pet", "");
-
-
+            
         }
+       
         public TMP_InputField txtName;
-        [Button]
-        public void Capture()
-        {
-            Camera Cam = GetComponent<Camera>();
+        // [Button]
+        // public void Capture()
+        // {
+        //     Camera Cam = GetComponent<Camera>();
 
-            RenderTexture currentRT = RenderTexture.active;
-            RenderTexture.active = Cam.targetTexture;
+        //     RenderTexture currentRT = RenderTexture.active;
+        //     RenderTexture.active = Cam.targetTexture;
 
-            Cam.Render();
+        //     Cam.Render();
 
-            Texture2D Image = new Texture2D(Cam.targetTexture.width, Cam.targetTexture.height);
-            Image.ReadPixels(new Rect(0, 0, Cam.targetTexture.width, Cam.targetTexture.height), 0, 0);
-            Image.Apply();
-            RenderTexture.active = currentRT;
+        //     Texture2D Image = new Texture2D(Cam.targetTexture.width, Cam.targetTexture.height);
+        //     Image.ReadPixels(new Rect(0, 0, Cam.targetTexture.width, Cam.targetTexture.height), 0, 0);
+        //     Image.Apply();
+        //     RenderTexture.active = currentRT;
 
-            var Bytes = Image.EncodeToPNG();
-            Destroy(Image);
+        //     var Bytes = Image.EncodeToPNG();
+        //     Destroy(Image);
 
-            File.WriteAllBytes(Application.dataPath + "/CamCapture/Waifu/" + NamePNG + ".png", Bytes);
-        }
+        //     File.WriteAllBytes(Application.dataPath + "/CamCapture/Waifu/" + NamePNG + ".png", Bytes);
+        // }
         // [Button]
         // public void CaptureCreep()
         // {

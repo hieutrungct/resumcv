@@ -30,7 +30,7 @@ namespace RubikCasual.Data
         {
             foreach (var item in WaifuAssets.instance.infoWaifuAssets.lsInfoWaifuAssets)
             {
-                //Debug.Log("Trả về ID" + item.ID);
+                
                 if(item.ID == index){
                     return item;
                 }

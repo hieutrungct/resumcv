@@ -44,6 +44,7 @@ namespace Rubik.ListWaifu
             {
                 WaifuItem slotWaifu = Instantiate(slot_Waifu, transformSlot);
                 //Debug.Log("Id của waifu " + listWaifu.playerData.lsPlayerOwnsWaifu[i].Index.ToString());
+                
                 slotWaifu.SetUp(listWaifu.playerData.lsPlayerOwnsWaifu[i]);
             }
 
@@ -180,11 +181,11 @@ namespace Rubik.ListWaifu
         {
             if (index >= listWaifu.playerData.lsPlayerOwnsWaifu.Count)
             {
-                index = listWaifu.playerData.lsPlayerOwnsWaifu.Count - 1;
+                index = 0;
             }
             else if (index < 0)
             {
-                index = 0;
+                index = listWaifu.playerData.lsPlayerOwnsWaifu.Count - 1;
             }
 
             return Waifus[index];

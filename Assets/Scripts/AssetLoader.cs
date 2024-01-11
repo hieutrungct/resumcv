@@ -6,6 +6,7 @@ using UnityEngine;
 using Minimalist.Bar.Utility;
 using Spine;
 using Spine.Unity;
+using NTPackage;
 
 namespace Rubik_Casual
 {
@@ -23,7 +24,7 @@ namespace Rubik_Casual
         public List<Sprite> SkillSprite;
         public GameObject cardPrefab;
         public static AssetLoader instance;
-        private Dictionary<string, Sprite> AvatarDic = new Dictionary<string, Sprite>();
+        private NTDictionary<string, Sprite> AvatarDic = new NTDictionary<string, Sprite>();
         private Dictionary<string, SkeletonData> HeroDic = new Dictionary<string, SkeletonData>();
         private Dictionary<string, SkeletonData> EnemyDic = new Dictionary<string, SkeletonData>();
         public override void Awake()
@@ -37,7 +38,7 @@ namespace Rubik_Casual
             {
                 try
                 {
-                    AvatarDic.TryAdd(sprite.name, sprite);
+                    AvatarDic.Add(sprite.name, sprite);
                 }
                 catch (Exception e)
                 {
@@ -73,7 +74,7 @@ namespace Rubik_Casual
 
         public Sprite GetAvatarById(string id)
         {
-            return AvatarDic[id];
+            return AvatarDic.Get(id);
         }
 
         public SkeletonDataAsset GetAvaById(string id)

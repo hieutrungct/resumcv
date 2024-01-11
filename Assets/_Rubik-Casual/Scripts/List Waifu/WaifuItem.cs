@@ -25,17 +25,32 @@ namespace Rubik.ListWaifu
         //[SerializeField] public GameObject inDeck;
         private PlayerOwnsWaifu _waifu;
         public WaifuAssets waifuAssets;
+        private InfoWaifuAsset infoWaifu;
         
         public void SetUp(PlayerOwnsWaifu waifu)
         {
             _waifu = waifu;
-            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(_waifu.Index);
+            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.Index);
+            
+            
             //Debug.Log("class" + infoWaifu.Code);
 
             //ui_Waifu = SpawnCharacter(gameObject.transform, waifuAssets.Get2D(_waifu.Index.ToString()));
             //ui_Waifu =  waifuAssets.Get2D(_waifu.Index.ToString());
+
+            if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "R")
+            {
+                _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
+            }
+            else if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "SR")
+            {
+                _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
+            }
+
+
             SkeletonDataAsset skeletonDataAsset = waifuAssets.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
+
 
             UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             UI_Waifu.startingAnimation = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;

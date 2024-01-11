@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Spine.Unity;
 using TMPro;
 using UnityEngine;
 
@@ -94,6 +95,20 @@ namespace RubikCasual.Tool
                     Destroy(gbParentClone);
                     break;
             }
+        }
+        public static string GetNameImageWaifu(SkeletonGraphic skeletonGraphic)
+        {
+            string[] lsName = skeletonGraphic.skeletonDataAsset.name.Split("_");
+            string NamePNG;
+            if (lsName.Length == 4 && skeletonGraphic.initialSkinName != (lsName[0] + "_" + lsName[1]))
+            {
+                NamePNG = lsName[0] + "_" + lsName[1].Replace("0","");
+            }
+            else
+            {
+                NamePNG = skeletonGraphic.initialSkinName;
+            }
+            return NamePNG.Replace("Pet", "");
         }
     }
 }

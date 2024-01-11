@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: skeleton_SkeletonData
+  m_Name: Pet1001_191205142335_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: e377204cfcab1e14da4a85b5097c4d71, type: 2}
+  - {fileID: 11400000, guid: b924fc11e001dba4ea841c552f1755eb, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: db2a1e1902626f641ae087e8a3e5ff42, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 7a7f206c7baf76c4bb1678c7b2fde89e, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 1
     applyAdditiveMaterial: 1
     additiveMaterials:
-    - pageName: skeleton.png
-      material: {fileID: 2100000, guid: 3fb71e6e2d275c14f94c3676836d3cce, type: 2}
+    - pageName: Skeleton.png
+      material: {fileID: 2100000, guid: 77230f0019082094bb284a5dc1430c38, type: 2}
     multiplyMaterials: []
     screenMaterials: []
   skeletonDataModifiers: []

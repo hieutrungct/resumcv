@@ -17,5 +17,7 @@ namespace RubikCasual.Waifu
         public string Anim_Atked;
         public string Anim_Skill;
         public bool Is_Boss;
+        public float Code;
+
     }
 }

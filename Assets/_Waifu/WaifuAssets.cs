@@ -23,6 +23,7 @@ namespace RubikCasual.Data.Waifu
         public string Anim_Die;
         public string Anim_Atked;
         public string Anim_Skill;
+        public float Code;
     }
 
     public class WaifuAssets : NTBehaviour
@@ -241,6 +242,7 @@ namespace RubikCasual.Data.Waifu
                 waifuSO.Anim_Die = item.Anim_Die;
                 waifuSO.Anim_Atked = item.Anim_Atked;
                 waifuSO.Anim_Skill = item.Anim_Skill;
+                waifuSO.Code = item.Code;
                 AssetDatabase.CreateAsset(waifuSO, path);
                 AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();

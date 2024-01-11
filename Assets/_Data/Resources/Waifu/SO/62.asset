@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FunnyCheck: 0
   Index: 62
-  SkeletonDataAsset: {fileID: 11400000, guid: 5c2258424214f98498b17186bc25cefe, type: 2}
+  SkeletonDataAsset: {fileID: 11400000, guid: 657f9930f059e294e9eeb068a5a9b905, type: 2}
   OriginScale: {x: -1, y: 1, z: 1}
-  Skin: Pet1066
+  Skin: Pet1035
   Anim_Idle: Idle
   Anim_Atk: Attack
   Anim_Die: Die
   Anim_Atked: Attacked
   Anim_Skill: SkillCast
+  Is_Boss: 0
+  Code: 1035

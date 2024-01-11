@@ -10,6 +10,7 @@ using Rubik_Casual;
 using RubikCasual.Waifu;
 using RubikCasual.Data;
 using RubikCasual.Data.Waifu;
+using RubikCasual.Tool;
 namespace Rubik.ListWaifu
 {
     public class WaiFuInfoPopUp : MonoBehaviour
@@ -26,7 +27,7 @@ namespace Rubik.ListWaifu
         public Image role, avatar;
         
         
-        private PlayerOwnsWaifu thisWaifu;
+        private PlayerOwnsWaifu thisWaifu,_waifu;
 
         public void Start()
         {
@@ -37,15 +38,26 @@ namespace Rubik.ListWaifu
         public void SetUp(PlayerOwnsWaifu waifu)
         {
             thisWaifu = waifu;
+            _waifu = waifu;
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.Index);
-            SkeletonDataAsset skeletonDataAsset = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).SkeletonDataAsset;
+
+            if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "R")
+            {
+                _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
+            }
+            else if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "SR")
+            {
+                _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
+            }
+            SkeletonDataAsset skeletonDataAsset = waifuAssets.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
             avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             SpineEditorUtilities.ReinitializeComponent(avaWaifu);
             
-            avatar.sprite = AssetLoader.Instance.GetAvatarById(infoWaifu.Code.ToString());
-            Debug.Log(infoWaifu.Code.ToString());
+            avatar.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+
+            // Debug.Log(infoWaifu.Code.ToString());
 
             //role.sprite = AssetLoader.Instance.AttackSprite[waifu.Role];
             lvTxt.text = waifu.level.ToString();
