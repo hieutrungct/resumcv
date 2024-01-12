@@ -206,7 +206,6 @@ namespace RubikCasual.Battle
             SkeletonAnimation enemyAnim = enemyInBattle.skeletonCharacterAnimation;
             if (enemyInBattle.HpNow == 0)
             {
-
                 enemyAnim.AnimationName = NameAnim.Anim_Character_Die;
                 enemyAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
                 enemyInBattle.isAttack = true;
@@ -262,16 +261,6 @@ namespace RubikCasual.Battle
                 CharacterInBattleAttacked.txtHealthBar.text = ((int)CharacterInBattleAttacked.HpNow).ToString() + "/" + CharacterInBattleAttacked.infoWaifuAsset.HP.ToString();
             }
 
-            // Transform TransTxt = CharacterInBattleAttacked.healthBar.transform;
-
-            // GameObject txtDame = UnityEngine.Object.Instantiate(UIGamePlay.instance.TxtDame, TransTxt);
-            // txtDame.GetComponent<TextMeshProUGUI>().text = "-" + ((int)(OldHp - CharacterInBattleAttacked.HpNow)).ToString();
-            // txtDame.GetComponent<TextMeshProUGUI>().color = Color.red;
-            // Tween moveTxtDame = txtDame.transform.DOMoveY(txtDame.transform.position.y + durationsTxtDame, durationsTxtDame);
-            // moveTxtDame.OnComplete(() =>
-            // {
-            //     UnityEngine.Object.Destroy(txtDame);
-            // });
 
             int lossHp = (int)(OldHp - CharacterInBattleAttacked.HpNow);
             if (OldHp - CharacterInBattleAttacked.HpNow > 0 && OldHp - CharacterInBattleAttacked.HpNow < 1)

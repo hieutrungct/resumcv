@@ -61,34 +61,32 @@ namespace RubikCasual.Battle.Inventory
                 {
                     if (BattleController.instance.lsSlotGbEnemy[indexCheckEnemy] != null)
                     {
-                            if (DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Heal"
-                            && DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString() != "Mana"
-                            && BattleController.instance.lsSlotGbEnemy[indexCheckEnemy].GetComponent<CharacterInBattle>() != null
-                                )
+                        if (DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type == RubikCasual.DailyItem.TypeItem.Poison
+                        && BattleController.instance.lsSlotGbEnemy[indexCheckEnemy].GetComponent<CharacterInBattle>() != null )
+                        {
+                            CharacterInBattle EnemyInBattle = BattleController.instance.lsSlotGbEnemy[indexCheckEnemy].GetComponent<CharacterInBattle>();
+                            SkeletonAnimation enemy = EnemyInBattle.skeletonCharacterAnimation;
+
+                            Calculator.CheckItemCalculate(idItem, EnemyInBattle);
+
+                            if (EnemyInBattle.HpNow == 0)
                             {
-                                CharacterInBattle EnemyInBattle = BattleController.instance.lsSlotGbEnemy[indexCheckEnemy].GetComponent<CharacterInBattle>();
-                                SkeletonAnimation enemy = EnemyInBattle.skeletonCharacterAnimation;
-
-                                Calculator.CheckItemCalculate(idItem, EnemyInBattle);
-
-                                if (EnemyInBattle.HpNow == 0)
+                                enemy.AnimationName = NameAnim.Anim_Character_Die;
+                                enemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
+                                enemy.AnimationState.Complete += delegate
                                 {
-                                    enemy.AnimationName = NameAnim.Anim_Character_Die;
-                                    enemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
-                                    enemy.AnimationState.Complete += delegate
-                                    {
-                                        EnemyInBattle.healthBar.gameObject.transform.SetParent(EnemyInBattle.cooldownAttackBar.transform.parent);
-                                        Destroy(EnemyInBattle.gameObject);
-                                    };
-                                }
-                                StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
+                                    EnemyInBattle.healthBar.gameObject.transform.SetParent(EnemyInBattle.cooldownAttackBar.transform.parent);
+                                    Destroy(EnemyInBattle.gameObject);
+                                };
                             }
-                            else
-                            {
-                                gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
-                                GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
-                                return;
-                            }
+                            StartCoroutine(MovePopup.ShowTxtDame(gameObject, UIGamePlay.instance.TxtDame, mousePosition, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).Dame, DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).type.ToString()));
+                        }
+                        else
+                        {
+                            gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
+                            GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
+                            return;
+                        }
                     }
                 }
             }
@@ -113,7 +111,7 @@ namespace RubikCasual.Battle.Inventory
                 {
                     gameObject.transform.position = inventorryUI.lsSlotInventory[gameObject.GetComponent<SlotInventory>().IdSlot].transform.position;
                     GetComponent<SlotInventory>().Icon.transform.DOPunchScale(new Vector3(valueAnother, valueAnother, valueAnother), duration);
-
+                    return;
                 }
             }
         }

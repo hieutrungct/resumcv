@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using NTPackage;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -12,16 +13,21 @@ namespace RubikCasual.Roulette
     {
         public List<Image> lsSlotIcon = new List<Image>();
         public List<TextMeshProUGUI> lsTxtValueItem = new List<TextMeshProUGUI>();
-        public GameObject gbSpin, gbArrowFocus;
+        public NTDictionary<int, int> lsIdWithSlot = new NTDictionary<int, int>();
+        public GameObject gbSpin, gbArrowFocus, gbCoverItem;
+        // public TextMeshProUGUI txtNumberFocus;
         public Button btnSpin;
-        public float durations, DegreeTarget, Loop, DistanceSpin;
-        public float radRemaining = 0;
+        public bool clockWise = true;
+        public int slotTarget;
+        public float durationsOneLoop, DegreeTarget, Loops, DistanceSpin;
 
-        [Button]
-        void TestConvert(int slotTarget, int totalSlot)
-        {
-            Debug.Log(ConvertSlotRotateToDegree(slotTarget, totalSlot));
-        }
+        // [Button]
+        // void TestConvert()
+        // {
+        //     DegreeTarget = ConvertSlotRotateToDegree(slotTarget, lsSlotIcon.Count);
+        //     Debug.Log(DegreeTarget);
+        // }
+
         int ConvertSlotRotateToDegree(int slotTarget, int totalSlot, bool isArrowFocusLine = true)
         {
             // if (!isArrowFocusLine)
@@ -59,32 +65,74 @@ namespace RubikCasual.Roulette
 
         public void RotateSpin()
         {
-            StartCoroutine(StopOrStartSpin(gbSpin, durations, (int)Loop, DistanceSpin, (int)DegreeTarget));
+            DegreeTarget = ConvertSlotRotateToDegree(slotTarget, lsSlotIcon.Count);
+            gbSpin.transform.localRotation = new Quaternion();
+            StartCoroutine(StopOrStartSpin(gbSpin, durationsOneLoop, (int)Loops, DistanceSpin, (int)DegreeTarget, clockWise));
         }
 
-        IEnumerator StopOrStartSpin(GameObject gbTargetSpin, float durationRotate, int LoopsSpin, float Distance, int Degree)
+        IEnumerator StopOrStartSpin(GameObject gbTargetSpin, float durationRotate, int LoopsSpin, float Distance, int Degree, bool isClockwise = true)
         {
-            Tween doTarget = gbSpin.transform.DOLocalRotate(gbSpin.transform.eulerAngles, 0f);
-            float DegreeRotateLinear = 360f * Distance;
-            Vector3 value = new Vector3(0f, 0f, DegreeRotateLinear);
-            Vector3 valueRadian = new Vector3(0f, 0f, Degree);
-            doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles + value, durationRotate * Distance, RotateMode.FastBeyond360)
-                                .SetEase(Ease.InQuad);
+            if (!isClockwise)
+            {
+                Tween doTarget = gbSpin.transform.DOLocalRotate(gbSpin.transform.eulerAngles, 0f);
+                float DegreeRotateLinear = 360f * Distance;
+                Vector3 value = new Vector3(0f, 0f, DegreeRotateLinear);
+                Vector3 valueRadian = new Vector3(0f, 0f, Degree);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles - value, durationRotate * Distance, RotateMode.FastBeyond360)
+                                    .SetEase(Ease.InQuad);
 
-            yield return doTarget.WaitForElapsedLoops(1);
-            doTarget = gbTargetSpin.transform.DOLocalRotate(gbSpin.transform.eulerAngles + value, durationRotate, RotateMode.FastBeyond360)
-                                            .SetLoops(LoopsSpin, LoopType.Incremental)
-                                            .SetEase(EaseFactory.StopMotion(60, Ease.Linear));
+                yield return doTarget.WaitForElapsedLoops(1);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbSpin.transform.eulerAngles - value, durationRotate, RotateMode.FastBeyond360)
+                                                .SetLoops(LoopsSpin, LoopType.Incremental)
+                                                .SetEase(EaseFactory.StopMotion(60, Ease.Linear));
 
-            yield return doTarget.WaitForElapsedLoops(LoopsSpin);
-            doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles + valueRadian, durationRotate * Degree / DegreeRotateLinear, RotateMode.FastBeyond360)
-                                            .SetEase(EaseFactory.StopMotion(60, Ease.Linear));
+                yield return doTarget.WaitForElapsedLoops(LoopsSpin);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles - valueRadian, durationRotate * Degree / DegreeRotateLinear, RotateMode.FastBeyond360)
+                                                .SetEase(EaseFactory.StopMotion(60, Ease.Linear));
 
-            yield return doTarget.WaitForElapsedLoops(1);
-            doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles + value, durationRotate * Distance, RotateMode.FastBeyond360)
-                 .SetEase(Ease.OutQuad);
+                yield return doTarget.WaitForElapsedLoops(1);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles - value, durationRotate * Distance, RotateMode.FastBeyond360)
+                                                .SetEase(Ease.OutQuad);
+                doTarget.OnComplete(() =>
+                {
+                    StartCoroutine(CompleRoulette());
+                });
+            }
+            else
+            {
+                Tween doTarget = gbSpin.transform.DOLocalRotate(gbSpin.transform.eulerAngles, 0f);
+                float DegreeRotateLinear = 360f * Distance;
+                Vector3 value = new Vector3(0f, 0f, DegreeRotateLinear);
+                Vector3 valueRadian = new Vector3(0f, 0f, Degree);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles + value, durationRotate * Distance, RotateMode.FastBeyond360)
+                                    .SetEase(Ease.InQuad);
+
+                yield return doTarget.WaitForElapsedLoops(1);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbSpin.transform.eulerAngles + value, durationRotate, RotateMode.FastBeyond360)
+                                                .SetLoops(LoopsSpin, LoopType.Incremental)
+                                                .SetEase(EaseFactory.StopMotion(60, Ease.Linear));
+
+                yield return doTarget.WaitForElapsedLoops(LoopsSpin);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles + valueRadian, durationRotate * Degree / DegreeRotateLinear, RotateMode.FastBeyond360)
+                                                .SetEase(EaseFactory.StopMotion(60, Ease.Linear));
+
+                yield return doTarget.WaitForElapsedLoops(1);
+                doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles + value, durationRotate * Distance, RotateMode.FastBeyond360)
+                                                .SetEase(Ease.OutQuad);
+                doTarget.OnComplete(() =>
+                {
+                    StartCoroutine(CompleRoulette());
+                });
+            }
         }
-
+        IEnumerator CompleRoulette()
+        {
+            gbCoverItem.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            lsSlotIcon[slotTarget].transform.SetParent(gbCoverItem.transform);
+            lsSlotIcon[slotTarget].transform.DOMove(new Vector3(), 0.5f);
+            // txtNumberFocus.text = ;
+        }
 
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RubikCasual.Roulette;
 using UnityEngine;
 
 namespace RubikCasual.Battle.UI
@@ -9,6 +10,7 @@ namespace RubikCasual.Battle.UI
     {
         public PopupContinue popupContinue;
         public InventorryUIPanel inventorryUIPanel;
+        public RouletteController rouletteController;
         public GameObject TxtDame;
         public Canvas canvasUIGamePlay;
         public static UIGamePlay instance;

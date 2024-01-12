@@ -38,7 +38,7 @@ namespace RubikCasual.Battle.UI
                 });
             }
         }
-        void CreateSlotInventory(int idSlot, int idItem)
+        public void CreateSlotInventory(int idSlot, int idItem)
         {
             for (int i = 0; i < lsSlotInventory.Count; i++)
             {

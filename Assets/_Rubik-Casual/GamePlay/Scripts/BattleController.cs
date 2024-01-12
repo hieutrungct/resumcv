@@ -609,7 +609,6 @@ namespace RubikCasual.Battle
                 {
                     CharacterInBattle enemyInBattle = lsSlotGbEnemy[index].GetComponent<CharacterInBattle>();
                     enemyInBattle.healthBar.gameObject.transform.SetParent(dameSlotTxtController.transform);
-
                 }
             }
 
@@ -894,8 +893,18 @@ namespace RubikCasual.Battle
                             GameObject ItemClone = Instantiate(InventorryUIPanel.instance.itemInventory, posSlot.gameObject.transform);
                             ItemClone.transform.position = new Vector3(ItemClone.transform.position.x, ItemClone.transform.position.y + durations, ItemClone.transform.position.z);
                             SlotInventory Item = ItemClone.GetComponent<SlotInventory>();
+
+                            RubikCasual.DailyItem.infoItem infoItem = dataController.itemData.InfoItems.FirstOrDefault(f => f.id == idValueInSlot);
+                            if (CountState % 10 == 0)
+                            {
+                                // Item.Icon.GetComponent<Image>().sprite =  dataController.itemData.InfoItems.FirstOrDefault(f => f.id == idValueInSlot);
+                            }
+                            else
+                            {
+                                Item.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
+                            }
                             Item.idItem = idValueInSlot;
-                            Item.Icon.GetComponent<Image>().sprite = dataController.itemData.InfoItems.FirstOrDefault(f => f.id == idValueInSlot).imageItem;
+
 
                             Destroy(ItemClone.GetComponent<ItemDragPosition>());
                             lsSlotGbEnemy.Add(ItemClone);

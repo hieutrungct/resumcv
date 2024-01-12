@@ -107,6 +107,19 @@ namespace RubikCasual.Tool
 
             slider.value = 1f;
         }
-
+        public static string GetNameImageWaifu(Spine.Unity.SkeletonGraphic skeletonGraphic)
+        {
+            string[] lsName = skeletonGraphic.skeletonDataAsset.name.Split("_");
+            string NamePNG;
+            if (lsName.Length == 4 && skeletonGraphic.initialSkinName != (lsName[0] + "_" + lsName[1]))
+            {
+                NamePNG = lsName[0] + "_" + lsName[1].Replace("0", "");
+            }
+            else
+            {
+                NamePNG = skeletonGraphic.initialSkinName;
+            }
+            return NamePNG.Replace("Pet", "");
+        }
     }
 }

@@ -3000,6 +3000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupContinue: {fileID: 1732695213}
   inventorryUIPanel: {fileID: 905191030}
+  rouletteController: {fileID: 0}
   TxtDame: {fileID: 6886765824601049219, guid: bab8e71d4c1352144920bcedcfa6d1c4, type: 3}
   canvasUIGamePlay: {fileID: 1388739373}
 --- !u!1 &1011175758
