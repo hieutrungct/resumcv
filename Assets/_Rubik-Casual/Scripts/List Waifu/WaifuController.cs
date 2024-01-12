@@ -26,9 +26,10 @@ namespace Rubik.ListWaifu
         private float count;
         private bool isFirstClick = true;
 
-        public void Awake()
+        public void Start()
         {
-            DontDestroyOnLoad(this);
+            // DontDestroyOnLoad(this);
+            
             instance = this;
             CreateWaifu();
             Waifus = listWaifu.playerData.lsPlayerOwnsWaifu;
@@ -156,7 +157,7 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
-                int result = (charA.Star).CompareTo(charB.Star);
+                int result = (charA.Pow + charA.ATK).CompareTo(charB.Pow + charB.ATK);
                 if (result == 0)
                 {
                     result = charA.level.CompareTo(charB.level);
@@ -255,10 +256,9 @@ namespace Rubik.ListWaifu
         }
         private void SetButtonColors(SortingType selectedSortingType)
         {
-            // Đặt màu cho nút đã chọn.
-            textListSortLever.color = (selectedSortingType == SortingType.Lever) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
-            textListSortRarity.color = (selectedSortingType == SortingType.Rarity) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
-            textListSortPower.color = (selectedSortingType == SortingType.Power) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
+            Config.SetTextColorWithHex(textListSortLever, selectedSortingType == SortingType.Lever ? Config.color_White : Config.color_Blue);
+            Config.SetTextColorWithHex(textListSortRarity, selectedSortingType == SortingType.Rarity ? Config.color_White : Config.color_Blue);
+            Config.SetTextColorWithHex(textListSortPower, selectedSortingType == SortingType.Power ? Config.color_White : Config.color_Blue);
         }
         public void OpenPopup()
         {

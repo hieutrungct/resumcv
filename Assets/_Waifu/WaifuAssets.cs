@@ -17,7 +17,7 @@ namespace RubikCasual.Data.Waifu
         public int Index;
         public string PathSkeleton;
         public Vector3 OriginScale;
-        public string Skin;
+        public string NameSkin;
         public string Anim_Idle;
         public string Anim_Atk;
         public string Anim_Die;
@@ -98,6 +98,11 @@ namespace RubikCasual.Data.Waifu
 
         public WaifuSO GetWaifuSOByIndex(string index)
         {
+            if ( this.WaifuSODic ==null)
+            {
+                Debug.Log("null Dic");
+                
+            }
             try
             {
                 WaifuSO waifuSO = this.WaifuSODic.Get(index);
@@ -115,7 +120,9 @@ namespace RubikCasual.Data.Waifu
             }
             catch (System.Exception e)
             {
+                
                 Debug.LogWarning(e);
+                Debug.LogError(index);
                 return null;
             }
         }
@@ -134,24 +141,24 @@ namespace RubikCasual.Data.Waifu
             }
             catch (System.Exception)
             {
-                // skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
-                // skeletonAnimation.transform.SetParent(this.Holder);
-                // skeletonAnimation.transform.name = index + "2D";
-                // this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
-
-                // Nếu chưa tồn tại, tạo một đối tượng mới mà không có cha (parent)
                 skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
-                
-                // Đặt vị trí và quy mô theo mong muốn
-                skeletonAnimation.transform.position = Vector3.zero; // Đặt vị trí về zero hoặc vị trí mong muốn
-                skeletonAnimation.transform.localScale = waifuSO.OriginScale; // Đặt quy mô theo mong muốn
-
-                // Đặt tên cho đối tượng
+                skeletonAnimation.transform.SetParent(this.Holder);
                 skeletonAnimation.transform.name = index + "2D";
-
-                // Thêm đối tượng vào CacheHolder
                 this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
-                skeletonAnimation.gameObject.SetActive(false);
+
+                // // Nếu chưa tồn tại, tạo một đối tượng mới mà không có cha (parent)
+                // skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
+                
+                // // Đặt vị trí và quy mô theo mong muốn
+                // skeletonAnimation.transform.position = Vector3.zero; // Đặt vị trí về zero hoặc vị trí mong muốn
+                // skeletonAnimation.transform.localScale = waifuSO.OriginScale; // Đặt quy mô theo mong muốn
+
+                // // Đặt tên cho đối tượng
+                // skeletonAnimation.transform.name = index + "2D";
+
+                // // Thêm đối tượng vào CacheHolder
+                // this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
+                // skeletonAnimation.gameObject.SetActive(false);
 
             }
             skeletonAnimation.initialSkinName = waifuSO.Skin;
@@ -238,8 +245,9 @@ namespace RubikCasual.Data.Waifu
                 waifuSO = ScriptableObject.CreateInstance<WaifuSO>();
                 waifuSO.Index = item.Index;
                 waifuSO.SkeletonDataAsset = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
+                //waifuSO.SkeletonDataAsset_Skin = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
                 waifuSO.OriginScale = item.OriginScale;
-                waifuSO.Skin = item.Skin;
+                waifuSO.Skin = item.NameSkin;
                 waifuSO.Anim_Idle = item.Anim_Idle;
                 waifuSO.Anim_Atk = item.Anim_Atk;
                 waifuSO.Anim_Die = item.Anim_Die;

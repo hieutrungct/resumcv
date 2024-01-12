@@ -67,7 +67,7 @@ namespace Rubik.ListWaifu
             damageTxt.text = (infoWaifu.ATK + waifu.ATK).ToString();
             defenseTxt.text = (infoWaifu.DEF + waifu.DEF).ToString();
             critTxt.text = (infoWaifu.Pow+ waifu.Pow).ToString();
-            healthTxt.text = infoWaifu.HP.ToString();
+            healthTxt.text = (infoWaifu.HP+ waifu.HP).ToString();
             // moveSpeedTxt.text = waifu.MoveSpeed.ToString();
         }
 

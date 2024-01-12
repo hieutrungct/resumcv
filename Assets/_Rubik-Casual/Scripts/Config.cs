@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Config : MonoBehaviour
 {
@@ -11,7 +13,32 @@ public class Config : MonoBehaviour
     public static string color_BackGlow_Rare_SR = "#FF4F00";
     public static string color_Rare_SSR = "#BD44C6";
     public static string color_BackGlow_Rare_SSR = "#ED74FF";
+    public static string color_White = "#FFFFFF";
+    public static string color_Blue = "#4AAAF8";
 
-
+    
+    public static void SetTextColorWithHex(TextMeshProUGUI  text, string hexColor)
+    {
+        if (ColorUtility.TryParseHtmlString(hexColor, out Color color))
+        {
+            text.color = color;
+        }
+        else
+        {
+            Debug.LogError("Invalid Hex Color: " + hexColor);
+        }
+    }
+    public static void SetColorFromHex(Image image, string hexColor)
+    {
+        if (ColorUtility.TryParseHtmlString(hexColor, out Color color))
+        {
+            image.color = color;
+        }
+        else
+        {
+            Debug.LogError("Invalid Hex Color: " + hexColor);
+        }
+    }
 
 }
+

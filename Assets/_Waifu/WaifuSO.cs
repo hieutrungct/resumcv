@@ -9,6 +9,7 @@ namespace RubikCasual.Waifu
         public bool FunnyCheck;
         public int Index;
         public SkeletonDataAsset SkeletonDataAsset;
+        // public SkeletonDataAsset SkeletonDataAsset_Skin;
         public Vector3 OriginScale;
         public string Skin;
         public string Anim_Idle;
