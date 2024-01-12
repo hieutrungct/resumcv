@@ -72,7 +72,6 @@ namespace RubikCasual.Battle
         }
         void Update()
         {
-
             CheckHeroInBattle();
             BaseState(gameState);
         }
@@ -156,7 +155,7 @@ namespace RubikCasual.Battle
                 case GameState.END_BATTLE:
 
                     EndBattleMoveCharacter();
-
+                    RewardInGame.RewardInGamePanel.instance.AddRewardTopBarGroup(2f);
                     break;
                 case GameState.END:
                     break;
@@ -895,14 +894,8 @@ namespace RubikCasual.Battle
                             SlotInventory Item = ItemClone.GetComponent<SlotInventory>();
 
                             RubikCasual.DailyItem.infoItem infoItem = dataController.itemData.InfoItems.FirstOrDefault(f => f.id == idValueInSlot);
-                            if (CountState % 10 == 0)
-                            {
-                                // Item.Icon.GetComponent<Image>().sprite =  dataController.itemData.InfoItems.FirstOrDefault(f => f.id == idValueInSlot);
-                            }
-                            else
-                            {
-                                Item.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
-                            }
+                            Item.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
+
                             Item.idItem = idValueInSlot;
 
 

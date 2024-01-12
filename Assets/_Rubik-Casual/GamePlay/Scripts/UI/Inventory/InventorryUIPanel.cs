@@ -13,7 +13,7 @@ namespace RubikCasual.Battle.UI
     public class InventorryUIPanel : MonoBehaviour
     {
         public List<GameObject> lsSlotInventory;
-        public GameObject itemInventory;
+        public GameObject itemInventory; 
         public static InventorryUIPanel instance;
         void Awake()
         {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RubikCasual.RewardInGame;
 using RubikCasual.Roulette;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace RubikCasual.Battle.UI
         public RouletteController rouletteController;
         public GameObject TxtDame;
         public Canvas canvasUIGamePlay;
+        public bool isSaveReward;
         public static UIGamePlay instance;
         const string Name_Sorting_Layer = "ShowPopup", Name_Sorting_Layer_origin = "Battle";
         void Awake()
@@ -33,8 +35,17 @@ namespace RubikCasual.Battle.UI
         {
             if (BattleController.instance.gameState == GameState.END)
             {
+                if (!isSaveReward)
+                {
+                    RewardInGamePanel.instance.SaveRewardInGame();
+                    isSaveReward = true;
+                }
                 canvasUIGamePlay.sortingLayerName = Name_Sorting_Layer;
                 popupContinue.gameObject.SetActive(true);
+            }
+            else
+            {
+                isSaveReward = false;
             }
         }
         void ShowInventory()

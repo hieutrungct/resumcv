@@ -246,10 +246,10 @@ namespace RubikCasual.Battle
 
             yield return new WaitForSeconds(durationsTxtDame / 3);
 
+            CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Attacked;
+            CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
             CharacterAttackedAnim.AnimationState.Complete += delegate
             {
-                CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Attacked;
-                CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                 // CharacterAttackedAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
                 CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Idle;
             };
