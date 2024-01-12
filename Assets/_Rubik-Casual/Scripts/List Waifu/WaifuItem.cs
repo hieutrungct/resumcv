@@ -40,11 +40,13 @@ namespace Rubik.ListWaifu
 
             if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "R")
             {
-                _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
+                _waifu.Index = infoWaifu.ID;
+                Debug.Log("Id cũ = "+ waifu.Index+", Id mới là "+ infoWaifu.ID);
             }
             else if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "SR")
             {
-                _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
+                _waifu.Index = infoWaifu.ID;
+                Debug.Log("Id cũ = "+ waifu.Index+", Id mới là "+ infoWaifu.ID);
             }
 
 
@@ -62,36 +64,51 @@ namespace Rubik.ListWaifu
             
             // // avaCard.SetNativeSize();
 
+            // if (avaBox != null)
+            // {
+                
+            //     switch(infoWaifu.Rare)
+            //     {
+            //         case Rare.UnCommon:
+            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[0];
+            //             break;
+            //         case "R":
+            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
+            //             Glow.GetComponent<Image>().color = new Color(0.043f, 0.455f, 0.808f, 1f);
+            //             BackGlow.GetComponent<Image>().color = new Color(0.474f, 0.918f, 1f, 1f);
+            //             break;
+            //         case Rare.Rare:
+            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
+            //             Glow.GetComponent<Image>().color = new Color(0f, 0.698f, 0.443f, 1f);
+            //             BackGlow.GetComponent<Image>().color = new Color(1f, 0.953f, 0f, 1f);
+            //             break;
+            //         case "SR":
+            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
+            //             Glow.GetComponent<Image>().color = new Color(0.886f, 0.58f, 0.173f, 1f);
+            //             BackGlow.GetComponent<Image>().color = new Color(1f, 0.313f, 0f, 1f);
+            //             break;
+            //         case "SSR":
+            //             avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
+            //             Glow.GetComponent<Image>().color = new Color(0.737f, 0.267f, 0.773f, 1f);
+            //             BackGlow.GetComponent<Image>().color = new Color(0.929f, 0.459f, 1f, 1f);
+            //             break;
+            //     }
+                 
+            // }
             if (avaBox != null)
             {
-                
-                switch(infoWaifu.Rare)
+                switch (infoWaifu.Rare)
                 {
-                    // case Rare.UnCommon:
-                    //     avaBox.sprite = AssetLoader.Instance.RarrityBox[0];
-                    //     break;
                     case "R":
-                        avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
-                        Glow.GetComponent<Image>().color = new Color(0.043f, 0.455f, 0.808f, 1f);
-                        BackGlow.GetComponent<Image>().color = new Color(0.474f, 0.918f, 1f, 1f);
+                        SetRarityColors(1, Config.color_Rare_R, Config.color_BackGlow_Rare_R);
                         break;
-                    // case Rare.Rare:
-                    //     avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
-                    //     Glow.GetComponent<Image>().color = new Color(0f, 0.698f, 0.443f, 1f);
-                    //     BackGlow.GetComponent<Image>().color = new Color(1f, 0.953f, 0f, 1f);
-                    //     break;
                     case "SR":
-                        avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
-                        Glow.GetComponent<Image>().color = new Color(0.886f, 0.58f, 0.173f, 1f);
-                        BackGlow.GetComponent<Image>().color = new Color(1f, 0.313f, 0f, 1f);
+                        SetRarityColors(3, Config.color_Rare_SR, Config.color_BackGlow_Rare_SR);
                         break;
                     case "SSR":
-                        avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
-                        Glow.GetComponent<Image>().color = new Color(0.737f, 0.267f, 0.773f, 1f);
-                        BackGlow.GetComponent<Image>().color = new Color(0.929f, 0.459f, 1f, 1f);
+                        SetRarityColors(4, Config.color_Rare_SSR, Config.color_BackGlow_Rare_SSR);
                         break;
                 }
-                 
             }
 
             //Role.sprite = AssetLoader.Instance.AttackSprite[infoWaifu.Class];
@@ -132,6 +149,23 @@ namespace Rubik.ListWaifu
 
             //inDeck.SetActive(character.isInDeck);
 
+        }
+        private void SetColorFromHex(Image image, string hexColor)
+        {
+            if (ColorUtility.TryParseHtmlString(hexColor, out Color color))
+            {
+                image.color = color;
+            }
+            else
+            {
+                Debug.LogError("Invalid Hex Color: " + hexColor);
+            }
+        }
+        private void SetRarityColors(int rarityIndex, string glowColor, string backGlowColor)
+        {
+            avaBox.sprite = AssetLoader.Instance.RarrityBox[rarityIndex];
+            SetColorFromHex(Glow.GetComponent<Image>(), glowColor);
+            SetColorFromHex(BackGlow.GetComponent<Image>(), backGlowColor);
         }
         
         

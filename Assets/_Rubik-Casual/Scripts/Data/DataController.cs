@@ -55,6 +55,10 @@ namespace RubikCasual.Data
             SaveDataToJson(playerData, "PlayerData");
 
         }
+        void OnDestroy()
+        {
+            SaveDataToJson(playerData, "PlayerData");
+        }
 
         void LoadPlayerDataToJson(string nameFile)
         {

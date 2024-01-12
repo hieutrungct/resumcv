@@ -39,7 +39,10 @@ namespace Rubik.ListWaifu
 
         void CreateWaifu()
         {
-
+            foreach (Transform child in transformSlot)
+            {
+                Destroy(child.gameObject);
+            }
             for (int i = 0; i < listWaifu.playerData.lsPlayerOwnsWaifu.Count; i++)
             {
                 WaifuItem slotWaifu = Instantiate(slot_Waifu, transformSlot);

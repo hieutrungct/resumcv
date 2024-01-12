@@ -44,11 +44,13 @@ namespace Rubik.ListWaifu
             if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "R")
             {
                 _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
+                
             }
             else if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "SR")
             {
                 _waifu.Index = waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Index;
             }
+
             SkeletonDataAsset skeletonDataAsset = waifuAssets.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
             avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
@@ -62,9 +64,9 @@ namespace Rubik.ListWaifu
             //role.sprite = AssetLoader.Instance.AttackSprite[waifu.Role];
             lvTxt.text = waifu.level.ToString();
             lvProcessTxt.text = waifu.Exp + "/" + waifu.Exp;
-            damageTxt.text = infoWaifu.ATK.ToString();
-            defenseTxt.text = infoWaifu.DEF.ToString();
-            // critTxt.text = infoWaifu.Critical.ToString();
+            damageTxt.text = (infoWaifu.ATK + waifu.ATK).ToString();
+            defenseTxt.text = (infoWaifu.DEF + waifu.DEF).ToString();
+            critTxt.text = (infoWaifu.Pow+ waifu.Pow).ToString();
             healthTxt.text = infoWaifu.HP.ToString();
             // moveSpeedTxt.text = waifu.MoveSpeed.ToString();
         }

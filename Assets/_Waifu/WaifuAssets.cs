@@ -24,6 +24,9 @@ namespace RubikCasual.Data.Waifu
         public string Anim_Atked;
         public string Anim_Skill;
         public float Code;
+
+        // public string[] Skins;
+        // public int skinIndex;
     }
 
     public class WaifuAssets : NTBehaviour

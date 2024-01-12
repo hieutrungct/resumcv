@@ -25,7 +25,7 @@ namespace RubikCasual.Data.Player
     public class PlayerOwnsWaifu
     {
         public int Index, Star, Exp, IndexSkin, IndexEvolution, frag, level;
-        
+        public float  HP, DEF, ATK, Skill, Pow;
 
     }
     [Serializable]
