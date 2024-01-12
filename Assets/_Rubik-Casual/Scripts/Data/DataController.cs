@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using RubikCasual.Character_ACC;
 using RubikCasual.DailyItem;
 using RubikCasual.Data.Player;
+using RubikCasual.Data.Waifu;
 using RubikCasual.Lobby;
+using RubikCasual.Waifu;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -23,6 +25,18 @@ namespace RubikCasual.Data
             DontDestroyOnLoad(this);
             StartCoroutine(LoadData());
         }
+        
+        public InfoWaifuAsset GetInfoWaifuAssetsByIndex(int index)
+        {
+            foreach (var item in WaifuAssets.instance.infoWaifuAssets.lsInfoWaifuAssets)
+            {
+                
+                if(item.ID == index){
+                    return item;
+                }
+            }
+            return null;
+        }
         // void Start()
         // {
         // }
@@ -40,6 +54,10 @@ namespace RubikCasual.Data
 
             SaveDataToJson(playerData, "PlayerData");
 
+        }
+        void OnDestroy()
+        {
+            SaveDataToJson(playerData, "PlayerData");
         }
 
         void LoadPlayerDataToJson(string nameFile)
