@@ -26,11 +26,16 @@ namespace RubikCasual.RewardInGame
         }
         public void AddRewardTopBarGroup(float attributeReward)
         {
-            float coins = 1f, gems = 1f;
-            valueCoins += (coins * attributeReward);
-            valueGems += (gems * attributeReward);
+            float coins = 1f * attributeReward;
+            valueCoins += coins;
             txtCoins.text = valueCoins.ToString();
-            txtGems.text = valueGems.ToString();
+
+            if (UnityEngine.Random.Range(0, 2) == 0)
+            {
+                float gems = 1f * attributeReward;
+                valueGems += gems;
+                txtGems.text = valueGems.ToString();
+            }
         }
     }
 }

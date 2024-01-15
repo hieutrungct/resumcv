@@ -6,13 +6,31 @@ using NTPackage.Functions;
 using RubikCasual.Battle.Calculate;
 using RubikCasual.Battle.UI;
 using Spine.Unity;
+using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 
 namespace RubikCasual.Battle
 {
+    [Serializable]
+    public class NameAnim
+    {
+        public static string Anim_Character_Attack = "Attack",
+        Anim_Character_Attacked = "Attacked",
+        Anim_Character_Idle = "Idle",
+        Anim_Character_Die = "Die",
+        Anim_Character_Skill = "SkillCast";
+    }
+    [Serializable]
+    public class NameLayer
+    {
+        public static string Layer_Attack = "Character_Attack",
+        Layer_Attacked = "Character_Attacked",
+        Layer_Character = "Character";
+    }
     public class SetAnimCharacter : MonoBehaviour
     {
+        private bool isAnimationCompleteHandled = false;
 
         public void BossUseSkill(CharacterInBattle EnemyInBattle, MapBattleController dameSlotTxtController, List<GameObject> lsSlotGbHero, float durationsTxtDame)
         {
@@ -23,8 +41,11 @@ namespace RubikCasual.Battle
             EnemyInBattle.skeletonCharacterAnimation.AnimationState.Complete += delegate
             {
                 EnemyInBattle.isUseSkill = false;
-                EnemyInBattle.cooldownSkillBar.value = 0;
-                EnemyInBattle.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
+                // EnemyInBattle.cooldownSkillBar.value = 0;
+                if (EnemyInBattle.skeletonCharacterAnimation.AnimationName != NameAnim.Anim_Character_Idle)
+                {
+                    EnemyInBattle.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
+                }
             };
 
             for (int i = 0; i < lsSlotGbHero.Count; i++)
@@ -36,26 +57,21 @@ namespace RubikCasual.Battle
                     SkeletonAnimation AnimHero = HeroInBattle.skeletonCharacterAnimation;
                     AnimHero.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
                     AnimHero.AnimationName = NameAnim.Anim_Character_Attacked;
+                    AnimHero.AnimationState.ClearTrack(0);
                     AnimHero.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                     AnimHero.AnimationState.Complete += delegate
                     {
-                        AnimHero.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
-                        AnimHero.AnimationName = NameAnim.Anim_Character_Idle;
+                        if (AnimHero.AnimationName != NameAnim.Anim_Character_Idle)
+                        {
+                            AnimHero.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
+                            AnimHero.AnimationName = NameAnim.Anim_Character_Idle;
+                        }
                     };
 
 
                     float OldHp = HeroInBattle.HpNow;
                     Calculator.CalculateHealth(EnemyInBattle, HeroInBattle);
 
-                    // GameObject txtDame = UnityEngine.Object.Instantiate(UIGamePlay.instance.TxtDame, dameSlotTxtController.lsPosHeroSlot.lsPosCharacterSlot[index].transform);
-
-                    // txtDame.GetComponent<TextMeshProUGUI>().text = "-" + ((int)(OldHp - HeroInBattle.HpNow)).ToString();
-                    // Tween animTxtDame = txtDame.transform.DOMoveY(txtDame.transform.position.y + durationsTxtDame, durationsTxtDame);
-                    // txtDame.GetComponent<TextMeshProUGUI>().color = Color.red;
-                    // animTxtDame.OnComplete(() =>
-                    // {
-                    //     UnityEngine.Object.Destroy(txtDame);
-                    // });
                     Transform PosTxt = dameSlotTxtController.lsPosHeroSlot.lsPosCharacterSlot[index].transform;
                     int lossHp = (int)(OldHp - HeroInBattle.HpNow);
                     FuntionTimeDelay.SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
@@ -74,7 +90,10 @@ namespace RubikCasual.Battle
             CharacterAttack.skeletonCharacterAnimation.AnimationState.Complete += delegate
             {
                 CharacterAttack.isUseSkill = false;
-                CharacterAttack.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
+                if (CharacterAttack.skeletonCharacterAnimation.AnimationName != NameAnim.Anim_Character_Idle)
+                {
+                    CharacterAttack.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
+                }
             };
             int numberSlotBoss = 2;
             if (lsSlotGbEnemy[numberSlotBoss] != null && lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>() != null && lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>().isBoss)
@@ -83,26 +102,20 @@ namespace RubikCasual.Battle
                 SkeletonAnimation AnimEnemy = EnemyBossInBattle.skeletonCharacterAnimation;
                 // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
                 AnimEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
+
                 AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                 AnimEnemy.AnimationState.Complete += delegate
                 {
                     // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                    AnimEnemy.AnimationName = NameAnim.Anim_Character_Idle;
+                    if (AnimEnemy.AnimationName != NameAnim.Anim_Character_Idle)
+                    {
+                        AnimEnemy.AnimationName = NameAnim.Anim_Character_Idle;
+                    }
                 };
 
                 float OldHp = EnemyBossInBattle.HpNow;
                 Calculator.CalculateHealth(CharacterAttack, EnemyBossInBattle);
 
-                // GameObject txtDame = UnityEngine.Object.Instantiate(UIGamePlay.instance.TxtDame, dameSlotTxtController.lsPosEnemySlot[0].lsPosCharacterSlot[numberSlotBoss].transform);
-
-                // txtDame.GetComponent<TextMeshProUGUI>().text = "-" + ((int)(OldHp - lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>().HpNow)).ToString();
-                // Tween animTxtDame = txtDame.transform.DOMoveY(txtDame.transform.position.y + durationsTxtDame, durationsTxtDame);
-                // txtDame.GetComponent<TextMeshProUGUI>().color = Color.red;
-                // CheckHpEnemy(lsSlotGbEnemy[numberSlotBoss]);
-                // animTxtDame.OnComplete(() =>
-                // {
-                //     UnityEngine.Object.Destroy(txtDame);
-                // });
                 Transform PosTxt = EnemyBossInBattle.healthBar.transform;
                 int lossHp = (int)(OldHp - lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>().HpNow);
                 FuntionTimeDelay.SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
@@ -127,11 +140,16 @@ namespace RubikCasual.Battle
 
                                 AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
                                 AnimEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
+
+                                AnimEnemy.AnimationState.ClearTrack(0);
                                 AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                                 AnimEnemy.AnimationState.Complete += delegate
                                 {
                                     // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                                    AnimEnemy.AnimationName = NameAnim.Anim_Character_Idle;
+                                    if (AnimEnemy.AnimationName != NameAnim.Anim_Character_Idle)
+                                    {
+                                        AnimEnemy.AnimationName = NameAnim.Anim_Character_Idle;
+                                    }
                                 };
 
 
@@ -207,6 +225,7 @@ namespace RubikCasual.Battle
             if (enemyInBattle.HpNow == 0)
             {
                 enemyAnim.AnimationName = NameAnim.Anim_Character_Die;
+                enemyAnim.AnimationState.ClearTrack(0);
                 enemyAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
                 enemyInBattle.isAttack = true;
 
@@ -240,8 +259,13 @@ namespace RubikCasual.Battle
             CharacterAttackAnim.AnimationState.Complete += delegate
             {
                 CharacterInBattleAttack.isAttack = false;
-                // CharacterAttackAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                CharacterAttackAnim.AnimationName = NameAnim.Anim_Character_Idle;
+                if (CharacterAttackAnim.AnimationName != NameAnim.Anim_Character_Idle)
+                {
+
+                    // CharacterAttackAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
+                    CharacterAttackAnim.AnimationName = NameAnim.Anim_Character_Idle;
+                }
+
             };
 
             yield return new WaitForSeconds(durationsTxtDame / 3);
@@ -250,8 +274,14 @@ namespace RubikCasual.Battle
             CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
             CharacterAttackedAnim.AnimationState.Complete += delegate
             {
+
                 // CharacterAttackedAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Idle;
+
+                if (CharacterAttackedAnim.AnimationName != NameAnim.Anim_Character_Idle)
+                {
+                    CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Idle;
+                }
+                // SpineEditorUtilities.ReinitializeComponent(CharacterAttackedAnim);
             };
 
             float OldHp = CharacterInBattleAttacked.HpNow;
@@ -268,17 +298,17 @@ namespace RubikCasual.Battle
                 lossHp = 1;
             }
 
-            if (!CharacterInBattleAttack.isEnemy)
+            if (CharacterInBattleAttacked.isEnemy)
             {
+
                 Transform PosTxt = CharacterInBattleAttacked.healthBar.transform;
+                PosTxt.position = new Vector3(PosTxt.position.x, PosTxt.position.y, PosTxt.position.z);
                 SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
             }
             else
             {
-
-                Transform PosTxt = dameSlotTxtController.lsPosEnemySlot[0].lsPosCharacterSlot[CharacterInBattleAttacked.indexOfSlot].gameObject.transform;
+                Transform PosTxt = dameSlotTxtController.lsPosHeroSlot.lsPosCharacterSlot[CharacterInBattleAttacked.indexOfSlot].gameObject.transform;
                 SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
-
             }
 
 
@@ -286,16 +316,17 @@ namespace RubikCasual.Battle
             {
                 CharacterInBattleAttacked.isAttack = true;
                 CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Die;
+
                 CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
 
-                CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(BattleController.instance.dameSlotTxtController.transform);
-                CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(CharacterInBattleAttacked.healthBar.transform);
+                CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(BattleController.instance.dameSlotTxtController.transform);
+                CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownSkillBar.transform);
+
 
                 CharacterAttackedAnim.AnimationState.Complete += delegate
                 {
                     CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownAttackBar.transform.parent);
                     CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownAttackBar.transform.parent);
-
                     // Debug.Log("Character " + CharacterInBattleAttack.infoWaifuAsset.ID + " die");
                     CharacterInBattleAttack.isAttack = true;
 
