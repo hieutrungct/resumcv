@@ -15,8 +15,9 @@ MonoBehaviour:
   FunnyCheck: 0
   Index: 1
   SkeletonDataAsset: {fileID: 11400000, guid: 1a86c523b9b361c43818ffce1270730e, type: 2}
+  SkeletonDataAsset_Skin: {fileID: 11400000, guid: d7da0287a9cefd940bcb3aa5191d968a, type: 2}
   OriginScale: {x: -1, y: 1, z: 1}
-  Skin: Pet1001
+  Skin: 
   Anim_Idle: Idle
   Anim_Atk: Attack
   Anim_Die: Die

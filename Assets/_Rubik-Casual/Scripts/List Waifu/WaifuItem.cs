@@ -34,15 +34,7 @@ namespace Rubik.ListWaifu
             
             //ui_Waifu = SpawnCharacter(gameObject.transform, waifuAssets.Get2D(_waifu.Index.ToString()));
             //ui_Waifu =  waifuAssets.Get2D(_waifu.Index.ToString());
-            // try
-            // {
-            //     Debug.Log(waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code);
-            // }
-            // catch (System.Exception e)
-            // {
-            //     Debug.LogWarning(e);
-            //     throw;
-            // }
+          
             
             // if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "R")
             // {
@@ -56,7 +48,7 @@ namespace Rubik.ListWaifu
             // }
 
 
-            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.Get2D(_waifu.Index.ToString()).SkeletonDataAsset;
+            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
 
