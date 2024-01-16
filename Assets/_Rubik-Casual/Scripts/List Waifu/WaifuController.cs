@@ -13,7 +13,7 @@ namespace Rubik.ListWaifu
     {
         public GameObject gbTaget, gbPopupOpen;
         public static WaifuController instance;
-        public DataController listWaifu;
+        // public DataController listWaifu;
         public WaifuItem slot_Waifu;
         public Transform transformSlot;
         public WaiFuInfoPopUp waifuInfoPopup;
@@ -26,12 +26,13 @@ namespace Rubik.ListWaifu
         private float count;
         private bool isFirstClick = true;
 
-        public void Awake()
+        public void Start()
         {
-            DontDestroyOnLoad(this);
+            // DontDestroyOnLoad(this);
+            
             instance = this;
             CreateWaifu();
-            Waifus = listWaifu.playerData.lsPlayerOwnsWaifu;
+            Waifus = DataController.instance.playerData.lsPlayerOwnsWaifu;
             sortedWaifus = new List<PlayerOwnsWaifu>(Waifus);
             SortRarityAndLevel();
         }
@@ -43,12 +44,12 @@ namespace Rubik.ListWaifu
             {
                 Destroy(child.gameObject);
             }
-            for (int i = 0; i < listWaifu.playerData.lsPlayerOwnsWaifu.Count; i++)
+            for (int i = 0; i < DataController.instance.playerData.lsPlayerOwnsWaifu.Count; i++)
             {
                 WaifuItem slotWaifu = Instantiate(slot_Waifu, transformSlot);
                 //Debug.Log("Id của waifu " + listWaifu.playerData.lsPlayerOwnsWaifu[i].Index.ToString());
                 
-                slotWaifu.SetUp(listWaifu.playerData.lsPlayerOwnsWaifu[i]);
+                slotWaifu.SetUp(DataController.instance.playerData.lsPlayerOwnsWaifu[i]);
             }
 
         }
@@ -56,13 +57,15 @@ namespace Rubik.ListWaifu
 
         private void SortRarityAndLevel()
         {
+            
             Waifus.Sort((charA, charB) =>
             {
-
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
                 int result = charA.level.CompareTo(charB.level);
                 if (result == 0)
                 {
-                    return charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                    return infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                 }
                 return result;
             });
@@ -130,8 +133,10 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
 
-                int result = charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                int result = infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                 if (result == 0)
                 {
                     result = charA.level.CompareTo(charB.level);
@@ -144,10 +149,13 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
+
                 int result = charA.level.CompareTo(charB.level);
                 if (result == 0)
                 {
-                    return charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                    return infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                 }
                 return result;
             });
@@ -156,13 +164,15 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
-                int result = (charA.Star).CompareTo(charB.Star);
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
+                int result = (charA.Pow + charA.ATK).CompareTo(charB.Pow + charB.ATK);
                 if (result == 0)
                 {
                     result = charA.level.CompareTo(charB.level);
                     if (result == 0)
                     {
-                        return charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                        return infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                     }
                 }
                 return result;
@@ -182,13 +192,13 @@ namespace Rubik.ListWaifu
         }
         public PlayerOwnsWaifu GetWaifu(int index)
         {
-            if (index >= listWaifu.playerData.lsPlayerOwnsWaifu.Count)
+            if (index >= DataController.instance.playerData.lsPlayerOwnsWaifu.Count)
             {
                 index = 0;
             }
             else if (index < 0)
             {
-                index = listWaifu.playerData.lsPlayerOwnsWaifu.Count - 1;
+                index = DataController.instance.playerData.lsPlayerOwnsWaifu.Count - 1;
             }
 
             return Waifus[index];
@@ -255,10 +265,9 @@ namespace Rubik.ListWaifu
         }
         private void SetButtonColors(SortingType selectedSortingType)
         {
-            // Đặt màu cho nút đã chọn.
-            textListSortLever.color = (selectedSortingType == SortingType.Lever) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
-            textListSortRarity.color = (selectedSortingType == SortingType.Rarity) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
-            textListSortPower.color = (selectedSortingType == SortingType.Power) ? Color.white : new Color(0.29f, 0.67f, 0.97f, 1f);
+            Config.SetTextColorWithHex(textListSortLever, selectedSortingType == SortingType.Lever ? Config.color_White : Config.color_Blue);
+            Config.SetTextColorWithHex(textListSortRarity, selectedSortingType == SortingType.Rarity ? Config.color_White : Config.color_Blue);
+            Config.SetTextColorWithHex(textListSortPower, selectedSortingType == SortingType.Power ? Config.color_White : Config.color_Blue);
         }
         public void OpenPopup()
         {

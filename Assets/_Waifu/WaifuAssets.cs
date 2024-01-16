@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using NTPackage;
 using NTPackage.Functions;
 using RubikCasual.Waifu;
@@ -17,13 +18,13 @@ namespace RubikCasual.Data.Waifu
         public int Index;
         public string PathSkeleton;
         public Vector3 OriginScale;
-        public string Skin;
+        public string NameSkin;
         public string Anim_Idle;
         public string Anim_Atk;
         public string Anim_Die;
         public string Anim_Atked;
         public string Anim_Skill;
-        public float Code;
+        public string Code;
 
         // public string[] Skins;
         // public int skinIndex;
@@ -98,6 +99,11 @@ namespace RubikCasual.Data.Waifu
 
         public WaifuSO GetWaifuSOByIndex(string index)
         {
+            if ( this.WaifuSODic ==null)
+            {
+                Debug.Log("null Dic");
+                
+            }
             try
             {
                 WaifuSO waifuSO = this.WaifuSODic.Get(index);
@@ -115,7 +121,9 @@ namespace RubikCasual.Data.Waifu
             }
             catch (System.Exception e)
             {
+                
                 Debug.LogWarning(e);
+                Debug.LogError(index);
                 return null;
             }
         }
@@ -134,24 +142,24 @@ namespace RubikCasual.Data.Waifu
             }
             catch (System.Exception)
             {
-                // skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
-                // skeletonAnimation.transform.SetParent(this.Holder);
-                // skeletonAnimation.transform.name = index + "2D";
-                // this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
-
-                // Nếu chưa tồn tại, tạo một đối tượng mới mà không có cha (parent)
                 skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
-                
-                // Đặt vị trí và quy mô theo mong muốn
-                skeletonAnimation.transform.position = Vector3.zero; // Đặt vị trí về zero hoặc vị trí mong muốn
-                skeletonAnimation.transform.localScale = waifuSO.OriginScale; // Đặt quy mô theo mong muốn
-
-                // Đặt tên cho đối tượng
+                skeletonAnimation.transform.SetParent(this.Holder);
                 skeletonAnimation.transform.name = index + "2D";
-
-                // Thêm đối tượng vào CacheHolder
                 this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
-                skeletonAnimation.gameObject.SetActive(false);
+
+                // // Nếu chưa tồn tại, tạo một đối tượng mới mà không có cha (parent)
+                // skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
+                
+                // // Đặt vị trí và quy mô theo mong muốn
+                // skeletonAnimation.transform.position = Vector3.zero; // Đặt vị trí về zero hoặc vị trí mong muốn
+                // skeletonAnimation.transform.localScale = waifuSO.OriginScale; // Đặt quy mô theo mong muốn
+
+                // // Đặt tên cho đối tượng
+                // skeletonAnimation.transform.name = index + "2D";
+
+                // // Thêm đối tượng vào CacheHolder
+                // this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
+                // skeletonAnimation.gameObject.SetActive(false);
 
             }
             skeletonAnimation.initialSkinName = waifuSO.Skin;
@@ -226,32 +234,132 @@ namespace RubikCasual.Data.Waifu
             if (waifuSO == null) return "Idle";
             return waifuSO.Anim_Skill;
         }
+        private WaifuAssetData old_item;
 
 #if UNITY_EDITOR
         [Button]
         public void LoadSO()
         {
+            // foreach (WaifuAssetData item in this.WaifuAssetDatas)
+            // {
+            //     int i = 1;
+            //     if(old_item !=null)
+            //     {
+            //         if(old_item == item)
+            //         {
+            //             continue;
+            //         }
+                    
+            //     }
+            //     else
+            //     {
+            //         old_item = item;
+            //         string path = Path_Assets_SO + "/" + i + ".asset";
+            //         WaifuSO waifuSO = AssetDatabase.LoadAssetAtPath<WaifuSO>(Path_Assets_SO);
+            //         waifuSO = ScriptableObject.CreateInstance<WaifuSO>();
+            //         waifuSO.Index = item.Index;
+            //         waifuSO.SkeletonDataAsset = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
+            //         foreach (WaifuAssetData items in this.WaifuAssetDatas)
+            //         {
+            //             if(items.Code == item.Code)
+            //             {
+            //                 old_item = items;
+            //                 waifuSO.SkeletonDataAsset_Skin = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(items.PathSkeleton);
+            //                 break;
+            //             }
+            //         }
+            //         waifuSO.OriginScale = item.OriginScale;
+            //         waifuSO.Skin = item.NameSkin;
+            //         waifuSO.Anim_Idle = item.Anim_Idle;
+            //         waifuSO.Anim_Atk = item.Anim_Atk;
+            //         waifuSO.Anim_Die = item.Anim_Die;
+            //         waifuSO.Anim_Atked = item.Anim_Atked;
+            //         waifuSO.Anim_Skill = item.Anim_Skill;
+            //         waifuSO.Code = item.Code;
+            //         AssetDatabase.CreateAsset(waifuSO, path);
+            //         AssetDatabase.SaveAssets();
+            //         AssetDatabase.Refresh();
+            //         EditorUtility.FocusProjectWindow();
+            //         Selection.activeObject = waifuSO;
+            //         i++;
+            //     }
+            //     i++;
+
+            //     // string path = Path_Assets_SO + "/" + item.Index + ".asset";
+            //     // WaifuSO waifuSO = AssetDatabase.LoadAssetAtPath<WaifuSO>(Path_Assets_SO);
+            //     // waifuSO = ScriptableObject.CreateInstance<WaifuSO>();
+            //     // waifuSO.Index = item.Index;
+            //     // waifuSO.SkeletonDataAsset = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
+
+            //     // //waifuSO.SkeletonDataAsset_Skin = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
+            //     // waifuSO.OriginScale = item.OriginScale;
+            //     // waifuSO.Skin = item.NameSkin;
+            //     // waifuSO.Anim_Idle = item.Anim_Idle;
+            //     // waifuSO.Anim_Atk = item.Anim_Atk;
+            //     // waifuSO.Anim_Die = item.Anim_Die;
+            //     // waifuSO.Anim_Atked = item.Anim_Atked;
+            //     // waifuSO.Anim_Skill = item.Anim_Skill;
+            //     // waifuSO.Code = item.Code;
+            //     // AssetDatabase.CreateAsset(waifuSO, path);
+            //     // AssetDatabase.SaveAssets();
+            //     // AssetDatabase.Refresh();
+            //     // EditorUtility.FocusProjectWindow();
+            //     // Selection.activeObject = waifuSO;
+            // }
+            int i = 1;
+
             foreach (WaifuAssetData item in this.WaifuAssetDatas)
             {
-                string path = Path_Assets_SO + "/" + item.Index + ".asset";
-                WaifuSO waifuSO = AssetDatabase.LoadAssetAtPath<WaifuSO>(Path_Assets_SO);
-                waifuSO = ScriptableObject.CreateInstance<WaifuSO>();
-                waifuSO.Index = item.Index;
-                waifuSO.SkeletonDataAsset = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
-                waifuSO.OriginScale = item.OriginScale;
-                waifuSO.Skin = item.Skin;
-                waifuSO.Anim_Idle = item.Anim_Idle;
-                waifuSO.Anim_Atk = item.Anim_Atk;
-                waifuSO.Anim_Die = item.Anim_Die;
-                waifuSO.Anim_Atked = item.Anim_Atked;
-                waifuSO.Anim_Skill = item.Anim_Skill;
-                waifuSO.Code = item.Code;
-                AssetDatabase.CreateAsset(waifuSO, path);
-                AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
-                EditorUtility.FocusProjectWindow();
-                Selection.activeObject = waifuSO;
+                //Debug.Log("vào"+ old_item.Index);
+                if (old_item != null)
+                {
+                    Debug.Log("vào"+ old_item.Index);
+                    old_item = null;
+                    continue;
+                }
+
+                
+
+                string path = Path.Combine(Path_Assets_SO, i + ".asset");
+                WaifuSO waifuSO = AssetDatabase.LoadAssetAtPath<WaifuSO>(path);
+
+                if (waifuSO == null)
+                {
+                    waifuSO = ScriptableObject.CreateInstance<WaifuSO>();
+                    waifuSO.Index = item.Index;
+                    waifuSO.SkeletonDataAsset = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
+
+                    // Tìm item có cùng Code và cập nhật SkeletonDataAsset_Skin
+                    foreach (WaifuAssetData items in this.WaifuAssetDatas)
+                    {
+                        if (items.Code == item.Code && items.Index != item.Index)
+                        {
+                            old_item = item;
+                            waifuSO.SkeletonDataAsset_Skin = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(items.PathSkeleton);
+                            break;
+                        }
+                    }
+                    
+
+                    waifuSO.OriginScale = item.OriginScale;
+                    waifuSO.Skin = item.NameSkin;
+                    waifuSO.Anim_Idle = item.Anim_Idle;
+                    waifuSO.Anim_Atk = item.Anim_Atk;
+                    waifuSO.Anim_Die = item.Anim_Die;
+                    waifuSO.Anim_Atked = item.Anim_Atked;
+                    waifuSO.Anim_Skill = item.Anim_Skill;
+                    waifuSO.Code = item.Code;
+
+                    AssetDatabase.CreateAsset(waifuSO, path);
+                    AssetDatabase.SaveAssets();
+                    AssetDatabase.Refresh();
+                    EditorUtility.FocusProjectWindow();
+                    Selection.activeObject = waifuSO;
+
+                    i++;
+                }
             }
+
         }
 
 #endif

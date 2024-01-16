@@ -36,6 +36,11 @@ namespace RubikCasual.Data.Player
         public List<float> CurentTeam = new List<float>();
     }
     [Serializable]
+    public class ListOwnsWaifu
+    {
+        public List<PlayerOwnsWaifu> lsOwnsWaifu = new List<PlayerOwnsWaifu>();
+    }
+    [Serializable]
     public class PlayerData
     {
         public UserData userData;
@@ -44,6 +49,11 @@ namespace RubikCasual.Data.Player
         public NTDictionary<int, int> Inventory = new NTDictionary<int, int>();
         public int CurentStage;
 
+    }
+    [Serializable]
+    public class Item
+    {
+        // public int Index, 
     }
 }
 

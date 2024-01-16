@@ -24,7 +24,7 @@ namespace Rubik.ListWaifu
         [SerializeField] BtnOnClick btnClick;
         //[SerializeField] public GameObject inDeck;
         private PlayerOwnsWaifu _waifu;
-        public WaifuAssets waifuAssets;
+        //public WaifuAssets waifuAssets;
         private InfoWaifuAsset infoWaifu;
         
         public void SetUp(PlayerOwnsWaifu waifu)
@@ -32,25 +32,11 @@ namespace Rubik.ListWaifu
             _waifu = waifu;
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.Index);
             
-            
-            //Debug.Log("class" + infoWaifu.Code);
-
             //ui_Waifu = SpawnCharacter(gameObject.transform, waifuAssets.Get2D(_waifu.Index.ToString()));
             //ui_Waifu =  waifuAssets.Get2D(_waifu.Index.ToString());
-
-            if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "R")
-            {
-                _waifu.Index = infoWaifu.ID;
-                Debug.Log("Id cũ = "+ waifu.Index+", Id mới là "+ infoWaifu.ID);
-            }
-            else if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "SR")
-            {
-                _waifu.Index = infoWaifu.ID;
-                Debug.Log("Id cũ = "+ waifu.Index+", Id mới là "+ infoWaifu.ID);
-            }
-
-
-            SkeletonDataAsset skeletonDataAsset = waifuAssets.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
+          
+            
+            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
 
@@ -150,22 +136,12 @@ namespace Rubik.ListWaifu
             //inDeck.SetActive(character.isInDeck);
 
         }
-        private void SetColorFromHex(Image image, string hexColor)
-        {
-            if (ColorUtility.TryParseHtmlString(hexColor, out Color color))
-            {
-                image.color = color;
-            }
-            else
-            {
-                Debug.LogError("Invalid Hex Color: " + hexColor);
-            }
-        }
+        
         private void SetRarityColors(int rarityIndex, string glowColor, string backGlowColor)
         {
             avaBox.sprite = AssetLoader.Instance.RarrityBox[rarityIndex];
-            SetColorFromHex(Glow.GetComponent<Image>(), glowColor);
-            SetColorFromHex(BackGlow.GetComponent<Image>(), backGlowColor);
+            Config.SetColorFromHex(Glow.GetComponent<Image>(), glowColor);
+            Config.SetColorFromHex(BackGlow.GetComponent<Image>(), backGlowColor);
         }
         
         

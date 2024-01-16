@@ -9,6 +9,7 @@ namespace RubikCasual.Waifu
         public bool FunnyCheck;
         public int Index;
         public SkeletonDataAsset SkeletonDataAsset;
+        public SkeletonDataAsset SkeletonDataAsset_Skin;
         public Vector3 OriginScale;
         public string Skin;
         public string Anim_Idle;
@@ -17,7 +18,7 @@ namespace RubikCasual.Waifu
         public string Anim_Atked;
         public string Anim_Skill;
         public bool Is_Boss;
-        public float Code;
+        public string Code;
 
     }
 }
