@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/_Rubik-Casual/Scene/LoadingScene.unity
+    guid: f4e87c7ef75caa04dac24437d7be1a44
+  - enabled: 1
+    path: Assets/_Rubik-Casual/Scene/MainScene.unity
+    guid: b2be7b019132bd24ebc322eb528d47d0
+  - enabled: 1
     path: Assets/_Rubik-Casual/Scene/GamePlay.unity
     guid: ea45225461c5f0149b749acb6afc0fba
   m_configObjects: {}

@@ -22,7 +22,7 @@ namespace RubikCasual.RewardInGame
         {
             dataController.playerData.userData.Gold += valueCoins;
             dataController.playerData.userData.Gem += valueGems;
-            dataController.BtnSavePlayerData();
+            dataController.BtnSaveUserDataToJson();
         }
         public void AddRewardTopBarGroup(float attributeReward)
         {

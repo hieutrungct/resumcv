@@ -13,7 +13,7 @@ namespace Rubik.ListWaifu
     {
         public GameObject gbTaget, gbPopupOpen;
         public static WaifuController instance;
-        public DataController listWaifu;
+        // public DataController listWaifu;
         public WaifuItem slot_Waifu;
         public Transform transformSlot;
         public WaiFuInfoPopUp waifuInfoPopup;
@@ -32,7 +32,7 @@ namespace Rubik.ListWaifu
             
             instance = this;
             CreateWaifu();
-            Waifus = listWaifu.playerData.lsPlayerOwnsWaifu;
+            Waifus = DataController.instance.playerData.lsPlayerOwnsWaifu;
             sortedWaifus = new List<PlayerOwnsWaifu>(Waifus);
             SortRarityAndLevel();
         }
@@ -44,12 +44,12 @@ namespace Rubik.ListWaifu
             {
                 Destroy(child.gameObject);
             }
-            for (int i = 0; i < listWaifu.playerData.lsPlayerOwnsWaifu.Count; i++)
+            for (int i = 0; i < DataController.instance.playerData.lsPlayerOwnsWaifu.Count; i++)
             {
                 WaifuItem slotWaifu = Instantiate(slot_Waifu, transformSlot);
                 //Debug.Log("Id của waifu " + listWaifu.playerData.lsPlayerOwnsWaifu[i].Index.ToString());
                 
-                slotWaifu.SetUp(listWaifu.playerData.lsPlayerOwnsWaifu[i]);
+                slotWaifu.SetUp(DataController.instance.playerData.lsPlayerOwnsWaifu[i]);
             }
 
         }
@@ -57,13 +57,15 @@ namespace Rubik.ListWaifu
 
         private void SortRarityAndLevel()
         {
+            
             Waifus.Sort((charA, charB) =>
             {
-
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
                 int result = charA.level.CompareTo(charB.level);
                 if (result == 0)
                 {
-                    return charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                    return infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                 }
                 return result;
             });
@@ -131,8 +133,10 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
 
-                int result = charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                int result = infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                 if (result == 0)
                 {
                     result = charA.level.CompareTo(charB.level);
@@ -145,10 +149,13 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
+
                 int result = charA.level.CompareTo(charB.level);
                 if (result == 0)
                 {
-                    return charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                    return infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                 }
                 return result;
             });
@@ -157,13 +164,15 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
                 int result = (charA.Pow + charA.ATK).CompareTo(charB.Pow + charB.ATK);
                 if (result == 0)
                 {
                     result = charA.level.CompareTo(charB.level);
                     if (result == 0)
                     {
-                        return charA.IndexEvolution.CompareTo(charB.IndexEvolution);
+                        return infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                     }
                 }
                 return result;
@@ -183,13 +192,13 @@ namespace Rubik.ListWaifu
         }
         public PlayerOwnsWaifu GetWaifu(int index)
         {
-            if (index >= listWaifu.playerData.lsPlayerOwnsWaifu.Count)
+            if (index >= DataController.instance.playerData.lsPlayerOwnsWaifu.Count)
             {
                 index = 0;
             }
             else if (index < 0)
             {
-                index = listWaifu.playerData.lsPlayerOwnsWaifu.Count - 1;
+                index = DataController.instance.playerData.lsPlayerOwnsWaifu.Count - 1;
             }
 
             return Waifus[index];

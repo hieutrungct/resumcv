@@ -4,6 +4,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+public class NameKey
+{
+    public static string Data = "Data";
+    public static string  USER_DATA_KEY = "USER_DATA_KEY";
+    public static string  USER_OWN_WAIFU_KEY = "USER_OWN_WAIFU_KEY";
+    public static string  USER_ITEM_KEY = "USER_ITEM_KEY";
+}
+public class NameScene
+{
+    public static string HOME_SCENE = "MainScene";
+}
 public class Config : MonoBehaviour
 {
     public static string color_Rare_R = "#2B74CE";

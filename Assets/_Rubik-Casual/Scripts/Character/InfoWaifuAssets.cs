@@ -10,6 +10,12 @@ namespace RubikCasual.Waifu
     {
         public List<InfoWaifuAsset> lsInfoWaifuAssets = new List<InfoWaifuAsset>();
     }
+    public enum Rare
+    {
+        R = 1,
+        SR = 2,
+        SSR = 3
+    }
 
     [Serializable]
     public class InfoWaifuAsset

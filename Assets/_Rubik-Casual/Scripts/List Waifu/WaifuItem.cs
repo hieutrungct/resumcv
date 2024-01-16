@@ -36,18 +36,6 @@ namespace Rubik.ListWaifu
             //ui_Waifu =  waifuAssets.Get2D(_waifu.Index.ToString());
           
             
-            // if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "R")
-            // {
-            //     _waifu.Index = infoWaifu.ID;
-            //     Debug.Log("Id cũ = "+ waifu.Index+", Id mới là "+ infoWaifu.ID);
-            // }
-            // else if (infoWaifu.Code == waifuAssets.GetWaifuSOByIndex(waifu.Index.ToString()).Code && infoWaifu.Rare == "SR")
-            // {
-            //     _waifu.Index = infoWaifu.ID;
-            //     Debug.Log("Id cũ = "+ waifu.Index+", Id mới là "+ infoWaifu.ID);
-            // }
-
-
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
