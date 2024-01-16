@@ -37,6 +37,7 @@ namespace RubikCasual.Battle
         int CountState = 1, numberSlot = 5;
         public static BattleController instance;
         public GameState gameState;
+
         [Button]
         void UpSpeed()
         {
@@ -121,46 +122,47 @@ namespace RubikCasual.Battle
                     }
                     break;
                 case GameState.BATTLE:
-                    if (CountState == 1)
-                    {
-                        bool checkCurrentTeam = false;
-                        for (int index = 0; index < lsSlotGbHero.Count; index++)
-                        {
-                            if (lsSlotGbHero[index] != null && (int)lsSlotGbHero[index].GetComponent<CharacterInBattle>().infoWaifuAsset.ID != idCurrentTeam[index])
-                            {
-                                checkCurrentTeam = true;
-                            }
-                        }
-                        if (checkCurrentTeam)
-                        {
-                            idCurrentTeam.Clear();
-                            foreach (var item in lsSlotGbHero)
-                            {
-                                if (item != null)
-                                {
-                                    int index = (int)item.GetComponent<CharacterInBattle>().infoWaifuAsset.ID;
-                                    idCurrentTeam.Add(index);
-                                }
-                                else
-                                {
-                                    idCurrentTeam.Add(0);
-                                }
-                            }
-                        }
-                    }
+                    ConvertIdDataToLsSlotInBattle();
                     Atack();
                     break;
                 case GameState.END_BATTLE:
 
-
                     EndBattleMoveCharacter();
-
                     break;
                 case GameState.END:
                     break;
             }
         }
-
+        void ConvertIdDataToLsSlotInBattle()
+        {
+            if (CountState == 1)
+            {
+                bool checkCurrentTeam = false;
+                for (int index = 0; index < lsSlotGbHero.Count; index++)
+                {
+                    if (lsSlotGbHero[index] != null && (int)lsSlotGbHero[index].GetComponent<CharacterInBattle>().infoWaifuAsset.ID != idCurrentTeam[index])
+                    {
+                        checkCurrentTeam = true;
+                    }
+                }
+                if (checkCurrentTeam)
+                {
+                    idCurrentTeam.Clear();
+                    foreach (var item in lsSlotGbHero)
+                    {
+                        if (item != null)
+                        {
+                            int index = (int)item.GetComponent<CharacterInBattle>().infoWaifuAsset.ID;
+                            idCurrentTeam.Add(index);
+                        }
+                        else
+                        {
+                            idCurrentTeam.Add(0);
+                        }
+                    }
+                }
+            }
+        }
 
         IEnumerator CreateBattlefield()
         {
@@ -333,7 +335,7 @@ namespace RubikCasual.Battle
                     {
                         // UnityEngine.Debug.Log(enemyAssets.WaifuEnemyAssetDatas.FirstOrDefault(f => f.Index == enemyAssets.lsIdEnemy[indexRand]).Is_Boss);
                         mapBattleController.lsPosEnemySlot[index].lsPosCharacterSlot[j].id = idValueInSlot;
-                        attribute *= dataController.stageAssets.lsConvertStageAssetsData[index].Attribute;
+                        attribute *= dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
 
                         if (dataController.characterAssets.enemyAssets.WaifuEnemyAssetDatas.Find(f => f.Index == idValueInSlot).Is_Boss)
                         {
@@ -589,7 +591,7 @@ namespace RubikCasual.Battle
         }
         void UpdateHpBarEnemyForState()
         {
-
+            // Đặt thanh máu và thanh Cooldown Skill nếu là boss của quái vào Canvas Dame 
             for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
             {
                 int index = i;
@@ -605,11 +607,8 @@ namespace RubikCasual.Battle
                         enemyInBattle.cooldownSkillBar.gameObject.transform.SetParent(dameSlotTxtController.transform);
                         enemyInBattle.healthBar.gameObject.transform.SetParent(enemyInBattle.cooldownSkillBar.transform);
                     }
-
-
                 }
             }
-
         }
         void CheckEndBattle()
         {
@@ -829,7 +828,7 @@ namespace RubikCasual.Battle
                 };
             }
         }
-        float attribute = 1;
+        public float attribute = 1;
         IEnumerator WaitBattleDelay()
         {
             // khi clear xong 1 stage

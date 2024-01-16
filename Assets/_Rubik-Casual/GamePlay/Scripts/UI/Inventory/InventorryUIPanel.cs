@@ -70,6 +70,7 @@ namespace RubikCasual.Battle.UI
                     Item.idItem = idItem;
                     Item.IdSlot = idSlot;
                     Item.Icon.GetComponent<Image>().sprite = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.id == idItem).imageItem;
+                    Item.Icon.GetComponent<Image>().preserveAspect = true;
                     ItemClone.GetComponent<ItemDragPosition>().idItem = idItem;
                     ResultItem = Item;
                 }

@@ -10,7 +10,7 @@ namespace RubikCasual.RewardInGame
     public class RewardInGamePanel : MonoBehaviour
     {
         public TextMeshProUGUI txtCoins, txtGems;
-        float valueCoins = 1f, valueGems = 1f;
+        public float valueCoins = 1f, valueGems = 1f;
         private DataController dataController;
         public static RewardInGamePanel instance;
         void Start()
@@ -27,13 +27,14 @@ namespace RubikCasual.RewardInGame
         public void AddRewardTopBarGroup(float attributeReward)
         {
             float coins = 1f * attributeReward;
-            valueCoins += coins;
-            txtCoins.text = valueCoins.ToString();
+            valueCoins = coins + float.Parse(txtCoins.text);
 
+            txtCoins.text = valueCoins.ToString();
+            // Debug.Log("Reward: " + txtCoins.text);
             if (UnityEngine.Random.Range(0, 2) == 0)
             {
                 float gems = 1f * attributeReward;
-                valueGems += gems;
+                valueGems = gems + float.Parse(txtGems.text);
                 txtGems.text = valueGems.ToString();
             }
         }

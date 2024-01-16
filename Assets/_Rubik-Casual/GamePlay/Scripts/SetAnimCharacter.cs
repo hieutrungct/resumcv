@@ -30,7 +30,7 @@ namespace RubikCasual.Battle
     }
     public class SetAnimCharacter : MonoBehaviour
     {
-        private bool isAnimationCompleteHandled = false;
+        // private bool isAnimationCompleteHandled = false;
 
         public void BossUseSkill(CharacterInBattle EnemyInBattle, MapBattleController dameSlotTxtController, List<GameObject> lsSlotGbHero, float durationsTxtDame)
         {
@@ -228,12 +228,13 @@ namespace RubikCasual.Battle
                 enemyAnim.AnimationState.ClearTrack(0);
                 enemyAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
                 enemyInBattle.isAttack = true;
-
+                enemyInBattle.GetRewardWhenKillEnemy();
                 enemyAnim.AnimationState.Complete += delegate
                 {
                     enemyInBattle.cooldownSkillBar.gameObject.transform.SetParent(enemyInBattle.cooldownAttackBar.transform.parent);
                     enemyInBattle.healthBar.gameObject.transform.SetParent(enemyInBattle.cooldownAttackBar.transform.parent);
                     // UnityEngine.Debug.Log(enemyAnim.skeletonDataAsset.name);
+
                     UnityEngine.Object.Destroy(gbEnemy);
                 };
             }
@@ -321,7 +322,7 @@ namespace RubikCasual.Battle
 
                 CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(BattleController.instance.dameSlotTxtController.transform);
                 CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownSkillBar.transform);
-
+                CharacterInBattleAttacked.GetRewardWhenKillEnemy();
 
                 CharacterAttackedAnim.AnimationState.Complete += delegate
                 {
