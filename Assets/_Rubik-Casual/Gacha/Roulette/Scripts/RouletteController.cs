@@ -92,11 +92,11 @@ namespace RubikCasual.Roulette
 
                 yield return doTarget.WaitForElapsedLoops(1);
                 doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles - value, durationRotate * Distance, RotateMode.FastBeyond360)
-                                                .SetEase(Ease.OutQuad);
-                doTarget.OnComplete(() =>
-                {
-                    StartCoroutine(CompleRoulette());
-                });
+                                                .SetEase(EaseFactory.StopMotion(60, Ease.OutQuad));
+                // doTarget.OnComplete(() =>
+                // {
+                //     StartCoroutine(CompleRoulette());
+                // });
             }
             else
             {
@@ -119,10 +119,10 @@ namespace RubikCasual.Roulette
                 yield return doTarget.WaitForElapsedLoops(1);
                 doTarget = gbTargetSpin.transform.DOLocalRotate(gbTargetSpin.transform.eulerAngles + value, durationRotate * Distance, RotateMode.FastBeyond360)
                                                 .SetEase(Ease.OutQuad);
-                doTarget.OnComplete(() =>
-                {
-                    StartCoroutine(CompleRoulette());
-                });
+                // doTarget.OnComplete(() =>
+                // {
+                //     StartCoroutine(CompleRoulette());
+                // });
             }
         }
         IEnumerator CompleRoulette()
