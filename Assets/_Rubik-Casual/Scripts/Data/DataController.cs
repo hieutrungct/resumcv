@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.Character_ACC;
@@ -22,11 +23,31 @@ namespace RubikCasual.Data
         public static DataController instance;
         void Awake()
         {
+            
+        }
+        public void initData()
+        {
             instance = this;
             DontDestroyOnLoad(this);
-            StartCoroutine(LoadData());
+            LoadData();
         }
-        
+
+        public void initUserData()
+        {
+            LoadUserData();
+        }
+        public void initListOwnWaifu()
+        {
+            
+            LoadlistOwnWaifu();
+        }
+        public void initPlayerData()
+        {
+            
+            LoadPlayerData();
+        }
+
+
         public InfoWaifuAsset GetInfoWaifuAssetsByIndex(int index)
         {
             foreach (var item in WaifuAssets.instance.infoWaifuAssets.lsInfoWaifuAssets)
@@ -42,12 +63,11 @@ namespace RubikCasual.Data
         // {
         // }
 
-        IEnumerator LoadData()
+        void LoadData()
         {
-            yield return new WaitForSeconds(0.25f);
             characterAssets = CharacterAssets.instance;
             stageAssets = StageAssets.instance;
-            LoadPlayerDataToJson();
+            //LoadPlayerDataToJson();
         }
         [Button]
         public void BtnSaveUserDataToJson()
@@ -66,7 +86,9 @@ namespace RubikCasual.Data
         void OnDestroy()
         {
             // SaveDataToJson(playerData, "PlayerData");
-            SaveDataToJson();
+            // SaveDataToJson();
+            SaveUserDataToJson();
+            SavePlayerOwnsWaifuDataToJson();
         }
 
         void LoadPlayerDataToJson()
@@ -90,30 +112,75 @@ namespace RubikCasual.Data
             // {
             //     Debug.LogError("File not found!");
             // }
-            if(PlayerPrefs.HasKey(NameKey.Data))
+
+
+            if(PlayerPrefs.HasKey(NameKey.USER_DATA_KEY))
             {
-                string json = PlayerPrefs.GetString(NameKey.Data);
-                playerData = JsonUtility.FromJson<PlayerData>(json);
+                // string json = PlayerPrefs.GetString(NameKey.Data);
+                // playerData = JsonUtility.FromJson<PlayerData>(json);
                 listOwnsWaifu = JsonUtility.FromJson<ListOwnsWaifu>(PlayerPrefs.GetString(NameKey.USER_OWN_WAIFU_KEY));
                 userData = JsonUtility.FromJson<UserData>(PlayerPrefs.GetString(NameKey.USER_DATA_KEY));
+            }
+            else
+            {
+                userData = new UserData();
+
+            }
+            playerData.lsPlayerOwnsWaifu = listOwnsWaifu.lsOwnsWaifu;
+            playerData.userData = userData;
+            
+        }
+        void LoadUserData()
+        {
+            
+            if(PlayerPrefs.HasKey(NameKey.USER_DATA_KEY))
+            {
+                
+                userData = JsonUtility.FromJson<UserData>(PlayerPrefs.GetString(NameKey.USER_DATA_KEY));
+                
 
             }
             else
             {
-                playerData = new PlayerData();
+                userData = new UserData();
+
             }
         }
-        void SaveDataToJson()
+        void LoadlistOwnWaifu()
+        {
+            if(PlayerPrefs.HasKey(NameKey.USER_OWN_WAIFU_KEY))
+            {
+                listOwnsWaifu = JsonUtility.FromJson<ListOwnsWaifu>(PlayerPrefs.GetString(NameKey.USER_OWN_WAIFU_KEY));
+                
+
+            }
+            else
+            {
+                listOwnsWaifu = new ListOwnsWaifu();
+
+            }
+        }
+        void LoadPlayerData()
         {
             playerData.userData = userData;
             playerData.lsPlayerOwnsWaifu = listOwnsWaifu.lsOwnsWaifu;
-            // Chuyển đổi ScriptableObject thành JSON
-            string json = JsonUtility.ToJson(playerData);
-
-            // Lưu JSON vào tệp
-            // System.IO.File.WriteAllText(Application.dataPath + $"/_Data/Resources/{nameFile}.json", json);
-            PlayerPrefs.SetString(NameKey.Data,json);
+            
         }
+
+
+        
+        
+        // void SaveDataToJson()
+        // {
+        //     playerData.userData = userData;
+        //     playerData.lsPlayerOwnsWaifu = listOwnsWaifu.lsOwnsWaifu;
+        //     // Chuyển đổi ScriptableObject thành JSON
+        //     string json = JsonUtility.ToJson(playerData);
+
+        //     // Lưu JSON vào tệp
+        //     // System.IO.File.WriteAllText(Application.dataPath + $"/_Data/Resources/{nameFile}.json", json);
+        //     PlayerPrefs.SetString(NameKey.Data,json);
+        // }
         void SaveUserDataToJson()
         {
             // Chuyển đổi ScriptableObject thành JSON

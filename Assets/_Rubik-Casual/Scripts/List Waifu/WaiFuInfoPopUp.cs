@@ -33,7 +33,7 @@ namespace Rubik.ListWaifu
         {
             
         }
-        public WaifuAssets waifuAssets;
+        
 
         public void SetUp(PlayerOwnsWaifu waifu)
         {
@@ -43,7 +43,7 @@ namespace Rubik.ListWaifu
 
            
 
-            SkeletonDataAsset skeletonDataAsset = waifuAssets.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
+            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
             avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
