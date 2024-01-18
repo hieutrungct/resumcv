@@ -18,11 +18,10 @@ namespace Rubik.ListWaifu
         [SerializeField] private SkeletonGraphic avaWaifu;
 
         [SerializeField]
-        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt;
+        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, btn_Update_Waifu, btn_Select;
 
-        public Button btn_Arrow_r, btn_Arrow_l;
-        
-        
+        // public Button btn_Arrow_r, btn_Arrow_l, btn_Update_Waifu, btn_Select;
+
 
         public Image role, avatar;
         
@@ -59,9 +58,12 @@ namespace Rubik.ListWaifu
             lvProcessTxt.text = waifu.Exp + "/" + waifu.Exp;
             damageTxt.text = (infoWaifu.ATK + waifu.ATK).ToString();
             defenseTxt.text = (infoWaifu.DEF + waifu.DEF).ToString();
-            critTxt.text = (infoWaifu.Pow+ waifu.Pow).ToString();
-            healthTxt.text = (infoWaifu.HP+ waifu.HP).ToString();
+            critTxt.text = (infoWaifu.Pow + waifu.Pow).ToString();
+            healthTxt.text = (infoWaifu.HP + waifu.HP).ToString();
             // moveSpeedTxt.text = waifu.MoveSpeed.ToString();
+
+            //Update_Waifu(waifu);
+
 
         }
 
@@ -71,6 +73,16 @@ namespace Rubik.ListWaifu
             thisWaifu = WaifuController.instance.GetWaifu(temp - 1);
             SetUp(thisWaifu);
             
+        }
+        public void Update_Waifu()
+        {
+            thisWaifu.level += 1;
+            thisWaifu.ATK +=10;
+            thisWaifu.DEF += 10;
+            thisWaifu.Pow += 10;
+            thisWaifu.HP += 10;
+            DataController.instance.BtnSaveOwnWaifuDataToJson();
+            SetUp(thisWaifu);
         }
         public void Back()
         {

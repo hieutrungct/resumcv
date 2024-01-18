@@ -168,12 +168,12 @@ RectTransform:
   m_Children:
   - {fileID: 664102492250685915}
   - {fileID: 664102491638791384}
-  m_Father: {fileID: 664102492960422821}
+  m_Father: {fileID: 664102493157092795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 74, y: -81.74963}
+  m_AnchoredPosition: {x: 74.00098, y: -66}
   m_SizeDelta: {x: 148.00183, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &664102491840596066
@@ -258,8 +258,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
+      - m_Target: {fileID: 868648916}
+        m_TargetAssemblyTypeName: Rubik.ListWaifu.WaifuController, Assembly-CSharp
         m_MethodName: ClosePopup
         m_Mode: 1
         m_Arguments:
@@ -536,8 +536,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.1484375, y: -152.35938}
-  m_SizeDelta: {x: -0.87402344, y: -304.71716}
+  m_AnchoredPosition: {x: 0, y: -73.75}
+  m_SizeDelta: {x: 0, y: -147.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664102492484055599
 MonoBehaviour:
@@ -637,7 +637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &664102492689521541
 RectTransform:
   m_ObjectHideFlags: 0
@@ -713,7 +713,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.00024414062, y: 86}
+  m_SizeDelta: {x: -0.00024414062, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &664102492740442071
 MonoBehaviour:
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 415, y: 585}
+  m_CellSize: {x: 350, y: 500}
   m_Spacing: {x: 67.3, y: 66}
   m_Constraint: 0
   m_ConstraintCount: 5
@@ -768,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &664102492960422821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -780,9 +780,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 664102491840596068}
-  - {fileID: 664102493210757103}
+  m_Children: []
   m_Father: {fileID: 664102492689521541}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -824,12 +822,12 @@ RectTransform:
   m_Children:
   - {fileID: 664102492182888170}
   m_Father: {fileID: 664102493157092795}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 204.13672, y: 2.2}
-  m_SizeDelta: {x: 197.7, y: 67.422264}
+  m_AnchoredPosition: {x: 659.9652, y: 2.2}
+  m_SizeDelta: {x: 145.906, y: 67.4223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &664102493052607847
 CanvasRenderer:
@@ -972,8 +970,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
+      - m_Target: {fileID: 868648916}
+        m_TargetAssemblyTypeName: Rubik.ListWaifu.WaifuController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedLever
         m_Mode: 1
         m_Arguments:
@@ -1050,6 +1048,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 664102491840596068}
+  - {fileID: 664102493210757103}
   - {fileID: 664102493052607865}
   - {fileID: 664102493224672190}
   m_Father: {fileID: 664102492689521541}
@@ -1057,8 +1057,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -234.8789}
-  m_SizeDelta: {x: -0.5839844, y: 140}
+  m_AnchoredPosition: {x: 0, y: -70}
+  m_SizeDelta: {x: 0, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &664102493157092793
 CanvasRenderer:
@@ -1129,12 +1129,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5053714480597460425}
-  m_Father: {fileID: 664102492960422821}
+  m_Father: {fileID: 664102493157092795}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72.89844, y: -76.54974}
+  m_AnchoredPosition: {x: -86, y: -70}
   m_SizeDelta: {x: 64, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &664102493210757101
@@ -1207,12 +1207,12 @@ RectTransform:
   - {fileID: 3565818025517922690}
   - {fileID: 3565818026845054190}
   m_Father: {fileID: 664102493157092795}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 162, y: 0}
-  m_SizeDelta: {x: -424.3413, y: 100}
+  m_AnchoredPosition: {x: 325, y: 0}
+  m_SizeDelta: {x: -1050, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664102493224672191
 MonoBehaviour:
@@ -1351,10 +1351,10 @@ RectTransform:
   m_Father: {fileID: 664102493224672190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 144.58, y: 67.422264}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 67.422264}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3565818025517922688
 CanvasRenderer:
@@ -1497,8 +1497,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
+      - m_Target: {fileID: 868648916}
+        m_TargetAssemblyTypeName: Rubik.ListWaifu.WaifuController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedPower
         m_Mode: 1
         m_Arguments:
@@ -1580,10 +1580,10 @@ RectTransform:
   m_Father: {fileID: 664102493224672190}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 244.68, y: -50}
-  m_SizeDelta: {x: 170.94, y: 67.422264}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 67.422264}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3565818026845054188
 CanvasRenderer:
@@ -1726,8 +1726,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Rubik_Casual.CharacterUIController, Assembly-CSharp
+      - m_Target: {fileID: 868648916}
+        m_TargetAssemblyTypeName: Rubik.ListWaifu.WaifuController, Assembly-CSharp
         m_MethodName: OnSortButtonClickedRarity
         m_Mode: 1
         m_Arguments:
@@ -1813,7 +1813,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 32.1, y: 19.9}
-  m_SizeDelta: {x: 80, y: 79}
+  m_SizeDelta: {x: 0, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5053714480597460407
 CanvasRenderer:
@@ -1926,10 +1926,10 @@ RectTransform:
   m_Father: {fileID: 5053714480597460425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -39.5}
-  m_SizeDelta: {x: 21.999996, y: 79}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5053714480926403323
 CanvasRenderer:
@@ -2074,16 +2074,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gbTaget: {fileID: 0}
   gbPopupOpen: {fileID: 664102492689521540}
-  listWaifu: {fileID: 0}
   slot_Waifu: {fileID: 8337258516667912828, guid: df3ba99a6df6f234aaa76c24ae60ef83, type: 3}
   transformSlot: {fileID: 664102492740442025}
-  WaifuInfoPopup: {fileID: 0}
+  waifuInfoPopup: {fileID: 0}
   Waifus: []
   textListSortLever: {fileID: 664102493052607846}
   textListSortRarity: {fileID: 3565818026845054191}
   textListSortPower: {fileID: 3565818025517922691}
-  lsWaifuData:
-    lsInfoWaifuAssets: []
 --- !u!1 &7919158160987775948
 GameObject:
   m_ObjectHideFlags: 0
