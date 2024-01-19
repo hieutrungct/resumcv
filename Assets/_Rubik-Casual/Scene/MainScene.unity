@@ -135,28 +135,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2998343628238473364}
     - target: {fileID: 868648916, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: listWaifu
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 868648916, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: WaifuInfoPopup
-      value: 
-      objectReference: {fileID: 5216631129623674340}
-    - target: {fileID: 868648916, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: waifuInfoPopup
       value: 
       objectReference: {fileID: 5216631129623674340}
-    - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 868648916}
-    - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClosePopup
-      objectReference: {fileID: 0}
-    - target: {fileID: 664102491840596067, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Rubik.ListWaifu.WaifuController, Assembly-CSharp
+    - target: {fileID: 664102492484055598, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 664102492689521540, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_Name
@@ -252,115 +236,71 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 664102492740442025, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 664102492740442071, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_CellSize.x
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 664102492740442071, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_CellSize.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060662323008148017, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 868648916}
-    - target: {fileID: 1060662323008148017, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSortButtonClickedRarity
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060662323008148017, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Rubik.ListWaifu.WaifuController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060662323008148023, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 868648916}
-    - target: {fileID: 1060662323008148023, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSortButtonClickedPower
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060662323008148023, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Rubik.ListWaifu.WaifuController, Assembly-CSharp
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 3565818025517922690, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3565818025517922690, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3565818025517922690, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 144.58
       objectReference: {fileID: 0}
     - target: {fileID: 3565818025517922690, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3565818026845054190, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3565818026845054190, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3565818026845054190, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 170.94
       objectReference: {fileID: 0}
     - target: {fileID: 3565818026845054190, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 244.68
       objectReference: {fileID: 0}
     - target: {fileID: 3565818026845054190, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 5053714480597460425, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5053714480926403325, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5053714480926403325, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5053714480926403325, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 21.999996
       objectReference: {fileID: 0}
     - target: {fileID: 5053714480926403325, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 5053714480926403325, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5053714480926403325, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919158159717869359, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 868648916}
-    - target: {fileID: 7919158159717869359, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSortButtonClickedLever
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919158159717869359, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Rubik.ListWaifu.WaifuController, Assembly-CSharp
+      value: -39.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
@@ -1641,6 +1581,50 @@ PrefabInstance:
       propertyPath: Hero.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f87d9d25262734d879c2da72faf95bf2, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 23d2f9d15f15a43c5bf2c57de1a27879, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
 --- !u!1 &1705126859
@@ -71862,10 +71846,12 @@ MonoBehaviour:
   critTxt: {fileID: 5216631130538115979}
   healthTxt: {fileID: 5216631129258389151}
   moveSpeedTxt: {fileID: 5216631129330138350}
-  btn_Arrow_r: {fileID: 5216631131186603439}
-  btn_Arrow_l: {fileID: 5216631129889705776}
+  goldTxt: {fileID: 5216631129349827167}
+  selectTxt: {fileID: 5216631130501050251}
   role: {fileID: 5216631131057866231}
   avatar: {fileID: 2697448558008552402}
+  btnselect: {fileID: 5216631130235301352}
+  btnUpdate: {fileID: 5216631131013017695}
 --- !u!114 &5216631129653155410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77551,7 +77537,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5216631131013017695}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5216631129623674340}
+        m_TargetAssemblyTypeName: Rubik.ListWaifu.WaiFuInfoPopUp, Assembly-CSharp
+        m_MethodName: Update_Waifu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &5216631131013017694
 RectTransform:
   m_ObjectHideFlags: 0

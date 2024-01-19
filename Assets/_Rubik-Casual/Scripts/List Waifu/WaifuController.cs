@@ -273,6 +273,7 @@ namespace Rubik.ListWaifu
         {
             MovePopup.TransPopupHorizontal(gbTaget, gbPopupOpen);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false);
+            CreateWaifu();
         }
         public void ClosePopup()
         {
