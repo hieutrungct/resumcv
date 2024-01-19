@@ -18,13 +18,13 @@ namespace Rubik.ListWaifu
         [SerializeField] private SkeletonGraphic avaWaifu;
 
         [SerializeField]
-        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, btn_Update_Waifu, btn_Select;
+        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, goldTxt, selectTxt;
 
         // public Button btn_Arrow_r, btn_Arrow_l, btn_Update_Waifu, btn_Select;
 
 
-        public Image role, avatar;
-        
+        public Image role, avatar, btnselect, btnUpdate;
+
         
         private PlayerOwnsWaifu thisWaifu,_waifu;
 
@@ -32,7 +32,7 @@ namespace Rubik.ListWaifu
         {
             
         }
-        
+        float curGoldUpdate = 1;
 
         public void SetUp(PlayerOwnsWaifu waifu)
         {
@@ -60,6 +60,23 @@ namespace Rubik.ListWaifu
             defenseTxt.text = (infoWaifu.DEF + waifu.DEF).ToString();
             critTxt.text = (infoWaifu.Pow + waifu.Pow).ToString();
             healthTxt.text = (infoWaifu.HP + waifu.HP).ToString();
+
+            selectTxt.text = "Select";
+            btnselect.sprite = AssetLoader.instance.Button[9];
+            foreach (var curentWaifu in DataController.instance.userData.CurentTeam)
+            {
+                if(waifu.Index == curentWaifu)
+                {
+                    Debug.Log("Waifu thứ " + waifu.Index);
+                    selectTxt.text = "Deselect";
+                    btnselect.sprite = AssetLoader.instance.Button[6];
+                    
+                }
+            }
+            curGoldUpdate = (1000*waifu.level);
+            goldTxt.text = curGoldUpdate.ToString();
+
+            
             // moveSpeedTxt.text = waifu.MoveSpeed.ToString();
 
             //Update_Waifu(waifu);
@@ -76,12 +93,7 @@ namespace Rubik.ListWaifu
         }
         public void Update_Waifu()
         {
-            thisWaifu.level += 1;
-            thisWaifu.ATK +=10;
-            thisWaifu.DEF += 10;
-            thisWaifu.Pow += 10;
-            thisWaifu.HP += 10;
-            DataController.instance.BtnSaveOwnWaifuDataToJson();
+            DataController.instance.UpdateWaifu(thisWaifu,curGoldUpdate);
             SetUp(thisWaifu);
         }
         public void Back()
@@ -102,6 +114,18 @@ namespace Rubik.ListWaifu
         {
             gameObject.SetActive(true);
             SetUp(waifu);
+        }
+        public void SelectOnClick()
+        {
+            // foreach (var curentWaifu in DataController.instance.userData.CurentTeam)
+            // {
+            //     if(thisWaifu.Index == curentWaifu)
+            //     {
+            //         curentWaifu = 0;
+            //     }
+
+            // }
+            
         }
     }
 }

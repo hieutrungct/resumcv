@@ -1581,6 +1581,50 @@ PrefabInstance:
       propertyPath: Hero.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f87d9d25262734d879c2da72faf95bf2, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 23d2f9d15f15a43c5bf2c57de1a27879, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
+    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
+      propertyPath: Button.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
 --- !u!1 &1705126859
@@ -19234,7 +19278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 860.26, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355882317280480164
@@ -29603,7 +29647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 124.880005, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355882318390028739
@@ -35115,7 +35159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 488.26, y: 0}
   m_SizeDelta: {x: 0, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355882318681944389
@@ -71802,10 +71846,12 @@ MonoBehaviour:
   critTxt: {fileID: 5216631130538115979}
   healthTxt: {fileID: 5216631129258389151}
   moveSpeedTxt: {fileID: 5216631129330138350}
-  btn_Update_Waifu: {fileID: 5216631129349827167}
-  btn_Select: {fileID: 5216631129231233536}
+  goldTxt: {fileID: 5216631129349827167}
+  selectTxt: {fileID: 5216631130501050251}
   role: {fileID: 5216631131057866231}
   avatar: {fileID: 2697448558008552402}
+  btnselect: {fileID: 5216631130235301352}
+  btnUpdate: {fileID: 5216631131013017695}
 --- !u!114 &5216631129653155410
 MonoBehaviour:
   m_ObjectHideFlags: 0

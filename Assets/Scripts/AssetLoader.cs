@@ -15,7 +15,7 @@ namespace Rubik_Casual
         // Start is called before the first frame update
         //public List<CardInfo> UnitCards;
         //public List<CardInfo> HeroCards;
-        public List<Sprite> Avatars;
+        public List<Sprite> Avatars,Button;
         public List<SkeletonDataAsset> Hero;
         public List<SkeletonDataAsset> Enemy;
         public List<Sprite> RarrityBox;
