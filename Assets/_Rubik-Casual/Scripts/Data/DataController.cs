@@ -91,7 +91,7 @@ namespace RubikCasual.Data
             SavePlayerOwnsWaifuDataToJson();
         }
 
-        void LoadPlayerDataToJson()
+        public void LoadPlayerDataToJson()
         {
             // string filePath = Application.dataPath + $"/_Data/Resources/{nameFile}.json";
             // if (System.IO.File.Exists(filePath))
@@ -204,6 +204,11 @@ namespace RubikCasual.Data
             string json = JsonUtility.ToJson(listOwnsWaifu);
             PlayerPrefs.SetString(NameKey.USER_OWN_WAIFU_KEY,json);
         }
+        
+        // public void LoadDataTest()
+        // {
+        //     LoadPlayerDataToJson();
+        // }
 
 
 

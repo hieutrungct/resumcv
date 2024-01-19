@@ -20,6 +20,7 @@ namespace RubikCasual.Battle.UI
         void Awake()
         {
             instance = this;
+            
         }
         void Start()
         {

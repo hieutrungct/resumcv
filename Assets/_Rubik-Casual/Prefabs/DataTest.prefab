@@ -1,0 +1,6845 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &714001714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714001715}
+  - component: {fileID: 714001716}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &714001715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714001714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2552376163307477089}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &714001716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714001714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3d66560f04d7a4b8fe6c8b7a907076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataController: {fileID: 2552376163307477088}
+--- !u!1 &715968482227026430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8404532716044044805}
+  - component: {fileID: 3066200412501087934}
+  m_Layer: 5
+  m_Name: EnemyAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8404532716044044805
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715968482227026430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7460112081451431902}
+  m_Father: {fileID: 2999671105770049559}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3066200412501087934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715968482227026430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86bdb69113423840b5a879029c60502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  funnyCheck: 0
+  CacheHolder:
+    Keys: []
+    Values: []
+  Holder: {fileID: 7460112081451431902}
+  WaifuSODic:
+    Keys: []
+    Values: []
+  AssetEnemyData: {fileID: 4900000, guid: 72e74cb497407f949ae1acc470e7afa8, type: 3}
+  WaifuEnemyAssetDatas:
+  - Index: 9001
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9001/9001_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9001
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9002
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9002/9002_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9002
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9003
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9003/9003_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9003
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9004
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9004/9004_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9004
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9005
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9005/9005_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9005
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9006
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9006/9006_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9006
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9007
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9007/9007_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9007
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9008
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9008/9008_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9008
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9009
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9009/9009_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9009
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9010
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9010/9010_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9010
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9011
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9011/9011_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9011
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9012
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9012/9012_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9012
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 1
+  - Index: 9013
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9013/9013_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9013
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9014
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9014/9014_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9014
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9015
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9015/9015_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9015
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9016
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9016/9016_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9016
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9017
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9017/9017_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9017
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9018
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9018/9018_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9018
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9019
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9019/9019_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9019
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9020
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9020/9020_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9020
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9021
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9021/9021_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9021
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9022
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9022/9022_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9022
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9023
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9023/9023_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9023
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9024
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9024/9024_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9024
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9025
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9025/9025_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9025
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9026
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9026/9026_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9026
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9027
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9027/9027_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9027
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9028
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9028/9028_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9028
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9029
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9029/9029_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9029
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9030
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9030/9030_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9030
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9031
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9031/9031_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9031
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9032
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9032/9032_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9032
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9033
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9033/9033_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9033
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9034
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9034/9034_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9034
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9035
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9035/9035_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9035
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9036
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9036/9036_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9036
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9037
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9037/9037_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9037
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9038
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9038/9038_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9038
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9039
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9039/9039_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9039
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9040
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9040/9040_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9040
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9041
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9041/9041_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9041
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9042
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9042/9042_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9042
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9043
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9043/9043_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9043
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9044
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9044/9044_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9044
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9045
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9045/9045_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9045
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9046
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9046/9046_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9046
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9047
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9047/9047_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9047
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9049
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9049/9049_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9049
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9050
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9050/9050_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9050
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9051
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9051/9051_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9051
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9052
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9052/9052_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9052
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9053
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9053/9053_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9053
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9054
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9054/9054_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9054
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9055
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9055/9055_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9055
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9056
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9056/9056_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9056
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9057
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9057/9057_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9057
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9058
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9058/9058_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9058
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9059
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9059/9059_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9059
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9060
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9060/9060_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9060
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9061
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9061/9061_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9061
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9062
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9062/9062_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9062
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9063
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9063/9063_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9063
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9064
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9064/9064_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9064
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9065
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9065/9065_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9065
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9066
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9066/9066_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9066
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9067
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9067/9067_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9067
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9068
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9068/9068_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9068
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9069
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9069/9069_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9069
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9070
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9070/9070_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9070
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9071
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9071/9071_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9071
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9072
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9072/9072_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9072
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9073
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9073/9073_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9073
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9074
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9074/9074_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9074
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9075
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9075/9075_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9075
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9076
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9076/9076_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9076
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9077
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9077/9077_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9077
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9078
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9078/9078_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9078
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9079
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9079/9079_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9079
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9080
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9080/9080_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9080
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9081
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9081/9081_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9081
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9082
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9082/9082_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9082
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9083
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9083/9083_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9083
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9084
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9084/9084_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9084
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9085
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9085/9085_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9085
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9086
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9086/9086_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9086
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9087
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9087/9087_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9087
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9088
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9088/9088_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9088
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9089
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9089/9089_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9089
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9090
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9090/9090_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9090
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9091
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9091/9091_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9091
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  - Index: 9092
+    PathSkeleton: Assets/_AnimAsset/Creeps/Creeps/9092/9092_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    Skin: Pet9092
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Is_Boss: 0
+  lsIdEnemy: 
+  infoEnemyAssets:
+    lsInfoWaifuAssets:
+    - ID: 1
+      Code: 9001
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 2
+      Code: 9002
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 3
+      Code: 9003
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 4
+      Code: 9004
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 5
+      Code: 9005
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 6
+      Code: 9006
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 7
+      Code: 9007
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 8
+      Code: 9008
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 9
+      Code: 9009
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 10
+      Code: 9010
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 11
+      Code: 9011
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 12
+      Code: 9012
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 13
+      Code: 9013
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 14
+      Code: 9014
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 15
+      Code: 9015
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 16
+      Code: 9016
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 17
+      Code: 9017
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 18
+      Code: 9018
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 19
+      Code: 9019
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 20
+      Code: 9020
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 21
+      Code: 9021
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 22
+      Code: 9022
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 23
+      Code: 9023
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 24
+      Code: 9024
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 25
+      Code: 9025
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 26
+      Code: 9026
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 27
+      Code: 9027
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 28
+      Code: 9028
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 29
+      Code: 9029
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 30
+      Code: 9030
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 31
+      Code: 9031
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 32
+      Code: 9032
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 33
+      Code: 9033
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 34
+      Code: 9034
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 35
+      Code: 9035
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 36
+      Code: 9036
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 37
+      Code: 9037
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 38
+      Code: 9038
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 39
+      Code: 9039
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 40
+      Code: 9040
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 41
+      Code: 9041
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 42
+      Code: 9042
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 43
+      Code: 9043
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 44
+      Code: 9044
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 45
+      Code: 9045
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 46
+      Code: 9046
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 47
+      Code: 9047
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 48
+      Code: 9049
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 49
+      Code: 9050
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 50
+      Code: 9051
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 51
+      Code: 9052
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 52
+      Code: 9053
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 53
+      Code: 9054
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 54
+      Code: 9055
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 55
+      Code: 9056
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 56
+      Code: 9057
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 57
+      Code: 9058
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 58
+      Code: 9059
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 59
+      Code: 9060
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 60
+      Code: 9061
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 61
+      Code: 9062
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 62
+      Code: 9063
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 63
+      Code: 9064
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 64
+      Code: 9065
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 65
+      Code: 9066
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 66
+      Code: 9067
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 67
+      Code: 9068
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 68
+      Code: 9081
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 69
+      Code: 9082
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 70
+      Code: 9083
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 71
+      Code: 9084
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 72
+      Code: 9085
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 73
+      Code: 9086
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 74
+      Code: 9089
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 75
+      Code: 9090
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 76
+      Code: 9091
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+    - ID: 77
+      Code: 9092
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Poison
+      Rare: R
+  WaifuSO: {fileID: 0}
+  Holder2D: {fileID: 0}
+  HolderUI: {fileID: 0}
+--- !u!1 &2050148580443153355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050148580443153396}
+  - component: {fileID: 2050148580443153397}
+  m_Layer: 5
+  m_Name: Tool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2050148580443153396
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050148580443153355}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2552376163307477089}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 960, y: 540}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2050148580443153397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050148580443153355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aec0444de29124b948f7c86399885d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2552376161743813940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2552376161743813943}
+  - component: {fileID: 2552376161743813942}
+  m_Layer: 0
+  m_Name: StageAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2552376161743813943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552376161743813940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2552376163307477089}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2552376161743813942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552376161743813940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373a3e601fff96f448a024f3bbcd3269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lsConvertStageAssetsData:
+  - Stage: 1
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexCreep: 9021'
+    - null
+    - 'IndexItem: 8'
+  - Stage: 2
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9042'
+    - null
+    - 'IndexItem: 9'
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9036'
+  - Stage: 3
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9029'
+    - 'IndexCreep: 9030'
+    - null
+    - null
+    - 'IndexCreep: 9025'
+  - Stage: 4
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 8'
+    - 'IndexItem: 9'
+    - 'IndexItem: 8'
+    - 'IndexCreep: 9033'
+    - null
+  - Stage: 5
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - null
+    - 'IndexItem: 6'
+    - null
+    - 'IndexItem: 8'
+  - Stage: 6
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9025'
+    - null
+    - 'IndexCreep: 9014'
+    - 'IndexCreep: 9040'
+    - 'IndexCreep: 9019'
+  - Stage: 7
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9014'
+    - 'IndexCreep: 9034'
+    - 'IndexItem: 7'
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9028'
+  - Stage: 8
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 10'
+    - 'IndexCreep: 9032'
+    - null
+    - 'IndexItem: 9'
+    - 'IndexItem: 8'
+  - Stage: 9
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+  - Stage: 10
+    Attribute: 1.1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexBoss: 9012'
+    - null
+    - null
+  - Stage: 11
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+  - Stage: 12
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9020'
+    - 'IndexItem: 7'
+    - 'IndexItem: 6'
+    - 'IndexCreep: 9044'
+    - 'IndexItem: 6'
+  - Stage: 13
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9024'
+    - 'IndexCreep: 9015'
+    - null
+    - null
+    - null
+  - Stage: 14
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 7'
+    - null
+    - 'IndexCreep: 9047'
+    - 'IndexCreep: 9014'
+    - 'IndexCreep: 9042'
+  - Stage: 15
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9024'
+    - 'IndexItem: 10'
+    - 'IndexItem: 9'
+  - Stage: 16
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9021'
+    - 'IndexItem: 8'
+    - null
+    - 'IndexCreep: 9022'
+    - 'IndexCreep: 9044'
+  - Stage: 17
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 10'
+    - null
+    - 'IndexCreep: 9017'
+    - 'IndexItem: 10'
+  - Stage: 18
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9032'
+    - null
+    - 'IndexCreep: 9022'
+    - 'IndexCreep: 9038'
+    - 'IndexItem: 10'
+  - Stage: 19
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 9'
+    - null
+    - null
+    - null
+  - Stage: 20
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexCreep: 9017'
+    - 'IndexCreep: 9040'
+    - 'IndexCreep: 9026'
+  - Stage: 21
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexCreep: 9017'
+    - 'IndexCreep: 9044'
+    - 'IndexCreep: 9035'
+    - null
+  - Stage: 22
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9024'
+    - 'IndexCreep: 9039'
+    - 'IndexCreep: 9045'
+    - 'IndexCreep: 9025'
+  - Stage: 23
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 8'
+    - 'IndexCreep: 9041'
+    - null
+    - 'IndexItem: 9'
+  - Stage: 24
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9035'
+    - 'IndexCreep: 9043'
+    - 'IndexCreep: 9031'
+    - 'IndexCreep: 9028'
+    - 'IndexCreep: 9032'
+  - Stage: 25
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9032'
+    - 'IndexCreep: 9046'
+    - 'IndexCreep: 9045'
+    - 'IndexItem: 7'
+    - null
+  - Stage: 26
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9016'
+    - 'IndexCreep: 9044'
+    - null
+    - null
+    - 'IndexItem: 6'
+  - Stage: 27
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 10'
+    - 'IndexItem: 10'
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9022'
+  - Stage: 28
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9037'
+    - null
+    - 'IndexItem: 9'
+    - 'IndexItem: 10'
+    - null
+  - Stage: 29
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+  - Stage: 30
+    Attribute: 1.1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexBoss: 9010'
+    - null
+    - null
+  - Stage: 31
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+  - Stage: 32
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9013'
+    - 'IndexItem: 10'
+    - 'IndexCreep: 9046'
+    - 'IndexCreep: 9037'
+    - 'IndexItem: 10'
+  - Stage: 33
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9014'
+    - 'IndexCreep: 9022'
+    - null
+    - 'IndexCreep: 9038'
+  - Stage: 34
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9046'
+    - 'IndexCreep: 9039'
+    - 'IndexItem: 9'
+    - null
+    - 'IndexCreep: 9031'
+  - Stage: 35
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexCreep: 9026'
+    - 'IndexItem: 9'
+    - null
+    - 'IndexCreep: 9039'
+  - Stage: 36
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9023'
+    - 'IndexCreep: 9029'
+    - null
+    - null
+    - 'IndexItem: 7'
+  - Stage: 37
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9018'
+    - 'IndexItem: 8'
+    - 'IndexItem: 8'
+    - 'IndexCreep: 9018'
+    - 'IndexCreep: 9022'
+  - Stage: 38
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9033'
+    - 'IndexCreep: 9027'
+    - null
+  - Stage: 39
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 9'
+    - null
+    - 'IndexCreep: 9025'
+    - 'IndexItem: 6'
+  - Stage: 40
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9020'
+    - null
+    - 'IndexItem: 8'
+    - 'IndexCreep: 9033'
+    - 'IndexCreep: 9042'
+  - Stage: 41
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9017'
+    - null
+    - null
+    - 'IndexItem: 8'
+    - null
+  - Stage: 42
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9040'
+    - null
+    - null
+    - null
+    - 'IndexItem: 8'
+  - Stage: 43
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9044'
+    - 'IndexCreep: 9038'
+    - 'IndexCreep: 9044'
+    - null
+    - null
+  - Stage: 44
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+  - Stage: 45
+    Attribute: 1.1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexBoss: 9007'
+    - null
+    - null
+  - Stage: 46
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+  - Stage: 47
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9019'
+    - 'IndexCreep: 9028'
+    - null
+    - 'IndexCreep: 9026'
+    - 'IndexItem: 7'
+  - Stage: 48
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9045'
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9020'
+    - 'IndexCreep: 9018'
+    - 'IndexCreep: 9017'
+  - Stage: 49
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9025'
+    - 'IndexCreep: 9025'
+    - 'IndexCreep: 9027'
+    - 'IndexCreep: 9039'
+    - 'IndexCreep: 9038'
+  - Stage: 50
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 10'
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9035'
+    - null
+    - 'IndexCreep: 9017'
+  - Stage: 51
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9028'
+    - 'IndexCreep: 9032'
+    - 'IndexCreep: 9018'
+    - 'IndexCreep: 9020'
+    - 'IndexCreep: 9047'
+  - Stage: 52
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexCreep: 9024'
+    - null
+    - null
+    - null
+  - Stage: 53
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexCreep: 9036'
+    - 'IndexCreep: 9015'
+    - 'IndexCreep: 9026'
+  - Stage: 54
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9036'
+    - null
+    - null
+    - 'IndexCreep: 9034'
+    - null
+  - Stage: 55
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - null
+    - 'IndexCreep: 9016'
+    - 'IndexItem: 9'
+    - null
+  - Stage: 56
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9036'
+    - 'IndexCreep: 9044'
+    - null
+    - 'IndexCreep: 9041'
+  - Stage: 57
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - null
+    - null
+    - 'IndexCreep: 9047'
+    - null
+  - Stage: 58
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9025'
+    - null
+    - null
+    - null
+    - 'IndexItem: 10'
+  - Stage: 59
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 8'
+    - null
+    - null
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9018'
+  - Stage: 60
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9021'
+    - 'IndexCreep: 9029'
+    - 'IndexCreep: 9031'
+    - 'IndexItem: 9'
+    - null
+  - Stage: 61
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9029'
+    - 'IndexItem: 8'
+    - null
+    - null
+  - Stage: 62
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9022'
+    - 'IndexCreep: 9047'
+    - null
+    - 'IndexItem: 10'
+    - 'IndexCreep: 9034'
+  - Stage: 63
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9039'
+    - 'IndexItem: 6'
+    - 'IndexCreep: 9021'
+    - 'IndexCreep: 9035'
+    - null
+  - Stage: 64
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+  - Stage: 65
+    Attribute: 1.1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexBoss: 9011'
+    - null
+    - null
+  - Stage: 66
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+    - 'IndexItem: 9'
+  - Stage: 67
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 10'
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9032'
+    - 'IndexCreep: 9041'
+    - 'IndexCreep: 9046'
+  - Stage: 68
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexCreep: 9026'
+    - 'IndexItem: 6'
+    - 'IndexCreep: 9020'
+    - 'IndexCreep: 9018'
+  - Stage: 69
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9038'
+    - 'IndexCreep: 9032'
+    - 'IndexCreep: 9036'
+  - Stage: 70
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9028'
+    - 'IndexItem: 9'
+    - 'IndexItem: 10'
+    - null
+    - 'IndexCreep: 9039'
+  - Stage: 71
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexItem: 7'
+    - null
+    - 'IndexCreep: 9025'
+  - Stage: 72
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9031'
+    - 'IndexItem: 10'
+    - 'IndexCreep: 9032'
+    - 'IndexCreep: 9029'
+    - 'IndexCreep: 9029'
+  - Stage: 73
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9025'
+    - null
+    - 'IndexItem: 7'
+    - 'IndexCreep: 9019'
+    - null
+  - Stage: 74
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9036'
+    - 'IndexCreep: 9039'
+    - 'IndexCreep: 9030'
+    - 'IndexCreep: 9045'
+    - 'IndexCreep: 9033'
+  - Stage: 75
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 10'
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9030'
+    - 'IndexItem: 6'
+    - 'IndexCreep: 9026'
+  - Stage: 76
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 8'
+    - 'IndexItem: 10'
+    - 'IndexCreep: 9031'
+    - 'IndexCreep: 9036'
+    - null
+  - Stage: 77
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9020'
+    - null
+    - 'IndexCreep: 9032'
+    - null
+    - 'IndexCreep: 9046'
+  - Stage: 78
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9043'
+    - 'IndexCreep: 9044'
+    - null
+    - 'IndexCreep: 9024'
+    - 'IndexItem: 6'
+  - Stage: 79
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+  - Stage: 80
+    Attribute: 1.1
+    lsValueSlot:
+    - null
+    - null
+    - 'IndexBoss: 9012'
+    - null
+    - null
+  - Stage: 81
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+    - 'IndexItem: 9'
+    - 'IndexItem: 6'
+  - Stage: 82
+    Attribute: 1
+    lsValueSlot:
+    - null
+    - null
+    - null
+    - 'IndexCreep: 9031'
+    - 'IndexItem: 8'
+  - Stage: 83
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9021'
+    - 'IndexCreep: 9029'
+    - 'IndexItem: 9'
+    - 'IndexItem: 8'
+    - null
+  - Stage: 84
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9046'
+    - null
+    - null
+    - 'IndexCreep: 9024'
+    - null
+  - Stage: 85
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9038'
+    - null
+    - null
+    - 'IndexCreep: 9028'
+  - Stage: 86
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9037'
+    - 'IndexCreep: 9033'
+    - 'IndexCreep: 9022'
+    - null
+    - 'IndexItem: 7'
+  - Stage: 87
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9028'
+    - 'IndexItem: 10'
+    - 'IndexCreep: 9039'
+    - 'IndexItem: 9'
+    - 'IndexCreep: 9036'
+  - Stage: 88
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9022'
+    - 'IndexItem: 6'
+    - null
+    - 'IndexCreep: 9026'
+    - 'IndexItem: 7'
+  - Stage: 89
+    Attribute: 1
+    lsValueSlot:
+    - 'IndexCreep: 9046'
+    - 'IndexItem: 10'
+    - null
+    - 'IndexCreep: 9034'
+    - 'IndexItem: 9'
+  AssetData: {fileID: 4900000, guid: da3d51f59cd986a419b01e7e7f4a2890, type: 3}
+  idTest: 0
+--- !u!1 &2552376162893130867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2552376162893130866}
+  m_Layer: 0
+  m_Name: PlayerDataLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2552376162893130866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552376162893130867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8771401305295817145}
+  m_Father: {fileID: 2552376163307477089}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2552376163307477086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2552376163307477089}
+  - component: {fileID: 2552376163307477088}
+  m_Layer: 0
+  m_Name: DataTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2552376163307477089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552376163307477086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2999671105770049559}
+  - {fileID: 2552376162893130866}
+  - {fileID: 2552376161743813943}
+  - {fileID: 2050148580443153396}
+  - {fileID: 714001715}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2552376163307477088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552376163307477086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a130883fb916e4e895c088eb0d7e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData:
+    userData:
+      UserName: hieutrung
+      UserId: 
+      Gold: 0
+      Gem: 0
+      Level: 0
+      Energy: 0
+      Hp: 0
+      Exp: 0
+      Rank: 0
+      CurentTeam: []
+    lsPlayerOwnsWaifu:
+    - Index: 1
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 3
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 5
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 7
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 11
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 12
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 13
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 8
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 33
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    Inventory:
+      Keys: 
+      Values: 
+    CurentStage: 0
+  listOwnsWaifu:
+    lsOwnsWaifu:
+    - Index: 1
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 3
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 5
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 7
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 11
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 12
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 13
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 8
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+    - Index: 33
+      Star: 0
+      Exp: 0
+      IndexSkin: 0
+      IndexEvolution: 0
+      frag: 0
+      level: 0
+      HP: 0
+      DEF: 0
+      ATK: 0
+      Skill: 0
+      Pow: 0
+  userData:
+    UserName: hieutrung
+    UserId: 
+    Gold: 0
+    Gem: 0
+    Level: 0
+    Energy: 0
+    Hp: 0
+    Exp: 0
+    Rank: 0
+    CurentTeam: []
+  itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
+  characterAssets: {fileID: 2999671105770049558}
+  AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
+  stageAssets: {fileID: 0}
+--- !u!1 &2999671104778111196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2999671104778111195}
+  m_Layer: 5
+  m_Name: Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2999671104778111195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999671104778111196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2999671105715078770}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2999671105715078771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2999671105715078770}
+  - component: {fileID: 2999671105715078769}
+  m_Layer: 5
+  m_Name: WaifuAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2999671105715078770
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999671105715078771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2999671104778111195}
+  m_Father: {fileID: 2999671105770049559}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2999671105715078769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999671105715078771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627bf7deda570de44844de6cf61b3583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  funnyCheck: 1
+  CacheHolder:
+    Keys: []
+    Values: []
+  Holder: {fileID: 2999671104778111195}
+  WaifuSODic:
+    Keys:
+    - 1
+    - 24
+    - 5
+    - 10
+    - 14
+    - 11
+    - 2
+    - 3
+    - 4
+    - 31
+    - 35
+    - 20
+    Values:
+    - {fileID: 11400000, guid: 8bcfeffa4db57f348bb6877ba51b51c8, type: 2}
+    - {fileID: 11400000, guid: 58d4a45e1107fc54f84a7f7c1c8a41db, type: 2}
+    - {fileID: 11400000, guid: c4ab9d7e9748f0442a797a622495f454, type: 2}
+    - {fileID: 11400000, guid: 6920f9cebb627044e8398da443e67873, type: 2}
+    - {fileID: 11400000, guid: 6ed7b60cf61fdd24a87e35c189a38c46, type: 2}
+    - {fileID: 11400000, guid: 531a4906b16e86941a02f1110019de81, type: 2}
+    - {fileID: 11400000, guid: 61a613ced7680bd439e25d44c91141fe, type: 2}
+    - {fileID: 11400000, guid: 6659f01cd28771648bfe80c7e13ce7a8, type: 2}
+    - {fileID: 11400000, guid: 2a359cab3c64597478d5976fa9224828, type: 2}
+    - {fileID: 11400000, guid: 79e8f6e9b550ff747bc2f81cc3be8b77, type: 2}
+    - {fileID: 11400000, guid: 0742022dfd45a664c829842e272bf7dc, type: 2}
+    - {fileID: 11400000, guid: 2073e0647bf7ed74bb6efe2f873c5c7f, type: 2}
+  AssetData: {fileID: 4900000, guid: 8d0c1611f18378742b3d723cdb37e816, type: 3}
+  WaifuAssetDatas:
+  - Index: 1
+    PathSkeleton: Assets/_HeroAnim/Pet1001_191205142335.unity3d_export/Pet1001_191205142335_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1001
+  - Index: 2
+    PathSkeleton: Assets/_HeroAnim/Pet1001_S01_e13130.unity3d_export/Pet1001_S01_e13130_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1001
+  - Index: 3
+    PathSkeleton: Assets/_HeroAnim/Pet1001_A_201207174018.unity3d_export/Pet1001_A_201207174018_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1001_A
+  - Index: 4
+    PathSkeleton: Assets/_HeroAnim/Pet1001_S02_ddabc6.unity3d_export/Pet1001_S02_ddabc6_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1001_A
+  - Index: 5
+    PathSkeleton: Assets/_HeroAnim/Pet1002_200723124751.unity3d_export/CAB-185e0960a612b8f4abf682899ff29c98/Pet1002_200723124751_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1002
+  - Index: 6
+    PathSkeleton: Assets/_HeroAnim/Pet1002_A_201106132034.unity3d_export/CAB-b7988c700767095498c1b90cceb3cf25/Pet1002_A_201106132034_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1002_A
+  - Index: 7
+    PathSkeleton: Assets/_HeroAnim/Pet1003_190926131711.unity3d_export/CAB-28b7258ba5572b64ea1079d22f237b1a/Pet1003_190926131711_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1003
+  - Index: 8
+    PathSkeleton: Assets/_HeroAnim/Pet1003_S01_d176a2.unity3d_export/CAB-5e222fa556d633f4095faf85396eef0b/Pet1003_S01_d176a2_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1003
+  - Index: 9
+    PathSkeleton: Assets/_HeroAnim/Pet1003_A_210525170048.unity3d_export/CAB-aa44e6c0b468c9248a01db8c68bded31/Pet1003_A_210525170048_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1003_A
+  - Index: 10
+    PathSkeleton: Assets/_HeroAnim/Pet1003_S02_34f146.unity3d_export/CAB-49f90974c8ebe514b812ee950a32a7b0/Pet1003_S02_34f146_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1003_A
+  - Index: 11
+    PathSkeleton: Assets/_HeroAnim/Pet1004_200925155922.unity3d_export/CAB-e59f53ad16160214bbe0e89c3b65705b/Pet1004_200925155922_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1004
+  - Index: 12
+    PathSkeleton: Assets/_HeroAnim/Pet1004_A_f25ac1.unity3d_export/CAB-561db6da7472cd0479298ed2ae32096f/Pet1004_A_f25ac1_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1004_A
+  - Index: 13
+    PathSkeleton: Assets/_HeroAnim/Pet1005_b6cdf1.unity3d_export/CAB-7f6621ef63d5cc441b170209975d8cc6/Pet1005_b6cdf1_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1005
+  - Index: 14
+    PathSkeleton: Assets/_HeroAnim/Pet1005_S01_14173a.unity3d_export/CAB-5ce5b6be7d6c2dc47ad99460cc76b219/Pet1005_S01_14173a_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1005
+  - Index: 15
+    PathSkeleton: Assets/_HeroAnim/Pet1005_A_f47989.unity3d_export/CAB-26ca489020f282a4fb18085a63e9dc55/Pet1005_A_f47989_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1005_A
+  - Index: 16
+    PathSkeleton: Assets/_HeroAnim/Pet1006_190926132057.unity3d_export/CAB-f7bef3ef2eda5c742aac24783fa23cf0/Pet1006_190926132057_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1006
+  - Index: 17
+    PathSkeleton: Assets/_HeroAnim/Pet1007_190926132143.unity3d_export/CAB-6a4a57879269fc34c930292a91d237c5/Pet1007_190926132143_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1007
+  - Index: 18
+    PathSkeleton: Assets/_HeroAnim/Pet1008_190926132209.unity3d_export/CAB-56c137b7fd4822a478a6e1e7de3d8fe8/Pet1008_190926132209_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1008
+  - Index: 19
+    PathSkeleton: Assets/_HeroAnim/Pet1009_190926132228.unity3d_export/CAB-62268e54835a2454e9dfda5d324b5daf/Pet1009_190926132228_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1009
+  - Index: 20
+    PathSkeleton: Assets/_HeroAnim/Pet1009_S01_3274ed.unity3d_export/CAB-c17c24c947316664da95ea80b78308df/Pet1009_S01_3274ed_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1009
+  - Index: 21
+    PathSkeleton: Assets/_HeroAnim/Pet1009_A_200904182229.unity3d_export/CAB-3a39a262673630d469e47c22740d2ad6/Pet1009_A_200904182229_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1009_A
+  - Index: 22
+    PathSkeleton: Assets/_HeroAnim/Pet1009_S02_a83d44.unity3d_export/CAB-4c657c4dfde33814f8ab2138415de028/Pet1009_S02_a83d44_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1009_A
+  - Index: 23
+    PathSkeleton: Assets/_HeroAnim/Pet1010_190926132302.unity3d_export/CAB-85d97bd102e95c9438f01e0632064596/Pet1010_190926132302_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1010
+  - Index: 24
+    PathSkeleton: Assets/_HeroAnim/Pet1011_190926132647.unity3d_export/CAB-3e9a479ce956e424b935444c9170f800/Pet1011_190926132647_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1011
+  - Index: 25
+    PathSkeleton: Assets/_HeroAnim/Pet1012_190926132719.unity3d_export/CAB-303b1959c24dc9042bdd044ede6cd400/Pet1012_190926132719_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1012
+  - Index: 26
+    PathSkeleton: Assets/_HeroAnim/Pet1013_190926132746.unity3d_000/CAB-ad219cc1c29514b42a94e0b48d86fca5/Pet1013_190926132746_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1013
+  - Index: 27
+    PathSkeleton: Assets/_HeroAnim/Pet1013_S01_c154db.unity3d_export/CAB-dca46802c92900249be0582fcb44b092/Pet1013_S01_c154db_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1013
+  - Index: 28
+    PathSkeleton: Assets/_HeroAnim/Pet1013_A_200921181121.unity3d_export/CAB-475e6b46e55a0e9418d049101df501cb/Pet1013_A_200921181121_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1013_A
+  - Index: 29
+    PathSkeleton: Assets/_HeroAnim/Pet1014_190926132804.unity3d_export/CAB-5e423494f1ed37a439e46677bb19c3de/Pet1014_190926132804_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1014
+  - Index: 30
+    PathSkeleton: Assets/_HeroAnim/Pet1014_S01_593f82.unity3d_export/CAB-7e73355cd87b62543a170aff107534f1/Pet1014_S01_593f82_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1014
+  - Index: 31
+    PathSkeleton: Assets/_HeroAnim/Pet1014_A_200730213918.unity3d_export/CAB-955c5be448560a1408429d7514c1e93d/Pet1014_A_200730213918_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1014_A
+  - Index: 32
+    PathSkeleton: Assets/_HeroAnim/Pet1015_191217165104.unity3d_export/CAB-00fe3efbbc7f4f64a9dedb483aeb9986/Pet1015_191217165104_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1015
+  - Index: 33
+    PathSkeleton: Assets/_HeroAnim/Pet1016_190926132843.unity3d_export/CAB-0c9ceb32a4352614896881365b96c604/Pet1016_190926132843_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1016
+  - Index: 34
+    PathSkeleton: Assets/_HeroAnim/Pet1017_190926132909.unity3d_export/CAB-41bd83da2e9cfa84fadb2939faaf2ac8/Pet1017_190926132909_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1017
+  - Index: 35
+    PathSkeleton: Assets/_HeroAnim/Pet1018_191217151601.unity3d_export/CAB-f390c9cc85a6cfd46b6ba9e01d29aafc/Pet1018_191217151601_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1018
+  - Index: 36
+    PathSkeleton: Assets/_HeroAnim/Pet1019_191003133723.unity3d_export/CAB-e9d8626dfbfa6444ab6684d050361e1e/Pet1019_191003133723_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1019
+  - Index: 37
+    PathSkeleton: Assets/_HeroAnim/Pet1020_190926133046.unity3d_export/CAB-1c02c4f356936a34589dd028174ba35e/Pet1020_190926133046_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1020
+  - Index: 38
+    PathSkeleton: Assets/_HeroAnim/Pet1021_190926133104.unity3d_export/CAB-03c9e649b7a49774890589f1b39d8751/Pet1021_190926133104_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1021
+  - Index: 39
+    PathSkeleton: Assets/_HeroAnim/Pet1021_A_210416153551.unity3d_export/CAB-33bffea40a28bb7468d7aad49633c290/Pet1021_A_210416153551_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1021_A
+  - Index: 40
+    PathSkeleton: Assets/_HeroAnim/Pet1022_190926133201.unity3d_export/CAB-4bd32165692a2f04e96bde9590386f04/Pet1022_190926133201_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1022
+  - Index: 41
+    PathSkeleton: Assets/_HeroAnim/Pet1023_190926133226.unity3d_export/CAB-e46eafaf7eed44a458a0961f6724f49a/Pet1023_190926133226_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1023
+  - Index: 42
+    PathSkeleton: Assets/_HeroAnim/Pet1023_S01_73a895.unity3d_export/CAB-519cd10b865a8c54793ebd6891ddbde3/Pet1023_S01_73a895_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1023
+  - Index: 43
+    PathSkeleton: Assets/_HeroAnim/Pet1023_A_6392bc.unity3d_export/CAB-f4b4c3e4bae95b74ca7f0711add4af8a/Pet1023_A_6392bc_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1023_A
+  - Index: 44
+    PathSkeleton: Assets/_HeroAnim/Pet1024_191206161119.unity3d_export/CAB-350db6ae2a9514e40b0c4fa12ee8ef90/Pet1024_191206161119_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1024
+  - Index: 45
+    PathSkeleton: Assets/_HeroAnim/Pet1025_200723124802.unity3d_export/CAB-9cb81cebeb8c5944db2eb7e2280e1308/Pet1025_200723124802_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1025
+  - Index: 46
+    PathSkeleton: Assets/_HeroAnim/Pet1025_A_211004185700.unity3d_export/CAB-82cd5b1ba50604d4fb1029b781843252/Pet1025_A_211004185700_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1025_A
+  - Index: 47
+    PathSkeleton: Assets/_HeroAnim/Pet1026_211027115844.unity3d_export/CAB-f26d2c7179a45d34aa62c9041640db1a/Pet1026_211027115844_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1026
+  - Index: 48
+    PathSkeleton: Assets/_HeroAnim/Pet1026_A_211027115916.unity3d_export/CAB-9275c65ca557bca41a463c4497a93075/Pet1026_A_211027115916_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1026_A
+  - Index: 49
+    PathSkeleton: Assets/_HeroAnim/Pet1027_190927184021.unity3d_export/CAB-6feec73101dad43419bca4e8cb04f817/Pet1027_190927184021_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1027
+  - Index: 50
+    PathSkeleton: Assets/_HeroAnim/Pet1028_191009112646.unity3d_export/CAB-2230698525cd367449b95b4659360f10/Pet1028_191009112646_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1028
+  - Index: 51
+    PathSkeleton: Assets/_HeroAnim/Pet1029_191018142226.unity3d_export/CAB-61c8879107bb34e4bb6100abb57a6ae1/Pet1029_191018142226_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1029
+  - Index: 52
+    PathSkeleton: Assets/_HeroAnim/Pet1030_200103191806.unity3d_export/CAB-c19c9c5f9f1d239448c7bc897f690c1e/Pet1030_200103191806_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1030
+  - Index: 53
+    PathSkeleton: Assets/_HeroAnim/Pet1030_A_210618122514.unity3d_export/CAB-32195c1f250a1f341bfe90aabb3e7a03/Pet1030_A_210618122514_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1030_A
+  - Index: 54
+    PathSkeleton: Assets/_HeroAnim/Pet1031_200922201153.unity3d_export/CAB-769a9a8ee28e60549866b18f939f84f6/Pet1031_200922201153_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1031
+  - Index: 55
+    PathSkeleton: Assets/_HeroAnim/Pet1031_A_210106122515.unity3d_export/CAB-561d8ed7396e8f646b676face3b9e8ef/Pet1031_A_210106122515_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1031_A
+  - Index: 56
+    PathSkeleton: Assets/_HeroAnim/Pet1032_200213185608.unity3d_export/CAB-4455caedda7075e4d8682c33e45cfb39/Pet1032_200213185608_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1032
+  - Index: 57
+    PathSkeleton: Assets/_HeroAnim/Pet1032_A_210504115100.unity3d_export/CAB-d67a521ed2f81fd4fb58459f6bf0c889/Pet1032_A_210504115100_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1032_A
+  - Index: 58
+    PathSkeleton: Assets/_HeroAnim/Pet1033_191120141221.unity3d_export/CAB-32cfe16176dc67547b2ee6f4b279604b/Pet1033_191120141221_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1033
+  - Index: 59
+    PathSkeleton: Assets/_HeroAnim/Pet1034_191230173009.unity3d_export/CAB-7ffedcd6ec6c97f4ebe292a8bfcd467a/Pet1034_191230173009_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1034
+  - Index: 60
+    PathSkeleton: Assets/_HeroAnim/Pet1034_S01_48f435.unity3d_export/CAB-60d85ee36c1ee0343b3018303c903ba3/Pet1034_S01_48f435_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1034
+  - Index: 61
+    PathSkeleton: Assets/_HeroAnim/Pet1034_A_201124121943.unity3d_export/CAB-bf0becd249c71a84eb094a99a6ad81bd/Pet1034_A_201124121943_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1034_A
+  - Index: 62
+    PathSkeleton: Assets/_HeroAnim/Pet1035_191213133017.unity3d_export/CAB-6bda88e83005f9844848d63da1b2066e/Pet1035_191213133017_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1035
+  - Index: 63
+    PathSkeleton: Assets/_HeroAnim/Pet1036_191016183616.unity3d_export/CAB-3210913661016be4cb39df30f0c3d9bf/Pet1036_191016183616_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1036
+  - Index: 64
+    PathSkeleton: Assets/_HeroAnim/Pet1036_A_201005111559.unity3d_export/CAB-1e19a6df00f264d4abec9943173b8282/Pet1036_A_201005111559_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1036_A
+  - Index: 65
+    PathSkeleton: Assets/_HeroAnim/Pet1036_S01_4b6861.unity3d_export/CAB-5666154240cdb7a4e99aaa14ba0c9d76/Pet1036_S01_4b6861_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1036_A
+  - Index: 66
+    PathSkeleton: Assets/_HeroAnim/Pet1036_S02_134856.unity3d_export/CAB-4ae669d0d15aa484eb22e10735791fab/Pet1036_S02_134856_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1036
+  - Index: 67
+    PathSkeleton: Assets/_HeroAnim/Pet1038_200709173106.unity3d_export/CAB-7fb81cf0fc288314c88852aab8fda154/Pet1038_200709173106_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1038
+  - Index: 68
+    PathSkeleton: Assets/_HeroAnim/Pet1039_200221153444.unity3d_export/CAB-353bd061ae579184296e37aa1d7989db/Pet1039_200221153444_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1039
+  - Index: 69
+    PathSkeleton: Assets/_HeroAnim/Pet1040_200221153455.unity3d_export/CAB-8e96b7636af67f74ea57a7a7123ab183/Pet1040_200221153455_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1040
+  - Index: 70
+    PathSkeleton: Assets/_HeroAnim/Pet1041_200213202116.unity3d_export/CAB-a97da0d500f08a74d9049b889b2fc7e3/Pet1041_200213202116_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1041
+  - Index: 71
+    PathSkeleton: Assets/_HeroAnim/Pet1041_A_210225113457.unity3d_export/CAB-eab2bf2ec71e980488597ccb4f447e17/Pet1041_A_210225113457_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1041_A
+  - Index: 72
+    PathSkeleton: Assets/_HeroAnim/Pet1042_201005115825.unity3d_export/CAB-6003e6d24088f0049b1d5d2cb5c541fe/Pet1042_201005115825_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1042
+  - Index: 73
+    PathSkeleton: Assets/_HeroAnim/Pet1043_200727195553.unity3d_export/CAB-93421be4ab97b234abab2588199a4bbd/Pet1043_200727195553_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1043
+  - Index: 74
+    PathSkeleton: Assets/_HeroAnim/Pet1043_A_f4433f.unity3d_export/CAB-64bff3c3529e60d44b916b0933e83964/Pet1043_A_f4433f_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1043_A
+  - Index: 75
+    PathSkeleton: Assets/_HeroAnim/Pet1044_200120112156.unity3d_export/CAB-a80ab91d308fc2a4ab3d64eca2334f39/Pet1044_200120112156_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1044
+  - Index: 76
+    PathSkeleton: Assets/_HeroAnim/Pet1044_A_ae306f.unity3d_export/CAB-7a1d35761649bc043ac05357c8bcb83b/Pet1044_A_ae306f_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1044_A
+  - Index: 77
+    PathSkeleton: Assets/_HeroAnim/Pet1045_77abef.unity3d_export000/CAB-36db2cbfdd8569849bb5529bf168a920/Pet1045_77abef_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1045
+  - Index: 78
+    PathSkeleton: Assets/_HeroAnim/Pet1045_A_ed9eca.unity3d_export/CAB-0146ef45e94dd5b45a2dc829d850f166/Pet1045_A_ed9eca_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1045_A
+  - Index: 79
+    PathSkeleton: Assets/_HeroAnim/Pet1046_200428180603.unity3d_export/CAB-d0a076acbf26f374d8c3dcc1c795b643/Pet1046_200428180603_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1046
+  - Index: 80
+    PathSkeleton: Assets/_HeroAnim/Pet1047_200529195607.unity3d_export/CAB-c8763a596258a2e4e80ae0bda3d25435/Pet1047_200529195607_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1047
+  - Index: 81
+    PathSkeleton: Assets/_HeroAnim/Pet1048_412002.unity3d_export/CAB-ae385ef8cbdf28049b5a970b781ce4aa/Pet1048_412002_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1048
+  - Index: 82
+    PathSkeleton: Assets/_HeroAnim/Pet1048_A_151f45.unity3d_export/CAB-a2560c32892e93b408d06a07b20ea3d4/Pet1048_A_151f45_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1048_A
+  - Index: 83
+    PathSkeleton: Assets/_HeroAnim/Pet1050_bab49c.unity3d_export/CAB-11aa36f9974170b468cbfcac42b549e1/Pet1050_bab49c_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1050
+  - Index: 84
+    PathSkeleton: Assets/_HeroAnim/Pet1050_A_5e9981.unity3d_export/CAB-3d1e376bad2f5074082ecd6b9441b2d7/Pet1050_A_5e9981_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1050_A
+  - Index: 85
+    PathSkeleton: Assets/_HeroAnim/Pet1051_200406111802.unity3d_export/CAB-e7d20adb39bd3c04691caf632f05cb2b/Pet1051_200406111802_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1051
+  - Index: 86
+    PathSkeleton: Assets/_HeroAnim/Pet1051_A_210322163238.unity3d_export/CAB-21dddb7f7b829fd4ca08061e93b27959/Pet1051_A_210322163238_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1051_A
+  - Index: 87
+    PathSkeleton: Assets/_HeroAnim/Pet1053_3ead19.unity3d_export/CAB-976b52b8bbdbbc349aad49df3de614ff/Pet1053_3ead19_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1053
+  - Index: 88
+    PathSkeleton: Assets/_HeroAnim/Pet1053_A_08638c.unity3d_export/CAB-f664b06721107f0459ecea86265ab497/Pet1053_A_08638c_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1053_A
+  - Index: 89
+    PathSkeleton: Assets/_HeroAnim/Pet1054_200123123422.unity3d_export/CAB-9b252ed4fedec1241bba0281cec36288/Pet1054_200123123422_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1054
+  - Index: 90
+    PathSkeleton: Assets/_HeroAnim/Pet1055_200914164944.unity3d_export/CAB-7f14668bee62c1d47a804e8f44bd3e61/Pet1055_200914164944_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1055
+  - Index: 91
+    PathSkeleton: Assets/_HeroAnim/Pet1055_A_d13ab0.unity3d_export/CAB-f61b25823d71bf34ebe3f7431af329f2/Pet1055_A_d13ab0_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1055_A
+  - Index: 92
+    PathSkeleton: Assets/_HeroAnim/Pet1056_200629130228.unity3d_export/CAB-70a251b9ecf3cbb4191a8ae87c921ff4/Pet1056_200629130228_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1056
+  - Index: 93
+    PathSkeleton: Assets/_HeroAnim/Pet1057_200904114150.unity3d_export/CAB-552debc5c93684b4296d847858321ef3/Pet1057_200904114150_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1057
+  - Index: 94
+    PathSkeleton: Assets/_HeroAnim/Pet1059_710a26.unity3d_export/CAB-4ddba32ac2593984db58d177fffff3e1/Pet1059_710a26_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1059
+  - Index: 95
+    PathSkeleton: Assets/_HeroAnim/Pet1059_A_9e4f4a.unity3d_export/CAB-5799170e6d8406e40942fc3272edd64a/Pet1059_A_9e4f4a_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1059_A
+  - Index: 96
+    PathSkeleton: Assets/_HeroAnim/Pet1060_211122162857.unity3d_export/CAB-7107af3cec4556841bde61e75fb05f30/Pet1060_211122162857_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1060
+  - Index: 97
+    PathSkeleton: Assets/_HeroAnim/Pet1060_A_7f2ffc.unity3d_export/CAB-582af9e1373d1f24f808c87bca42b36b/Pet1060_A_7f2ffc_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1060
+  - Index: 98
+    PathSkeleton: Assets/_HeroAnim/Pet1061_200320130012.unity3d_export/CAB-7c7dd5d96a84c374ea696bdf0cdfc9d1/Pet1061_200320130012_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1061
+  - Index: 99
+    PathSkeleton: Assets/_HeroAnim/Pet1062_200320130021.unity3d_export/CAB-8ec5fa605ac095945a914a6d6cc03ce4/Pet1062_200320130021_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1062
+  - Index: 100
+    PathSkeleton: Assets/_HeroAnim/Pet1063_201022180042.unity3d_export/CAB-49dfc5d0dd868754a905e347d6a986b8/Pet1063_201022180042_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1063
+  - Index: 101
+    PathSkeleton: Assets/_HeroAnim/Pet1063_A_201022180056.unity3d_export/CAB-2d8af3ee657b8d742bfc31c942e5c3a0/Pet1063_A_201022180056_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1063_A
+  - Index: 102
+    PathSkeleton: Assets/_HeroAnim/Pet1064_201023112747.unity3d_export/CAB-8c4a9b7dedfd0264988d7219b5c4893b/Pet1064_201023112747_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1064
+  - Index: 103
+    PathSkeleton: Assets/_HeroAnim/Pet1064_A_25a625.unity3d_export/CAB-5720fc3b63132b743b97d2c149b3f61c/Pet1064_A_25a625_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1064_A
+  - Index: 104
+    PathSkeleton: Assets/_HeroAnim/Pet1065_200602125039.unity3d_export/CAB-b97558f6f665954479bfff03adf7c7f9/Pet1065_200602125039_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1065
+  - Index: 105
+    PathSkeleton: Assets/_HeroAnim/Pet1065_A_210707155331.unity3d_export/CAB-91505e200cbd59d4f997b18fe982e365/Pet1065_A_210707155331_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1065_A
+  - Index: 106
+    PathSkeleton: Assets/_HeroAnim/Pet1066_200922181625.unity3d_export/CAB-6c37f5c07168d834baf11a9c88a67b43/Pet1066_200922181625_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1066
+  - Index: 107
+    PathSkeleton: Assets/_HeroAnim/Pet1066_A_77712f.unity3d_export/CAB-a2323731a771f1b4caa06b42ea3e4519/Pet1066_A_77712f_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1066_A
+  - Index: 108
+    PathSkeleton: Assets/_HeroAnim/Pet1068_6f4786.unity3d_export/CAB-3e0a8e3d4202b944891a4fd8e55b42f4/Pet1068_6f4786_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1068
+  - Index: 109
+    PathSkeleton: Assets/_HeroAnim/Pet1068_A_a9e20a.unity3d_export/CAB-9187dc8f67537c8469430deb49ec477e/Pet1068_A_a9e20a_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1068
+  - Index: 110
+    PathSkeleton: Assets/_HeroAnim/Pet1069_200730162923.unity3d_export/CAB-bfa29cd39f0c0c64a90d1f52fdc24c35/Pet1069_200730162923_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1069
+  - Index: 111
+    PathSkeleton: Assets/_HeroAnim/Pet1070_210210201949.unity3d_export/CAB-feaa0254d5ba42f4c8c275d6e136967f/Pet1070_210210201949_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1070
+  - Index: 112
+    PathSkeleton: Assets/_HeroAnim/Pet1070_A_210210161746.unity3d_export/CAB-a3c7ddd6d1aeb384682445661a64866b/Pet1070_A_210210161746_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1070_A
+  - Index: 113
+    PathSkeleton: Assets/_HeroAnim/Pet1072_edc373.unity3d_export/CAB-62bfb91df9c2a7b49b30e9ebd6454777/Pet1072_edc373_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1072
+  - Index: 114
+    PathSkeleton: Assets/_HeroAnim/Pet1072_A_b82070.unity3d_export/CAB-15ba611acaae9a74c9a250dc6b34f0c2/Pet1072_A_b82070_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1072_A
+  - Index: 115
+    PathSkeleton: Assets/_HeroAnim/Pet1073_200728121846.unity3d_export/CAB-98241e03ec447134ca33dfadbc7b474f/Pet1073_200728121846_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1073
+  - Index: 116
+    PathSkeleton: Assets/_HeroAnim/Pet1075_201102123016.unity3d_export/CAB-20c3a826a885a074baaa7641a7dafecf/Pet1075_201102123016_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1075
+  - Index: 117
+    PathSkeleton: Assets/_HeroAnim/Pet1077_201023112755.unity3d_export/CAB-d80b68cd9a9418a4f9406affaceb9279/Pet1077_201023112755_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1077
+  - Index: 118
+    PathSkeleton: Assets/_HeroAnim/Pet1077_A_210909110750.unity3d_export/CAB-357bc73b6fa29964dba37db459f71dcd/Pet1077_A_210909110750_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1077_A
+  - Index: 119
+    PathSkeleton: Assets/_HeroAnim/Pet1078_210428181502.unity3d_export/CAB-59cfa63f06214144798bc1fae0aa0092/Pet1078_210428181502_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1078
+  - Index: 120
+    PathSkeleton: Assets/_HeroAnim/Pet1078_A_210331161140.unity3d_export/CAB-6d1353cdb3abafc43b797360f3fb933d/Pet1078_A_210331161140_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1078_A
+  - Index: 121
+    PathSkeleton: Assets/_HeroAnim/Pet1079_210802135717.unity3d_export/CAB-a6974b875da5d7b419274f55a3314585/Pet1079_210802135717_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1079
+  - Index: 122
+    PathSkeleton: Assets/_HeroAnim/Pet1079_A_210802135745.unity3d_export/CAB-937e62a85aec0ed4ea09812d40eac7d4/Pet1079_A_210802135745_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1079_A
+  - Index: 123
+    PathSkeleton: Assets/_HeroAnim/Pet1080_210722112938.unity3d_export/CAB-b918bc2bb50ec8c47abdfecd1ff6caf4/Pet1080_210722112938_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1080
+  - Index: 124
+    PathSkeleton: Assets/_HeroAnim/Pet1080_A_210722113013.unity3d_export/CAB-557c5bf6782b0a14b880ca4d7b7b23a4/Pet1080_A_210722113013_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1080_A
+  - Index: 125
+    PathSkeleton: Assets/_HeroAnim/Pet1081_201222180903.unity3d_export/CAB-aac69f11024682f43bb9651159a60059/Pet1081_201222180903_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1081
+  - Index: 126
+    PathSkeleton: Assets/_HeroAnim/Pet1081_A_201216154939.unity3d_export/CAB-0b1e3502241ff634d8eb3a96146a36b6/Pet1081_A_201216154939_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1081_A
+  - Index: 127
+    PathSkeleton: Assets/_HeroAnim/Pet1082_5d1d73.unity3d_export/CAB-25e5efa10206f484894cf20518cee42a/Pet1082_5d1d73_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1082
+  - Index: 128
+    PathSkeleton: Assets/_HeroAnim/Pet1082_A_360255.unity3d_export/CAB-94b192c0bbf284c4881963823592c8f0/Pet1082_A_360255_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1082_A
+  - Index: 129
+    PathSkeleton: Assets/_HeroAnim/Pet1083_210818155852.unity3d_export/CAB-d792e45eb814ddd4aa3b8d6f28b855e8/Pet1083_210818155852_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1083
+  - Index: 130
+    PathSkeleton: Assets/_HeroAnim/Pet1083_A_210818155916.unity3d_export/CAB-cc687710a01a37f4a93705fad5f18cbf/Pet1083_A_210818155916_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1083_A
+  - Index: 131
+    PathSkeleton: Assets/_HeroAnim/Pet1084_211214120402.unity3d_export/CAB-5c255df3fab5eed4bbcb95a13fd5cae8/Pet1084_211214120402_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1084
+  - Index: 132
+    PathSkeleton: Assets/_HeroAnim/Pet1084_A_211214120435.unity3d_export/CAB-573befc5f3af50c42a624cbdb19e2e2e/Pet1084_A_211214120435_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1084_A
+  - Index: 133
+    PathSkeleton: Assets/_HeroAnim/Pet1085_5b43ee.unity3d_export/CAB-a352c1602eadf014785a91c3b2592a76/Pet1085_5b43ee_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1085
+  - Index: 134
+    PathSkeleton: Assets/_HeroAnim/Pet1085_A_1cef05.unity3d_export/CAB-370e5a4943f971b4da69e7df6c4da2ad/Pet1085_A_1cef05_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1085_A
+  - Index: 135
+    PathSkeleton: Assets/_HeroAnim/Pet1086_27b8b9.unity3d_export/CAB-d0c37dcc9efa10e44a18b4410bf7751e/Pet1086_27b8b9_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1086
+  - Index: 136
+    PathSkeleton: Assets/_HeroAnim/Pet1086_A_58b8c5.unity3d_export/CAB-0aa9567cf02f3fd4984bdfab19bc1343/Pet1086_A_58b8c5_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1086_A
+  - Index: 137
+    PathSkeleton: Assets/_HeroAnim/Pet1087_98c198.unity3d_export/CAB-e1ec56824d590264cacbe0e7afab6651/Pet1087_98c198_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1087
+  - Index: 138
+    PathSkeleton: Assets/_HeroAnim/Pet1087_A_efe628.unity3d_export/CAB-c55d95eb200640d46afadb3d6becece1/Pet1087_A_efe628_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1087_A
+  - Index: 139
+    PathSkeleton: Assets/_HeroAnim/Pet1088_ca09ee.unity3d_export/CAB-e1c8a16ec3c159e43b18047fbdc940a3/Pet1088_ca09ee_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1088
+  - Index: 140
+    PathSkeleton: Assets/_HeroAnim/Pet1088_A_4b89ff.unity3d_export/CAB-c0b71b8c84192a04c8e81021ddf2cb14/Pet1088_A_4b89ff_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1088_A
+  - Index: 141
+    PathSkeleton: Assets/_HeroAnim/Pet1089_c64898.unity3d_export/CAB-aafc7770cf870fd4aaeae907ecb19a4d/Pet1089_c64898_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1089
+  - Index: 142
+    PathSkeleton: Assets/_HeroAnim/Pet1089_A_d83ce6.unity3d_export/CAB-648f0a929bba8d64aa16d60b19b4c4f9/Pet1089_A_d83ce6_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1089_A
+  - Index: 143
+    PathSkeleton: Assets/_HeroAnim/Pet1091_18ed8a.unity3d_export/CAB-3d2b7a091d80682448ed2f1c7852e473/Pet1091_18ed8a_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1091
+  - Index: 144
+    PathSkeleton: Assets/_HeroAnim/Pet1091_A_498bd5.unity3d_export/CAB-75c074572681ba0419345c1c2c12f5d8/Pet1091_A_498bd5_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1091_A
+  - Index: 145
+    PathSkeleton: Assets/_HeroAnim/Pet1094_a7695b.unity3d_export/CAB-28f4e12bf1bf5404c8b981acde3d696a/Pet1094_a7695b_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1094
+  - Index: 146
+    PathSkeleton: Assets/_HeroAnim/Pet1094_A_e126e3.unity3d_export/CAB-01e7964f7e6bcd7468cf068a079f0a6f/Pet1094_A_e126e3_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1094_A
+  - Index: 147
+    PathSkeleton: Assets/_HeroAnim/Pet1095_284ea8.unity3d_export/CAB-a8b3eebcff1df224a954a50bd3ccff3c/Pet1095_284ea8_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1095
+  - Index: 148
+    PathSkeleton: Assets/_HeroAnim/Pet1095_A_025251.unity3d_export/CAB-b5ba3bb109bad4a4382c3927959a2877/Pet1095_A_025251_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1095_A
+  - Index: 149
+    PathSkeleton: Assets/_HeroAnim/Pet1096_97f2c8.unity3d_export/CAB-817145b5e7e802947ad3dba707dc0590/Pet1096_97f2c8_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1096
+  - Index: 150
+    PathSkeleton: Assets/_HeroAnim/Pet1096_A_bd856a.unity3d_export/CAB-4eb121e777dbce141bd4d100798b364d/Pet1096_A_bd856a_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1096_A
+  - Index: 151
+    PathSkeleton: Assets/_HeroAnim/Pet1097_4bffa3.unity3d_export/CAB-8b8c9820eef65ed45ab6abff46397193/Pet1097_4bffa3_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1097
+  - Index: 152
+    PathSkeleton: Assets/_HeroAnim/Pet1097_A_fa146f.unity3d_export/CAB-84643fc4c63405342a6e3af67b737964/Pet1097_A_fa146f_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1097_A
+  - Index: 153
+    PathSkeleton: Assets/_HeroAnim/Pet1099_13c50c.unity3d_export/CAB-e4a2fb2c04361f341a75b559260cc85e/Pet1099_13c50c_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1099
+  - Index: 154
+    PathSkeleton: Assets/_HeroAnim/Pet1099_A_2081c4.unity3d_export/CAB-aec451ab9d197ca4b9f11b85af655643/Pet1099_A_2081c4_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1099_A
+  - Index: 155
+    PathSkeleton: Assets/_HeroAnim/Pet1101_1cfc0b.unity3d_export/CAB-0916405a28684404fb619d20aa73b3c2/Pet1101_1cfc0b_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1101
+  - Index: 156
+    PathSkeleton: Assets/_HeroAnim/Pet1101_A_555ddb.unity3d_export/CAB-b9d1afe515b3f544dacd6a5617214dc4/Pet1101_A_555ddb_SkeletonData.asset
+    OriginScale: {x: -1, y: 1, z: 1}
+    NameSkin: 
+    Anim_Idle: Idle
+    Anim_Atk: Attack
+    Anim_Die: Die
+    Anim_Atked: Attacked
+    Anim_Skill: SkillCast
+    Code: 1101_A
+  infoWaifuAssets:
+    lsInfoWaifuAssets:
+    - ID: 1
+      Code: 1001
+      Star: 0
+      HP: 15
+      DEF: 4
+      ATK: 8
+      Skill: 10
+      Pow: 37
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: R
+    - ID: 2
+      Code: 1001
+      Star: 0
+      HP: 18
+      DEF: 6
+      ATK: 11
+      Skill: 14.85
+      Pow: 49.85
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Water
+      Rare: SR
+    - ID: 3
+      Code: 1002
+      Star: 0
+      HP: 14
+      DEF: 3
+      ATK: 13
+      Skill: 16.25
+      Pow: 46.25
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Fire
+      Rare: R
+    - ID: 4
+      Code: 1002
+      Star: 0
+      HP: 17
+      DEF: 5
+      ATK: 12
+      Skill: 15
+      Pow: 49
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Air
+      Rare: SR
+    - ID: 5
+      Code: 1003
+      Star: 0
+      HP: 14
+      DEF: 4
+      ATK: 10
+      Skill: 12.5
+      Pow: 40.5
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Air
+      Rare: R
+    - ID: 6
+      Code: 1003
+      Star: 0
+      HP: 17
+      DEF: 5
+      ATK: 12
+      Skill: 15
+      Pow: 49
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Air
+      Rare: SR
+    - ID: 7
+      Code: 1004
+      Star: 0
+      HP: 10
+      DEF: 3
+      ATK: 15
+      Skill: 18.75
+      Pow: 46.75
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Electric
+      Rare: R
+    - ID: 8
+      Code: 1004
+      Star: 0
+      HP: 14
+      DEF: 4
+      ATK: 17
+      Skill: 21.25
+      Pow: 56.25
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Electric
+      Rare: SR
+    - ID: 9
+      Code: 1005
+      Star: 0
+      HP: 11
+      DEF: 3
+      ATK: 15
+      Skill: 18.75
+      Pow: 47.75
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Spatial magic
+      Rare: R
+    - ID: 10
+      Code: 1005
+      Star: 0
+      HP: 14
+      DEF: 4
+      ATK: 17
+      Skill: 21.25
+      Pow: 56.25
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Spatial magic
+      Rare: SR
+    - ID: 11
+      Code: 1006
+      Star: 0
+      HP: 12
+      DEF: 3
+      ATK: 15
+      Skill: 18.75
+      Pow: 48.75
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Magic
+      Rare: R
+    - ID: 12
+      Code: 1007
+      Star: 0
+      HP: 8
+      DEF: 3
+      ATK: 17
+      Skill: 21.25
+      Pow: 49.25
+      Distance_Skill: 0
+      Name: 
+      Class: Marksman
+      Element: Physics
+      Rare: R
+    - ID: 13
+      Code: 1008
+      Star: 0
+      HP: 15
+      DEF: 7
+      ATK: 5
+      Skill: 6.25
+      Pow: 33.25
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Air
+      Rare: R
+    - ID: 14
+      Code: 1009
+      Star: 0
+      HP: 15
+      DEF: 6
+      ATK: 9
+      Skill: 11.25
+      Pow: 41.25
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: R
+    - ID: 15
+      Code: 1009
+      Star: 0
+      HP: 18
+      DEF: 7
+      ATK: 10
+      Skill: 12.5
+      Pow: 47.5
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Electric
+      Rare: SR
+    - ID: 16
+      Code: 1010
+      Star: 0
+      HP: 17
+      DEF: 8
+      ATK: 4
+      Skill: 5
+      Pow: 34
+      Distance_Skill: 0
+      Name: 
+      Class: Tanker
+      Element: Physics
+      Rare: R
+    - ID: 17
+      Code: 1011
+      Star: 0
+      HP: 8
+      DEF: 2
+      ATK: 20
+      Skill: 25
+      Pow: 55
+      Distance_Skill: 0
+      Name: 
+      Class: Marksman
+      Element: Physics
+      Rare: R
+    - ID: 18
+      Code: 1012
+      Star: 0
+      HP: 12
+      DEF: 3
+      ATK: 15
+      Skill: 18.75
+      Pow: 48.75
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Fire
+      Rare: R
+    - ID: 19
+      Code: 1013
+      Star: 0
+      HP: 11
+      DEF: 5
+      ATK: 14
+      Skill: 17.5
+      Pow: 47.5
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Poison
+      Rare: R
+    - ID: 20
+      Code: 1013
+      Star: 0
+      HP: 13
+      DEF: 5
+      ATK: 17
+      Skill: 21.25
+      Pow: 56.25
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Air
+      Rare: SR
+    - ID: 21
+      Code: 1014
+      Star: 0
+      HP: 7
+      DEF: 3
+      ATK: 20
+      Skill: 25
+      Pow: 55
+      Distance_Skill: 0
+      Name: 
+      Class: Assasin
+      Element: Physics
+      Rare: R
+    - ID: 22
+      Code: 1014
+      Star: 0
+      HP: 9
+      DEF: 3
+      ATK: 23
+      Skill: 28.75
+      Pow: 63.75
+      Distance_Skill: 0
+      Name: 
+      Class: Assasin
+      Element: Physics
+      Rare: SR
+    - ID: 23
+      Code: 1015
+      Star: 0
+      HP: 10
+      DEF: 4
+      ATK: 13
+      Skill: 16.25
+      Pow: 43.25
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Electric
+      Rare: R
+    - ID: 24
+      Code: 1016
+      Star: 0
+      HP: 16
+      DEF: 8
+      ATK: 4
+      Skill: 5
+      Pow: 33
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Physics
+      Rare: R
+    - ID: 25
+      Code: 1017
+      Star: 0
+      HP: 16
+      DEF: 7
+      ATK: 5
+      Skill: 6.25
+      Pow: 34.25
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Physics
+      Rare: R
+    - ID: 26
+      Code: 1018
+      Star: 0
+      HP: 12
+      DEF: 3
+      ATK: 15
+      Skill: 18.75
+      Pow: 48.75
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Poison
+      Rare: R
+    - ID: 27
+      Code: 1019
+      Star: 0
+      HP: 18
+      DEF: 5
+      ATK: 7
+      Skill: 8.75
+      Pow: 38.75
+      Distance_Skill: 0
+      Name: 
+      Class: Tanker
+      Element: Physics
+      Rare: R
+    - ID: 28
+      Code: 1020
+      Star: 0
+      HP: 10
+      DEF: 4
+      ATK: 15
+      Skill: 18.75
+      Pow: 47.75
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 29
+      Code: 1021
+      Star: 0
+      HP: 10
+      DEF: 4
+      ATK: 16
+      Skill: 20
+      Pow: 50
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Air
+      Rare: R
+    - ID: 30
+      Code: 1021
+      Star: 0
+      HP: 11
+      DEF: 5
+      ATK: 19
+      Skill: 23.75
+      Pow: 58.75
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Air
+      Rare: SR
+    - ID: 31
+      Code: 1022
+      Star: 0
+      HP: 17
+      DEF: 5
+      ATK: 6
+      Skill: 7.5
+      Pow: 35.5
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Physics
+      Rare: R
+    - ID: 32
+      Code: 1023
+      Star: 0
+      HP: 11
+      DEF: 2
+      ATK: 17
+      Skill: 21.25
+      Pow: 51.25
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Air
+      Rare: R
+    - ID: 33
+      Code: 1023
+      Star: 0
+      HP: 12
+      DEF: 4
+      ATK: 19
+      Skill: 23.75
+      Pow: 58.75
+      Distance_Skill: 0
+      Name: 
+      Class: Mage
+      Element: Air
+      Rare: SR
+    - ID: 34
+      Code: 1024
+      Star: 0
+      HP: 17
+      DEF: 6
+      ATK: 6
+      Skill: 7.5
+      Pow: 36.5
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Physics
+      Rare: R
+    - ID: 35
+      Code: 1025
+      Star: 0
+      HP: 18
+      DEF: 6
+      ATK: 6
+      Skill: 7.5
+      Pow: 37.5
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Physics
+      Rare: R
+    - ID: 36
+      Code: 1025
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Physics
+      Rare: SR
+    - ID: 37
+      Code: 1026
+      Star: 0
+      HP: 10
+      DEF: 2
+      ATK: 18
+      Skill: 22.5
+      Pow: 52.5
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Air
+      Rare: R
+    - ID: 38
+      Code: 1026
+      Star: 0
+      HP: 12
+      DEF: 2
+      ATK: 21
+      Skill: 26.25
+      Pow: 61.25
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Air
+      Rare: SR
+    - ID: 39
+      Code: 1027
+      Star: 0
+      HP: 18
+      DEF: 5
+      ATK: 7
+      Skill: 8.75
+      Pow: 38.75
+      Distance_Skill: 0
+      Name: 
+      Class: Warrior
+      Element: Air
+      Rare: R
+    - ID: 40
+      Code: 1028
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 41
+      Code: 1029
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 42
+      Code: 1030
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 43
+      Code: 1030
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 44
+      Code: 1031
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 45
+      Code: 1031
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 46
+      Code: 1032
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 47
+      Code: 1032
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 48
+      Code: 1033
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 49
+      Code: 1034
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 50
+      Code: 1034
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 51
+      Code: 1035
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 52
+      Code: 1036
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 53
+      Code: 1036
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 54
+      Code: 1038
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 55
+      Code: 1039
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 56
+      Code: 1040
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 57
+      Code: 1041
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 58
+      Code: 1041
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 59
+      Code: 1042
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 60
+      Code: 1043
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 61
+      Code: 1043
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 62
+      Code: 1044
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 63
+      Code: 1044
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 64
+      Code: 1045
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 65
+      Code: 1045
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 66
+      Code: 1046
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 67
+      Code: 1047
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 68
+      Code: 1048
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 69
+      Code: 1048
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 70
+      Code: 1050
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 71
+      Code: 1050
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 72
+      Code: 1051
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 73
+      Code: 1051
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 74
+      Code: 1053
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 75
+      Code: 1053
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 76
+      Code: 1054
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 77
+      Code: 1055
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 78
+      Code: 1055
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 79
+      Code: 1056
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 80
+      Code: 1057
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 81
+      Code: 1059
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 82
+      Code: 1059
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 83
+      Code: 1060
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 84
+      Code: 1060
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 85
+      Code: 1061
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 86
+      Code: 1062
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 87
+      Code: 1063
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 88
+      Code: 1063
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 89
+      Code: 1064
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 90
+      Code: 1064
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 91
+      Code: 1065
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 92
+      Code: 1065
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 93
+      Code: 1066
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 94
+      Code: 1066
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 95
+      Code: 1068
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 96
+      Code: 1068
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 97
+      Code: 1069
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 98
+      Code: 1070
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 99
+      Code: 1070
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 100
+      Code: 1072
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 101
+      Code: 1072
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 102
+      Code: 1073
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 103
+      Code: 1075
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 104
+      Code: 1077
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 105
+      Code: 1077
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 106
+      Code: 1078
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 107
+      Code: 1078
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 108
+      Code: 1079
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 109
+      Code: 1079
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 110
+      Code: 1080
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 111
+      Code: 1080
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 112
+      Code: 1081
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 113
+      Code: 1081
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 114
+      Code: 1082
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 115
+      Code: 1082
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 116
+      Code: 1083
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 117
+      Code: 1083
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 118
+      Code: 1084
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 119
+      Code: 1084
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 120
+      Code: 1085
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 121
+      Code: 1085
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 122
+      Code: 1086
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 123
+      Code: 1086
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 124
+      Code: 1087
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 125
+      Code: 1087
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 126
+      Code: 1088
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 127
+      Code: 1088
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 128
+      Code: 1089
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 129
+      Code: 1089
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 130
+      Code: 1091
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 131
+      Code: 1091
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 132
+      Code: 1094
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 133
+      Code: 1094
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 134
+      Code: 1095
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 135
+      Code: 1095
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 136
+      Code: 1096
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 137
+      Code: 1096
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 138
+      Code: 1097
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 139
+      Code: 1097
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 140
+      Code: 1099
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 141
+      Code: 1099
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 142
+      Code: 1101
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+    - ID: 143
+      Code: 1101
+      Star: 0
+      HP: 20
+      DEF: 7
+      ATK: 8
+      Skill: 10
+      Pow: 45
+      Distance_Skill: 0
+      Name: 
+      Class: Witcher
+      Element: Dark Magic
+      Rare: R
+  WaifuSO: {fileID: 0}
+  Holder2D: {fileID: 0}
+  HolderUI: {fileID: 0}
+--- !u!1 &2999671105770049544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2999671105770049559}
+  - component: {fileID: 2999671105770049558}
+  m_Layer: 5
+  m_Name: CharacterLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2999671105770049559
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999671105770049544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2999671105715078770}
+  - {fileID: 8404532716044044805}
+  m_Father: {fileID: 2552376163307477089}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2560, y: 1440}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2999671105770049558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999671105770049544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd9df62857213d49820e9bd7f0f1376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  funnyCheck: 0
+  AssetsName: 0
+  WaifuAssets: {fileID: 2999671105715078769}
+  enemyAssets: {fileID: 3066200412501087934}
+--- !u!1 &4812154358303878725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7460112081451431902}
+  m_Layer: 5
+  m_Name: Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7460112081451431902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4812154358303878725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8404532716044044805}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8771401305295817147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8771401305295817145}
+  - component: {fileID: 8771401305295817146}
+  m_Layer: 0
+  m_Name: UserData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8771401305295817145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771401305295817147}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2552376162893130866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8771401305295817146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771401305295817147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3593134cfb98fd4a84ef44dab8da210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    UserName: 
+    UserId: 
+    Gold: 0
+    Gem: 0
+    Level: 0
+    Energy: 0
+    Hp: 0
+    Exp: 0
+    Rank: 0
+    lsIdSlotCharacter: []
+  itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
+  characterInfo: {fileID: 11400000, guid: 9a944bca1aff57244a1738f290bf62aa, type: 2}
