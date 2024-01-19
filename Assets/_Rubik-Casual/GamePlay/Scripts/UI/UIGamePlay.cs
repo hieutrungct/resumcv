@@ -12,7 +12,7 @@ namespace RubikCasual.Battle.UI
         public PopupContinue popupContinue;
         public InventorryUIPanel inventorryUIPanel;
         public RouletteController rouletteController;
-        public GameObject TxtDame;
+        public GameObject TxtDame,ItemDrop;
         public Canvas canvasUIGamePlay;
         public bool isSaveReward;
         public static UIGamePlay instance;

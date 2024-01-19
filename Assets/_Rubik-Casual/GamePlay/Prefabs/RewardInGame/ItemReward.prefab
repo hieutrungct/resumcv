@@ -5015,8 +5015,8 @@ MonoBehaviour:
   lsIdItem: 060000000700000008000000090000000a000000
   isChess: 0
   OriginPos: {x: 0, y: 0, z: 0}
-  valuePos: {x: 0.25, y: 0, z: 0}
-  JumbPower: 3
+  valuePos: {x: -0.1, y: 0, z: 0}
+  JumbPower: 4
   NumberJumb: 1
   Duration: 0.25
   dividePowerJumb: 3

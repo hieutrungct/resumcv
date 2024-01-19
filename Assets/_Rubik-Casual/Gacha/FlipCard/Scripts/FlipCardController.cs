@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RubikCasual.FlipCard
+namespace RubikCasual.FlipCard1
 {
     public class FlipCardController : MonoBehaviour
     {
