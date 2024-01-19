@@ -1233,9 +1233,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1525,7 +1525,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d839a4836ccfb4ea51dc5a148721b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnPlayGame: {fileID: 0}
+  btnPlayGame: {fileID: 7314443764751555198}
+  dataController: {fileID: 2950010415589282191}
+  slider: {fileID: 8649528732129809280}
+  textLoading: {fileID: 8649528732940269007}
 --- !u!1 &8649528732940268993
 GameObject:
   m_ObjectHideFlags: 0
