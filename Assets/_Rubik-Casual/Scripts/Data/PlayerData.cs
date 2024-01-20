@@ -34,6 +34,12 @@ namespace RubikCasual.Data.Player
         public string UserName, UserId;
         public float Gold, Gem, Level, Energy, Hp, Exp, Rank;
         public List<float> CurentTeam = new List<float>();
+
+        // public UserData()
+        // {
+        //     UserName 
+
+        // }
     }
     [Serializable]
     public class ListOwnsWaifu

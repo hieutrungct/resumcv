@@ -661,7 +661,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 79e8f6e9b550ff747bc2f81cc3be8b77, type: 2}
     - {fileID: 11400000, guid: 0742022dfd45a664c829842e272bf7dc, type: 2}
     - {fileID: 11400000, guid: 2073e0647bf7ed74bb6efe2f873c5c7f, type: 2}
-  AssetData: {fileID: 4900000, guid: 8d0c1611f18378742b3d723cdb37e816, type: 3}
+  AssetData: {fileID: 4900000, guid: 00fb16814ba339f46912ffd69bb41282, type: 3}
   WaifuAssetDatas: []
   infoWaifuAssets:
     lsInfoWaifuAssets: []
