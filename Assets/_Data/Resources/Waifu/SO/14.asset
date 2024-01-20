@@ -17,7 +17,7 @@ MonoBehaviour:
   SkeletonDataAsset: {fileID: 11400000, guid: f753f0af578bfda4faea567aea978846, type: 2}
   SkeletonDataAsset_Skin: {fileID: 11400000, guid: 110660dc8cb335d4e80d7e73079bca77, type: 2}
   OriginScale: {x: -1, y: 1, z: 1}
-  Skin: 
+  Skin: Pet1009
   Anim_Idle: Idle
   Anim_Atk: Attack
   Anim_Die: Die
@@ -25,3 +25,4 @@ MonoBehaviour:
   Anim_Skill: SkillCast
   Is_Boss: 0
   Code: 1009
+  Skin_Evol: Pet1009

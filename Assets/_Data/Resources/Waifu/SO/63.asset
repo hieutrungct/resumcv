@@ -17,7 +17,7 @@ MonoBehaviour:
   SkeletonDataAsset: {fileID: 11400000, guid: 905084bacf80eb84b8ea82f548be4d0b, type: 2}
   SkeletonDataAsset_Skin: {fileID: 0}
   OriginScale: {x: -1, y: 1, z: 1}
-  Skin: 
+  Skin: Pet1044_A
   Anim_Idle: Idle
   Anim_Atk: Attack
   Anim_Die: Die
@@ -25,3 +25,4 @@ MonoBehaviour:
   Anim_Skill: SkillCast
   Is_Boss: 0
   Code: 1044_A
+  Skin_Evol: 

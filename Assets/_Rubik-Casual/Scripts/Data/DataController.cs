@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Rubik_Casual;
 using RubikCasual.Character_ACC;
 using RubikCasual.DailyItem;
 using RubikCasual.Data.Player;
@@ -19,15 +20,16 @@ namespace RubikCasual.Data
         public ItemData itemData;
         public CharacterAssets characterAssets;
         public TextAsset AssetPlayerData;
+        public AssetLoader listImage;
         public StageAssets stageAssets;
         public static DataController instance;
         void Awake()
         {
-            
+            instance = this;
         }
         public void initData()
         {
-            instance = this;
+            
             DontDestroyOnLoad(this);
             LoadData();
         }
@@ -176,6 +178,7 @@ namespace RubikCasual.Data
             SavePlayerOwnsWaifuDataToJson();
             userData.Gold -= curGoldUpdate;
             BtnSaveUserDataToJson();
+            HUDController.instanse.LoadStatusNumber();
         }
 
 

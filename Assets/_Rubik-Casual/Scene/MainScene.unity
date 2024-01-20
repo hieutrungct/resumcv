@@ -1062,6 +1062,9 @@ MonoBehaviour:
   topPanel: {fileID: 1355882318418574654}
   goldObj: {fileID: 1355882318681944387}
   gemObj: {fileID: 1355882317280480162}
+  textCoins: {fileID: 1355882317127704471}
+  textGems: {fileID: 1355882318574474872}
+  textEnergy: {fileID: 1355882318047799585}
 --- !u!114 &868648916 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 868648916, guid: 23f4612fe69a2c740b2f176699a36879, type: 3}
@@ -1518,18 +1521,6 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3922434275445241636, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 144
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922434275445241636, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 144
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922434275445241636, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 144
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922434275445241636, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -170.25317
       objectReference: {fileID: 0}
@@ -1575,56 +1566,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3922434275445241642, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Hero.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: f87d9d25262734d879c2da72faf95bf2, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 23d2f9d15f15a43c5bf2c57de1a27879, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[7]
-      value: 
-      objectReference: {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[8]
-      value: 
-      objectReference: {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
-    - target: {fileID: 3922434275445241643, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
-      propertyPath: Button.Array.data[9]
-      value: 
-      objectReference: {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f9095c54afd4f48825922a438251f3, type: 3}
 --- !u!1 &1705126859
@@ -74817,7 +74760,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5216631130235301352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5216631129623674340}
+        m_TargetAssemblyTypeName: Rubik.ListWaifu.WaiFuInfoPopUp, Assembly-CSharp
+        m_MethodName: SelectOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &5216631130300141488
 RectTransform:
   m_ObjectHideFlags: 0

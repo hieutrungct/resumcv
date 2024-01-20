@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3922434275445241642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1823137, y: 0.27932316, z: 238.12334}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 144, y: 144, z: 144}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -45,17 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Avatars: []
-  Hero:
-  - {fileID: 11400000, guid: 61002dc2a13190148bb6a604d0236495, type: 2}
-  - {fileID: 11400000, guid: 9e5b3bcf810e81545abacbe52e76823b, type: 2}
-  - {fileID: 11400000, guid: 3f57c928e97648b42a74d56f7d0b57e2, type: 2}
-  - {fileID: 11400000, guid: 289222355bf34004786f9d6c070d5406, type: 2}
-  - {fileID: 11400000, guid: 4eda021e818ed90409891e4faaab957c, type: 2}
-  - {fileID: 11400000, guid: b067e8e8fdb7b3c47840382dab47eb3d, type: 2}
-  - {fileID: 11400000, guid: 2c0714f56ebe8a242ac1fc55a22816be, type: 2}
-  - {fileID: 11400000, guid: 82114ffbeb92c6e42a83a63730ac3305, type: 2}
-  - {fileID: 11400000, guid: b7ad1348403973d40ba981f2f2343242, type: 2}
-  - {fileID: 11400000, guid: dad3ab82bba634c49b5300e42033f930, type: 2}
+  Button:
+  - {fileID: 21300000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
+  - {fileID: 21300000, guid: f87d9d25262734d879c2da72faf95bf2, type: 3}
+  - {fileID: 21300000, guid: 23d2f9d15f15a43c5bf2c57de1a27879, type: 3}
+  - {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
+  - {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+  - {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
+  - {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
+  - {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+  - {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
+  - {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
+  Hero: []
+  Enemy: []
   RarrityBox:
   - {fileID: 21300000, guid: b56197178539f48009c713d5b5d04a81, type: 3}
   - {fileID: 21300000, guid: 91d37967864564f818aaf9326fcf0302, type: 3}

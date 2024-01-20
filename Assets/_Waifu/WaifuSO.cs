@@ -19,6 +19,7 @@ namespace RubikCasual.Waifu
         public string Anim_Skill;
         public bool Is_Boss;
         public string Code;
+        public string Skin_Evol;
 
     }
 }

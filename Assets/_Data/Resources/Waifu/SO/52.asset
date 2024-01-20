@@ -15,9 +15,9 @@ MonoBehaviour:
   FunnyCheck: 0
   Index: 63
   SkeletonDataAsset: {fileID: 11400000, guid: b110d21e783c01646af2b53f28658cfd, type: 2}
-  SkeletonDataAsset_Skin: {fileID: 11400000, guid: 9e95f9ba469ffef49a23d779944312c4, type: 2}
+  SkeletonDataAsset_Skin: {fileID: 11400000, guid: de2fdb02a8f2e8b42b66be4c2baca00f, type: 2}
   OriginScale: {x: -1, y: 1, z: 1}
-  Skin: 
+  Skin: Pet1036
   Anim_Idle: Idle
   Anim_Atk: Attack
   Anim_Die: Die
@@ -25,3 +25,4 @@ MonoBehaviour:
   Anim_Skill: SkillCast
   Is_Boss: 0
   Code: 1036
+  Skin_Evol: Pet1036

@@ -18,7 +18,7 @@ namespace RubikCasual.Data.Waifu
         public int Index;
         public string PathSkeleton;
         public Vector3 OriginScale;
-        public string NameSkin;
+        public string Skin;
         public string Anim_Idle;
         public string Anim_Atk;
         public string Anim_Die;
@@ -336,13 +336,14 @@ namespace RubikCasual.Data.Waifu
                         {
                             old_item = item;
                             waifuSO.SkeletonDataAsset_Skin = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(items.PathSkeleton);
+                            waifuSO.Skin_Evol = items.Skin;
                             break;
                         }
                     }
                     
 
                     waifuSO.OriginScale = item.OriginScale;
-                    waifuSO.Skin = item.NameSkin;
+                    waifuSO.Skin = item.Skin;
                     waifuSO.Anim_Idle = item.Anim_Idle;
                     waifuSO.Anim_Atk = item.Anim_Atk;
                     waifuSO.Anim_Die = item.Anim_Die;

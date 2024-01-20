@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a5f4340e26fb7c4187a8ec161995e25, type: 3}
-  m_Name: 120
+  m_Name: 143
   m_EditorClassIdentifier: 
   FunnyCheck: 0
-  Index: 133
-  SkeletonDataAsset: {fileID: 11400000, guid: f23e56cb25043c847a8c0af54d95a96f, type: 2}
+  Index: 156
+  SkeletonDataAsset: {fileID: 11400000, guid: c8df25682f3943e44955d7c025e35cca, type: 2}
   SkeletonDataAsset_Skin: {fileID: 0}
   OriginScale: {x: -1, y: 1, z: 1}
-  Skin: Pet1085
+  Skin: Pet1101_A
   Anim_Idle: Idle
   Anim_Atk: Attack
   Anim_Die: Die
   Anim_Atked: Attacked
   Anim_Skill: SkillCast
   Is_Boss: 0
-  Code: 1085
+  Code: 1101_A
   Skin_Evol: 

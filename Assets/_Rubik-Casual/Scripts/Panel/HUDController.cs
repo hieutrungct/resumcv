@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RubikCasual.Data;
+using TMPro;
 using UnityEngine;
 
 namespace Rubik_Casual
@@ -16,13 +18,14 @@ namespace Rubik_Casual
         
         // public List<string> objectNamesToCheckHide;
         // public List<string> objectNamesToCheckActive;
-
+        public TextMeshProUGUI textCoins, textGems, textEnergy;
 
         public void Awake()
         {
             DontDestroyOnLoad(this);
             instanse = this;
             topPanel.SetActive(true);
+            
         }
         
         // private void Update()
@@ -36,6 +39,12 @@ namespace Rubik_Casual
             energerObj.SetActive(Energe);
             goldObj.SetActive(Gold);
             gemObj.SetActive(Gem);
+        }
+        public void LoadStatusNumber()
+        {
+            textCoins.text = DataController.instance.playerData.userData.Gold.ToString();
+            textEnergy.text = DataController.instance.playerData.userData.Energy.ToString() + "/60";
+            textGems.text = DataController.instance.playerData.userData.Gem.ToString();
         }
         // public void CheckTabs(bool hideTopPanel,bool hideEnerge)
         // {

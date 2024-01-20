@@ -67,7 +67,7 @@ namespace Rubik.ListWaifu
             {
                 if(waifu.Index == curentWaifu)
                 {
-                    Debug.Log("Waifu thứ " + waifu.Index);
+                    //Debug.Log("Waifu thứ " + waifu.Index);
                     selectTxt.text = "Deselect";
                     btnselect.sprite = AssetLoader.instance.Button[6];
                     
@@ -115,17 +115,43 @@ namespace Rubik.ListWaifu
             gameObject.SetActive(true);
             SetUp(waifu);
         }
+        
         public void SelectOnClick()
         {
-            // foreach (var curentWaifu in DataController.instance.userData.CurentTeam)
-            // {
-            //     if(thisWaifu.Index == curentWaifu)
-            //     {
-            //         curentWaifu = 0;
-            //     }
-
-            // }
-            
+            int i; 
+            bool isCurrentlySelected = false;
+            for(i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
+            {
+                if(DataController.instance.userData.CurentTeam[i] == thisWaifu.Index)
+                {
+                    isCurrentlySelected = true;
+                    break;
+                }
+            }
+            if(isCurrentlySelected)
+            {
+                //Debug.Log("Nó sẽ nhảy vào i thứ: "+ i);
+                DataController.instance.userData.CurentTeam[i] = 0;
+                selectTxt.text = "Select";
+                btnselect.sprite = AssetLoader.instance.Button[9];
+            }
+            else
+            {
+                for(i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
+                {
+                    if(DataController.instance.userData.CurentTeam[i] == 0)
+                    {
+                        DataController.instance.userData.CurentTeam[i] = thisWaifu.Index;
+                        selectTxt.text = "Deselect";
+                        btnselect.sprite = AssetLoader.instance.Button[6];
+                        break;
+                    }
+                    else
+                    {
+                        Debug.Log("Không còn ô trống");
+                    }
+                }
+            }
         }
     }
 }

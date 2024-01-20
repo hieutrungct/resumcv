@@ -9,6 +9,7 @@ using RubikCasual.RewardWeek;
 using System;
 using RubikCasual.Data.Player;
 using RubikCasual.Data;
+using Rubik_Casual;
 namespace RubikCasual.Lobby
 {
     public class LobbyController : MonoBehaviour
@@ -28,6 +29,7 @@ namespace RubikCasual.Lobby
             // PopupRewardWeek.SetActive(true);
 
             //loadItem();
+            HUDController.instanse.LoadStatusNumber();
         }
         
         void Update()
@@ -57,9 +59,9 @@ namespace RubikCasual.Lobby
             //     }
             // }
 
-            textCoins.text = DataController.instance.playerData.userData.Gold.ToString();
-            textEnergy.text = DataController.instance.playerData.userData.Energy.ToString() + "/60";
-            textGems.text = DataController.instance.playerData.userData.Gem.ToString();
+            // textCoins.text = DataController.instance.playerData.userData.Gold.ToString();
+            // textEnergy.text = DataController.instance.playerData.userData.Energy.ToString() + "/60";
+            // textGems.text = DataController.instance.playerData.userData.Gem.ToString();
         }
         int abc = 10;
         public void ClickGold()
