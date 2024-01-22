@@ -108,19 +108,36 @@ namespace RubikCasual.Tool
 
             slider.value = 1f;
         }
-        public static string GetNameImageWaifu(Spine.Unity.SkeletonGraphic skeletonGraphic)
+        public static string GetNameImageWaifu(Spine.Unity.SkeletonGraphic skeletonGraphic, Spine.Unity.SkeletonAnimation skeletonAnimation = null)
         {
-            string[] lsName = skeletonGraphic.skeletonDataAsset.name.Split("_");
-            string NamePNG;
-            if (lsName.Length == 4 && skeletonGraphic.initialSkinName != (lsName[0] + "_" + lsName[1]))
+            if (skeletonGraphic != null)
             {
-                NamePNG = lsName[0] + "_" + lsName[1].Replace("0", "");
+                string[] lsName = skeletonGraphic.skeletonDataAsset.name.Split("_");
+                string NamePNG;
+                if (lsName.Length == 4 && skeletonGraphic.initialSkinName != (lsName[0] + "_" + lsName[1]))
+                {
+                    NamePNG = lsName[0] + "_" + lsName[1].Replace("0", "");
+                }
+                else
+                {
+                    NamePNG = skeletonGraphic.initialSkinName;
+                }
+                return NamePNG.Replace("Pet", "");
             }
             else
             {
-                NamePNG = skeletonGraphic.initialSkinName;
+                string[] lsName = skeletonAnimation.skeletonDataAsset.name.Split("_");
+                string NamePNG;
+                if (lsName.Length == 4 && skeletonAnimation.initialSkinName != (lsName[0] + "_" + lsName[1]))
+                {
+                    NamePNG = lsName[0] + "_" + lsName[1].Replace("0", "");
+                }
+                else
+                {
+                    NamePNG = skeletonAnimation.initialSkinName;
+                }
+                return NamePNG.Replace("Pet", "");
             }
-            return NamePNG.Replace("Pet", "");
         }
     }
 }

@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.69411767}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1082,6 +1082,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5c418a14862ae7c47a0d1c598bc86285, type: 3}
   - {fileID: 21300000, guid: 7024ba81278e2eb489405c5e63f79fe1, type: 3}
   - {fileID: 21300000, guid: c3a1cc9c82ea7d14ba977d06b6622604, type: 3}
+  dataController: {fileID: 0}
+  lsCardForId: []
+  lsCardGacha: []
   ChangeType: 0
 --- !u!1 &6858464810282686100
 GameObject:
