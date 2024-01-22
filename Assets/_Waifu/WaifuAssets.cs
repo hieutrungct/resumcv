@@ -66,7 +66,7 @@ namespace RubikCasual.Data.Waifu
             this.CacheHolder = new NTDictionary<string, Transform>();
             infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoWaifuAssets").text);
 
-           
+
         }
         void GetAssets()
         {
@@ -86,9 +86,9 @@ namespace RubikCasual.Data.Waifu
         }
         public Transform Holder2D;
         [Button]
-        public void TestGet2D(string index)
+        public void TestGet2D(string ID, bool isSkin)
         {
-            this.Get2D(index).transform.SetParent(this.Holder2D);
+            this.Get2D(ID, isSkin).transform.SetParent(this.Holder2D);
         }
         public Transform HolderUI;
         [Button]
@@ -99,10 +99,9 @@ namespace RubikCasual.Data.Waifu
 
         public WaifuSO GetWaifuSOByID(string ID)
         {
-            if ( this.WaifuSODic ==null)
+            if (this.WaifuSODic == null)
             {
                 Debug.Log("null Dic");
-                
             }
             try
             {
@@ -121,7 +120,7 @@ namespace RubikCasual.Data.Waifu
             }
             catch (System.Exception e)
             {
-                
+
                 Debug.LogWarning(e);
                 Debug.LogError(ID);
                 return null;
@@ -129,50 +128,77 @@ namespace RubikCasual.Data.Waifu
         }
 
 
-        public SkeletonAnimation Get2D(string index)
+        public SkeletonAnimation Get2D(string ID, bool isSkin = false)
         {
-            string ID = "";
             WaifuSO waifuSO = this.GetWaifuSOByID(ID);
             if (waifuSO == null) return null;
             SkeletonAnimation skeletonAnimation;
-            
+
             try
             {
-                skeletonAnimation = this.CacheHolder.Get(index + "2D").GetComponent<SkeletonAnimation>();
+                skeletonAnimation = this.CacheHolder.Get(ID + "Default2D").GetComponent<SkeletonAnimation>();
+                skeletonAnimation = this.CacheHolder.Get(ID + "Skin2D").GetComponent<SkeletonAnimation>();
                 if (skeletonAnimation == null) throw null;
             }
             catch (System.Exception)
             {
-                skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
-                skeletonAnimation.transform.SetParent(this.Holder);
-                skeletonAnimation.transform.name = index + "2D";
-                this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
+                if (!isSkin)
+                {
+                    skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
+                    skeletonAnimation.initialSkinName = waifuSO.Skin;
+                    skeletonAnimation.Skeleton.SetSkin(waifuSO.Skin);
+                    skeletonAnimation.transform.SetParent(this.Holder);
+                    skeletonAnimation.transform.name = ID + "Default2D";
+                }
+                else
+                {
+                    skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset_Skin);
+                    skeletonAnimation.initialSkinName = waifuSO.Skin_Evol;
+                    skeletonAnimation.Skeleton.SetSkin(waifuSO.Skin_Evol);
+                    skeletonAnimation.transform.SetParent(this.Holder);
+                    skeletonAnimation.transform.name = ID + "Skin2D";
+                }
 
+                this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
             }
-            skeletonAnimation.initialSkinName = waifuSO.Skin;
-            skeletonAnimation.Skeleton.SetSkin(waifuSO.Skin);
+
             return skeletonAnimation;
         }
 
-        public SkeletonGraphic GetUI(string index, Transform parent = null)
+        public SkeletonGraphic GetUI(string index, bool isSkin = false, Transform parent = null)
         {
             WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return null;
             SkeletonGraphic skeletonGraphic;
+
             try
             {
-                skeletonGraphic = this.CacheHolder.Get(index + "UI").GetComponent<SkeletonGraphic>();
+                skeletonGraphic = this.CacheHolder.Get(index + "DefaultUI").GetComponent<SkeletonGraphic>();
+                skeletonGraphic = this.CacheHolder.Get(index + "SkinUI").GetComponent<SkeletonGraphic>();
                 if (skeletonGraphic == null) throw null;
             }
             catch (System.Exception)
             {
-                skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(waifuSO.SkeletonDataAsset, parent, null);
-                skeletonGraphic.transform.SetParent(this.Holder);
-                skeletonGraphic.transform.name = index + "2D";
+                if (!isSkin)
+                {
+                    skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(waifuSO.SkeletonDataAsset, parent, null);
+                    skeletonGraphic.transform.SetParent(this.Holder);
+                    skeletonGraphic.initialSkinName = waifuSO.Skin;
+                    skeletonGraphic.Skeleton.SetSkin(waifuSO.Skin);
+                    skeletonGraphic.transform.name = index + "DefaultUI";
+                }
+                else
+                {
+                    skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(waifuSO.SkeletonDataAsset_Skin, parent, null);
+                    skeletonGraphic.transform.SetParent(this.Holder);
+                    skeletonGraphic.initialSkinName = waifuSO.Skin_Evol;
+                    skeletonGraphic.Skeleton.SetSkin(waifuSO.Skin_Evol);
+                    skeletonGraphic.transform.name = index + "SkinUI";
+                }
+
                 this.CacheHolder.Add(skeletonGraphic.name, skeletonGraphic.transform);
             }
-            skeletonGraphic.initialSkinName = waifuSO.Skin;
-            skeletonGraphic.Skeleton.SetSkin(waifuSO.Skin);
+
             return skeletonGraphic;
         }
 
@@ -236,7 +262,7 @@ namespace RubikCasual.Data.Waifu
             //         {
             //             continue;
             //         }
-                    
+
             //     }
             //     else
             //     {
@@ -300,12 +326,12 @@ namespace RubikCasual.Data.Waifu
                 //Debug.Log("vào"+ old_item.Index);
                 if (old_item != null)
                 {
-                    Debug.Log("vào"+ old_item.Index);
+                    Debug.Log("vào" + old_item.Index);
                     old_item = null;
                     continue;
                 }
 
-                
+
 
                 string path = Path.Combine(Path_Assets_SO, i + ".asset");
                 WaifuSO waifuSO = AssetDatabase.LoadAssetAtPath<WaifuSO>(path);
@@ -327,7 +353,7 @@ namespace RubikCasual.Data.Waifu
                             break;
                         }
                     }
-                    
+
 
                     waifuSO.OriginScale = item.OriginScale;
                     waifuSO.Skin = item.Skin;

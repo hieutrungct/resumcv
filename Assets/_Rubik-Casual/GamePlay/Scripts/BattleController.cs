@@ -24,8 +24,6 @@ namespace RubikCasual.Battle
     {
         public MapBattleController mapBattleController, dameSlotTxtController;
         public CharacterInBattle HeroInBattle, EnemyInBattle, BossInBattle;
-        public WaifuAssets waifuAssets;
-        public EnemyAssets enemyAssets;
         public GamePlayUI gamePlayUI;
         public List<SlotInArea> HeroInArea;
         public List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
@@ -37,7 +35,16 @@ namespace RubikCasual.Battle
         int CountState = 1, numberSlot = 5;
         public static BattleController instance;
         public GameState gameState;
-
+        void Start()
+        {
+            setAnimCharacter = gameObject.AddComponent<SetAnimCharacter>();
+            instance = this;
+            gameState = GameState.WAIT_BATTLE;
+            dataController = DataController.instance;
+            
+            StartCoroutine(CreateBattlefield());
+            // Cooldown();
+        }
         [Button]
         void UpSpeed()
         {
@@ -48,15 +55,7 @@ namespace RubikCasual.Battle
         {
             Time.timeScale = 1f;
         }
-        void Start()
-        {
-            setAnimCharacter = gameObject.AddComponent<SetAnimCharacter>();
-            instance = this;
-            gameState = GameState.WAIT_BATTLE;
 
-            StartCoroutine(CreateBattlefield());
-            // Cooldown();
-        }
         void Update()
         {
             CheckHeroInBattle();
@@ -167,7 +166,6 @@ namespace RubikCasual.Battle
         IEnumerator CreateBattlefield()
         {
             yield return new WaitForSeconds(0.25f);
-            dataController = DataController.instance;
 
             HeroInArea.Clear();
 
@@ -241,7 +239,7 @@ namespace RubikCasual.Battle
         {
             Transform poscharacterInBattle = characterInBattle.PosCharacter;
             SkeletonAnimation character = Instantiate(WaifuCharacter);
-            character.transform.localScale = waifuAssets.transform.localScale * 2f / 3f;
+            character.transform.localScale = dataController.characterAssets.WaifuAssets.transform.localScale * 2f / 3f;
             character.gameObject.transform.SetParent(poscharacterInBattle);
             character.gameObject.transform.position = poscharacterInBattle.position;
             character.loop = true;
@@ -257,7 +255,7 @@ namespace RubikCasual.Battle
         SkeletonAnimation SpawnBoss(Transform poscharacterInBattle, SkeletonAnimation WaifuCharacter)
         {
             SkeletonAnimation character = Instantiate(WaifuCharacter);
-            character.transform.localScale = waifuAssets.transform.localScale * 1f / 2f;
+            character.transform.localScale = dataController.characterAssets.WaifuAssets.transform.localScale * 1f / 2f;
             character.gameObject.transform.SetParent(poscharacterInBattle);
             character.gameObject.transform.position = poscharacterInBattle.position;
             character.loop = true;
@@ -287,14 +285,14 @@ namespace RubikCasual.Battle
                     heroInBattle.gameObject.transform.position = posSlot.gameObject.transform.position;
                     heroInBattle.indexOfSlot = index;
 
-                    SkeletonAnimation Hero = SpawnCharacter(heroInBattle, waifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString()));
+                    SkeletonAnimation Hero = SpawnCharacter(heroInBattle, dataController.characterAssets.WaifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString()));
 
                     CharacterDragPosition CharacterHero = Hero.gameObject.AddComponent<CharacterDragPosition>();
-                    CharacterHero.CharacterSke = waifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString());
+                    CharacterHero.CharacterSke = dataController.characterAssets.WaifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString());
                     CharacterHero.posCharacter = posSlot.gameObject.transform;
                     CharacterHero.oriIndex = index;
                     heroInBattle.skeletonCharacterAnimation = Hero;
-                    heroInBattle.infoWaifuAsset = waifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == lsHeroInArea[index].idCharacter);
+                    heroInBattle.infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == lsHeroInArea[index].idCharacter);
 
                     heroInBattle.cooldownAttackBar.value = 1f;
                     heroInBattle.cooldownSkillBar.value = 0f;
@@ -348,7 +346,7 @@ namespace RubikCasual.Battle
                             enemyInBattle.cooldownAttackBar.gameObject.SetActive(false);
                             enemyInBattle.cooldownSkillBar.gameObject.SetActive(true);
 
-                            SkeletonAnimation Enemy = SpawnBoss(enemyInBattle.PosCharacter, enemyAssets.Get2D(idValueInSlot.ToString()));
+                            SkeletonAnimation Enemy = SpawnBoss(enemyInBattle.PosCharacter, dataController.characterAssets.enemyAssets.Get2D(idValueInSlot.ToString()));
                             // Enemy.GetComponent<MeshRenderer>().sortingLayerName = "Enemy";
 
                             // enemyInBattle.gameObject.transform.localScale = new Vector3(-enemyInBattle.gameObject.transform.localScale.x, enemyInBattle.gameObject.transform.localScale.y, enemyInBattle.gameObject.transform.localScale.z);
@@ -384,7 +382,7 @@ namespace RubikCasual.Battle
                             {
                                 enemyInBattle.cooldownAttackBar.gameObject.SetActive(true);
                             }
-                            SkeletonAnimation Enemy = SpawnCharacter(enemyInBattle, enemyAssets.Get2D(idValueInSlot.ToString()));
+                            SkeletonAnimation Enemy = SpawnCharacter(enemyInBattle, dataController.characterAssets.enemyAssets.Get2D(idValueInSlot.ToString()));
                             // Enemy.GetComponent<MeshRenderer>().sortingLayerName = "Enemy";
 
                             // enemyInBattle.gameObject.transform.localScale = new Vector3(-enemyInBattle.gameObject.transform.localScale.x, enemyInBattle.gameObject.transform.localScale.y, enemyInBattle.gameObject.transform.localScale.z);
