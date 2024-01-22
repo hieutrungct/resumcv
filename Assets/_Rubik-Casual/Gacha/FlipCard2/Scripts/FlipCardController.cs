@@ -119,8 +119,7 @@ namespace RubikCasual.FlipCard2
                     InfoWaifuAsset infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.FirstOrDefault(f => f.ID == lsCardGacha[index].ID);
                     cardInfoDragPosition.infoWaifuAsset = infoWaifuAsset;
 
-                    string IndexWaifu = dataController.characterAssets.WaifuAssets.WaifuAssetDatas.FirstOrDefault(f => f.Code == lsCardGacha[index].Code).Index.ToString();
-                    SetUpInfoCard(index, transFrontCard, IndexWaifu);
+                    SetUpInfoCard(index, transFrontCard, cardInfoDragPosition.infoWaifuAsset.ID.ToString());
                     if (!ChangeType)
                     {
                         BtnMoveCard(index + 1);
@@ -133,15 +132,14 @@ namespace RubikCasual.FlipCard2
             }
 
         }
-        void SetUpInfoCard(int index, Transform transFrontCard, string IndexWaifu)
+        void SetUpInfoCard(int index, Transform transFrontCard, string IDWaifu)
         {
-            Debug.Log(IndexWaifu);
             Transform transIcon = transFrontCard.Find(NameGbIcon);
 
             GameObject gbIcon = transIcon.gameObject;
             assetLoader = dataController.listImage;
 
-            string nameImage = MovePopup.GetNameImageWaifu(null, dataController.characterAssets.WaifuAssets.Get2D(IndexWaifu));
+            string nameImage = MovePopup.GetNameImageWaifu(null, dataController.characterAssets.WaifuAssets.Get2D(IDWaifu));
 
             Sprite sprite = assetLoader.Avatars.Find(f => f.name == nameImage);
             gbIcon.GetComponent<Image>().sprite = sprite;
