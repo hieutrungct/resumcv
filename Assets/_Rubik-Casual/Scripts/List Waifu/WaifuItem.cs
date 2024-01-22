@@ -30,13 +30,13 @@ namespace Rubik.ListWaifu
         public void SetUp(PlayerOwnsWaifu waifu)
         {
             _waifu = waifu;
-            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.Index);
+            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.ID);
             
             //ui_Waifu = SpawnCharacter(gameObject.transform, waifuAssets.Get2D(_waifu.Index.ToString()));
             //ui_Waifu =  waifuAssets.Get2D(_waifu.Index.ToString());
           
             
-            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
+            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
 

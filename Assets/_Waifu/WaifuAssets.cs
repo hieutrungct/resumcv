@@ -82,7 +82,7 @@ namespace RubikCasual.Data.Waifu
         [Button]
         public void TestGetSO(string index)
         {
-            this.WaifuSO = this.GetWaifuSOByIndex(index);
+            this.WaifuSO = this.GetWaifuSOByID(index);
         }
         public Transform Holder2D;
         [Button]
@@ -97,7 +97,7 @@ namespace RubikCasual.Data.Waifu
             this.GetUI(index);
         }
 
-        public WaifuSO GetWaifuSOByIndex(string index)
+        public WaifuSO GetWaifuSOByID(string ID)
         {
             if ( this.WaifuSODic ==null)
             {
@@ -106,12 +106,12 @@ namespace RubikCasual.Data.Waifu
             }
             try
             {
-                WaifuSO waifuSO = this.WaifuSODic.Get(index);
+                WaifuSO waifuSO = this.WaifuSODic.Get(ID);
                 if (waifuSO == null)
                 {
-                    waifuSO = Resources.Load<WaifuSO>(Path_Resources_SO + "/" + index);
+                    waifuSO = Resources.Load<WaifuSO>(Path_Resources_SO + "/" + ID);
                     if (waifuSO == null) throw null;
-                    this.WaifuSODic.Add(index, waifuSO);
+                    this.WaifuSODic.Add(ID, waifuSO);
                     return waifuSO;
                 }
                 else
@@ -123,7 +123,7 @@ namespace RubikCasual.Data.Waifu
             {
                 
                 Debug.LogWarning(e);
-                Debug.LogError(index);
+                Debug.LogError(ID);
                 return null;
             }
         }
@@ -131,7 +131,8 @@ namespace RubikCasual.Data.Waifu
 
         public SkeletonAnimation Get2D(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            string ID = "";
+            WaifuSO waifuSO = this.GetWaifuSOByID(ID);
             if (waifuSO == null) return null;
             SkeletonAnimation skeletonAnimation;
             
@@ -147,20 +148,6 @@ namespace RubikCasual.Data.Waifu
                 skeletonAnimation.transform.name = index + "2D";
                 this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
 
-                // // Nếu chưa tồn tại, tạo một đối tượng mới mà không có cha (parent)
-                // skeletonAnimation = SkeletonAnimation.NewSkeletonAnimationGameObject(waifuSO.SkeletonDataAsset);
-                
-                // // Đặt vị trí và quy mô theo mong muốn
-                // skeletonAnimation.transform.position = Vector3.zero; // Đặt vị trí về zero hoặc vị trí mong muốn
-                // skeletonAnimation.transform.localScale = waifuSO.OriginScale; // Đặt quy mô theo mong muốn
-
-                // // Đặt tên cho đối tượng
-                // skeletonAnimation.transform.name = index + "2D";
-
-                // // Thêm đối tượng vào CacheHolder
-                // this.CacheHolder.Add(skeletonAnimation.name, skeletonAnimation.transform);
-                // skeletonAnimation.gameObject.SetActive(false);
-
             }
             skeletonAnimation.initialSkinName = waifuSO.Skin;
             skeletonAnimation.Skeleton.SetSkin(waifuSO.Skin);
@@ -169,7 +156,7 @@ namespace RubikCasual.Data.Waifu
 
         public SkeletonGraphic GetUI(string index, Transform parent = null)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return null;
             SkeletonGraphic skeletonGraphic;
             try
@@ -193,44 +180,44 @@ namespace RubikCasual.Data.Waifu
 
         public Vector3 GetOriginalScall(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return Vector3.one;
             return waifuSO.OriginScale;
         }
 
         public string GetAnimIdle(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return "Idle";
             return waifuSO.Anim_Idle;
         }
         public string GetAnimRun(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return "Idle";
             return waifuSO.Anim_Idle;
         }
         public string GetAnimAttack(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return "Idle";
             return waifuSO.Anim_Atk;
         }
         public string GetAnimAttacked(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return "Idle";
             return waifuSO.Anim_Atked;
         }
         public string GetAnimDie(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return "Idle";
             return waifuSO.Anim_Die;
         }
         public string GetAnimSkill(string index)
         {
-            WaifuSO waifuSO = this.GetWaifuSOByIndex(index);
+            WaifuSO waifuSO = this.GetWaifuSOByID(index);
             if (waifuSO == null) return "Idle";
             return waifuSO.Anim_Skill;
         }
@@ -326,7 +313,7 @@ namespace RubikCasual.Data.Waifu
                 if (waifuSO == null)
                 {
                     waifuSO = ScriptableObject.CreateInstance<WaifuSO>();
-                    waifuSO.Index = item.Index;
+                    waifuSO.ID = item.Index;
                     waifuSO.SkeletonDataAsset = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
 
                     // Tìm item có cùng Code và cập nhật SkeletonDataAsset_Skin

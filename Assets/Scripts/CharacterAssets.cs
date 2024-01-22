@@ -9,6 +9,7 @@ namespace RubikCasual.Character_ACC
     public enum AssetsName
     {
         Waifu,
+        Enemy
     }
 
     public class CharacterAssets : NTBehaviour

@@ -38,11 +38,11 @@ namespace Rubik.ListWaifu
         {
             thisWaifu = waifu;
             _waifu = waifu;
-            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.Index);
+            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.ID);
 
            
 
-            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByIndex(_waifu.Index.ToString()).SkeletonDataAsset;
+            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
             avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
@@ -65,7 +65,7 @@ namespace Rubik.ListWaifu
             btnselect.sprite = AssetLoader.instance.Button[9];
             foreach (var curentWaifu in DataController.instance.userData.CurentTeam)
             {
-                if(waifu.Index == curentWaifu)
+                if(waifu.ID == curentWaifu)
                 {
                     //Debug.Log("Waifu thứ " + waifu.Index);
                     selectTxt.text = "Deselect";
@@ -122,7 +122,7 @@ namespace Rubik.ListWaifu
             bool isCurrentlySelected = false;
             for(i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
             {
-                if(DataController.instance.userData.CurentTeam[i] == thisWaifu.Index)
+                if(DataController.instance.userData.CurentTeam[i] == thisWaifu.ID)
                 {
                     isCurrentlySelected = true;
                     break;
@@ -141,7 +141,7 @@ namespace Rubik.ListWaifu
                 {
                     if(DataController.instance.userData.CurentTeam[i] == 0)
                     {
-                        DataController.instance.userData.CurentTeam[i] = thisWaifu.Index;
+                        DataController.instance.userData.CurentTeam[i] = thisWaifu.ID;
                         selectTxt.text = "Deselect";
                         btnselect.sprite = AssetLoader.instance.Button[6];
                         break;

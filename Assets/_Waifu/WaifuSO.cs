@@ -7,7 +7,7 @@ namespace RubikCasual.Waifu
     public class WaifuSO : ScriptableObject
     {
         public bool FunnyCheck;
-        public int Index;
+        public int ID;
         public SkeletonDataAsset SkeletonDataAsset;
         public SkeletonDataAsset SkeletonDataAsset_Skin;
         public Vector3 OriginScale;

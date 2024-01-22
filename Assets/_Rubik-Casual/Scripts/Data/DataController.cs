@@ -50,12 +50,12 @@ namespace RubikCasual.Data
         }
 
 
-        public InfoWaifuAsset GetInfoWaifuAssetsByIndex(int index)
+        public InfoWaifuAsset GetInfoWaifuAssetsByIndex(int ID)
         {
             foreach (var item in WaifuAssets.instance.infoWaifuAssets.lsInfoWaifuAssets)
             {
                 
-                if(item.ID == index){
+                if(item.ID == ID){
                     return item;
                 }
             }

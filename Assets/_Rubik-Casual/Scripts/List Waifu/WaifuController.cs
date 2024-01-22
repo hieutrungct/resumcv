@@ -60,8 +60,8 @@ namespace Rubik.ListWaifu
             
             Waifus.Sort((charA, charB) =>
             {
-                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
-                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
                 int result = charA.level.CompareTo(charB.level);
                 if (result == 0)
                 {
@@ -133,8 +133,8 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
-                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
-                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
 
                 int result = infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
                 if (result == 0)
@@ -149,8 +149,8 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
-                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
-                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
 
                 int result = charA.level.CompareTo(charB.level);
                 if (result == 0)
@@ -164,8 +164,8 @@ namespace Rubik.ListWaifu
         {
             Waifus.Sort((charA, charB) =>
             {
-                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.Index);
-                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.Index);
+                InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
+                InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
                 int result = (charA.Pow + charA.ATK).CompareTo(charB.Pow + charB.ATK);
                 if (result == 0)
                 {

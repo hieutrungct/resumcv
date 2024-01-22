@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 23
   m_EditorClassIdentifier: 
   FunnyCheck: 0
-  Index: 32
+  ID: 32
   SkeletonDataAsset: {fileID: 11400000, guid: c08033ec57cad694ea2ad5a1e8c40724, type: 2}
   SkeletonDataAsset_Skin: {fileID: 0}
   OriginScale: {x: -1, y: 1, z: 1}

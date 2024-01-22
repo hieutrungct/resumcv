@@ -24,7 +24,7 @@ namespace RubikCasual.Data.Player
     [Serializable]
     public class PlayerOwnsWaifu
     {
-        public int Index, Star, Exp, IndexSkin, IndexEvolution, frag, level;
+        public int ID, Star, Exp, IndexSkin, IndexEvolution, frag, level;
         public float  HP, DEF, ATK, Skill, Pow;
 
     }
@@ -32,8 +32,9 @@ namespace RubikCasual.Data.Player
     public class UserData
     {
         public string UserName, UserId;
-        public float Gold, Gem, Level, Energy, Hp, Exp, Rank;
-        public List<float> CurentTeam = new List<float>();
+        public double Gold, Gem,  Hp, Exp;
+        public int Level, Energy, Rank;
+        public List<int> CurentTeam = new List<int>();
 
         // public UserData()
         // {

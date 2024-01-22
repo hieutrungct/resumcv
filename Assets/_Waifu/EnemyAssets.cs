@@ -231,7 +231,7 @@ namespace RubikCasual.Data.Waifu
                 string path = Path_Assets_SOE + "/" + item.Index + ".asset";
                 WaifuSO waifuSO = AssetDatabase.LoadAssetAtPath<WaifuSO>(Path_Assets_SOE);
                 waifuSO = ScriptableObject.CreateInstance<WaifuSO>();
-                waifuSO.Index = item.Index;
+                waifuSO.ID = item.Index;
                 waifuSO.SkeletonDataAsset = AssetDatabase.LoadAssetAtPath<SkeletonDataAsset>(item.PathSkeleton);
                 waifuSO.OriginScale = item.OriginScale;
                 waifuSO.Skin = item.Skin;
