@@ -26,6 +26,7 @@ namespace RubikCasual.Data
         void Awake()
         {
             instance = this;
+            
         }
         public void initData()
         {
@@ -125,7 +126,7 @@ namespace RubikCasual.Data
             }
             else
             {
-                userData = new UserData();
+                userData = UserData.GetDefaultUserData();
 
             }
             playerData.lsPlayerOwnsWaifu = listOwnsWaifu.lsOwnsWaifu;
@@ -140,11 +141,10 @@ namespace RubikCasual.Data
                 
                 userData = JsonUtility.FromJson<UserData>(PlayerPrefs.GetString(NameKey.USER_DATA_KEY));
                 
-
             }
             else
             {
-                userData = new UserData();
+                userData = UserData.GetDefaultUserData();
 
             }
         }
