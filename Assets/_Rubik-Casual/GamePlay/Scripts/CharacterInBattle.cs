@@ -1,5 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using RubikCasual.Battle.Inventory;
+using RubikCasual.Battle.UI;
+using RubikCasual.Data;
 using RubikCasual.RewardInGame;
 using RubikCasual.Waifu;
 using Spine.Unity;
@@ -19,43 +23,59 @@ namespace RubikCasual.Battle
         public Slider healthBar, cooldownAttackBar, cooldownSkillBar;
         public TextMeshProUGUI txtHealthBar;
         public bool isAttack, isUseSkill, isEnemy = false, isCompleteMove = true, isBoss = false;
-        float valueCoins = 0, ValueGems = 0;
+        GameObject ItemDropClone;
+
         bool isHaveReward = false;
+
         void Start()
         {
             AddRewardWhenKillEnemy();
+
         }
 
         void AddRewardWhenKillEnemy()
         {
+
             if (UnityEngine.Random.Range(0, 4) != 0)
             {
-                valueCoins = 1;
+                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.healthBar.transform.parent);
+                ItemDropClone.SetActive(false);
+                SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
+                DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == "Coins");
+                ItemDrop.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
+                ItemDrop.valueCoins = 1;
             }
             else
             {
-                ValueGems = 1;
+                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.healthBar.transform.parent);
+                ItemDropClone.SetActive(false);
+                SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
+                DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == "Gems");
+                ItemDrop.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
+                ItemDrop.ValueGems = 1;
             }
         }
         public void GetRewardWhenKillEnemy()
         {
             if (HpNow <= 0 && !isHaveReward)
             {
-                if (valueCoins != 0)
+                ItemDropClone.transform.position = this.transform.position;
+                if (ItemDropClone.GetComponent<SlotInventory>().valueCoins != 0)
                 {
-                    RewardInGamePanel.instance.txtCoins.text = (valueCoins + float.Parse(RewardInGamePanel.instance.txtCoins.text)).ToString();
                     // Debug.Log("TxtCoins: " + RewardInGamePanel.instance.txtCoins.text);
+                    ItemDropClone.SetActive(true);
+                    ItemDropClone.GetComponent<SlotInventory>().BtnTest();
+                    // RewardInGamePanel.instance.txtCoins.text = (valueCoins + float.Parse(RewardInGamePanel.instance.txtCoins.text)).ToString();
                 }
                 else
                 {
-                    RewardInGamePanel.instance.txtGems.text = (ValueGems + float.Parse(RewardInGamePanel.instance.txtGems.text)).ToString();
+                    ItemDropClone.SetActive(true);
+                    ItemDropClone.GetComponent<SlotInventory>().BtnTest();
+                    // RewardInGamePanel.instance.txtGems.text = (ValueGems + float.Parse(RewardInGamePanel.instance.txtGems.text)).ToString();
                 }
                 isHaveReward = !isHaveReward;
             }
         }
-        void SetAnimCoins()
-        {
-            
-        }
+
     }
 }

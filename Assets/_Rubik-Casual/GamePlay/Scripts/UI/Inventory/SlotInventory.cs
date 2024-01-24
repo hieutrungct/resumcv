@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using RubikCasual.RewardInGame;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ namespace RubikCasual.Battle.Inventory
         public bool isChess;
         public Vector3 OriginPos, valuePos;
         public float JumbPower, NumberJumb, Duration, dividePowerJumb = 1f;
+        public int valueCoins = 0, ValueGems = 0;
         Vector3 targetRotation = new Vector3(0, 0, 360f);
         public Ease ease;
         void Start()
@@ -22,7 +24,7 @@ namespace RubikCasual.Battle.Inventory
             OriginPos = gameObject.transform.position;
         }
         [Button]
-        void BtnTest()
+        public void BtnTest()
         {
             int j = (int)JumbPower;
             PerformJump(j, j);
@@ -36,14 +38,48 @@ namespace RubikCasual.Battle.Inventory
                     .SetEase(ease)
                     .OnComplete(() =>
                     {
-                        if (oldRemainingJumps == remainingJumps)
+                        if (remainingJumps <= 1)
                         {
+                            // Debug.Log(remainingJumps);
                             // gameObject.transform.DORotate(targetRotation, Duration).Loops();
+                            // Destroy(this.gameObject);
+                            if (valueCoins != 0)
+                            {
+                                gameObject.transform.SetParent(RewardInGamePanel.instance.txtCoins.transform.parent);
+                                gameObject.transform.DOMove(RewardInGamePanel.instance.txtCoins.transform.parent.Find("Energe").position, Duration * 4)
+                                .OnComplete(() =>
+                                {
+                                    SetAnimCoins();
+                                    Destroy(gameObject);
+                                });
+                            }
+                            else
+                            {
+                                gameObject.transform.SetParent(RewardInGamePanel.instance.txtGems.transform.parent);
+                                gameObject.transform.DOMove(RewardInGamePanel.instance.txtGems.transform.parent.Find("Energe").position, Duration * 4)
+                                .OnComplete(() =>
+                                {
+                                    SetAnimCoins();
+                                    Destroy(gameObject);
+                                });
+                            }
+
                         }
                         PerformJump(remainingJumps - 1, oldRemainingJumps);
                     });
             }
-            
+
+        }
+        public void SetAnimCoins()
+        {
+            if (valueCoins != 0)
+            {
+                RewardInGamePanel.instance.txtCoins.text = (valueCoins + float.Parse(RewardInGamePanel.instance.txtCoins.text)).ToString();
+            }
+            else
+            {
+                RewardInGamePanel.instance.txtGems.text = (ValueGems + float.Parse(RewardInGamePanel.instance.txtGems.text)).ToString();
+            }
         }
 
         [Button]

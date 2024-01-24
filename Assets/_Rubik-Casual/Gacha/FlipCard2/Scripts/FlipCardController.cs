@@ -25,21 +25,71 @@ namespace RubikCasual.FlipCard2
         public GameObject gbTest, GbInfoCard;
         public SlotInfoCard slotInfoCard;
         public Transform posInstantiateCard;
+        public GameObject imageBackGround;
+        public Button btnGetWaifu;
         public List<GameObject> lsInfocardClone;
         public List<Sprite> lsSpriteCard;
-        public DataController dataController;
         public List<CardForId> lsCardForId, lsCardGacha;
-        public bool ChangeType;
+        DataController dataController;
+        bool isClick, ChangeType, isHaveMove;
         const string NameGbIcon = "Icon", NameGbBackCard = "BackCard", NameGbFrontCard = "FrontCard", NameGbTxtNew = "NewWaifu";
-
+        Rubik_Casual.AssetLoader assetLoader;
+        public static FlipCardController instance;
+        protected void Awake()
+        {
+            instance = this;
+        }
         void Start()
         {
+
             dataController = DataController.instance;
             CreateCard();
             SetLsCardForId();
+            BtnGacha();
+            this.transform.Find("Dimed").gameObject.AddComponent<Button>().onClick.AddListener(() =>
+            {
+                this.gameObject.SetActive(false);
+            });
+        }
+        void BtnGacha()
+        {
+            btnGetWaifu.onClick.AddListener(() =>
+            {
+                if (isClick)
+                {
+                    isHaveMove = true;
+                    GachaCard(0);
+                    BtnMoveCard(0);
+                    isClick = !isClick;
+                }
+                else
+                {
+                    if (!isHaveMove)
+                    {
+                        foreach (var item in lsInfocardClone)
+                        {
+                            item.transform.position = posInstantiateCard.position;
+                            item.transform.localScale = new Vector3();
+
+                            Transform transBackCard = item.transform.Find(NameGbBackCard);
+                            transBackCard.localScale = new Vector3(1f, 1f, 1f);
+
+                            Transform transFrontCard = item.transform.Find(NameGbFrontCard);
+                            transFrontCard.localScale = new Vector3(0, 1f, 1f);
+
+                        }
+                        btnGetWaifu.transform.Find("TxtGetWaifu").GetComponent<TextMeshProUGUI>().text = "Get Again";
+                        lsCardGacha.Clear();
+                        isHaveMove = !isHaveMove;
+                        GachaCard(0);
+                        BtnMoveCard(0);
+                    }
+                }
+            });
         }
         void SetLsCardForId()
         {
+
             foreach (Waifu.InfoWaifuAsset InfoWaifuAssets in dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets)
             {
 
@@ -52,7 +102,7 @@ namespace RubikCasual.FlipCard2
                     lsCardForId.Add(cardForId);
                 }
             }
-            GachaCard(0);
+
         }
         void GachaCard(int countUp)
         {
@@ -91,8 +141,7 @@ namespace RubikCasual.FlipCard2
             lsInfocardClone.Clear();
             CreateCard();
         }
-        Rubik_Casual.AssetLoader assetLoader;
-        [Button]
+
         void BtnMoveCard(int index)
         {
             if (index < lsInfocardClone.Count)
@@ -120,6 +169,7 @@ namespace RubikCasual.FlipCard2
                     cardInfoDragPosition.infoWaifuAsset = infoWaifuAsset;
 
                     SetUpInfoCard(index, transFrontCard, cardInfoDragPosition.infoWaifuAsset.ID.ToString());
+
                     if (!ChangeType)
                     {
                         BtnMoveCard(index + 1);
@@ -129,6 +179,10 @@ namespace RubikCasual.FlipCard2
                 {
                     BtnMoveCard(index + 1);
                 }
+            }
+            else
+            {
+                isHaveMove = !isHaveMove;
             }
 
         }
@@ -144,12 +198,28 @@ namespace RubikCasual.FlipCard2
             Sprite sprite = assetLoader.Avatars.Find(f => f.name == nameImage);
             gbIcon.GetComponent<Image>().sprite = sprite;
 
-            transFrontCard.Find(NameGbTxtNew).gameObject.SetActive(true);
             TextMeshProUGUI txtNewWaifu = transFrontCard.Find(NameGbTxtNew).gameObject.GetComponent<TextMeshProUGUI>();
-
-            // if (dataController.playerData.lsPlayerOwnsWaifu.Find(f=>f.))
+            txtNewWaifu.gameObject.SetActive(false);
+            txtNewWaifu.text = "New Waifu";
+            Data.Player.PlayerOwnsWaifu playerOwnsWaifuClone = dataController.playerData.lsPlayerOwnsWaifu.Find(f => f.ID.ToString() == IDWaifu);
+            if (playerOwnsWaifuClone == null)
             {
+                txtNewWaifu.gameObject.SetActive(true);
+                playerOwnsWaifuClone = new Data.Player.PlayerOwnsWaifu();
+                InfoWaifuAsset infoWaifuAssetClone = lsInfocardClone[index].GetComponent<CardInfoDragPosition>().infoWaifuAsset;
+                playerOwnsWaifuClone.ID = infoWaifuAssetClone.ID;
+                playerOwnsWaifuClone.HP = infoWaifuAssetClone.HP;
+                playerOwnsWaifuClone.ATK = infoWaifuAssetClone.ATK;
+                playerOwnsWaifuClone.DEF = infoWaifuAssetClone.DEF;
+                playerOwnsWaifuClone.Star = infoWaifuAssetClone.Star;
+                playerOwnsWaifuClone.Skill = infoWaifuAssetClone.Skill;
+                playerOwnsWaifuClone.Pow = infoWaifuAssetClone.Pow;
 
+                dataController.playerData.lsPlayerOwnsWaifu.Add(playerOwnsWaifuClone);
+            }
+            else
+            {
+                playerOwnsWaifuClone.frag += 1;
             }
         }
     }
