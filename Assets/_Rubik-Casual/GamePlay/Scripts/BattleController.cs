@@ -33,8 +33,10 @@ namespace RubikCasual.Battle
         bool isEndBattle = false, isRangeRemoved = false;
         public bool isUpdateDmgEnemy = false;
         int CountState = 1, numberSlot = 5;
-        public static BattleController instance;
+        public float attribute = 1;
         public GameState gameState;
+        public static BattleController instance;
+
         void Start()
         {
             setAnimCharacter = gameObject.AddComponent<SetAnimCharacter>();
@@ -302,6 +304,7 @@ namespace RubikCasual.Battle
                     heroInBattle.HpNow = heroInBattle.infoWaifuAsset.HP;
                     heroInBattle.Atk = heroInBattle.infoWaifuAsset.ATK;
                     heroInBattle.Def = heroInBattle.infoWaifuAsset.DEF;
+                    heroInBattle.Skill = heroInBattle.infoWaifuAsset.Skill;
 
                     lsSlotGbHero.Add(heroInBattle.gameObject);
                 }
@@ -425,10 +428,6 @@ namespace RubikCasual.Battle
             }
         }
 
-
-
-
-
         void Atack()
         {
             UpdateHpBarEnemyForState();
@@ -489,7 +488,7 @@ namespace RubikCasual.Battle
                     if (lsSlotGbHero[i] != null && !Enemy.isAttack && !Enemy.isUseSkill)
                     {
                         CharacterInBattle Hero = lsSlotGbHero[i].GetComponent<CharacterInBattle>();
-                        if (!Hero.isUseSkill)
+                        if (!Hero.isUseSkill && !Hero.isAttack)
                         {
                             float randomCooldownTimeHero = (float)UnityEngine.Random.Range(1, 10);
                             {
@@ -499,7 +498,6 @@ namespace RubikCasual.Battle
                                     {
                                         Hero.cooldownSkillBar.value = 0;
                                         setAnimCharacter.CharacterUseSkill(Hero, dameSlotTxtController, lsSlotGbEnemy, durations);
-
                                     }
                                     else
                                     {
@@ -508,7 +506,6 @@ namespace RubikCasual.Battle
                                             Hero.cooldownAttackBar.value = 0;
                                             setAnimCharacter.CharacterAtackAnimation(Enemy.gameObject, Hero.gameObject, dameSlotTxtController, durations);
                                             // Debug.Log((i + 1) + " hero atack");
-
                                         }
                                         if (Hero.cooldownAttackBar.value == 0)
                                         {
@@ -826,7 +823,7 @@ namespace RubikCasual.Battle
                 };
             }
         }
-        public float attribute = 1;
+
         IEnumerator WaitBattleDelay()
         {
             // khi clear xong 1 stage

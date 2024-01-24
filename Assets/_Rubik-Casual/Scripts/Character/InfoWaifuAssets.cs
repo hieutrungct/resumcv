@@ -43,8 +43,8 @@ namespace RubikCasual.Waifu
     public class InfoWaifuAsset
     {
         public int ID;
-        public float Skill, Pow, Distance_Skill;
-        public int Star, HP, DEF, ATK;
+        public float Distance_Skill;
+        public int Star, HP, DEF, ATK, Pow, Skill;
         public string Name, Class, Element, Rare, Code;
     }
 }

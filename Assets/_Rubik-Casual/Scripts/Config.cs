@@ -14,7 +14,7 @@ public class NameKey
 public class NameScene
 {
     public static string HOME_SCENE = "MainScene";
-    
+    public static string GAMEPLAY_SCENE = "GamePlay";
 }
 public class Config : MonoBehaviour
 {

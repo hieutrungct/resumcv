@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 7339213261135098916}
   - component: {fileID: 3686992958533135963}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TxtGetWaifu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,7 +1304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6519544966102711758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1345,6 +1345,8 @@ MonoBehaviour:
   GbInfoCard: {fileID: 3860746894402131756, guid: 6652d79d0c0aa424ea36f5c422b2ebe3, type: 3}
   slotInfoCard: {fileID: 4430521461627698562}
   posInstantiateCard: {fileID: 830012594}
+  imageBackGround: {fileID: 0}
+  btnGetWaifu: {fileID: 2743424015453774499}
   lsInfocardClone: []
   lsSpriteCard:
   - {fileID: 21300000, guid: c029c6eb63e8f514491e08d3eb42a87c, type: 3}
@@ -1352,12 +1354,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5c418a14862ae7c47a0d1c598bc86285, type: 3}
   - {fileID: 21300000, guid: 7024ba81278e2eb489405c5e63f79fe1, type: 3}
   - {fileID: 21300000, guid: c3a1cc9c82ea7d14ba977d06b6622604, type: 3}
-  imageBackGround: {fileID: 0}
-  dataController: {fileID: 0}
   lsCardForId: []
   lsCardGacha: []
-  btnGetWaifu: {fileID: 2743424015453774499}
-  ChangeType: 0
 --- !u!1 &6858464810282686100
 GameObject:
   m_ObjectHideFlags: 0
