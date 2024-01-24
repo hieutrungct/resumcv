@@ -14,12 +14,12 @@ namespace RubikCasual.FlipCard2
         public int idSlot;
         public float ValuePosImageBackGround, ValueMoveImageBackGround;
         public InfoWaifuAsset infoWaifuAsset;
-        private GameObject imageBackGround;
+        GameObject imageBackGround;
         Vector3 posOriginImageBackGround;
 
         void Start()
         {
-            imageBackGround = RubikCasual.Battle.UI.UIGamePlay.instance.imageBackGround;
+            imageBackGround = FlipCardController.instance.imageBackGround;
             posOriginImageBackGround = imageBackGround.transform.position;
         }
         void OnMouseEnter()

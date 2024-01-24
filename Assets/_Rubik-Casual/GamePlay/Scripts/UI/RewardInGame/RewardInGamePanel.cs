@@ -10,7 +10,7 @@ namespace RubikCasual.RewardInGame
     public class RewardInGamePanel : MonoBehaviour
     {
         public TextMeshProUGUI txtCoins, txtGems;
-        public float valueCoins = 1f, valueGems = 1f;
+        float valueCoins = 1f, valueGems = 1f;
         private DataController dataController;
         public static RewardInGamePanel instance;
         void Start()

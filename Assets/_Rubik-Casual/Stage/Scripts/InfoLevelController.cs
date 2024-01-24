@@ -21,8 +21,8 @@ namespace RubikCasual.InfoLevel
         public Sprite unlockFinishNow;
         public void closeButton()
         {
-         
-           StageLevelController.instance.infoLevelClone.gameObject.GetComponent<Animator>().SetTrigger("ClosePop");
+
+            StageLevelController.instance.infoLevelClone.gameObject.GetComponent<Animator>().SetTrigger("ClosePop");
             StartCoroutine(CloseButtonAfterAnimation());
         }
 
@@ -33,8 +33,12 @@ namespace RubikCasual.InfoLevel
 
             // Thực hiện các hành động sau khi Animation hoàn thành
 
-            Destroy( StageLevelController.instance.infoLevelClone.gameObject);
-           
+            Destroy(StageLevelController.instance.infoLevelClone.gameObject);
+
+        }
+        public void TestloadGamePlay(string NameScene)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(NameScene);
         }
     }
     [Serializable]
