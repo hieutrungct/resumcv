@@ -32,7 +32,7 @@ namespace RubikCasual.Data.Player
     public class UserData
     {
         public string UserName, UserId;
-        public double Gold, Gem,  Hp, Exp;
+        public double Gold, Gem,  Hp, Exp, Ticket, DiamondTicket;
         public int Level, Energy, Rank;
         public List<int> CurentTeam = new List<int>();
 
@@ -43,6 +43,7 @@ namespace RubikCasual.Data.Player
             Gold = 1000;
             Level = 1;
             Energy = 60;
+            Ticket = 10;
 
         }
         public static UserData GetDefaultUserData()

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace RubikCasual.Lobby
 {
-    public class SlotCharacterUI : MonoBehaviour
+    public class SlotWaifuSelectUI : MonoBehaviour
     {
         public TextMeshProUGUI nameTxt, lvlTxt, expTxt, rateTxt;
         public List<GameObject> lsStar;

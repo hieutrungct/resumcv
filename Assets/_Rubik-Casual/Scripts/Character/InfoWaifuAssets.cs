@@ -14,7 +14,8 @@ namespace RubikCasual.Waifu
     {
         R = 1,
         SR = 2,
-        SSR = 3
+        SSR = 3,
+        UR = 4
     }
     public enum Class
     {
@@ -43,8 +44,8 @@ namespace RubikCasual.Waifu
     public class InfoWaifuAsset
     {
         public int ID;
-        public float Skill, Pow, Distance_Skill;
-        public int Star, HP, DEF, ATK;
+        public float Distance_Skill;
+        public int Star, HP, DEF, Pow,Skill,  ATK;
         public string Name, Class, Element, Rare, Code;
     }
 }
