@@ -18,7 +18,7 @@ namespace RubikCasual.Battle
         public int indexOfSlot;
         public InfoWaifuAsset infoWaifuAsset;
         public SkeletonAnimation skeletonCharacterAnimation;
-        public float HpNow, Hp, Def, Atk, Rage;
+        public int HpNow, Hp, Def, Atk, Skill, Rage;
         public Transform PosCharacter;
         public Slider healthBar, cooldownAttackBar, cooldownSkillBar;
         public TextMeshProUGUI txtHealthBar;
@@ -29,7 +29,7 @@ namespace RubikCasual.Battle
 
         void Start()
         {
-            AddRewardWhenKillEnemy();
+            // AddRewardWhenKillEnemy();
 
         }
 

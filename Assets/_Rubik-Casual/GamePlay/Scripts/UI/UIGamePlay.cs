@@ -25,6 +25,7 @@ namespace RubikCasual.Battle.UI
         void Start()
         {
             ClickBtnContinue();
+            ClickBtnBackHomeScene();
         }
         void Update()
         {
@@ -63,6 +64,14 @@ namespace RubikCasual.Battle.UI
                 popupContinue.gameObject.SetActive(false);
                 canvasUIGamePlay.sortingLayerName = Name_Sorting_Layer_origin;
                 BattleController.instance.ResetGame();
+            });
+        }
+        void ClickBtnBackHomeScene()
+        {
+            popupContinue.btnContinue.onClick.RemoveAllListeners();
+            popupContinue.btnContinue.onClick.AddListener(() =>
+            {
+                RubikCasual.Tool.LoadingScenes.BackHomeScene();
             });
         }
     }

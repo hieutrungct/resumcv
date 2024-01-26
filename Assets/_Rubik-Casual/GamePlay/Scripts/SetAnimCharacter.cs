@@ -113,15 +113,6 @@ namespace RubikCasual.Battle
                     }
                 };
 
-                float OldHp = EnemyBossInBattle.HpNow;
-                Calculator.CalculateHealth(CharacterAttack, EnemyBossInBattle);
-
-                Transform PosTxt = EnemyBossInBattle.healthBar.transform;
-                int lossHp = (int)(OldHp - lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>().HpNow);
-                FuntionTimeDelay.SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
-
-                CheckHpEnemy(lsSlotGbEnemy[numberSlotBoss]);
-
             }
             else
             {
@@ -182,39 +173,6 @@ namespace RubikCasual.Battle
 
         public void CharacterAtackAnimation(GameObject CharacterAttacked, GameObject CharacterAttack, MapBattleController dameSlotTxtController, float durationsTxtDame)
         {
-            CharacterInBattle characterAttackInBattle = CharacterAttack.GetComponent<CharacterInBattle>();
-            CharacterInBattle characterAttackedInBattle = CharacterAttacked.GetComponent<CharacterInBattle>();
-            characterAttackInBattle.isAttack = true;
-            if (!characterAttackInBattle.isBoss)
-            {
-                if (!characterAttackedInBattle.isBoss)
-                {
-                    float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                    characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.25f;
-
-                    float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                    characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.5f;
-                }
-                else
-                {
-                    float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                    characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.25f;
-
-                    float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                    characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.1f;
-                }
-
-            }
-            else
-            {
-                float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.01f;
-
-                float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.5f;
-            }
-
-
             StartCoroutine(FuntionTimeDelay.MoveBackDelay(CharacterAttack, CharacterAttacked, dameSlotTxtController, durationsTxtDame));
         }
 
@@ -265,6 +223,7 @@ namespace RubikCasual.Battle
 
                     // CharacterAttackAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
                     CharacterAttackAnim.AnimationName = NameAnim.Anim_Character_Idle;
+
                 }
 
             };
@@ -284,6 +243,8 @@ namespace RubikCasual.Battle
                 }
                 // SpineEditorUtilities.ReinitializeComponent(CharacterAttackedAnim);
             };
+            // Tăng thanh nộ
+            AddValueRage(CharacterAttack, CharacterAttacked);
 
             float OldHp = CharacterInBattleAttacked.HpNow;
             Calculator.CalculateHealth(CharacterInBattleAttack, CharacterInBattleAttacked);
@@ -338,7 +299,41 @@ namespace RubikCasual.Battle
             else
             {
                 CharacterInBattleAttack.isAttack = false;
+            }
 
+        }
+        static void AddValueRage(GameObject CharacterAttack, GameObject CharacterAttacked)
+        {
+            CharacterInBattle characterAttackInBattle = CharacterAttack.GetComponent<CharacterInBattle>();
+            CharacterInBattle characterAttackedInBattle = CharacterAttacked.GetComponent<CharacterInBattle>();
+            characterAttackInBattle.isAttack = true;
+            if (!characterAttackInBattle.isBoss)
+            {
+                if (!characterAttackedInBattle.isBoss)
+                {
+                    float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
+                    characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.25f;
+
+                    float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
+                    characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.5f;
+                }
+                else
+                {
+                    float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
+                    characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.25f;
+
+                    float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
+                    characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.1f;
+                }
+
+            }
+            else
+            {
+                float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
+                characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.01f;
+
+                float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
+                characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.5f;
             }
 
         }
