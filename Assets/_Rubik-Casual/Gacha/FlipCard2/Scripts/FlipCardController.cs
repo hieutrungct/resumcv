@@ -93,12 +93,12 @@ namespace RubikCasual.FlipCard2
             foreach (Waifu.InfoWaifuAsset InfoWaifuAssets in dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets)
             {
 
-                if (InfoWaifuAssets.Rare == Waifu.Rare.R.ToString())
+                if (InfoWaifuAssets.Rare == Waifu.Rare.R)
                 {
                     CardForId cardForId = new CardForId();
                     cardForId.ID = InfoWaifuAssets.ID;
                     cardForId.Code = InfoWaifuAssets.Code;
-                    cardForId.Rare = InfoWaifuAssets.Rare;
+                    cardForId.Rare = InfoWaifuAssets.Rare.ToString();
                     lsCardForId.Add(cardForId);
                 }
             }

@@ -737,6 +737,8 @@ MonoBehaviour:
       Gem: 0
       Hp: 0
       Exp: 0
+      Ticket: 10
+      DiamondTicket: 0
       Level: 0
       Energy: 0
       Rank: 0
@@ -755,6 +757,8 @@ MonoBehaviour:
     Gem: 50
     Hp: 0
     Exp: 0
+    Ticket: 10
+    DiamondTicket: 0
     Level: 1
     Energy: 60
     Rank: 0
@@ -938,6 +942,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 08be456a6ddbf458784cf3a37e52822f, type: 3}
   - {fileID: 21300000, guid: 284f99482071f47839549747513b612b, type: 3}
   - {fileID: 21300000, guid: 072fc1e433b92438e915c6c10bfd2994, type: 3}
+  RarrityAvaBox:
+  - {fileID: 21300000, guid: dd77367546bf4433dbbb2317a935df54, type: 3}
+  - {fileID: 21300000, guid: 35d7e6588f1f34db1b9a5e62f4efdf77, type: 3}
+  - {fileID: 21300000, guid: e6eea4f7cbb9f46f79c0fe06180fa5b3, type: 3}
+  - {fileID: 21300000, guid: 10d23572713d041c596abf5c00be11dc, type: 3}
+  - {fileID: 21300000, guid: 84063999b9e1741d099c1d8f7bbc0f7a, type: 3}
   AttackSprite:
   - {fileID: 21300000, guid: 7c38202bc1125471cb46578c474ed80e, type: 3}
   - {fileID: 21300000, guid: b944c63612ae9407cbd657cf70397e9b, type: 3}

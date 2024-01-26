@@ -18,7 +18,8 @@ namespace Rubik_Casual
         public List<Sprite> Avatars,Button;
         public List<SkeletonDataAsset> Hero;
         public List<SkeletonDataAsset> Enemy;
-        public List<Sprite> RarrityBox;
+        public List<Sprite> RarrityBox ;
+        public List<Sprite> RarrityAvaBox;
         public List<Sprite> AttackSprite;
         public List<Sprite> EffectSprite;
         public List<Sprite> SkillSprite;

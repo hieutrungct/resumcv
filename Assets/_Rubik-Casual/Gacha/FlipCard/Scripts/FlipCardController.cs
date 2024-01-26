@@ -24,7 +24,7 @@ namespace RubikCasual.FlipCard1
             }
         }
         [Button]
-        void ResetCard()
+        public void ResetCard()
         {
             foreach (GameObject item in lsGbCardInPanel)
             {
@@ -69,7 +69,7 @@ namespace RubikCasual.FlipCard1
             }
         }
         [Button]
-        void MoveGroupCardBottom()
+        public void MoveGroupCardBottom()
         {
             GroupCard.transform.DOJump(GroupCard.transform.position + valueJumb, 1, 1, SpeedCard)
             .OnComplete(() =>

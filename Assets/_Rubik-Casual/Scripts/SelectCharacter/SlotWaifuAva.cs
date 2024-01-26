@@ -24,14 +24,17 @@ namespace Rubik.Select
             {
                 switch (infoWaifu.Rare)
                 {
-                    case "R":
-                        //rareWaifu.sprite = AssetLoader.Instance.RarrityBox[0];
+                    case RubikCasual.Waifu.Rare.R:
+                        rareWaifu.sprite = AssetLoader.Instance.RarrityBox[0];
                         break;
-                    case "SR":
-                        
+                    case RubikCasual.Waifu.Rare.SR:
+                        rareWaifu.sprite = AssetLoader.Instance.RarrityBox[1];
                         break;
-                    case "SSR":
-                        
+                    case RubikCasual.Waifu.Rare.SSR:
+                        rareWaifu.sprite = AssetLoader.Instance.RarrityBox[2];
+                        break;
+                    case RubikCasual.Waifu.Rare.UR:
+                        rareWaifu.sprite = AssetLoader.Instance.RarrityBox[3];
                         break;
                 }
             }
