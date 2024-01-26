@@ -29,7 +29,7 @@ namespace RubikCasual.Battle
 
         void Start()
         {
-            AddRewardWhenKillEnemy();
+            // AddRewardWhenKillEnemy();
 
         }
 

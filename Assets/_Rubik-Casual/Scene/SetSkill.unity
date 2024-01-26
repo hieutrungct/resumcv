@@ -2052,6 +2052,9 @@ MonoBehaviour:
   isSkill: 0
   lsSlotGbEnemy: []
   EnemyInBattle: {fileID: 395090608089745406, guid: 1546607ea83eefb41ab4a76d5319b6b8, type: 3}
+  Row: 0
+  Column: 0
+  SlotCharacter: 0
 --- !u!1 &664159471
 GameObject:
   m_ObjectHideFlags: 0

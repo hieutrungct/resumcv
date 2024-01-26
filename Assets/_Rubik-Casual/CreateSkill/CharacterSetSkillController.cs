@@ -19,8 +19,9 @@ namespace RubikCasual.CreateSkill
         public bool isSkill;
         public List<GameObject> lsSlotGbEnemy;
         public CharacterInBattle EnemyInBattle;
+        public int Row, Column, SlotCharacter;
         float attribute = 1;
-        float SlotCharacter = 2;
+        // public float SlotCharacter = 2;
         void Start()
         {
             dataController = DataController.instance;
@@ -44,10 +45,24 @@ namespace RubikCasual.CreateSkill
 
         }
         [Button]
-        void SetAnimSkill()
+        void BtnUseSkill()
+        {
+            StartCoroutine(SetAnimSkill());
+        }
+        IEnumerator SetAnimSkill()
         {
             characterClone.AnimationName = NameAnim.Anim_Character_Skill;
-            SpineEditorUtilities.ReinitializeComponent(characterClone);
+            characterClone.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
+            characterClone.AnimationState.Complete += delegate
+            {
+                if (characterClone.AnimationName != NameAnim.Anim_Character_Idle)
+                {
+                    characterClone.AnimationName = NameAnim.Anim_Character_Idle;
+                }
+            };
+            yield return new WaitForSeconds(0.5f);
+            UseSkill(Row, Column, SlotCharacter);
+
         }
         [Button]
         void SetAnimIdle()
@@ -63,24 +78,69 @@ namespace RubikCasual.CreateSkill
                 SpawnEnemyForStage(i, i);
             }
         }
-        void UseSkill(int row, int column)
+        [Button]
+        void UseSkill(int row, int column, int slotCharacter = 2)
         {
+            int minColumn = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                if (column == 1)
+                {
+                    minColumn = slotCharacter - 1;
+                    column = column + slotCharacter - 1;
+                    break;
+                }
+                else
+                {
+                    if (slotCharacter == 2 * i + 1 || slotCharacter == 2 * i)
+                    {
+                        for (int j = 0; j < 3; j++)
+                        {
+                            if (column == 2 * j + 1 || column == 2 * j)
+                            {
+                                minColumn = slotCharacter - (j + 1);
+                                column = column + slotCharacter - (j + 1);
+                                break;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+
             int count = 0;
             for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
             {
                 for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
                 {
-                    if (i < row)
+                    if (lsSlotGbEnemy[count] != null)
                     {
-                        if (j < SlotCharacter)
+                        if (i < row)
                         {
-
+                            if (j < column && j >= minColumn)
+                            {
+                                Debug.Log("j: " + j + ", i: " + i);
+                                Debug.Log("column: " + column);
+                                SetAttacked(count);
+                            }
                         }
                     }
 
                     count++;
                 }
             }
+        }
+        void SetAttacked(int count)
+        {
+            SkeletonAnimation skeletonEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
+            skeletonEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
+            skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
+            skeletonEnemy.AnimationState.Complete += delegate
+            {
+                skeletonEnemy.AnimationName = NameAnim.Anim_Character_Idle;
+                skeletonEnemy.loop = true;
+            };
         }
         void SpawnEnemyForStage(int idStage, int idRowSlot)
         {
@@ -115,6 +175,7 @@ namespace RubikCasual.CreateSkill
                     enemyInBattle.healthBar.gameObject.SetActive(false);
 
                     SkeletonAnimation Enemy = Instantiate(dataController.characterAssets.enemyAssets.Get2D(idValueInSlot.ToString()));
+
                     Transform poscharacterInBattle = enemyInBattle.PosCharacter;
 
                     Enemy.transform.localScale = dataController.characterAssets.WaifuAssets.transform.localScale * 2f / 3f;
@@ -128,7 +189,7 @@ namespace RubikCasual.CreateSkill
                     }
                     Enemy.gameObject.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
                     SpineEditorUtilities.ReinitializeComponent(Enemy);
-
+                    enemyInBattle.skeletonCharacterAnimation = Enemy;
                     lsSlotGbEnemy.Add(enemyInBattle.gameObject);
                 }
                 else
