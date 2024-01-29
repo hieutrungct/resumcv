@@ -8433,6 +8433,7 @@ MonoBehaviour:
   bgMainscreen: {fileID: 0}
   Waifus: []
   WaifuInitLocation: {fileID: 7422033452125062186}
+  waifuAva: {fileID: 0}
 --- !u!1 &3289313182662076119
 GameObject:
   m_ObjectHideFlags: 0

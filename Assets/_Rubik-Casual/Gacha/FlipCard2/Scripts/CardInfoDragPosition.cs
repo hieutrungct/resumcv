@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using DG.Tweening;
+using RubikCasual.Battle;
+using RubikCasual.Data;
 using RubikCasual.Waifu;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +16,7 @@ namespace RubikCasual.FlipCard2
         public int idSlot;
         public float ValuePosImageBackGround, ValueMoveImageBackGround;
         public InfoWaifuAsset infoWaifuAsset;
+        public int frag;
         GameObject imageBackGround;
         Vector3 posOriginImageBackGround;
 
@@ -27,6 +30,7 @@ namespace RubikCasual.FlipCard2
             imageBackGround.transform.position = posOriginImageBackGround;
             gameObject.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f);
             MoveImageBackGround(ValuePosImageBackGround);
+            ShowInfoCard();
         }
         void OnMouseExit()
         {
@@ -60,6 +64,47 @@ namespace RubikCasual.FlipCard2
         Tween MoveImageBackGround(float value)
         {
             return imageBackGround.transform.DOMoveX(imageBackGround.transform.position.x + value, 0.5f);
+        }
+        void ShowInfoCard()
+        {
+            // Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f);
+            if (idSlot == 3 || idSlot == 8 || idSlot == 4 || idSlot == 9 || idSlot == 7)
+            {
+                FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position - new Vector3(2f, 0, 0);
+            }
+            else
+            {
+                FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position + new Vector3(2f, 0, 0);
+            }
+            InfoCard infoCard = FlipCardController.instance.gbInfoCardWithMouse.GetComponent<InfoCard>();
+
+            if (infoCard.SkeWaifu != null)
+            {
+                Destroy(infoCard.SkeWaifu.gameObject);
+            }
+            infoCard.txtRare.text = this.infoWaifuAsset.Rare;
+            infoCard.SkeWaifu = DataController.instance.characterAssets.WaifuAssets.Get2D(this.infoWaifuAsset.ID.ToString());
+            infoCard.SkeWaifu.transform.SetParent(infoCard.posWaifu);
+            infoCard.SkeWaifu.transform.position = infoCard.posWaifu.position;
+            infoCard.SkeWaifu.loop = true;
+            infoCard.SkeWaifu.AnimationName = NameAnim.Anim_Character_Idle;
+            infoCard.SkeWaifu.gameObject.transform.localScale = infoCard.SkeWaifu.gameObject.transform.localScale * 2 / 3f;
+
+            infoCard.txtValueFrag.text = this.frag.ToString();
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (this.infoWaifuAsset.Star > i)
+                {
+                    infoCard.lsGbStar[i].SetActive(true);
+                }
+                else
+                {
+                    infoCard.lsGbStar[i].SetActive(false);
+                }
+            }
+
+
         }
     }
 }

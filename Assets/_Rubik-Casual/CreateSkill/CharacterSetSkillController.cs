@@ -14,7 +14,7 @@ namespace RubikCasual.CreateSkill
     public class SkillHero
     {
         public int Id, Row, Column;
-        public Type typeSkill;
+        public TypeSkill typeSkill;
         public float durationWave, durationAttacked;
     }
     public enum TypeSkill

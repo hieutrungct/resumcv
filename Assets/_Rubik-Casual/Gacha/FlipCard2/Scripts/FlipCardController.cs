@@ -22,7 +22,7 @@ namespace RubikCasual.FlipCard2
     }
     public class FlipCardController : MonoBehaviour
     {
-        public GameObject gbTest, gbInfoCard, imageBackGround, gbTicket;
+        public GameObject gbTest, gbInfoCard, imageBackGround, gbTicket, gbInfoCardWithMouse;
         public SlotInfoCard slotInfoCard;
         public Transform posInstantiateCard;
         public Button btnGetWaifu;
@@ -36,10 +36,12 @@ namespace RubikCasual.FlipCard2
                     NameGbTxtNewWaifu = "NewWaifu", NameGbTxtGetWaifu = "TxtGetWaifu", NameGbDimed = "Dimed",
                     NameGbTxtValue = "TxtValue";
         Rubik_Casual.AssetLoader assetLoader;
+        Vector3 originOriginGbInfoCard;
         public static FlipCardController instance;
         protected void Awake()
         {
             instance = this;
+            originOriginGbInfoCard = gbInfoCardWithMouse.transform.position;
         }
         void Start()
         {
@@ -55,6 +57,7 @@ namespace RubikCasual.FlipCard2
             SetLsCardForId();
             btnGetWaifu.onClick.AddListener(() =>
             {
+                gbInfoCardWithMouse.transform.position = originOriginGbInfoCard;
                 BtnGacha();
             });
 
@@ -64,6 +67,8 @@ namespace RubikCasual.FlipCard2
                 {
                     ResetGatcha();
                     this.gameObject.SetActive(false);
+                    TxtBtn.text = "Get Waifu";
+                    gbInfoCardWithMouse.transform.position = originOriginGbInfoCard;
                 }
             });
         }
@@ -108,7 +113,14 @@ namespace RubikCasual.FlipCard2
                 TxtBtn.text = "Out Ticket";
                 Debug.Log("Hết vé");
             }
-            gbTicket.transform.Find(NameGbTxtValue).GetComponent<TextMeshProUGUI>().text = dataController.userData.Ticket.ToString();
+            TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbTxtValue).GetComponent<TextMeshProUGUI>();
+            txtGbTicket.text = dataController.userData.Ticket.ToString();
+            TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
+            txtGbTicketClone.text = "-1";
+            txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
+            txtGbTicketClone.color = Color.red;
+            txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
+            .OnComplete(() => { Destroy(txtGbTicketClone.gameObject); });
         }
         void ResetGatcha()
         {
@@ -207,7 +219,7 @@ namespace RubikCasual.FlipCard2
                     InfoWaifuAsset infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.FirstOrDefault(f => f.ID == lsCardGacha[index].ID);
                     cardInfoDragPosition.infoWaifuAsset = infoWaifuAsset;
 
-                    SetUpInfoCard(index, transFrontCard, cardInfoDragPosition.infoWaifuAsset.ID.ToString());
+                    SetUpInfoCard(index, transFrontCard, cardInfoDragPosition);
 
                     if (!ChangeType)
                     {
@@ -225,8 +237,9 @@ namespace RubikCasual.FlipCard2
             }
 
         }
-        void SetUpInfoCard(int index, Transform transFrontCard, string IDWaifu)
+        void SetUpInfoCard(int index, Transform transFrontCard, CardInfoDragPosition cardInfoDragPosition)
         {
+            string IDWaifu = cardInfoDragPosition.infoWaifuAsset.ID.ToString();
             Transform transIcon = transFrontCard.Find(NameGbIcon);
 
             GameObject gbIcon = transIcon.gameObject;
@@ -245,7 +258,7 @@ namespace RubikCasual.FlipCard2
             {
                 txtNewWaifu.gameObject.SetActive(true);
                 playerOwnsWaifuClone = new Data.Player.PlayerOwnsWaifu();
-                InfoWaifuAsset infoWaifuAssetClone = lsInfocardClone[index].GetComponent<CardInfoDragPosition>().infoWaifuAsset;
+                InfoWaifuAsset infoWaifuAssetClone = cardInfoDragPosition.infoWaifuAsset;
                 playerOwnsWaifuClone.ID = infoWaifuAssetClone.ID;
                 playerOwnsWaifuClone.HP = infoWaifuAssetClone.HP;
                 playerOwnsWaifuClone.ATK = infoWaifuAssetClone.ATK;
@@ -260,6 +273,7 @@ namespace RubikCasual.FlipCard2
             {
                 playerOwnsWaifuClone.frag += 1;
             }
+            cardInfoDragPosition.frag = playerOwnsWaifuClone.frag;
         }
     }
 }
