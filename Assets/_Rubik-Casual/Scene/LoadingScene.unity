@@ -737,7 +737,7 @@ MonoBehaviour:
       Gem: 0
       Hp: 0
       Exp: 0
-      Ticket: 10
+      Ticket: 0
       DiamondTicket: 0
       Level: 0
       Energy: 0
@@ -751,16 +751,16 @@ MonoBehaviour:
   listOwnsWaifu:
     lsOwnsWaifu: []
   userData:
-    UserName: hieutrung
-    UserId: 28062002
-    Gold: 7000
-    Gem: 50
+    UserName: 
+    UserId: 
+    Gold: 0
+    Gem: 0
     Hp: 0
     Exp: 0
-    Ticket: 10
+    Ticket: 0
     DiamondTicket: 0
-    Level: 1
-    Energy: 60
+    Level: 0
+    Energy: 0
     Rank: 0
     CurentTeam: 
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
@@ -886,8 +886,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3922434275395422010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1823137, y: 0.27932316, z: 238.12334}
-  m_LocalScale: {x: 144, y: 144, z: 144}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2950010415589282190}

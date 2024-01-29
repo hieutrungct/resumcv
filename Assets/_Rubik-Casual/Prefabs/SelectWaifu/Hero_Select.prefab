@@ -9005,14 +9005,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lsSlotWaifuSelectUI:
   - {fileID: 2941906016201747596}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5366459211050400487}
+  - {fileID: 7002996915100535585}
+  - {fileID: 853917963399925521}
+  - {fileID: 7730733494186082528}
   bgMainscreen: {fileID: 0}
   Waifus: []
   WaifuInitLocation: {fileID: 7422033452125062186}
-  waifuAva: {fileID: 7432285256655463745, guid: 6567b866d19848245aa110b868c1fe68, type: 3}
+  waifuAva: {fileID: 8853412626377582082, guid: 6567b866d19848245aa110b868c1fe68, type: 3}
 --- !u!1 &3311797713540256498
 GameObject:
   m_ObjectHideFlags: 0

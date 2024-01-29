@@ -30,8 +30,9 @@ namespace RubikCasual.Lobby
         {
             userData = UserData.instance;
             CreateWaifu();
-            SortPower();
             Waifus = DataController.instance.playerData.lsPlayerOwnsWaifu;
+            SortPower();
+            
 
         }
         void Update()
@@ -74,6 +75,7 @@ namespace RubikCasual.Lobby
                 }
                 return result;
             });
+            RefreshWaifuUI();
         }
         public void RefreshWaifuUI()
         {

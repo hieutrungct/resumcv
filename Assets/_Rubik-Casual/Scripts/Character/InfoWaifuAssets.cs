@@ -12,31 +12,32 @@ namespace RubikCasual.Waifu
     }
     public enum Rare
     {
-        R = 1,
-        SR = 2,
-        SSR = 3,
-        UR = 4
+        
+        R = 0,
+        SR = 1,
+        SSR = 2,
+        UR = 3
     }
-    public enum Class
+    public enum ClassWaifu
     {
-        Warrior = 1,
-        Mage = 2,
-        Witcher = 3,
-        Marksman = 4,
-        Tanker = 5,
-        Assasin = 6
+        Warrior = 0,
+        Mage = 1,
+        Witcher = 2,
+        Marksman = 3,
+        Tanker = 4,
+        Assasin = 5
     }
     public enum Element
     {
-        Water = 1,
-        fire = 2,
-        Ari = 3,
-        Electric = 4,
-        Spatial_Magic = 5,
-        Magic = 6,
-        Physics = 7,
-        Poison = 8,
-        Dark_Magic = 9,
+        Water = 0,
+        fire = 1,
+        Ari = 2,
+        Electric = 3,
+        Spatial_Magic = 4,
+        Magic = 5,
+        Physics = 6,
+        Poison = 7,
+        Dark_Magic = 8,
 
     }
 
@@ -46,7 +47,9 @@ namespace RubikCasual.Waifu
         public int ID;
         public float Distance_Skill;
         public int Star, HP, DEF, ATK, Pow, Skill;
-        public string Name, Class, Element, Code;
+        public string Name, Code;
         public Rare Rare;
+        public Element Element;
+        public ClassWaifu ClassWaifu;
     }
 }
