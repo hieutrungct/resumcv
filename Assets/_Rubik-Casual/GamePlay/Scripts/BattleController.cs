@@ -45,19 +45,7 @@ namespace RubikCasual.Battle
             dataController = DataController.instance;
 
             StartCoroutine(CreateBattlefield());
-            // Cooldown();
         }
-        [Button]
-        void UpSpeed()
-        {
-            Time.timeScale = 2f;
-        }
-        [Button]
-        void DownSpeed()
-        {
-            Time.timeScale = 1f;
-        }
-
         void Update()
         {
             CheckHeroInBattle();

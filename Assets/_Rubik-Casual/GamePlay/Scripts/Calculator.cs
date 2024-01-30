@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using RubikCasual.DailyItem;
 using RubikCasual.Data;
 using RubikCasual.Lobby;
+using RubikCasual.Tool;
 using UnityEngine;
 
 namespace RubikCasual.Battle.Calculate
@@ -17,13 +19,13 @@ namespace RubikCasual.Battle.Calculate
             if (!isUseSkill)
             {
                 CharacterInBattleAttacked.HpNow = HealthAmount(CharacterInBattleAttack.Atk, CharacterInBattleAttacked.HpNow, CharacterInBattleAttacked.Def);
-                CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp;
+                // CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp;
             }
             else
             {
                 CharacterInBattleAttacked.HpNow = HealthAmount(CharacterInBattleAttack.Skill, CharacterInBattleAttacked.HpNow, CharacterInBattleAttacked.Def);
-                CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp;
             }
+            CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
         }
         static int HealthAmount(int dameAttack, int HealthAttacked, int defAttacked)
         {
@@ -46,7 +48,7 @@ namespace RubikCasual.Battle.Calculate
                     {
                         CharacterInBattleAttacked.HpNow = CharacterInBattleAttacked.infoWaifuAsset.HP;
                     }
-                    CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.infoWaifuAsset.HP;
+                    CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
                     break;
 
                 case TypeItem.Poison:
@@ -55,14 +57,16 @@ namespace RubikCasual.Battle.Calculate
                     {
                         CharacterInBattleAttacked.HpNow = CharacterInBattleAttacked.infoWaifuAsset.HP;
                     }
-                    CharacterInBattleAttacked.healthBar.value = CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.infoWaifuAsset.HP;
+                    CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
                     break;
 
                 case TypeItem.Mana:
                     float valueOldCooldownSkillBar = CharacterInBattleAttacked.cooldownSkillBar.value;
                     CharacterInBattleAttacked.cooldownSkillBar.value = valueOldCooldownSkillBar + infoItem.Dame / 40f;
+                    CharacterInBattleAttacked.cooldownSkillBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.cooldownSkillBar, valueOldCooldownSkillBar, valueOldCooldownSkillBar + infoItem.Dame / 40f);
                     break;
             }
         }
+
     }
 }

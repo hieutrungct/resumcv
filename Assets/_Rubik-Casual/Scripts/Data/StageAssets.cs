@@ -36,17 +36,20 @@ namespace RubikCasual.Data
     {
         private List<StageAssetsData> lsStageAssetsDatas;
         public List<ConvertStageAssetsData> lsConvertStageAssetsData;
-        public TextAsset AssetData;
-        public int idTest;
+        public List<TextAsset> lsAssetData;
+        public int idTest, indexStage;
         public static StageAssets instance;
-        void Awake()
+        protected void Awake()
         {
             instance = this;
-            LoadStageAssets();
-
+            LoadStageAssets(indexStage - 1);
         }
         IEnumerator ConvertStageAssets()
         {
+            if (lsConvertStageAssetsData != null)
+            {
+                lsConvertStageAssetsData.Clear();
+            }
             yield return new WaitForSeconds(0.25f);
             foreach (var item in lsStageAssetsDatas)
             {
@@ -81,11 +84,12 @@ namespace RubikCasual.Data
 
             return result;
         }
-        void LoadStageAssets()
+        [Button]
+        void LoadStageAssets(int index)
         {
             lsStageAssetsDatas = new List<StageAssetsData>();
 
-            foreach (JSONNode item in JSON.Parse(this.AssetData.text))
+            foreach (JSONNode item in JSON.Parse(this.lsAssetData[index].text))
             {
                 StageAssetsData waifuAssetData = JsonUtility.FromJson<StageAssetsData>(item.ToString());
                 this.lsStageAssetsDatas.Add(waifuAssetData);

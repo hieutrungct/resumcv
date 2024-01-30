@@ -5,6 +5,7 @@ using DG.Tweening;
 using NTPackage.Functions;
 using RubikCasual.Battle.Calculate;
 using RubikCasual.Battle.UI;
+using RubikCasual.Tool;
 using Spine.Unity;
 using Spine.Unity.Editor;
 using TMPro;
@@ -145,18 +146,7 @@ namespace RubikCasual.Battle
 
 
                                 float OldHp = EnemyBossInBattle.HpNow;
-                                Calculator.CalculateHealth(CharacterAttack, EnemyBossInBattle);
-
-                                // GameObject txtDame = Instantiate(UIGamePlay.instance.TxtDame, dameSlotTxtController.lsPosEnemySlot[i].lsPosCharacterSlot[j].transform);
-
-                                // txtDame.GetComponent<TextMeshProUGUI>().text = "-" + ((int)(OldHp - lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().HpNow)).ToString();
-                                // Tween animTxtDame = txtDame.transform.DOMoveY(txtDame.transform.position.y + durationsTxtDame, durationsTxtDame);
-                                // txtDame.GetComponent<TextMeshProUGUI>().color = Color.red;
-
-                                // animTxtDame.OnComplete(() =>
-                                // {
-                                //     Destroy(txtDame);
-                                // }); 
+                                Calculator.CalculateHealth(CharacterAttack, EnemyBossInBattle, true);
 
                                 Transform PosTxt = EnemyBossInBattle.healthBar.transform;
                                 int lossHp = (int)(OldHp - lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().HpNow);
@@ -312,28 +302,28 @@ namespace RubikCasual.Battle
                 if (!characterAttackedInBattle.isBoss)
                 {
                     float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                    characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.25f;
+                    characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.25f);
 
                     float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                    characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.5f;
+                    characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.5f);
                 }
                 else
                 {
                     float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                    characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.25f;
+                    characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.25f);
 
                     float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                    characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.1f;
+                    characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.1f);
                 }
 
             }
             else
             {
                 float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                characterAttackInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttack + 0.01f;
+                characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.01f);
 
                 float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                characterAttackedInBattle.cooldownSkillBar.value = valueSliderBarCharacterAttacked + 0.5f;
+                characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.5f);
             }
 
         }
