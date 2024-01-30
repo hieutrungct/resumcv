@@ -62,6 +62,17 @@ namespace RubikCasual.Data
             }
             return null;
         }
+        public PlayerOwnsWaifu GetPlayerOwnsWaifuByID(int Id)
+        {
+            foreach (var item in listOwnsWaifu.lsOwnsWaifu)
+            {
+                if(item.ID == Id)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
         // void Start()
         // {
         // }

@@ -110,7 +110,7 @@ namespace Rubik.ListWaifu
         }
         
 
-        public void ShowCharaterfoPopup(PlayerOwnsWaifu waifu)
+        public void ShowWaifufoPopup(PlayerOwnsWaifu waifu)
         {
             gameObject.SetActive(true);
             SetUp(waifu);
@@ -146,11 +146,9 @@ namespace Rubik.ListWaifu
                         btnselect.sprite = AssetLoader.instance.Button[6];
                         break;
                     }
-                    else
-                    {
-                        Debug.Log("Không còn ô trống");
-                    }
+                    
                 }
+                Debug.Log("Không còn ô trống");
             }
         }
     }

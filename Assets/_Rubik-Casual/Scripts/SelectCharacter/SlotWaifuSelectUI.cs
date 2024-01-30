@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Rubik.Select;
 using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
@@ -22,6 +23,7 @@ namespace RubikCasual.Lobby
         public Image avaBox, classWaifu, rarity;
         public Slider expSlider;
         public SkeletonGraphic avaWaifu;
+        public SlotWaifuAva slotWaifuAva;
         public PlayerOwnsWaifu thisWaifu;
 
         public void SetUp(PlayerOwnsWaifu waifu)
@@ -38,8 +40,8 @@ namespace RubikCasual.Lobby
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             SpineEditorUtilities.ReinitializeComponent(avaWaifu);
             
-            // avatar.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
-            // avatar.preserveAspect = true;
+            // avaBox.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+            // avaBox.preserveAspect = true;
 
             // Debug.Log(infoWaifu.Code.ToString());
 
@@ -72,6 +74,15 @@ namespace RubikCasual.Lobby
                         break;
                 }
             }
+            var btn = GetComponent<Button>();
+            if (btn != null)
+            {
+                btn.onClick.AddListener(() =>
+                {
+                    //SelectOnClick();
+                    Next();
+                });
+            }
 
             
             
@@ -81,6 +92,35 @@ namespace RubikCasual.Lobby
             //Update_Waifu(waifu);
 
 
+        }
+        public void Next()
+        {
+            int temp = WaifuSelectController.instance.CheckIndexOfWaifu(thisWaifu);
+            thisWaifu = WaifuSelectController.instance.GetWaifu(temp);
+            Debug.Log("Số index của ava slot là: " + temp);
+            // slotWaifuAva.iconSelect.SetActive(false);
+            // avaBox_Obj.SetActive(false);
+            // slotWaifuAva = null;
+
+            int i; 
+            bool isCurrentlySelected = false;
+            for(i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
+            {
+                if(DataController.instance.userData.CurentTeam[i] == thisWaifu.ID)
+                {
+                    isCurrentlySelected = true;
+                    break;
+                }
+            }
+            if(isCurrentlySelected)
+            {
+                //Debug.Log("Nó sẽ nhảy vào i thứ: "+ i);
+                DataController.instance.userData.CurentTeam[i] = 0;
+                slotWaifuAva.iconSelect.SetActive(false);
+                avaBox_Obj.SetActive(false);
+                slotWaifuAva = null;
+            }
+            
         }
     }
 }

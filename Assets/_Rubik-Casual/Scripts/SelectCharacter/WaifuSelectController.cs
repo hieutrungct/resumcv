@@ -26,13 +26,16 @@ namespace RubikCasual.Lobby
         public List<PlayerOwnsWaifu> Waifus;
         public Transform WaifuInitLocation;
         public SlotWaifuAva waifuAva;
+        public static WaifuSelectController instance;
         void Start()
         {
+            instance = this;
             userData = UserData.instance;
-            CreateWaifu();
+            CreateListAvaWaifu();
             Waifus = DataController.instance.playerData.lsPlayerOwnsWaifu;
             SortPower();
-            
+
+            // CreatListSeclecWaifu();
 
         }
         void Update()
@@ -43,7 +46,22 @@ namespace RubikCasual.Lobby
             //     userData.data.isChange = false;
             // }
         }
-        void CreateWaifu()
+        void CreatListSeclecWaifu()
+        {
+            for (int i = 0; i < lsSlotWaifuSelectUI.Count; i++)
+            {
+                if(DataController.instance.userData.CurentTeam[i] == 0)
+                {
+                    lsSlotWaifuSelectUI[i].avaBox_Obj.SetActive(false);
+                }
+                else
+                {
+                    PlayerOwnsWaifu ownsWaifu = DataController.instance.GetPlayerOwnsWaifuByID(DataController.instance.userData.CurentTeam[i]);
+                    lsSlotWaifuSelectUI[i].SetUp(ownsWaifu);
+                }
+            }
+        }
+        void CreateListAvaWaifu()
         {
             foreach (Transform child in WaifuInitLocation)
             {
@@ -146,5 +164,27 @@ namespace RubikCasual.Lobby
         {
             MovePopup.TransPopupHorizontal(bgMainscreen, this.gameObject);
         }
+
+        public int CheckIndexOfWaifu(PlayerOwnsWaifu Waifu)
+        {
+
+            return Waifus.IndexOf(Waifu);
+
+        }
+        public PlayerOwnsWaifu GetWaifu(int index)
+        {
+            if (index >= DataController.instance.playerData.lsPlayerOwnsWaifu.Count)
+            {
+                index = 0;
+            }
+            else if (index < 0)
+            {
+                index = DataController.instance.playerData.lsPlayerOwnsWaifu.Count - 1;
+            }
+
+            return Waifus[index];
+        }
+        
+        
     }
 }

@@ -181,7 +181,7 @@ namespace Rubik.ListWaifu
 
         public void ShowWaifuInfoPopup(PlayerOwnsWaifu Waifu)
         {
-            waifuInfoPopup.ShowCharaterfoPopup(Waifu);
+            waifuInfoPopup.ShowWaifufoPopup(Waifu);
         }
 
         public int CheckIndexOfWaifu(PlayerOwnsWaifu Waifu)
