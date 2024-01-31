@@ -47,6 +47,7 @@ namespace RubikCasual.Lobby
 
             //role.sprite = AssetLoader.Instance.AttackSprite[waifu.Role];
             lvlTxt.text = "" + waifu.level;
+            nameTxt.text = infoWaifu.Name;
             for(int i = 0; i < waifu.Star; i++)
             {
                 lsStar[i].SetActive(true);
@@ -60,17 +61,25 @@ namespace RubikCasual.Lobby
             {
                 switch (infoWaifu.Rare)
                 {
-                    case RubikCasual.Waifu.Rare.R:
+                    case Rare.R:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
+                        rarity.sprite = AssetLoader.Instance.LabelRare[0];
+                        rareTxt.text = Rare.R.ToString();
                         break;
-                    case RubikCasual.Waifu.Rare.SR:
+                    case Rare.SR:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
+                        rarity.sprite = AssetLoader.Instance.LabelRare[1];
+                        rareTxt.text = Rare.SR.ToString();
                         break;
-                    case RubikCasual.Waifu.Rare.SSR:
+                    case Rare.SSR:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
+                        rarity.sprite = AssetLoader.Instance.LabelRare[2];
+                        rareTxt.text = Rare.SSR.ToString();
                         break;
-                    case RubikCasual.Waifu.Rare.UR:
+                    case Rare.UR:
                         avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
+                        rarity.sprite = AssetLoader.Instance.LabelRare[3];
+                        rareTxt.text = Rare.UR.ToString();
                         break;
                 }
             }
@@ -80,20 +89,12 @@ namespace RubikCasual.Lobby
                 btn.onClick.AddListener(() =>
                 {
                     //SelectOnClick();
-                    Next();
+                    OutSelectOnClick();
                 });
             }
 
-            
-            
-            
-            // moveSpeedTxt.text = waifu.MoveSpeed.ToString();
-
-            //Update_Waifu(waifu);
-
-
         }
-        public void Next()
+        public void OutSelectOnClick()
         {
             int temp = WaifuSelectController.instance.CheckIndexOfWaifu(thisWaifu);
             thisWaifu = WaifuSelectController.instance.GetWaifu(temp);

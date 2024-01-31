@@ -31,11 +31,12 @@ namespace RubikCasual.Lobby
         {
             instance = this;
             userData = UserData.instance;
+            CreatListSeclecWaifu();
             CreateListAvaWaifu();
             Waifus = DataController.instance.playerData.lsPlayerOwnsWaifu;
             SortPower();
 
-            // CreatListSeclecWaifu();
+            
 
         }
         void Update()
@@ -48,18 +49,22 @@ namespace RubikCasual.Lobby
         }
         void CreatListSeclecWaifu()
         {
-            for (int i = 0; i < lsSlotWaifuSelectUI.Count; i++)
+            foreach (SlotWaifuSelectUI item in lsSlotWaifuSelectUI)
             {
-                if(DataController.instance.userData.CurentTeam[i] == 0)
-                {
-                    lsSlotWaifuSelectUI[i].avaBox_Obj.SetActive(false);
-                }
-                else
-                {
-                    PlayerOwnsWaifu ownsWaifu = DataController.instance.GetPlayerOwnsWaifuByID(DataController.instance.userData.CurentTeam[i]);
-                    lsSlotWaifuSelectUI[i].SetUp(ownsWaifu);
-                }
+                item.avaBox_Obj.SetActive(false);
             }
+            // for (int i = 0; i < lsSlotWaifuSelectUI.Count; i++)
+            // {
+            //     if(DataController.instance.userData.CurentTeam[i] == 0)
+            //     {
+            //         lsSlotWaifuSelectUI[i].avaBox_Obj.SetActive(false);
+            //     }
+            //     else
+            //     {
+            //         PlayerOwnsWaifu ownsWaifu = DataController.instance.GetPlayerOwnsWaifuByID(DataController.instance.userData.CurentTeam[i]);
+            //         lsSlotWaifuSelectUI[i].SetUp(ownsWaifu);
+            //     }
+            // }
         }
         void CreateListAvaWaifu()
         {
@@ -133,7 +138,7 @@ namespace RubikCasual.Lobby
                 {
                     lsSlotWaifuSelectUI[i].waittingSlot.SetActive(false);
 
-                    var slotClone = lsSlotWaifuSelectUI[i].slotCharacter.AddComponent<SkeletonGraphic>();
+                    SkeletonGraphic slotClone = lsSlotWaifuSelectUI[i].slotCharacter.AddComponent<SkeletonGraphic>();
                     slotClone.skeletonDataAsset = AssetLoader.instance.GetAvaById(userData.characterInfo.Characters.FirstOrDefault(f => f.ID == userData.data.lsIdSlotCharacter[i]).Nameid);
                     slotClone.initialSkinName = slotClone.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
                     slotClone.startingLoop = true;

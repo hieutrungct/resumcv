@@ -23,7 +23,7 @@ namespace Rubik_Casual
         Multi
     }
     
-    public enum Rare
+    public enum Rarity
     {
         UnCommon = 0,
         Common = 1,
@@ -48,7 +48,7 @@ namespace Rubik_Casual
         public string Name;
         public CharacterType CharacterType;
         public EffectType EffectType;
-        public Rare Rarity;
+        public Rarity Rarity;
         public int Role;
         public List<SkillName> skills;
         public int Critical;

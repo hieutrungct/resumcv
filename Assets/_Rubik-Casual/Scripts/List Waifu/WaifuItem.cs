@@ -115,7 +115,7 @@ namespace Rubik.ListWaifu
             //     }
             // }
            
-            //nameTxt.text = infoWaifu.Name.ToString();
+            nameTxt.text = infoWaifu.Name.ToString();
             levelTxt.text = "" + waifu.level;
             for(int i = 0; i < waifu.Star; i++)
             {
@@ -136,7 +136,7 @@ namespace Rubik.ListWaifu
                 });
             }
 
-            //inDeck.SetActive(character.isInDeck);
+            
 
         }
         

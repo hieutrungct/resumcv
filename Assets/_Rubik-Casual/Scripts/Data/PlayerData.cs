@@ -39,7 +39,7 @@ namespace RubikCasual.Data.Player
         public UserData()
         {
             UserName  = "hieuct";
-            UserId = "280602"; 
+            UserId = DateTime.Now.ToString("yyyyMMddHHmmss"); 
             Gold = 1000;
             Level = 1;
             Energy = 60;
