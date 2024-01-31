@@ -42,7 +42,7 @@ namespace RubikCasual.Data
         protected void Awake()
         {
             instance = this;
-            LoadStageAssets(indexStage - 1);
+            LoadStageAssets(indexStage);
         }
         IEnumerator ConvertStageAssets()
         {

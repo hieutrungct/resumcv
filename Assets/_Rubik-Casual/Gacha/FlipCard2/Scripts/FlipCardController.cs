@@ -51,7 +51,7 @@ namespace RubikCasual.FlipCard2
             gbTicket.transform.Find(NameGbTxtValue).GetComponent<TextMeshProUGUI>().text = dataController.userData.Ticket.ToString();
             if (dataController.userData.Ticket < 1)
             {
-                TxtBtn.text = "Out Ticket";
+                TxtBtn.text = "Out Ticket!";
             }
             CreateCard();
             SetLsCardForId();
@@ -107,20 +107,29 @@ namespace RubikCasual.FlipCard2
                     });
 
                 }
+                TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbTxtValue).GetComponent<TextMeshProUGUI>();
+                txtGbTicket.text = dataController.userData.Ticket.ToString();
+                TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
+                txtGbTicketClone.text = "-1";
+                txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
+                txtGbTicketClone.color = Color.red;
+                txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
+                .OnComplete(() =>
+                {
+                    Destroy(txtGbTicketClone.gameObject);
+                });
             }
             else
             {
-                TxtBtn.text = "Out Ticket";
-                Debug.Log("Hết vé");
+                TxtBtn.text = "Out Ticket!";
+                TxtBtn.DOColor(Color.red, 1f)
+                .OnComplete(() =>
+                {
+                    TxtBtn.DOColor(Color.white, 1f);
+                });
+                // Debug.Log("Hết vé");
             }
-            TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbTxtValue).GetComponent<TextMeshProUGUI>();
-            txtGbTicket.text = dataController.userData.Ticket.ToString();
-            TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
-            txtGbTicketClone.text = "-1";
-            txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
-            txtGbTicketClone.color = Color.red;
-            txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
-            .OnComplete(() => { Destroy(txtGbTicketClone.gameObject); });
+
         }
         void ResetGatcha()
         {
