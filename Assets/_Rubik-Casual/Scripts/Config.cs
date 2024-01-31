@@ -20,7 +20,7 @@ public class Config : MonoBehaviour
 {
     public static string color_Rare_R = "#2B74CE";
     public static string color_BackGlow_Rare_R = "#7AF7FF";
-    public static string color_Rare_SR = "#53D804";
+    public static string color_Rare_SR = "#83D801";
     public static string color_BackGlow_Rare_SR = "#92F358";
     public static string color_Rare_SSR ="#FF4F00";
     public static string color_BackGlow_Rare_SSR =  "#E2772C";

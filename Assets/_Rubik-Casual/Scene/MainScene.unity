@@ -44762,7 +44762,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2089011624}
         m_TargetAssemblyTypeName: RubikCasual.Lobby.WaifuSelectController, Assembly-CSharp
-        m_MethodName: CreateListAvaWaifu
+        m_MethodName: SelectWaifuOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

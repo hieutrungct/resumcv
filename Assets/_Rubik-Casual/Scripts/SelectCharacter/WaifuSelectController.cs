@@ -31,14 +31,21 @@ namespace RubikCasual.Lobby
         {
             instance = this;
             userData = UserData.instance;
-            CreatListSeclecWaifu();
-            CreateListAvaWaifu();
+            // CreatListSeclecWaifu();
+            // CreateListAvaWaifu();
             Waifus = DataController.instance.playerData.lsPlayerOwnsWaifu;
-            SortPower();
+            // SortPower();
 
             
 
         }
+        public void SelectWaifuOnClick()
+        {
+            CreatListSeclecWaifu();
+            CreateListAvaWaifu();
+            SortPower();
+        }
+
         void Update()
         {
             // if (userData.data.isChange)
