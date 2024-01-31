@@ -85,16 +85,16 @@ namespace Rubik.ListWaifu
             {
                 switch (infoWaifu.Rare)
                 {
-                    case RubikCasual.Waifu.Rare.R:
+                    case Rare.R:
                         SetRarityColors(1, Config.color_Rare_R, Config.color_BackGlow_Rare_R);
                         break;
-                    case RubikCasual.Waifu.Rare.SR:
+                    case Rare.SR:
                         SetRarityColors(2, Config.color_Rare_SR, Config.color_BackGlow_Rare_SR);
                         break;
-                    case RubikCasual.Waifu.Rare.SSR:
+                    case Rare.SSR:
                         SetRarityColors(3, Config.color_Rare_SSR, Config.color_BackGlow_Rare_SSR);
                         break;
-                    case RubikCasual.Waifu.Rare.UR:
+                    case Rare.UR:
                         SetRarityColors(4, Config.color_Rare_UR, Config.color_BackGlow_Rare_UR);
                         break;
                 }

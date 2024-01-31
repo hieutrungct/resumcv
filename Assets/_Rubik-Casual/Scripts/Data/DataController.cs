@@ -181,13 +181,24 @@ namespace RubikCasual.Data
         }
         public void UpdateWaifu(PlayerOwnsWaifu waifu, float curGoldUpdate)
         {
+            if(userData.Gold > curGoldUpdate)
+            {
+                userData.Gold -= curGoldUpdate;
+            }
+            else
+            {
+                Debug.Log("Bạn ko đủ tiền");
+                return;
+            }
             waifu.level += 1;
             waifu.ATK +=10;
             waifu.DEF += 10;
             waifu.Pow += 10;
             waifu.HP += 10;
             SavePlayerOwnsWaifuDataToJson();
-            userData.Gold -= curGoldUpdate;
+            
+
+            
             BtnSaveUserDataToJson();
             HUDController.instanse.LoadStatusNumber();
         }
