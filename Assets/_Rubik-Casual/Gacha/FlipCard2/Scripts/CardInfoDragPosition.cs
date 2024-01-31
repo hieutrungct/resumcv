@@ -82,7 +82,7 @@ namespace RubikCasual.FlipCard2
             {
                 Destroy(infoCard.SkeWaifu.gameObject);
             }
-            infoCard.txtRare.text = this.infoWaifuAsset.Rare;
+            infoCard.txtRare.text = this.infoWaifuAsset.Rare.ToString();
             infoCard.SkeWaifu = DataController.instance.characterAssets.WaifuAssets.Get2D(this.infoWaifuAsset.ID.ToString());
             infoCard.SkeWaifu.transform.SetParent(infoCard.posWaifu);
             infoCard.SkeWaifu.transform.position = infoCard.posWaifu.position;

@@ -66,7 +66,7 @@ namespace RubikCasual.Lobby
             //     }
             // }
         }
-        void CreateListAvaWaifu()
+        public void CreateListAvaWaifu()
         {
             foreach (Transform child in WaifuInitLocation)
             {

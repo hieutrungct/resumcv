@@ -44,6 +44,10 @@ namespace RubikCasual.Data.Player
             Level = 1;
             Energy = 60;
             Ticket = 10;
+            for (int i = 0; i < 5; i++)
+            {
+                CurentTeam.Add(0);
+            }
 
         }
         public static UserData GetDefaultUserData()
