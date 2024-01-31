@@ -10,22 +10,41 @@ using UnityEngine;
 
 namespace RubikCasual.CreateSkill
 {
+    [Serializable]
+    public class SkillHero
+    {
+        public int Id, Row, Column;
+        public TypeSkill typeSkill;
+        public float durationWave, durationAttacked;
+    }
+    public enum TypeSkill
+    {
+        Other = 0,
+        Wave = 1,
+    }
     public class CharacterSetSkillController : MonoBehaviour
     {
         public DataController dataController;
         public MapBattleController mapBattleController;
         public string indexId = "1";
-        public SkeletonAnimation characterClone;
+        SkeletonAnimation characterClone;
         public bool isSkill;
         public List<GameObject> lsSlotGbEnemy;
         public CharacterInBattle EnemyInBattle;
         public int Row, Column, SlotCharacter;
+        public TypeSkill typeSkill;
+        public float durationWave = 0.25f, durationAttacked = 0.5f;
         float attribute = 1;
         // public float SlotCharacter = 2;
         void Start()
         {
             dataController = DataController.instance;
-
+            StartCoroutine(LoadMap());
+        }
+        IEnumerator LoadMap()
+        {
+            yield return new WaitForSeconds(0.25f);
+            CreateEnemy();
         }
 
         [Button]
@@ -47,9 +66,9 @@ namespace RubikCasual.CreateSkill
         [Button]
         void BtnUseSkill()
         {
-            StartCoroutine(SetAnimSkill());
+            SetAnimSkill();
         }
-        IEnumerator SetAnimSkill()
+        void SetAnimSkill()
         {
             characterClone.AnimationName = NameAnim.Anim_Character_Skill;
             characterClone.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
@@ -60,7 +79,6 @@ namespace RubikCasual.CreateSkill
                     characterClone.AnimationName = NameAnim.Anim_Character_Idle;
                 }
             };
-            yield return new WaitForSeconds(0.5f);
             UseSkill(Row, Column, SlotCharacter);
 
         }
@@ -78,7 +96,6 @@ namespace RubikCasual.CreateSkill
                 SpawnEnemyForStage(i, i);
             }
         }
-        [Button]
         void UseSkill(int row, int column, int slotCharacter = 2)
         {
             int minColumn = 0;
@@ -107,27 +124,53 @@ namespace RubikCasual.CreateSkill
                     }
                 }
             }
-
-
-            int count = 0;
-            for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
+            StartCoroutine(ShowSkill(row, column, minColumn));
+        }
+        IEnumerator ShowSkill(int row, int column, int minColumn)
+        {
+            yield return new WaitForSeconds(durationAttacked);
+            if (typeSkill == TypeSkill.Wave)
             {
-                for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
+                int count = 0;
+                for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
                 {
-                    if (lsSlotGbEnemy[count] != null)
+                    yield return new WaitForSeconds(durationWave);
+                    for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
                     {
-                        if (i < row)
+                        if (lsSlotGbEnemy[count] != null)
                         {
-                            if (j < column && j >= minColumn)
+                            if (i < row)
                             {
-                                Debug.Log("j: " + j + ", i: " + i);
-                                Debug.Log("column: " + column);
-                                SetAttacked(count);
+                                if (j < column && j >= minColumn)
+                                {
+                                    SetAttacked(count);
+                                }
                             }
                         }
-                    }
 
-                    count++;
+                        count++;
+                    }
+                }
+            }
+            else
+            {
+                int count = 0;
+                for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
+                {
+                    for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
+                    {
+                        if (lsSlotGbEnemy[count] != null)
+                        {
+                            if (i < row)
+                            {
+                                if (j < column && j >= minColumn)
+                                {
+                                    SetAttacked(count);
+                                }
+                            }
+                        }
+                        count++;
+                    }
                 }
             }
         }

@@ -65,7 +65,7 @@ namespace RubikCasual.Battle.UI
 
         public int GetSlotInventory()
         {
-            int resultSlot = 0;
+            int resultSlot = -1;
             for (int i = 0; i < lsSlotInventory.Count; i++)
             {
                 if (lsSlotInventory[i].GetComponentsInChildren<SlotInventory>().Length == 0)
@@ -103,7 +103,11 @@ namespace RubikCasual.Battle.UI
         public void CreateItemInInventory(GameObject gbItem, int idItem)
         {
             int idSlot = GetSlotInventory();
-            // Debug.Log(idSlot);
+            if (idSlot == -1)
+            {
+                Destroy(gbItem);
+                return;
+            }
             gbItem.transform.SetParent(GameObject.Find("CanvasUI").transform);
 
             SlotInventory itemClone = CreateSlotInventory(idSlot, idItem);
