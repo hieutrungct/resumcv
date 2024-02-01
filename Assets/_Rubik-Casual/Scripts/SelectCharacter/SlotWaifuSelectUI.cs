@@ -98,7 +98,8 @@ namespace RubikCasual.Lobby
         {
             int temp = WaifuSelectController.instance.CheckIndexOfWaifu(thisWaifu);
             thisWaifu = WaifuSelectController.instance.GetWaifu(temp);
-            Debug.Log("Số index của ava slot là: " + temp);
+            // Debug.Log("Số index của ava slot là: " + temp);
+            
             // slotWaifuAva.iconSelect.SetActive(false);
             // avaBox_Obj.SetActive(false);
             // slotWaifuAva = null;
