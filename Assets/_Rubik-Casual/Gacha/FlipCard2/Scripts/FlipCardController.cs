@@ -97,6 +97,18 @@ namespace RubikCasual.FlipCard2
                         BtnMoveCard(0);
                     }
                     TxtBtn.text = "Get Again";
+                    //Cài đặt hành động text
+                    TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
+                    txtGbTicket.text = dataController.userData.Ticket.ToString();
+                    TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
+                    txtGbTicketClone.text = "-1";
+                    txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
+                    txtGbTicketClone.color = Color.red;
+                    txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
+                    .OnComplete(() =>
+                    {
+                        Destroy(txtGbTicketClone.gameObject);
+                    });
                 }
                 else
                 {
@@ -111,17 +123,6 @@ namespace RubikCasual.FlipCard2
                     });
 
                 }
-                TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
-                txtGbTicket.text = dataController.userData.Ticket.ToString();
-                TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
-                txtGbTicketClone.text = "-1";
-                txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
-                txtGbTicketClone.color = Color.red;
-                txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
-                .OnComplete(() =>
-                {
-                    Destroy(txtGbTicketClone.gameObject);
-                });
             }
             else
             {

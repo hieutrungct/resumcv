@@ -21,6 +21,8 @@ namespace RubikCasual.CreateSkill
     {
         Other = 0,
         Wave = 1,
+        InTurn = 2,
+
     }
     public class CharacterSetSkillController : MonoBehaviour
     {
@@ -31,7 +33,7 @@ namespace RubikCasual.CreateSkill
         public bool isSkill;
         public List<GameObject> lsSlotGbEnemy;
         public CharacterInBattle EnemyInBattle;
-        public int Row, Column, SlotCharacter;
+        public int Row, Column, SlotCharacter, InTurn = 1;
         public TypeSkill typeSkill;
         public float durationWave = 0.25f, durationAttacked = 0.5f;
         float attribute = 1;
@@ -124,65 +126,92 @@ namespace RubikCasual.CreateSkill
                     }
                 }
             }
-            StartCoroutine(ShowSkill(row, column, minColumn));
+            StartCoroutine(ShowSkill(row, column, minColumn, InTurn));
         }
-        IEnumerator ShowSkill(int row, int column, int minColumn)
+        IEnumerator ShowSkill(int row, int column, int minColumn, int inTurn = 1)
         {
             yield return new WaitForSeconds(durationAttacked);
-            if (typeSkill == TypeSkill.Wave)
+            int count = 0;
+            switch (typeSkill)
             {
-                int count = 0;
-                for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
-                {
-                    yield return new WaitForSeconds(durationWave);
-                    for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
+                case TypeSkill.Wave:
+                    for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
                     {
-                        if (lsSlotGbEnemy[count] != null)
+                        yield return new WaitForSeconds(durationWave);
+                        for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
                         {
-                            if (i < row)
+                            if (lsSlotGbEnemy[count] != null)
                             {
-                                if (j < column && j >= minColumn)
+                                if (i < row)
                                 {
-                                    SetAttacked(count);
+                                    if (j < column && j >= minColumn)
+                                    {
+                                        SetAttacked(count);
+                                    }
                                 }
                             }
-                        }
 
-                        count++;
+                            count++;
+                        }
                     }
-                }
-            }
-            else
-            {
-                int count = 0;
-                for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
-                {
-                    for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
+                    break;
+
+                case TypeSkill.InTurn:
+                    if (inTurn > 0)
                     {
-                        if (lsSlotGbEnemy[count] != null)
+                        for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
                         {
-                            if (i < row)
+                            for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
                             {
-                                if (j < column && j >= minColumn)
+                                if (lsSlotGbEnemy[count] != null)
                                 {
-                                    SetAttacked(count);
+                                    if (i < row)
+                                    {
+                                        if (j < column && j >= minColumn)
+                                        {
+                                            SetAttacked(count);
+                                        }
+                                    }
                                 }
+                                count++;
                             }
                         }
-                        count++;
+                        StartCoroutine(ShowSkill(row, column, minColumn, inTurn - 1));
                     }
-                }
+                    break;
+
+                default:
+                    for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
+                    {
+                        for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
+                        {
+                            if (lsSlotGbEnemy[count] != null)
+                            {
+                                if (i < row)
+                                {
+                                    if (j < column && j >= minColumn)
+                                    {
+                                        SetAttacked(count);
+                                    }
+                                }
+                            }
+                            count++;
+                        }
+                    }
+                    break;
             }
         }
         void SetAttacked(int count)
         {
             SkeletonAnimation skeletonEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
-            skeletonEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
+
             skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
             skeletonEnemy.AnimationState.Complete += delegate
             {
-                skeletonEnemy.AnimationName = NameAnim.Anim_Character_Idle;
-                skeletonEnemy.loop = true;
+                if (skeletonEnemy.AnimationName != NameAnim.Anim_Character_Idle)
+                {
+                    skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Idle, true);
+                }
             };
         }
         void SpawnEnemyForStage(int idStage, int idRowSlot)

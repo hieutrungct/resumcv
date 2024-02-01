@@ -1343,6 +1343,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8067613611410967589, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}
+      propertyPath: imageBackGround
+      value: 
+      objectReference: {fileID: 902648376}
     - target: {fileID: 8581885278249222646, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

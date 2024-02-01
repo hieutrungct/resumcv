@@ -2047,14 +2047,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataController: {fileID: 0}
   mapBattleController: {fileID: 639942834}
-  indexId: 1
-  characterClone: {fileID: 0}
+  indexId: 90
   isSkill: 0
   lsSlotGbEnemy: []
   EnemyInBattle: {fileID: 395090608089745406, guid: 1546607ea83eefb41ab4a76d5319b6b8, type: 3}
-  Row: 0
-  Column: 0
-  SlotCharacter: 0
+  Row: 3
+  Column: 3
+  SlotCharacter: 3
+  InTurn: 1
+  typeSkill: 0
+  durationWave: 0.25
+  durationAttacked: 0.45
 --- !u!1 &664159471
 GameObject:
   m_ObjectHideFlags: 0
@@ -5517,8 +5520,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lsConvertStageAssetsData: []
-  AssetData: {fileID: 4900000, guid: b8c483c1efdee9244b91c3c48ee07303, type: 3}
+  lsAssetData:
+  - {fileID: 4900000, guid: b8c483c1efdee9244b91c3c48ee07303, type: 3}
   idTest: 0
+  indexStage: 1
 --- !u!1 &2552376162577883275
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +5582,8 @@ MonoBehaviour:
       Gem: 0
       Hp: 0
       Exp: 0
+      Ticket: 10
+      DiamondTicket: 0
       Level: 0
       Energy: 0
       Rank: 0
@@ -5595,6 +5602,8 @@ MonoBehaviour:
     Gem: 0
     Hp: 0
     Exp: 0
+    Ticket: 10
+    DiamondTicket: 0
     Level: 0
     Energy: 0
     Rank: 0
