@@ -30,12 +30,16 @@ namespace RubikCasual.FlipCard2
             imageBackGround.transform.position = posOriginImageBackGround;
             gameObject.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f);
             MoveImageBackGround(ValuePosImageBackGround);
-            ShowInfoCard();
+
         }
         void OnMouseExit()
         {
             gameObject.transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
             MoveImageBackGround(-ValuePosImageBackGround);
+        }
+        void OnMouseDown()
+        {
+            ShowInfoCard();
         }
         public void SetValueMoveBackGround(int idSlot)
         {
@@ -88,8 +92,13 @@ namespace RubikCasual.FlipCard2
             infoCard.SkeWaifu.transform.position = infoCard.posWaifu.position;
             infoCard.SkeWaifu.loop = true;
             infoCard.SkeWaifu.AnimationName = NameAnim.Anim_Character_Idle;
+            infoCard.SkeWaifu.GetComponent<MeshRenderer>().sortingLayerName = "ShowPopup";
+            infoCard.SkeWaifu.GetComponent<MeshRenderer>().sortingOrder = 10;
+
             infoCard.SkeWaifu.gameObject.transform.localScale = infoCard.SkeWaifu.gameObject.transform.localScale * 2 / 3f;
 
+
+            infoCard.txtNameWaifu.text = this.infoWaifuAsset.Name;
             infoCard.txtValueFrag.text = this.frag.ToString();
 
             for (int i = 0; i < 5; i++)
