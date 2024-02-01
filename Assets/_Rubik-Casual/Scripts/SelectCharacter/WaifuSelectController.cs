@@ -92,6 +92,18 @@ namespace RubikCasual.Lobby
         {
             Waifus.Sort((charA, charB) =>
             {
+
+                bool isCharAInCurentTeam = DataController.instance.userData.CurentTeam.Contains(charA.ID);
+                bool isCharBInCurentTeam = DataController.instance.userData.CurentTeam.Contains(charB.ID);
+
+                if (isCharAInCurentTeam && !isCharBInCurentTeam)
+                {
+                    return 1; // Đẩy charA lên trên
+                }
+                else if (!isCharAInCurentTeam && isCharBInCurentTeam)
+                {
+                    return -1; // Đẩy charB lên trên
+                }
                 InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
                 InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
                 int result = (charA.Pow + charA.ATK).CompareTo(charB.Pow + charB.ATK);
