@@ -20,6 +20,12 @@ namespace RubikCasual.FlipCard2
         public string Code;
         public string Rare;
     }
+    public class NameGbFlipCard
+    {
+        public const string NameGbIcon = "Icon", NameGbBackCard = "BackCard", NameGbFrontCard = "FrontCard",
+         NameGbTxtNewWaifu = "NewWaifu", NameGbTxtGetWaifu = "TxtGetWaifu", NameGbDimed = "Dimed",
+         NameGbTxtValue = "TxtValue";
+    }
     public class FlipCardController : MonoBehaviour
     {
         public GameObject gbTest, gbInfoCard, imageBackGround, gbTicket, gbInfoCardWithMouse;
@@ -32,9 +38,7 @@ namespace RubikCasual.FlipCard2
         TextMeshProUGUI TxtBtn;
         DataController dataController;
         bool isClick = false, ChangeType, isHaveMove;
-        const string NameGbIcon = "Icon", NameGbBackCard = "BackCard", NameGbFrontCard = "FrontCard",
-                    NameGbTxtNewWaifu = "NewWaifu", NameGbTxtGetWaifu = "TxtGetWaifu", NameGbDimed = "Dimed",
-                    NameGbTxtValue = "TxtValue";
+
         Rubik_Casual.AssetLoader assetLoader;
         Vector3 originOriginGbInfoCard;
         public static FlipCardController instance;
@@ -47,8 +51,8 @@ namespace RubikCasual.FlipCard2
         {
 
             dataController = DataController.instance;
-            TxtBtn = btnGetWaifu.transform.Find(NameGbTxtGetWaifu).GetComponent<TextMeshProUGUI>();
-            gbTicket.transform.Find(NameGbTxtValue).GetComponent<TextMeshProUGUI>().text = dataController.userData.Ticket.ToString();
+            TxtBtn = btnGetWaifu.transform.Find(NameGbFlipCard.NameGbTxtGetWaifu).GetComponent<TextMeshProUGUI>();
+            gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>().text = dataController.userData.Ticket.ToString();
             if (dataController.userData.Ticket < 1)
             {
                 TxtBtn.text = "Out Ticket!";
@@ -61,7 +65,7 @@ namespace RubikCasual.FlipCard2
                 BtnGacha();
             });
 
-            this.transform.Find(NameGbDimed).gameObject.AddComponent<Button>().onClick.AddListener(() =>
+            this.transform.Find(NameGbFlipCard.NameGbDimed).gameObject.AddComponent<Button>().onClick.AddListener(() =>
             {
                 if (!isHaveMove)
                 {
@@ -107,7 +111,7 @@ namespace RubikCasual.FlipCard2
                     });
 
                 }
-                TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbTxtValue).GetComponent<TextMeshProUGUI>();
+                TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
                 txtGbTicket.text = dataController.userData.Ticket.ToString();
                 TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
                 txtGbTicketClone.text = "-1";
@@ -138,10 +142,10 @@ namespace RubikCasual.FlipCard2
                 item.transform.position = posInstantiateCard.position;
                 item.transform.localScale = new Vector3();
 
-                Transform transBackCard = item.transform.Find(NameGbBackCard);
+                Transform transBackCard = item.transform.Find(NameGbFlipCard.NameGbBackCard);
                 transBackCard.localScale = new Vector3(1f, 1f, 1f);
 
-                Transform transFrontCard = item.transform.Find(NameGbFrontCard);
+                Transform transFrontCard = item.transform.Find(NameGbFlipCard.NameGbFrontCard);
                 transFrontCard.localScale = new Vector3(0, 1f, 1f);
 
             }
@@ -218,14 +222,14 @@ namespace RubikCasual.FlipCard2
 
                     infoCardClone.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
 
-                    Transform transBackCard = infoCardClone.transform.Find(NameGbBackCard);
+                    Transform transBackCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbBackCard);
                     transBackCard.DOScale(new Vector3(0, 1f, 1f), 0.25f);
 
-                    Transform transFrontCard = infoCardClone.transform.Find(NameGbFrontCard);
+                    Transform transFrontCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbFrontCard);
                     transFrontCard.GetComponent<Image>().sprite = lsSpriteCard[UnityEngine.Random.Range(0, lsSpriteCard.Count)];
                     transFrontCard.DOScale(new Vector3(1f, 1f, 1f), 0.25f);
 
-                    InfoWaifuAsset infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.FirstOrDefault(f => f.ID == lsCardGacha[index].ID);
+                    InfoWaifuAsset infoWaifuAsset = dataController.GetInfoWaifuAssetsByIndex(lsCardGacha[index].ID);
                     cardInfoDragPosition.infoWaifuAsset = infoWaifuAsset;
 
                     SetUpInfoCard(index, transFrontCard, cardInfoDragPosition);
@@ -248,21 +252,21 @@ namespace RubikCasual.FlipCard2
         }
         void SetUpInfoCard(int index, Transform transFrontCard, CardInfoDragPosition cardInfoDragPosition)
         {
-            string IDWaifu = cardInfoDragPosition.infoWaifuAsset.ID.ToString();
-            Transform transIcon = transFrontCard.Find(NameGbIcon);
+            int IDWaifu = cardInfoDragPosition.infoWaifuAsset.ID;
+            Transform transIcon = transFrontCard.Find(NameGbFlipCard.NameGbIcon);
 
             GameObject gbIcon = transIcon.gameObject;
             assetLoader = dataController.listImage;
 
-            string nameImage = MovePopup.GetNameImageWaifu(null, dataController.characterAssets.WaifuAssets.Get2D(IDWaifu));
+            string nameImage = MovePopup.GetNameImageWaifu(null, dataController.characterAssets.WaifuAssets.Get2D(IDWaifu.ToString()));
 
             Sprite sprite = assetLoader.Avatars.Find(f => f.name == nameImage);
             gbIcon.GetComponent<Image>().sprite = sprite;
 
-            TextMeshProUGUI txtNewWaifu = transFrontCard.Find(NameGbTxtNewWaifu).gameObject.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI txtNewWaifu = transFrontCard.Find(NameGbFlipCard.NameGbTxtNewWaifu).gameObject.GetComponent<TextMeshProUGUI>();
             txtNewWaifu.gameObject.SetActive(false);
             txtNewWaifu.text = "New Waifu";
-            Data.Player.PlayerOwnsWaifu playerOwnsWaifuClone = dataController.playerData.lsPlayerOwnsWaifu.Find(f => f.ID.ToString() == IDWaifu);
+            Data.Player.PlayerOwnsWaifu playerOwnsWaifuClone = dataController.playerData.lsPlayerOwnsWaifu.Find(f => f.ID == IDWaifu);
             if (playerOwnsWaifuClone == null)
             {
                 txtNewWaifu.gameObject.SetActive(true);
@@ -275,6 +279,7 @@ namespace RubikCasual.FlipCard2
                 playerOwnsWaifuClone.Star = infoWaifuAssetClone.Star;
                 playerOwnsWaifuClone.Skill = infoWaifuAssetClone.Skill;
                 playerOwnsWaifuClone.Pow = infoWaifuAssetClone.Pow;
+
 
                 dataController.playerData.lsPlayerOwnsWaifu.Add(playerOwnsWaifuClone);
             }
