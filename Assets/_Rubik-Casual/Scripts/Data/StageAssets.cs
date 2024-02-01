@@ -85,7 +85,7 @@ namespace RubikCasual.Data
             return result;
         }
         [Button]
-        void LoadStageAssets(int index)
+        public void LoadStageAssets(int index)
         {
             lsStageAssetsDatas = new List<StageAssetsData>();
 
