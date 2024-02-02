@@ -22,7 +22,7 @@ namespace RubikCasual.Battle
         public Transform PosCharacter;
         public Slider healthBar, cooldownAttackBar, cooldownSkillBar;
         public TextMeshProUGUI txtHealthBar;
-        public bool isAttack, isUseSkill, isEnemy = false, isCompleteMove = true, isBoss = false;
+        public bool isAttack, isUseSkill, isEnemy = false, isBoss = false;
         GameObject ItemDropClone;
 
         bool isHaveReward = false;

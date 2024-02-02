@@ -137,7 +137,7 @@ namespace Rubik.Axie
         }
         public void OnMouseDrag()
         {
-            if (BattleController.instance.gameState != GameState.WAIT_BATTLE)
+            if (BattleController.instance.gameState != GameState.WAIT_BATTLE || BattleController.instance.gameState == GameState.END)
             {
                 gameObject.transform.position = oriPos;
                 GetComponent<MeshRenderer>().sortingOrder = 10;
@@ -205,7 +205,7 @@ namespace Rubik.Axie
             GetComponent<MeshRenderer>().sortingLayerName = "Character";
             dragging = false;
         }
-       
+
 
     }
 

@@ -35,7 +35,6 @@ namespace RubikCasual.Battle
 
         public void BossUseSkill(CharacterInBattle EnemyInBattle, MapBattleController dameSlotTxtController, List<GameObject> lsSlotGbHero, float durationsTxtDame)
         {
-            EnemyInBattle.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Skill;
             // EnemyInBattle.skeletonCharacterAnimation.GetComponent<MeshRenderer>().sortingLayerName = Layer_Attack;
             EnemyInBattle.skeletonCharacterAnimation.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
             EnemyInBattle.isUseSkill = true;
@@ -57,8 +56,7 @@ namespace RubikCasual.Battle
                     CharacterInBattle HeroInBattle = lsSlotGbHero[index].GetComponent<CharacterInBattle>();
                     SkeletonAnimation AnimHero = HeroInBattle.skeletonCharacterAnimation;
                     AnimHero.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
-                    AnimHero.AnimationName = NameAnim.Anim_Character_Attacked;
-                    AnimHero.AnimationState.ClearTrack(0);
+
                     AnimHero.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                     AnimHero.AnimationState.Complete += delegate
                     {
@@ -84,7 +82,6 @@ namespace RubikCasual.Battle
         }
         public void CharacterUseSkill(CharacterInBattle CharacterAttack, MapBattleController dameSlotTxtController, List<GameObject> lsSlotGbEnemy, float durationsTxtDame)
         {
-            CharacterAttack.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Skill;
             CharacterAttack.skeletonCharacterAnimation.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attack;
             CharacterAttack.skeletonCharacterAnimation.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
             CharacterAttack.isUseSkill = true;
@@ -102,7 +99,6 @@ namespace RubikCasual.Battle
                 CharacterInBattle EnemyBossInBattle = lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>();
                 SkeletonAnimation AnimEnemy = EnemyBossInBattle.skeletonCharacterAnimation;
                 // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
-                AnimEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
 
                 AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                 AnimEnemy.AnimationState.Complete += delegate
@@ -131,9 +127,6 @@ namespace RubikCasual.Battle
                                 SkeletonAnimation AnimEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
 
                                 AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
-                                AnimEnemy.AnimationName = NameAnim.Anim_Character_Attacked;
-
-                                AnimEnemy.AnimationState.ClearTrack(0);
                                 AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
                                 AnimEnemy.AnimationState.Complete += delegate
                                 {
@@ -172,8 +165,6 @@ namespace RubikCasual.Battle
             SkeletonAnimation enemyAnim = enemyInBattle.skeletonCharacterAnimation;
             if (enemyInBattle.HpNow == 0)
             {
-                enemyAnim.AnimationName = NameAnim.Anim_Character_Die;
-                enemyAnim.AnimationState.ClearTrack(0);
                 enemyAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
                 enemyInBattle.isAttack = true;
                 enemyInBattle.GetRewardWhenKillEnemy();
@@ -202,7 +193,6 @@ namespace RubikCasual.Battle
             // CharacterAttackAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Attack;
             // CharacterAttackedAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Attacked;
 
-            CharacterAttackAnim.AnimationName = NameAnim.Anim_Character_Attack;
             CharacterAttackAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attack, false);
             CharacterInBattleAttack.isAttack = true;
             CharacterAttackAnim.AnimationState.Complete += delegate
@@ -220,7 +210,6 @@ namespace RubikCasual.Battle
 
             yield return new WaitForSeconds(durationsTxtDame / 3);
 
-            CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Attacked;
             CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
             CharacterAttackedAnim.AnimationState.Complete += delegate
             {
@@ -267,7 +256,6 @@ namespace RubikCasual.Battle
             if (CharacterInBattleAttacked.HpNow == 0)
             {
                 CharacterInBattleAttacked.isAttack = true;
-                CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Die;
 
                 CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
 

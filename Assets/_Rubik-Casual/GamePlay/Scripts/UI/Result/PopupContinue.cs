@@ -10,7 +10,7 @@ namespace RubikCasual.Battle.UI.Result
         public Button btnContinue, btnExit;
         void Start()
         {
-            ClickBtnContinue(); 
+            ClickBtnContinue();
             ClickBtnBackHomeScene();
         }
         void ClickBtnContinue()
