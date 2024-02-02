@@ -7720,19 +7720,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5319684427444583921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1244003899708065500}
-        m_TargetAssemblyTypeName: RubikCasual.InfoLevel.InfoLevelController, Assembly-CSharp
-        m_MethodName: TestloadGamePlay
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: GamePlay
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &306405897153878075
 GameObject:
   m_ObjectHideFlags: 0
@@ -24932,7 +24920,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7536758971076689807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -24968,7 +24956,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6415785120833884218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1244003899708065500}
+        m_TargetAssemblyTypeName: RubikCasual.InfoLevel.InfoLevelController, Assembly-CSharp
+        m_MethodName: LoadGamePlayScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7698139975260703718
 GameObject:
   m_ObjectHideFlags: 0
@@ -25423,6 +25423,7 @@ MonoBehaviour:
   buttonFinish: {fileID: 6415785120833884218}
   lockFinishNow: {fileID: 5125319051582457660}
   buttonFight: {fileID: 5319684427444583921}
+  buttonFightNow: {fileID: 6092778535223413739}
   enemyUi: {fileID: 8015633382522872352, guid: b7915de083937d44886ada826ed58175, type: 3}
   rewardUi: {fileID: 2121871557184472592, guid: 65830dd5e40f1d343a00c6998ee8a10d, type: 3}
   rewardUiPos: {fileID: 2219720022174722962}

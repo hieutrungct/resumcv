@@ -1,0 +1,265 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7decf71d60cb2fe438b4d9a0a160a517, type: 3}
+  m_Name: SceneLoaderManager
+  m_EditorClassIdentifier: 
+  loadingScreenMode: 1
+  sceneList:
+  - SceneName: Splash
+    SceneAsset: {fileID: 102900000, guid: f4e87c7ef75caa04dac24437d7be1a44, type: 3}
+    DisplayName: Login
+    Description: Prompta noluisse verterem sed eu, mundi graece eum in. Vis ut alia
+      euismod tincidunt, per no ubique euismod. Indoctum qualisque vituperata an
+      his. Timeam feugait id mel, vis in iuvaret fabulas. Quis veri diceret vix in,
+      numquam praesent elaboraret eum ne.
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 3.3
+    Backgrounds:
+    - {fileID: 21300000, guid: 51db0f12aa5577847847cf88295a3078, type: 3}
+    - {fileID: 21300000, guid: 615cb327a2ef9f94c980b7ca8a9077af, type: 3}
+    - {fileID: 21300000, guid: 51db0f12aa5577847847cf88295a3078, type: 3}
+    - {fileID: 21300000, guid: 615cb327a2ef9f94c980b7ca8a9077af, type: 3}
+  - SceneName: Example 11
+    SceneAsset: {fileID: 102900000, guid: c994af733cc3682459a0e9ca8b30fc3c, type: 3}
+    DisplayName: Scene Example Name1
+    Description: Prompta noluisse verterem sed eu, mundi graece eum in. Vis ut alia
+      euismod tincidunt, per no ubique euismod. Indoctum qualisque vituperata an
+      his. Timeam feugait id mel, vis in iuvaret fabulas. Quis veri diceret vix in,
+      numquam praesent elaboraret eum ne.
+    SkipType: 0
+    LoadingType: 0
+    FakeLoadingTime: 5.3
+    Backgrounds:
+    - {fileID: 21300000, guid: 2650407d6311724489f3256696e75bb0, type: 3}
+    - {fileID: 21300000, guid: af238b260179c884b93aa3248768f90b, type: 3}
+    - {fileID: 21300000, guid: d693da8ebc165674b9509bab6391e358, type: 3}
+  - SceneName: MainScene
+    SceneAsset: {fileID: 102900000, guid: b2be7b019132bd24ebc322eb528d47d0, type: 3}
+    DisplayName: 
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 12.5
+    Backgrounds:
+    - {fileID: 21300000, guid: 51db0f12aa5577847847cf88295a3078, type: 3}
+    - {fileID: 21300000, guid: 615cb327a2ef9f94c980b7ca8a9077af, type: 3}
+    - {fileID: 21300000, guid: 51db0f12aa5577847847cf88295a3078, type: 3}
+    - {fileID: 21300000, guid: 615cb327a2ef9f94c980b7ca8a9077af, type: 3}
+    - {fileID: 21300000, guid: 51db0f12aa5577847847cf88295a3078, type: 3}
+  - SceneName: SampleScene
+    SceneAsset: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+    DisplayName: GamePlay
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds:
+    - {fileID: 21300000, guid: 2569d0627ae6f9e449c22ec21ec55011, type: 3}
+    - {fileID: 21300000, guid: d5662675f390c1b48ba78e986eba9e53, type: 3}
+    - {fileID: 21300000, guid: d48c91e44021ae243ac715780524f2ac, type: 3}
+  - SceneName: Combat
+    SceneAsset: {fileID: 102900000, guid: 6cb2721292eb6004dbb3ac6c8e1680cd, type: 3}
+    DisplayName: Combat
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds:
+    - {fileID: 21300000, guid: 06b5d0ca03248264e97a5193c4d11e44, type: 3}
+    - {fileID: 21300000, guid: 24c249862bd6bed4996c50578e5030d5, type: 3}
+    - {fileID: 21300000, guid: 647060d4d8230ea4982b2131174515c4, type: 3}
+  - SceneName: Example 1
+    SceneAsset: {fileID: 102900000, guid: 95722ca89118e964cbbd539e75b63345, type: 3}
+    DisplayName: Example 1
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 2
+    SceneAsset: {fileID: 102900000, guid: 23b4b5f377b6fe34e9c8aaa713f716fb, type: 3}
+    DisplayName: Example 2
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 3
+    SceneAsset: {fileID: 102900000, guid: d5389027e3a6b2242a041ed311ae651c, type: 3}
+    DisplayName: Example 3
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 4
+    SceneAsset: {fileID: 102900000, guid: 226422f65b6555840b1d5f6df4a79b74, type: 3}
+    DisplayName: Example 4
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 5
+    SceneAsset: {fileID: 102900000, guid: c03bd6dfd58da3a478c7a308f23d21e1, type: 3}
+    DisplayName: Example 5
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 6
+    SceneAsset: {fileID: 102900000, guid: a527073b0c7e8a649bad4e2441d6297d, type: 3}
+    DisplayName: Example 6
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 7
+    SceneAsset: {fileID: 102900000, guid: c93e62f33f0a8e84bb17060f84295007, type: 3}
+    DisplayName: Example 7
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 8
+    SceneAsset: {fileID: 102900000, guid: 4cbf69233847799488a754316d9e4d04, type: 3}
+    DisplayName: Example 8
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 9
+    SceneAsset: {fileID: 102900000, guid: 26419d9d24baf534ea6499686606af7d, type: 3}
+    DisplayName: Example 9
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 10
+    SceneAsset: {fileID: 102900000, guid: 92e3f9a7a53ef024ab30e63dd253d25e, type: 3}
+    DisplayName: Example 10
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 12
+    SceneAsset: {fileID: 102900000, guid: 07add6901d26b304aa83d93495a370ce, type: 3}
+    DisplayName: Example 12
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 13
+    SceneAsset: {fileID: 102900000, guid: e6793006f9639c6479fbf225b0a01f9d, type: 3}
+    DisplayName: Example 13
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 14
+    SceneAsset: {fileID: 102900000, guid: 9e16e68a5e2b52b4fbceada4635e2853, type: 3}
+    DisplayName: Example 14
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 15
+    SceneAsset: {fileID: 102900000, guid: 1518005ddfb9f06488bd5cdd11a12b46, type: 3}
+    DisplayName: Example 15
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Example 16
+    SceneAsset: {fileID: 102900000, guid: 34e63df625a2d3a44bfa4fd90001c69d, type: 3}
+    DisplayName: Example 16
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Home Screen
+    SceneAsset: {fileID: 102900000, guid: 36d16842e0248e141bbec00fd52600cf, type: 3}
+    DisplayName: Home Screen
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: SampleScene
+    SceneAsset: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+    DisplayName: GamePlay
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: FlappyAxie
+    SceneAsset: {fileID: 102900000, guid: 3e62be8942ba54570a24aa9cc83af773, type: 3}
+    DisplayName: FlappyAxie
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Splash
+    SceneAsset: {fileID: 102900000, guid: 56c2c169157e24b6ea08eb640cf2aa8d, type: 3}
+    DisplayName: Splash
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: HomeScene
+    SceneAsset: {fileID: 102900000, guid: 5e64d45769f31634f8ae878ed27e576e, type: 3}
+    DisplayName: HomeScene
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: Battle_Idle
+    SceneAsset: {fileID: 102900000, guid: 3d6693660ab779a48893088efd5a5e28, type: 3}
+    DisplayName: Battle_Idle
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  - SceneName: GamePlay
+    SceneAsset: {fileID: 102900000, guid: 1813530b4d40ec54a9aa8d99b6c864ab, type: 3}
+    DisplayName: GamePlay
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
+  tipsList:
+  - Create beautiful loading screens for improved your game
+  - Easy to use and implement
+  - 'Remember that have 3 diferent styles for select. '
+  - Create as many tips as you need
+  - Improved the look of your game with awasome backgrounds.
+  - Good backgrounds sounds increase the motivation of players.
+  buildSettingsAsFallback: 1
+  useSynchronousAsFallback: 1

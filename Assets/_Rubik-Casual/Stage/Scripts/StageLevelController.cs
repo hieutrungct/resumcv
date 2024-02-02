@@ -234,6 +234,7 @@ namespace RubikCasual.StageLevel
                     {
                         infoLevelClone.buttonFinish.sprite = infoLevelClone.unlockFinishNow;
                         infoLevelClone.lockFinishNow.enabled = false;
+                        infoLevelClone.buttonFightNow.interactable = true;
                     }
                 }
 
