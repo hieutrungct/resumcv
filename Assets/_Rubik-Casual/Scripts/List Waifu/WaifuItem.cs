@@ -19,7 +19,8 @@ namespace Rubik.ListWaifu
         public Image avaCard,attackType,avaBox, BackGlow,Glow,Role;
         public SkeletonGraphic UI_Waifu;
         private SkeletonAnimation ui_Waifu;
-        public TextMeshProUGUI nameTxt, levelTxt;
+        public TextMeshProUGUI nameTxt, levelTxt,lvProcessTxt;
+        public Slider exp;
         [SerializeField] GameObject[] stars;
         [SerializeField] BtnOnClick btnClick;
         //[SerializeField] public GameObject inDeck;
@@ -116,7 +117,9 @@ namespace Rubik.ListWaifu
             // }
            
             nameTxt.text = infoWaifu.Name.ToString();
-            levelTxt.text = "" + waifu.level;
+            levelTxt.text = waifu.level.ToString();
+            lvProcessTxt.text = waifu.Exp + " / " + exp.maxValue;
+            exp.value = waifu.Exp;
             for(int i = 0; i < waifu.Star; i++)
             {
                 stars[i].SetActive(true);

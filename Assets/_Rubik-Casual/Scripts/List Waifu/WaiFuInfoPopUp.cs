@@ -21,7 +21,7 @@ namespace Rubik.ListWaifu
         private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, goldTxt, selectTxt;
 
         // public Button btn_Arrow_r, btn_Arrow_l, btn_Update_Waifu, btn_Select;
-
+        public Slider exp;
 
         public Image role, avatar, btnselect, btnUpdate;
 
@@ -55,7 +55,8 @@ namespace Rubik.ListWaifu
 
             //role.sprite = AssetLoader.Instance.AttackSprite[waifu.Role];
             lvTxt.text = waifu.level.ToString();
-            lvProcessTxt.text = waifu.Exp + "/" + waifu.Exp;
+            lvProcessTxt.text = waifu.Exp + " / " + exp.maxValue;
+            exp.value = waifu.Exp;
             damageTxt.text = (infoWaifu.ATK + waifu.ATK).ToString();
             defenseTxt.text = (infoWaifu.DEF + waifu.DEF).ToString();
             critTxt.text = (infoWaifu.Pow + waifu.Pow).ToString();
