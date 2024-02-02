@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Rubik_Casual;
 using RubikCasual.InfoLevel.Reward;
 using RubikCasual.StageLevel;
 using TMPro;
@@ -15,6 +16,7 @@ namespace RubikCasual.InfoLevel
         public int id = 0;
         public TextMeshProUGUI textNameStage, textEnergy;
         public Image buttonFinish, lockFinishNow, buttonFight;
+        public Button buttonFightNow;
         public EnemyLevelUI enemyUi;
         public RewardLevelUI rewardUi;
         public Transform rewardUiPos, enemyUiPos;
@@ -36,9 +38,14 @@ namespace RubikCasual.InfoLevel
             Destroy(StageLevelController.instance.infoLevelClone.gameObject);
 
         }
-        public void TestloadGamePlay(string NameScene)
+        // public void TestloadGamePlay(string NameScene)
+        // {
+        //     UnityEngine.SceneManagement.SceneManager.LoadScene(NameScene);
+        // }
+        public void LoadGamePlayScene()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(NameScene);
+            HUDController.instanse.topPanel.SetActive(false);
+            bl_SceneLoaderManager.LoadScene(NameScene.GAMEPLAY_SCENE);
         }
     }
     [Serializable]
@@ -47,5 +54,6 @@ namespace RubikCasual.InfoLevel
         public Image iconEnemy;
         public List<GameObject> starEnemy;
     }
+    
 
 }

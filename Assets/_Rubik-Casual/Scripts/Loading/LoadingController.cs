@@ -47,11 +47,11 @@ namespace RubikCasual.Loading
             
             
         }
-        public void PlayGameOnClick()
+        public void LoadHomeScene()
         {
             
             
-            SceneManager.LoadScene(NameScene.HOME_SCENE);
+            bl_SceneLoaderManager.LoadScene(NameScene.HOME_SCENE);
             
         
         }
