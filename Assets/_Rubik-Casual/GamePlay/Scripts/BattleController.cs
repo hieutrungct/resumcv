@@ -30,7 +30,7 @@ namespace RubikCasual.Battle
         public List<int> idCurrentTeam = new List<int>();
         public DataController dataController;
         SetAnimCharacter setAnimCharacter;
-        bool isEndBattle = false, isRangeRemoved = false;
+        bool isEndBattle = false, isRangeRemoved = false, isCompleteMove = true;
         public bool isUpdateDmgEnemy = false;
         int CountState = 1, numberSlot = 5;
         public float attribute = 1;
@@ -54,7 +54,8 @@ namespace RubikCasual.Battle
 
         public void StartGame()
         {
-            if (gameState == GameState.WAIT_BATTLE && lsSlotGbEnemy.Find(f => f != null && f.GetComponent<CharacterInBattle>() != null).GetComponent<CharacterInBattle>().isCompleteMove)
+
+            if (gameState == GameState.WAIT_BATTLE && isCompleteMove && CountState != (dataController.stageAssets.lsConvertStageAssetsData.Count + 1))
             {
                 // UnityEngine.Debug.Log("h ms dc bấm");
                 gameState = GameState.START;
@@ -649,7 +650,7 @@ namespace RubikCasual.Battle
 
         void EndBattleMoveCharacter()
         {
-
+            this.isCompleteMove = false;
             if (!isRangeRemoved)
             {
 
@@ -714,14 +715,18 @@ namespace RubikCasual.Battle
                                     EnemyClone.cooldownSkillBar.gameObject.SetActive(false);
                                 }
                                 Tween TMoveEnemy = lsSlotGbEnemy[Count].transform.DOMoveX(mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot[j].transform.position.x, durations * 2);
+                                TMoveEnemy.OnComplete(() =>
+                                {
+                                    this.isCompleteMove = true;
+                                });
+
                                 if (lsSlotGbEnemy[Count].GetComponent<CharacterInBattle>() != null)
                                 {
 
                                     CharacterInBattle EnemyClone = lsSlotGbEnemy[Count].GetComponent<CharacterInBattle>();
-                                    EnemyClone.isCompleteMove = false;
+
                                     TMoveEnemy.OnComplete(() =>
                                     {
-                                        EnemyClone.isCompleteMove = true;
                                         if (!EnemyClone.isBoss)
                                         {
                                             EnemyClone.healthBar.gameObject.transform.SetParent(dameSlotTxtController.transform);
@@ -812,8 +817,7 @@ namespace RubikCasual.Battle
             if (lsSlotGbHero[i].GetComponent<CharacterInBattle>().HpNow <= 0)
             {
                 SkeletonAnimation heroAnim = lsSlotGbHero[i].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
-                heroAnim.AnimationState.ClearTrack(0);
-                heroAnim.AnimationName = NameAnim.Anim_Character_Die;
+
                 heroAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
                 heroAnim.AnimationState.Complete += delegate
                 {
