@@ -43,7 +43,7 @@ namespace RubikCasual.Data.Player
             Gold = 1000;
             Level = 1;
             Energy = 60;
-            Ticket = 1;
+            Ticket = 10;
             for (int i = 0; i < 5; i++)
             {
                 CurentTeam.Add(0);
