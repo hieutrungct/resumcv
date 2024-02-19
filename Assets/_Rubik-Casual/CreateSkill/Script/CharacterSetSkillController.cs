@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.Battle;
 using RubikCasual.Data;
+using RubikCasual.Waifu;
 using Sirenix.OdinInspector;
 using Spine.Unity;
 using Spine.Unity.Editor;
@@ -30,12 +31,13 @@ namespace RubikCasual.CreateSkill
         public MapBattleController mapBattleController;
         public string indexId = "1";
         SkeletonAnimation characterClone;
-        public bool isSkill;
+        public bool isSkin;
         public List<GameObject> lsSlotGbEnemy;
         public CharacterInBattle EnemyInBattle;
         public int Row, Column, SlotCharacter, InTurn = 1;
         public TypeSkill typeSkill;
         public float durationWave = 0.25f, durationAttacked = 0.5f;
+        public Transform transCharacter;
         float attribute = 1;
         // public float SlotCharacter = 2;
         void Start()
@@ -47,6 +49,7 @@ namespace RubikCasual.CreateSkill
         {
             yield return new WaitForSeconds(0.25f);
             CreateEnemy();
+            CreateCharacter();
         }
 
         [Button]
@@ -56,20 +59,38 @@ namespace RubikCasual.CreateSkill
             {
                 Destroy(characterClone.gameObject);
             }
-            characterClone = dataController.characterAssets.WaifuAssets.Get2D(indexId, isSkill);
-            characterClone.transform.SetParent(this.transform);
-            characterClone.transform.position = this.transform.position;
+            characterClone = dataController.characterAssets.WaifuAssets.Get2D(indexId, isSkin);
+            characterClone.transform.SetParent(transCharacter);
+            characterClone.transform.position = transCharacter.position;
             characterClone.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
             characterClone.loop = true;
             characterClone.AnimationName = NameAnim.Anim_Character_Idle;
             SpineEditorUtilities.ReinitializeComponent(characterClone);
 
+            if (transCharacter.gameObject.GetComponent<CharacterInBattle>() == null)
+            {
+                CharacterInBattle characterTest = transCharacter.gameObject.AddComponent<CharacterInBattle>();
+                characterTest.infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == int.Parse(indexId));
+                characterTest.Atk = (int)(characterTest.infoWaifuAsset.ATK * attribute);
+                characterTest.Skill = (int)(characterTest.infoWaifuAsset.Skill * attribute);
+            }
+            else
+            {
+                CharacterInBattle characterTest = transCharacter.gameObject.GetComponent<CharacterInBattle>();
+                characterTest.infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == int.Parse(indexId));
+                characterTest.Atk = (int)(characterTest.infoWaifuAsset.ATK * attribute);
+                characterTest.Skill = (int)(characterTest.infoWaifuAsset.Skill * attribute);
+            }
         }
         [Button]
         void BtnUseSkill()
         {
+            string value = InfoPanel.InfoPanel.instance.txtRow.text;
+            int IntTest = int.Parse(value);
+            Debug.Log(IntTest);
             SetAnimSkill();
         }
+
         void SetAnimSkill()
         {
             characterClone.AnimationName = NameAnim.Anim_Character_Skill;
@@ -84,13 +105,6 @@ namespace RubikCasual.CreateSkill
             UseSkill(Row, Column, SlotCharacter);
 
         }
-        [Button]
-        void SetAnimIdle()
-        {
-            characterClone.AnimationName = NameAnim.Anim_Character_Idle;
-            SpineEditorUtilities.ReinitializeComponent(characterClone);
-        }
-        [Button]
         void CreateEnemy()
         {
             for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
@@ -205,6 +219,7 @@ namespace RubikCasual.CreateSkill
         {
             SkeletonAnimation skeletonEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
 
+
             skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
             skeletonEnemy.AnimationState.Complete += delegate
             {
@@ -216,7 +231,6 @@ namespace RubikCasual.CreateSkill
         }
         void SpawnEnemyForStage(int idStage, int idRowSlot)
         {
-
             int index = idRowSlot;
             ListSlotPos lsPosSlot = mapBattleController.lsPosEnemySlot[index];
 
@@ -235,7 +249,6 @@ namespace RubikCasual.CreateSkill
                     mapBattleController.lsPosEnemySlot[index].lsPosCharacterSlot[j].id = idValueInSlot;
                     attribute *= dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
 
-
                     CharacterInBattle enemyInBattle = Instantiate(EnemyInBattle, posSlot.gameObject.transform);
                     enemyInBattle.indexOfSlot = indexOfSlot;
                     enemyInBattle.isEnemy = true;
@@ -244,7 +257,7 @@ namespace RubikCasual.CreateSkill
 
                     enemyInBattle.cooldownAttackBar.gameObject.SetActive(false);
                     enemyInBattle.cooldownSkillBar.gameObject.SetActive(false);
-                    enemyInBattle.healthBar.gameObject.SetActive(false);
+                    enemyInBattle.healthBar.gameObject.SetActive(true);
 
                     SkeletonAnimation Enemy = Instantiate(dataController.characterAssets.enemyAssets.Get2D(idValueInSlot.ToString()));
 
@@ -255,6 +268,18 @@ namespace RubikCasual.CreateSkill
                     Enemy.gameObject.transform.position = poscharacterInBattle.position;
                     Enemy.loop = true;
                     Enemy.AnimationName = NameAnim.Anim_Character_Idle;
+
+                    enemyInBattle.infoWaifuAsset = dataController.characterAssets.enemyAssets.infoEnemyAssets.lsInfoWaifuAssets.Find(f => f.Code == idValueInSlot.ToString());
+
+                    enemyInBattle.cooldownAttackBar.value = 0;
+                    enemyInBattle.cooldownSkillBar.value = 0;
+                    enemyInBattle.healthBar.value = 1;
+                    enemyInBattle.Rage = 0;
+                    enemyInBattle.Hp = (int)(enemyInBattle.infoWaifuAsset.HP * attribute);
+                    enemyInBattle.Def = (int)(enemyInBattle.infoWaifuAsset.DEF * attribute);
+                    enemyInBattle.Atk = (int)(enemyInBattle.infoWaifuAsset.ATK * attribute);
+                    enemyInBattle.HpNow = (int)(enemyInBattle.infoWaifuAsset.HP * attribute);
+
                     if (enemyInBattle.isEnemy)
                     {
                         Enemy.initialFlipX = true;
@@ -270,5 +295,14 @@ namespace RubikCasual.CreateSkill
                 }
             }
         }
+        [Button]
+        void SaveCharacterSkill()
+        {
+            CharacterInBattle Character = transCharacter.GetComponent<CharacterInBattle>();
+            InfoWaifuAsset infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == Character.infoWaifuAsset.ID);
+
+            infoWaifuAsset = Character.infoWaifuAsset;
+        }
+
     }
 }

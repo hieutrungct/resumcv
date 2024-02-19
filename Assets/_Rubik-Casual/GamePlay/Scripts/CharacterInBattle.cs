@@ -9,6 +9,7 @@ using RubikCasual.Waifu;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace RubikCasual.Battle
@@ -29,8 +30,11 @@ namespace RubikCasual.Battle
 
         void Start()
         {
-            AddRewardWhenKillEnemy();
-
+            Scene SceneTarget = SceneManager.GetSceneByName(NameScene.GAMEPLAY_SCENE);
+            if (gameObject.scene == SceneTarget)
+            {
+                AddRewardWhenKillEnemy();
+            }
         }
 
         void AddRewardWhenKillEnemy()
