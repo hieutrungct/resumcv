@@ -83,7 +83,7 @@ namespace RubikCasual.FlipCard2
                 if (!isHaveMove)
                 {
                     isHaveMove = true;
-                    dataController.userData.Ticket = dataController.userData.Ticket - 1;
+                    dataController.userData.Ticket = dataController.userData.Ticket - 10;
                     if (!isClick)
                     {
                         isClick = !isClick;
@@ -114,7 +114,7 @@ namespace RubikCasual.FlipCard2
                 TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
                 txtGbTicket.text = dataController.userData.Ticket.ToString();
                 TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
-                txtGbTicketClone.text = "-1";
+                txtGbTicketClone.text = "-10";
                 txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
                 txtGbTicketClone.color = Color.red;
                 txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
