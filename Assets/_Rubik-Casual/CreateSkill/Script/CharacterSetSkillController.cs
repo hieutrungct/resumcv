@@ -2,7 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.Battle;
+using RubikCasual.Battle.Calculate;
+using RubikCasual.CreateSkill.Panel;
 using RubikCasual.Data;
+using RubikCasual.Tool;
 using RubikCasual.Waifu;
 using Sirenix.OdinInspector;
 using Spine.Unity;
@@ -23,7 +26,6 @@ namespace RubikCasual.CreateSkill
         Other = 0,
         Wave = 1,
         InTurn = 2,
-
     }
     public class CharacterSetSkillController : MonoBehaviour
     {
@@ -52,17 +54,19 @@ namespace RubikCasual.CreateSkill
             CreateCharacter();
         }
 
-        [Button]
-        void CreateCharacter()
+        public void CreateCharacter()
         {
             if (characterClone != null)
             {
                 Destroy(characterClone.gameObject);
             }
+            indexId = Panel.ChoseWaifuPanel.instance.inputFieldIndexId.text;
+            isSkin = Panel.ChoseWaifuPanel.instance.toggleIsSkin.isOn;
+
             characterClone = dataController.characterAssets.WaifuAssets.Get2D(indexId, isSkin);
             characterClone.transform.SetParent(transCharacter);
             characterClone.transform.position = transCharacter.position;
-            characterClone.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
+            characterClone.GetComponent<MeshRenderer>().sortingLayerName = "ShowPopup";
             characterClone.loop = true;
             characterClone.AnimationName = NameAnim.Anim_Character_Idle;
             SpineEditorUtilities.ReinitializeComponent(characterClone);
@@ -81,13 +85,33 @@ namespace RubikCasual.CreateSkill
                 characterTest.Atk = (int)(characterTest.infoWaifuAsset.ATK * attribute);
                 characterTest.Skill = (int)(characterTest.infoWaifuAsset.Skill * attribute);
             }
+            InfoWaifuPanel.instance.SetInfoPanel(transCharacter.gameObject.GetComponent<CharacterInBattle>());
         }
-        [Button]
-        void BtnUseSkill()
+        public void BtnUseSkill()
         {
-            string value = InfoPanel.InfoPanel.instance.txtRow.text;
-            int IntTest = int.Parse(value);
-            Debug.Log(IntTest);
+            string valueRow = Panel.InfoPanel.instance.inputFieldRow.text;
+            string valueColumn = Panel.InfoPanel.instance.inputFieldColumn.text;
+            Row = int.Parse(valueRow);
+            Column = int.Parse(valueColumn);
+            typeSkill = (TypeSkill)Panel.InfoPanel.instance.dropDownSkill.value;
+
+            int DameSkill;
+            float percentDameSkill = float.Parse(Panel.InfoPanel.instance.inputFieldDame.text);
+            DameSkill = (int)(transCharacter.GetComponent<CharacterInBattle>().infoWaifuAsset.ATK * percentDameSkill);
+            transCharacter.GetComponent<CharacterInBattle>().Skill = DameSkill;
+            Panel.InfoPanel.instance.txtValueOldDame.text = Panel.InfoPanel.instance.OldTxtDame + DameSkill.ToString();
+
+            durationAttacked = float.Parse(Panel.InfoPanel.instance.inputFieldDurationAtack.text);
+
+            if (typeSkill == TypeSkill.InTurn)
+            {
+                InTurn = int.Parse(Panel.InfoPanel.instance.inputFieldNumberTurn.text);
+            }
+            if (typeSkill == TypeSkill.Wave)
+            {
+                durationWave = float.Parse(Panel.InfoPanel.instance.inputFieldDurationWave.text);
+            }
+            InfoWaifuPanel.instance.SetInfoPanel(transCharacter.gameObject.GetComponent<CharacterInBattle>());
             SetAnimSkill();
         }
 
@@ -218,14 +242,17 @@ namespace RubikCasual.CreateSkill
         void SetAttacked(int count)
         {
             SkeletonAnimation skeletonEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
-
-
+            CharacterInBattle CharacterInBattleAttacked = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>();
+            Calculator.CalculateHealth(transCharacter.GetComponent<CharacterInBattle>(), lsSlotGbEnemy[count].GetComponent<CharacterInBattle>(), true);
             skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
+
             skeletonEnemy.AnimationState.Complete += delegate
             {
                 if (skeletonEnemy.AnimationName != NameAnim.Anim_Character_Idle)
                 {
                     skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Idle, true);
+                    CharacterInBattleAttacked.HpNow = CharacterInBattleAttacked.Hp;
+                    CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
                 }
             };
         }

@@ -80,6 +80,6 @@ namespace RubikCasual.Battle
                 isHaveReward = !isHaveReward;
             }
         }
-
+        
     }
 }
