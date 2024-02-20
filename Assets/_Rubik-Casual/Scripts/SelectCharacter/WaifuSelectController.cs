@@ -27,9 +27,13 @@ namespace RubikCasual.Lobby
         public Transform WaifuInitLocation;
         public SlotWaifuAva waifuAva;
         public static WaifuSelectController instance;
-        void Start()
+        void Awake()
         {
             instance = this;
+        }
+        void Start()
+        {
+            
             userData = UserData.instance;
             // CreatListSeclecWaifu();
             // CreateListAvaWaifu();
