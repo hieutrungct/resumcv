@@ -2901,7 +2901,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2653405443303398690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6557293099902895288}
+        m_TargetAssemblyTypeName: SummonController, Assembly-CSharp
+        m_MethodName: OnclickButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2653405443319914501
 GameObject:
   m_ObjectHideFlags: 0
@@ -4185,7 +4197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2653405443579845822}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6557293099902895288}
+        m_TargetAssemblyTypeName: SummonController, Assembly-CSharp
+        m_MethodName: OnclickButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2653405443623075561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6136,6 +6160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680dc4f9b9ef4804aba7ae320c356132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GaCharCard: {fileID: 3486394150321225228}
 --- !u!1 &2653405444160977057
 GameObject:
   m_ObjectHideFlags: 0
@@ -7175,6 +7200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}
+--- !u!1 &3486394150321225228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6519544966102711759, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}
+  m_PrefabInstance: {fileID: 7644924795281834947}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3486394150321225229 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6519544966102711758, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}

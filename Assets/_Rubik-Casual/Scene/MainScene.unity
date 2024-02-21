@@ -44746,7 +44746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2653405443579845817, guid: a7176234cb0083e4884cad33c082504e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2653405443579845817, guid: a7176234cb0083e4884cad33c082504e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -44758,11 +44758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2653405443579845817, guid: a7176234cb0083e4884cad33c082504e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: OnclickButton
       objectReference: {fileID: 0}
     - target: {fileID: 2653405443579845817, guid: a7176234cb0083e4884cad33c082504e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: SummonController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2653405443579845817, guid: a7176234cb0083e4884cad33c082504e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -44947,11 +44947,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2653405444118718674, guid: a7176234cb0083e4884cad33c082504e, type: 3}
   m_PrefabInstance: {fileID: 2653405442635475226}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2653405442635475228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3486394150321225228, guid: a7176234cb0083e4884cad33c082504e, type: 3}
+--- !u!114 &2653405442635475228 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6557293099902895288, guid: a7176234cb0083e4884cad33c082504e, type: 3}
   m_PrefabInstance: {fileID: 2653405442635475226}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2653405442635475227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680dc4f9b9ef4804aba7ae320c356132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2697448558008552402
 MonoBehaviour:
   m_ObjectHideFlags: 0

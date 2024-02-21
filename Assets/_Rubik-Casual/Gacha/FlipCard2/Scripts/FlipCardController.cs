@@ -31,10 +31,12 @@ namespace RubikCasual.FlipCard2
         public GameObject gbTest, gbInfoCard, imageBackGround, gbTicket, gbInfoCardWithMouse;
         public SlotInfoCard slotInfoCard;
         public Transform posInstantiateCard;
+        public Transform specificSlot;
         public Button btnGetWaifu;
         public List<GameObject> lsInfocardClone;
         public List<Sprite> lsSpriteCard;
         public List<CardForId> lsCardForId, lsCardGacha;
+        public int Id;
         TextMeshProUGUI TxtBtn;
         DataController dataController;
         bool isClick = false, ChangeType, isHaveMove;
@@ -78,12 +80,20 @@ namespace RubikCasual.FlipCard2
         }
         void BtnGacha()
         {
-            if (dataController.userData.Ticket > 0)
+            if(Id == 1)
+            {
+                CreateCard_1Tecken();
+            }
+            else
+            {
+                CreateCard();
+            }
+            if (dataController.userData.Ticket >= Id)
             {
                 if (!isHaveMove)
                 {
                     isHaveMove = true;
-                    dataController.userData.Ticket = dataController.userData.Ticket - 10;
+                    dataController.userData.Ticket = dataController.userData.Ticket - Id;
                     if (!isClick)
                     {
                         isClick = !isClick;
@@ -114,7 +124,7 @@ namespace RubikCasual.FlipCard2
                 TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
                 txtGbTicket.text = dataController.userData.Ticket.ToString();
                 TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
-                txtGbTicketClone.text = "-10";
+                txtGbTicketClone.text = Id.ToString();
                 txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
                 txtGbTicketClone.color = Color.red;
                 txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
@@ -187,13 +197,22 @@ namespace RubikCasual.FlipCard2
         }
         void CreateCard()
         {
+            lsInfocardClone.Clear();
             for (int i = 0; i < slotInfoCard.lsPosSlotInfoCard.Count; i++)
             {
+                
                 GameObject infoCardClone = Instantiate(gbInfoCard, posInstantiateCard);
                 infoCardClone.transform.position = posInstantiateCard.position;
                 infoCardClone.transform.localScale = new Vector3();
                 lsInfocardClone.Add(infoCardClone);
             }
+        }
+        void CreateCard_1Tecken()
+        {
+            lsInfocardClone.Clear();
+            GameObject infoCardClone = Instantiate(gbInfoCard, specificSlot); // Tạo card tại specificSlot
+            infoCardClone.transform.localScale = Vector3.zero; // Thiết lập scale ban đầu
+            lsInfocardClone.Add(infoCardClone);
         }
         [Button]
         void ResetInfo()
@@ -212,33 +231,68 @@ namespace RubikCasual.FlipCard2
             {
                 GameObject infoCardClone = lsInfocardClone[index];
                 infoCardClone.transform.DOScale(new Vector3(1f, 1f, 1f), 0.25f);
-                infoCardClone.transform.DOMove(slotInfoCard.lsPosSlotInfoCard[index].position, 0.25f)
-                .OnComplete(() =>
+                if(Id == 1)
                 {
-
-                    CardInfoDragPosition cardInfoDragPosition = infoCardClone.GetComponent<CardInfoDragPosition>();
-                    cardInfoDragPosition.idSlot = index;
-                    cardInfoDragPosition.SetValueMoveBackGround(index);
-
-                    infoCardClone.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
-
-                    Transform transBackCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbBackCard);
-                    transBackCard.DOScale(new Vector3(0, 1f, 1f), 0.25f);
-
-                    Transform transFrontCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbFrontCard);
-                    transFrontCard.GetComponent<Image>().sprite = lsSpriteCard[UnityEngine.Random.Range(0, lsSpriteCard.Count)];
-                    transFrontCard.DOScale(new Vector3(1f, 1f, 1f), 0.25f);
-
-                    InfoWaifuAsset infoWaifuAsset = dataController.GetInfoWaifuAssetsByIndex(lsCardGacha[index].ID);
-                    cardInfoDragPosition.infoWaifuAsset = infoWaifuAsset;
-
-                    SetUpInfoCard(index, transFrontCard, cardInfoDragPosition);
-
-                    if (!ChangeType)
+                    infoCardClone.transform.DOMove(specificSlot.position, 0.25f)
+                    .OnComplete(() =>
                     {
-                        BtnMoveCard(index + 1);
-                    }
-                });
+
+                        CardInfoDragPosition cardInfoDragPosition = infoCardClone.GetComponent<CardInfoDragPosition>();
+                        cardInfoDragPosition.idSlot = index;
+                        cardInfoDragPosition.SetValueMoveBackGround(index);
+
+                        infoCardClone.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
+
+                        Transform transBackCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbBackCard);
+                        transBackCard.DOScale(new Vector3(0, 1f, 1f), 0.25f);
+
+                        Transform transFrontCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbFrontCard);
+                        transFrontCard.GetComponent<Image>().sprite = lsSpriteCard[UnityEngine.Random.Range(0, lsSpriteCard.Count)];
+                        transFrontCard.DOScale(new Vector3(1f, 1f, 1f), 0.25f);
+
+                        InfoWaifuAsset infoWaifuAsset = dataController.GetInfoWaifuAssetsByIndex(lsCardGacha[index].ID);
+                        cardInfoDragPosition.infoWaifuAsset = infoWaifuAsset;
+
+                        SetUpInfoCard(index, transFrontCard, cardInfoDragPosition);
+
+                        if (!ChangeType)
+                        {
+                            BtnMoveCard(index + 1);
+                        }
+                    });
+                }
+                else
+                {
+                    infoCardClone.transform.DOMove(slotInfoCard.lsPosSlotInfoCard[index].position, 0.25f)
+                    .OnComplete(() =>
+                    {
+
+                        CardInfoDragPosition cardInfoDragPosition = infoCardClone.GetComponent<CardInfoDragPosition>();
+                        cardInfoDragPosition.idSlot = index;
+                        cardInfoDragPosition.SetValueMoveBackGround(index);
+
+                        infoCardClone.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
+
+                        Transform transBackCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbBackCard);
+                        transBackCard.DOScale(new Vector3(0, 1f, 1f), 0.25f);
+
+                        Transform transFrontCard = infoCardClone.transform.Find(NameGbFlipCard.NameGbFrontCard);
+                        transFrontCard.GetComponent<Image>().sprite = lsSpriteCard[UnityEngine.Random.Range(0, lsSpriteCard.Count)];
+                        transFrontCard.DOScale(new Vector3(1f, 1f, 1f), 0.25f);
+
+                        InfoWaifuAsset infoWaifuAsset = dataController.GetInfoWaifuAssetsByIndex(lsCardGacha[index].ID);
+                        cardInfoDragPosition.infoWaifuAsset = infoWaifuAsset;
+
+                        SetUpInfoCard(index, transFrontCard, cardInfoDragPosition);
+
+                        if (!ChangeType)
+                        {
+                            BtnMoveCard(index + 1);
+                        }
+                    });
+                }
+
+                
                 if (ChangeType)
                 {
                     BtnMoveCard(index + 1);
