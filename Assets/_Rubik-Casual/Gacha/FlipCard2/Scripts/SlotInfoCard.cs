@@ -7,5 +7,6 @@ namespace RubikCasual.FlipCard2
     public class SlotInfoCard : MonoBehaviour
     {
         public List<Transform> lsPosSlotInfoCard;
+        
     }
 }

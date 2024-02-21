@@ -20,9 +20,17 @@ namespace Rubik.Select
         private PlayerOwnsWaifu _waifu;
         public Image AvaWaifu, classWaifu,rareWaifu;
         public GameObject iconSelect;
+        
+
         public void SetUpItemAvaWaifu(PlayerOwnsWaifu waifu)
         {
             _waifu = waifu;
+            
+            if (WaifuSelectController.instance == null)
+            {
+                Debug.LogError("WaifuSelectController.instance is not assigned.");
+                return;
+            }
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.ID);
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;

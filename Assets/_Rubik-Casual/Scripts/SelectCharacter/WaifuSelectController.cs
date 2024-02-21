@@ -27,16 +27,20 @@ namespace RubikCasual.Lobby
         public Transform WaifuInitLocation;
         public SlotWaifuAva waifuAva;
         public static WaifuSelectController instance;
-        void Start()
+        void Awake()
         {
             instance = this;
+        }
+        void Start()
+        {
+            
             userData = UserData.instance;
             // CreatListSeclecWaifu();
             // CreateListAvaWaifu();
             Waifus = DataController.instance.playerData.lsPlayerOwnsWaifu;
             // SortPower();
 
-            
+            SelectWaifuOnClick();
 
         }
         public void SelectWaifuOnClick()
@@ -182,11 +186,15 @@ namespace RubikCasual.Lobby
         }
         public void BackPopupCharacter()
         {
-            MovePopup.TransPopupHorizontal(this.gameObject, bgMainscreen);
+            // MovePopup.TransPopupHorizontal(this.gameObject, bgMainscreen);
+            gameObject.SetActive(false);
+
         }
         public void OpenPopupSelectCharacter()
         {
-            MovePopup.TransPopupHorizontal(bgMainscreen, this.gameObject);
+            // MovePopup.TransPopupHorizontal(bgMainscreen, this.gameObject);
+            gameObject.SetActive(true);
+            SelectWaifuOnClick();
         }
 
         public int CheckIndexOfWaifu(PlayerOwnsWaifu Waifu)

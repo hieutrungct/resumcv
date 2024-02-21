@@ -21,7 +21,7 @@ namespace Rubik.ListWaifu
         private List<PlayerOwnsWaifu> sortedWaifus;
         //list
         public TextMeshProUGUI textListSortLever, textListSortRarity, textListSortPower;
-        private int a, b, c;
+        public int a, b, c;
 
         private float count;
         private bool isFirstClick = true;
@@ -136,10 +136,10 @@ namespace Rubik.ListWaifu
                 InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
                 InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
 
-                int result = infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
+                int result = infoWaifuB.Rare.CompareTo(infoWaifuA.Rare);
                 if (result == 0)
                 {
-                    result = charA.level.CompareTo(charB.level);
+                    result = charB.level.CompareTo(charA.level);
                 }
                 return result;
             });
@@ -205,62 +205,48 @@ namespace Rubik.ListWaifu
         }
 
         //list
+        private bool isFirstClickLever = true;
+        private bool isFirstClickRarity = true;
+        private bool isFirstClickPower = true;
+
         public void OnSortButtonClickedLever()
         {
-
-            SortChar(SortingType.Lever);
-            SetButtonColors(SortingType.Lever);
-            if (isFirstClick)
-            {
-                a = a + 2;
-                isFirstClick = false;
-            }
-            else
-            {
-                a++;
-            }
-            b = c = 0;
-            if (a % 2 == 0)
-            {
-                RefreshWaifuUIOpp();
-            }
-            else
-            {
-                RefreshWaifuUI();
-            }
-
+            isFirstClickLever = !isFirstClickLever;
+            SortAndRefreshUI(SortingType.Lever, isFirstClickLever);
+            isFirstClickRarity = true;
+            isFirstClickPower = true;
         }
 
         public void OnSortButtonClickedRarity()
         {
-            SortChar(SortingType.Rarity);
-            SetButtonColors(SortingType.Rarity);
-            b++;
-            if (b % 2 == 0)
-            {
-                RefreshWaifuUIOpp();
-            }
-            else
-            {
-                RefreshWaifuUI();
-            }
-            a = c = 0;
-
-
+            isFirstClickRarity = !isFirstClickRarity;
+            SortAndRefreshUI(SortingType.Rarity, isFirstClickRarity);
+            isFirstClickLever = false;
+            isFirstClickPower = true;
         }
+
         public void OnSortButtonClickedPower()
         {
-            SortChar(SortingType.Power);
-            SetButtonColors(SortingType.Power);
-            c++;
-            a = b = 0;
-            if (c % 2 == 0)
+            isFirstClickPower = !isFirstClickPower;
+            SortAndRefreshUI(SortingType.Power, isFirstClickPower);
+            isFirstClickLever = false;
+            isFirstClickRarity = true;
+        }
+
+        private void SortAndRefreshUI(SortingType sortType, bool isFirstClick)
+        {
+            SortChar(sortType);
+            SetButtonColors(sortType);
+
+            if (isFirstClick)
             {
-                RefreshWaifuUIOpp();
+                RefreshWaifuUI();
+                // Debug.Log("Ngược lại");
             }
             else
             {
-                RefreshWaifuUI();
+                RefreshWaifuUIOpp();
+                // Debug.Log("Sắp lại");
             }
         }
         private void SetButtonColors(SortingType selectedSortingType)
@@ -271,13 +257,13 @@ namespace Rubik.ListWaifu
         }
         public void OpenPopup()
         {
-            MovePopup.TransPopupHorizontal(gbTaget, gbPopupOpen);
+            gbPopupOpen.SetActive(true);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false);
             CreateWaifu();
         }
         public void ClosePopup()
         {
-            MovePopup.TransPopupHorizontal(gbPopupOpen, gbTaget);
+            gbPopupOpen.SetActive(false);
             HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true);
         }
     }
