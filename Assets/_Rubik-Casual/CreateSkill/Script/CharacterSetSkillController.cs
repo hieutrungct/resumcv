@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using RubikCasual.Battle;
 using RubikCasual.Battle.Calculate;
 using RubikCasual.CreateSkill.Panel;
@@ -14,13 +15,6 @@ using UnityEngine;
 
 namespace RubikCasual.CreateSkill
 {
-    [Serializable]
-    public class SkillHero
-    {
-        public int Id, Row, Column;
-        public TypeSkill typeSkill;
-        public float durationWave, durationAttacked;
-    }
     public enum TypeSkill
     {
         Other = 0,
@@ -31,15 +25,15 @@ namespace RubikCasual.CreateSkill
     {
         public DataController dataController;
         public MapBattleController mapBattleController;
-        public string indexId = "1";
-        SkeletonAnimation characterClone;
-        public bool isSkin;
         public List<GameObject> lsSlotGbEnemy;
         public CharacterInBattle EnemyInBattle;
-        public int Row, Column, SlotCharacter, InTurn = 1;
         public TypeSkill typeSkill;
-        public float durationWave = 0.25f, durationAttacked = 0.5f;
         public Transform transCharacter;
+        string indexId = "1";
+        SkeletonAnimation characterClone;
+        bool isSkin, isLoadMap;
+        int Row, Column, SlotCharacter = 3, InTurn = 1;
+        float durationWave = 0.25f, durationAttacked = 0.5f;
         float attribute = 1;
         // public float SlotCharacter = 2;
         void Start()
@@ -52,6 +46,7 @@ namespace RubikCasual.CreateSkill
             yield return new WaitForSeconds(0.25f);
             CreateEnemy();
             CreateCharacter();
+            isLoadMap = true;
         }
 
         public void CreateCharacter()
@@ -60,8 +55,12 @@ namespace RubikCasual.CreateSkill
             {
                 Destroy(characterClone.gameObject);
             }
-            indexId = Panel.ChoseWaifuPanel.instance.inputFieldIndexId.text;
-            isSkin = Panel.ChoseWaifuPanel.instance.toggleIsSkin.isOn;
+            if (isLoadMap)
+            {
+                indexId = Panel.ChoseWaifuPanel.instance.inputFieldIndexId.text;
+                isSkin = Panel.ChoseWaifuPanel.instance.toggleIsSkin.isOn;
+            }
+
 
             characterClone = dataController.characterAssets.WaifuAssets.Get2D(indexId, isSkin);
             characterClone.transform.SetParent(transCharacter);
@@ -87,6 +86,7 @@ namespace RubikCasual.CreateSkill
             }
             InfoWaifuPanel.instance.SetInfoPanel(transCharacter.gameObject.GetComponent<CharacterInBattle>());
         }
+        int DameSkill;
         public void BtnUseSkill()
         {
             string valueRow = Panel.InfoPanel.instance.inputFieldRow.text;
@@ -95,7 +95,7 @@ namespace RubikCasual.CreateSkill
             Column = int.Parse(valueColumn);
             typeSkill = (TypeSkill)Panel.InfoPanel.instance.dropDownSkill.value;
 
-            int DameSkill;
+
             float percentDameSkill = float.Parse(Panel.InfoPanel.instance.inputFieldDame.text);
             DameSkill = (int)(transCharacter.GetComponent<CharacterInBattle>().infoWaifuAsset.ATK * percentDameSkill);
             transCharacter.GetComponent<CharacterInBattle>().Skill = DameSkill;
@@ -117,6 +117,7 @@ namespace RubikCasual.CreateSkill
 
         void SetAnimSkill()
         {
+
             characterClone.AnimationName = NameAnim.Anim_Character_Skill;
             characterClone.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
             characterClone.AnimationState.Complete += delegate
@@ -325,10 +326,60 @@ namespace RubikCasual.CreateSkill
         [Button]
         void SaveCharacterSkill()
         {
-            CharacterInBattle Character = transCharacter.GetComponent<CharacterInBattle>();
-            InfoWaifuAsset infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == Character.infoWaifuAsset.ID);
+            // CharacterInBattle Character = transCharacter.GetComponent<CharacterInBattle>();
+            // InfoWaifuAsset infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == Character.infoWaifuAsset.ID);
 
-            infoWaifuAsset = Character.infoWaifuAsset;
+            // infoWaifuAsset = Character.infoWaifuAsset;
+
+
+        }
+        [Button]
+        public void SaveSkillWaifu()
+        {
+            InfoWaifuAsset infoWaifuAsset = transCharacter.gameObject.GetComponent<CharacterInBattle>().infoWaifuAsset;
+            List<Data.Waifu.WaifuAssetData> lsWaifu = dataController.characterAssets.WaifuAssets.WaifuAssetDatas.FindAll(f => f.Code == infoWaifuAsset.Code);
+            int index = 0;
+            string code = "";
+            for (int i = 0; i < lsWaifu.Count; i++)
+            {
+                if (!isSkin)
+                {
+                    index = lsWaifu[0].Index;
+                    code = lsWaifu[0].Code;
+                }
+                else
+                {
+                    index = lsWaifu[1].Index;
+                    code = lsWaifu[1].Code;
+                }
+            }
+            Data.Waifu.WaifuSkill waifuSkill = new Data.Waifu.WaifuSkill();
+            waifuSkill.Index = index;
+            waifuSkill.Code = code;
+            waifuSkill.DameSkill = DameSkill;
+            waifuSkill.Row = Row;
+            waifuSkill.Column = Column;
+            waifuSkill.typeSkill = typeSkill;
+            waifuSkill.NumberTurn = InTurn;
+            waifuSkill.DurationAttacked = durationAttacked;
+            waifuSkill.DurationWave = durationWave;
+
+            bool isHaveWaifu = false;
+            List<Data.Waifu.WaifuSkill> waifuSkills = dataController.characterAssets.WaifuAssets.waifuSkills;
+            for (int i = 0; i < waifuSkills.Count; i++)
+            {
+                if (waifuSkills[i].Index == waifuSkill.Index)
+                {
+                    Debug.Log("Sửa thành công");
+                    waifuSkills[i] = waifuSkill;
+                    isHaveWaifu = true;
+                }
+            }
+            if (!isHaveWaifu)
+            {
+                Debug.Log("Thêm thành công");
+                waifuSkills.Add(waifuSkill);
+            }
         }
 
     }
