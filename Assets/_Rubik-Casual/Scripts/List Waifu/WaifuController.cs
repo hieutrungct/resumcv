@@ -136,10 +136,10 @@ namespace Rubik.ListWaifu
                 InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
                 InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
 
-                int result = infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
+                int result = infoWaifuB.Rare.CompareTo(infoWaifuA.Rare);
                 if (result == 0)
                 {
-                    result = charA.level.CompareTo(charB.level);
+                    result = charB.level.CompareTo(charA.level);
                 }
                 return result;
             });
@@ -213,18 +213,24 @@ namespace Rubik.ListWaifu
         {
             isFirstClickLever = !isFirstClickLever;
             SortAndRefreshUI(SortingType.Lever, isFirstClickLever);
+            isFirstClickRarity = true;
+            isFirstClickPower = true;
         }
 
         public void OnSortButtonClickedRarity()
         {
             isFirstClickRarity = !isFirstClickRarity;
             SortAndRefreshUI(SortingType.Rarity, isFirstClickRarity);
+            isFirstClickLever = false;
+            isFirstClickPower = true;
         }
 
         public void OnSortButtonClickedPower()
         {
             isFirstClickPower = !isFirstClickPower;
             SortAndRefreshUI(SortingType.Power, isFirstClickPower);
+            isFirstClickLever = false;
+            isFirstClickRarity = true;
         }
 
         private void SortAndRefreshUI(SortingType sortType, bool isFirstClick)
@@ -235,12 +241,12 @@ namespace Rubik.ListWaifu
             if (isFirstClick)
             {
                 RefreshWaifuUI();
-                Debug.Log("Ngược lại");
+                // Debug.Log("Ngược lại");
             }
             else
             {
                 RefreshWaifuUIOpp();
-                Debug.Log("Sắp lại");
+                // Debug.Log("Sắp lại");
             }
         }
         private void SetButtonColors(SortingType selectedSortingType)
