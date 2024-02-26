@@ -405,7 +405,7 @@ namespace RubikCasual.FlipCard2
                 // playerOwnsWaifuClone.ATK = infoWaifuAssetClone.ATK;
                 // playerOwnsWaifuClone.DEF = infoWaifuAssetClone.DEF;
                 // playerOwnsWaifuClone.Pow = infoWaifuAssetClone.Pow;
-                playerOwnsWaifuClone.Star = infoWaifuAssetClone.Star;
+                playerOwnsWaifuClone.Star = 1;
                 playerOwnsWaifuClone.Skill = infoWaifuAssetClone.Skill;
                 
                 playerOwnsWaifuClone.level = 1;
