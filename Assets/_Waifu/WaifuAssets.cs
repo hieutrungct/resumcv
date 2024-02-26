@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using NTPackage;
 using NTPackage.Functions;
+using RubikCasual.CreateSkill;
 using RubikCasual.Waifu;
 using SimpleJSON;
 using Sirenix.OdinInspector;
@@ -29,20 +30,29 @@ namespace RubikCasual.Data.Waifu
         // public string[] Skins;
         // public int skinIndex;
     }
-
+    [System.Serializable]
+    public class WaifuSkill
+    {
+        public int Index;
+        public string Code;
+        public int DameSkill;
+        public int Row;
+        public int Column;
+        public TypeSkill typeSkill;
+        public int NumberTurn;
+        public float DurationAttacked;
+        public float DurationWave;
+    }
     public class WaifuAssets : NTBehaviour
     {
         public const string Path_Assets_SO = "Assets/_Data/Resources/Waifu/SO";
         public const string Path_Resources_SO = "Waifu/SO";
-
         public NTDictionary<string, Transform> CacheHolder;
         public Transform Holder;
-
         public NTDictionary<string, WaifuSO> WaifuSODic;
-
         public TextAsset AssetData;
         public List<WaifuAssetData> WaifuAssetDatas;
-
+        public List<WaifuSkill> waifuSkills;
         public InfoWaifuAssets infoWaifuAssets;
         public static WaifuAssets instance;
 

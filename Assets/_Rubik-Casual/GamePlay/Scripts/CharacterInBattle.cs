@@ -9,6 +9,7 @@ using RubikCasual.Waifu;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace RubikCasual.Battle
@@ -22,15 +23,18 @@ namespace RubikCasual.Battle
         public Transform PosCharacter;
         public Slider healthBar, cooldownAttackBar, cooldownSkillBar;
         public TextMeshProUGUI txtHealthBar;
-        public bool isAttack, isUseSkill, isEnemy = false, isCompleteMove = true, isBoss = false;
+        public bool isAttack, isUseSkill, isEnemy = false, isBoss = false;
         GameObject ItemDropClone;
 
         bool isHaveReward = false;
 
         void Start()
         {
-            AddRewardWhenKillEnemy();
-
+            Scene SceneTarget = SceneManager.GetSceneByName(NameScene.GAMEPLAY_SCENE);
+            if (gameObject.scene == SceneTarget)
+            {
+                AddRewardWhenKillEnemy();
+            }
         }
 
         void AddRewardWhenKillEnemy()
@@ -76,6 +80,6 @@ namespace RubikCasual.Battle
                 isHaveReward = !isHaveReward;
             }
         }
-
+        
     }
 }
