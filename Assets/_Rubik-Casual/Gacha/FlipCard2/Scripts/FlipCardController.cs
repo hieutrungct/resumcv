@@ -212,88 +212,34 @@ namespace RubikCasual.FlipCard2
         {
             if (countUp < lsInfocardClone.Count)
             {
-                float random = UnityEngine.Random.Range(0f, 1f);
+                float randomRare = UnityEngine.Random.Range(0f, 1f);
                 if(idSummon == 0)
                 {
-                    if(random <= 0.6)
+                    if(randomRare <= 0.6)
                     {
-                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_R.Count);
-                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_R[intRand].ID) == null)
-                        {
-                            lsCardGacha.Add(lsCardForIdRare_R[intRand]);
-                            GachaCard(countUp + 1);
-                        }
-                        else
-                        {
-                            GachaCard(countUp);
-                        }
+                        Randomcard(lsCardForIdRare_R,countUp);
                     }
                     else
                     {
-                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_SR.Count);
-                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_SR[intRand].ID) == null)
-                        {
-                            lsCardGacha.Add(lsCardForIdRare_SR[intRand]);
-                            GachaCard(countUp + 1);
-                        }
-                        else
-                        {
-                            GachaCard(countUp);
-                        }
+                        Randomcard(lsCardForIdRare_SR,countUp);
                     }
                 }
                 else
                 {
-                    if(random <= 0.3){
-                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_R.Count);
-                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_R[intRand].ID) == null)
-                        {
-                            lsCardGacha.Add(lsCardForIdRare_R[intRand]);
-                            GachaCard(countUp + 1);
-                        }
-                        else
-                        {
-                            GachaCard(countUp);
-                        }
+                    if(randomRare <= 0.3){
+                        Randomcard(lsCardForIdRare_R,countUp);
                     }
-                    else if(random > 0.3 && random <= 0.8)
+                    else if(randomRare > 0.3 && randomRare <= 0.8)
                     {
-                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_SR.Count);
-                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_SR[intRand].ID) == null)
-                        {
-                            lsCardGacha.Add(lsCardForIdRare_SR[intRand]);
-                            GachaCard(countUp + 1);
-                        }
-                        else
-                        {
-                            GachaCard(countUp);
-                        }
+                        Randomcard(lsCardForIdRare_SR,countUp);
                     }
-                    else if(random > 0.7 && random <= 0.95)
+                    else if(randomRare > 0.7 && randomRare <= 0.95)
                     {
-                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_SSR.Count);
-                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_SSR[intRand].ID) == null)
-                        {
-                            lsCardGacha.Add(lsCardForIdRare_SSR[intRand]);
-                            GachaCard(countUp + 1);
-                        }
-                        else
-                        {
-                            GachaCard(countUp);
-                        }
+                        Randomcard(lsCardForIdRare_SSR,countUp);
                     }
                     else
                     {
-                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_UR.Count);
-                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_UR[intRand].ID) == null)
-                        {
-                            lsCardGacha.Add(lsCardForIdRare_UR[intRand]);
-                            GachaCard(countUp + 1);
-                        }
-                        else
-                        {
-                            GachaCard(countUp);
-                        }
+                        Randomcard(lsCardForIdRare_UR,countUp);
                     }
                 }
                 
@@ -308,6 +254,19 @@ namespace RubikCasual.FlipCard2
                 // {
                 //     GachaCard(countUp);
                 // }
+            }
+        }
+        void Randomcard(List<CardForId> cardForIds, int countUp)
+        {
+            int intRand = UnityEngine.Random.Range(0, cardForIds.Count);
+            if (lsCardGacha.FirstOrDefault(f => f.ID == cardForIds[intRand].ID) == null)
+            {
+                lsCardGacha.Add(cardForIds[intRand]);
+                GachaCard(countUp + 1);
+            }
+            else
+            {
+                GachaCard(countUp);
             }
         }
         void CreateCard()
@@ -442,12 +401,14 @@ namespace RubikCasual.FlipCard2
                 playerOwnsWaifuClone = new Data.Player.PlayerOwnsWaifu();
                 InfoWaifuAsset infoWaifuAssetClone = cardInfoDragPosition.infoWaifuAsset;
                 playerOwnsWaifuClone.ID = infoWaifuAssetClone.ID;
-                playerOwnsWaifuClone.HP = infoWaifuAssetClone.HP;
-                playerOwnsWaifuClone.ATK = infoWaifuAssetClone.ATK;
-                playerOwnsWaifuClone.DEF = infoWaifuAssetClone.DEF;
+                // playerOwnsWaifuClone.HP = infoWaifuAssetClone.HP;
+                // playerOwnsWaifuClone.ATK = infoWaifuAssetClone.ATK;
+                // playerOwnsWaifuClone.DEF = infoWaifuAssetClone.DEF;
+                // playerOwnsWaifuClone.Pow = infoWaifuAssetClone.Pow;
                 playerOwnsWaifuClone.Star = infoWaifuAssetClone.Star;
                 playerOwnsWaifuClone.Skill = infoWaifuAssetClone.Skill;
-                playerOwnsWaifuClone.Pow = infoWaifuAssetClone.Pow;
+                
+                playerOwnsWaifuClone.level = 1;
 
 
                 dataController.playerData.lsPlayerOwnsWaifu.Add(playerOwnsWaifuClone);

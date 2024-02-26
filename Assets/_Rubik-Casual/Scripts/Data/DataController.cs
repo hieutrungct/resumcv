@@ -181,7 +181,7 @@ namespace RubikCasual.Data
         }
         public void UpdateWaifu(PlayerOwnsWaifu waifu, float curGoldUpdate)
         {
-            if(userData.Gold > curGoldUpdate)
+            if(userData.Gold >= curGoldUpdate)
             {
                 userData.Gold -= curGoldUpdate;
             }

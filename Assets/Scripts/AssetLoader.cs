@@ -23,6 +23,7 @@ namespace Rubik_Casual
         public List<Sprite> AttackSprite;
         public List<Sprite> EffectSprite;
         public List<Sprite> SkillSprite;
+        public List<Sprite> imageSummon,Icon, imageBtn, imageWaifu, imageWaifuChibi;
         public GameObject cardPrefab;
         public static AssetLoader instance;
         private NTDictionary<string, Sprite> AvatarDic = new NTDictionary<string, Sprite>();
