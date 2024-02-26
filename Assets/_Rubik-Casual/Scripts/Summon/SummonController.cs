@@ -12,5 +12,9 @@ public class SummonController : MonoBehaviour
         GaCharCard.SetActive(true);
         GaCharCard.GetComponent<FlipCardController>().Id = id;
     }
+    public void OnClickSummon(int id)
+    {
+        GaCharCard.GetComponent<FlipCardController>().idSummon = id;
+    }
     
 }

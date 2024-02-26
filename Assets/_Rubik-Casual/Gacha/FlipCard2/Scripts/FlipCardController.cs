@@ -18,7 +18,7 @@ namespace RubikCasual.FlipCard2
     {
         public int ID;
         public string Code;
-        public string Rare;
+        public Rare rare;
     }
     public class NameGbFlipCard
     {
@@ -35,8 +35,8 @@ namespace RubikCasual.FlipCard2
         public Button btnGetWaifu;
         public List<GameObject> lsInfocardClone;
         public List<Sprite> lsSpriteCard;
-        public List<CardForId> lsCardForId, lsCardGacha;
-        public int Id;
+        public List<CardForId> lsCardForId, lsCardGacha, lsCardForIdRare_R, lsCardForIdRare_SR, lsCardForIdRare_SSR, lsCardForIdRare_UR;
+        public int Id, idSummon;
         TextMeshProUGUI TxtBtn;
         DataController dataController;
         bool isClick = false, ChangeType, isHaveMove;
@@ -80,6 +80,8 @@ namespace RubikCasual.FlipCard2
         }
         void BtnGacha()
         {
+            ResetInfo();
+            
             if(Id == 1)
             {
                 CreateCard_1Tecken();
@@ -166,33 +168,146 @@ namespace RubikCasual.FlipCard2
 
             foreach (Waifu.InfoWaifuAsset InfoWaifuAssets in dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets)
             {
-
+                
                 if (InfoWaifuAssets.Rare == Waifu.Rare.R)
                 {
                     CardForId cardForId = new CardForId();
                     cardForId.ID = InfoWaifuAssets.ID;
                     cardForId.Code = InfoWaifuAssets.Code;
-                    cardForId.Rare = InfoWaifuAssets.Rare.ToString();
-                    lsCardForId.Add(cardForId);
+                    cardForId.rare = InfoWaifuAssets.Rare;
+                    lsCardForIdRare_R.Add(cardForId);
                 }
-            }
-
-        }
-        void GachaCard(int countUp)
-        {
-
-            if (countUp < lsInfocardClone.Count)
-            {
-                int intRand = UnityEngine.Random.Range(0, lsCardForId.Count);
-                if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForId[intRand].ID) == null)
+                else if (InfoWaifuAssets.Rare == Waifu.Rare.SR)
                 {
-                    lsCardGacha.Add(lsCardForId[intRand]);
-                    GachaCard(countUp + 1);
+                    CardForId cardForId = new CardForId();
+                    cardForId.ID = InfoWaifuAssets.ID;
+                    cardForId.Code = InfoWaifuAssets.Code;
+                    cardForId.rare = InfoWaifuAssets.Rare;
+                    lsCardForIdRare_SR.Add(cardForId);
+                }
+                else if (InfoWaifuAssets.Rare == Waifu.Rare.SSR)
+                {
+                    CardForId cardForId = new CardForId();
+                    cardForId.ID = InfoWaifuAssets.ID;
+                    cardForId.Code = InfoWaifuAssets.Code;
+                    cardForId.rare = InfoWaifuAssets.Rare;
+                    lsCardForIdRare_SSR.Add(cardForId);
                 }
                 else
                 {
-                    GachaCard(countUp);
+                    CardForId cardForId = new CardForId();
+                    cardForId.ID = InfoWaifuAssets.ID;
+                    cardForId.Code = InfoWaifuAssets.Code;
+                    cardForId.rare = InfoWaifuAssets.Rare;
+                    lsCardForIdRare_UR.Add(cardForId);
                 }
+                
+                
+            }
+            
+
+        }
+        
+        void GachaCard(int countUp)
+        {
+            if (countUp < lsInfocardClone.Count)
+            {
+                float random = UnityEngine.Random.Range(0f, 1f);
+                if(idSummon == 0)
+                {
+                    if(random <= 0.6)
+                    {
+                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_R.Count);
+                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_R[intRand].ID) == null)
+                        {
+                            lsCardGacha.Add(lsCardForIdRare_R[intRand]);
+                            GachaCard(countUp + 1);
+                        }
+                        else
+                        {
+                            GachaCard(countUp);
+                        }
+                    }
+                    else
+                    {
+                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_SR.Count);
+                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_SR[intRand].ID) == null)
+                        {
+                            lsCardGacha.Add(lsCardForIdRare_SR[intRand]);
+                            GachaCard(countUp + 1);
+                        }
+                        else
+                        {
+                            GachaCard(countUp);
+                        }
+                    }
+                }
+                else
+                {
+                    if(random <= 0.3){
+                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_R.Count);
+                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_R[intRand].ID) == null)
+                        {
+                            lsCardGacha.Add(lsCardForIdRare_R[intRand]);
+                            GachaCard(countUp + 1);
+                        }
+                        else
+                        {
+                            GachaCard(countUp);
+                        }
+                    }
+                    else if(random > 0.3 && random <= 0.8)
+                    {
+                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_SR.Count);
+                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_SR[intRand].ID) == null)
+                        {
+                            lsCardGacha.Add(lsCardForIdRare_SR[intRand]);
+                            GachaCard(countUp + 1);
+                        }
+                        else
+                        {
+                            GachaCard(countUp);
+                        }
+                    }
+                    else if(random > 0.7 && random <= 0.95)
+                    {
+                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_SSR.Count);
+                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_SSR[intRand].ID) == null)
+                        {
+                            lsCardGacha.Add(lsCardForIdRare_SSR[intRand]);
+                            GachaCard(countUp + 1);
+                        }
+                        else
+                        {
+                            GachaCard(countUp);
+                        }
+                    }
+                    else
+                    {
+                        int intRand = UnityEngine.Random.Range(0, lsCardForIdRare_UR.Count);
+                        if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForIdRare_UR[intRand].ID) == null)
+                        {
+                            lsCardGacha.Add(lsCardForIdRare_UR[intRand]);
+                            GachaCard(countUp + 1);
+                        }
+                        else
+                        {
+                            GachaCard(countUp);
+                        }
+                    }
+                }
+                
+
+                // int intRand = UnityEngine.Random.Range(0, lsCardForId.Count);
+                // if (lsCardGacha.FirstOrDefault(f => f.ID == lsCardForId[intRand].ID) == null)
+                // {
+                //     lsCardGacha.Add(lsCardForId[intRand]);
+                //     GachaCard(countUp + 1);
+                // }
+                // else
+                // {
+                //     GachaCard(countUp);
+                // }
             }
         }
         void CreateCard()
