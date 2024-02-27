@@ -175,18 +175,19 @@ MonoBehaviour:
   ValueMoveImageBackGround: 0
   infoWaifuAsset:
     ID: 0
-    Code: 0
+    Distance_Skill: 0
     Star: 0
     HP: 0
     DEF: 0
     ATK: 0
-    Skill: 0
     Pow: 0
-    Distance_Skill: 0
+    Skill: 0
     Name: 
-    Class: 
-    Element: 
-    Rare: 
+    Code: 0
+    Rare: 0
+    Element: 0
+    ClassWaifu: 0
+  frag: 0
 --- !u!61 &5998480509967013669
 BoxCollider2D:
   m_ObjectHideFlags: 0

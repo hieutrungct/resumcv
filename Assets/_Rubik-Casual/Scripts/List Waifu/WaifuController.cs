@@ -258,13 +258,13 @@ namespace Rubik.ListWaifu
         public void OpenPopup()
         {
             gbPopupOpen.SetActive(true);
-            HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false);
+            HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false,Ticket: false);
             CreateWaifu();
         }
         public void ClosePopup()
         {
             gbPopupOpen.SetActive(false);
-            HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true);
+            HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true,Ticket: false);
         }
     }
 }

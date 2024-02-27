@@ -99,7 +99,7 @@ namespace Rubik_Casual
                 btn.onClick.AddListener(() =>
                 {
                     CharacterUIController.instance.ShowCharacterInfoPopup(character);
-                    HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true);
+                    HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: false);
                 });
             }
 

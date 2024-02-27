@@ -15,10 +15,11 @@ namespace Rubik_Casual
         public GameObject topPanel;
         public GameObject goldObj;
         public GameObject gemObj;
+        public GameObject TicketObj;
         
         // public List<string> objectNamesToCheckHide;
         // public List<string> objectNamesToCheckActive;
-        public TextMeshProUGUI textCoins, textGems, textEnergy;
+        public TextMeshProUGUI textCoins, textGems, textEnergy, textTicket;
 
         public void Awake()
         {
@@ -34,17 +35,19 @@ namespace Rubik_Casual
         //     topPanel.SetActive(true);
         // }
         
-        public void UpdateTopPanel(bool Energe, bool Gold, bool Gem)
+        public void UpdateTopPanel(bool Energe, bool Gold, bool Gem, bool Ticket)
         {
             energerObj.SetActive(Energe);
             goldObj.SetActive(Gold);
             gemObj.SetActive(Gem);
+            TicketObj.SetActive(Ticket);
         }
         public void LoadStatusNumber()
         {
             textCoins.text = DataController.instance.playerData.userData.Gold.ToString();
             textEnergy.text = DataController.instance.playerData.userData.Energy.ToString() + "/60";
             textGems.text = DataController.instance.playerData.userData.Gem.ToString();
+            textTicket.text = DataController.instance.playerData.userData.Ticket.ToString();
         }
         // public void CheckTabs(bool hideTopPanel,bool hideEnerge)
         // {

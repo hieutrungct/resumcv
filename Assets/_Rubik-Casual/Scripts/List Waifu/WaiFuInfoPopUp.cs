@@ -107,7 +107,7 @@ namespace Rubik.ListWaifu
         public void Close()
         {
             gameObject.SetActive(false);
-            HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false);
+            HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false,Ticket: false);
         }
         
 

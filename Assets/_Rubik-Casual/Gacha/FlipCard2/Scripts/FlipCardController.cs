@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Tool;
 using RubikCasual.Waifu;
@@ -125,6 +126,7 @@ namespace RubikCasual.FlipCard2
                 }
                 TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
                 txtGbTicket.text = dataController.userData.Ticket.ToString();
+                HUDController.instanse.LoadStatusNumber();
                 TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
                 txtGbTicketClone.text = Id.ToString();
                 txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;

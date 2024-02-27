@@ -142,7 +142,7 @@ namespace Rubik.ListWaifu
                 btn.onClick.AddListener(() =>
                 {
                     WaifuController.instance.ShowWaifuInfoPopup(waifu);
-                    HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true);
+                    HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: false);
                 });
             }
 

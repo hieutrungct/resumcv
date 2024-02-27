@@ -30,12 +30,12 @@ public class SaveData : MonoBehaviour
     {
         gameObject.SetActive(true);
         
-        HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false);
+        HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false,Ticket: false);
     }
     public void HideListCharater()
     {
         gameObject.SetActive(false);
-        HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true);
+        HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true,Ticket: false);
     }
 }
   
