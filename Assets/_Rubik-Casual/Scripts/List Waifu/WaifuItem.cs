@@ -40,8 +40,15 @@ namespace Rubik.ListWaifu
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
-
-            UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            if(waifu.ID == 66)
+            {
+                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
+            }
+            else
+            {
+                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            }
+            
             UI_Waifu.startingAnimation = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
 
             

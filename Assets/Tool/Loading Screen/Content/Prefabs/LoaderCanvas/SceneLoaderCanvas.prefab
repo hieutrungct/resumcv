@@ -381,6 +381,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 53.7871
       objectReference: {fileID: 0}
+    - target: {fileID: 5103582999009638012, guid: 7c94a5188defce1429e32caaa6f6e57f, type: 3}
+      propertyPath: FilledImage
+      value: 
+      objectReference: {fileID: 2145260132}
     - target: {fileID: 5103582999768555287, guid: 7c94a5188defce1429e32caaa6f6e57f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 148.7
@@ -463,3 +467,14 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 100
+--- !u!114 &2145260132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11409160, guid: 7c94a5188defce1429e32caaa6f6e57f, type: 3}
+  m_PrefabInstance: {fileID: 2138047852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

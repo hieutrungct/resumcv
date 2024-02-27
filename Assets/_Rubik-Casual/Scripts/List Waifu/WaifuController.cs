@@ -47,8 +47,8 @@ namespace Rubik.ListWaifu
             for (int i = 0; i < DataController.instance.playerData.lsPlayerOwnsWaifu.Count; i++)
             {
                 WaifuItem slotWaifu = Instantiate(slot_Waifu, transformSlot);
-                //Debug.Log("Id của waifu " + listWaifu.playerData.lsPlayerOwnsWaifu[i].Index.ToString());
-                
+
+                // Debug.Log("Id của waifu " + DataController.instance.playerData.lsPlayerOwnsWaifu[i].ID.ToString());
                 slotWaifu.SetUp(DataController.instance.playerData.lsPlayerOwnsWaifu[i]);
             }
 

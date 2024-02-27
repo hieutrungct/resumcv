@@ -24,30 +24,31 @@ public class SummonController : MonoBehaviour
     public void SetUpSummon( int id)
     {
         imageWaifu.sprite = AssetLoader.instance.imageWaifu[id];
-        iconWaifu.sprite = lsBtnSummon[id].iconWaifu.sprite;
+        // iconWaifu.sprite = lsBtnSummon[id].iconWaifu.sprite;
         
-        // iconWaifu.sprite = AssetLoader.instance.GetAvatarById()
+        iconWaifu.sprite = AssetLoader.instance.GetAvatarById(GetNameImageWaifu(lsBtnSummon[id]));
+        Debug.Log("Tên hình ảnh: " + GetNameImageWaifu(lsBtnSummon[id]));
     }
-    // public static string GetNameImageWaifu(SummonSlot summonSlot)
-    // {
-    //     if (summonSlot != null)
-    //     {
-    //         string[] lsName = summonSlot.gameObject..Split("_");
-    //         string NamePNG;
-    //         if (lsName.Length == 4 && skeletonGraphic.initialSkinName != (lsName[0] + "_" + lsName[1]))
-    //         {
-    //             NamePNG = lsName[0] + "_" + lsName[1].Replace("0", "");
-    //         }
-    //         else
-    //         {
-    //             NamePNG = skeletonGraphic.initialSkinName;
-    //         }
-    //         return NamePNG.Replace("Pet", "");
-    //     }
-    //     else
-    //     {
-    //         return "1009_A";
-    //     }
-    // }
+    public static string GetNameImageWaifu(SummonSlot summonSlot)
+    {
+        if (summonSlot != null)
+        {
+            string[] lsName = summonSlot.iconWaifu.sprite.name.Split("_");
+            string NamePNG;
+            if (lsName.Length == 4 && summonSlot.iconWaifu.sprite.name != (lsName[0] + "_" + lsName[1]))
+            {
+                NamePNG = lsName[0] + "_" + lsName[1].Replace("0", "");
+            }
+            else
+            {
+                NamePNG = summonSlot.iconWaifu.sprite.name;
+            }
+            return NamePNG.Replace("Pet", "");
+        }
+        else
+        {
+            return "1009_A";
+        }
+    }
     
 }
