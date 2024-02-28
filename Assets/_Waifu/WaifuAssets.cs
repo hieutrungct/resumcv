@@ -35,7 +35,7 @@ namespace RubikCasual.Data.Waifu
     {
         public int Index;
         public string Code;
-        public int DameSkill;
+        public float percentDameSkill;
         public int Row;
         public int Column;
         public TypeSkill typeSkill;

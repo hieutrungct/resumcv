@@ -63,19 +63,32 @@ namespace RubikCasual.Data.Waifu
             this.CacheHolder = new NTDictionary<string, Transform>();
             infoEnemyAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoEnemyAssets").text);
 
-            // lsIdEnemy.Clear();
-            // for (int i = 9001; i < 9093; i++)
-            // {
-            //     try
-            //     {
-            //         SkeletonAnimation WaifuEnemy = this.Get2D(i.ToString());
-            //         lsIdEnemy.Add(i);
-            //     }
-            //     catch (System.Exception)
-            //     {
+            lsIdEnemy.Clear();
+            for (int i = 9001; i < 9093; i++)
+            {
+                try
+                {
+                    SkeletonAnimation WaifuEnemy = this.Get2D(i.ToString());
+                    lsIdEnemy.Add(i);
+                }
+                catch (System.Exception)
+                {
 
-            //     }
-            // }
+                }
+            }
+        }
+
+        public InfoWaifuAsset GetInfoEnemyByIndex(int index)
+        {
+            InfoWaifuAsset infoWaifuAssetResult = new InfoWaifuAsset();
+            foreach (InfoWaifuAsset infoWaifuAsset in infoEnemyAssets.lsInfoWaifuAssets)
+            {
+                if (infoWaifuAsset.Code == index.ToString())
+                {
+                    infoWaifuAssetResult = infoWaifuAsset;
+                }
+            }
+            return infoWaifuAssetResult;
         }
         void GetAssets()
         {

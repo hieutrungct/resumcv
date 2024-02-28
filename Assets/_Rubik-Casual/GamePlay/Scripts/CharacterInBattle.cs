@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using RubikCasual.Battle.Inventory;
 using RubikCasual.Battle.UI;
+using RubikCasual.DailyItem;
 using RubikCasual.Data;
 using RubikCasual.RewardInGame;
 using RubikCasual.Waifu;
@@ -45,7 +46,7 @@ namespace RubikCasual.Battle
                 ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.healthBar.transform.parent);
                 ItemDropClone.SetActive(false);
                 SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
-                DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == "Coins");
+                DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == NameItem.Coins);
                 ItemDrop.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
                 ItemDrop.valueCoins = 1;
             }
@@ -54,7 +55,7 @@ namespace RubikCasual.Battle
                 ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.healthBar.transform.parent);
                 ItemDropClone.SetActive(false);
                 SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
-                DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == "Gems");
+                DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == NameItem.Gems);
                 ItemDrop.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
                 ItemDrop.ValueGems = 1;
             }
@@ -80,6 +81,6 @@ namespace RubikCasual.Battle
                 isHaveReward = !isHaveReward;
             }
         }
-        
+
     }
 }

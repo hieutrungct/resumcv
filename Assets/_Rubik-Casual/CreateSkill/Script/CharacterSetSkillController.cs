@@ -35,6 +35,8 @@ namespace RubikCasual.CreateSkill
         int Row, Column, SlotCharacter = 3, InTurn = 1;
         float durationWave = 0.25f, durationAttacked = 0.5f;
         float attribute = 1;
+        int DameSkill;
+        float percentDameSkill;
         // public float SlotCharacter = 2;
         void Start()
         {
@@ -86,7 +88,7 @@ namespace RubikCasual.CreateSkill
             }
             InfoWaifuPanel.instance.SetInfoPanel(transCharacter.gameObject.GetComponent<CharacterInBattle>());
         }
-        int DameSkill;
+
         public void BtnUseSkill()
         {
             string valueRow = Panel.InfoPanel.instance.inputFieldRow.text;
@@ -96,7 +98,7 @@ namespace RubikCasual.CreateSkill
             typeSkill = (TypeSkill)Panel.InfoPanel.instance.dropDownSkill.value;
 
 
-            float percentDameSkill = float.Parse(Panel.InfoPanel.instance.inputFieldDame.text);
+            percentDameSkill = float.Parse(Panel.InfoPanel.instance.inputFieldDame.text);
             DameSkill = (int)(transCharacter.GetComponent<CharacterInBattle>().infoWaifuAsset.ATK * percentDameSkill);
             transCharacter.GetComponent<CharacterInBattle>().Skill = DameSkill;
             Panel.InfoPanel.instance.txtValueOldDame.text = Panel.InfoPanel.instance.OldTxtDame + DameSkill.ToString();
@@ -356,7 +358,7 @@ namespace RubikCasual.CreateSkill
             Data.Waifu.WaifuSkill waifuSkill = new Data.Waifu.WaifuSkill();
             waifuSkill.Index = index;
             waifuSkill.Code = code;
-            waifuSkill.DameSkill = DameSkill;
+            waifuSkill.percentDameSkill = percentDameSkill;
             waifuSkill.Row = Row;
             waifuSkill.Column = Column;
             waifuSkill.typeSkill = typeSkill;

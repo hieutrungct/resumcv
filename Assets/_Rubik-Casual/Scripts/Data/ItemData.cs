@@ -12,6 +12,14 @@ namespace RubikCasual.DailyItem
         Poison = 2,
         Mana = 3,
     }
+    public enum NameItem
+    {
+        None = 0,
+        Coins = 1,
+        Gems = 2,
+        Energy = 3,
+        Jar = 4,
+    }
     [CreateAssetMenu(fileName = "NewlistItem", menuName = "ScriptableObject/listItem")]
     public class ItemData : ScriptableObject
     {
@@ -25,7 +33,7 @@ namespace RubikCasual.DailyItem
     public class infoItem
     {
         public int id;
-        public string name;
+        public NameItem name;
         public TypeItem type;
         public int numberItem;
         public int Dame;
