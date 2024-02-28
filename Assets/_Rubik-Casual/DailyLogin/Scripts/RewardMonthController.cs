@@ -250,17 +250,17 @@ namespace RubikCasual.RewardMonth
 
 
 
-                    if (checkItemById(item.idItem).name == "Coins")
+                    if (checkItemById(item.idItem).name.ToString() == "Coins")
                     {
                         var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "Coins").numberItem;
                         ListItemData.datalobby.FirstOrDefault(L => L.name == "Coins").numberItem = NumberItem + nowDaily.numberItem;
                     }
-                    if (checkItemById(item.idItem).name == "Gems")
+                    if (checkItemById(item.idItem).name.ToString() == "Gems")
                     {
                         var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "Gems").numberItem;
                         ListItemData.datalobby.FirstOrDefault(L => L.name == "Gems").numberItem = NumberItem + nowDaily.numberItem;
                     }
-                    if (checkItemById(item.idItem).name == "Energy")
+                    if (checkItemById(item.idItem).name.ToString() == "Energy")
                     {
                         var NumberItem = ListItemData.datalobby.FirstOrDefault(L => L.name == "Energy").numberItem;
                         if (NumberItem > 60)

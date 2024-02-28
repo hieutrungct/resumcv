@@ -15,24 +15,27 @@ namespace Rubik_Casual
         // Start is called before the first frame update
         //public List<CardInfo> UnitCards;
         //public List<CardInfo> HeroCards;
-        public List<Sprite> Avatars,Button;
+        public List<Sprite> Avatars, Button, enemyAvatar;
         public List<SkeletonDataAsset> Hero;
         public List<SkeletonDataAsset> Enemy;
-        public List<Sprite> RarrityBox ;
+        public List<Sprite> RarrityBox;
         public List<Sprite> RarrityAvaBox, LabelRare;
         public List<Sprite> AttackSprite;
         public List<Sprite> EffectSprite;
         public List<Sprite> SkillSprite;
-        public List<Sprite> imageSummon,Icon, imageBtn, imageWaifu, imageWaifuChibi;
+        public List<Sprite> imageSummon, Icon, imageBtn, imageWaifu, imageWaifuChibi;
         public GameObject cardPrefab;
         public static AssetLoader instance;
         private NTDictionary<string, Sprite> AvatarDic = new NTDictionary<string, Sprite>();
+        private NTDictionary<string, Sprite> AvatarEnemyDic = new NTDictionary<string, Sprite>();
         private Dictionary<string, SkeletonData> HeroDic = new Dictionary<string, SkeletonData>();
         private Dictionary<string, SkeletonData> EnemyDic = new Dictionary<string, SkeletonData>();
         public override void Awake()
         {
             instance = this;
             Avatars = Resources.LoadAll<Sprite>("CamCapture/Waifu").ToList();
+            enemyAvatar = Resources.LoadAll<Sprite>("CamCapture/Creeps").ToList();
+
             Hero = Resources.LoadAll<SkeletonDataAsset>("Character").ToList();
 
             Enemy = Resources.LoadAll<SkeletonDataAsset>("Enemy").ToList();
@@ -41,6 +44,18 @@ namespace Rubik_Casual
                 try
                 {
                     AvatarDic.Add(sprite.name, sprite);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e);
+                }
+            }
+
+            foreach (Sprite sprite in enemyAvatar)
+            {
+                try
+                {
+                    AvatarEnemyDic.Add(sprite.name, sprite);
                 }
                 catch (Exception e)
                 {
@@ -78,7 +93,10 @@ namespace Rubik_Casual
         {
             return AvatarDic.Get(id);
         }
-
+        public Sprite GetAvatarEnemyByIndex(string index)
+        {
+            return AvatarEnemyDic.Get(index);
+        }
         public SkeletonDataAsset GetAvaById(string id)
         {
             foreach (SkeletonDataAsset heroData in Hero)
