@@ -104,7 +104,7 @@ namespace RubikCasual.Battle
                     gameState = GameState.BATTLE;
                     break;
                 case GameState.WAIT_BATTLE:
-                    gamePlayUI.txtTime.text = "Stage: " + CountState.ToString();
+                    gamePlayUI.txtTime.text = "Turn: " + CountState.ToString();
                     if (isAutoFight && isDoneBattle)
                     {
                         isDoneBattle = false;
@@ -400,7 +400,7 @@ namespace RubikCasual.Battle
                         else
                         {
 
-                            GameObject ItemClone = Instantiate(InventorryUIPanel.instance.itemInventory, posSlot.gameObject.transform);
+                            GameObject ItemClone = Instantiate(InventoryUIPanel.instance.itemInventory, posSlot.gameObject.transform);
                             ItemClone.transform.position = new Vector3(ItemClone.transform.position.x, ItemClone.transform.position.y + durations, ItemClone.transform.position.z);
                             SlotInventory Item = ItemClone.GetComponent<SlotInventory>();
                             Item.idItem = idValueInSlot;
@@ -715,10 +715,7 @@ namespace RubikCasual.Battle
                                     EnemyClone.cooldownSkillBar.gameObject.SetActive(false);
                                 }
                                 Tween TMoveEnemy = lsSlotGbEnemy[Count].transform.DOMoveX(mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot[j].transform.position.x, durations * 2);
-                                TMoveEnemy.OnComplete(() =>
-                                {
-                                    this.isCompleteMove = true;
-                                });
+
 
                                 if (lsSlotGbEnemy[Count].GetComponent<CharacterInBattle>() != null)
                                 {
@@ -727,6 +724,7 @@ namespace RubikCasual.Battle
 
                                     TMoveEnemy.OnComplete(() =>
                                     {
+                                        this.isCompleteMove = true;
                                         if (!EnemyClone.isBoss)
                                         {
                                             EnemyClone.healthBar.gameObject.transform.SetParent(dameSlotTxtController.transform);
@@ -780,7 +778,7 @@ namespace RubikCasual.Battle
                             switch (HeroTarget.healthBar.value)
                             {
                                 case 1f:
-                                    InventorryUIPanel.instance.CreateItemInInventory(gb, idItem);
+                                    InventoryUIPanel.instance.CreateItemInInventory(gb, idItem);
                                     break;
                                 default:
                                     SetAnimTxt(gb, i, idItem, HeroTarget);
@@ -791,7 +789,7 @@ namespace RubikCasual.Battle
                             switch (HeroTarget.cooldownSkillBar.value)
                             {
                                 case 1f:
-                                    InventorryUIPanel.instance.CreateItemInInventory(gb, idItem);
+                                    InventoryUIPanel.instance.CreateItemInInventory(gb, idItem);
                                     break;
                                 default:
                                     SetAnimTxt(gb, i, idItem, HeroTarget);

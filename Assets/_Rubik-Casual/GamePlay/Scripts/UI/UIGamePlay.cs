@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.Battle.UI.Result;
+using RubikCasual.Data;
 using RubikCasual.RewardInGame;
 using RubikCasual.Roulette;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace RubikCasual.Battle.UI
     {
         public PopupContinue popupContinue;
         public PopupResultWin popupResultWin;
-        public InventorryUIPanel inventorryUIPanel;
+        public InventoryUIPanel inventoryUIPanel;
         public RouletteController rouletteController;
         public GameObject TxtDame, ItemDrop, imageBackGround;
         public Canvas canvasUIGamePlay;
@@ -49,7 +50,19 @@ namespace RubikCasual.Battle.UI
                 }
                 else
                 {
+                    //lấy số sao thông qua hero còn lại trên bàn 
+                    int Count = 0;
+                    foreach (GameObject hero in BattleController.instance.lsSlotGbHero)
+                    {
+                        if (hero != null)
+                        {
+                            Count++;
+                        }
+                    }
+
+                    popupResultWin.NumberStarReward = Count;
                     popupResultWin.gameObject.SetActive(true);
+
                 }
             }
             else
@@ -60,8 +73,35 @@ namespace RubikCasual.Battle.UI
         void ShowInventory()
         {
             canvasUIGamePlay.sortingLayerName = Name_Sorting_Layer;
-            inventorryUIPanel.gameObject.SetActive(true);
+            inventoryUIPanel.gameObject.SetActive(true);
         }
-        
+
+        public void ClaimReward()
+        {
+            Data.Player.UserData userData = DataController.instance.userData;
+            if (!popupResultWin.GetComponent<PopupResultWin>().isClaim)
+            {
+                for (int i = 0; i < popupResultWin.GetComponent<PopupResultWin>().NumberStarReward; i++)
+                {
+                    RewardWinStage rewardWinStage = DataController.instance.stageAssets.stageAssetsData.lsRewardWinStage[i];
+                    switch (rewardWinStage.nameItem)
+                    {
+                        case DailyItem.NameItem.Coins:
+                            userData.Gold += rewardWinStage.valuableItem;
+                            break;
+                        case DailyItem.NameItem.Gems:
+                            userData.Gem += rewardWinStage.valuableItem;
+                            break;
+                        case DailyItem.NameItem.Energy:
+                            userData.Energy += rewardWinStage.valuableItem;
+                            break;
+                    }
+                }
+
+                popupResultWin.GetComponent<PopupResultWin>().isClaim = true;
+                bl_SceneLoaderManager.LoadScene(NameScene.HOME_SCENE);
+            }
+
+        }
     }
 }

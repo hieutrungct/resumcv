@@ -11,14 +11,14 @@ using UnityEngine.UI;
 
 namespace RubikCasual.Battle.UI
 {
-    public class InventorryUIPanel : MonoBehaviour
+    public class InventoryUIPanel : MonoBehaviour
     {
         public List<GameObject> lsSlotInventory;
         public GameObject itemInventory;
         Vector3 OriginPos;
         public Button btnIconInventory, btnHideInventory;
         public float duration = 0.5f;
-        public static InventorryUIPanel instance;
+        public static InventoryUIPanel instance;
         void Awake()
         {
             instance = this;

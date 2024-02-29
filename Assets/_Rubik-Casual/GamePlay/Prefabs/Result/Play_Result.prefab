@@ -5847,6 +5847,7 @@ MonoBehaviour:
   gbExpBar: {fileID: 1646149350381755118}
   btnExit: {fileID: 1646149350275247630}
   durationAnim: 0.25
+  NumberStarReward: 0
 --- !u!1 &1646149349385543451
 GameObject:
   m_ObjectHideFlags: 0
