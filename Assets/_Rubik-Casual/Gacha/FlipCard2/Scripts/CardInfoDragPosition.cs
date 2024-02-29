@@ -80,6 +80,16 @@ namespace RubikCasual.FlipCard2
             {
                 FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position + new Vector3(2f, 0, 0);
             }
+            
+            // if (idSlot == 0 || idSlot == 1 || idSlot == 2 || idSlot == 3 || idSlot == 4)
+            // {
+            //     FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position - new Vector3(0, 2f, 0);
+            // }
+            // else
+            // {
+            //     FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position + new Vector3(0, 2f, 0);
+            // }
+
             InfoCard infoCard = FlipCardController.instance.gbInfoCardWithMouse.GetComponent<InfoCard>();
 
             if (infoCard.SkeWaifu != null)
