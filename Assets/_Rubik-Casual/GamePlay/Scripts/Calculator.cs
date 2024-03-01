@@ -63,7 +63,7 @@ namespace RubikCasual.Battle.Calculate
                 case TypeItem.Mana:
                     float valueOldCooldownSkillBar = CharacterInBattleAttacked.cooldownSkillBar.value;
                     CharacterInBattleAttacked.cooldownSkillBar.value = valueOldCooldownSkillBar + infoItem.Dame / 40f;
-                    CharacterInBattleAttacked.cooldownSkillBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.cooldownSkillBar, valueOldCooldownSkillBar, valueOldCooldownSkillBar + infoItem.Dame / 40f);
+                    CharacterInBattleAttacked.cooldownSkillBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.cooldownSkillBar, valueOldCooldownSkillBar, valueOldCooldownSkillBar + infoItem.Dame / 40f, false);
                     break;
             }
         }

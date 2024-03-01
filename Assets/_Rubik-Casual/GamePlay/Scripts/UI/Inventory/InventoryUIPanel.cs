@@ -11,42 +11,37 @@ using UnityEngine.UI;
 
 namespace RubikCasual.Battle.UI
 {
-    public class InventorryUIPanel : MonoBehaviour
+    public class InventoryUIPanel : MonoBehaviour
     {
         public List<GameObject> lsSlotInventory;
         public GameObject itemInventory;
         Vector3 OriginPos;
-        public Button btnIconInventory, btnHideInventory;
+        public Button btnIconInventory;
         public float duration = 0.5f;
-        public static InventorryUIPanel instance;
+        bool isShowPopup;
+        public static InventoryUIPanel instance;
         void Awake()
         {
             instance = this;
             OriginPos = gameObject.transform.position;
             gameObject.transform.localScale = new Vector3();
-            HideInventory();
+            btnIconInventory.onClick.AddListener(ShowAndHideInventory);
         }
-        void Start()
+        
+        
+        public void ShowAndHideInventory()
         {
-            btnHideInventory.onClick.AddListener(() =>
+            if (isShowPopup)
             {
-                HideInventory();
-            });
-            btnIconInventory.onClick.AddListener(() =>
+                gameObject.transform.DOMove(btnIconInventory.transform.position, duration);
+                gameObject.transform.DOScale(new Vector3(), duration);
+            }
+            else
             {
-                ShowInventory();
-            });
-            // BtnTestInventory();
-        }
-        public void ShowInventory()
-        {
-            gameObject.transform.DOMove(OriginPos, duration);
-            gameObject.transform.DOScale(new Vector3(1f, 1f, 1f), duration);
-        }
-        public void HideInventory()
-        {
-            gameObject.transform.DOMove(btnIconInventory.transform.position, duration);
-            gameObject.transform.DOScale(new Vector3(), duration);
+                gameObject.transform.DOMove(OriginPos, duration);
+                gameObject.transform.DOScale(new Vector3(1f, 1f, 1f), duration);
+            }
+            isShowPopup = !isShowPopup;
         }
         // [Button]
         // void BtnTestInventory()

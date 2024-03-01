@@ -7,20 +7,28 @@ namespace RubikCasual.Tool
 {
     public class SliderTool : MonoBehaviour
     {
-        public static UnityEngine.UI.Slider ChangeValueSlider(UnityEngine.UI.Slider sliderTarget, float oldValue, float newValue)
+        public static UnityEngine.UI.Slider ChangeValueSlider(UnityEngine.UI.Slider sliderTarget, float oldValue, float newValue, bool isHaveSlider_Down = true)
         {
-
-            sliderTarget.DOValue(newValue, 0.25f).OnComplete(() =>
+            if (isHaveSlider_Down)
             {
-                if (sliderTarget.transform.Find("Slider_Down").GetComponent<UnityEngine.UI.Slider>() != null)
+                sliderTarget.DOValue(newValue, 0.25f).OnComplete(() =>
                 {
-                    UnityEngine.UI.Slider sliderTargetDown = sliderTarget.transform.Find("Slider_Down").GetComponent<UnityEngine.UI.Slider>();
-                    sliderTargetDown.value = oldValue;
-                    sliderTargetDown.DOValue(newValue, 0.15f);
-                }
-            });
+                    if (sliderTarget.transform.Find("Slider_Down").GetComponent<UnityEngine.UI.Slider>() != null)
+                    {
+                        UnityEngine.UI.Slider sliderTargetDown = sliderTarget.transform.Find("Slider_Down").GetComponent<UnityEngine.UI.Slider>();
+                        sliderTargetDown.value = oldValue;
+                        sliderTargetDown.DOValue(newValue, 0.15f);
+                    }
+                });
 
-            return sliderTarget;
+                return sliderTarget;
+            }
+            else
+            {
+                sliderTarget.DOValue(newValue, 0.25f);
+
+                return sliderTarget;
+            }
         }
     }
 }

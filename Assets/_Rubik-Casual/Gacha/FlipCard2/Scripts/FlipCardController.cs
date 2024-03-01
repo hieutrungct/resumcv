@@ -387,7 +387,7 @@ namespace RubikCasual.FlipCard2
             Transform transIcon = transFrontCard.Find(NameGbFlipCard.NameGbIcon);
 
             GameObject gbIcon = transIcon.gameObject;
-            assetLoader = dataController.listImage;
+            assetLoader = dataController.assetLoader;
 
             string nameImage = MovePopup.GetNameImageWaifu(null, dataController.characterAssets.WaifuAssets.Get2D(IDWaifu.ToString()));
 

@@ -290,28 +290,28 @@ namespace RubikCasual.Battle
                 if (!characterAttackedInBattle.isBoss)
                 {
                     float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                    characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.25f);
+                    characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.25f, false);
 
                     float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                    characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.5f);
+                    characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.5f, false);
                 }
                 else
                 {
                     float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                    characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.25f);
+                    characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.25f, false);
 
                     float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                    characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.1f);
+                    characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.1f, false);
                 }
 
             }
             else
             {
                 float valueSliderBarCharacterAttack = characterAttackInBattle.cooldownSkillBar.value;
-                characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.01f);
+                characterAttackInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackInBattle.cooldownSkillBar, valueSliderBarCharacterAttack, valueSliderBarCharacterAttack + 0.01f, false);
 
                 float valueSliderBarCharacterAttacked = characterAttackedInBattle.cooldownSkillBar.value;
-                characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.5f);
+                characterAttackedInBattle.cooldownSkillBar = SliderTool.ChangeValueSlider(characterAttackedInBattle.cooldownSkillBar, valueSliderBarCharacterAttacked, valueSliderBarCharacterAttacked + 0.5f, false);
             }
 
         }

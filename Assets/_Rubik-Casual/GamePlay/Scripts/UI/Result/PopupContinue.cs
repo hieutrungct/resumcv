@@ -28,7 +28,7 @@ namespace RubikCasual.Battle.UI.Result
             this.btnExit.onClick.RemoveAllListeners();
             this.btnExit.onClick.AddListener(() =>
             {
-                RubikCasual.Tool.LoadingScenes.BackHomeScene();
+                bl_SceneLoaderManager.LoadScene(NameScene.HOME_SCENE);
             });
         }
     }

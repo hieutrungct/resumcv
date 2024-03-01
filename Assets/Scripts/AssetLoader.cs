@@ -89,9 +89,9 @@ namespace Rubik_Casual
 
 
 
-        public Sprite GetAvatarById(string id)
+        public Sprite GetAvatarById(string index)
         {
-            return AvatarDic.Get(id);
+            return AvatarDic.Get(index);
         }
         public Sprite GetAvatarEnemyByIndex(string index)
         {

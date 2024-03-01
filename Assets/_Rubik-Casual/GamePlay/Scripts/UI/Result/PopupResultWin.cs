@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using RubikCasual.Data;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -28,25 +29,43 @@ namespace RubikCasual.Battle.UI.Result
     {
         public List<GameObject> lsStar, lsRewardItem;
         public GameObject gbExpBar;
-        public UnityEngine.UI.Button btnExit;
         public float durationAnim = 0.25f;
+        public int NumberStarReward = 0;
+        public bool isClaim;
+        DailyItem.ItemData itemData;
+        StageAssets stageAssets;
         // public List<RewardItem> rewardItem;
         void Awake()
         {
-            ClickExitPopup();
             LoadPopup();
+            StartCoroutine(StartAnimResult());
         }
-        void Update()
+        IEnumerator StartAnimResult()
         {
-            if (!this.gameObject.activeSelf)
-            {
-                ResetPopupResult();
-            }
+            yield return new WaitForSeconds(1f);
+            ShowAnimPopup(NumberStarReward);
         }
         void LoadPopup()
         {
+            itemData = DataController.instance.itemData;
+            stageAssets = DataController.instance.stageAssets;
             SetScriptRewardItem();
             SetScriptExpPlayer();
+            SetDataPopup();
+        }
+        void SetDataPopup()
+        {
+            List<RewardWinStage> lsRewardWinStage = new List<RewardWinStage>();
+            lsRewardWinStage = stageAssets.stageAssetsData.lsRewardWinStage;
+
+            for (int i = 0; i < lsRewardItem.Count; i++)
+            {
+                DailyItem.infoItem infoItem = itemData.InfoItems.FirstOrDefault(f => f.name == lsRewardWinStage[i].nameItem);
+                RewardItem rewardItem = lsRewardItem[i].GetComponent<RewardItem>();
+
+                rewardItem.Icon.sprite = infoItem.imageItem;
+                rewardItem.txtValue.text = lsRewardWinStage[i].valuableItem.ToString();
+            }
         }
         void SetScriptRewardItem()
         {
@@ -62,7 +81,6 @@ namespace RubikCasual.Battle.UI.Result
                     rewardItemClone.txtValue = rewardItemClone.transform.Find(NameRewardItemPopup.name_Gb_Text_Value).GetComponent<TextMeshProUGUI>();
                     rewardItemClone.gbLock = rewardItemClone.transform.Find(NameRewardItemPopup.name_Gb_Lock).gameObject;
 
-                    DailyItem.ItemData itemData = RubikCasual.Data.DataController.instance.itemData;
                     if (index < 2)
                     {
                         if (index == 0)
@@ -86,7 +104,7 @@ namespace RubikCasual.Battle.UI.Result
         }
         void SetScriptExpPlayer()
         {
-            RubikCasual.Data.Player.UserData userData = RubikCasual.Data.DataController.instance.playerData.userData;
+            Data.Player.UserData userData = Data.DataController.instance.playerData.userData;
             if (gbExpBar.GetComponent<ExpPlayer>() == null)
             {
                 ExpPlayer expPlayer = gbExpBar.AddComponent<ExpPlayer>();
@@ -97,11 +115,10 @@ namespace RubikCasual.Battle.UI.Result
                 expPlayer.txtExp.text = userData.Exp.ToString() + "/400";
             }
             // gbExpBar.GetComponent<UnityEngine.UI.Slider>().value = userData.Exp;
-
         }
 
         [Button]
-        void SetDataPopup(int numberGet)
+        void ShowAnimPopup(int numberGet)
         {
             StartCoroutine(DelayAnimPopup(numberGet));
         }
@@ -173,15 +190,6 @@ namespace RubikCasual.Battle.UI.Result
                 RewardItem rewardItem = gbRewardItem.GetComponent<RewardItem>();
                 rewardItem.gbLock.transform.localScale = new Vector3(1f, 1f, 1f);
             }
-        }
-
-        void ClickExitPopup()
-        {
-            this.btnExit.onClick.RemoveAllListeners();
-            this.btnExit.onClick.AddListener(() =>
-            {
-                RubikCasual.Tool.LoadingScenes.BackHomeScene();
-            });
         }
 
     }
