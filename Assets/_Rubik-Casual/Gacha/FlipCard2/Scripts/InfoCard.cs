@@ -14,7 +14,7 @@ namespace RubikCasual.FlipCard2
     public class InfoCard : MonoBehaviour
     {
         public TextMeshProUGUI txtNameWaifu, txtRare, txtValueFrag, txtClass, txtDame, txtDefense, txtAttack, txtHealh;
-        public List<GameObject> lsGbStar;
+        public List<GameObject> lsGbStar, lsAttackRange;
         public Transform posWaifu;
         public SkeletonAnimation SkeWaifu;
         public Image imgRare;
@@ -68,6 +68,31 @@ namespace RubikCasual.FlipCard2
             SkeWaifu.GetComponent<MeshRenderer>().sortingOrder = 10;
 
             SkeWaifu.gameObject.transform.localScale = SkeWaifu.gameObject.transform.localScale * 2 / 3f;
+        }
+        public void matrix()
+        {
+            int[,] matrix = new int[5, 5];
+            int count = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    
+                    matrix[i, j] = count;
+                    count++; 
+                }
+            }
+        }
+        public void PrintMatrix(int[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    
+                    Debug.Log(matrix[i, j]); 
+                }
+            }
         }
     }
 

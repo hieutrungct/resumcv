@@ -83,7 +83,7 @@ namespace RubikCasual.FlipCard2
         void BtnGacha()
         {
             ResetInfo();
-            
+            Debug.Log("đã bấm quay");
             if(Id == 1)
             {
                 CreateCard_1Tecken();
@@ -204,6 +204,7 @@ namespace RubikCasual.FlipCard2
                     cardForId.rare = InfoWaifuAssets.Rare;
                     lsCardForIdRare_UR.Add(cardForId);
                 }
+
                 
                 
             }
@@ -271,6 +272,10 @@ namespace RubikCasual.FlipCard2
             {
                 GachaCard(countUp);
             }
+        }
+        void SummonCard(CardForId card)
+        {
+            lsCardGacha.Add(card);
         }
         void CreateCard()
         {

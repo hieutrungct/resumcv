@@ -8,9 +8,11 @@ namespace Rubik_Casual.Summon
     public class SummonController : MonoBehaviour
     {
         // public List<Sprite> imageSummon,Icon, imageBtn, imageWaifu, imageWaifuChibi;
-        public GameObject GaCharCard;
+        public FlipCardController GaCharCard;
         public Image iconWaifu, imageWaifu, iconTeckit_1, iconTeckit_10;
         public List<SummonSlot> lsBtnSummon;
+
+    
         public void OnClickActiveSummon()
         {
             gameObject.SetActive(true);
@@ -25,12 +27,12 @@ namespace Rubik_Casual.Summon
         }
         public void OnclickButton(int id)
         {
-            GaCharCard.SetActive(true);
-            GaCharCard.GetComponent<FlipCardController>().Id = id;
+            GaCharCard.gameObject.SetActive(true);
+            GaCharCard.Id = id;
         }
         public void OnClickSummon(int id)
         {
-            GaCharCard.GetComponent<FlipCardController>().idSummon = id;
+            GaCharCard.idSummon = id;
             SetUpSummon(id);
         }
         public void SetUpSummon( int id)
@@ -41,7 +43,7 @@ namespace Rubik_Casual.Summon
             iconWaifu.sprite = AssetLoader.instance.GetAvatarById(GetNameImageWaifu(lsBtnSummon[id]));
             Debug.Log("Tên hình ảnh: " + GetNameImageWaifu(lsBtnSummon[id]));
         }
-        public static string GetNameImageWaifu(SummonSlot summonSlot)
+        string GetNameImageWaifu(SummonSlot summonSlot)
         {
             if (summonSlot != null)
             {

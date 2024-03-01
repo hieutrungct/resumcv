@@ -6135,7 +6135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59ba469099689c144b0bb51b76a60cd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87a8c8f5ced1cb14f9b5a8153c21b947, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6238,7 +6238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680dc4f9b9ef4804aba7ae320c356132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GaCharCard: {fileID: 3486394150321225228}
+  GaCharCard: {fileID: 427227668851216358}
   iconWaifu: {fileID: 2653405444160977063}
   imageWaifu: {fileID: 2653405443075104811}
   iconTeckit_1: {fileID: 2653405443213012515}
@@ -6398,7 +6398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7303,11 +7303,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}
---- !u!1 &3486394150321225228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6519544966102711759, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}
+--- !u!114 &427227668851216358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8067613611410967589, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}
   m_PrefabInstance: {fileID: 7644924795281834947}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412ee4cf7c27a724f99a8de29242c1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3486394150321225229 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6519544966102711758, guid: bf85c0de12beaa5428edb17744c4b12c, type: 3}

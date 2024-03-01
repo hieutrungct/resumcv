@@ -694,11 +694,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0742022dfd45a664c829842e272bf7dc, type: 2}
     - {fileID: 11400000, guid: 2073e0647bf7ed74bb6efe2f873c5c7f, type: 2}
   AssetData: {fileID: 4900000, guid: 00fb16814ba339f46912ffd69bb41282, type: 3}
+  AssetSkillData: {fileID: 4900000, guid: 06073d7149b9e0448a15e90ee0ec5972, type: 3}
   WaifuAssetDatas: []
   waifuSkills: []
   infoWaifuAssets:
     lsInfoWaifuAssets: []
-  WaifuSO: {fileID: 0}
   Holder2D: {fileID: 0}
   HolderUI: {fileID: 0}
 --- !u!1 &2466757315032144359
@@ -883,7 +883,7 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   characterAssets: {fileID: 2466757315032144377}
   AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
-  listImage: {fileID: 3922434275395422011}
+  assetLoader: {fileID: 3922434275395422011}
   stageAssets: {fileID: 2950010415139075289}
 --- !u!1 &2950010415589282225
 GameObject:
