@@ -34,9 +34,13 @@ namespace RubikCasual.Character_ACC
         }
         public Waifu.InfoWaifuAsset GetInfoWaifuAsset(string code)
         {
-            Waifu.InfoWaifuAsset infoWaifuAsset = new Waifu.InfoWaifuAsset();
             return this.WaifuAssets.GetInfoWaifuAsset(code);
         }
+        public Data.Waifu.WaifuSkill GetSkillWaifuSOByIndex(int index)
+        {
+            return this.WaifuAssets.GetSkillWaifuSOByIndex(index);
+        }
+
         public SkeletonAnimation Get2D(string index)
         {
             switch (this.AssetsName)
