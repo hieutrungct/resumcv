@@ -784,10 +784,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lsConvertStageAssetsData: []
+  stageAssetsData:
+    lsRewardWinStage: []
+    typeMap: 0
+    lsStageAssetsDatas: []
   lsAssetData:
-  - {fileID: 4900000, guid: da3d51f59cd986a419b01e7e7f4a2890, type: 3}
-  - {fileID: 4900000, guid: b8c483c1efdee9244b91c3c48ee07303, type: 3}
-  - {fileID: 4900000, guid: e93b4899d3df6354299c2789ec898881, type: 3}
+  - {fileID: 4900000, guid: b90bc204f9d5a654dbe9dc4f40f3abe0, type: 3}
+  - {fileID: 4900000, guid: 09634ca766b95f94d89d6b6a2a952d04, type: 3}
+  - {fileID: 4900000, guid: 29a3e9e1671db8b4bb7004da34bad027, type: 3}
+  - {fileID: 4900000, guid: 001d38eb57d044f4abf208307e3eed7a, type: 3}
+  - {fileID: 4900000, guid: 125cfef352595444ab2718a8df758125, type: 3}
+  - {fileID: 4900000, guid: 752550a5d4b75e741aefa15fdfa81581, type: 3}
   idTest: 0
   indexStage: 0
 --- !u!1 &2950010415139075291
@@ -1044,6 +1051,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
   - {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
   - {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
+  enemyAvatar: []
   Hero: []
   Enemy: []
   RarrityBox:

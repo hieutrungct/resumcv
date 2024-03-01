@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+
 using DG.Tweening;
+using Rubik_Casual;
 using RubikCasual.Battle;
 using RubikCasual.Data;
 using RubikCasual.Waifu;
@@ -13,6 +14,7 @@ namespace RubikCasual.FlipCard2
 {
     public class CardInfoDragPosition : MonoBehaviour
     {
+        
         public int idSlot;
         public float ValuePosImageBackGround, ValueMoveImageBackGround;
         public InfoWaifuAsset infoWaifuAsset;
@@ -24,12 +26,21 @@ namespace RubikCasual.FlipCard2
         {
             imageBackGround = FlipCardController.instance.imageBackGround;
             posOriginImageBackGround = imageBackGround.transform.position;
+            
         }
         void OnMouseEnter()
         {
             imageBackGround.transform.position = posOriginImageBackGround;
             gameObject.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f);
             MoveImageBackGround(ValuePosImageBackGround);
+            var btn = GetComponent<Button>();
+            if (btn != null)
+            {
+                btn.onClick.AddListener(() =>
+                {
+                    ShowInfoCard();
+                });
+            }
 
         }
         void OnMouseExit()
@@ -37,10 +48,10 @@ namespace RubikCasual.FlipCard2
             gameObject.transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
             MoveImageBackGround(-ValuePosImageBackGround);
         }
-        void OnMouseDown()
-        {
-            ShowInfoCard();
-        }
+        // void OnMouseDown()
+        // {
+        //     ShowInfoCard();
+        // }
         public void SetValueMoveBackGround(int idSlot)
         {
             ValueMoveImageBackGround = 0.1f;
@@ -64,6 +75,7 @@ namespace RubikCasual.FlipCard2
             {
                 ValuePosImageBackGround = posOriginImageBackGround.x;
             }
+            
         }
         Tween MoveImageBackGround(float value)
         {
@@ -71,16 +83,20 @@ namespace RubikCasual.FlipCard2
         }
         void ShowInfoCard()
         {
-            // Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f);
-            if (idSlot == 3 || idSlot == 8 || idSlot == 4 || idSlot == 9 || idSlot == 7)
-            {
-                FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position - new Vector3(2f, 0, 0);
-            }
-            else
-            {
-                FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position + new Vector3(2f, 0, 0);
-            }
             
+            // Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f);
+
+            // if (idSlot == 3 || idSlot == 8 || idSlot == 4 || idSlot == 9 || idSlot == 7)
+            // {
+            //     FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position - new Vector3(2f, 0, 0);
+            // }
+            // else
+            // {
+            //     FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position + new Vector3(2f, 0, 0);
+            // }
+
+            //gameObject.SetActive(true);  
+            FlipCardController.instance.popup.SetActive(true);         
             // if (idSlot == 0 || idSlot == 1 || idSlot == 2 || idSlot == 3 || idSlot == 4)
             // {
             //     FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position - new Vector3(0, 2f, 0);
@@ -90,40 +106,18 @@ namespace RubikCasual.FlipCard2
             //     FlipCardController.instance.gbInfoCardWithMouse.transform.position = this.gameObject.transform.position + new Vector3(0, 2f, 0);
             // }
 
-            InfoCard infoCard = FlipCardController.instance.gbInfoCardWithMouse.GetComponent<InfoCard>();
-
-            if (infoCard.SkeWaifu != null)
+            // InfoCard infoCard = FlipCardController.instance.gbInfoCardWithMouse.GetComponent<InfoCard>();
+            //LoadDataCard(infoCard);
+            Debug.Log("Đã Bấm");
+            if (InfoCard.instance.SkeWaifu != null)
             {
-                Destroy(infoCard.SkeWaifu.gameObject);
+                Destroy(InfoCard.instance.SkeWaifu.gameObject);
             }
-            infoCard.txtRare.text = this.infoWaifuAsset.Rare.ToString();
-            infoCard.SkeWaifu = DataController.instance.characterAssets.WaifuAssets.Get2D(this.infoWaifuAsset.ID.ToString());
-            infoCard.SkeWaifu.transform.SetParent(infoCard.posWaifu);
-            infoCard.SkeWaifu.transform.position = infoCard.posWaifu.position;
-            infoCard.SkeWaifu.loop = true;
-            infoCard.SkeWaifu.AnimationName = NameAnim.Anim_Character_Idle;
-            infoCard.SkeWaifu.GetComponent<MeshRenderer>().sortingLayerName = "ShowPopup";
-            infoCard.SkeWaifu.GetComponent<MeshRenderer>().sortingOrder = 10;
-
-            infoCard.SkeWaifu.gameObject.transform.localScale = infoCard.SkeWaifu.gameObject.transform.localScale * 2 / 3f;
-
-
-            infoCard.txtNameWaifu.text = this.infoWaifuAsset.Name;
-            infoCard.txtValueFrag.text = this.frag.ToString();
-
-            for (int i = 0; i < 5; i++)
-            {
-                if (this.infoWaifuAsset.Star > i)
-                {
-                    infoCard.lsGbStar[i].SetActive(true);
-                }
-                else
-                {
-                    infoCard.lsGbStar[i].SetActive(false);
-                }
-            }
-
+            InfoCard.instance.LoadSpineCard(infoWaifuAsset);
+            InfoCard.instance.LoadDataCard(infoWaifuAsset);
+            InfoCard.instance.ShowStarCard(infoWaifuAsset);
 
         }
+        
     }
 }

@@ -29,6 +29,7 @@ namespace RubikCasual.FlipCard2
     }
     public class FlipCardController : MonoBehaviour
     {
+        public GameObject popup;
         public GameObject gbTest, gbInfoCard, imageBackGround, gbTicket, gbInfoCardWithMouse;
         public SlotInfoCard slotInfoCard;
         public Transform posInstantiateCard;
@@ -400,8 +401,10 @@ namespace RubikCasual.FlipCard2
             if (playerOwnsWaifuClone == null)
             {
                 txtNewWaifu.gameObject.SetActive(true);
+                
                 playerOwnsWaifuClone = new Data.Player.PlayerOwnsWaifu();
                 InfoWaifuAsset infoWaifuAssetClone = cardInfoDragPosition.infoWaifuAsset;
+                txtNewWaifu.text = infoWaifuAssetClone.Name;
                 playerOwnsWaifuClone.ID = infoWaifuAssetClone.ID;
                 // playerOwnsWaifuClone.HP = infoWaifuAssetClone.HP;
                 // playerOwnsWaifuClone.ATK = infoWaifuAssetClone.ATK;
