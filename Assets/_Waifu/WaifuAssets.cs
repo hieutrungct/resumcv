@@ -50,13 +50,10 @@ namespace RubikCasual.Data.Waifu
     public class WaifuAssets : NTBehaviour
     {
         public const string Path_Assets_SO = "Assets/_Data/Resources/Waifu/SO";
-        public const string Path_Assets_SO_Skill = "Assets/_Data/Resources/Waifu/SO/Skill";
         public const string Path_Resources_SO = "Waifu/SO";
-        public const string Path_Resources_SO_Skill = "Waifu/SO/Skill";
         public NTDictionary<string, Transform> CacheHolder;
         public Transform Holder;
         public NTDictionary<string, WaifuSO> WaifuSODic;
-        public NTDictionary<string, SkillWaifuSO> SkillWaifuSODic;
 
         public TextAsset AssetData, AssetSkillData;
         public List<WaifuAssetData> WaifuAssetDatas;
@@ -149,34 +146,17 @@ namespace RubikCasual.Data.Waifu
             }
             return infoWaifuAsset;
         }
-        public SkillWaifuSO GetSkillWaifuSOByIndex(string index)
+        public WaifuSkill GetSkillWaifuSOByIndex(int index)
         {
-            if (this.SkillWaifuSODic == null)
+            WaifuSkill waifuSkill = new WaifuSkill();
+            foreach (var item in waifuSkills)
             {
-                Debug.Log("null Dic");
-            }
-            try
-            {
-                SkillWaifuSO skillWaifuSO = this.SkillWaifuSODic.Get(index);
-                if (skillWaifuSO == null)
+                if (item.Index == index)
                 {
-                    skillWaifuSO = Resources.Load<SkillWaifuSO>(Path_Resources_SO_Skill + "/" + index);
-                    if (skillWaifuSO == null) throw null;
-                    this.SkillWaifuSODic.Add(index, skillWaifuSO);
-                    return skillWaifuSO;
-                }
-                else
-                {
-                    return skillWaifuSO;
+                    waifuSkill = item;
                 }
             }
-            catch (System.Exception e)
-            {
-
-                Debug.LogWarning(e);
-                Debug.LogError(index);
-                return null;
-            }
+            return waifuSkill;
         }
         public WaifuSO GetWaifuSOByID(string ID)
         {
@@ -455,31 +435,6 @@ namespace RubikCasual.Data.Waifu
                 }
             }
 
-        }
-        [Button]
-        public void LoadInfoSO()
-        {
-            foreach (WaifuSkill item in this.waifuSkills)
-            {
-
-                string path = Path_Assets_SO_Skill + "/" + item.Index + ".asset";
-                SkillWaifuSO skillWaifuSO = AssetDatabase.LoadAssetAtPath<SkillWaifuSO>(Path_Assets_SO_Skill);
-                skillWaifuSO = ScriptableObject.CreateInstance<SkillWaifuSO>();
-                skillWaifuSO.Index = item.Index;
-                skillWaifuSO.Code = item.Code;
-                skillWaifuSO.percentDameSkill = item.percentDameSkill;
-                skillWaifuSO.Row = item.Row;
-                skillWaifuSO.typeSkill = item.typeSkill;
-                skillWaifuSO.NumberTurn = item.NumberTurn;
-                skillWaifuSO.DurationAttacked = item.DurationAttacked;
-                skillWaifuSO.DurationWave = item.DurationWave;
-
-                AssetDatabase.CreateAsset(skillWaifuSO, path);
-                AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
-                EditorUtility.FocusProjectWindow();
-                Selection.activeObject = skillWaifuSO;
-            }
         }
 
 #endif
