@@ -29,12 +29,13 @@ namespace RubikCasual.Battle
         public List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
         public List<int> idCurrentTeam = new List<int>();
         public DataController dataController;
+        public float attribute = 1;
+        public GameState gameState;
         SetAnimCharacter setAnimCharacter;
         bool isEndBattle = false, isRangeRemoved = false, isCompleteMove = true;
         public bool isUpdateDmgEnemy = false;
         int CountState = 1, numberSlot = 5;
-        public float attribute = 1;
-        public GameState gameState;
+
         public static BattleController instance;
 
         void Start()
@@ -81,12 +82,8 @@ namespace RubikCasual.Battle
             // CreateAreaEnemyStart(dataController.stageAssets.lsConvertStageAssetsData);
 
         }
-        public bool isAutoFight = false, isDoneBattle = false;
-        [Button]
-        void BtnAutoFight()
-        {
-            isAutoFight = true;
-        }
+
+
         void BaseState(GameState state)
         {
 
@@ -105,11 +102,6 @@ namespace RubikCasual.Battle
                     break;
                 case GameState.WAIT_BATTLE:
                     gamePlayUI.txtTime.text = "Turn: " + CountState.ToString();
-                    if (isAutoFight && isDoneBattle)
-                    {
-                        isDoneBattle = false;
-                        gameState = GameState.START;
-                    }
                     break;
 
                 case GameState.BATTLE:

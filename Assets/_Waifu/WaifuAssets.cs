@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using JetBrains.Annotations;
 using NTPackage;
 using NTPackage.Functions;
 using RubikCasual.CreateSkill;
+using RubikCasual.DailyItem;
 using RubikCasual.Waifu;
 using SimpleJSON;
 using Sirenix.OdinInspector;
+using Spine;
 using Spine.Unity;
 using UnityEditor;
 using UnityEngine;
@@ -46,11 +50,15 @@ namespace RubikCasual.Data.Waifu
     public class WaifuAssets : NTBehaviour
     {
         public const string Path_Assets_SO = "Assets/_Data/Resources/Waifu/SO";
+        public const string Path_Assets_SO_Skill = "Assets/_Data/Resources/Waifu/SO/Skill";
         public const string Path_Resources_SO = "Waifu/SO";
+        public const string Path_Resources_SO_Skill = "Waifu/SO/Skill";
         public NTDictionary<string, Transform> CacheHolder;
         public Transform Holder;
         public NTDictionary<string, WaifuSO> WaifuSODic;
-        public TextAsset AssetData;
+        public NTDictionary<string, SkillWaifuSO> SkillWaifuSODic;
+
+        public TextAsset AssetData, AssetSkillData;
         public List<WaifuAssetData> WaifuAssetDatas;
         public List<WaifuSkill> waifuSkills;
         public InfoWaifuAssets infoWaifuAssets;
@@ -75,8 +83,6 @@ namespace RubikCasual.Data.Waifu
             GetAssets();
             this.CacheHolder = new NTDictionary<string, Transform>();
             infoWaifuAssets = JsonUtility.FromJson<InfoWaifuAssets>(Resources.Load<TextAsset>("InfoWaifuAssets").text);
-
-
         }
         void GetAssets()
         {
@@ -87,13 +93,38 @@ namespace RubikCasual.Data.Waifu
                 WaifuAssetData waifuAssetData = JsonUtility.FromJson<WaifuAssetData>(item.ToString());
                 this.WaifuAssetDatas.Add(waifuAssetData);
             }
+
+            this.waifuSkills = new List<WaifuSkill>();
+
+            foreach (JSONNode item in JSON.Parse(this.AssetSkillData.text))
+            {
+                WaifuSkill waifuSkillsAssetData = JsonUtility.FromJson<WaifuSkill>(item.ToString());
+                this.waifuSkills.Add(waifuSkillsAssetData);
+            }
         }
-        public WaifuSO WaifuSO;
-        [Button]
-        public void TestGetSO(string index)
+        public void SaveSkillDataToJson()
         {
-            this.WaifuSO = this.GetWaifuSOByID(index);
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(waifuSkills);
+            string path = System.IO.Path.Combine(Path_Assets_SO + "/", "Waifu_Skills.json");
+            System.IO.File.WriteAllText(path, json);
+
+            Debug.Log("Đã lưu dữ liệu vào tệp JSON: " + path);
         }
+        [Button]
+        public void SetSkillData()
+        {
+            foreach (var item in this.WaifuAssetDatas)
+            {
+                WaifuSkill waifuSkill = new WaifuSkill();
+                if (waifuSkills.Find(f => f.Index == item.Index) == null)
+                {
+                    waifuSkill.Index = item.Index;
+                    waifuSkill.Code = item.Code;
+                    waifuSkills.Add(waifuSkill);
+                }
+            }
+        }
+
         public Transform Holder2D;
         [Button]
         public void TestGet2D(string ID, bool isSkin)
@@ -106,7 +137,47 @@ namespace RubikCasual.Data.Waifu
         {
             this.GetUI(index);
         }
+        public InfoWaifuAsset GetInfoWaifuAsset(string code)
+        {
+            InfoWaifuAsset infoWaifuAsset = new InfoWaifuAsset();
+            foreach (InfoWaifuAsset itemInfo in infoWaifuAssets.lsInfoWaifuAssets)
+            {
+                if (itemInfo.Code == code)
+                {
+                    infoWaifuAsset = itemInfo;
+                }
+            }
+            return infoWaifuAsset;
+        }
+        public SkillWaifuSO GetSkillWaifuSOByIndex(string index)
+        {
+            if (this.SkillWaifuSODic == null)
+            {
+                Debug.Log("null Dic");
+            }
+            try
+            {
+                SkillWaifuSO skillWaifuSO = this.SkillWaifuSODic.Get(index);
+                if (skillWaifuSO == null)
+                {
+                    skillWaifuSO = Resources.Load<SkillWaifuSO>(Path_Resources_SO_Skill + "/" + index);
+                    if (skillWaifuSO == null) throw null;
+                    this.SkillWaifuSODic.Add(index, skillWaifuSO);
+                    return skillWaifuSO;
+                }
+                else
+                {
+                    return skillWaifuSO;
+                }
+            }
+            catch (System.Exception e)
+            {
 
+                Debug.LogWarning(e);
+                Debug.LogError(index);
+                return null;
+            }
+        }
         public WaifuSO GetWaifuSOByID(string ID)
         {
             if (this.WaifuSODic == null)
@@ -384,6 +455,31 @@ namespace RubikCasual.Data.Waifu
                 }
             }
 
+        }
+        [Button]
+        public void LoadInfoSO()
+        {
+            foreach (WaifuSkill item in this.waifuSkills)
+            {
+
+                string path = Path_Assets_SO_Skill + "/" + item.Index + ".asset";
+                SkillWaifuSO skillWaifuSO = AssetDatabase.LoadAssetAtPath<SkillWaifuSO>(Path_Assets_SO_Skill);
+                skillWaifuSO = ScriptableObject.CreateInstance<SkillWaifuSO>();
+                skillWaifuSO.Index = item.Index;
+                skillWaifuSO.Code = item.Code;
+                skillWaifuSO.percentDameSkill = item.percentDameSkill;
+                skillWaifuSO.Row = item.Row;
+                skillWaifuSO.typeSkill = item.typeSkill;
+                skillWaifuSO.NumberTurn = item.NumberTurn;
+                skillWaifuSO.DurationAttacked = item.DurationAttacked;
+                skillWaifuSO.DurationWave = item.DurationWave;
+
+                AssetDatabase.CreateAsset(skillWaifuSO, path);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+                EditorUtility.FocusProjectWindow();
+                Selection.activeObject = skillWaifuSO;
+            }
         }
 
 #endif

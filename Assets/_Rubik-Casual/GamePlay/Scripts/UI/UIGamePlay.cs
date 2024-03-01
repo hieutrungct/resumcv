@@ -18,6 +18,8 @@ namespace RubikCasual.Battle.UI
         public GameObject TxtDame, ItemDrop, imageBackGround;
         public Canvas canvasUIGamePlay;
         public bool isSaveReward, chosePopupVictory;
+        public VerticalView.VerticalViewLeft verticalViewLeft;
+        
         public static UIGamePlay instance;
         const string Name_Sorting_Layer = "ShowPopup", Name_Sorting_Layer_origin = "Battle";
         void Awake()
@@ -30,10 +32,10 @@ namespace RubikCasual.Battle.UI
         }
         void Update()
         {
-
             ShowPopupContinue();
             ShowInventory();
         }
+        
         void ShowPopupContinue()
         {
             if (BattleController.instance.gameState == GameState.END)

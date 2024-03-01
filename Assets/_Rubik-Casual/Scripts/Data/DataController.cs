@@ -20,17 +20,17 @@ namespace RubikCasual.Data
         public ItemData itemData;
         public CharacterAssets characterAssets;
         public TextAsset AssetPlayerData;
-        public AssetLoader listImage;
+        public AssetLoader assetLoader;
         public StageAssets stageAssets;
         public static DataController instance;
         void Awake()
         {
             instance = this;
-            
+
         }
         public void initData()
         {
-            
+
             DontDestroyOnLoad(this);
             LoadData();
         }
@@ -41,12 +41,12 @@ namespace RubikCasual.Data
         }
         public void initListOwnWaifu()
         {
-            
+
             LoadlistOwnWaifu();
         }
         public void initPlayerData()
         {
-            
+
             LoadPlayerData();
         }
 
@@ -55,8 +55,9 @@ namespace RubikCasual.Data
         {
             foreach (var item in WaifuAssets.instance.infoWaifuAssets.lsInfoWaifuAssets)
             {
-                
-                if(item.ID == ID){
+
+                if (item.ID == ID)
+                {
                     return item;
                 }
             }
@@ -66,7 +67,7 @@ namespace RubikCasual.Data
         {
             foreach (var item in listOwnsWaifu.lsOwnsWaifu)
             {
-                if(item.ID == Id)
+                if (item.ID == Id)
                 {
                     return item;
                 }
@@ -128,7 +129,7 @@ namespace RubikCasual.Data
             // }
 
 
-            if(PlayerPrefs.HasKey(NameKey.USER_DATA_KEY))
+            if (PlayerPrefs.HasKey(NameKey.USER_DATA_KEY))
             {
                 // string json = PlayerPrefs.GetString(NameKey.Data);
                 // playerData = JsonUtility.FromJson<PlayerData>(json);
@@ -142,16 +143,16 @@ namespace RubikCasual.Data
             }
             playerData.lsPlayerOwnsWaifu = listOwnsWaifu.lsOwnsWaifu;
             playerData.userData = userData;
-            
+
         }
         void LoadUserData()
         {
-            
-            if(PlayerPrefs.HasKey(NameKey.USER_DATA_KEY))
+
+            if (PlayerPrefs.HasKey(NameKey.USER_DATA_KEY))
             {
-                
+
                 userData = JsonUtility.FromJson<UserData>(PlayerPrefs.GetString(NameKey.USER_DATA_KEY));
-                
+
             }
             else
             {
@@ -161,10 +162,10 @@ namespace RubikCasual.Data
         }
         void LoadlistOwnWaifu()
         {
-            if(PlayerPrefs.HasKey(NameKey.USER_OWN_WAIFU_KEY))
+            if (PlayerPrefs.HasKey(NameKey.USER_OWN_WAIFU_KEY))
             {
                 listOwnsWaifu = JsonUtility.FromJson<ListOwnsWaifu>(PlayerPrefs.GetString(NameKey.USER_OWN_WAIFU_KEY));
-                
+
 
             }
             else
@@ -177,11 +178,11 @@ namespace RubikCasual.Data
         {
             playerData.userData = userData;
             playerData.lsPlayerOwnsWaifu = listOwnsWaifu.lsOwnsWaifu;
-            
+
         }
         public void UpdateWaifu(PlayerOwnsWaifu waifu, float curGoldUpdate)
         {
-            if(userData.Gold >= curGoldUpdate)
+            if (userData.Gold >= curGoldUpdate)
             {
                 userData.Gold -= curGoldUpdate;
             }
@@ -191,21 +192,21 @@ namespace RubikCasual.Data
                 return;
             }
             waifu.level += 1;
-            waifu.ATK +=10;
+            waifu.ATK += 10;
             waifu.DEF += 10;
             waifu.Pow += 10;
             waifu.HP += 10;
             SavePlayerOwnsWaifuDataToJson();
-            
 
-            
+
+
             BtnSaveUserDataToJson();
             HUDController.instanse.LoadStatusNumber();
         }
 
 
-        
-        
+
+
         // void SaveDataToJson()
         // {
         //     playerData.userData = userData;
@@ -221,15 +222,15 @@ namespace RubikCasual.Data
         {
             // Chuyển đổi ScriptableObject thành JSON
             string json = JsonUtility.ToJson(userData);
-            PlayerPrefs.SetString(NameKey.USER_DATA_KEY,json);
+            PlayerPrefs.SetString(NameKey.USER_DATA_KEY, json);
         }
         void SavePlayerOwnsWaifuDataToJson()
         {
             // Chuyển đổi ScriptableObject thành JSON
             string json = JsonUtility.ToJson(listOwnsWaifu);
-            PlayerPrefs.SetString(NameKey.USER_OWN_WAIFU_KEY,json);
+            PlayerPrefs.SetString(NameKey.USER_OWN_WAIFU_KEY, json);
         }
-        
+
         // public void LoadDataTest()
         // {
         //     LoadPlayerDataToJson();
