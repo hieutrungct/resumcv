@@ -154,9 +154,9 @@ namespace RubikCasual.Battle
 
             HeroInArea.Clear();
 
-            foreach (float floatValue in dataController.playerData.userData.CurentTeam)
+            foreach (var floatValue in dataController.playerData.userData.curentTeams)
             {
-                int intValue = (int)floatValue;
+                int intValue = (int)floatValue.ID;
                 idCurrentTeam.Add(intValue);
             }
 

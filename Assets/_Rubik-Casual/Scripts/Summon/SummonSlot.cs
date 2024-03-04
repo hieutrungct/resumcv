@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SummonSlot : MonoBehaviour
 {
-    public int Id;
+    public SummonKey key;
+    
     public Image iconWaifu;
 }

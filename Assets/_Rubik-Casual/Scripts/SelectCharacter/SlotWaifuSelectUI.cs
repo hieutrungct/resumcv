@@ -106,9 +106,9 @@ namespace RubikCasual.Lobby
 
             int i; 
             bool isCurrentlySelected = false;
-            for(i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
+            for(i = 0; i < DataController.instance.userData.curentTeams.Count; i++)
             {
-                if(DataController.instance.userData.CurentTeam[i] == thisWaifu.ID)
+                if(DataController.instance.userData.curentTeams[i].ID == thisWaifu.ID)
                 {
                     isCurrentlySelected = true;
                     break;
@@ -117,7 +117,7 @@ namespace RubikCasual.Lobby
             if(isCurrentlySelected)
             {
                 //Debug.Log("Nó sẽ nhảy vào i thứ: "+ i);
-                DataController.instance.userData.CurentTeam[i] = 0;
+                DataController.instance.userData.curentTeams[i].ID = 0;
                 slotWaifuAva.iconSelect.SetActive(false);
                 avaBox_Obj.SetActive(false);
                 slotWaifuAva = null;

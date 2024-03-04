@@ -97,8 +97,8 @@ namespace RubikCasual.Lobby
             Waifus.Sort((charA, charB) =>
             {
 
-                bool isCharAInCurentTeam = DataController.instance.userData.CurentTeam.Contains(charA.ID);
-                bool isCharBInCurentTeam = DataController.instance.userData.CurentTeam.Contains(charB.ID);
+                bool isCharAInCurentTeam = DataController.instance.userData.curentTeams.Contains(new CurentTeam() { ID = charA.ID, SkinCheck = false });
+                bool isCharBInCurentTeam = DataController.instance.userData.curentTeams.Contains(new CurentTeam() { ID = charA.ID, SkinCheck = false });
 
                 if (isCharAInCurentTeam && !isCharBInCurentTeam)
                 {

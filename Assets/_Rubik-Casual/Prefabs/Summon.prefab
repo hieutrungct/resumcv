@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfc007d0f5c21c418a5e555efafa6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 5
+  key: 68
   iconWaifu: {fileID: 2653405443938329826}
 --- !u!1 &2653405442683603799
 GameObject:
@@ -1673,7 +1673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfc007d0f5c21c418a5e555efafa6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 3
+  key: 46
   iconWaifu: {fileID: 2653405444068893164}
 --- !u!1 &2653405442996916799
 GameObject:
@@ -2511,7 +2511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfc007d0f5c21c418a5e555efafa6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 0
+  key: 15
   iconWaifu: {fileID: 2653405443485866314}
 --- !u!1 &2653405443213012525
 GameObject:
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfc007d0f5c21c418a5e555efafa6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 1
+  key: 37
   iconWaifu: {fileID: 2653405444000329891}
 --- !u!1 &2653405443426418360
 GameObject:
@@ -4063,7 +4063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfc007d0f5c21c418a5e555efafa6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 2
+  key: 44
   iconWaifu: {fileID: 2653405443236552251}
 --- !u!1 &2653405443538595197
 GameObject:
@@ -5066,7 +5066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfc007d0f5c21c418a5e555efafa6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 6
+  key: 77
   iconWaifu: {fileID: 2653405442692611382}
 --- !u!1 &2653405443829851986
 GameObject:
@@ -6560,7 +6560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfc007d0f5c21c418a5e555efafa6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 4
+  key: 118
   iconWaifu: {fileID: 2653405444081584739}
 --- !u!1 &2653405444238235875
 GameObject:

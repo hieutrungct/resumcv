@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using RubikCasual.Data;
 using RubikCasual.FlipCard2;
+using RubikCasual.Waifu;
 using UnityEngine;
 using UnityEngine.UI;
 namespace Rubik_Casual.Summon
@@ -37,11 +39,12 @@ namespace Rubik_Casual.Summon
         }
         public void SetUpSummon( int id)
         {
-            imageWaifu.sprite = AssetLoader.instance.imageWaifu[id];
+            // imageWaifu.sprite = AssetLoader.instance.imageWaifu[id];
+            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(id);
             // iconWaifu.sprite = lsBtnSummon[id].iconWaifu.sprite;
             
-            iconWaifu.sprite = AssetLoader.instance.GetAvatarById(GetNameImageWaifu(lsBtnSummon[id]));
-            Debug.Log("Tên hình ảnh: " + GetNameImageWaifu(lsBtnSummon[id]));
+            iconWaifu.sprite = AssetLoader.instance.GetAvatarById(infoWaifu.Code);
+            
         }
         string GetNameImageWaifu(SummonSlot summonSlot)
         {

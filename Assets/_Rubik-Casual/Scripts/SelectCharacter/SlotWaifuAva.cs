@@ -50,9 +50,9 @@ namespace Rubik.Select
             AvaWaifu.preserveAspect = true;
             //classWaifu.sprite = AssetLoader.instance.
             iconSelect.SetActive(false);
-            for (int i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
+            for (int i = 0; i < DataController.instance.userData.curentTeams.Count; i++)
             {
-                if(waifu.ID == DataController.instance.userData.CurentTeam[i])
+                if(waifu.ID == DataController.instance.userData.curentTeams[i].ID)
                 {
                     //Debug.Log("Waifu thứ " + waifu.ID);
                     iconSelect.SetActive(true);
@@ -96,9 +96,9 @@ namespace Rubik.Select
         {
             int i; 
             bool isCurrentlySelected = false;
-            for(i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
+            for(i = 0; i < DataController.instance.userData.curentTeams.Count; i++)
             {
-                if(DataController.instance.userData.CurentTeam[i] == _waifu.ID)
+                if(DataController.instance.userData.curentTeams[i].ID == _waifu.ID)
                 {
                     isCurrentlySelected = true;
                     break;
@@ -107,17 +107,17 @@ namespace Rubik.Select
             if(isCurrentlySelected)
             {
                 //Debug.Log("Nó sẽ nhảy vào i thứ: "+ i);
-                DataController.instance.userData.CurentTeam[i] = 0;
+                DataController.instance.userData.curentTeams[i].ID = 0;
                 WaifuSelectController.instance.lsSlotWaifuSelectUI[i].avaBox_Obj.SetActive(false);
                 iconSelect.SetActive(false);
             }
             else
             {
-                for(i = 0; i < DataController.instance.userData.CurentTeam.Count; i++)
+                for(i = 0; i < DataController.instance.userData.curentTeams.Count; i++)
                 {
-                    if(DataController.instance.userData.CurentTeam[i] == 0)
+                    if(DataController.instance.userData.curentTeams[i].ID == 0)
                     {
-                        DataController.instance.userData.CurentTeam[i] = _waifu.ID;
+                        DataController.instance.userData.curentTeams[i].ID = _waifu.ID;
 
                         WaifuSelectController.instance.lsSlotWaifuSelectUI[i].SetUp(_waifu);
                         WaifuSelectController.instance.lsSlotWaifuSelectUI[i].avaBox_Obj.SetActive(true);

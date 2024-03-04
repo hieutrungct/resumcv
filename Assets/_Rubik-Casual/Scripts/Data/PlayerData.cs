@@ -28,13 +28,18 @@ namespace RubikCasual.Data.Player
         public int  HP, DEF, ATK, Skill, Pow;
 
     }
+    public class CurentTeam
+    {
+        public int ID;
+        public bool SkinCheck;
+    }
     [Serializable]
     public class UserData
     {
         public string UserName, UserId;
         public double Gold, Gem,  Hp, Exp, Ticket, DiamondTicket;
         public int Level, Energy, Rank;
-        public List<int> CurentTeam = new List<int>();
+        public List<CurentTeam> curentTeams = new List<CurentTeam>();
 
         public UserData()
         {
@@ -46,7 +51,7 @@ namespace RubikCasual.Data.Player
             Ticket = 10;
             for (int i = 0; i < 5; i++)
             {
-                CurentTeam.Add(0);
+                curentTeams.Add(new CurentTeam() { ID = 0, SkinCheck = false });
             }
 
         }
