@@ -34,13 +34,13 @@ namespace Rubik_Casual.Summon
         }
         public void OnClickSummon(int id)
         {
-            GaCharCard.idSummon = id;
+            GaCharCard.idSummon = ((int)lsBtnSummon[id].key);
             SetUpSummon(id);
         }
         public void SetUpSummon( int id)
         {
-            // imageWaifu.sprite = AssetLoader.instance.imageWaifu[id];
-            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(id);
+            imageWaifu.sprite = AssetLoader.instance.imageWaifu[id];
+            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(((int)lsBtnSummon[id].key));
             // iconWaifu.sprite = lsBtnSummon[id].iconWaifu.sprite;
             
             iconWaifu.sprite = AssetLoader.instance.GetAvatarById(infoWaifu.Code);

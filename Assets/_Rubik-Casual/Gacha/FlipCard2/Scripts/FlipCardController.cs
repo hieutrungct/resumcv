@@ -38,6 +38,7 @@ namespace RubikCasual.FlipCard2
         public List<GameObject> lsInfocardClone;
         public List<Sprite> lsSpriteCard;
         public List<CardForId> lsCardForId, lsCardGacha, lsCardForIdRare_R, lsCardForIdRare_SR, lsCardForIdRare_SSR, lsCardForIdRare_UR;
+        public CardForId cardForIds;
         public int Id, idSummon;
         TextMeshProUGUI TxtBtn;
         DataController dataController;
@@ -79,9 +80,11 @@ namespace RubikCasual.FlipCard2
                     gbInfoCardWithMouse.transform.position = originOriginGbInfoCard;
                 }
             });
+            idSummon = ((int)SummonKey.idOnSlot_1);
         }
         void BtnGacha()
         {
+            
             ResetInfo();
             Debug.Log("đã bấm quay");
             if(Id == 1)
@@ -91,7 +94,9 @@ namespace RubikCasual.FlipCard2
             else
             {
                 CreateCard();
+                SummonCard();
             }
+            
             if (dataController.userData.Ticket >= Id)
             {
                 if (!isHaveMove)
@@ -204,6 +209,8 @@ namespace RubikCasual.FlipCard2
                     cardForId.rare = InfoWaifuAssets.Rare;
                     lsCardForIdRare_UR.Add(cardForId);
                 }
+                
+                
 
                 
                 
@@ -273,9 +280,15 @@ namespace RubikCasual.FlipCard2
                 GachaCard(countUp);
             }
         }
-        void SummonCard(CardForId card)
+        void SummonCard()
         {
-            lsCardGacha.Add(card);
+            InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(idSummon);
+            cardForIds = new CardForId();
+            cardForIds.ID = infoWaifu.ID;
+            cardForIds.Code = infoWaifu.Code;
+            cardForIds.rare = infoWaifu.Rare;
+            lsCardGacha.Add(cardForIds);
+            
         }
         void CreateCard()
         {
