@@ -28,6 +28,7 @@ namespace RubikCasual.Data.Player
         public int  HP, DEF, ATK, Skill, Pow;
 
     }
+    [Serializable]
     public class CurentTeam
     {
         public int ID;

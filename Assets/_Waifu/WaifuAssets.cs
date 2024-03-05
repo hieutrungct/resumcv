@@ -134,6 +134,41 @@ namespace RubikCasual.Data.Waifu
         {
             this.GetUI(index);
         }
+
+        public int GetIndexWaifu(int id, bool isSkin = false)
+        {
+            InfoWaifuAsset infoWaifuAsset = new InfoWaifuAsset();
+            infoWaifuAsset = infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == id);
+
+            if (infoWaifuAsset != null)
+            {
+                List<WaifuAssetData> lsWaifuAssetData = new List<WaifuAssetData>();
+                lsWaifuAssetData = WaifuAssetDatas.FindAll(f => f.Code == infoWaifuAsset.Code);
+
+                if (lsWaifuAssetData.Count != 1)
+                {
+                    if (isSkin)
+                    {
+                        return lsWaifuAssetData[1].Index;
+                    }
+                    else
+                    {
+                        return lsWaifuAssetData[0].Index;
+                    }
+                }
+                else
+                {
+                    return lsWaifuAssetData[0].Index;
+                }
+
+            }
+            else
+            {
+                Debug.LogError("Không có Character có Id: " + id.ToString() + " hoặc character không có Bool isSkin");
+                return 1;
+            }
+
+        }
         public InfoWaifuAsset GetInfoWaifuAsset(string code)
         {
             InfoWaifuAsset infoWaifuAsset = new InfoWaifuAsset();

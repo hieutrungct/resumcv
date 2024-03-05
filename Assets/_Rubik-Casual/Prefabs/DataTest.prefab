@@ -101,6 +101,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
   - {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
   - {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
+  enemyAvatar: []
   Hero: []
   Enemy: []
   RarrityBox:
@@ -109,6 +110,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 08be456a6ddbf458784cf3a37e52822f, type: 3}
   - {fileID: 21300000, guid: 284f99482071f47839549747513b612b, type: 3}
   - {fileID: 21300000, guid: 072fc1e433b92438e915c6c10bfd2994, type: 3}
+  RarrityAvaBox: []
+  LabelRare: []
   AttackSprite:
   - {fileID: 21300000, guid: 7c38202bc1125471cb46578c474ed80e, type: 3}
   - {fileID: 21300000, guid: b944c63612ae9407cbd657cf70397e9b, type: 3}
@@ -116,6 +119,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1b652d4125f7c453eba84d8462355c62, type: 3}
   EffectSprite: []
   SkillSprite: []
+  imageSummon: []
+  Icon: []
+  imageBtn: []
+  imageWaifu: []
+  imageWaifuChibi: []
   cardPrefab: {fileID: 0}
 --- !u!1 &715968482227026430
 GameObject:
@@ -277,8 +285,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lsConvertStageAssetsData: []
-  AssetData: {fileID: 4900000, guid: b8c483c1efdee9244b91c3c48ee07303, type: 3}
+  stageAssetsData:
+    lsRewardWinStage: []
+    typeMap: 0
+    lsStageAssetsDatas: []
+  lsAssetData:
+  - {fileID: 4900000, guid: b90bc204f9d5a654dbe9dc4f40f3abe0, type: 3}
+  - {fileID: 4900000, guid: 09634ca766b95f94d89d6b6a2a952d04, type: 3}
+  - {fileID: 4900000, guid: 29a3e9e1671db8b4bb7004da34bad027, type: 3}
+  - {fileID: 4900000, guid: 001d38eb57d044f4abf208307e3eed7a, type: 3}
+  - {fileID: 4900000, guid: 125cfef352595444ab2718a8df758125, type: 3}
+  - {fileID: 4900000, guid: 752550a5d4b75e741aefa15fdfa81581, type: 3}
   idTest: 0
+  indexStage: 0
 --- !u!1 &2552376162893130867
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,10 +388,22 @@ MonoBehaviour:
       Gem: 0
       Hp: 0
       Exp: 0
+      Ticket: 10
+      DiamondTicket: 0
       Level: 0
       Energy: 0
       Rank: 0
-      CurentTeam: 
+      curentTeams:
+      - ID: 0
+        SkinCheck: 0
+      - ID: 0
+        SkinCheck: 0
+      - ID: 0
+        SkinCheck: 0
+      - ID: 0
+        SkinCheck: 0
+      - ID: 0
+        SkinCheck: 0
     lsPlayerOwnsWaifu: []
     Inventory:
       Keys: 
@@ -387,14 +418,26 @@ MonoBehaviour:
     Gem: 0
     Hp: 0
     Exp: 0
+    Ticket: 10
+    DiamondTicket: 0
     Level: 0
     Energy: 0
     Rank: 0
-    CurentTeam: 
+    curentTeams:
+    - ID: 0
+      SkinCheck: 0
+    - ID: 0
+      SkinCheck: 0
+    - ID: 0
+      SkinCheck: 0
+    - ID: 0
+      SkinCheck: 0
+    - ID: 0
+      SkinCheck: 0
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   characterAssets: {fileID: 2999671105770049558}
   AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
-  listImage: {fileID: 247475729790594326}
+  assetLoader: {fileID: 247475729790594326}
   stageAssets: {fileID: 2552376161743813942}
 --- !u!1 &2999671104778111196
 GameObject:
@@ -486,10 +529,11 @@ MonoBehaviour:
     Keys: []
     Values: []
   AssetData: {fileID: 4900000, guid: 00fb16814ba339f46912ffd69bb41282, type: 3}
+  AssetSkillData: {fileID: 4900000, guid: 06073d7149b9e0448a15e90ee0ec5972, type: 3}
   WaifuAssetDatas: []
+  waifuSkills: []
   infoWaifuAssets:
     lsInfoWaifuAssets: []
-  WaifuSO: {fileID: 0}
   Holder2D: {fileID: 0}
   HolderUI: {fileID: 0}
 --- !u!1 &2999671105770049544

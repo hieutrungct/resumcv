@@ -18,7 +18,8 @@ namespace RubikCasual.Battle
     public class CharacterInBattle : MonoBehaviour
     {
         public int indexOfSlot;
-        public InfoWaifuAsset infoWaifuAsset;
+        public Data.Player.CurentTeam waifuIdentify;
+        public InfoWaifuAsset infoWaifuAsset = new InfoWaifuAsset();
         public SkeletonAnimation skeletonCharacterAnimation;
         public int HpNow, Hp, Def, Atk, Skill, Rage;
         public Transform PosCharacter;

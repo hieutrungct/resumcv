@@ -20,7 +20,6 @@ namespace RubikCasual.Character_ACC
         public Data.Waifu.EnemyAssets enemyAssets;
 
 
-
         public static CharacterAssets instance;
         protected override void Awake()
         {
@@ -31,6 +30,11 @@ namespace RubikCasual.Character_ACC
                 return;
             }
             CharacterAssets.instance = this;
+        }
+        public int GetIndexWaifu(int id, bool isSkin = false)
+        {
+
+            return this.WaifuAssets.GetIndexWaifu(id, isSkin);
         }
         public Waifu.InfoWaifuAsset GetInfoWaifuAsset(string code)
         {

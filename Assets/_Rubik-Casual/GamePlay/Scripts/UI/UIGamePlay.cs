@@ -17,9 +17,10 @@ namespace RubikCasual.Battle.UI
         public RouletteController rouletteController;
         public GameObject TxtDame, ItemDrop, imageBackGround;
         public Canvas canvasUIGamePlay;
-        public bool isSaveReward, chosePopupVictory;
+        public bool isSaveReward, chosePopupVictory, isHaveChangeSlot;
         public VerticalView.VerticalViewLeft verticalViewLeft;
-        
+        public List<Data.Player.CurentTeam> waifuIdentifies = new List<Data.Player.CurentTeam>();
+        public List<string> lsCode = new List<string>();
         public static UIGamePlay instance;
         const string Name_Sorting_Layer = "ShowPopup", Name_Sorting_Layer_origin = "Battle";
         void Awake()
@@ -34,8 +35,21 @@ namespace RubikCasual.Battle.UI
         {
             ShowPopupContinue();
             ShowInventory();
+            SetUIVerticalLeft();
         }
-        
+        void SetUIVerticalLeft()
+        {
+            if (isHaveChangeSlot || lsCode.Count == 0)
+            {
+                BattleController.instance.SetSlotHero();
+                if (lsCode.Count != 0)
+                {
+                    verticalViewLeft.SetDataPopup(lsCode);
+                    verticalViewLeft.SetImageItem(waifuIdentifies);
+                    isHaveChangeSlot = false;
+                }
+            }
+        }
         void ShowPopupContinue()
         {
             if (BattleController.instance.gameState == GameState.END)

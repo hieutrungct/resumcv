@@ -9,18 +9,28 @@ namespace RubikCasual.Battle.UI.VerticalView
     {
         public List<ItemViewUI> lsItemViewUI = new List<ItemViewUI>();
         public List<Image> lsImageIcon = new List<Image>();
-        public void SetImageItem(List<int> lsIndex)
+
+
+        public void SetImageItem(List<Data.Player.CurentTeam> waifuIdentifies)
         {
             for (int i = 0; i < lsImageIcon.Count; i++)
             {
-                lsImageIcon[i].sprite = Data.DataController.instance.assetLoader.GetAvatarById(lsIndex[i].ToString());
+                if (waifuIdentifies[i] != null)
+                {
+                    // Debug.Log(waifuIdentifies[i].SkinCheck);
+                    lsImageIcon[i].sprite = Data.DataController.instance.assetLoader.GetAvatarByIndex(Data.DataController.instance.characterAssets.GetIndexWaifu(waifuIdentifies[i].ID, waifuIdentifies[i].SkinCheck));
+                }
             }
         }
         public void SetDataPopup(List<string> lsCode)
         {
+
             for (int i = 0; i < lsItemViewUI.Count; i++)
             {
-                lsItemViewUI[i].SetDataPopup(Data.DataController.instance.characterAssets.GetInfoWaifuAsset(lsCode[i]));
+                if (lsCode[i] != "0")
+                {
+                    lsItemViewUI[i].SetDataPopup(Data.DataController.instance.characterAssets.GetInfoWaifuAsset(lsCode[i]));
+                }
             }
         }
     }

@@ -39,18 +39,8 @@ namespace Rubik_Casual
             Hero = Resources.LoadAll<SkeletonDataAsset>("Character").ToList();
 
             Enemy = Resources.LoadAll<SkeletonDataAsset>("Enemy").ToList();
-            foreach (Sprite sprite in Avatars)
-            {
-                try
-                {
-                    AvatarDic.Add(sprite.name, sprite);
-                }
-                catch (Exception e)
-                {
-                    Debug.LogException(e);
-                }
-            }
 
+            SetUpAvaDic();
             foreach (Sprite sprite in enemyAvatar)
             {
                 try
@@ -86,8 +76,54 @@ namespace Rubik_Casual
                 }
             }
         }
+        void SetUpAvaDic()
+        {
+            for (int i = 0; i < Avatars.Count; i++)
+            {
+                int indexWaifu = 0;
+                indexWaifu = i + 1;
+                string[] nameAvatar = Avatars[i].name.Split("_");
+                if (nameAvatar.Length != 1)
+                {
+                    List<Sprite> CheckCountList = Avatars.FindAll(f => f.name.Split("_")[0] == Avatars[i].name.Split("_")[0]);
+                    if (CheckCountList.Count != 2)
+                    {
+                        switch (nameAvatar[1])
+                        {
+                            case "A":
+                                indexWaifu++;
+                                AvatarDic.Add(indexWaifu.ToString(), Avatars[i]);
+                                break;
+                            case "S1":
+                                indexWaifu--;
+                                AvatarDic.Add(indexWaifu.ToString(), Avatars[i]);
+                                break;
+                            case "S01":
+                                indexWaifu--;
+                                AvatarDic.Add(indexWaifu.ToString(), Avatars[i]);
+                                break;
+                            default:
+                                AvatarDic.Add(indexWaifu.ToString(), Avatars[i]);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        AvatarDic.Add(indexWaifu.ToString(), Avatars[i]);
+                    }
+                }
+                else
+                {
+                    AvatarDic.Add(indexWaifu.ToString(), Avatars[i]);
+                }
 
+            }
 
+        }
+        public Sprite GetAvatarByIndex(int index)
+        {
+            return AvatarDic.Get(index.ToString());
+        }
 
         public Sprite GetAvatarById(string index)
         {
