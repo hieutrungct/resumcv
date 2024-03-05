@@ -4,6 +4,7 @@ using UnityEngine;
 using Spine.Unity;
 using UnityEngine.EventSystems;
 using RubikCasual.Battle;
+using RubikCasual.Battle.UI;
 
 namespace Rubik.Axie
 {
@@ -186,12 +187,12 @@ namespace Rubik.Axie
         private void OnMouseUp()
         {
             int temp = GameControl.instance.CheckNearPos(gameObject.transform.position);
+            GetComponent<MeshRenderer>().sortingOrder = 10;
+            GetComponent<MeshRenderer>().sortingLayerName = "Character";
 
             if (temp == -1 || BattleController.instance.gameState != GameState.WAIT_BATTLE || (BattleController.instance.lsSlotGbHero[temp] != null && BattleController.instance.lsSlotGbHero[temp].GetComponent<CharacterInBattle>().HpNow == 0))
             {
                 gameObject.transform.position = oriPos;
-                GetComponent<MeshRenderer>().sortingOrder = 10;
-                GetComponent<MeshRenderer>().sortingLayerName = "Character";
                 return;
             }
 
@@ -201,8 +202,7 @@ namespace Rubik.Axie
             oriIndex = temp;
             oriPos = gameObject.transform.position;
 
-            GetComponent<MeshRenderer>().sortingOrder = 10;
-            GetComponent<MeshRenderer>().sortingLayerName = "Character";
+            UIGamePlay.instance.isHaveChangeSlot = true;
             dragging = false;
         }
 

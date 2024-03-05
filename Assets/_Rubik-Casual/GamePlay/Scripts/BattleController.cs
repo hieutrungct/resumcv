@@ -27,7 +27,6 @@ namespace RubikCasual.Battle
         public GamePlayUI gamePlayUI;
         public List<SlotInArea> HeroInArea;
         public List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
-        public List<int> idCurrentTeam = new List<int>();
         public DataController dataController;
         public float attribute = 1;
         public GameState gameState;
@@ -52,7 +51,27 @@ namespace RubikCasual.Battle
             CheckHeroInBattle();
             BaseState(gameState);
         }
+        public void SetSlotHero()
+        {
+            List<Data.Player.CurentTeam> waifuIdentifies = new List<Data.Player.CurentTeam>();
+            List<string> lsCode = new List<string>();
+            foreach (GameObject item in lsSlotGbHero)
+            {
+                if (item != null)
+                {
+                    waifuIdentifies.Add(item.GetComponent<CharacterInBattle>().waifuIdentify);
+                    lsCode.Add(item.GetComponent<CharacterInBattle>().infoWaifuAsset.Code);
+                }
+                else
+                {
+                    waifuIdentifies.Add(null);
+                    lsCode.Add("0");
+                }
+            }
+            UIGamePlay.instance.lsCode = lsCode;
+            UIGamePlay.instance.waifuIdentifies = waifuIdentifies;
 
+        }
         public void StartGame()
         {
 
@@ -105,7 +124,6 @@ namespace RubikCasual.Battle
                     break;
 
                 case GameState.BATTLE:
-                    ConvertIdDataToLsSlotInBattle();
                     Atack();
                     break;
 
@@ -117,36 +135,7 @@ namespace RubikCasual.Battle
                     break;
             }
         }
-        void ConvertIdDataToLsSlotInBattle()
-        {
-            if (CountState == 1)
-            {
-                bool checkCurrentTeam = false;
-                for (int index = 0; index < lsSlotGbHero.Count; index++)
-                {
-                    if (lsSlotGbHero[index] != null && (int)lsSlotGbHero[index].GetComponent<CharacterInBattle>().infoWaifuAsset.ID != idCurrentTeam[index])
-                    {
-                        checkCurrentTeam = true;
-                    }
-                }
-                if (checkCurrentTeam)
-                {
-                    idCurrentTeam.Clear();
-                    foreach (var item in lsSlotGbHero)
-                    {
-                        if (item != null)
-                        {
-                            int index = (int)item.GetComponent<CharacterInBattle>().infoWaifuAsset.ID;
-                            idCurrentTeam.Add(index);
-                        }
-                        else
-                        {
-                            idCurrentTeam.Add(0);
-                        }
-                    }
-                }
-            }
-        }
+
 
         IEnumerator CreateBattlefield()
         {
@@ -154,23 +143,16 @@ namespace RubikCasual.Battle
 
             HeroInArea.Clear();
 
-            foreach (var floatValue in dataController.playerData.userData.curentTeams)
+            foreach (Data.Player.CurentTeam floatValue in dataController.playerData.userData.curentTeams)
             {
                 int intValue = (int)floatValue.ID;
-                idCurrentTeam.Add(intValue);
             }
 
             for (int i = 0; i < numberSlot; i++)
             {
                 SlotInArea slotInArea = new SlotInArea();
-                if (idCurrentTeam.Count > i)
-                {
-                    slotInArea.idCharacter = idCurrentTeam[i];
-                }
-                else
-                {
-                    slotInArea.idCharacter = 0;
-                }
+                slotInArea.idCharacter = dataController.playerData.userData.curentTeams[i].ID;
+                slotInArea.isSkin = dataController.playerData.userData.curentTeams[i].SkinCheck;
                 slotInArea.slotCharacter = i + 1;
                 HeroInArea.Add(slotInArea);
             }
@@ -269,8 +251,10 @@ namespace RubikCasual.Battle
                     CharacterInBattle heroInBattle = Instantiate(HeroInBattle, posSlot.gameObject.transform);
                     heroInBattle.gameObject.transform.position = posSlot.gameObject.transform.position;
                     heroInBattle.indexOfSlot = index;
+                    heroInBattle.waifuIdentify.ID = lsHeroInArea[index].idCharacter;
+                    heroInBattle.waifuIdentify.SkinCheck = lsHeroInArea[index].isSkin;
 
-                    SkeletonAnimation Hero = SpawnCharacter(heroInBattle, dataController.characterAssets.WaifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString()));
+                    SkeletonAnimation Hero = SpawnCharacter(heroInBattle, dataController.characterAssets.WaifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString(), lsHeroInArea[index].isSkin));
 
                     CharacterDragPosition CharacterHero = Hero.gameObject.AddComponent<CharacterDragPosition>();
                     CharacterHero.CharacterSke = dataController.characterAssets.WaifuAssets.Get2D(lsHeroInArea[index].idCharacter.ToString());
@@ -319,7 +303,18 @@ namespace RubikCasual.Battle
                         {
                             // UnityEngine.Debug.Log(enemyAssets.WaifuEnemyAssetDatas.FirstOrDefault(f => f.Index == enemyAssets.lsIdEnemy[indexRand]).Is_Boss);
                             mapBattleController.lsPosEnemySlot[index].lsPosCharacterSlot[j].id = idValueInSlot;
-                            attribute *= dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
+                            switch (dataController.stageAssets.stageAssetsData.typeMap)
+                            {
+                                case CreateSkill.Panel.TypeMap.Default_Map:
+                                    attribute = dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
+                                    break;
+                                case CreateSkill.Panel.TypeMap.Infinity_Map:
+                                    attribute *= dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
+                                    break;
+                                    // case CreateSkill.Panel.TypeMap.Challenge_Map:
+                                    //     attribute = dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
+                                    //     break;
+                            }
 
                             if (dataController.characterAssets.enemyAssets.WaifuEnemyAssetDatas.Find(f => f.Index == idValueInSlot).Is_Boss)
                             {
@@ -838,6 +833,7 @@ namespace RubikCasual.Battle
     [System.Serializable]
     public class SlotInArea
     {
-        public float slotCharacter, idCharacter;
+        public int slotCharacter, idCharacter;
+        public bool isSkin;
     }
 }
