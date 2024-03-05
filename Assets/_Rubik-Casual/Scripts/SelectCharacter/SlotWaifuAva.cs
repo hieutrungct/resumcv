@@ -46,7 +46,9 @@ namespace Rubik.Select
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             SpineEditorUtilities.ReinitializeComponent(avaWaifu);
             
-            AvaWaifu.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+            // AvaWaifu.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+            AvaWaifu.sprite  = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
+
             AvaWaifu.preserveAspect = true;
             //classWaifu.sprite = AssetLoader.instance.
             iconSelect.SetActive(false);
