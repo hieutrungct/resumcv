@@ -859,7 +859,6 @@ MonoBehaviour:
       Level: 0
       Energy: 0
       Rank: 0
-      CurentTeam: 
     lsPlayerOwnsWaifu: []
     Inventory:
       Keys: 
@@ -879,7 +878,6 @@ MonoBehaviour:
     Level: 0
     Energy: 0
     Rank: 0
-    CurentTeam: 
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   characterAssets: {fileID: 2466757315032144377}
   AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
@@ -1089,13 +1087,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 16576ad66d8a3064a8ba6043f92d6d98, type: 3}
   - {fileID: 21300000, guid: 9c47a85785f345b4fbc21d13237bbaae, type: 3}
   - {fileID: 21300000, guid: 27f96845552ef734694951ce129f9dee, type: 3}
+  - {fileID: 21300000, guid: 6b847654516dfcd44ac3a2e9ca7c38ff, type: 3}
   - {fileID: 21300000, guid: fc220e0c88efb1c4eb43016c1d9fd0c1, type: 3}
   - {fileID: 21300000, guid: 119e83725b5b20340abfd08e7e213cd8, type: 3}
   - {fileID: 21300000, guid: b4ebee81d790c79488c108432391f8ad, type: 3}
   - {fileID: 21300000, guid: e8d210a354ed54640b917095b3209c69, type: 3}
   - {fileID: 21300000, guid: 1fd83f21bd3c29942a086c12edcf2f46, type: 3}
-  imageWaifuChibi:
-  - {fileID: 21300000, guid: 6b847654516dfcd44ac3a2e9ca7c38ff, type: 3}
+  imageWaifuChibi: []
   cardPrefab: {fileID: 0}
 --- !u!1 &5283675277383690154
 GameObject:

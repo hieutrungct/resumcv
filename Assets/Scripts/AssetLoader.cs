@@ -30,6 +30,7 @@ namespace Rubik_Casual
         private NTDictionary<string, Sprite> AvatarEnemyDic = new NTDictionary<string, Sprite>();
         private Dictionary<string, SkeletonData> HeroDic = new Dictionary<string, SkeletonData>();
         private Dictionary<string, SkeletonData> EnemyDic = new Dictionary<string, SkeletonData>();
+        private NTDictionary<string, Sprite> ImageWaifuDic = new NTDictionary<string, Sprite>();
         public override void Awake()
         {
             instance = this;
@@ -40,6 +41,8 @@ namespace Rubik_Casual
 
             Enemy = Resources.LoadAll<SkeletonDataAsset>("Enemy").ToList();
 
+            // imageWaifu = Resources.LoadAll<Sprite>("CamCapture/Creeps/Character").ToList();
+            
             SetUpAvaDic();
             foreach (Sprite sprite in enemyAvatar)
             {
@@ -69,6 +72,17 @@ namespace Rubik_Casual
                 try
                 {
                     EnemyDic.TryAdd(enemyData.name, enemyData.GetSkeletonData(false));
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e);
+                }
+            }
+            foreach (Sprite sprite in imageWaifu)
+            {
+                try
+                {
+                    ImageWaifuDic.Add(sprite.name, sprite);
                 }
                 catch (Exception e)
                 {
@@ -132,6 +146,10 @@ namespace Rubik_Casual
         public Sprite GetAvatarEnemyByIndex(string index)
         {
             return AvatarEnemyDic.Get(index);
+        }
+        public Sprite GetImageWaifuByIndex(string index)
+        {
+            return ImageWaifuDic.Get(index);
         }
         public SkeletonDataAsset GetAvaById(string id)
         {

@@ -48,7 +48,7 @@ namespace Rubik.ListWaifu
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             SpineEditorUtilities.ReinitializeComponent(avaWaifu);
             
-            avatar.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+            avatar.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(waifu.ID));
             avatar.preserveAspect = true;
 
             // Debug.Log(infoWaifu.Code.ToString());

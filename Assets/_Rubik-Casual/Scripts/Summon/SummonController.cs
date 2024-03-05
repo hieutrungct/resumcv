@@ -35,6 +35,7 @@ namespace Rubik_Casual.Summon
         public void OnClickSummon(int id)
         {
             GaCharCard.idSummon = ((int)lsBtnSummon[id].key);
+            GaCharCard.isClick = false;
             SetUpSummon(id);
         }
         public void SetUpSummon( int id)
@@ -43,8 +44,8 @@ namespace Rubik_Casual.Summon
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(((int)lsBtnSummon[id].key));
             // iconWaifu.sprite = lsBtnSummon[id].iconWaifu.sprite;
             
-            iconWaifu.sprite = AssetLoader.instance.GetAvatarById(infoWaifu.Code);
-            
+            // iconWaifu.sprite = AssetLoader.instance.GetAvatarById(infoWaifu.Code);
+            iconWaifu.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
         }
         string GetNameImageWaifu(SummonSlot summonSlot)
         {

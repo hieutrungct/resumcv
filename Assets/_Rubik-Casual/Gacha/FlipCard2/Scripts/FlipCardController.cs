@@ -42,7 +42,7 @@ namespace RubikCasual.FlipCard2
         public int Id, idSummon;
         TextMeshProUGUI TxtBtn;
         DataController dataController;
-        bool isClick = false, ChangeType, isHaveMove;
+        public bool isClick = false, ChangeType, isHaveMove;
 
         Rubik_Casual.AssetLoader assetLoader;
         Vector3 originOriginGbInfoCard;
@@ -81,6 +81,7 @@ namespace RubikCasual.FlipCard2
                 }
             });
             idSummon = ((int)SummonKey.idOnSlot_1);
+            
         }
         void BtnGacha()
         {
@@ -103,14 +104,16 @@ namespace RubikCasual.FlipCard2
                 {
                     isHaveMove = true;
                     dataController.userData.Ticket = dataController.userData.Ticket - Id;
-                    if (!isClick)
+                    if (!isClick && Id != 1)
                     {
                         isClick = !isClick;
                         GachaCard(0);
                         BtnMoveCard(0);
+                        Debug.Log("ấn lần đầu");
                     }
                     else
                     {
+                        Debug.Log("đã ResetGatcha");
                         ResetGatcha();
                         GachaCard(0);
                         BtnMoveCard(0);
@@ -157,6 +160,7 @@ namespace RubikCasual.FlipCard2
         }
         void ResetGatcha()
         {
+            
             foreach (var item in lsInfocardClone)
             {
                 item.transform.position = posInstantiateCard.position;
@@ -169,6 +173,7 @@ namespace RubikCasual.FlipCard2
                 transFrontCard.localScale = new Vector3(0, 1f, 1f);
 
             }
+            
             lsCardGacha.Clear();
         }
         void SetLsCardForId()
@@ -280,7 +285,7 @@ namespace RubikCasual.FlipCard2
                 GachaCard(countUp);
             }
         }
-        void SummonCard()
+        public void SummonCard()
         {
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(idSummon);
             cardForIds = new CardForId();
@@ -292,6 +297,11 @@ namespace RubikCasual.FlipCard2
         }
         void CreateCard()
         {
+            foreach (Transform child in posInstantiateCard)
+            {
+
+                Destroy(child.gameObject);
+            }
             lsInfocardClone.Clear();
             for (int i = 0; i < slotInfoCard.lsPosSlotInfoCard.Count; i++)
             {
