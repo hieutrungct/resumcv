@@ -169,12 +169,12 @@ namespace RubikCasual.Data.Waifu
             }
 
         }
-        public InfoWaifuAsset GetInfoWaifuAsset(string code)
+        public InfoWaifuAsset GetInfoWaifuAsset(int id)
         {
             InfoWaifuAsset infoWaifuAsset = new InfoWaifuAsset();
             foreach (InfoWaifuAsset itemInfo in infoWaifuAssets.lsInfoWaifuAssets)
             {
-                if (itemInfo.Code == code)
+                if (itemInfo.ID == id)
                 {
                     infoWaifuAsset = itemInfo;
                 }

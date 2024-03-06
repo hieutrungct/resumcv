@@ -36,9 +36,9 @@ namespace RubikCasual.Character_ACC
 
             return this.WaifuAssets.GetIndexWaifu(id, isSkin);
         }
-        public Waifu.InfoWaifuAsset GetInfoWaifuAsset(string code)
+        public Waifu.InfoWaifuAsset GetInfoWaifuAsset(int id)
         {
-            return this.WaifuAssets.GetInfoWaifuAsset(code);
+            return this.WaifuAssets.GetInfoWaifuAsset(id);
         }
         public Data.Waifu.WaifuSkill GetSkillWaifuSOByIndex(int index)
         {

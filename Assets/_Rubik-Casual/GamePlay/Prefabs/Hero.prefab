@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &79838050539968151
 RectTransform:
   m_ObjectHideFlags: 0
@@ -191,6 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexOfSlot: 0
+  waifuIdentify:
+    ID: 0
+    SkinCheck: 0
   infoWaifuAsset:
     ID: 0
     Distance_Skill: 0
@@ -201,10 +204,10 @@ MonoBehaviour:
     Pow: 0
     Skill: 0
     Name: 
-    Class: 
-    Element: 
-    Rare: 
     Code: 0
+    Rare: 0
+    Element: 0
+    ClassWaifu: 0
   skeletonCharacterAnimation: {fileID: 0}
   HpNow: 0
   Hp: 0
@@ -220,7 +223,6 @@ MonoBehaviour:
   isAttack: 0
   isUseSkill: 0
   isEnemy: 0
-  isCompleteMove: 1
   isBoss: 0
 --- !u!1 &353196732499485650
 GameObject:
@@ -256,7 +258,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.5000248, y: 0.2263031}
   m_SizeDelta: {x: -2.9999506, y: -3.60814}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -332,7 +334,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.8332, y: 0.22605896}
   m_SizeDelta: {x: -3.6663, y: -3.6045532}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -557,7 +559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8895022075906592764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -913,7 +915,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.5000229, y: 0.2263031}
   m_SizeDelta: {x: -2.9999506, y: -3.60814}
   m_Pivot: {x: 0.5, y: 0.5}
