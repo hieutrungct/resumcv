@@ -10,26 +10,41 @@ namespace RubikCasual.Battle.UI.VerticalView
         public List<ItemViewUI> lsItemViewUI = new List<ItemViewUI>();
         public List<Image> lsImageIcon = new List<Image>();
 
-
-        public void SetImageItem(List<Data.Player.CurentTeam> waifuIdentifies)
-        {
-            for (int i = 0; i < lsImageIcon.Count; i++)
-            {
-                if (waifuIdentifies[i] != null)
-                {
-                    // Debug.Log(waifuIdentifies[i].SkinCheck);
-                    lsImageIcon[i].sprite = Data.DataController.instance.assetLoader.GetAvatarByIndex(Data.DataController.instance.characterAssets.GetIndexWaifu(waifuIdentifies[i].ID, waifuIdentifies[i].SkinCheck));
-                }
-            }
-        }
-        public void SetDataPopup(List<string> lsCode)
+        public void SetSliderBar(List<CharacterInBattle> lsHeroState)
         {
 
             for (int i = 0; i < lsItemViewUI.Count; i++)
             {
-                if (lsCode[i] != "0")
+                if (lsHeroState[i] != null)
                 {
-                    lsItemViewUI[i].SetDataPopup(Data.DataController.instance.characterAssets.GetInfoWaifuAsset(lsCode[i]));
+                    lsItemViewUI[i].SetSliderBar(lsHeroState[i]);
+                }
+            }
+        }
+        public void SetImageItem(List<CharacterInBattle> lsHeroState)
+        {
+            for (int i = 0; i < lsImageIcon.Count; i++)
+            {
+                if (lsHeroState[i] != null)
+                {
+                    lsImageIcon[i].transform.parent.gameObject.SetActive(true);
+                    // Debug.Log(waifuIdentifies[i].SkinCheck);
+                    lsImageIcon[i].sprite = Data.DataController.instance.assetLoader.GetAvatarByIndex(Data.DataController.instance.characterAssets.GetIndexWaifu(lsHeroState[i].waifuIdentify.ID, lsHeroState[i].waifuIdentify.SkinCheck));
+                }
+                else
+                {
+                    lsImageIcon[i].transform.parent.gameObject.SetActive(false);
+                }
+            }
+        }
+        public void SetDataPopup(List<CharacterInBattle> lsHeroState)
+        {
+
+            for (int i = 0; i < lsItemViewUI.Count; i++)
+            {
+                if (lsHeroState[i] != null)
+                {
+                    lsItemViewUI[i].SetDataPopup(lsHeroState[i]);
                 }
             }
         }

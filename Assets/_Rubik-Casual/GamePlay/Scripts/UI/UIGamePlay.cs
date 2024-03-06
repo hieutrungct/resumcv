@@ -19,8 +19,7 @@ namespace RubikCasual.Battle.UI
         public Canvas canvasUIGamePlay;
         public bool isSaveReward, chosePopupVictory, isHaveChangeSlot;
         public VerticalView.VerticalViewLeft verticalViewLeft;
-        public List<Data.Player.CurentTeam> waifuIdentifies = new List<Data.Player.CurentTeam>();
-        public List<string> lsCode = new List<string>();
+        public List<CharacterInBattle> lsHeroState = new List<CharacterInBattle>();
         public static UIGamePlay instance;
         const string Name_Sorting_Layer = "ShowPopup", Name_Sorting_Layer_origin = "Battle";
         void Awake()
@@ -39,15 +38,19 @@ namespace RubikCasual.Battle.UI
         }
         void SetUIVerticalLeft()
         {
-            if (isHaveChangeSlot || lsCode.Count == 0)
+            if (isHaveChangeSlot || lsHeroState.Count == 0)
             {
                 BattleController.instance.SetSlotHero();
-                if (lsCode.Count != 0)
+                if (lsHeroState.Count != 0)
                 {
-                    verticalViewLeft.SetDataPopup(lsCode);
-                    verticalViewLeft.SetImageItem(waifuIdentifies);
+                    verticalViewLeft.SetDataPopup(lsHeroState);
+                    verticalViewLeft.SetImageItem(lsHeroState);
                     isHaveChangeSlot = false;
                 }
+            }
+            if (lsHeroState.Count != 0)
+            {
+                verticalViewLeft.SetSliderBar(lsHeroState);
             }
         }
         void ShowPopupContinue()

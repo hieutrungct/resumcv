@@ -12,7 +12,6 @@ using RubikCasual.Data.Waifu;
 using RubikCasual.Tool;
 using Sirenix.OdinInspector;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,11 +27,10 @@ namespace RubikCasual.Battle
         public List<SlotInArea> HeroInArea;
         public List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
         public DataController dataController;
-        public float attribute = 1;
+        private float attribute = 1;
         public GameState gameState;
         SetAnimCharacter setAnimCharacter;
         bool isEndBattle = false, isRangeRemoved = false, isCompleteMove = true;
-        public bool isUpdateDmgEnemy = false;
         int CountState = 1, numberSlot = 5;
 
         public static BattleController instance;
@@ -53,23 +51,20 @@ namespace RubikCasual.Battle
         }
         public void SetSlotHero()
         {
-            List<Data.Player.CurentTeam> waifuIdentifies = new List<Data.Player.CurentTeam>();
-            List<string> lsCode = new List<string>();
+
+            List<CharacterInBattle> lsHeroState = new List<CharacterInBattle>();
             foreach (GameObject item in lsSlotGbHero)
             {
                 if (item != null)
                 {
-                    waifuIdentifies.Add(item.GetComponent<CharacterInBattle>().waifuIdentify);
-                    lsCode.Add(item.GetComponent<CharacterInBattle>().infoWaifuAsset.Code);
+                    lsHeroState.Add(item.GetComponent<CharacterInBattle>());
                 }
                 else
                 {
-                    waifuIdentifies.Add(null);
-                    lsCode.Add("0");
+                    lsHeroState.Add(null);
                 }
             }
-            UIGamePlay.instance.lsCode = lsCode;
-            UIGamePlay.instance.waifuIdentifies = waifuIdentifies;
+            UIGamePlay.instance.lsHeroState = lsHeroState;
 
         }
         public void StartGame()
@@ -178,7 +173,6 @@ namespace RubikCasual.Battle
                             SkeletonAnimation Enemy = enemyInBattle.skeletonCharacterAnimation;
                             if (Enemy.AnimationName == NameAnim.Anim_Character_Idle)
                             {
-
                                 Enemy.GetComponent<MeshRenderer>().sortingLayerName = "Map";
                                 Enemy.GetComponent<MeshRenderer>().sortingOrder = 1;
                             }
@@ -213,10 +207,9 @@ namespace RubikCasual.Battle
             character.AnimationName = NameAnim.Anim_Character_Idle;
             if (characterInBattle.isEnemy)
             {
-                character.initialFlipX = true;
+                character.transform.localScale = new Vector3(-character.transform.localScale.x, character.transform.localScale.y, character.transform.localScale.z);
             }
             character.gameObject.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
-            SpineEditorUtilities.ReinitializeComponent(character);
             return character;
         }
         SkeletonAnimation SpawnBoss(Transform poscharacterInBattle, SkeletonAnimation WaifuCharacter)
@@ -229,7 +222,6 @@ namespace RubikCasual.Battle
             character.AnimationName = NameAnim.Anim_Character_Idle;
             character.initialFlipX = true;
             character.gameObject.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
-            SpineEditorUtilities.ReinitializeComponent(character);
             return character;
         }
 
@@ -261,7 +253,7 @@ namespace RubikCasual.Battle
                     CharacterHero.posCharacter = posSlot.gameObject.transform;
                     CharacterHero.oriIndex = index;
                     heroInBattle.skeletonCharacterAnimation = Hero;
-                    heroInBattle.infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == lsHeroInArea[index].idCharacter);
+                    heroInBattle.infoWaifuAsset = dataController.characterAssets.GetInfoWaifuAsset(lsHeroInArea[index].idCharacter);
 
                     heroInBattle.cooldownAttackBar.value = 1f;
                     heroInBattle.cooldownSkillBar.value = 0f;
@@ -271,7 +263,7 @@ namespace RubikCasual.Battle
                     heroInBattle.HpNow = heroInBattle.infoWaifuAsset.HP;
                     heroInBattle.Atk = heroInBattle.infoWaifuAsset.ATK;
                     heroInBattle.Def = heroInBattle.infoWaifuAsset.DEF;
-                    heroInBattle.Skill = heroInBattle.infoWaifuAsset.Skill;
+                    heroInBattle.Skill = (int)(dataController.characterAssets.GetSkillWaifuSOByIndex(dataController.characterAssets.GetIndexWaifu(lsHeroInArea[index].idCharacter, lsHeroInArea[index].isSkin)).percentDameSkill * heroInBattle.Atk);
 
                     lsSlotGbHero.Add(heroInBattle.gameObject);
                 }
