@@ -43,7 +43,7 @@ namespace RubikCasual.FlipCard2
         TextMeshProUGUI TxtBtn;
         DataController dataController;
         public bool isClick = false, ChangeType, isHaveMove;
-
+        private bool isGachaInProgress = false;
         Rubik_Casual.AssetLoader assetLoader;
         Vector3 originOriginGbInfoCard;
         public static FlipCardController instance;
@@ -83,81 +83,99 @@ namespace RubikCasual.FlipCard2
             
             
         }
+
         void BtnGacha()
         {
-            
-            ResetInfo();
-            Debug.Log("đã bấm quay");
-            if(Id == 1)
+            int timeSpawnCard;
+            if (!isGachaInProgress) // Kiểm tra xem quá trình Gacha có đang diễn ra hay không
             {
-                CreateCard_1Tecken();
-            }
-            else
-            {
-                CreateCard();
-                SummonCard();
-            }
-            
-            if (dataController.userData.Ticket >= Id)
-            {
-                if (!isHaveMove)
+                isGachaInProgress = true; // Đặt cờ báo hiệu rằng quá trình Gacha đang diễn ra
+                
+                ResetInfo();
+                Debug.Log("đã bấm quay");
+                if(Id == 1)
                 {
-                    isHaveMove = true;
-                    dataController.userData.Ticket = dataController.userData.Ticket - Id;
-                    if (!isClick && Id != 1)
-                    {
-                        isClick = !isClick;
-                        GachaCard(0);
-                        BtnMoveCard(0);
-                        Debug.Log("ấn lần đầu");
-                    }
-                    else
-                    {
-                        Debug.Log("đã ResetGatcha");
-                        ResetGatcha();
-                        GachaCard(0);
-                        BtnMoveCard(0);
-                    }
-                    TxtBtn.text = "Get Again";
+                    CreateCard_1Tecken();
+                    timeSpawnCard = 1;
                 }
                 else
                 {
-                    TxtBtn.text = "Don't Spawm";
+                    CreateCard();
+                    SummonCard();
+                    timeSpawnCard = 5;
+                    
+                }
+                
+                if (dataController.userData.Ticket >= Id)
+                {
+                    if (!isHaveMove)
+                    {
+                        isHaveMove = true;
+                        dataController.userData.Ticket = dataController.userData.Ticket - Id;
+                        if (!isClick && Id != 1)
+                        {
+                            isClick = !isClick;
+                            GachaCard(0);
+                            BtnMoveCard(0);
+                            // Debug.Log("ấn lần đầu");
+                        }
+                        else
+                        {
+                            // Debug.Log("đã ResetGatcha");
+                            ResetGatcha();
+                            GachaCard(0);
+                            BtnMoveCard(0);
+                        }
+                        TxtBtn.text = "Get Again";
+                    }
+                    else
+                    {
+                        TxtBtn.text = "Don't Spawm";
+                        TxtBtn.DOColor(Color.red, 1f)
+                        .OnComplete(() =>
+                        {
+                            TxtBtn.DOColor(Color.white, 1f).OnComplete(() =>
+                            {
+                                TxtBtn.text = "Get Again";
+                            });
+                        });
+                        
+
+                    }
+                    TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
+                    txtGbTicket.text = dataController.userData.Ticket.ToString();
+                    HUDController.instanse.LoadStatusNumber();
+                    TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
+                    txtGbTicketClone.text = Id.ToString();
+                    txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
+                    txtGbTicketClone.color = Color.red;
+                    txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
+                    .OnComplete(() =>
+                    {
+                        Destroy(txtGbTicketClone.gameObject);
+                    });
+                }
+                else
+                {
+                    TxtBtn.text = "Out Ticket!";
                     TxtBtn.DOColor(Color.red, 1f)
                     .OnComplete(() =>
                     {
-                        TxtBtn.DOColor(Color.white, 1f).OnComplete(() =>
-                        {
-                            TxtBtn.text = "Get Again";
-                        });
+                        TxtBtn.DOColor(Color.white, 1f);
                     });
-                    return;
-
+                    // Debug.Log("Hết vé");
                 }
-                TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();
-                txtGbTicket.text = dataController.userData.Ticket.ToString();
-                HUDController.instanse.LoadStatusNumber();
-                TextMeshProUGUI txtGbTicketClone = Instantiate(txtGbTicket, txtGbTicket.transform);
-                txtGbTicketClone.text = Id.ToString();
-                txtGbTicketClone.gameObject.transform.position = txtGbTicket.gameObject.transform.position;
-                txtGbTicketClone.color = Color.red;
-                txtGbTicketClone.transform.DOMoveY(txtGbTicketClone.gameObject.transform.position.y + 0.5f, 0.75f)
-                .OnComplete(() =>
-                {
-                    Destroy(txtGbTicketClone.gameObject);
-                });
+                StartCoroutine(ResetGachaStateAfterDelay(timeSpawnCard)); // Reset trạng thái Gacha sau timeSpawnCard giây
             }
-            else
-            {
-                TxtBtn.text = "Out Ticket!";
-                TxtBtn.DOColor(Color.red, 1f)
-                .OnComplete(() =>
-                {
-                    TxtBtn.DOColor(Color.white, 1f);
-                });
-                // Debug.Log("Hết vé");
-            }
+            
 
+        }
+        IEnumerator ResetGachaStateAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+
+            // Đặt lại cờ báo hiệu và cho phép Gacha lại
+            isGachaInProgress = false;
         }
         void ResetGatcha()
         {
