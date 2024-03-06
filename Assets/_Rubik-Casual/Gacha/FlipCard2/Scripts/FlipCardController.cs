@@ -80,7 +80,7 @@ namespace RubikCasual.FlipCard2
                     gbInfoCardWithMouse.transform.position = originOriginGbInfoCard;
                 }
             });
-            idSummon = ((int)SummonKey.idOnSlot_1);
+            
             
         }
         void BtnGacha()
@@ -131,6 +131,7 @@ namespace RubikCasual.FlipCard2
                             TxtBtn.text = "Get Again";
                         });
                     });
+                    return;
 
                 }
                 TextMeshProUGUI txtGbTicket = gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>();

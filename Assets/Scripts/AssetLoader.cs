@@ -7,6 +7,7 @@ using Minimalist.Bar.Utility;
 using Spine;
 using Spine.Unity;
 using NTPackage;
+using Sirenix.OdinInspector;
 
 namespace Rubik_Casual
 {
@@ -41,7 +42,7 @@ namespace Rubik_Casual
 
             Enemy = Resources.LoadAll<SkeletonDataAsset>("Enemy").ToList();
 
-            // imageWaifu = Resources.LoadAll<Sprite>("CamCapture/Creeps/Character").ToList();
+            imageWaifu = Resources.LoadAll<Sprite>("Character/ImageWaifu").ToList();
             
             SetUpAvaDic();
             foreach (Sprite sprite in enemyAvatar)
@@ -174,6 +175,56 @@ namespace Rubik_Casual
                 }
             }
             return null;
+        }
+        [Button]
+        public void RenameImageWaifu()
+        {
+            for (int i = 0; i < imageWaifu.Count; i++)
+            {
+                Sprite sprite = imageWaifu[i];
+                string newName = GetNewName(sprite.name);
+                
+                RenameImage(sprite, newName);
+                // Debug.Log("Đổi tên image: " + sprite.name + " thành " + newName);
+            }
+        }
+        string GetNewName(string currentName)
+        {
+            string[] nameParts = currentName.Split('_');
+            // Debug.Log(nameParts[0]);
+            if (nameParts.Length >= 3 && currentName != (nameParts[0] + "_" + nameParts[1]))
+            {
+                Debug.Log("a");
+                if(nameParts[1] == "A")
+                {
+                    string fixedNumber = nameParts[1] + "_" + nameParts[2].Replace("0", "");
+                    return nameParts[0] + "_" + fixedNumber;
+                }
+                else
+                {
+                    string fixedNumber = nameParts[1].Replace("0", "");
+                    return nameParts[0] + "_" + fixedNumber;
+                }
+                
+                
+                
+            }
+            else
+            {
+                return currentName;
+                
+            }
+        }
+
+        void RenameImage(Sprite sprite, string newName)
+        {
+            // Tìm index của sprite trong danh sách và đổi tên nếu tìm thấy
+            int index = imageWaifu.IndexOf(sprite);
+            if (index != -1)
+            {
+                sprite.name = newName;
+                imageWaifu[index] = sprite; // Cập nhật lại sprite trong danh sách
+            }
         }
     }
 }

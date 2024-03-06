@@ -19,6 +19,7 @@ namespace Rubik_Casual.Summon
         {
             gameObject.SetActive(true);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: true);
+            GaCharCard.idSummon = ((int)SummonKey.idOnSlot_1);
 
         }
         public void OnClickHideSummon()
@@ -31,6 +32,7 @@ namespace Rubik_Casual.Summon
         {
             GaCharCard.gameObject.SetActive(true);
             GaCharCard.Id = id;
+            
         }
         public void OnClickSummon(int id)
         {
