@@ -33,7 +33,7 @@ namespace RubikCasual.Battle
         void Start()
         {
             Scene SceneTarget = SceneManager.GetSceneByName(NameScene.GAMEPLAY_SCENE);
-            if (gameObject.scene == SceneTarget)
+            if (gameObject.scene == SceneTarget && (isEnemy || isBoss))
             {
                 AddRewardWhenKillEnemy();
             }
@@ -44,7 +44,7 @@ namespace RubikCasual.Battle
 
             if (UnityEngine.Random.Range(0, 4) != 0)
             {
-                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.healthBar.transform.parent);
+                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.transform.parent);
                 ItemDropClone.SetActive(false);
                 SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
                 DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == NameItem.Coins);
@@ -53,7 +53,7 @@ namespace RubikCasual.Battle
             }
             else
             {
-                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.healthBar.transform.parent);
+                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.transform.parent);
                 ItemDropClone.SetActive(false);
                 SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
                 DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == NameItem.Gems);

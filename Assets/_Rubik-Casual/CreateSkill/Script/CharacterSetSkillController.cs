@@ -10,7 +10,6 @@ using RubikCasual.Tool;
 using RubikCasual.Waifu;
 using Sirenix.OdinInspector;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using UnityEngine;
 
 namespace RubikCasual.CreateSkill
@@ -70,7 +69,6 @@ namespace RubikCasual.CreateSkill
             characterClone.GetComponent<MeshRenderer>().sortingLayerName = "ShowPopup";
             characterClone.loop = true;
             characterClone.AnimationName = NameAnim.Anim_Character_Idle;
-            SpineEditorUtilities.ReinitializeComponent(characterClone);
 
             if (transCharacter.gameObject.GetComponent<CharacterInBattle>() == null)
             {
@@ -314,8 +312,7 @@ namespace RubikCasual.CreateSkill
                     {
                         Enemy.initialFlipX = true;
                     }
-                    Enemy.gameObject.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
-                    SpineEditorUtilities.ReinitializeComponent(Enemy);
+                    Enemy.gameObject.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_ShowPopup;
                     enemyInBattle.skeletonCharacterAnimation = Enemy;
                     lsSlotGbEnemy.Add(enemyInBattle.gameObject);
                 }
@@ -382,6 +379,7 @@ namespace RubikCasual.CreateSkill
                 Debug.Log("Thêm thành công");
                 waifuSkills.Add(waifuSkill);
             }
+            dataController.characterAssets.WaifuAssets.SaveSkillDataToJson();
         }
 
     }
