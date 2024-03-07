@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using Rubik_Casual;
 using RubikCasual.Battle;
 using RubikCasual.Data;
+using RubikCasual.Data.Waifu;
 using RubikCasual.Waifu;
 using Spine.Unity;
+using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +19,7 @@ namespace RubikCasual.FlipCard2
         public List<GameObject> lsGbStar, lsAttackRange;
         public Transform posWaifu;
         public SkeletonAnimation SkeWaifu;
+        public SkeletonGraphic UI_Waifu;
         public Image imgRare;
         public List<GameObject> SkillWaifu;
         // public InfoWaifuAsset infoWaifuAsset;
@@ -56,18 +59,35 @@ namespace RubikCasual.FlipCard2
         }
         public void LoadSpineCard(InfoWaifuAsset infoWaifuAsset)
         {
-            SkeWaifu = DataController.instance.characterAssets.WaifuAssets.Get2D(infoWaifuAsset.ID.ToString());
-            SkeWaifu.Skeleton.ScaleX = 2.5f;
-            SkeWaifu.Skeleton.ScaleY = 2.5f;
+            // SkeWaifu = DataController.instance.characterAssets.WaifuAssets.Get2D(infoWaifuAsset.ID.ToString());
+            // SkeWaifu.Skeleton.ScaleX = 2.5f;
+            // SkeWaifu.Skeleton.ScaleY = 2.5f;
             
-            SkeWaifu.transform.SetParent(posWaifu);
-            SkeWaifu.transform.position = posWaifu.position;
-            SkeWaifu.loop = true;
-            SkeWaifu.AnimationName = NameAnim.Anim_Character_Idle;
-            SkeWaifu.GetComponent<MeshRenderer>().sortingLayerName = "ShowPopup";
-            SkeWaifu.GetComponent<MeshRenderer>().sortingOrder = 10;
+            // SkeWaifu.transform.SetParent(posWaifu);
+            // SkeWaifu.transform.position = posWaifu.position;
+            // SkeWaifu.loop = true;
+            // SkeWaifu.AnimationName = NameAnim.Anim_Character_Idle;
+            // SkeWaifu.GetComponent<MeshRenderer>().sortingLayerName = "ShowPopup";
+            // SkeWaifu.GetComponent<MeshRenderer>().sortingOrder = 10;
 
-            SkeWaifu.gameObject.transform.localScale = SkeWaifu.gameObject.transform.localScale * 2 / 3f;
+            // SkeWaifu.gameObject.transform.localScale = SkeWaifu.gameObject.transform.localScale * 2 / 3f;
+
+            SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(infoWaifuAsset.ID.ToString()).SkeletonDataAsset;
+            UI_Waifu.skeletonDataAsset = skeletonDataAsset;
+
+            if(infoWaifuAsset.ID == 66)
+            {
+                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
+            }
+            else
+            {
+                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            }
+
+            UI_Waifu.startingAnimation = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
+
+            
+            SpineEditorUtilities.ReinitializeComponent(UI_Waifu);
         }
         public void matrix()
         {

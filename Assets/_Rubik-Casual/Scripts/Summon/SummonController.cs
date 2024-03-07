@@ -42,8 +42,9 @@ namespace Rubik_Casual.Summon
         }
         public void SetUpSummon( int id)
         {
-            imageWaifu.sprite = AssetLoader.instance.imageWaifu[id];
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(((int)lsBtnSummon[id].key));
+            imageWaifu.sprite = AssetLoader.instance.GetImageWaifuByIndex("Pet"+ infoWaifu.Code +"_Big");
+            
             // iconWaifu.sprite = lsBtnSummon[id].iconWaifu.sprite;
             
             // iconWaifu.sprite = AssetLoader.instance.GetAvatarById(infoWaifu.Code);

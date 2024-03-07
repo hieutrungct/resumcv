@@ -172,10 +172,20 @@ namespace RubikCasual.FlipCard2
         }
         IEnumerator ResetGachaStateAfterDelay(float delay)
         {
+            TxtBtn.text = "Don't Spawm";
+            TxtBtn.DOColor(Color.red, delay)
+            .OnComplete(() =>
+            {
+                TxtBtn.DOColor(Color.white, 1f).OnComplete(() =>
+                {
+                    TxtBtn.text = "Get Again";
+                    isGachaInProgress = false;
+                });
+            });
             yield return new WaitForSeconds(delay);
 
             // Đặt lại cờ báo hiệu và cho phép Gacha lại
-            isGachaInProgress = false;
+            
         }
         void ResetGatcha()
         {

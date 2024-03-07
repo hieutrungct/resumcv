@@ -17,7 +17,7 @@ namespace Rubik.ListWaifu
     public class WaifuItem : MonoBehaviour
     {
         public Image avaCard,attackType,avaBox, BackGlow,Glow,Role;
-        public SkeletonGraphic UI_Waifu;
+        public SkeletonGraphic UI_Waifu = new SkeletonGraphic();
         private SkeletonAnimation ui_Waifu;
         public TextMeshProUGUI nameTxt, levelTxt,lvProcessTxt;
         public Slider exp;

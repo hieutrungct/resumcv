@@ -43,7 +43,7 @@ namespace Rubik_Casual
             Enemy = Resources.LoadAll<SkeletonDataAsset>("Enemy").ToList();
 
             imageWaifu = Resources.LoadAll<Sprite>("Character/ImageWaifu").ToList();
-            
+            RenameImageWaifu();
             SetUpAvaDic();
             foreach (Sprite sprite in enemyAvatar)
             {
