@@ -16,12 +16,12 @@ namespace Rubik.ListWaifu
         [SerializeField] private SkeletonGraphic avaWaifu;
 
         [SerializeField]
-        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, goldTxt, selectTxt;
+        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, goldTxt, selectTxt, rareTxt, elementTxt;
 
         // public Button btn_Arrow_r, btn_Arrow_l, btn_Update_Waifu, btn_Select;
         public Slider exp;
 
-        public Image role, avatar, btnselect, btnUpdate;
+        public Image role, avatar, btnselect, btnUpdate, rare;
 
         
         private PlayerOwnsWaifu thisWaifu,_waifu;
@@ -61,6 +61,7 @@ namespace Rubik.ListWaifu
             healthTxt.text = (infoWaifu.HP + waifu.HP).ToString();
 
             selectTxt.text = "Select";
+            elementTxt.text = infoWaifu.Element.ToString();
             btnselect.sprite = AssetLoader.instance.Button[9];
             foreach (var curentWaifu in DataController.instance.userData.curentTeams)
             {
@@ -79,7 +80,30 @@ namespace Rubik.ListWaifu
             // moveSpeedTxt.text = waifu.MoveSpeed.ToString();
 
             //Update_Waifu(waifu);
-
+            if (rare != null)
+            {
+                
+                switch(infoWaifu.Rare)
+                {
+                    case Rare.R:
+                        rare.sprite = AssetLoader.Instance.LabelRare[0];
+                        rareTxt.text = Rare.R.ToString();
+                        break;
+                    case Rare.SR:
+                        rare.sprite = AssetLoader.Instance.LabelRare[1];
+                        rareTxt.text = Rare.SR.ToString();
+                        break;
+                    case Rare.SSR:
+                        rare.sprite = AssetLoader.Instance.LabelRare[2];
+                        rareTxt.text = Rare.SSR.ToString();
+                        break;
+                    case Rare.UR:
+                        rare.sprite = AssetLoader.Instance.LabelRare[3];
+                        rareTxt.text = Rare.UR.ToString();
+                        break;
+                }
+                 
+            }
 
         }
 
