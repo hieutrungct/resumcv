@@ -1,5 +1,4 @@
 using Spine.Unity;
-using Spine.Unity.Editor;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -34,7 +33,7 @@ namespace Rubik_Casual
             avaCharacter.skeletonDataAsset = AssetLoader.instance.GetAvaById(character.Nameid);
             avaCharacter.initialSkinName = avaCharacter.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
             avaCharacter.startingAnimation = avaCharacter.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
-            SpineEditorUtilities.ReinitializeComponent(avaCharacter);
+            avaCharacter.Initialize(true);
             
             avatar.sprite = AssetLoader.Instance.GetAvatarById(character.Nameid);
             

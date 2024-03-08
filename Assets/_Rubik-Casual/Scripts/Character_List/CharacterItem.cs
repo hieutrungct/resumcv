@@ -1,13 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Spine;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
 namespace Rubik_Casual
 {
     public class CharacterItem : MonoBehaviour
@@ -31,8 +28,8 @@ namespace Rubik_Casual
             hero.startingAnimation = hero.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
             
             //hero.skeletonDataAsset.GetSkeletonData(true);
-            //SpineEditorUtilities.ReloadSkeletonDataAsset(hero.skeletonDataAsset);
-            SpineEditorUtilities.ReinitializeComponent(hero);
+            // SpineEditorUtilities.ReloadSkeletonDataAsset(hero.skeletonDataAsset);
+            hero.Initialize(true);
             
             // avaCard.SetNativeSize();
             if (avaBox != null)

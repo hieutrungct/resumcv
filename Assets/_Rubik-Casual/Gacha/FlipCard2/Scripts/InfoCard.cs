@@ -6,7 +6,7 @@ using RubikCasual.Data;
 using RubikCasual.Data.Waifu;
 using RubikCasual.Waifu;
 using Spine.Unity;
-using Spine.Unity.Editor;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -75,19 +75,19 @@ namespace RubikCasual.FlipCard2
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(infoWaifuAsset.ID.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
-            if(infoWaifuAsset.ID == 66)
-            {
-                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
-            }
-            else
-            {
-                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
-            }
-
+            // if(infoWaifuAsset.ID == 66)
+            // {
+            //     UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
+            // }
+            // else
+            // {
+            //     UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            // }
+            UI_Waifu.initialSkinName = "Pet" + infoWaifuAsset.Code;
             UI_Waifu.startingAnimation = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
 
             
-            SpineEditorUtilities.ReinitializeComponent(UI_Waifu);
+            UI_Waifu.Initialize(true);
         }
         public void matrix()
         {

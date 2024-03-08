@@ -5,10 +5,8 @@ using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
-using RubikCasual.Tool;
 using RubikCasual.Waifu;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,9 +34,17 @@ namespace RubikCasual.Lobby
 
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(waifu.ID.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
-            avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            // if(waifu.ID == 66)
+            // {
+            //     avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
+            // }
+            // else
+            // {
+            //     avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            // }
+            avaWaifu.initialSkinName = "Pet" + infoWaifu.Code;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
-            SpineEditorUtilities.ReinitializeComponent(avaWaifu);
+            avaWaifu.Initialize(true);
             
             // avaBox.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
             // avaBox.preserveAspect = true;

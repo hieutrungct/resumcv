@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 

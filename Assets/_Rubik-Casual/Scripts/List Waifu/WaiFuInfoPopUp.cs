@@ -4,13 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using RubikCasual.Data.Player;
 using Rubik_Casual;
 using RubikCasual.Waifu;
 using RubikCasual.Data;
 using RubikCasual.Data.Waifu;
-using RubikCasual.Tool;
 namespace Rubik.ListWaifu
 {
     public class WaiFuInfoPopUp : MonoBehaviour
@@ -44,9 +42,9 @@ namespace Rubik.ListWaifu
 
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
-            avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            avaWaifu.initialSkinName = "Pet" + infoWaifu.Code;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
-            SpineEditorUtilities.ReinitializeComponent(avaWaifu);
+            avaWaifu.Initialize(true);
             
             avatar.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(waifu.ID));
             avatar.preserveAspect = true;

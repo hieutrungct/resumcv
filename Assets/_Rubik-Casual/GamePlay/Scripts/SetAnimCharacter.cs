@@ -7,7 +7,6 @@ using RubikCasual.Battle.Calculate;
 using RubikCasual.Battle.UI;
 using RubikCasual.Tool;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 

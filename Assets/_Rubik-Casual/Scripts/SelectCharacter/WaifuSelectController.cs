@@ -10,7 +10,6 @@ using RubikCasual.Data.Player;
 using RubikCasual.Tool;
 using RubikCasual.Waifu;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -164,10 +163,11 @@ namespace RubikCasual.Lobby
                     SkeletonGraphic slotClone = lsSlotWaifuSelectUI[i].slotCharacter.AddComponent<SkeletonGraphic>();
                     slotClone.skeletonDataAsset = AssetLoader.instance.GetAvaById(userData.characterInfo.Characters.FirstOrDefault(f => f.ID == userData.data.lsIdSlotCharacter[i]).Nameid);
                     slotClone.initialSkinName = slotClone.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+                    // slotClone.initialSkinName = "Pet" + 
                     slotClone.startingLoop = true;
                     slotClone.startingAnimation = "Idle";
                     slotClone.transform.localScale = scaleCharacter;
-                    SpineEditorUtilities.ReinitializeComponent(slotClone);
+                    slotClone.Initialize(true);
                 }
             }
         }
