@@ -19,6 +19,7 @@ namespace RubikCasual.CreateSkill
         Other = 0,
         Wave = 1,
         InTurn = 2,
+        InTurn2 = 3
     }
     public class CharacterSetSkillController : MonoBehaviour
     {
@@ -103,11 +104,11 @@ namespace RubikCasual.CreateSkill
 
             durationAttacked = float.Parse(Panel.InfoPanel.instance.inputFieldDurationAtack.text);
 
-            if (typeSkill == TypeSkill.InTurn)
+            if (typeSkill == TypeSkill.InTurn || typeSkill == TypeSkill.InTurn2)
             {
                 InTurn = int.Parse(Panel.InfoPanel.instance.inputFieldNumberTurn.text);
             }
-            if (typeSkill == TypeSkill.Wave)
+            if (typeSkill == TypeSkill.Wave || typeSkill == TypeSkill.InTurn2)
             {
                 durationWave = float.Parse(Panel.InfoPanel.instance.inputFieldDurationWave.text);
             }
@@ -218,7 +219,9 @@ namespace RubikCasual.CreateSkill
                         StartCoroutine(ShowSkill(row, column, minColumn, inTurn - 1));
                     }
                     break;
-
+                case TypeSkill.InTurn2:
+                    StartCoroutine(FuncInTurn2(row, column, minColumn, inTurn));
+                    break;
                 default:
                     for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
                     {
@@ -238,6 +241,32 @@ namespace RubikCasual.CreateSkill
                         }
                     }
                     break;
+            }
+        }
+        IEnumerator FuncInTurn2(int row, int column, int minColumn, int inTurn = 1)
+        {
+            yield return new WaitForSeconds(durationWave);
+            if (inTurn > 0)
+            {
+                int count = 0;
+                for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
+                {
+                    for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
+                    {
+                        if (lsSlotGbEnemy[count] != null)
+                        {
+                            if (i < row)
+                            {
+                                if (j < column && j >= minColumn)
+                                {
+                                    SetAttacked(count);
+                                }
+                            }
+                        }
+                        count++;
+                    }
+                }
+                StartCoroutine(FuncInTurn2(row, column, minColumn, inTurn - 1));
             }
         }
         void SetAttacked(int count)
@@ -312,7 +341,7 @@ namespace RubikCasual.CreateSkill
                     {
                         Enemy.initialFlipX = true;
                     }
-                    Enemy.gameObject.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_ShowPopup;
+                    Enemy.gameObject.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Character;
                     enemyInBattle.skeletonCharacterAnimation = Enemy;
                     lsSlotGbEnemy.Add(enemyInBattle.gameObject);
                 }
@@ -369,7 +398,7 @@ namespace RubikCasual.CreateSkill
             {
                 if (waifuSkills[i].Index == waifuSkill.Index)
                 {
-                    Debug.Log("Sửa thành công");
+                    Debug.Log("Sửa thành công waifu " + waifuSkill.Index);
                     waifuSkills[i] = waifuSkill;
                     isHaveWaifu = true;
                 }

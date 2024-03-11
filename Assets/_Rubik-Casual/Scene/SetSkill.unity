@@ -19255,7 +19255,7 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   characterAssets: {fileID: 2999671106514823363}
   AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
-  assetLoader: {fileID: 0}
+  assetLoader: {fileID: 247475728907376067}
   stageAssets: {fileID: 2552376161935476195}
 --- !u!1 &2552376163235763366
 GameObject:

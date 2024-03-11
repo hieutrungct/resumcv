@@ -49,7 +49,7 @@ namespace RubikCasual.Battle.UI.VerticalView
             // txtHp.text = "Hp: " + characterInBattle.infoWaifuAsset.ATK.ToString();
 
             txtValueHp.text = characterInBattle.HpNow + "/" + characterInBattle.infoWaifuAsset.HP;
-            txtDameSkill.text = "Dame Skill: " + (characterInBattle.infoWaifuAsset.ATK * waifuSkill.percentDameSkill).ToString();
+            txtDameSkill.text = "Dame Skill: " + ((int)(characterInBattle.infoWaifuAsset.ATK * waifuSkill.percentDameSkill)).ToString();
             txtRow.text = "Row: " + waifuSkill.Row.ToString();
             txtColumn.text = "Column: " + waifuSkill.Column.ToString();
             txtTypeSkill.text = "Type Skill: " + waifuSkill.typeSkill;
@@ -63,13 +63,27 @@ namespace RubikCasual.Battle.UI.VerticalView
         {
             itemViewUI = this.GetComponent<ItemViewUI>();
         }
-        private void OnMouseDown()
+        private float timeCount = 0, timeLimit = 1.5f;
+        private void OnMouseDrag()
+        {
+            timeCount += Time.deltaTime;
+            if (timeCount >= timeLimit)
+            {
+                VerticalViewRight.instance.SetDataPopup(itemViewUI.characterInBattleClone);
+                VerticalViewRight.instance.ShowAndHidePopup(true);
+                timeCount = 0;
+            }
+        }
+
+
+        private void OnMouseUp()
         {
             if (itemViewUI.characterInBattleClone.cooldownSkillBar.value >= 1 && BattleController.instance.gameState == GameState.BATTLE)
             {
                 itemViewUI.characterInBattleClone.cooldownSkillBar.value = 0;
                 SetAnimCharacter.instance.HeroUseSkillTest(itemViewUI.characterInBattleClone);
             }
+            timeCount = 0;
         }
     }
 }

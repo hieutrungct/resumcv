@@ -14,37 +14,19 @@ namespace RubikCasual.CreateSkill.Panel
         public TMP_Dropdown dropDownSkill;
         public CharacterSetSkillController characterSetSkillController;
         public string OldTxtDame;
-       
+
         public static InfoPanel instance;
         void Awake()
         {
             instance = this;
-            
+
         }
         void Start()
         {
             StartCoroutine(Load());
 
         }
-        void Update()
-        {
-            if ((TypeSkill)dropDownSkill.value == TypeSkill.InTurn)
-            {
-                inputFieldNumberTurn.transform.parent.gameObject.SetActive(true);
-            }
-            else
-            {
-                inputFieldNumberTurn.transform.parent.gameObject.SetActive(false);
-            }
-            if ((TypeSkill)dropDownSkill.value == TypeSkill.Wave)
-            {
-                inputFieldDurationWave.transform.parent.gameObject.SetActive(true);
-            }
-            else
-            {
-                inputFieldDurationWave.transform.parent.gameObject.SetActive(false);
-            }
-        }
+
 
 
         IEnumerator Load()
@@ -61,7 +43,33 @@ namespace RubikCasual.CreateSkill.Panel
             yield return new WaitForSeconds(0.5f);
             OldTxtDame = txtValueOldDame.text;
             txtValueOldDame.text = OldTxtDame + characterSetSkillController.transCharacter.GetComponent<CharacterInBattle>().infoWaifuAsset.Skill.ToString();
+            dropDownSkill.onValueChanged.AddListener((int value) =>
+            {
+                switch ((TypeSkill)value)
+                {
+                    case TypeSkill.InTurn:
+
+                        inputFieldNumberTurn.transform.parent.gameObject.SetActive(true);
+                        inputFieldDurationWave.transform.parent.gameObject.SetActive(false);
+                        break;
+                    case TypeSkill.Wave:
+
+                        inputFieldDurationWave.transform.parent.gameObject.SetActive(true);
+                        inputFieldNumberTurn.transform.parent.gameObject.SetActive(false);
+                        break;
+                    case TypeSkill.InTurn2:
+
+                        inputFieldDurationWave.transform.parent.gameObject.SetActive(true);
+                        inputFieldNumberTurn.transform.parent.gameObject.SetActive(true);
+                        break;
+                    default:
+                        inputFieldDurationWave.transform.parent.gameObject.SetActive(false);
+                        inputFieldNumberTurn.transform.parent.gameObject.SetActive(false);
+                        break;
+                }
+
+            });
         }
-        
+
     }
 }

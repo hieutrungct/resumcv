@@ -39,6 +39,7 @@ namespace RubikCasual.CreateSkill.Panel
             {
                 GameObject gbSlotClone = Instantiate(SlotEnemy, transParentLsEnemy);
                 gbSlotClone.SetActive(true);
+                // Debug.Log(idEnemy);
                 gbSlotClone.GetComponent<Image>().sprite = dataController.assetLoader.GetAvatarEnemyByIndex(idEnemy.ToString());
                 gbSlotClone.AddComponent<BoxCollider2D>().size = new Vector2(200f, 200f);
 

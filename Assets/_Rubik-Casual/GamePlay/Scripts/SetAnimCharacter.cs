@@ -258,6 +258,10 @@ namespace RubikCasual.Battle
                     }
                     break;
 
+                case CreateSkill.TypeSkill.InTurn2:
+                    StartCoroutine(FuncInTurn2(row, column, minColumn, characterInBattle, waifuSkill, waifuSkill.NumberTurn));
+                    break;
+
                 case CreateSkill.TypeSkill.InTurn:
                     if (inTurn > 0)
                     {
@@ -303,6 +307,32 @@ namespace RubikCasual.Battle
                     break;
             }
         }
+        IEnumerator FuncInTurn2(int row, int column, int minColumn, CharacterInBattle characterInBattle, Data.Waifu.WaifuSkill waifuSkill, int inTurn = 1)
+        {
+            yield return new WaitForSeconds(waifuSkill.DurationWave);
+            if (inTurn > 0)
+            {
+                int count = 0;
+                for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
+                {
+                    for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
+                    {
+                        if (lsSlotGbEnemy[count] != null)
+                        {
+                            if (i < row)
+                            {
+                                if (j < column && j >= minColumn)
+                                {
+                                    SetAttacked(count, characterInBattle);
+                                }
+                            }
+                        }
+                        count++;
+                    }
+                }
+                StartCoroutine(FuncInTurn2(row, column, minColumn, characterInBattle, waifuSkill, inTurn - 1));
+            }
+        }
         void SetAttacked(int count, CharacterInBattle characterInBattle)
         {
             SkeletonAnimation skeletonEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
@@ -315,10 +345,11 @@ namespace RubikCasual.Battle
                 if (skeletonEnemy.AnimationName != NameAnim.Anim_Character_Idle)
                 {
                     skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Idle, true);
-                    CharacterInBattleAttacked.HpNow = CharacterInBattleAttacked.Hp;
                     CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
                 }
+                CheckHpEnemy(characterInBattle.gameObject);
             };
+
         }
         public void CharacterAtackAnimation(GameObject CharacterAttacked, GameObject CharacterAttack, MapBattleController dameSlotTxtController, float durationsTxtDame)
         {
@@ -329,7 +360,7 @@ namespace RubikCasual.Battle
         {
             CharacterInBattle enemyInBattle = gbEnemy.GetComponent<CharacterInBattle>();
             SkeletonAnimation enemyAnim = enemyInBattle.skeletonCharacterAnimation;
-            if (enemyInBattle.HpNow == 0)
+            if (enemyInBattle.HpNow < 1)
             {
                 enemyInBattle.GetRewardWhenKillEnemy();
 
@@ -338,8 +369,7 @@ namespace RubikCasual.Battle
 
                 enemyAnim.AnimationState.Complete += delegate
                 {
-                    enemyInBattle.cooldownSkillBar.gameObject.transform.SetParent(enemyInBattle.cooldownAttackBar.transform.parent);
-                    enemyInBattle.healthBar.gameObject.transform.SetParent(enemyInBattle.cooldownAttackBar.transform.parent);
+
                     // UnityEngine.Debug.Log(enemyAnim.skeletonDataAsset.name);
 
                     UnityEngine.Object.Destroy(gbEnemy);
