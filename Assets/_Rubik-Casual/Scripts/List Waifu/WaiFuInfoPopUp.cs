@@ -4,13 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using RubikCasual.Data.Player;
 using Rubik_Casual;
 using RubikCasual.Waifu;
 using RubikCasual.Data;
 using RubikCasual.Data.Waifu;
-using RubikCasual.Tool;
 namespace Rubik.ListWaifu
 {
     public class WaiFuInfoPopUp : MonoBehaviour
@@ -18,12 +16,12 @@ namespace Rubik.ListWaifu
         [SerializeField] private SkeletonGraphic avaWaifu;
 
         [SerializeField]
-        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, goldTxt, selectTxt;
+        private TextMeshProUGUI lvTxt, lvProcessTxt, damageTxt, defenseTxt, critTxt, healthTxt, moveSpeedTxt, goldTxt, selectTxt, rareTxt, elementTxt;
 
         // public Button btn_Arrow_r, btn_Arrow_l, btn_Update_Waifu, btn_Select;
         public Slider exp;
 
-        public Image role, avatar, btnselect, btnUpdate;
+        public Image role, avatar, btnselect, btnUpdate, rare;
 
         
         private PlayerOwnsWaifu thisWaifu,_waifu;
@@ -44,11 +42,11 @@ namespace Rubik.ListWaifu
 
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
-            avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            avaWaifu.initialSkinName = "Pet" + infoWaifu.Code;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
-            SpineEditorUtilities.ReinitializeComponent(avaWaifu);
+            avaWaifu.Initialize(true);
             
-            avatar.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+            avatar.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(waifu.ID));
             avatar.preserveAspect = true;
 
             // Debug.Log(infoWaifu.Code.ToString());
@@ -63,6 +61,7 @@ namespace Rubik.ListWaifu
             healthTxt.text = (infoWaifu.HP + waifu.HP).ToString();
 
             selectTxt.text = "Select";
+            elementTxt.text = infoWaifu.Element.ToString();
             btnselect.sprite = AssetLoader.instance.Button[9];
             foreach (var curentWaifu in DataController.instance.userData.curentTeams)
             {
@@ -81,7 +80,30 @@ namespace Rubik.ListWaifu
             // moveSpeedTxt.text = waifu.MoveSpeed.ToString();
 
             //Update_Waifu(waifu);
-
+            if (rare != null)
+            {
+                
+                switch(infoWaifu.Rare)
+                {
+                    case Rare.R:
+                        rare.sprite = AssetLoader.Instance.LabelRare[0];
+                        rareTxt.text = Rare.R.ToString();
+                        break;
+                    case Rare.SR:
+                        rare.sprite = AssetLoader.Instance.LabelRare[1];
+                        rareTxt.text = Rare.SR.ToString();
+                        break;
+                    case Rare.SSR:
+                        rare.sprite = AssetLoader.Instance.LabelRare[2];
+                        rareTxt.text = Rare.SSR.ToString();
+                        break;
+                    case Rare.UR:
+                        rare.sprite = AssetLoader.Instance.LabelRare[3];
+                        rareTxt.text = Rare.UR.ToString();
+                        break;
+                }
+                 
+            }
 
         }
 

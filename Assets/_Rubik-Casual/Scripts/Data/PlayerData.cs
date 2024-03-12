@@ -41,6 +41,7 @@ namespace RubikCasual.Data.Player
         public double Gold, Gem,  Hp, Exp, Ticket, DiamondTicket;
         public int Level, Energy, Rank;
         public List<CurentTeam> curentTeams = new List<CurentTeam>();
+        public ItemPass itemPass;
 
         public UserData()
         {
@@ -77,9 +78,20 @@ namespace RubikCasual.Data.Player
 
     }
     [Serializable]
+    public class ItemPass
+    {
+        public double LevelPass, ExpLevelPass;
+        public bool GoldPass = false;
+        public List<Item> itemFree = new List<Item>();
+        public List<Item> itemGold = new List<Item>();
+
+    }
+    [Serializable]
     public class Item
     {
-        // public int Index, 
+        public int Id, Index;
+        public bool ItemActive = false;
+
     }
 }
 

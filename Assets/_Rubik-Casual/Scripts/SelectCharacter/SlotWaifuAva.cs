@@ -6,10 +6,8 @@ using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
 using RubikCasual.EnemyData;
 using RubikCasual.Lobby;
-using RubikCasual.Tool;
 using RubikCasual.Waifu;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using UnityEngine;
 using UnityEngine.UI;
 namespace Rubik.Select
@@ -34,19 +32,21 @@ namespace Rubik.Select
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.ID);
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
-            if(waifu.ID == 66)
-            {
-                avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
-            }
-            else
-            {
-                avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
-            }
-            
+            // if(waifu.ID == 66)
+            // {
+            //     avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
+            // }
+            // else
+            // {
+            //     avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            // }
+            avaWaifu.initialSkinName = "Pet" + infoWaifu.Code;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
-            SpineEditorUtilities.ReinitializeComponent(avaWaifu);
+            avaWaifu.Initialize(true);
             
-            AvaWaifu.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+            // AvaWaifu.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
+            AvaWaifu.sprite  = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
+
             AvaWaifu.preserveAspect = true;
             //classWaifu.sprite = AssetLoader.instance.
             iconSelect.SetActive(false);

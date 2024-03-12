@@ -10,7 +10,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using RubikCasual.EnemyData;
-using Spine.Unity.Editor;
+
 using Rubik_Casual;
 
 namespace RubikCasual.StageLevel
@@ -226,7 +226,7 @@ namespace RubikCasual.StageLevel
                         {
                             itemEnemyClone.star[i].SetActive(true);
                         }
-                        SpineEditorUtilities.ReinitializeComponent(itemEnemyClone.iconEnemy);
+                        itemEnemyClone.iconEnemy.Initialize(true);
 
                     }
 
@@ -282,7 +282,7 @@ namespace RubikCasual.StageLevel
                         {
                             itemEnemyClone.star[i].SetActive(true);
                         }
-                        SpineEditorUtilities.ReinitializeComponent(itemEnemyClone.iconEnemy);
+                        itemEnemyClone.iconEnemy.Initialize(true);
 
                     }
                     infoLevelClone.buttonFinish.gameObject.SetActive(false);

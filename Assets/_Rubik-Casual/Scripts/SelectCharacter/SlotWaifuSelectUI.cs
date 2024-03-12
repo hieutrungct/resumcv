@@ -5,10 +5,8 @@ using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
-using RubikCasual.Tool;
 using RubikCasual.Waifu;
 using Spine.Unity;
-using Spine.Unity.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,7 +18,7 @@ namespace RubikCasual.Lobby
         public TextMeshProUGUI nameTxt, lvlTxt, expTxt, rareTxt;
         public List<GameObject> lsStar;
         public GameObject waittingSlot, slotCharacter,avaBox_Obj;
-        public Image avaBox, classWaifu, rarity;
+        public Image avaBox, classWaifu, rarity, BackGlow, Glow;
         public Slider expSlider;
         public SkeletonGraphic avaWaifu;
         public SlotWaifuAva slotWaifuAva;
@@ -36,9 +34,17 @@ namespace RubikCasual.Lobby
 
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(waifu.ID.ToString()).SkeletonDataAsset;
             avaWaifu.skeletonDataAsset = skeletonDataAsset;
-            avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            // if(waifu.ID == 66)
+            // {
+            //     avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
+            // }
+            // else
+            // {
+            //     avaWaifu.initialSkinName = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            // }
+            avaWaifu.initialSkinName = "Pet" + infoWaifu.Code;
             avaWaifu.startingAnimation = avaWaifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
-            SpineEditorUtilities.ReinitializeComponent(avaWaifu);
+            avaWaifu.Initialize(true);
             
             // avaBox.sprite = AssetLoader.Instance.GetAvatarById(MovePopup.GetNameImageWaifu(avaWaifu));
             // avaBox.preserveAspect = true;
@@ -62,22 +68,26 @@ namespace RubikCasual.Lobby
                 switch (infoWaifu.Rare)
                 {
                     case Rare.R:
-                        avaBox.sprite = AssetLoader.Instance.RarrityBox[1];
+                        
+                        SetRarityColors(1, Config.color_Rare_R, Config.color_BackGlow_Rare_R);
                         rarity.sprite = AssetLoader.Instance.LabelRare[0];
                         rareTxt.text = Rare.R.ToString();
                         break;
                     case Rare.SR:
-                        avaBox.sprite = AssetLoader.Instance.RarrityBox[2];
+                        
+                        SetRarityColors(2, Config.color_Rare_SR, Config.color_BackGlow_Rare_SR);
                         rarity.sprite = AssetLoader.Instance.LabelRare[1];
                         rareTxt.text = Rare.SR.ToString();
                         break;
                     case Rare.SSR:
-                        avaBox.sprite = AssetLoader.Instance.RarrityBox[3];
+                        
+                        SetRarityColors(3, Config.color_Rare_SSR, Config.color_BackGlow_Rare_SSR);
                         rarity.sprite = AssetLoader.Instance.LabelRare[2];
                         rareTxt.text = Rare.SSR.ToString();
                         break;
                     case Rare.UR:
-                        avaBox.sprite = AssetLoader.Instance.RarrityBox[4];
+                        
+                        SetRarityColors(4, Config.color_Rare_UR, Config.color_BackGlow_Rare_UR);
                         rarity.sprite = AssetLoader.Instance.LabelRare[3];
                         rareTxt.text = Rare.UR.ToString();
                         break;
@@ -123,6 +133,12 @@ namespace RubikCasual.Lobby
                 slotWaifuAva = null;
             }
             
+        }
+        private void SetRarityColors(int rarityIndex, string glowColor, string backGlowColor)
+        {
+            avaBox.sprite = AssetLoader.Instance.RarrityBox[rarityIndex];
+            Config.SetColorFromHex(Glow.GetComponent<Image>(), glowColor);
+            Config.SetColorFromHex(BackGlow.GetComponent<Image>(), backGlowColor);
         }
     }
 }

@@ -8,7 +8,7 @@ using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
 using RubikCasual.Waifu;
 using Spine.Unity;
-using Spine.Unity.Editor;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +17,7 @@ namespace Rubik.ListWaifu
     public class WaifuItem : MonoBehaviour
     {
         public Image avaCard,attackType,avaBox, BackGlow,Glow,Role;
-        public SkeletonGraphic UI_Waifu;
+        public SkeletonGraphic UI_Waifu = new SkeletonGraphic();
         private SkeletonAnimation ui_Waifu;
         public TextMeshProUGUI nameTxt, levelTxt,lvProcessTxt;
         public Slider exp;
@@ -40,19 +40,19 @@ namespace Rubik.ListWaifu
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
-            if(waifu.ID == 66)
-            {
-                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
-            }
-            else
-            {
-                UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
-            }
-            
+            // if(waifu.ID == 66)
+            // {
+            //     UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[0].Name;
+            // }
+            // else
+            // {
+            //     UI_Waifu.initialSkinName = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Skins.Items[1].Name;
+            // }
+            UI_Waifu.initialSkinName = "Pet" + infoWaifu.Code;
             UI_Waifu.startingAnimation = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
 
             
-            SpineEditorUtilities.ReinitializeComponent(UI_Waifu);
+            UI_Waifu.Initialize(true);
 
 
             

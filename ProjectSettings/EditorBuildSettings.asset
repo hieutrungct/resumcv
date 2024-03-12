@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/_Rubik-Casual/Scene/Splash.unity
     guid: f4e87c7ef75caa04dac24437d7be1a44
   - enabled: 1
