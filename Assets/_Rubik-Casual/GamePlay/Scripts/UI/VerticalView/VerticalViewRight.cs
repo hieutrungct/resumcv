@@ -9,12 +9,13 @@ namespace RubikCasual.Battle.UI.VerticalView
 {
     public class VerticalViewRight : MonoBehaviour
     {
-        public List<GameObject> lsStar;
+        public List<GameObject> lsStar, lsSlotEnemy, lsSlotHero;
         public Image iconImage;
-        public TextMeshProUGUI txtName, txtAtk, txtDef, txtHp, txtDameSkill, txtRare;
+        public TextMeshProUGUI txtName;
         public Button btnHidePopup;
+        public Sprite spriteBuffAtk, spriteBuffDef, spriteBuffHp;
         private CharacterInBattle characterInBattleClone;
-        public bool isShowPopup, isFirstSetData = false;
+        bool isShowPopup, isFirstSetData = false;
         float OriginPosX;
         public static VerticalViewRight instance;
         protected void Awake()
@@ -23,6 +24,83 @@ namespace RubikCasual.Battle.UI.VerticalView
             OriginPosX = this.transform.position.x;
             this.transform.DOMoveX(OriginPosX + 3f, 0);
             btnHidePopup.onClick.AddListener(() => { ShowAndHidePopup(); });
+
+        }
+        public void SetSkillPopup(Data.Waifu.WaifuSkill waifuSkill)
+        {
+            foreach (GameObject slotHero in lsSlotHero)
+            {
+                slotHero.GetComponent<Image>().sprite = null;
+            }
+            foreach (GameObject slotEnemy in lsSlotEnemy)
+            {
+                slotEnemy.GetComponent<Image>().sprite = null;
+                slotEnemy.GetComponent<Image>().color = Color.white;
+            }
+
+            switch (waifuSkill.typeSkill)
+            {
+                case CreateSkill.TypeSkill.BuffAtk:
+                    foreach (GameObject slotHero in lsSlotHero)
+                    {
+                        slotHero.GetComponent<Image>().sprite = spriteBuffAtk;
+                        slotHero.GetComponent<Image>().preserveAspect = true;
+                    }
+                    break;
+                case CreateSkill.TypeSkill.BuffDef:
+                    foreach (GameObject slotHero in lsSlotHero)
+                    {
+                        slotHero.GetComponent<Image>().sprite = spriteBuffDef;
+                        slotHero.GetComponent<Image>().preserveAspect = true;
+                    }
+                    break;
+                case CreateSkill.TypeSkill.BuffHp:
+                    foreach (GameObject slotHero in lsSlotHero)
+                    {
+                        slotHero.GetComponent<Image>().sprite = spriteBuffHp;
+                        slotHero.GetComponent<Image>().preserveAspect = true;
+                    }
+                    break;
+                case CreateSkill.TypeSkill.Wave:
+                    ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
+                    break;
+                case CreateSkill.TypeSkill.InTurn:
+                    ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
+                    break;
+                case CreateSkill.TypeSkill.InTurn2:
+                    ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
+                    break;
+                case CreateSkill.TypeSkill.Other:
+                    ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
+                    break;
+            }
+
+            lsSlotHero[2].GetComponent<Image>().color = Color.yellow;
+        }
+        void ArraySkill(int row, int column, List<GameObject> listGameObject)
+        {
+            int minColumn = 0;
+            switch (column)
+            {
+                case 1:
+                    minColumn = 2;
+                    break;
+                case <= 3:
+                    minColumn = 1;
+                    break;
+            }
+            int count = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (i >= minColumn && i < minColumn + column && row > j)
+                    {
+                        listGameObject[count].GetComponent<Image>().color = Color.red;
+                    }
+                    count++;
+                }
+            }
         }
         public void SetDataPopup(CharacterInBattle characterInBattle)
         {
@@ -33,12 +111,7 @@ namespace RubikCasual.Battle.UI.VerticalView
             Data.Waifu.WaifuSkill waifuSkill = new Data.Waifu.WaifuSkill();
             waifuSkill = Data.DataController.instance.characterAssets.GetSkillWaifuSOByIndex(indexWaifu);
 
-            txtAtk.text = "ATK: " + characterInBattle.infoWaifuAsset.ATK.ToString();
-            txtDef.text = "DEF: " + characterInBattle.infoWaifuAsset.DEF.ToString();
-            txtHp.text = "HP: " + characterInBattle.infoWaifuAsset.HP.ToString();
 
-            txtDameSkill.text = "Dame Skill: " + ((int)(characterInBattle.infoWaifuAsset.ATK * waifuSkill.percentDameSkill)).ToString();
-            txtRare.text = "Rare: " + characterInBattle.infoWaifuAsset.Rare;
 
             iconImage.sprite = Data.DataController.instance.assetLoader.GetAvatarByIndex(indexWaifu);
             iconImage.preserveAspect = true;

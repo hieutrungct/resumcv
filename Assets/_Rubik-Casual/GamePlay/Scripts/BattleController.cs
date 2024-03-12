@@ -113,8 +113,10 @@ namespace RubikCasual.Battle
                 case GameState.START:
                     gameState = GameState.BATTLE;
                     break;
+                    
                 case GameState.WAIT_BATTLE:
                     gamePlayUI.txtTime.text = "Turn: " + CountState.ToString();
+                    SetAgain();
                     break;
 
                 case GameState.BATTLE:
@@ -129,7 +131,20 @@ namespace RubikCasual.Battle
                     break;
             }
         }
-
+        void SetAgain()
+        {
+            if (lsSlotGbHero.Count != 0)
+            {
+                for (int i = 0; i < mapBattleController.lsPosHeroSlot.lsPosCharacterSlot.Count; i++)
+                {
+                    if (i < mapBattleController.lsPosHeroSlot.lsPosCharacterSlot.Count && lsSlotGbHero[i] != null && lsSlotGbHero[i].GetComponent<CharacterInBattle>().isAttack)
+                    {
+                        lsSlotGbHero[i].GetComponent<CharacterInBattle>().isAttack = false;
+                        // lsSlotGbHero[i].GetComponent<CharacterInBattle>().skeletonCharacterAnimation.AnimationName = Anim_Character_Idle;
+                    }
+                }
+            }
+        }
 
         IEnumerator CreateBattlefield()
         {
@@ -662,11 +677,7 @@ namespace RubikCasual.Battle
                 int Count = 0;
                 for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
                 {
-                    if (i < mapBattleController.lsPosHeroSlot.lsPosCharacterSlot.Count && lsSlotGbHero[i] != null)
-                    {
-                        lsSlotGbHero[i].GetComponent<CharacterInBattle>().isAttack = false;
-                        // lsSlotGbHero[i].GetComponent<CharacterInBattle>().skeletonCharacterAnimation.AnimationName = Anim_Character_Idle;
-                    }
+
                     for (int j = 0; j < mapBattleController.lsPosEnemySlot[i].lsPosCharacterSlot.Count; j++)
                     {
                         // UnityEngine.Debug.Log(lsSlotGbEnemy.Count / 5);

@@ -19,7 +19,11 @@ namespace RubikCasual.CreateSkill
         Other = 0,
         Wave = 1,
         InTurn = 2,
-        InTurn2 = 3
+        InTurn2 = 3,
+        BuffHp = 4,
+        BuffAtk = 5,
+        BuffDef = 6,
+
     }
     public class CharacterSetSkillController : MonoBehaviour
     {
@@ -160,7 +164,7 @@ namespace RubikCasual.CreateSkill
                                 minColumn = slotCharacter - (j + 1);
                                 column = column + slotCharacter - (j + 1);
                                 break;
-                            }
+                            } 
 
                         }
                     }

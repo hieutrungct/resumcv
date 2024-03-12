@@ -9,6 +9,7 @@ using RubikCasual.Tool;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace RubikCasual.Battle
 {
@@ -33,7 +34,7 @@ namespace RubikCasual.Battle
     {
         // private bool isAnimationCompleteHandled = false;
         private MapBattleController mapBattleController;
-        private List<GameObject> lsSlotGbEnemy;
+        private List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
         public static SetAnimCharacter instance;
         protected void Awake()
         {
@@ -49,6 +50,14 @@ namespace RubikCasual.Battle
             else
             {
                 lsSlotGbEnemy = BattleController.instance.lsSlotGbEnemy;
+            }
+            if (BattleController.instance.lsSlotGbHero.Count == 0)
+            {
+                Debug.Log("lsSlotGbHero null");
+            }
+            else
+            {
+                lsSlotGbHero = BattleController.instance.lsSlotGbHero;
             }
             if (BattleController.instance.mapBattleController == null)
             {
@@ -345,11 +354,11 @@ namespace RubikCasual.Battle
                 if (skeletonEnemy.AnimationName != NameAnim.Anim_Character_Idle)
                 {
                     skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Idle, true);
+
                     CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
                 }
-                CheckHpEnemy(characterInBattle.gameObject);
             };
-
+            CheckHpEnemy(CharacterInBattleAttacked.gameObject);
         }
         public void CharacterAtackAnimation(GameObject CharacterAttacked, GameObject CharacterAttack, MapBattleController dameSlotTxtController, float durationsTxtDame)
         {
@@ -367,11 +376,16 @@ namespace RubikCasual.Battle
                 enemyAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
                 enemyInBattle.isAttack = true;
 
+                if (enemyInBattle.indexOfSlot < 5)
+                {
+                    GameObject hero = lsSlotGbHero.Find(f => f != null && f.GetComponent<CharacterInBattle>() != null && f.GetComponent<CharacterInBattle>().indexOfSlot == enemyInBattle.indexOfSlot);
+                    if (hero != null)
+                    {
+                        hero.GetComponent<CharacterInBattle>().isAttack = true;
+                    }
+                }
                 enemyAnim.AnimationState.Complete += delegate
                 {
-
-                    // UnityEngine.Debug.Log(enemyAnim.skeletonDataAsset.name);
-
                     UnityEngine.Object.Destroy(gbEnemy);
                 };
             }
@@ -395,13 +409,11 @@ namespace RubikCasual.Battle
             CharacterInBattleAttack.isAttack = true;
             CharacterAttackAnim.AnimationState.Complete += delegate
             {
-                CharacterInBattleAttack.isAttack = false;
+                // CharacterInBattleAttack.isAttack = false;
                 if (CharacterAttackAnim.AnimationName != NameAnim.Anim_Character_Idle)
                 {
-
                     // CharacterAttackAnim.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
                     CharacterAttackAnim.AnimationName = NameAnim.Anim_Character_Idle;
-
                 }
 
             };
@@ -418,7 +430,6 @@ namespace RubikCasual.Battle
                 {
                     CharacterAttackedAnim.AnimationName = NameAnim.Anim_Character_Idle;
                 }
-                // SpineEditorUtilities.ReinitializeComponent(CharacterAttackedAnim);
             };
             // Tăng thanh nộ
             AddValueRage(CharacterAttack, CharacterAttacked);
@@ -439,7 +450,6 @@ namespace RubikCasual.Battle
 
             if (CharacterInBattleAttacked.isEnemy)
             {
-
                 Transform PosTxt = CharacterInBattleAttacked.healthBar.transform;
                 PosTxt.position = new Vector3(PosTxt.position.x, PosTxt.position.y, PosTxt.position.z);
                 SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
@@ -450,16 +460,17 @@ namespace RubikCasual.Battle
                 SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
             }
 
-
-            if (CharacterInBattleAttacked.HpNow == 0)
+            if (CharacterInBattleAttacked.HpNow < 1)
             {
                 if (CharacterInBattleAttacked.isEnemy || CharacterInBattleAttacked.isBoss)
                 {
                     CharacterInBattleAttacked.GetRewardWhenKillEnemy();
                 }
-                CharacterInBattleAttacked.isAttack = true;
+
 
                 CharacterAttackedAnim.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Die, false);
+                CharacterInBattleAttacked.isAttack = true;
+                CharacterInBattleAttack.isAttack = true;
 
                 CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(BattleController.instance.dameSlotTxtController.transform);
                 CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownSkillBar.transform);
@@ -467,20 +478,18 @@ namespace RubikCasual.Battle
 
                 CharacterAttackedAnim.AnimationState.Complete += delegate
                 {
+                    CharacterInBattleAttack.isAttack = true;
                     CharacterInBattleAttacked.cooldownSkillBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownAttackBar.transform.parent);
                     CharacterInBattleAttacked.healthBar.gameObject.transform.SetParent(CharacterInBattleAttacked.cooldownAttackBar.transform.parent);
                     // Debug.Log("Character " + CharacterInBattleAttack.infoWaifuAsset.ID + " die");
-                    CharacterInBattleAttack.isAttack = true;
 
                     UnityEngine.Object.Destroy(CharacterAttacked);
                 };
-
             }
             else
             {
                 CharacterInBattleAttack.isAttack = false;
             }
-
         }
         static void AddValueRage(GameObject CharacterAttack, GameObject CharacterAttacked)
         {
