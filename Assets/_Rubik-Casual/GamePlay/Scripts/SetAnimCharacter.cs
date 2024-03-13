@@ -346,7 +346,9 @@ namespace RubikCasual.Battle
         {
             SkeletonAnimation skeletonEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
             CharacterInBattle CharacterInBattleAttacked = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>();
-            Calculator.CalculateHealth(characterInBattle, lsSlotGbEnemy[count].GetComponent<CharacterInBattle>(), true);
+            int oldValue = 0;
+            oldValue = CharacterInBattleAttacked.HpNow;
+            Calculator.CalculateHealth(characterInBattle, CharacterInBattleAttacked, true);
             skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
 
             skeletonEnemy.AnimationState.Complete += delegate
@@ -354,10 +356,17 @@ namespace RubikCasual.Battle
                 if (skeletonEnemy.AnimationName != NameAnim.Anim_Character_Idle)
                 {
                     skeletonEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Idle, true);
-
-                    CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
                 }
             };
+            //Set Text Dame
+            int lossHp = 0;
+            lossHp = oldValue - CharacterInBattleAttacked.HpNow;
+
+            CharacterInBattleAttacked.healthBar = SliderTool.ChangeValueSlider(CharacterInBattleAttacked.healthBar, CharacterInBattleAttacked.healthBar.value, CharacterInBattleAttacked.HpNow / (float)CharacterInBattleAttacked.Hp);
+
+            Transform PosTxt = BattleController.instance.dameSlotTxtController.lsPosEnemySlot.Find(f => f.name == CharacterInBattleAttacked.transform.parent.parent.name).lsPosCharacterSlot.Find(f => f.name == CharacterInBattleAttacked.transform.parent.name).transform;
+            FuntionTimeDelay.SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, 0.5f);
+
             CheckHpEnemy(CharacterInBattleAttacked.gameObject);
         }
         public void CharacterAtackAnimation(GameObject CharacterAttacked, GameObject CharacterAttack, MapBattleController dameSlotTxtController, float durationsTxtDame)
@@ -450,7 +459,7 @@ namespace RubikCasual.Battle
 
             if (CharacterInBattleAttacked.isEnemy)
             {
-                Transform PosTxt = CharacterInBattleAttacked.healthBar.transform;
+                Transform PosTxt = dameSlotTxtController.lsPosEnemySlot.Find(f => f.name == CharacterInBattleAttacked.transform.parent.parent.name).lsPosCharacterSlot.Find(f => f.name == CharacterInBattleAttacked.transform.parent.name).transform;
                 PosTxt.position = new Vector3(PosTxt.position.x, PosTxt.position.y, PosTxt.position.z);
                 SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
             }

@@ -14,6 +14,7 @@ namespace RubikCasual.Battle.UI.VerticalView
         public CharacterInBattle characterInBattleClone;
         public List<GameObject> lsSlotEnemy, lsSlotHero;
         public GameObject focus;
+        public UnityEngine.UI.Image BackgroundImage;
         public Slider healthBar, RageBar;
         void Awake()
         {
@@ -46,7 +47,7 @@ namespace RubikCasual.Battle.UI.VerticalView
             Data.Waifu.WaifuSkill waifuSkill = new Data.Waifu.WaifuSkill();
             waifuSkill = Data.DataController.instance.characterAssets.GetSkillWaifuSOByIndex(indexWaifu);
             SetSkillPopup(waifuSkill);
-            
+
             txtAtk.text = characterInBattle.infoWaifuAsset.ATK.ToString();
             txtDef.text = characterInBattle.infoWaifuAsset.DEF.ToString();
             txtRare.text = characterInBattle.infoWaifuAsset.Rare.ToString();
@@ -56,6 +57,7 @@ namespace RubikCasual.Battle.UI.VerticalView
             // txtRow.text = "Row: " + waifuSkill.Row.ToString();
             // txtColumn.text = "Column: " + waifuSkill.Column.ToString();
             // txtTypeSkill.text = "Type Skill: " + waifuSkill.typeSkill;
+            BackgroundImage.sprite = Data.DataController.instance.assetLoader.GetSpriteButtonWithRare(characterInBattle.infoWaifuAsset.Rare);
 
         }
         void SetSkillPopup(Data.Waifu.WaifuSkill waifuSkill)
