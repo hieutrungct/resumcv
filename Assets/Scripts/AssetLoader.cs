@@ -21,7 +21,7 @@ namespace Rubik_Casual
         public List<SkeletonDataAsset> Enemy;
         public List<Sprite> RarrityBox;
         public List<Sprite> RarrityAvaBox, LabelRare;
-        public List<Sprite> AttackSprite;
+        public List<Sprite> AttackSprite, ItemPass;
         public List<Sprite> EffectSprite;
         public List<Sprite> SkillSprite;
         public List<Sprite> imageSummon, Icon, imageBtn, imageWaifu, imageWaifuChibi;

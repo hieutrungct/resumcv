@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 namespace RubikCasual.ItemPass
 {
     public class ItemPassSlot : MonoBehaviour
     {
-        public int id, index;
-        public Image itemImg, itemChecked, itemClaim, itemUnlock;
+        public int id;
+        public Image itemImg, itemChecked, itemClaim;
         public TextMeshProUGUI txtItem;
     }
 }

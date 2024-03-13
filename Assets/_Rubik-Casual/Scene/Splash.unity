@@ -875,6 +875,10 @@ MonoBehaviour:
       Keys: 
       Values: 
     CurentStage: 0
+    battlePass:
+      LevelPass: 0
+      ExpLevelPass: 0
+      GoldPass: 0
   listOwnsWaifu:
     lsOwnsWaifu: []
   userData:
@@ -1076,19 +1080,19 @@ MonoBehaviour:
   Enemy: []
   RarrityBox:
   - {fileID: 21300000, guid: b56197178539f48009c713d5b5d04a81, type: 3}
-  - {fileID: 21300000, guid: 91d37967864564f818aaf9326fcf0302, type: 3}
   - {fileID: 21300000, guid: 08be456a6ddbf458784cf3a37e52822f, type: 3}
+  - {fileID: 21300000, guid: 91d37967864564f818aaf9326fcf0302, type: 3}
   - {fileID: 21300000, guid: 284f99482071f47839549747513b612b, type: 3}
   - {fileID: 21300000, guid: 072fc1e433b92438e915c6c10bfd2994, type: 3}
   RarrityAvaBox:
   - {fileID: 21300000, guid: dd77367546bf4433dbbb2317a935df54, type: 3}
-  - {fileID: 21300000, guid: 35d7e6588f1f34db1b9a5e62f4efdf77, type: 3}
   - {fileID: 21300000, guid: e6eea4f7cbb9f46f79c0fe06180fa5b3, type: 3}
+  - {fileID: 21300000, guid: 35d7e6588f1f34db1b9a5e62f4efdf77, type: 3}
   - {fileID: 21300000, guid: c7ade68a31f1d4e12a57617409b6ee8a, type: 3}
   - {fileID: 21300000, guid: 10d23572713d041c596abf5c00be11dc, type: 3}
   LabelRare:
-  - {fileID: 21300000, guid: f4f151a5ee5d4481aa3b02b2d79d33b2, type: 3}
   - {fileID: 21300000, guid: 97015b9c8e41d49de9b3b84779bcf5a7, type: 3}
+  - {fileID: 21300000, guid: f4f151a5ee5d4481aa3b02b2d79d33b2, type: 3}
   - {fileID: 21300000, guid: 6e89577c7208241f8b2e979f467525d9, type: 3}
   - {fileID: 21300000, guid: 55ab78bb5705a45efbdba0f372c1469e, type: 3}
   AttackSprite:
@@ -1096,6 +1100,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b944c63612ae9407cbd657cf70397e9b, type: 3}
   - {fileID: 21300000, guid: 7a860c9c2d94544b688db0cd613e58bd, type: 3}
   - {fileID: 21300000, guid: 1b652d4125f7c453eba84d8462355c62, type: 3}
+  ItemPass:
+  - {fileID: 21300000, guid: 2340e003a4a6745a8929491f3b365cea, type: 3}
+  - {fileID: 21300000, guid: 1dc86866662534453a0e2cd9004dd340, type: 3}
+  - {fileID: 21300000, guid: dd50370016aa3427cbffd86ff9d349ea, type: 3}
+  - {fileID: 21300000, guid: b7d7e36f0c41c4316a6ea75d0a9321a6, type: 3}
+  - {fileID: 21300000, guid: 115c4f46eb9974054913829ac1bcabec, type: 3}
+  - {fileID: 21300000, guid: 7898208bc763a45b7a72df205c9f0755, type: 3}
+  - {fileID: 21300000, guid: 3210a887b1f5a9e47aad7aacc9c789e1, type: 3}
+  - {fileID: 21300000, guid: 47a90f527cb3619478a1fe3c35ee1071, type: 3}
+  - {fileID: 21300000, guid: e9ffe679403693c41adf6eddd3ef5cab, type: 3}
+  - {fileID: 21300000, guid: c05a070caee1c6b45bd0cf6419dae7bc, type: 3}
   EffectSprite: []
   SkillSprite: []
   imageSummon: []

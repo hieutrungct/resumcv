@@ -7,10 +7,24 @@ namespace RubikCasual.Pass
 {
     public class PassController : MonoBehaviour
     {
-        public ItemPassSlot itemPassGold;
-        public ItemPassSlot itemPassFree;
-        public Slider expPass, lvlPass;
         
+        public List<ItemPassSlot> itemPassGold;
+        public List<ItemPassSlot> itemPassFree;
+        public Slider expPass, lvlPass;
+        public void SetUpItemGold()
+        {
+            for (int i = 0; i < itemPassGold.Count; i++)
+            {
+                
+            }
+        }
+        public void SetUpItemFree()
+        {
+            for (int i = 0; i < itemPassFree.Count; i++)
+            {
+
+            }
+        }
 
 
     }
