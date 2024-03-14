@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using RubikCasual.ItemPass;
+using RubikCasual.ItemPassSlots;
+using RubikCasual.RewardPass;
 using UnityEngine;
 using UnityEngine.UI;
 namespace RubikCasual.Pass
@@ -11,18 +13,18 @@ namespace RubikCasual.Pass
         public List<ItemPassSlot> itemPassGold;
         public List<ItemPassSlot> itemPassFree;
         public Slider expPass, lvlPass;
-        public void SetUpItemGold()
+        public TextAsset itemPassTxt;
+        public ListItems listItems;
+        void Awake()
         {
-            for (int i = 0; i < itemPassGold.Count; i++)
-            {
-                
-            }
+            listItems = JsonUtility.FromJson<ListItems>(itemPassTxt.text);
+            SetUp();
         }
-        public void SetUpItemFree()
+        public void SetUp()
         {
             for (int i = 0; i < itemPassFree.Count; i++)
             {
-
+                itemPassFree[i].SetUpItemFree(listItems.lsItem[i]);
             }
         }
 

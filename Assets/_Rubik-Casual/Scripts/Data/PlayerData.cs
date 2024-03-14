@@ -41,7 +41,7 @@ namespace RubikCasual.Data.Player
         public double Gold, Gem,  Hp, Exp, Ticket, DiamondTicket;
         public int Level, Energy, Rank;
         public List<CurentTeam> curentTeams = new List<CurentTeam>();
-        
+        public int item_Receive_Count;
 
         public UserData()
         {
