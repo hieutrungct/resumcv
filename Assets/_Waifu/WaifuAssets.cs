@@ -99,10 +99,11 @@ namespace RubikCasual.Data.Waifu
                 this.waifuSkills.Add(waifuSkillsAssetData);
             }
         }
+
         public void SaveSkillDataToJson()
         {
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(waifuSkills);
-            string path = System.IO.Path.Combine(Path_Assets_SO + "/", "Waifu_Skills.json");
+            string path = System.IO.Path.Combine("Assets/_Data/Resources/Waifu" + "/", "Waifu_Skills.json");
             System.IO.File.WriteAllText(path, json);
 
             Debug.Log("Đã lưu dữ liệu vào tệp JSON: " + path);

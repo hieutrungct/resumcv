@@ -102,6 +102,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
   - {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
   enemyAvatar: []
+  lsSpriteButton:
+  - rare: 0
+    spriteButton: {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
+  - rare: 1
+    spriteButton: {fileID: 21300000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
+  - rare: 2
+    spriteButton: {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
+  - rare: 3
+    spriteButton: {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
   Hero: []
   Enemy: []
   RarrityBox:
@@ -404,6 +413,12 @@ MonoBehaviour:
         SkinCheck: 0
       - ID: 0
         SkinCheck: 0
+      itemPass:
+        LevelPass: 0
+        ExpLevelPass: 0
+        GoldPass: 0
+        itemFree: []
+        itemGold: []
     lsPlayerOwnsWaifu: []
     Inventory:
       Keys: 
@@ -434,9 +449,17 @@ MonoBehaviour:
       SkinCheck: 0
     - ID: 0
       SkinCheck: 0
+    itemPass:
+      LevelPass: 0
+      ExpLevelPass: 0
+      GoldPass: 0
+      itemFree: []
+      itemGold: []
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
+  lsExpWithLevel: []
   characterAssets: {fileID: 2999671105770049558}
   AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
+  AssetUpLevel: {fileID: 4900000, guid: b68a6f99ba293494bafbb32d5a810205, type: 3}
   assetLoader: {fileID: 247475729790594326}
   stageAssets: {fileID: 2552376161743813942}
 --- !u!1 &2999671104778111196

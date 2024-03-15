@@ -17,6 +17,7 @@ namespace Rubik_Casual
         //public List<CardInfo> UnitCards;
         //public List<CardInfo> HeroCards;
         public List<Sprite> Avatars, Button, enemyAvatar;
+        public List<SpriteButton> lsSpriteButton;
         public List<SkeletonDataAsset> Hero;
         public List<SkeletonDataAsset> Enemy;
         public List<Sprite> RarrityBox;
@@ -135,6 +136,19 @@ namespace Rubik_Casual
             }
 
         }
+        public Sprite GetSpriteButtonWithRare(RubikCasual.Waifu.Rare rare)
+        {
+            Sprite spriteResult;
+            spriteResult = lsSpriteButton.Find(f => f.rare == rare).spriteButton;
+            if (spriteResult != null)
+            {
+                return spriteResult;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public Sprite GetAvatarByIndex(int index)
         {
             return AvatarDic.Get(index.ToString());
@@ -183,7 +197,7 @@ namespace Rubik_Casual
             {
                 Sprite sprite = imageWaifu[i];
                 string newName = GetNewName(sprite.name);
-                
+
                 RenameImage(sprite, newName);
                 // Debug.Log("Đổi tên image: " + sprite.name + " thành " + newName);
             }
@@ -194,8 +208,7 @@ namespace Rubik_Casual
             // Debug.Log(nameParts[0]);
             if (nameParts.Length >= 3 && currentName != (nameParts[0] + "_" + nameParts[1]))
             {
-                Debug.Log("a");
-                if(nameParts[1] == "A")
+                if (nameParts[1] == "A")
                 {
                     string fixedNumber = nameParts[1] + "_" + nameParts[2].Replace("0", "");
                     return nameParts[0] + "_" + fixedNumber;
@@ -205,14 +218,14 @@ namespace Rubik_Casual
                     string fixedNumber = nameParts[1].Replace("0", "");
                     return nameParts[0] + "_" + fixedNumber;
                 }
-                
-                
-                
+
+
+
             }
             else
             {
                 return currentName;
-                
+
             }
         }
 
@@ -226,5 +239,11 @@ namespace Rubik_Casual
                 imageWaifu[index] = sprite; // Cập nhật lại sprite trong danh sách
             }
         }
+    }
+    [Serializable]
+    public class SpriteButton
+    {
+        public RubikCasual.Waifu.Rare rare;
+        public Sprite spriteButton;
     }
 }

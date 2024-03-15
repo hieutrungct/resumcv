@@ -17,31 +17,32 @@ namespace RubikCasual.Battle.UI
         public GameObject itemInventory;
         Vector3 OriginPos;
         public Button btnIconInventory;
-        public float duration = 0.5f;
-        bool isShowPopup;
+        public float duration = 0.25f;
+        bool isHidePopup;
+        public GameObject gbInventory;
         public static InventoryUIPanel instance;
         void Awake()
         {
             instance = this;
-            OriginPos = gameObject.transform.position;
-            gameObject.transform.localScale = new Vector3();
+            gbInventory = lsSlotInventory[0].transform.parent.parent.gameObject;
+            OriginPos = gbInventory.transform.position;
             btnIconInventory.onClick.AddListener(ShowAndHideInventory);
+
+            ShowAndHideInventory();
         }
-        
-        
+
+
         public void ShowAndHideInventory()
         {
-            if (isShowPopup)
+            if (!isHidePopup)
             {
-                gameObject.transform.DOMove(btnIconInventory.transform.position, duration);
-                gameObject.transform.DOScale(new Vector3(), duration);
+                gbInventory.transform.DOMoveX(OriginPos.x - 20f, duration);
             }
             else
             {
-                gameObject.transform.DOMove(OriginPos, duration);
-                gameObject.transform.DOScale(new Vector3(1f, 1f, 1f), duration);
+                gbInventory.transform.DOMoveX(OriginPos.x, duration);
             }
-            isShowPopup = !isShowPopup;
+            isHidePopup = !isHidePopup;
         }
         // [Button]
         // void BtnTestInventory()

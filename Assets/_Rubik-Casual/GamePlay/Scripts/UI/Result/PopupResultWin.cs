@@ -40,10 +40,12 @@ namespace RubikCasual.Battle.UI.Result
             LoadPopup();
             StartCoroutine(StartAnimResult());
         }
+
         IEnumerator StartAnimResult()
         {
             yield return new WaitForSeconds(1f);
             ShowAnimPopup(NumberStarReward);
+            RewardInGame.RewardInGamePanel.instance.ExpReward(2);
         }
         void LoadPopup()
         {
@@ -52,6 +54,7 @@ namespace RubikCasual.Battle.UI.Result
             SetScriptRewardItem();
             SetScriptExpPlayer();
             SetDataPopup();
+
         }
         void SetDataPopup()
         {

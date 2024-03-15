@@ -7,7 +7,7 @@ namespace RubikCasual.Tool
 {
     public class SliderTool : MonoBehaviour
     {
-        public static UnityEngine.UI.Slider ChangeValueSlider(UnityEngine.UI.Slider sliderTarget, float oldValue, float newValue, bool isHaveSlider_Down = true)
+        public static UnityEngine.UI.Slider ChangeValueSlider(UnityEngine.UI.Slider sliderTarget, float oldValue, float newValue, bool isHaveSlider_Down = false)
         {
             if (isHaveSlider_Down)
             {

@@ -38,6 +38,7 @@ namespace RubikCasual.Battle.UI
         }
         void SetUIVerticalLeft()
         {
+
             if (isHaveChangeSlot || lsHeroState.Count == 0)
             {
                 BattleController.instance.SetSlotHero();
@@ -51,7 +52,11 @@ namespace RubikCasual.Battle.UI
             if (lsHeroState.Count != 0)
             {
                 verticalViewLeft.SetSliderBar(lsHeroState);
+                verticalViewLeft.SetShowInfo(lsHeroState);
+                verticalViewLeft.ShowFocus(lsHeroState);
+
             }
+
         }
         void ShowPopupContinue()
         {
@@ -83,6 +88,7 @@ namespace RubikCasual.Battle.UI
                     popupResultWin.gameObject.SetActive(true);
 
                 }
+                DataController.instance.CaculateLevelUp();
             }
             else
             {

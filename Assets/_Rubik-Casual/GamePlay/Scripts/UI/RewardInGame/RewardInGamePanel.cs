@@ -38,5 +38,18 @@ namespace RubikCasual.RewardInGame
                 txtGems.text = valueGems.ToString();
             }
         }
+        public void ExpReward(int ValueExpReward)
+        {
+            foreach (Data.Player.CurentTeam item in dataController.playerData.userData.curentTeams)
+            {
+                if (item.ID != 0)
+                {
+                    Data.Player.PlayerOwnsWaifu playerOwnsWaifu = dataController.GetPlayerOwnsWaifuByID(item.ID);
+                    playerOwnsWaifu.Exp += ValueExpReward;
+                }
+
+            }
+
+        }
     }
 }
