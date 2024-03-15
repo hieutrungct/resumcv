@@ -1,79 +1,79 @@
 {
-    "lsItem": [
+    "lsItem":[
         {
-            "Id": "1",
-            "itemName": "0",
-            "Count": "1000"
+            "Id": 1,
+            "itemName": 0,
+            "Count": 1000
         },
         {
-            "Id": "2",
-            "itemName": "1",
-            "Count": "10"
+            "Id": 2,
+            "itemName": 1,
+            "Count": 10
         },
         {
-            "Id": "3",
-            "itemName": "2",
-            "Count": "20"
+            "Id": 3,
+            "itemName": 2,
+            "Count": 20
         },
         {
-            "Id": "4",
-            "itemName": "4",
-            "Count": "10"
+            "Id": 4,
+            "itemName": 4,
+            "Count": 10
         },
         {
-            "Id": "5",
-            "itemName": "0",
-            "Count": "10"
+            "Id": 5,
+            "itemName": 0,
+            "Count": 10
         },
         {
-            "Id": "6",
-            "itemName": "6",
-            "Count": "1"
+            "Id": 6,
+            "itemName": 6,
+            "Count": 1
         },
         {
-            "Id": "7",
-            "itemName": "7",
-            "Count": "1"
+            "Id": 7,
+            "itemName": 7,
+            "Count": 1
         },
         {
-            "Id": "8",
-            "itemName": "8",
-            "Count": "1"
+            "Id": 8,
+            "itemName": 8,
+            "Count": 1
         },
         {
-            "Id": "9",
-            "itemName": "9",
-            "Count": "1"
+            "Id": 9,
+            "itemName": 9,
+            "Count": 1
         },
         {
-            "Id": "10",
-            "itemName": "1",
-            "Count": "20"
+            "Id": 10,
+            "itemName": 1,
+            "Count": 20
         },
         {
-            "Id": "11",
-            "itemName": "0",
-            "Count": "10000"
+            "Id": 11,
+            "itemName": 0,
+            "Count": 10000
         },
         {
-            "Id": "12",
-            "itemName": "9",
-            "Count": "1"
+            "Id": 12,
+            "itemName": 9,
+            "Count": 1
         },
         {
-            "Id": "13",
-            "itemName": "3",
-            "Count": "1"
+            "Id": 13,
+            "itemName": 3,
+            "Count": 1
         },
         {
-            "Id": "14",
-            "itemName": "1",
-            "Count": "50"
+            "Id": 14,
+            "itemName": 1,
+            "Count": 50
         },
         {
-            "Id": "15",
-            "itemName": "5",
-            "Count": "10"
+            "Id": 15,
+            "itemName": 5,
+            "Count": 10
         }
     ]
 }

@@ -524,6 +524,7 @@ MonoBehaviour:
   itemChecked: {fileID: 1674719820462606418}
   itemClaim: {fileID: 1674719820433948053}
   txtItem: {fileID: 3981844601163621049}
+  btn: {fileID: 4679792664406343419}
 --- !u!114 &4679792664406343419
 MonoBehaviour:
   m_ObjectHideFlags: 0

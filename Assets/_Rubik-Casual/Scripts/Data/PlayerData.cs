@@ -41,7 +41,9 @@ namespace RubikCasual.Data.Player
         public double Gold, Gem,  Hp, Exp, Ticket, DiamondTicket;
         public int Level, Energy, Rank;
         public List<CurentTeam> curentTeams = new List<CurentTeam>();
-        public int item_Receive_Count;
+        public List<int> item_Receive_Count_free;
+        public List<int> item_Receive_Count_Gold;
+        public BattlePass battlePass;
 
         public UserData()
         {
@@ -75,7 +77,7 @@ namespace RubikCasual.Data.Player
         public List<PlayerOwnsWaifu> lsPlayerOwnsWaifu = new List<PlayerOwnsWaifu>();
         public NTDictionary<int, int> Inventory = new NTDictionary<int, int>();
         public int CurentStage;
-        public BattlePass battlePass;
+        
 
     }
     [Serializable]
