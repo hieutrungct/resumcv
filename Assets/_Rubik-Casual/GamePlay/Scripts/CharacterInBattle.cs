@@ -41,21 +41,19 @@ namespace RubikCasual.Battle
 
         void AddRewardWhenKillEnemy()
         {
-
+            Transform posItemReward = BattleController.instance.dameSlotTxtController.lsPosEnemySlot.Find(f => f.name == this.transform.parent.parent.name).lsPosCharacterSlot.Find(f => f.name == this.transform.parent.name).transform; ;
+            ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, posItemReward);
+            ItemDropClone.SetActive(false);
+            SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
             if (UnityEngine.Random.Range(0, 4) != 0)
             {
-                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.transform.parent);
-                ItemDropClone.SetActive(false);
-                SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
                 DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == NameItem.Coins);
                 ItemDrop.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
                 ItemDrop.valueCoins = 1;
             }
             else
             {
-                ItemDropClone = Instantiate(UIGamePlay.instance.ItemDrop, this.transform.parent);
-                ItemDropClone.SetActive(false);
-                SlotInventory ItemDrop = ItemDropClone.GetComponent<SlotInventory>();
+
                 DailyItem.infoItem infoItem = DataController.instance.itemData.InfoItems.FirstOrDefault(f => f.name == NameItem.Gems);
                 ItemDrop.Icon.GetComponent<Image>().sprite = infoItem.imageItem;
                 ItemDrop.ValueGems = 1;

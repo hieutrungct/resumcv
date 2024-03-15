@@ -54,7 +54,7 @@ namespace RubikCasual.Battle.UI
                 verticalViewLeft.SetSliderBar(lsHeroState);
                 verticalViewLeft.SetShowInfo(lsHeroState);
                 verticalViewLeft.ShowFocus(lsHeroState);
-                
+
             }
 
         }
@@ -88,6 +88,7 @@ namespace RubikCasual.Battle.UI
                     popupResultWin.gameObject.SetActive(true);
 
                 }
+                DataController.instance.CaculateLevelUp();
             }
             else
             {

@@ -19,14 +19,26 @@ namespace RubikCasual.CreateSkill.Panel
         void Awake()
         {
             instance = this;
-
+            StartCoroutine(Load());
         }
         void Start()
         {
-            StartCoroutine(Load());
+
 
         }
+        public void SetValue(CharacterInBattle characterInBattle)
+        {
+            int index = 0;
+            index = Data.DataController.instance.characterAssets.GetIndexWaifu(characterInBattle.waifuIdentify.ID, characterInBattle.waifuIdentify.SkinCheck);
+            Data.Waifu.WaifuSkill waifuSkill = Data.DataController.instance.characterAssets.GetSkillWaifuSOByIndex(index);
 
+            inputFieldDame.text = waifuSkill.percentDameSkill.ToString();
+            inputFieldRow.text = waifuSkill.Row.ToString();
+            inputFieldColumn.text = waifuSkill.Column.ToString();
+            inputFieldNumberTurn.text = waifuSkill.NumberTurn.ToString();
+            inputFieldDurationAtack.text = waifuSkill.DurationAttacked.ToString();
+            inputFieldDurationWave.text = waifuSkill.DurationWave.ToString();
+        }
 
 
         IEnumerator Load()
@@ -69,6 +81,7 @@ namespace RubikCasual.CreateSkill.Panel
                 }
 
             });
+            yield return new WaitForSeconds(0.5f);
         }
 
     }

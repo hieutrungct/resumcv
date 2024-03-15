@@ -79,6 +79,7 @@ namespace RubikCasual.CreateSkill
             {
                 CharacterInBattle characterTest = transCharacter.gameObject.AddComponent<CharacterInBattle>();
                 characterTest.infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == int.Parse(indexId));
+
                 characterTest.Atk = (int)(characterTest.infoWaifuAsset.ATK * attribute);
                 characterTest.Skill = (int)(characterTest.infoWaifuAsset.Skill * attribute);
             }
@@ -88,8 +89,15 @@ namespace RubikCasual.CreateSkill
                 characterTest.infoWaifuAsset = dataController.characterAssets.WaifuAssets.infoWaifuAssets.lsInfoWaifuAssets.Find(f => f.ID == int.Parse(indexId));
                 characterTest.Atk = (int)(characterTest.infoWaifuAsset.ATK * attribute);
                 characterTest.Skill = (int)(characterTest.infoWaifuAsset.Skill * attribute);
+
+                characterTest.waifuIdentify.ID = int.Parse(indexId);
+                characterTest.waifuIdentify.SkinCheck = isSkin;
             }
             InfoWaifuPanel.instance.SetInfoPanel(transCharacter.gameObject.GetComponent<CharacterInBattle>());
+            if (isLoadMap)
+            {
+                InfoPanel.instance.SetValue(transCharacter.gameObject.GetComponent<CharacterInBattle>());
+            }
         }
 
         public void BtnUseSkill()
@@ -164,7 +172,7 @@ namespace RubikCasual.CreateSkill
                                 minColumn = slotCharacter - (j + 1);
                                 column = column + slotCharacter - (j + 1);
                                 break;
-                            } 
+                            }
 
                         }
                     }

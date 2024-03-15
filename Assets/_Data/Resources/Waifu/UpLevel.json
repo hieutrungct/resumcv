@@ -1,0 +1,402 @@
+[
+ {
+  "Level": 1,
+  "FinalEXP": 10
+ },
+ {
+  "Level": 2,
+  "FinalEXP": 20
+ },
+ {
+  "Level": 3,
+  "FinalEXP": 30
+ },
+ {
+  "Level": 4,
+  "FinalEXP": 40
+ },
+ {
+  "Level": 5,
+  "FinalEXP": 70
+ },
+ {
+  "Level": 6,
+  "FinalEXP": 100
+ },
+ {
+  "Level": 7,
+  "FinalEXP": 140
+ },
+ {
+  "Level": 8,
+  "FinalEXP": 190
+ },
+ {
+  "Level": 9,
+  "FinalEXP": 250
+ },
+ {
+  "Level": 10,
+  "FinalEXP": 310
+ },
+ {
+  "Level": 11,
+  "FinalEXP": 390
+ },
+ {
+  "Level": 12,
+  "FinalEXP": 470
+ },
+ {
+  "Level": 13,
+  "FinalEXP": 570
+ },
+ {
+  "Level": 14,
+  "FinalEXP": 670
+ },
+ {
+  "Level": 15,
+  "FinalEXP": 790
+ },
+ {
+  "Level": 16,
+  "FinalEXP": 910
+ },
+ {
+  "Level": 17,
+  "FinalEXP": 1100
+ },
+ {
+  "Level": 18,
+  "FinalEXP": 1200
+ },
+ {
+  "Level": 19,
+  "FinalEXP": 1400
+ },
+ {
+  "Level": 20,
+  "FinalEXP": 1600
+ },
+ {
+  "Level": 21,
+  "FinalEXP": 1700
+ },
+ {
+  "Level": 22,
+  "FinalEXP": 1900
+ },
+ {
+  "Level": 23,
+  "FinalEXP": 2100
+ },
+ {
+  "Level": 24,
+  "FinalEXP": 2400
+ },
+ {
+  "Level": 25,
+  "FinalEXP": 2600
+ },
+ {
+  "Level": 26,
+  "FinalEXP": 2800
+ },
+ {
+  "Level": 27,
+  "FinalEXP": 3100
+ },
+ {
+  "Level": 28,
+  "FinalEXP": 3300
+ },
+ {
+  "Level": 29,
+  "FinalEXP": 3600
+ },
+ {
+  "Level": 30,
+  "FinalEXP": 3900
+ },
+ {
+  "Level": 31,
+  "FinalEXP": 4200
+ },
+ {
+  "Level": 32,
+  "FinalEXP": 4500
+ },
+ {
+  "Level": 33,
+  "FinalEXP": 4800
+ },
+ {
+  "Level": 34,
+  "FinalEXP": 5100
+ },
+ {
+  "Level": 35,
+  "FinalEXP": 5500
+ },
+ {
+  "Level": 36,
+  "FinalEXP": 5800
+ },
+ {
+  "Level": 37,
+  "FinalEXP": 6200
+ },
+ {
+  "Level": 38,
+  "FinalEXP": 6600
+ },
+ {
+  "Level": 39,
+  "FinalEXP": 6900
+ },
+ {
+  "Level": 40,
+  "FinalEXP": 7300
+ },
+ {
+  "Level": 41,
+  "FinalEXP": 7800
+ },
+ {
+  "Level": 42,
+  "FinalEXP": 8200
+ },
+ {
+  "Level": 43,
+  "FinalEXP": 8600
+ },
+ {
+  "Level": 44,
+  "FinalEXP": 9100
+ },
+ {
+  "Level": 45,
+  "FinalEXP": 9600
+ },
+ {
+  "Level": 46,
+  "FinalEXP": 10000
+ },
+ {
+  "Level": 47,
+  "FinalEXP": 10500
+ },
+ {
+  "Level": 48,
+  "FinalEXP": 11000
+ },
+ {
+  "Level": 49,
+  "FinalEXP": 11500
+ },
+ {
+  "Level": 50,
+  "FinalEXP": 12100
+ },
+ {
+  "Level": 51,
+  "FinalEXP": 12600
+ },
+ {
+  "Level": 52,
+  "FinalEXP": 13200
+ },
+ {
+  "Level": 53,
+  "FinalEXP": 13700
+ },
+ {
+  "Level": 54,
+  "FinalEXP": 14300
+ },
+ {
+  "Level": 55,
+  "FinalEXP": 14900
+ },
+ {
+  "Level": 56,
+  "FinalEXP": 15500
+ },
+ {
+  "Level": 57,
+  "FinalEXP": 16200
+ },
+ {
+  "Level": 58,
+  "FinalEXP": 16800
+ },
+ {
+  "Level": 59,
+  "FinalEXP": 17400
+ },
+ {
+  "Level": 60,
+  "FinalEXP": 18100
+ },
+ {
+  "Level": 61,
+  "FinalEXP": 18800
+ },
+ {
+  "Level": 62,
+  "FinalEXP": 19500
+ },
+ {
+  "Level": 63,
+  "FinalEXP": 20200
+ },
+ {
+  "Level": 64,
+  "FinalEXP": 20900
+ },
+ {
+  "Level": 65,
+  "FinalEXP": 21600
+ },
+ {
+  "Level": 66,
+  "FinalEXP": 22400
+ },
+ {
+  "Level": 67,
+  "FinalEXP": 23100
+ },
+ {
+  "Level": 68,
+  "FinalEXP": 23900
+ },
+ {
+  "Level": 69,
+  "FinalEXP": 24700
+ },
+ {
+  "Level": 70,
+  "FinalEXP": 25500
+ },
+ {
+  "Level": 71,
+  "FinalEXP": 26300
+ },
+ {
+  "Level": 72,
+  "FinalEXP": 27200
+ },
+ {
+  "Level": 73,
+  "FinalEXP": 28000
+ },
+ {
+  "Level": 74,
+  "FinalEXP": 28900
+ },
+ {
+  "Level": 75,
+  "FinalEXP": 29700
+ },
+ {
+  "Level": 76,
+  "FinalEXP": 30600
+ },
+ {
+  "Level": 77,
+  "FinalEXP": 31500
+ },
+ {
+  "Level": 78,
+  "FinalEXP": 32400
+ },
+ {
+  "Level": 79,
+  "FinalEXP": 33400
+ },
+ {
+  "Level": 80,
+  "FinalEXP": 34300
+ },
+ {
+  "Level": 81,
+  "FinalEXP": 35300
+ },
+ {
+  "Level": 82,
+  "FinalEXP": 36200
+ },
+ {
+  "Level": 83,
+  "FinalEXP": 37200
+ },
+ {
+  "Level": 84,
+  "FinalEXP": 38200
+ },
+ {
+  "Level": 85,
+  "FinalEXP": 39200
+ },
+ {
+  "Level": 86,
+  "FinalEXP": 40300
+ },
+ {
+  "Level": 87,
+  "FinalEXP": 41300
+ },
+ {
+  "Level": 88,
+  "FinalEXP": 42400
+ },
+ {
+  "Level": 89,
+  "FinalEXP": 43500
+ },
+ {
+  "Level": 90,
+  "FinalEXP": 44500
+ },
+ {
+  "Level": 91,
+  "FinalEXP": 45700
+ },
+ {
+  "Level": 92,
+  "FinalEXP": 46800
+ },
+ {
+  "Level": 93,
+  "FinalEXP": 47900
+ },
+ {
+  "Level": 94,
+  "FinalEXP": 49100
+ },
+ {
+  "Level": 95,
+  "FinalEXP": 51000
+ },
+ {
+  "Level": 96,
+  "FinalEXP": 52000
+ },
+ {
+  "Level": 97,
+  "FinalEXP": 53000
+ },
+ {
+  "Level": 98,
+  "FinalEXP": 54000
+ },
+ {
+  "Level": 99,
+  "FinalEXP": 55000
+ },
+ {
+  "Level": 100,
+  "FinalEXP": 60000
+ }
+]

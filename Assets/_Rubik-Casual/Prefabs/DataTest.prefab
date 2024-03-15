@@ -413,6 +413,12 @@ MonoBehaviour:
         SkinCheck: 0
       - ID: 0
         SkinCheck: 0
+      itemPass:
+        LevelPass: 0
+        ExpLevelPass: 0
+        GoldPass: 0
+        itemFree: []
+        itemGold: []
     lsPlayerOwnsWaifu: []
     Inventory:
       Keys: 
@@ -443,9 +449,17 @@ MonoBehaviour:
       SkinCheck: 0
     - ID: 0
       SkinCheck: 0
+    itemPass:
+      LevelPass: 0
+      ExpLevelPass: 0
+      GoldPass: 0
+      itemFree: []
+      itemGold: []
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
+  lsExpWithLevel: []
   characterAssets: {fileID: 2999671105770049558}
   AssetPlayerData: {fileID: 4900000, guid: d882f6c350f26ef4bbe7379318c4960f, type: 3}
+  AssetUpLevel: {fileID: 4900000, guid: b68a6f99ba293494bafbb32d5a810205, type: 3}
   assetLoader: {fileID: 247475729790594326}
   stageAssets: {fileID: 2552376161743813942}
 --- !u!1 &2999671104778111196

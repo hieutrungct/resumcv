@@ -113,10 +113,10 @@ namespace RubikCasual.Battle
                 case GameState.START:
                     gameState = GameState.BATTLE;
                     break;
-                    
+
                 case GameState.WAIT_BATTLE:
                     gamePlayUI.txtTime.text = "Turn: " + CountState.ToString();
-                    SetAgain();
+                    SetIsAttackAgain();
                     break;
 
                 case GameState.BATTLE:
@@ -131,7 +131,7 @@ namespace RubikCasual.Battle
                     break;
             }
         }
-        void SetAgain()
+        void SetIsAttackAgain()
         {
             if (lsSlotGbHero.Count != 0)
             {
@@ -269,16 +269,20 @@ namespace RubikCasual.Battle
                     CharacterHero.posCharacter = posSlot.gameObject.transform;
                     CharacterHero.oriIndex = index;
                     heroInBattle.skeletonCharacterAnimation = Hero;
+                    
                     heroInBattle.infoWaifuAsset = dataController.characterAssets.GetInfoWaifuAsset(lsHeroInArea[index].idCharacter);
 
                     heroInBattle.cooldownAttackBar.value = 1f;
                     heroInBattle.cooldownSkillBar.value = 0f;
                     heroInBattle.healthBar.value = 1f;
                     heroInBattle.Rage = 0;
-                    heroInBattle.Hp = heroInBattle.infoWaifuAsset.HP;
-                    heroInBattle.HpNow = heroInBattle.infoWaifuAsset.HP;
-                    heroInBattle.Atk = heroInBattle.infoWaifuAsset.ATK;
-                    heroInBattle.Def = heroInBattle.infoWaifuAsset.DEF;
+
+                    Data.Player.PlayerOwnsWaifu playerOwnsWaifu = dataController.GetPlayerOwnsWaifuByID(lsHeroInArea[index].idCharacter);
+
+                    heroInBattle.Hp = playerOwnsWaifu.HP;
+                    heroInBattle.HpNow = playerOwnsWaifu.HP;
+                    heroInBattle.Atk = playerOwnsWaifu.ATK;
+                    heroInBattle.Def = playerOwnsWaifu.DEF;
                     heroInBattle.Skill = (int)(dataController.characterAssets.GetSkillWaifuSOByIndex(dataController.characterAssets.GetIndexWaifu(lsHeroInArea[index].idCharacter, lsHeroInArea[index].isSkin)).percentDameSkill * heroInBattle.Atk);
 
                     lsSlotGbHero.Add(heroInBattle.gameObject);
@@ -567,27 +571,7 @@ namespace RubikCasual.Battle
                 }
             }
         }
-        void UpdateHpBarEnemyForState()
-        {
-            // Đặt thanh máu và thanh Cooldown Skill nếu là boss của quái vào Canvas Dame 
-            for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
-            {
-                int index = i;
-                if (lsSlotGbEnemy[index] != null && lsSlotGbEnemy[index].GetComponent<CharacterInBattle>() != null)
-                {
-                    CharacterInBattle enemyInBattle = lsSlotGbEnemy[index].GetComponent<CharacterInBattle>();
-                    if (!enemyInBattle.cooldownSkillBar.gameObject.activeSelf)
-                    {
-                        enemyInBattle.healthBar.gameObject.transform.SetParent(dameSlotTxtController.transform);
-                    }
-                    else
-                    {
-                        enemyInBattle.cooldownSkillBar.gameObject.transform.SetParent(dameSlotTxtController.transform);
-                        enemyInBattle.healthBar.gameObject.transform.SetParent(enemyInBattle.cooldownSkillBar.transform);
-                    }
-                }
-            }
-        }
+
         void CheckEndBattle()
         {
 
@@ -819,6 +803,7 @@ namespace RubikCasual.Battle
             }
             // phần thưởng sau khi kết thúc trận
             RewardInGame.RewardInGamePanel.instance.AddRewardTopBarGroup(2f);
+
         }
 
     }

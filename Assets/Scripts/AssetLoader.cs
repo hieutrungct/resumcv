@@ -197,7 +197,7 @@ namespace Rubik_Casual
             {
                 Sprite sprite = imageWaifu[i];
                 string newName = GetNewName(sprite.name);
-                
+
                 RenameImage(sprite, newName);
                 // Debug.Log("Đổi tên image: " + sprite.name + " thành " + newName);
             }
@@ -208,8 +208,7 @@ namespace Rubik_Casual
             // Debug.Log(nameParts[0]);
             if (nameParts.Length >= 3 && currentName != (nameParts[0] + "_" + nameParts[1]))
             {
-                Debug.Log("a");
-                if(nameParts[1] == "A")
+                if (nameParts[1] == "A")
                 {
                     string fixedNumber = nameParts[1] + "_" + nameParts[2].Replace("0", "");
                     return nameParts[0] + "_" + fixedNumber;
@@ -219,14 +218,14 @@ namespace Rubik_Casual
                     string fixedNumber = nameParts[1].Replace("0", "");
                     return nameParts[0] + "_" + fixedNumber;
                 }
-                
-                
-                
+
+
+
             }
             else
             {
                 return currentName;
-                
+
             }
         }
 

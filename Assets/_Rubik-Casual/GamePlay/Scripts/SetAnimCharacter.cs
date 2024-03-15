@@ -115,79 +115,7 @@ namespace RubikCasual.Battle
             }
 
         }
-        public void CharacterUseSkill(CharacterInBattle CharacterAttack, MapBattleController dameSlotTxtController, List<GameObject> lsSlotGbEnemy, float durationsTxtDame)
-        {
-            // CharacterAttack.skeletonCharacterAnimation.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attack;
-            CharacterAttack.skeletonCharacterAnimation.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
-            CharacterAttack.isUseSkill = true;
-            CharacterAttack.skeletonCharacterAnimation.AnimationState.Complete += delegate
-            {
-                CharacterAttack.isUseSkill = false;
-                if (CharacterAttack.skeletonCharacterAnimation.AnimationName != NameAnim.Anim_Character_Idle)
-                {
-                    CharacterAttack.skeletonCharacterAnimation.AnimationName = NameAnim.Anim_Character_Idle;
-                }
-            };
-            int numberSlotBoss = 2;
-            if (lsSlotGbEnemy[numberSlotBoss] != null && lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>() != null && lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>().isBoss)
-            {
-                CharacterInBattle EnemyBossInBattle = lsSlotGbEnemy[numberSlotBoss].GetComponent<CharacterInBattle>();
-                SkeletonAnimation AnimEnemy = EnemyBossInBattle.skeletonCharacterAnimation;
-                // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
 
-                AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
-                AnimEnemy.AnimationState.Complete += delegate
-                {
-                    // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                    if (AnimEnemy.AnimationName != NameAnim.Anim_Character_Idle)
-                    {
-                        AnimEnemy.AnimationName = NameAnim.Anim_Character_Idle;
-                    }
-                };
-
-            }
-            else
-            {
-                int count = 0;
-                for (int i = 0; i < 6; i++)
-                {
-                    for (int j = 0; j < dameSlotTxtController.lsPosEnemySlot[0].lsPosCharacterSlot.Count; j++)
-                    {
-                        if ((count - CharacterAttack.indexOfSlot) % 5 == 0)
-                        {
-                            // UnityEngine.Debug.Log(count);
-                            if (lsSlotGbEnemy[count] != null && lsSlotGbEnemy[count].GetComponent<CharacterInBattle>() != null && !lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().isBoss)
-                            {
-                                CharacterInBattle EnemyBossInBattle = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>();
-                                SkeletonAnimation AnimEnemy = lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().skeletonCharacterAnimation;
-
-                                // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = NameLayer.Layer_Attacked;
-                                AnimEnemy.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Attacked, false);
-                                AnimEnemy.AnimationState.Complete += delegate
-                                {
-                                    // AnimEnemy.GetComponent<MeshRenderer>().sortingLayerName = Layer_Character;
-                                    if (AnimEnemy.AnimationName != NameAnim.Anim_Character_Idle)
-                                    {
-                                        AnimEnemy.AnimationName = NameAnim.Anim_Character_Idle;
-                                    }
-                                };
-
-
-                                float OldHp = EnemyBossInBattle.HpNow;
-                                Calculator.CalculateHealth(CharacterAttack, EnemyBossInBattle, true);
-
-                                Transform PosTxt = EnemyBossInBattle.healthBar.transform;
-                                int lossHp = (int)(OldHp - lsSlotGbEnemy[count].GetComponent<CharacterInBattle>().HpNow);
-                                FuntionTimeDelay.SpawnTxtDame(UIGamePlay.instance.TxtDame, PosTxt, lossHp, durationsTxtDame);
-                                CheckHpEnemy(lsSlotGbEnemy[count]);
-                            }
-                        }
-
-                        count++;
-                    }
-                }
-            }
-        }
         public void HeroUseSkillTest(CharacterInBattle CharacterAttack)
         {
             UseSkill(CharacterAttack);
@@ -195,13 +123,14 @@ namespace RubikCasual.Battle
         void UseSkill(CharacterInBattle characterInBattle)
         {
             SkeletonAnimation characterClone = characterInBattle.skeletonCharacterAnimation;
-            characterClone.AnimationName = NameAnim.Anim_Character_Skill;
             characterClone.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Skill, false);
+            characterInBattle.isUseSkill = true;
             characterClone.AnimationState.Complete += delegate
             {
+                characterInBattle.isUseSkill = false;
                 if (characterClone.AnimationName != NameAnim.Anim_Character_Idle)
                 {
-                    characterClone.AnimationName = NameAnim.Anim_Character_Idle;
+                    characterClone.AnimationState.SetAnimation(0, NameAnim.Anim_Character_Idle, true);
                 }
             };
 

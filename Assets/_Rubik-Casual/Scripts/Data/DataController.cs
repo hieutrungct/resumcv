@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NTPackage;
 using Rubik_Casual;
 using RubikCasual.Character_ACC;
 using RubikCasual.DailyItem;
@@ -18,19 +19,62 @@ namespace RubikCasual.Data
         public ListOwnsWaifu listOwnsWaifu;
         public UserData userData;
         public ItemData itemData;
+        public List<ExpWithLevel> lsExpWithLevel = new List<ExpWithLevel>();
+        // Dictionary
         public CharacterAssets characterAssets;
-        public TextAsset AssetPlayerData;
+        public TextAsset AssetPlayerData, AssetUpLevel;
         public AssetLoader assetLoader;
         public StageAssets stageAssets;
+        NTDictionary<int, int> dicExpWithLevel = new NTDictionary<int, int>();
         public static DataController instance;
         void Awake()
         {
-            instance = this;
-
+            if (DataController.instance != null)
+            {
+                Debug.LogWarning("Only 1 instance allow");
+                return;
+            }
+            DataController.instance = this;
+            lsExpWithLevel = ConfigLvl.LoadAsset(AssetUpLevel);
+            SetDicExpWithLevel();
         }
-        public void initData()
+
+
+        void LoadAttribute(PlayerOwnsWaifu playerOwnsWaifu)
         {
 
+            InfoWaifuAsset infoWaifuAsset = characterAssets.GetInfoWaifuAsset(playerOwnsWaifu.ID);
+            int originAttributeAtk = infoWaifuAsset.ATK;
+            int originAttributeDef = infoWaifuAsset.DEF;
+            int originAttributeHp = infoWaifuAsset.HP;
+
+            // Debug.Log(playerOwnsWaifu.ID);
+            // Debug.Log(originAttributeAtk);
+            // Debug.Log(originAttributeDef);
+            // Debug.Log(originAttributeHp);
+
+            int nowAttributeAtk = ConfigLvl.GetAttributeStatByLevel(originAttributeAtk, playerOwnsWaifu.ATK, 1, playerOwnsWaifu.level);
+            int nowAttributeDef = ConfigLvl.GetAttributeStatByLevel(originAttributeDef, playerOwnsWaifu.DEF, 1, playerOwnsWaifu.level);
+            int nowAttributeHp = ConfigLvl.GetAttributeStatByLevel(originAttributeHp, playerOwnsWaifu.HP, 5, playerOwnsWaifu.level);
+
+            if (nowAttributeAtk != originAttributeAtk)
+            {
+                playerOwnsWaifu.ATK = nowAttributeAtk;
+            }
+            if (nowAttributeDef != originAttributeDef)
+            {
+                playerOwnsWaifu.DEF = nowAttributeDef;
+            }
+            if (nowAttributeHp != originAttributeHp)
+            {
+                playerOwnsWaifu.HP = nowAttributeHp;
+            }
+
+
+        }
+
+        public void initData()
+        {
             DontDestroyOnLoad(this);
             LoadData();
         }
@@ -49,7 +93,38 @@ namespace RubikCasual.Data
 
             LoadPlayerData();
         }
+        void SetDicExpWithLevel()
+        {
+            foreach (ExpWithLevel expWithLevel in lsExpWithLevel)
+            {
+                dicExpWithLevel.Add(expWithLevel.Level, expWithLevel.FinalEXP);
+            }
+        }
+        bool CheckLevelUp(int levelNow, int expNow)
+        {
+            if (dicExpWithLevel.Get(levelNow) <= expNow)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        [Button]
+        public void CaculateLevelUp()
+        {
+            foreach (PlayerOwnsWaifu playerOwnsWaifu in listOwnsWaifu.lsOwnsWaifu)
+            {
+                if (CheckLevelUp(playerOwnsWaifu.level, playerOwnsWaifu.Exp))
+                {
+                    playerOwnsWaifu.Exp = playerOwnsWaifu.Exp - dicExpWithLevel.Get(playerOwnsWaifu.level);
+                    playerOwnsWaifu.level++;
 
+                    LoadAttribute(playerOwnsWaifu);
+                }
+            }
+        }
 
         public InfoWaifuAsset GetInfoWaifuAssetsByIndex(int ID)
         {
@@ -82,6 +157,7 @@ namespace RubikCasual.Data
         {
             characterAssets = CharacterAssets.instance;
             stageAssets = StageAssets.instance;
+
             //LoadPlayerDataToJson();
         }
         [Button]
