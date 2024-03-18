@@ -21,19 +21,22 @@ namespace RubikCasual.ItemPassSlots
         {
             itemImg.sprite = AssetLoader.instance.ItemPass[(int)item.itemName];
             txtItem.text = item.Count.ToString();
+            var btn = GetComponent<Button>();
             if(DataController.instance.playerData.userData.battlePass.LevelPass >= id)
             {
                 itemClaim.SetActive(true);
-                var btns = GetComponent<Button>();
-                if (btns != null)
+                
+                if (btn != null)
                 {
-                    btns.onClick.AddListener(() =>
+                    btn.onClick.AddListener(() =>
                     {
                         //SetUpItemFree(item);
                         if(Checked != true)
                         {
                             ReceiveRewardGold(item);
+                            btn.interactable = false;
                             Checked = true;
+                            
                         }
                         else
                         {
@@ -48,6 +51,7 @@ namespace RubikCasual.ItemPassSlots
             else
             {
                 itemClaim.SetActive(false);
+                btn.interactable = false;
             }
             
             if(DataController.instance.playerData.userData.item_Receive_Count_Gold.Contains(id))
@@ -55,6 +59,7 @@ namespace RubikCasual.ItemPassSlots
                 itemChecked.SetActive(true);
                 itemClaim.SetActive(false);
                 Checked = true;
+                btn.interactable = false;
                 Debug.Log("true: " + id);
             }
             else
@@ -68,10 +73,11 @@ namespace RubikCasual.ItemPassSlots
         {
             itemImg.sprite = AssetLoader.instance.ItemPass[(int)item.itemName];
             txtItem.text = item.Count.ToString();
+            var btns = GetComponent<Button>();
             if(DataController.instance.playerData.userData.battlePass.LevelPass >= id)
             {
                 itemClaim.SetActive(true);
-                var btns = GetComponent<Button>();
+                
                 if (btns != null)
                 {
                     btns.onClick.AddListener(() =>
@@ -81,13 +87,12 @@ namespace RubikCasual.ItemPassSlots
                         {
                             ReceiveRewardFree(item);
                             Checked = true;
+                            btns.interactable = false;
                         }
                         else
                         {
                             Debug.Log("Đã nhận vật phẩm rồi: " + id);
                         }
-                        
-                        
                     });
                 }
                 
@@ -95,6 +100,7 @@ namespace RubikCasual.ItemPassSlots
             else
             {
                 itemClaim.SetActive(false);
+                btns.interactable = false;
             }
             
             if(DataController.instance.playerData.userData.item_Receive_Count_free.Contains(id))
@@ -102,6 +108,7 @@ namespace RubikCasual.ItemPassSlots
                 itemChecked.SetActive(true);
                 itemClaim.SetActive(false);
                 Checked = true;
+                btns.interactable = false;
                 Debug.Log("true: " + id);
             }
             else
@@ -141,22 +148,22 @@ namespace RubikCasual.ItemPassSlots
             switch (item.itemName)
             {
                 case ItemEnum.Gold:
-                    DataController.instance.playerData.userData.Gold += item.Count;
+                    HUDController.instanse.updateTopbarItem(item.Count,0,0,0,0);
                     break;
                 case ItemEnum.Gem:
-                    DataController.instance.playerData.userData.Gem += item.Count;
+                    HUDController.instanse.updateTopbarItem(0,0,item.Count,0,0);
                     break;
                 case ItemEnum.Energy_20:
-                    DataController.instance.playerData.userData.Energy += item.Count;
+                    HUDController.instanse.updateTopbarItem(0,item.Count,0,0,0);
                     break;
                 case ItemEnum.Energy_50:
-                    DataController.instance.playerData.userData.Energy += item.Count;
+                    HUDController.instanse.updateTopbarItem(0,item.Count,0,0,0);
                     break;
                 case ItemEnum.Ticket_Normal:
-                    DataController.instance.playerData.userData.Ticket += item.Count;
+                    HUDController.instanse.updateTopbarItem(0,0,0,item.Count,0);
                     break;
                 case ItemEnum.Ticket_Gold:
-                    DataController.instance.playerData.userData.Ticket += item.Count;
+                    HUDController.instanse.updateTopbarItem(0,0,0,0,item.Count);
                     break;
                 case ItemEnum.SmallExpPotion:
                     
