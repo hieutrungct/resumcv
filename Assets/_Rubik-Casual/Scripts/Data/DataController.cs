@@ -294,13 +294,13 @@ namespace RubikCasual.Data
         //     // System.IO.File.WriteAllText(Application.dataPath + $"/_Data/Resources/{nameFile}.json", json);
         //     PlayerPrefs.SetString(NameKey.Data,json);
         // }
-        void SaveUserDataToJson()
+        public void SaveUserDataToJson()
         {
             // Chuyển đổi ScriptableObject thành JSON
             string json = JsonUtility.ToJson(userData);
             PlayerPrefs.SetString(NameKey.USER_DATA_KEY, json);
         }
-        void SavePlayerOwnsWaifuDataToJson()
+        public void SavePlayerOwnsWaifuDataToJson()
         {
             // Chuyển đổi ScriptableObject thành JSON
             string json = JsonUtility.ToJson(listOwnsWaifu);

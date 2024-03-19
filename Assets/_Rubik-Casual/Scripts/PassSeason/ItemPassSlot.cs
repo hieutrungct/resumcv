@@ -84,34 +84,13 @@ namespace RubikCasual.ItemPassSlots
 
         }
         
-        public void ReceiveRewardFree(ItemPass item)
-        {
-            
-            if (!DataController.instance.playerData.userData.item_Receive_Count_free.Contains(id))
-            {
-                DataController.instance.playerData.userData.item_Receive_Count_free.Add(id);
-            }
-            itemClaim.SetActive(false);
-            itemChecked.SetActive(true);
-            AddItem(item);
-
-        }
-        public void ReceiveRewardGold(ItemPass item)
-        {
-            
-            if (!DataController.instance.playerData.userData.item_Receive_Count_Gold.Contains(id))
-            {
-                DataController.instance.playerData.userData.item_Receive_Count_Gold.Add(id);
-            }
-            itemClaim.SetActive(false);
-            itemChecked.SetActive(true);
-            AddItem(item);
-        }
+        
         public void AddItem(ItemPass item)
         {
             switch (item.itemName)
             {
                 case ItemEnum.Gold:
+                    HUDController.instanse.Increase(itemImg.transform.position,item.Count,item);
                     HUDController.instanse.updateTopbarItem(item.Count,0,0,0,0);
                     break;
                 case ItemEnum.Gem:
