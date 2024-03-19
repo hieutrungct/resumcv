@@ -19,57 +19,14 @@ namespace RubikCasual.ItemPassSlots
 
         public void SetUpItemGold(ItemPass item)
         {
-            itemImg.sprite = AssetLoader.instance.ItemPass[(int)item.itemName];
-            txtItem.text = item.Count.ToString();
-            var btn = GetComponent<Button>();
-            if(DataController.instance.playerData.userData.battlePass.LevelPass >= id)
-            {
-                itemClaim.SetActive(true);
-                
-                if (btn != null)
-                {
-                    btn.onClick.AddListener(() =>
-                    {
-                        //SetUpItemFree(item);
-                        if(Checked != true)
-                        {
-                            ReceiveRewardGold(item);
-                            btn.interactable = false;
-                            Checked = true;
-                            
-                        }
-                        else
-                        {
-                            Debug.Log("Đã nhận vật phẩm rồi: " + id);
-                        }
-                        
-                        
-                    });
-                }
-                
-            }
-            else
-            {
-                itemClaim.SetActive(false);
-                btn.interactable = false;
-            }
-            
-            if(DataController.instance.playerData.userData.item_Receive_Count_Gold.Contains(id))
-            {
-                itemChecked.SetActive(true);
-                itemClaim.SetActive(false);
-                Checked = true;
-                btn.interactable = false;
-                Debug.Log("true: " + id);
-            }
-            else
-            {
-                itemChecked.SetActive(false);
-                Debug.Log("false: " + id);
-
-            }
+            SetUpItem(item,DataController.instance.playerData.userData.item_Receive_Count_Gold);
         }
         public void SetUpItemFree(ItemPass item)
+        {
+            SetUpItem(item,DataController.instance.playerData.userData.item_Receive_Count_free);
+            
+        }
+        public void SetUpItem(ItemPass item, List<int> item_Receive_Count)
         {
             itemImg.sprite = AssetLoader.instance.ItemPass[(int)item.itemName];
             txtItem.text = item.Count.ToString();
@@ -82,10 +39,17 @@ namespace RubikCasual.ItemPassSlots
                 {
                     btns.onClick.AddListener(() =>
                     {
-                        //SetUpItemFree(item);
                         if(Checked != true)
                         {
-                            ReceiveRewardFree(item);
+                            if (!item_Receive_Count.Contains(id))
+                            {
+                                item_Receive_Count.Add(id);
+                            }
+                            itemClaim.SetActive(false);
+                            itemChecked.SetActive(true);
+                            AddItem(item);
+                            
+
                             Checked = true;
                             btns.interactable = false;
                         }
@@ -103,7 +67,7 @@ namespace RubikCasual.ItemPassSlots
                 btns.interactable = false;
             }
             
-            if(DataController.instance.playerData.userData.item_Receive_Count_free.Contains(id))
+            if(item_Receive_Count.Contains(id))
             {
                 itemChecked.SetActive(true);
                 itemClaim.SetActive(false);
@@ -118,8 +82,8 @@ namespace RubikCasual.ItemPassSlots
 
             }
 
-            
         }
+        
         public void ReceiveRewardFree(ItemPass item)
         {
             
