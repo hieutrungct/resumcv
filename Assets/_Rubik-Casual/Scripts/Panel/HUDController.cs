@@ -55,26 +55,32 @@ namespace Rubik_Casual
         }
         public async void Increase(Vector3 spawnPos, int quantity_Received, ItemPass item)
         {
-            // GameObject gameObject;
-            // Transform transform;
-            // ParticleSystem particleSystem;
-            // switch (item.itemName)
-            // {
-            //     case ItemEnum.Gold:
-            //         gameObject = goldProp;
-            //         transform = goldIcon;
-            //         particleSystem = goldEffect;
-            //         break;
-            //     case ItemEnum.Gem:
-                    
-            //         break;
-            //     case ItemEnum.Energy_20:
-                    
-            //         break;
-            //     default:
-
-            //         break;
-            // }
+            GameObject gameObject;
+            Transform transformObj;
+            ParticleSystem particleSystem;
+            switch (item.itemName)
+            {
+                case ItemEnum.Gold:
+                    gameObject = goldProp;
+                    transformObj = goldIcon;
+                    particleSystem = goldEffect;
+                    break;
+                case ItemEnum.Gem:
+                    gameObject = gemProp;
+                    transformObj = gemIcon;
+                    particleSystem = gemEffect;
+                    break;
+                case ItemEnum.Energy_20:
+                    gameObject = energeProp;
+                    transformObj = energeIcon;
+                    particleSystem = energeEffect;
+                    break;
+                default:
+                    gameObject = goldProp;
+                    transformObj = goldIcon;
+                    particleSystem = goldEffect;
+                    break;
+            }
             int[] items = new int[5];
             int averange = quantity_Received / 5;
             for (int i = 0; i < 5; i++)
@@ -82,20 +88,21 @@ namespace Rubik_Casual
             items[4] = quantity_Received - averange * 4;
             for (int i = 0; i < 5; i++)
             {
-                GameObject Gameobj = Instantiate(goldProp, spawnPos + new Vector3(0, 0, -0.1f), Quaternion.identity);
+                GameObject Gameobj = Instantiate(gameObject, spawnPos + new Vector3(0, 0, -0.1f), Quaternion.identity);
                 Vector3 target = Gameobj.transform.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);//generate a random pos
                 int reward = items[i];
                 Tween.Position(Gameobj.transform, target, 0.5f + i * 0.06f, 0, Tween.EaseOutStrong);
-                Tween.Position(Gameobj.transform, goldIcon.position, 0.25f + i * 0.06f+0.3f, 0.5f + i * 0.06f, Tween.EaseInStrong, Tween.LoopType.None, null, () =>
+                Tween.Position(Gameobj.transform, transformObj.position, 0.25f + i * 0.06f+0.3f, 0.5f + i * 0.06f, Tween.EaseInStrong, Tween.LoopType.None, null, () =>
                 {
                     // UpdateCoin(reward);
+                    UpdateTopBar(item,reward);
                     Destroy(Gameobj);
                 });
             }
             float timeStamp = Time.time;
             while (Time.time - timeStamp < 1)
                 await System.Threading.Tasks.Task.Yield();
-            goldEffect.Play();
+            particleSystem.Play();
             //DataController.Instance.gameData.gold += totalGold;
             //DataController.Instance.SaveData();
         }
@@ -109,7 +116,7 @@ namespace Rubik_Casual
 /// <param name="gem"></param>
 /// <param name="ticket_N"></param>
 /// <param name="ticket_G"></param> 
-        public void updateTopbarItem(double coin, int enegy, double gem, int ticket_N, int ticket_G)
+        public void UpdateTopbarItem(double coin, int enegy, double gem, int ticket_N, int ticket_G)
         {
             DataController.instance.playerData.userData.Gold += coin;
             DataController.instance.playerData.userData.Gem += gem;
@@ -118,6 +125,44 @@ namespace Rubik_Casual
             DataController.instance.playerData.userData.Ticket += ticket_G;
             DataController.instance.SaveUserDataToJson();
             LoadStatusNumber();
+        }
+        public void UpdateTopBar(ItemPass item, int value)
+        {
+            switch (item.itemName)
+            {
+                case ItemEnum.Gold:
+                    UpdateTopbarItem(value,0,0,0,0);
+                    break;
+                case ItemEnum.Gem:
+                    UpdateTopbarItem(0,0,value,0,0);
+                    break;
+                case ItemEnum.Energy_20:
+                    UpdateTopbarItem(0,value,0,0,0);
+                    break;
+                case ItemEnum.Energy_50:
+                    UpdateTopbarItem(0,value,0,0,0);
+                    break;
+                case ItemEnum.Ticket_Normal:
+                    UpdateTopbarItem(0,0,0,value,0);
+                    break;
+                case ItemEnum.Ticket_Gold:
+                    UpdateTopbarItem(0,0,0,0,value);
+                    break;
+                case ItemEnum.SmallExpPotion:
+                    
+                    break;
+                case ItemEnum.MediumExpPotion:
+                    
+                    break;
+                case ItemEnum.LargeExpPotion:
+                    
+                    break;
+                case ItemEnum.UltraExpPotion:
+                    
+                    break;
+                default:
+                    break;
+            }
         }
 
         

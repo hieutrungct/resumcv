@@ -15539,8 +15539,11 @@ MonoBehaviour:
   - {fileID: 3738094984464289967}
   expPass: {fileID: 6316889174653609261}
   lvlPass: {fileID: 3453945828086820147}
-  itemPassTxt: {fileID: 4900000, guid: 2164319e547fcd14e9e9f75df8370f01, type: 3}
-  listItems:
+  itemPassFreeTxt: {fileID: 4900000, guid: eb0a935dfa3210640b0e79912b445121, type: 3}
+  itemPassGoldTxt: {fileID: 4900000, guid: 2164319e547fcd14e9e9f75df8370f01, type: 3}
+  listItemFree:
+    lsItem: []
+  listItemGold:
     lsItem: []
 --- !u!1 &5904343534201966736
 GameObject:
@@ -28261,11 +28264,11 @@ PrefabInstance:
     - target: {fileID: 8883287886818140829, guid: c6bd1890d1703004391d31d6ff353531, type: 3}
       propertyPath: itemClaim
       value: 
-      objectReference: {fileID: 3453945828158832044}
+      objectReference: {fileID: 1121808840983454338}
     - target: {fileID: 8883287886818140829, guid: c6bd1890d1703004391d31d6ff353531, type: 3}
       propertyPath: itemChecked
       value: 
-      objectReference: {fileID: 1121808840983454338}
+      objectReference: {fileID: 1121808841089587013}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6bd1890d1703004391d31d6ff353531, type: 3}
 --- !u!1 &1121808840983454338 stripped
@@ -28273,9 +28276,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1674719820433948053, guid: c6bd1890d1703004391d31d6ff353531, type: 3}
   m_PrefabInstance: {fileID: 1778002657801363223}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3453945828158832044 stripped
+--- !u!1 &1121808841089587013 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3981844601163621051, guid: c6bd1890d1703004391d31d6ff353531, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1674719820462606418, guid: c6bd1890d1703004391d31d6ff353531, type: 3}
   m_PrefabInstance: {fileID: 1778002657801363223}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7199985573101059466 stripped

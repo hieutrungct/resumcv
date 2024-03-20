@@ -33,8 +33,9 @@ namespace RubikCasual.RewardPass
         SmallExpPotion = 6,
         MediumExpPotion = 7,
         LargeExpPotion = 8,
-        UltraExpPotion = 9
-
+        UltraExpPotion = 9,
+        TreasureChestNormal = 10,
+        TreasureChestGold = 11
     }
 }
 

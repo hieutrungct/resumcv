@@ -12,21 +12,74 @@ namespace RubikCasual.ItemPassSlots
     {
         public int id;
         public Image itemImg;
-        public GameObject itemChecked, itemClaim;
+        public GameObject itemChecked, itemClaim, itemlock;
         public TextMeshProUGUI txtItem;
         // public Button btn;
         public bool Checked = false;
 
         public void SetUpItemGold(ItemPass item)
         {
-            SetUpItem(item,DataController.instance.playerData.userData.item_Receive_Count_Gold);
-        }
-        public void SetUpItemFree(ItemPass item)
-        {
-            SetUpItem(item,DataController.instance.playerData.userData.item_Receive_Count_free);
+            itemImg.sprite = AssetLoader.instance.ItemPass[(int)item.itemName];
+            txtItem.text = item.Count.ToString();
+            var btn = GetComponent<Button>();
+            if(DataController.instance.playerData.userData.battlePass.GoldPass == true)
+            {
+                itemlock.SetActive(false);
+                if(DataController.instance.playerData.userData.battlePass.LevelPass >= id)
+                {
+                    itemClaim.SetActive(true);
+                    
+                    if (btn != null)
+                    {
+                        btn.onClick.AddListener(() =>
+                        {
+                            //SetUpItemFree(item);
+                            if(Checked != true)
+                            {
+                                ReceiveRewardGold(item);
+                                btn.interactable = false;
+                                Checked = true;
+                                
+                            }
+                            else
+                            {
+                                Debug.Log("Đã nhận vật phẩm rồi: " + id);
+                            }
+                            
+                            
+                        });
+                    }
+                    
+                }
+                else
+                {
+                    itemClaim.SetActive(false);
+                    btn.interactable = false;
+                }
+                
+                if(DataController.instance.playerData.userData.item_Receive_Count_Gold.Contains(id))
+                {
+                    itemChecked.SetActive(true);
+                    itemClaim.SetActive(false);
+                    Checked = true;
+                    btn.interactable = false;
+                    Debug.Log("true: " + id);
+                }
+                else
+                {
+                    itemChecked.SetActive(false);
+                    Debug.Log("false: " + id);
+
+                }
+            }
+            else
+            {
+                btn.interactable = false;
+                itemlock.SetActive(true);
+            }
             
         }
-        public void SetUpItem(ItemPass item, List<int> item_Receive_Count)
+        public void SetUpItemFree(ItemPass item)
         {
             itemImg.sprite = AssetLoader.instance.ItemPass[(int)item.itemName];
             txtItem.text = item.Count.ToString();
@@ -39,17 +92,10 @@ namespace RubikCasual.ItemPassSlots
                 {
                     btns.onClick.AddListener(() =>
                     {
+                        //SetUpItemFree(item);
                         if(Checked != true)
                         {
-                            if (!item_Receive_Count.Contains(id))
-                            {
-                                item_Receive_Count.Add(id);
-                            }
-                            itemClaim.SetActive(false);
-                            itemChecked.SetActive(true);
-                            AddItem(item);
-                            
-
+                            ReceiveRewardFree(item);
                             Checked = true;
                             btns.interactable = false;
                         }
@@ -67,7 +113,7 @@ namespace RubikCasual.ItemPassSlots
                 btns.interactable = false;
             }
             
-            if(item_Receive_Count.Contains(id))
+            if(DataController.instance.playerData.userData.item_Receive_Count_free.Contains(id))
             {
                 itemChecked.SetActive(true);
                 itemClaim.SetActive(false);
@@ -82,48 +128,32 @@ namespace RubikCasual.ItemPassSlots
 
             }
 
+            
         }
-        
-        
-        public void AddItem(ItemPass item)
+        public void ReceiveRewardFree(ItemPass item)
         {
-            switch (item.itemName)
+            
+            if (!DataController.instance.playerData.userData.item_Receive_Count_free.Contains(id))
             {
-                case ItemEnum.Gold:
-                    HUDController.instanse.Increase(itemImg.transform.position,item.Count,item);
-                    HUDController.instanse.updateTopbarItem(item.Count,0,0,0,0);
-                    break;
-                case ItemEnum.Gem:
-                    HUDController.instanse.updateTopbarItem(0,0,item.Count,0,0);
-                    break;
-                case ItemEnum.Energy_20:
-                    HUDController.instanse.updateTopbarItem(0,item.Count,0,0,0);
-                    break;
-                case ItemEnum.Energy_50:
-                    HUDController.instanse.updateTopbarItem(0,item.Count,0,0,0);
-                    break;
-                case ItemEnum.Ticket_Normal:
-                    HUDController.instanse.updateTopbarItem(0,0,0,item.Count,0);
-                    break;
-                case ItemEnum.Ticket_Gold:
-                    HUDController.instanse.updateTopbarItem(0,0,0,0,item.Count);
-                    break;
-                case ItemEnum.SmallExpPotion:
-                    
-                    break;
-                case ItemEnum.MediumExpPotion:
-                    
-                    break;
-                case ItemEnum.LargeExpPotion:
-                    
-                    break;
-                case ItemEnum.UltraExpPotion:
-                    
-                    break;
-                default:
-                    break;
+                DataController.instance.playerData.userData.item_Receive_Count_free.Add(id);
             }
+            itemClaim.SetActive(false);
+            itemChecked.SetActive(true);
+            HUDController.instanse.Increase(itemImg.transform.position,item.Count,item);
+
         }
+        public void ReceiveRewardGold(ItemPass item)
+        {
+            
+            if (!DataController.instance.playerData.userData.item_Receive_Count_Gold.Contains(id))
+            {
+                DataController.instance.playerData.userData.item_Receive_Count_Gold.Add(id);
+            }
+            itemClaim.SetActive(false);
+            itemChecked.SetActive(true);
+            HUDController.instanse.Increase(itemImg.transform.position,item.Count,item);
+        }
+        
     }
 }
 
