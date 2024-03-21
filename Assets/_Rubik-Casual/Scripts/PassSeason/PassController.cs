@@ -9,7 +9,7 @@ namespace RubikCasual.Pass
 {
     public class PassController : MonoBehaviour
     {
-        
+        public Button Activate_Gold_Pass;
         public List<ItemPassSlot> itemPassGold;
         public List<ItemPassSlot> itemPassFree;
         public Slider expPass, lvlPass;
