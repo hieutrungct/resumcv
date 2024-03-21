@@ -40,38 +40,7 @@ namespace RubikCasual.Data
         }
 
 
-        void LoadAttribute(PlayerOwnsWaifu playerOwnsWaifu)
-        {
 
-            InfoWaifuAsset infoWaifuAsset = characterAssets.GetInfoWaifuAsset(playerOwnsWaifu.ID);
-            int originAttributeAtk = infoWaifuAsset.ATK;
-            int originAttributeDef = infoWaifuAsset.DEF;
-            int originAttributeHp = infoWaifuAsset.HP;
-
-            // Debug.Log(playerOwnsWaifu.ID);
-            // Debug.Log(originAttributeAtk);
-            // Debug.Log(originAttributeDef);
-            // Debug.Log(originAttributeHp);
-
-            int nowAttributeAtk = ConfigLvl.GetAttributeStatByLevel(originAttributeAtk, playerOwnsWaifu.ATK, 1, playerOwnsWaifu.level);
-            int nowAttributeDef = ConfigLvl.GetAttributeStatByLevel(originAttributeDef, playerOwnsWaifu.DEF, 1, playerOwnsWaifu.level);
-            int nowAttributeHp = ConfigLvl.GetAttributeStatByLevel(originAttributeHp, playerOwnsWaifu.HP, 5, playerOwnsWaifu.level);
-
-            if (nowAttributeAtk != originAttributeAtk)
-            {
-                playerOwnsWaifu.ATK = nowAttributeAtk;
-            }
-            if (nowAttributeDef != originAttributeDef)
-            {
-                playerOwnsWaifu.DEF = nowAttributeDef;
-            }
-            if (nowAttributeHp != originAttributeHp)
-            {
-                playerOwnsWaifu.HP = nowAttributeHp;
-            }
-
-
-        }
 
         public void initData()
         {
@@ -93,6 +62,12 @@ namespace RubikCasual.Data
 
             LoadPlayerData();
         }
+        [Button]
+        void TestFunct(int Level, int exp, int value)
+        {
+            ExpWithLevel expWithLevel = ExpCaculator.GetLevelWithValueExp(Level, exp, value);
+            Debug.Log(expWithLevel.Level + "/" + expWithLevel.FinalEXP);
+        }
         void SetDicExpWithLevel()
         {
             foreach (ExpWithLevel expWithLevel in lsExpWithLevel)
@@ -100,7 +75,11 @@ namespace RubikCasual.Data
                 dicExpWithLevel.Add(expWithLevel.Level, expWithLevel.FinalEXP);
             }
         }
-        bool CheckLevelUp(int levelNow, int expNow)
+        public int GetExpWithLevel(int level)
+        {
+            return dicExpWithLevel.Get(level);
+        }
+        public bool CheckLevelUp(int levelNow, int expNow)
         {
             if (dicExpWithLevel.Get(levelNow) <= expNow)
             {
@@ -121,7 +100,7 @@ namespace RubikCasual.Data
                     playerOwnsWaifu.Exp = playerOwnsWaifu.Exp - dicExpWithLevel.Get(playerOwnsWaifu.level);
                     playerOwnsWaifu.level++;
 
-                    LoadAttribute(playerOwnsWaifu);
+                    ExpCaculator.LoadAttribute(playerOwnsWaifu);
                 }
             }
         }

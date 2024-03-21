@@ -36,7 +36,7 @@ namespace RubikCasual.Battle.UI.VerticalView
         {
             healthBar.value = characterInBattle.healthBar.value;
             RageBar.value = characterInBattle.cooldownSkillBar.value;
-            txtValueHp.text = characterInBattle.HpNow + "/" + characterInBattle.infoWaifuAsset.HP;
+            txtValueHp.text = characterInBattle.HpNow + "/" + characterInBattle.Hp;
         }
         public void SetDataPopup(CharacterInBattle characterInBattle)
         {
@@ -48,12 +48,12 @@ namespace RubikCasual.Battle.UI.VerticalView
             waifuSkill = Data.DataController.instance.characterAssets.GetSkillWaifuSOByIndex(indexWaifu);
             SetSkillPopup(waifuSkill);
 
-            txtAtk.text = characterInBattle.infoWaifuAsset.ATK.ToString();
-            txtDef.text = characterInBattle.infoWaifuAsset.DEF.ToString();
+            txtAtk.text = characterInBattle.Atk.ToString();
+            txtDef.text = characterInBattle.Def.ToString();
             txtRare.text = characterInBattle.infoWaifuAsset.Rare.ToString();
 
-            txtValueHp.text = characterInBattle.HpNow + "/" + characterInBattle.infoWaifuAsset.HP;
-            txtDameSkill.text = ((int)(characterInBattle.infoWaifuAsset.ATK * waifuSkill.percentDameSkill)).ToString();
+            txtValueHp.text = characterInBattle.HpNow + "/" + characterInBattle.Hp;
+            txtDameSkill.text = ((int)(characterInBattle.Atk * waifuSkill.percentDameSkill)).ToString();
             // txtRow.text = "Row: " + waifuSkill.Row.ToString();
             // txtColumn.text = "Column: " + waifuSkill.Column.ToString();
             // txtTypeSkill.text = "Type Skill: " + waifuSkill.typeSkill;

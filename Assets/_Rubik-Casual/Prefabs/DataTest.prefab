@@ -126,6 +126,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b944c63612ae9407cbd657cf70397e9b, type: 3}
   - {fileID: 21300000, guid: 7a860c9c2d94544b688db0cd613e58bd, type: 3}
   - {fileID: 21300000, guid: 1b652d4125f7c453eba84d8462355c62, type: 3}
+  ItemPass: []
   EffectSprite: []
   SkillSprite: []
   imageSummon: []
@@ -413,12 +414,12 @@ MonoBehaviour:
         SkinCheck: 0
       - ID: 0
         SkinCheck: 0
-      itemPass:
+      item_Receive_Count_free: 
+      item_Receive_Count_Gold: 
+      battlePass:
         LevelPass: 0
         ExpLevelPass: 0
         GoldPass: 0
-        itemFree: []
-        itemGold: []
     lsPlayerOwnsWaifu: []
     Inventory:
       Keys: 
@@ -449,12 +450,12 @@ MonoBehaviour:
       SkinCheck: 0
     - ID: 0
       SkinCheck: 0
-    itemPass:
+    item_Receive_Count_free: 
+    item_Receive_Count_Gold: 
+    battlePass:
       LevelPass: 0
       ExpLevelPass: 0
       GoldPass: 0
-      itemFree: []
-      itemGold: []
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   lsExpWithLevel: []
   characterAssets: {fileID: 2999671105770049558}
