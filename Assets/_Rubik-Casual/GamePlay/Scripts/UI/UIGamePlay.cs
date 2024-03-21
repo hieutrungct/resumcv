@@ -5,6 +5,7 @@ using RubikCasual.Battle.UI.Result;
 using RubikCasual.Data;
 using RubikCasual.RewardInGame;
 using RubikCasual.Roulette;
+using TMPro;
 using UnityEngine;
 
 namespace RubikCasual.Battle.UI
@@ -15,9 +16,10 @@ namespace RubikCasual.Battle.UI
         public PopupResultWin popupResultWin;
         public InventoryUIPanel inventoryUIPanel;
         public RouletteController rouletteController;
+        public CardExpUp cardExpUp;
         public GameObject TxtDame, ItemDrop, imageBackGround;
         public Canvas canvasUIGamePlay;
-        public bool isSaveReward, chosePopupVictory, isHaveChangeSlot;
+        public bool isSaveReward, chosePopupVictory, isHaveChangeSlot, isDoneShowResult;
         public VerticalView.VerticalViewLeft verticalViewLeft;
         public List<CharacterInBattle> lsHeroState = new List<CharacterInBattle>();
         public static UIGamePlay instance;
@@ -60,7 +62,7 @@ namespace RubikCasual.Battle.UI
         }
         void ShowPopupContinue()
         {
-            if (BattleController.instance.gameState == GameState.END)
+            if (BattleController.instance.gameState == GameState.END && !isDoneShowResult)
             {
                 if (!isSaveReward)
                 {
@@ -88,6 +90,7 @@ namespace RubikCasual.Battle.UI
                     popupResultWin.gameObject.SetActive(true);
 
                 }
+                isDoneShowResult = true;
                 DataController.instance.CaculateLevelUp();
             }
             else
@@ -104,9 +107,9 @@ namespace RubikCasual.Battle.UI
         public void ClaimReward()
         {
             Data.Player.UserData userData = DataController.instance.userData;
-            if (!popupResultWin.GetComponent<PopupResultWin>().isClaim)
+            if (!popupResultWin.isClaim)
             {
-                for (int i = 0; i < popupResultWin.GetComponent<PopupResultWin>().NumberStarReward; i++)
+                for (int i = 0; i < popupResultWin.NumberStarReward; i++)
                 {
                     RewardWinStage rewardWinStage = DataController.instance.stageAssets.stageAssetsData.lsRewardWinStage[i];
                     switch (rewardWinStage.nameItem)
@@ -123,10 +126,29 @@ namespace RubikCasual.Battle.UI
                     }
                 }
 
-                popupResultWin.GetComponent<PopupResultWin>().isClaim = true;
-                bl_SceneLoaderManager.LoadScene(NameScene.HOME_SCENE);
+                popupResultWin.isClaim = true;
+
+                ShowCardUpLevel();
+            }
+            else
+            {
+                ClickOutGamePlay();
             }
 
+        }
+        void ShowCardUpLevel()
+        {
+            popupResultWin.transform.Find("GbResult").gameObject.SetActive(false);
+            popupResultWin.transform.Find("Button_Claim").Find("Text_Claim").GetComponent<TextMeshProUGUI>().text = "Ok";
+            cardExpUp.gameObject.SetActive(true);
+            cardExpUp.SetAnimExp(BattleController.instance.expBonus + (int)System.Math.Floor(BattleController.instance.expBonus * 0.1f), 0);
+        }
+        public void ClickOutGamePlay()
+        {
+            if (cardExpUp.isShowAnimDone)
+            {
+                bl_SceneLoaderManager.LoadScene(NameScene.HOME_SCENE);
+            }
         }
     }
 }
