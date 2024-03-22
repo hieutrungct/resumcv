@@ -59,7 +59,7 @@ namespace RubikCasual.CreateSkill.Panel
             {
                 switch ((TypeSkill)value)
                 {
-                    case TypeSkill.InTurn:
+                    case TypeSkill.In_Turn:
 
                         inputFieldNumberTurn.transform.parent.gameObject.SetActive(true);
                         inputFieldDurationWave.transform.parent.gameObject.SetActive(false);
@@ -69,7 +69,7 @@ namespace RubikCasual.CreateSkill.Panel
                         inputFieldDurationWave.transform.parent.gameObject.SetActive(true);
                         inputFieldNumberTurn.transform.parent.gameObject.SetActive(false);
                         break;
-                    case TypeSkill.InTurn2:
+                    case TypeSkill.In_Turn_Plus:
 
                         inputFieldDurationWave.transform.parent.gameObject.SetActive(true);
                         inputFieldNumberTurn.transform.parent.gameObject.SetActive(true);

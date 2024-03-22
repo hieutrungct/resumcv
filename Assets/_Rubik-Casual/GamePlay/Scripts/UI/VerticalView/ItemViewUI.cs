@@ -10,7 +10,7 @@ namespace RubikCasual.Battle.UI.VerticalView
     public class ItemViewUI : MonoBehaviour
     {
         public TextMeshProUGUI txtName, txtDameSkill, txtValueHp;
-        public TextMeshProUGUI txtAtk, txtDef, txtRare;
+        public TextMeshProUGUI txtAtk, txtDef, txtRare, txtTypeSkill;
         public CharacterInBattle characterInBattleClone;
         public List<GameObject> lsSlotEnemy, lsSlotHero;
         public GameObject focus;
@@ -56,7 +56,7 @@ namespace RubikCasual.Battle.UI.VerticalView
             txtDameSkill.text = ((int)(characterInBattle.Atk * waifuSkill.percentDameSkill)).ToString();
             // txtRow.text = "Row: " + waifuSkill.Row.ToString();
             // txtColumn.text = "Column: " + waifuSkill.Column.ToString();
-            // txtTypeSkill.text = "Type Skill: " + waifuSkill.typeSkill;
+            txtTypeSkill.text = waifuSkill.typeSkill.ToString();
             BackgroundImage.sprite = Data.DataController.instance.assetLoader.GetSpriteButtonWithRare(characterInBattle.infoWaifuAsset.Rare);
 
         }
@@ -74,21 +74,21 @@ namespace RubikCasual.Battle.UI.VerticalView
 
             switch (waifuSkill.typeSkill)
             {
-                case CreateSkill.TypeSkill.BuffAtk:
+                case CreateSkill.TypeSkill.Buff_Atk:
                     foreach (GameObject slotHero in lsSlotHero)
                     {
                         slotHero.GetComponent<Image>().color = Color.green;
                         slotHero.GetComponent<Image>().preserveAspect = true;
                     }
                     break;
-                case CreateSkill.TypeSkill.BuffDef:
+                case CreateSkill.TypeSkill.Buff_Def:
                     foreach (GameObject slotHero in lsSlotHero)
                     {
                         slotHero.GetComponent<Image>().color = Color.green;
                         slotHero.GetComponent<Image>().preserveAspect = true;
                     }
                     break;
-                case CreateSkill.TypeSkill.BuffHp:
+                case CreateSkill.TypeSkill.Buff_Hp:
                     foreach (GameObject slotHero in lsSlotHero)
                     {
                         slotHero.GetComponent<Image>().color = Color.green;
@@ -98,13 +98,13 @@ namespace RubikCasual.Battle.UI.VerticalView
                 case CreateSkill.TypeSkill.Wave:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
-                case CreateSkill.TypeSkill.InTurn:
+                case CreateSkill.TypeSkill.In_Turn:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
-                case CreateSkill.TypeSkill.InTurn2:
+                case CreateSkill.TypeSkill.In_Turn_Plus:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
-                case CreateSkill.TypeSkill.Other:
+                case CreateSkill.TypeSkill.Default:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
             }

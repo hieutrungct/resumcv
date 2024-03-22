@@ -40,6 +40,10 @@ namespace RubikCasual.Character_ACC
         {
             return this.WaifuAssets.GetInfoWaifuAsset(id);
         }
+        public Waifu.InfoWaifuAsset GetInfoEnemyAsset(int id)
+        {
+            return this.enemyAssets.GetInfoEnemyAsset(id);
+        }
         public Data.Waifu.WaifuSkill GetSkillWaifuSOByIndex(int index)
         {
             return this.WaifuAssets.GetSkillWaifuSOByIndex(index);

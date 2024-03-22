@@ -22,7 +22,7 @@ namespace RubikCasual.CreateSkill.Panel
         }
         public void SetInfoPanel(int index)
         {
-            Waifu.InfoWaifuAsset infoWaifuAsset = DataController.instance.characterAssets.enemyAssets.GetInfoEnemyByIndex(index);
+            Waifu.InfoWaifuAsset infoWaifuAsset = DataController.instance.characterAssets.enemyAssets.GetInfoEnemyAsset(index);
 
             txtIndexID.text = "Index: " + infoWaifuAsset.Code.ToString();
             if (infoWaifuAsset.Name != null)

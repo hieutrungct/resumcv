@@ -75,7 +75,7 @@ namespace RubikCasual.Battle.UI.Result
         }
         IEnumerator AnimSliderExp(Data.Waifu.ExpWithLevel expWithLevel, Rubik.ListWaifu.WaifuItem waifuItemClone, int oldLevel, int oldExp)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.5f);
             bool isHaveLvlUp = false;
             for (int i = oldLevel; i < expWithLevel.Level; i++)
             {

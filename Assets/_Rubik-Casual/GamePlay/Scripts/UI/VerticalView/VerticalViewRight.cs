@@ -40,21 +40,21 @@ namespace RubikCasual.Battle.UI.VerticalView
 
             switch (waifuSkill.typeSkill)
             {
-                case CreateSkill.TypeSkill.BuffAtk:
+                case CreateSkill.TypeSkill.Buff_Atk:
                     foreach (GameObject slotHero in lsSlotHero)
                     {
                         slotHero.GetComponent<Image>().sprite = spriteBuffAtk;
                         slotHero.GetComponent<Image>().preserveAspect = true;
                     }
                     break;
-                case CreateSkill.TypeSkill.BuffDef:
+                case CreateSkill.TypeSkill.Buff_Def:
                     foreach (GameObject slotHero in lsSlotHero)
                     {
                         slotHero.GetComponent<Image>().sprite = spriteBuffDef;
                         slotHero.GetComponent<Image>().preserveAspect = true;
                     }
                     break;
-                case CreateSkill.TypeSkill.BuffHp:
+                case CreateSkill.TypeSkill.Buff_Hp:
                     foreach (GameObject slotHero in lsSlotHero)
                     {
                         slotHero.GetComponent<Image>().sprite = spriteBuffHp;
@@ -64,13 +64,13 @@ namespace RubikCasual.Battle.UI.VerticalView
                 case CreateSkill.TypeSkill.Wave:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
-                case CreateSkill.TypeSkill.InTurn:
+                case CreateSkill.TypeSkill.In_Turn:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
-                case CreateSkill.TypeSkill.InTurn2:
+                case CreateSkill.TypeSkill.In_Turn_Plus:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
-                case CreateSkill.TypeSkill.Other:
+                case CreateSkill.TypeSkill.Default:
                     ArraySkill(waifuSkill.Row, waifuSkill.Column, lsSlotEnemy);
                     break;
             }
@@ -105,7 +105,7 @@ namespace RubikCasual.Battle.UI.VerticalView
         public void SetDataPopup(CharacterInBattle characterInBattle)
         {
             characterInBattleClone = characterInBattle;
-            txtName.text = characterInBattle.infoWaifuAsset.Name;
+            // txtName.text = characterInBattle.infoWaifuAsset.Name;
 
             int indexWaifu = Data.DataController.instance.characterAssets.GetIndexWaifu(characterInBattle.waifuIdentify.ID, characterInBattle.waifuIdentify.SkinCheck);
             Data.Waifu.WaifuSkill waifuSkill = new Data.Waifu.WaifuSkill();

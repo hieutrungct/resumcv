@@ -16,13 +16,13 @@ namespace RubikCasual.CreateSkill
 {
     public enum TypeSkill
     {
-        Other = 0,
+        Default = 0,
         Wave = 1,
-        InTurn = 2,
-        InTurn2 = 3,
-        BuffHp = 4,
-        BuffAtk = 5,
-        BuffDef = 6,
+        In_Turn = 2,
+        In_Turn_Plus = 3,
+        Buff_Hp = 4,
+        Buff_Atk = 5,
+        Buff_Def = 6,
 
     }
     public class CharacterSetSkillController : MonoBehaviour
@@ -116,11 +116,11 @@ namespace RubikCasual.CreateSkill
 
             durationAttacked = float.Parse(Panel.InfoPanel.instance.inputFieldDurationAtack.text);
 
-            if (typeSkill == TypeSkill.InTurn || typeSkill == TypeSkill.InTurn2)
+            if (typeSkill == TypeSkill.In_Turn || typeSkill == TypeSkill.In_Turn_Plus)
             {
                 InTurn = int.Parse(Panel.InfoPanel.instance.inputFieldNumberTurn.text);
             }
-            if (typeSkill == TypeSkill.Wave || typeSkill == TypeSkill.InTurn2)
+            if (typeSkill == TypeSkill.Wave || typeSkill == TypeSkill.In_Turn_Plus)
             {
                 durationWave = float.Parse(Panel.InfoPanel.instance.inputFieldDurationWave.text);
             }
@@ -208,7 +208,7 @@ namespace RubikCasual.CreateSkill
                     }
                     break;
 
-                case TypeSkill.InTurn:
+                case TypeSkill.In_Turn:
                     if (inTurn > 0)
                     {
                         for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
@@ -231,7 +231,7 @@ namespace RubikCasual.CreateSkill
                         StartCoroutine(ShowSkill(row, column, minColumn, inTurn - 1));
                     }
                     break;
-                case TypeSkill.InTurn2:
+                case TypeSkill.In_Turn_Plus:
                     StartCoroutine(FuncInTurn2(row, column, minColumn, inTurn));
                     break;
                 default:

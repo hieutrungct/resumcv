@@ -46,7 +46,7 @@ namespace RubikCasual.Battle.Inventory
                             if (valueCoins != 0)
                             {
                                 gameObject.transform.SetParent(RewardInGamePanel.instance.txtCoins.transform.parent);
-                                gameObject.transform.DOMove(RewardInGamePanel.instance.txtCoins.transform.parent.Find("Energe").position, Duration * 4)
+                                gameObject.transform.DOMove(RewardInGamePanel.instance.txtCoins.transform.parent.Find("Energe").position, Duration / 2f)
                                 .OnComplete(() =>
                                 {
                                     SetAnimCoins();
@@ -56,7 +56,7 @@ namespace RubikCasual.Battle.Inventory
                             else
                             {
                                 gameObject.transform.SetParent(RewardInGamePanel.instance.txtGems.transform.parent);
-                                gameObject.transform.DOMove(RewardInGamePanel.instance.txtGems.transform.parent.Find("Energe").position, Duration * 4)
+                                gameObject.transform.DOMove(RewardInGamePanel.instance.txtGems.transform.parent.Find("Energe").position, Duration / 2f)
                                 .OnComplete(() =>
                                 {
                                     SetAnimCoins();

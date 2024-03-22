@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using RubikCasual.Battle;
 using RubikCasual.Battle.UI;
 
-namespace Rubik.Axie
+namespace RubikCasual.Battle
 {
     [RequireComponent(typeof(BoxCollider2D))]
     public class CharacterDragPosition : MonoBehaviour

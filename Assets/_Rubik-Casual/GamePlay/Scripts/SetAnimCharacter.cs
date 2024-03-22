@@ -196,11 +196,11 @@ namespace RubikCasual.Battle
                     }
                     break;
 
-                case CreateSkill.TypeSkill.InTurn2:
+                case CreateSkill.TypeSkill.In_Turn_Plus:
                     StartCoroutine(FuncInTurn2(row, column, minColumn, characterInBattle, waifuSkill, waifuSkill.NumberTurn));
                     break;
 
-                case CreateSkill.TypeSkill.InTurn:
+                case CreateSkill.TypeSkill.In_Turn:
                     if (inTurn > 0)
                     {
                         for (int i = 0; i < mapBattleController.lsPosEnemySlot.Count; i++)
