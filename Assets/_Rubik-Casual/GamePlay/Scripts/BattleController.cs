@@ -26,6 +26,7 @@ namespace RubikCasual.Battle
         public List<SlotInArea> HeroInArea;
         public List<GameObject> lsSlotGbEnemy, lsSlotGbHero;
         public DataController dataController;
+        public int expBonus;
         private float attribute = 1;
         public GameState gameState;
         SetAnimCharacter setAnimCharacter;
@@ -33,14 +34,16 @@ namespace RubikCasual.Battle
         int CountState = 1, numberSlot = 5;
 
         public static BattleController instance;
-
-        void Start()
+        void Awake()
         {
-
             instance = this;
             gameState = GameState.WAIT_BATTLE;
-            dataController = DataController.instance;
+            expBonus = 100;
 
+        }
+        void Start()
+        {
+            dataController = DataController.instance;
             StartCoroutine(CreateBattlefield());
         }
         void Update()
@@ -269,7 +272,7 @@ namespace RubikCasual.Battle
                     CharacterHero.posCharacter = posSlot.gameObject.transform;
                     CharacterHero.oriIndex = index;
                     heroInBattle.skeletonCharacterAnimation = Hero;
-                    
+
                     heroInBattle.infoWaifuAsset = dataController.characterAssets.GetInfoWaifuAsset(lsHeroInArea[index].idCharacter);
 
                     heroInBattle.cooldownAttackBar.value = 1f;

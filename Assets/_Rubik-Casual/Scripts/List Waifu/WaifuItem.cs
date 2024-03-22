@@ -16,27 +16,29 @@ namespace Rubik.ListWaifu
 {
     public class WaifuItem : MonoBehaviour
     {
-        public Image avaCard,attackType,avaBox, BackGlow,Glow,Role;
-        public SkeletonGraphic UI_Waifu = new SkeletonGraphic();
+        public int id;
+        public Image avaCard, attackType, avaBox, BackGlow, Glow, Role;
+        public SkeletonGraphic UI_Waifu;
         private SkeletonAnimation ui_Waifu;
-        public TextMeshProUGUI nameTxt, levelTxt,lvProcessTxt;
+        public TextMeshProUGUI nameTxt, levelTxt, lvProcessTxt;
         public Slider exp;
         [SerializeField] GameObject[] stars;
         [SerializeField] BtnOnClick btnClick;
         //[SerializeField] public GameObject inDeck;
-        private PlayerOwnsWaifu _waifu;
+        public PlayerOwnsWaifu _waifu;
         //public WaifuAssets waifuAssets;
         private InfoWaifuAsset infoWaifu;
-        
-        public void SetUp(PlayerOwnsWaifu waifu)
+
+        public void SetUp(PlayerOwnsWaifu waifu, bool isHaveButton = true)
         {
             _waifu = waifu;
+
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(waifu.ID);
-            
+
             //ui_Waifu = SpawnCharacter(gameObject.transform, waifuAssets.Get2D(_waifu.Index.ToString()));
             //ui_Waifu =  waifuAssets.Get2D(_waifu.Index.ToString());
-          
-            
+
+
             SkeletonDataAsset skeletonDataAsset = WaifuAssets.instance.GetWaifuSOByID(_waifu.ID.ToString()).SkeletonDataAsset;
             UI_Waifu.skeletonDataAsset = skeletonDataAsset;
 
@@ -51,16 +53,16 @@ namespace Rubik.ListWaifu
             UI_Waifu.initialSkinName = "Pet" + infoWaifu.Code;
             UI_Waifu.startingAnimation = UI_Waifu.skeletonDataAsset.GetSkeletonData(true).Animations.Items[3].Name;
 
-            
+
             UI_Waifu.Initialize(true);
 
 
-            
+
             // // avaCard.SetNativeSize();
 
             // if (avaBox != null)
             // {
-                
+
             //     switch(infoWaifu.Rare)
             //     {
             //         case Rare.UnCommon:
@@ -87,7 +89,7 @@ namespace Rubik.ListWaifu
             //             BackGlow.GetComponent<Image>().color = new Color(0.929f, 0.459f, 1f, 1f);
             //             break;
             //     }
-                 
+
             // }
             if (avaBox != null)
             {
@@ -109,7 +111,7 @@ namespace Rubik.ListWaifu
             }
 
             //Role.sprite = AssetLoader.Instance.AttackSprite[infoWaifu.Class];
-            
+
             // if (attackType != null)
             // {
             //     switch (character.CharacterType)
@@ -122,12 +124,12 @@ namespace Rubik.ListWaifu
             //             break;
             //     }
             // }
-           
+            float MaxExp = DataController.instance.GetExpWithLevel(waifu.level);
             nameTxt.text = infoWaifu.Name.ToString();
             levelTxt.text = waifu.level.ToString();
-            lvProcessTxt.text = waifu.Exp + " / " + exp.maxValue;
-            exp.value = waifu.Exp;
-            for(int i = 0; i < waifu.Star; i++)
+            lvProcessTxt.text = waifu.Exp + " / " + MaxExp;
+            exp.value = waifu.Exp / MaxExp;
+            for (int i = 0; i < waifu.Star; i++)
             {
                 stars[i].SetActive(true);
                 // if (i < waifu.Ascend)
@@ -136,28 +138,30 @@ namespace Rubik.ListWaifu
                 // }
             }
 
-            var btn = GetComponent<Button>();
-            if (btn != null)
+            if (isHaveButton)
             {
-                btn.onClick.AddListener(() =>
+                var btn = GetComponent<Button>();
+                if (btn != null)
                 {
-                    WaifuController.instance.ShowWaifuInfoPopup(waifu);
-                    HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: false);
-                });
+                    btn.onClick.AddListener(() =>
+                    {
+                        WaifuController.instance.ShowWaifuInfoPopup(waifu);
+                        HUDController.instanse.UpdateTopPanel(Energe: false, Gold: true, Gem: true, Ticket: false);
+                    });
+                }
             }
 
-            
 
         }
-        
+
         private void SetRarityColors(int rarityIndex, string glowColor, string backGlowColor)
         {
             avaBox.sprite = AssetLoader.Instance.RarrityBox[rarityIndex];
             Config.SetColorFromHex(Glow.GetComponent<Image>(), glowColor);
             Config.SetColorFromHex(BackGlow.GetComponent<Image>(), backGlowColor);
         }
-        
-        
+
+
 
     }
 }
