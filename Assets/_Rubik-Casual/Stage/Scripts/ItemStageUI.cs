@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 namespace RubikCasual.Stage.UI
 {
-    public class StageUI : MonoBehaviour
+    public class ItemStageUI : MonoBehaviour
     {
         public Image iconImage;
         public GameObject iconLock, levelUnlock, iconNew, gbIconImage;
