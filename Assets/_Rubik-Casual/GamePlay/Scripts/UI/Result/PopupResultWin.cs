@@ -58,8 +58,8 @@ namespace RubikCasual.Battle.UI.Result
         }
         void SetDataPopup()
         {
-            List<RewardWinStage> lsRewardWinStage = new List<RewardWinStage>();
-            lsRewardWinStage = stageAssets.stageAssetsData.lsRewardWinStage;
+            List<RewardWinLevelStage> lsRewardWinStage = new List<RewardWinLevelStage>();
+            lsRewardWinStage = stageAssets.levelStageAssetsData.lsRewardWinStage;
 
             for (int i = 0; i < lsRewardItem.Count; i++)
             {

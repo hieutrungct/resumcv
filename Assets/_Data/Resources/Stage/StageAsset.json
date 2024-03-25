@@ -1,0 +1,26 @@
+[
+    {
+     "id": 1,
+     "NameStage": "s001",
+     "Path": "Assets/_Data/Resources/Stage/1",
+     "NumberLevelAttack": 6
+    },
+    {
+     "id": 2,
+     "NameStage": "s002",
+     "Path": "Assets/_Data/Resources/Stage/2",
+     "NumberLevelAttack": 6
+    },
+    {
+     "id": 3,
+     "NameStage": "s003",
+     "Path": "Assets/_Data/Resources/Stage/3",
+     "NumberLevelAttack": 6
+    },
+    {
+     "id": 4,
+     "NameStage": "s004",
+     "Path": "Assets/_Data/Resources/Stage/4",
+     "NumberLevelAttack": 6
+    }
+   ]

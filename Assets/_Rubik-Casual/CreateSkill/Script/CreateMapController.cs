@@ -93,9 +93,9 @@ namespace RubikCasual.CreateSkill.Panel
 
         public void SaveStage()
         {
-            List<Data.InfoStageAssetsData> lsInfoStageAssetsData = new List<Data.InfoStageAssetsData>();
-            Data.StageAssetsData stageAssetsData = new Data.StageAssetsData();
-            Data.RewardWinStage rewardWinStage = new Data.RewardWinStage();
+            List<Data.InfoLevelStageAssetsData> lsInfoStageAssetsData = new List<Data.InfoLevelStageAssetsData>();
+            Data.LevelStageAssetsData stageAssetsData = new Data.LevelStageAssetsData();
+            Data.RewardWinLevelStage rewardWinStage = new Data.RewardWinLevelStage();
 
             switch ((TypeMap)ChoseSlotMapPanel.instance.dropdownTypeMap.value)
             {
@@ -103,8 +103,8 @@ namespace RubikCasual.CreateSkill.Panel
 
                     foreach (RowSlot TurnStage in lsRowSlot)
                     {
-                        Data.InfoStageAssetsData infoStageAssetsData = new Data.InfoStageAssetsData();
-                        infoStageAssetsData.TurnStage = TurnStage.idSlotRow;
+                        Data.InfoLevelStageAssetsData infoStageAssetsData = new Data.InfoLevelStageAssetsData();
+                        infoStageAssetsData.TurnLevelStage = TurnStage.idSlotRow;
                         infoStageAssetsData.Slot0 = TurnStage.lsSlotInTurn[0].GetComponent<DragPosSlot>().stateSlot;
                         infoStageAssetsData.Slot1 = TurnStage.lsSlotInTurn[1].GetComponent<DragPosSlot>().stateSlot;
                         infoStageAssetsData.Slot2 = TurnStage.lsSlotInTurn[2].GetComponent<DragPosSlot>().stateSlot;
@@ -119,8 +119,8 @@ namespace RubikCasual.CreateSkill.Panel
                 case TypeMap.Infinity_Map:
                     foreach (RowSlot TurnStage in lsRowSlot)
                     {
-                        Data.InfoStageAssetsData infoStageAssetsData = new Data.InfoStageAssetsData();
-                        infoStageAssetsData.TurnStage = TurnStage.idSlotRow;
+                        Data.InfoLevelStageAssetsData infoStageAssetsData = new Data.InfoLevelStageAssetsData();
+                        infoStageAssetsData.TurnLevelStage = TurnStage.idSlotRow;
                         infoStageAssetsData.Slot0 = TurnStage.lsSlotInTurn[0].GetComponent<DragPosSlot>().stateSlot;
                         infoStageAssetsData.Slot1 = TurnStage.lsSlotInTurn[1].GetComponent<DragPosSlot>().stateSlot;
                         infoStageAssetsData.Slot2 = TurnStage.lsSlotInTurn[2].GetComponent<DragPosSlot>().stateSlot;
@@ -148,8 +148,8 @@ namespace RubikCasual.CreateSkill.Panel
                 case TypeMap.Default_Map:
                     foreach (RowSlot TurnStage in lsRowSlot)
                     {
-                        Data.InfoStageAssetsData infoStageAssetsData = new Data.InfoStageAssetsData();
-                        infoStageAssetsData.TurnStage = TurnStage.idSlotRow;
+                        Data.InfoLevelStageAssetsData infoStageAssetsData = new Data.InfoLevelStageAssetsData();
+                        infoStageAssetsData.TurnLevelStage = TurnStage.idSlotRow;
                         infoStageAssetsData.Slot0 = TurnStage.lsSlotInTurn[0].GetComponent<DragPosSlot>().stateSlot;
                         infoStageAssetsData.Slot1 = TurnStage.lsSlotInTurn[1].GetComponent<DragPosSlot>().stateSlot;
                         infoStageAssetsData.Slot2 = TurnStage.lsSlotInTurn[2].GetComponent<DragPosSlot>().stateSlot;

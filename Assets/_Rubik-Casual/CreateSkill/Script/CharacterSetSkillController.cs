@@ -307,8 +307,8 @@ namespace RubikCasual.CreateSkill
             {
                 int indexOfSlot = j + 5 * idRowSlot;
                 // Debug.Log(dataController.stageAssets.lsConvertStageAssetsData[0].lsValueSlot[0]);
-                int idValueInSlot = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertStageAssetsData[idStage].lsValueSlot[j]).intValue;
-                string valueSlotStage = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertStageAssetsData[idStage].lsValueSlot[j]).stringValue;
+                int idValueInSlot = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertLevelStageAssetsData[idStage].lsValueSlot[j]).intValue;
+                string valueSlotStage = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertLevelStageAssetsData[idStage].lsValueSlot[j]).stringValue;
 
                 PositionCharacterSlot posSlot = lsPosSlot.lsPosCharacterSlot[j];
 
@@ -316,7 +316,7 @@ namespace RubikCasual.CreateSkill
                 {
                     // UnityEngine.Debug.Log(enemyAssets.WaifuEnemyAssetDatas.FirstOrDefault(f => f.Index == enemyAssets.lsIdEnemy[indexRand]).Is_Boss);
                     mapBattleController.lsPosEnemySlot[index].lsPosCharacterSlot[j].id = idValueInSlot;
-                    attribute *= dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
+                    attribute *= dataController.stageAssets.lsConvertLevelStageAssetsData[idStage].Attribute;
 
                     CharacterInBattle enemyInBattle = Instantiate(EnemyInBattle, posSlot.gameObject.transform);
                     enemyInBattle.indexOfSlot = indexOfSlot;
