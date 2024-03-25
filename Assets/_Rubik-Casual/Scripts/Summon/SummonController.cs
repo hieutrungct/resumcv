@@ -49,6 +49,8 @@ namespace Rubik_Casual.Summon
             
             // iconWaifu.sprite = AssetLoader.instance.GetAvatarById(infoWaifu.Code);
             iconWaifu.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
+            
+
         }
         string GetNameImageWaifu(SummonSlot summonSlot)
         {

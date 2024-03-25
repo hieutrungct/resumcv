@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ShopController : MonoBehaviour
+namespace RubikCasual.Shop
 {
-    void Awake()
+    public class ShopController : MonoBehaviour
     {
-        
+        void Awake()
+        {
+            
+        }
     }
 }
+
