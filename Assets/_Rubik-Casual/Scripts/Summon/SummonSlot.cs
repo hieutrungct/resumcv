@@ -14,7 +14,7 @@ public class SummonSlot : MonoBehaviour
     public TextMeshProUGUI nameWaifuTxt;
     void Awake()
     {
-        
+        SetUpButton();
     }
     public void SetUpButton()
     {

@@ -9,7 +9,7 @@ namespace RubikCasual.ScrollSummon
     public class ScrollSummonController : MonoBehaviour
     {
         public List<SummonSlider> lsSummonSlider;
-        public int a;
+        public int IndexSlider, indexSummon = 2;
         public Transform transformFut, transformCus;
         // Start is called before the first frame update
         void Start()
@@ -21,24 +21,24 @@ namespace RubikCasual.ScrollSummon
         {
             
             
-            if(a == 0)
+            if(IndexSlider == 0)
             {
-                lsSummonSlider[a + 1].transform.DOMoveX(gameObject.transform.position.x,1f);
-                lsSummonSlider[a].transform.DOMoveX(transformCus.position.x,0.7f)
+                lsSummonSlider[IndexSlider + 1].transform.DOMoveX(gameObject.transform.position.x,1f);
+                lsSummonSlider[IndexSlider].transform.DOMoveX(transformCus.position.x,0.7f)
                 .OnComplete(()=>{
                     SetUpSliderById();
-                    a = 1;
+                    IndexSlider = 1;
                 });
                 
 
             }
             else
             {
-                lsSummonSlider[a - 1].transform.DOMoveX(gameObject.transform.position.x,1f);
-                lsSummonSlider[a].transform.DOMoveX(transformCus.position.x,0.7f)
+                lsSummonSlider[IndexSlider - 1].transform.DOMoveX(gameObject.transform.position.x,1f);
+                lsSummonSlider[IndexSlider].transform.DOMoveX(transformCus.position.x,0.7f)
                 .OnComplete(()=>{
                     SetUpSliderById();
-                    a = 0;
+                    IndexSlider = 0;
                 });
                 
             }
@@ -48,8 +48,17 @@ namespace RubikCasual.ScrollSummon
         }
         public void SetUpSliderById()
         {
-            lsSummonSlider[a].transform.position = transformFut.position;
-            lsSummonSlider[a].SetUpSlider();
+            if(indexSummon > 6)
+            {
+                indexSummon = 1;
+            }
+            else
+            {
+                indexSummon++;
+            }
+            lsSummonSlider[IndexSlider].indexSummon = indexSummon;
+            lsSummonSlider[IndexSlider].transform.position = transformFut.position;
+            lsSummonSlider[IndexSlider].SetUpSlider();
             Debug.Log("Xét lại toạ độ");
         }
 
