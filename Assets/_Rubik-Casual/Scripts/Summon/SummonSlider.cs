@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Rubik_Casual;
+using Rubik_Casual.Summon;
 using RubikCasual.Data;
 using RubikCasual.Tool;
 using RubikCasual.Waifu;
@@ -15,20 +16,27 @@ namespace RubikCasual.SummonSliders
         public int indexSummon, idWaifu;
         public Image btnImg, avaWaifu;
         public TextMeshProUGUI nametxt;
-        
         void Start()
         {
             SetUpSlider();
-            
         }
+        
         
         public void SetUpSlider()
         {
             SetUpIdWaifuByIndexSummon(indexSummon);
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(idWaifu);
-            avaWaifu.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
+            // Debug.Log("id chuyển vào"+infoWaifu.ID);
             nametxt.text = infoWaifu.Name;
-            
+            avaWaifu.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
+            var btn = GetComponent<Button>();
+            if (btn != null)
+            {
+                btn.onClick.AddListener(() =>
+                {
+                    SummonController.instance.OnClickScrollSummon(infoWaifu);
+                });
+            }
         }
         public void SetUpIdWaifuByIndexSummon(int index)
         {
@@ -37,6 +45,7 @@ namespace RubikCasual.SummonSliders
                 case 1:
                     idWaifu = (int)SummonKey.idOnSlot_1;
                     btnImg.sprite  = AssetLoader.Instance.Button[9];
+                    
                     break;
                 case 2:
                     idWaifu = (int)SummonKey.idOnSlot_2;

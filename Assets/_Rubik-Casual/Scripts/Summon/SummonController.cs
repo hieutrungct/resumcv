@@ -13,13 +13,26 @@ namespace Rubik_Casual.Summon
         public FlipCardController GaCharCard;
         public Image iconWaifu, imageWaifu, iconTeckit_1, iconTeckit_10;
         public List<SummonSlot> lsBtnSummon;
-
+        public static SummonController instance;
+        void Awake()
+        {
+            instance = this;
+        }
     
         public void OnClickActiveSummon()
         {
             gameObject.SetActive(true);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: true);
             GaCharCard.idSummon = ((int)SummonKey.idOnSlot_1);
+
+        }
+        public void OnClickScrollSummon(InfoWaifuAsset infoWaifu)
+        {
+            gameObject.SetActive(true);
+            HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: true);
+            GaCharCard.idSummon = infoWaifu.ID;
+            imageWaifu.sprite = AssetLoader.instance.GetImageWaifuByIndex("Pet"+ infoWaifu.Code +"_Big");
+            iconWaifu.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
 
         }
         public void OnClickHideSummon()
@@ -44,13 +57,9 @@ namespace Rubik_Casual.Summon
         {
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(((int)lsBtnSummon[id].key));
             imageWaifu.sprite = AssetLoader.instance.GetImageWaifuByIndex("Pet"+ infoWaifu.Code +"_Big");
-            
-            // iconWaifu.sprite = lsBtnSummon[id].iconWaifu.sprite;
-            
-            // iconWaifu.sprite = AssetLoader.instance.GetAvatarById(infoWaifu.Code);
             iconWaifu.sprite = AssetLoader.Instance.GetAvatarByIndex(DataController.instance.characterAssets.GetIndexWaifu(infoWaifu.ID));
-            
 
+            
         }
         string GetNameImageWaifu(SummonSlot summonSlot)
         {

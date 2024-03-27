@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using RubikCasual.SummonSliders;
-using RubikCasual.Tool;
 using UnityEngine;
 namespace RubikCasual.ScrollSummon
 {
@@ -59,7 +58,7 @@ namespace RubikCasual.ScrollSummon
             lsSummonSlider[IndexSlider].indexSummon = indexSummon;
             lsSummonSlider[IndexSlider].transform.position = transformFut.position;
             lsSummonSlider[IndexSlider].SetUpSlider();
-            Debug.Log("Xét lại toạ độ");
+            // Debug.Log("Xét lại toạ độ");
         }
 
         
