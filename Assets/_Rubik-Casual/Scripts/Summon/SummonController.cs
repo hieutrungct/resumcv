@@ -30,7 +30,6 @@ namespace Rubik_Casual.Summon
         }
         public void OnClickScrollSummon(InfoWaifuAsset infoWaifu, int indexSummon)
         {
-            GaCharCard.Id = indexSummon;
             uiButton.OnButtonClick(indexSummon);
             gameObject.SetActive(true);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: true);
@@ -45,12 +44,12 @@ namespace Rubik_Casual.Summon
             HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true,Ticket: false);
 
         }
-        // public void OnclickButton(int id)
-        // {
-        //     GaCharCard.gameObject.SetActive(true);
-        //     GaCharCard.Id = id;
+        public void OnclickButton(int id)
+        {
+            GaCharCard.Id = id;
+            GaCharCard.OnClickSummon();
             
-        // }
+        }
         public void OnClickSummon(int id)
         {
             GaCharCard.idSummon = ((int)lsBtnSummon[id].key);
