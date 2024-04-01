@@ -16,6 +16,7 @@ namespace RubikCasual.SummonSliders
         public int indexSummon, idWaifu;
         public Image btnImg, avaWaifu;
         public TextMeshProUGUI nametxt;
+        public SummonController summonController;
         void Start()
         {
             SetUpSlider();
@@ -24,6 +25,7 @@ namespace RubikCasual.SummonSliders
         
         public void SetUpSlider()
         {
+            
             SetUpIdWaifuByIndexSummon(indexSummon);
             InfoWaifuAsset infoWaifu = DataController.instance.GetInfoWaifuAssetsByIndex(idWaifu);
             // Debug.Log("id chuyển vào"+infoWaifu.ID);
@@ -34,7 +36,7 @@ namespace RubikCasual.SummonSliders
             {
                 btn.onClick.AddListener(() =>
                 {
-                    SummonController.instance.OnClickScrollSummon(infoWaifu);
+                    summonController.OnClickScrollSummon(infoWaifu, indexSummon);
                 });
             }
         }
@@ -42,34 +44,34 @@ namespace RubikCasual.SummonSliders
         {
             switch (index)
             {
-                case 1:
-                    idWaifu = (int)SummonKey.idOnSlot_1;
+                case 0:
+                    idWaifu = (int)SummonKey.idOnSlot_0;
                     btnImg.sprite  = AssetLoader.Instance.Button[9];
                     
                     break;
-                case 2:
-                    idWaifu = (int)SummonKey.idOnSlot_2;
+                case 1:
+                    idWaifu = (int)SummonKey.idOnSlot_1;
                     btnImg.sprite  = AssetLoader.Instance.Button[6];
                     break;
-                case 3:
-                    idWaifu = (int)SummonKey.idOnSlot_3;
+                case 2:
+                    idWaifu = (int)SummonKey.idOnSlot_2;
                     btnImg.sprite  = AssetLoader.Instance.Button[5];
 
                     break;
+                case 3:
+                    idWaifu = (int)SummonKey.idOnSlot_3;
+                    btnImg.sprite  = AssetLoader.Instance.Button[4];
+                    break;
                 case 4:
                     idWaifu = (int)SummonKey.idOnSlot_4;
-                    btnImg.sprite  = AssetLoader.Instance.Button[4];
+                    btnImg.sprite  = AssetLoader.Instance.Button[7];
                     break;
                 case 5:
                     idWaifu = (int)SummonKey.idOnSlot_5;
-                    btnImg.sprite  = AssetLoader.Instance.Button[7];
+                    btnImg.sprite  = AssetLoader.Instance.Button[2];
                     break;
                 case 6:
                     idWaifu = (int)SummonKey.idOnSlot_6;
-                    btnImg.sprite  = AssetLoader.Instance.Button[2];
-                    break;
-                case 7:
-                    idWaifu = (int)SummonKey.idOnSlot_7;
                     btnImg.sprite  = AssetLoader.Instance.Button[3];
                     break;
                 default:

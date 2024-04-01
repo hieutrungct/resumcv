@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.Data;
 using RubikCasual.FlipCard2;
+using RubikCasual.UIButtonController;
 using RubikCasual.Waifu;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ namespace Rubik_Casual.Summon
         public FlipCardController GaCharCard;
         public Image iconWaifu, imageWaifu, iconTeckit_1, iconTeckit_10;
         public List<SummonSlot> lsBtnSummon;
+        public UIButtonController uiButton;
         public static SummonController instance;
         void Awake()
         {
@@ -23,11 +25,13 @@ namespace Rubik_Casual.Summon
         {
             gameObject.SetActive(true);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: true);
-            GaCharCard.idSummon = ((int)SummonKey.idOnSlot_1);
+            GaCharCard.idSummon = ((int)SummonKey.idOnSlot_0);
 
         }
-        public void OnClickScrollSummon(InfoWaifuAsset infoWaifu)
+        public void OnClickScrollSummon(InfoWaifuAsset infoWaifu, int indexSummon)
         {
+            GaCharCard.Id = indexSummon;
+            uiButton.OnButtonClick(indexSummon);
             gameObject.SetActive(true);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:true,Gem:true,Ticket: true);
             GaCharCard.idSummon = infoWaifu.ID;
@@ -41,16 +45,17 @@ namespace Rubik_Casual.Summon
             HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true,Ticket: false);
 
         }
-        public void OnclickButton(int id)
-        {
-            GaCharCard.gameObject.SetActive(true);
-            GaCharCard.Id = id;
+        // public void OnclickButton(int id)
+        // {
+        //     GaCharCard.gameObject.SetActive(true);
+        //     GaCharCard.Id = id;
             
-        }
+        // }
         public void OnClickSummon(int id)
         {
             GaCharCard.idSummon = ((int)lsBtnSummon[id].key);
             GaCharCard.isClick = false;
+            GaCharCard.Id = id;
             SetUpSummon(id);
         }
         public void SetUpSummon( int id)

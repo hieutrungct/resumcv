@@ -8,7 +8,7 @@ namespace RubikCasual.ScrollSummon
     public class ScrollSummonController : MonoBehaviour
     {
         public List<SummonSlider> lsSummonSlider;
-        public int IndexSlider, indexSummon = 2;
+        public int IndexSlider, indexSummon = 1;
         public Transform transformFut, transformCus;
         // Start is called before the first frame update
         void Start()
@@ -47,9 +47,9 @@ namespace RubikCasual.ScrollSummon
         }
         public void SetUpSliderById()
         {
-            if(indexSummon > 6)
+            if(indexSummon > 5)
             {
-                indexSummon = 1;
+                indexSummon = 0;
             }
             else
             {

@@ -57,12 +57,12 @@ public class Config : MonoBehaviour
 }
 public enum SummonKey
 {
-    idOnSlot_1 = 15, //có màu chủ đạo đang là #FFD700
-    idOnSlot_2 = 37, //có màu chủ đạo đang là #FF0000
-    idOnSlot_3 = 44, //có màu chủ đạo đang là #BD44C6
-    idOnSlot_4 = 46, //có màu chủ đạo đang là #FF4F00
-    idOnSlot_5 = 118, //có màu chủ đạo đang là #1E90FF
-    idOnSlot_6 = 68, //có màu chủ đạo đang là #696969
-    idOnSlot_7 = 77 //có màu chủ đạo đang là #00FF00
+    idOnSlot_0 = 15, //có màu chủ đạo đang là #FFD700
+    idOnSlot_1 = 37, //có màu chủ đạo đang là #FF0000
+    idOnSlot_2 = 44, //có màu chủ đạo đang là #BD44C6
+    idOnSlot_3 = 46, //có màu chủ đạo đang là #FF4F00
+    idOnSlot_4 = 118, //có màu chủ đạo đang là #1E90FF
+    idOnSlot_5 = 68, //có màu chủ đạo đang là #696969
+    idOnSlot_6 = 77 //có màu chủ đạo đang là #00FF00
 }
 
