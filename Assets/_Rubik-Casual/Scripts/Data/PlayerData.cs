@@ -53,6 +53,7 @@ namespace RubikCasual.Data.Player
             Level = 1;
             Energy = 60;
             Ticket = 10;
+            battlePass = new BattlePass();
             for (int i = 0; i < 5; i++)
             {
                 curentTeams.Add(new CurentTeam() { ID = 0, SkinCheck = false });
@@ -87,7 +88,10 @@ namespace RubikCasual.Data.Player
         public double ExpLevelPass;
         public int LevelPass;
         public bool GoldPass = false;
-        
+        public BattlePass()
+        {
+            LevelPass = 1;  // Khởi tạo giá trị mặc định cho LevelPass khi khởi tạo BattlePass
+        }
 
     }
     

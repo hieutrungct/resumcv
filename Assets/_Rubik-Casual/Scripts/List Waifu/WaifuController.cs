@@ -4,6 +4,7 @@ using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Tool;
+using RubikCasual.UIButtonController;
 using RubikCasual.Waifu;
 using TMPro;
 using UnityEngine;
@@ -11,7 +12,8 @@ namespace Rubik.ListWaifu
 {
     public class WaifuController : MonoBehaviour
     {
-        public GameObject gbTaget, gbPopupOpen;
+        public GameObject gbPopupOpen;
+        public UIButtonController btnTaget;
         public static WaifuController instance;
         // public DataController listWaifu;
         public WaifuItem slot_Waifu;
@@ -21,7 +23,6 @@ namespace Rubik.ListWaifu
         private List<PlayerOwnsWaifu> sortedWaifus;
         //list
         public TextMeshProUGUI textListSortLever, textListSortRarity, textListSortPower;
-        public int a, b, c;
 
         private float count;
         private bool isFirstClick = true;
@@ -119,8 +120,10 @@ namespace Rubik.ListWaifu
                         break;
                     }
                 case SortingType.Power:
-                    SortPower();
-                    break;
+                    {
+                        SortPower();
+                        break;
+                    }
                 default:
                     {
                         break;
@@ -166,13 +169,13 @@ namespace Rubik.ListWaifu
             {
                 InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
                 InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
-                int result = (charA.Pow + charA.ATK).CompareTo(charB.Pow + charB.ATK);
+                int result = (charB.Pow + charB.ATK).CompareTo(charA.Pow + charA.ATK);
                 if (result == 0)
                 {
-                    result = charA.level.CompareTo(charB.level);
+                    result = charB.level.CompareTo(charA.level);
                     if (result == 0)
                     {
-                        return infoWaifuA.Rare.CompareTo(infoWaifuB.Rare);
+                        return infoWaifuB.Rare.CompareTo(infoWaifuA.Rare);
                     }
                 }
                 return result;
@@ -259,12 +262,21 @@ namespace Rubik.ListWaifu
         {
             gbPopupOpen.SetActive(true);
             HUDController.instanse.UpdateTopPanel(Energe:false,Gold:false,Gem:false,Ticket: false);
-            CreateWaifu();
+            OnSortButtonClickedLever();
+            SetUpTagetListTypeWaifu(true, false, false);
+            SortRarityAndLevel();
+
         }
         public void ClosePopup()
         {
             gbPopupOpen.SetActive(false);
             HUDController.instanse.UpdateTopPanel(Energe:true,Gold:true,Gem:true,Ticket: false);
+        }
+        void SetUpTagetListTypeWaifu(bool level, bool rarity, bool power )
+        {
+            btnTaget.gameObjects[0].SetActive(level);
+            btnTaget.gameObjects[1].SetActive(rarity);
+            btnTaget.gameObjects[2].SetActive(power);
         }
     }
 }
