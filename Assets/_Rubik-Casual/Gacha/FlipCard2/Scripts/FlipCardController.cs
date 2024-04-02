@@ -54,7 +54,7 @@ namespace RubikCasual.FlipCard2
         }
         void Start()
         {
-
+            
             dataController = DataController.instance;
             TxtBtn = btnGetWaifu.transform.Find(NameGbFlipCard.NameGbTxtGetWaifu).GetComponent<TextMeshProUGUI>();
             gbTicket.transform.Find(NameGbFlipCard.NameGbTxtValue).GetComponent<TextMeshProUGUI>().text = dataController.userData.Ticket.ToString();
@@ -83,7 +83,19 @@ namespace RubikCasual.FlipCard2
             
             
         }
+        public void OnClickSummon()
+        {
+            gameObject.SetActive(true);
+            StartCoroutine(InvokeBtnGacha());
+        }
+        private IEnumerator InvokeBtnGacha()
+        {
+            // Chờ một khoảng thời gian nhất định trước khi gọi hàm BtnGacha()
+            yield return new WaitUntil(() => gameObject.activeInHierarchy); // Thay đổi giá trị này nếu cần
 
+            BtnGacha();
+        }
+        
         void BtnGacha()
         {
             int timeSpawnCard;

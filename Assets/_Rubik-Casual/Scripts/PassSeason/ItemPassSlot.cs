@@ -63,12 +63,12 @@ namespace RubikCasual.ItemPassSlots
                     itemClaim.SetActive(false);
                     Checked = true;
                     btn.interactable = false;
-                    Debug.Log("true: " + id);
+                    // Debug.Log("true: " + id);
                 }
                 else
                 {
                     itemChecked.SetActive(false);
-                    Debug.Log("false: " + id);
+                    // Debug.Log("false: " + id);
 
                 }
             }
@@ -81,6 +81,7 @@ namespace RubikCasual.ItemPassSlots
         }
         public void SetUpItemFree(ItemPass item)
         {
+            Debug.Log((int)item.itemName);
             itemImg.sprite = AssetLoader.instance.ItemPass[(int)item.itemName];
             txtItem.text = item.Count.ToString();
             var btns = GetComponent<Button>();
@@ -119,12 +120,12 @@ namespace RubikCasual.ItemPassSlots
                 itemClaim.SetActive(false);
                 Checked = true;
                 btns.interactable = false;
-                Debug.Log("true: " + id);
+                // Debug.Log("true: " + id);
             }
             else
             {
                 itemChecked.SetActive(false);
-                Debug.Log("false: " + id);
+                // Debug.Log("false: " + id);
 
             }
 

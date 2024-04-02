@@ -19,7 +19,7 @@ namespace RubikCasual.Pass
         {
             listItemFree = JsonUtility.FromJson<ListItems>(itemPassFreeTxt.text);
             listItemGold = JsonUtility.FromJson<ListItems>(itemPassGoldTxt.text);
-            SetUp();
+            // SetUp();
         }
         public void SetUp()
         {
@@ -32,6 +32,11 @@ namespace RubikCasual.Pass
                 itemPassGold[i].SetUpItemGold(listItemGold.lsItem[i]);
                 
             }
+        }
+        public void OnClickOpenReward()
+        {
+            gameObject.SetActive(true);
+            SetUp();
         }
 
 
