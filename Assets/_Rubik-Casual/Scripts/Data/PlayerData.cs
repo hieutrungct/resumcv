@@ -57,6 +57,7 @@ namespace RubikCasual.Data.Player
             {
                 curentTeams.Add(new CurentTeam() { ID = 0, SkinCheck = false });
             }
+            
 
         }
         public static UserData GetDefaultUserData()
@@ -83,7 +84,8 @@ namespace RubikCasual.Data.Player
     [Serializable]
     public class BattlePass
     {
-        public double LevelPass, ExpLevelPass;
+        public double ExpLevelPass;
+        public int LevelPass;
         public bool GoldPass = false;
         
 

@@ -13,37 +13,43 @@ namespace RubikCasual.ScrollSummon
         // Start is called before the first frame update
         void Start()
         {
-            InvokeRepeating("OpenPopup", 5f, 5f);
+            InvokeRepeating("ScrollSlide", 5f, 5f);
         }
         
-        public void OpenPopup()
+        public void ScrollSlide()
         {
             
             
-            if(IndexSlider == 0)
-            {
-                lsSummonSlider[IndexSlider + 1].transform.DOMoveX(gameObject.transform.position.x,1f);
-                lsSummonSlider[IndexSlider].transform.DOMoveX(transformCus.position.x,0.7f)
-                .OnComplete(()=>{
-                    SetUpSliderById();
-                    IndexSlider = 1;
-                });
+            // if(IndexSlider == 0)
+            // {
+            //     lsSummonSlider[IndexSlider + 1].transform.DOMoveX(gameObject.transform.position.x,1f);
+            //     lsSummonSlider[IndexSlider].transform.DOMoveX(transformCus.position.x,1f)
+            //     .OnComplete(()=>{
+            //         SetUpSliderById();
+            //         IndexSlider = 1;
+            //     });
                 
 
-            }
-            else
-            {
-                lsSummonSlider[IndexSlider - 1].transform.DOMoveX(gameObject.transform.position.x,1f);
-                lsSummonSlider[IndexSlider].transform.DOMoveX(transformCus.position.x,0.7f)
-                .OnComplete(()=>{
-                    SetUpSliderById();
-                    IndexSlider = 0;
-                });
+            // }
+            // else
+            // {
+            //     lsSummonSlider[IndexSlider - 1].transform.DOMoveX(gameObject.transform.position.x,1f);
+            //     lsSummonSlider[IndexSlider].transform.DOMoveX(transformCus.position.x,1f)
+            //     .OnComplete(()=>{
+            //         SetUpSliderById();
+            //         IndexSlider = 0;
+            //     });
                 
-            }
-            
+            // }
+            int nextIndexSlider = (IndexSlider == 0) ? 1 : 0;
+            int value = (IndexSlider == 0) ? -1 : 1;
+            lsSummonSlider[nextIndexSlider].transform.DOMoveX(gameObject.transform.position.x,1f);
+            lsSummonSlider[nextIndexSlider + value].transform.DOMoveX(transformCus.position.x,1f)
+            .OnComplete(()=>{
+                SetUpSliderById();
+                IndexSlider = nextIndexSlider;
+            });
 
-            
         }
         public void SetUpSliderById()
         {
