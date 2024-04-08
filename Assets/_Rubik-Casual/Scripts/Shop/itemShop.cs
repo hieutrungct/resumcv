@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.RewardPass;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 namespace RubikCasual.Shop
@@ -16,12 +17,15 @@ namespace RubikCasual.Shop
         public ItemEnum itemEnum;
         public double quantity, purchaseCost;
         public shopItems itemType;
+        public ItemPass itemtype;
         void Start()
         {
             SetUpItem();
         }
+        
         public void SetUpItem()
         {
+            itemtype.itemName = itemEnum;
             var btn = GetComponent<Button>();
             if (btn != null)
             {
@@ -30,16 +34,16 @@ namespace RubikCasual.Shop
                     
                     if(itemType == shopItems.normalItem)
                     {
-                        ShopController.instance.OnClickItemNormal(quantity,purchaseCost);
+                        ShopController.instance.OnClickItemNormal((int)quantity,purchaseCost,gameObject, itemtype);
                     }
                     else if(itemType == shopItems.freeItem)
                     {
-                        ShopController.instance.OnClickItemFree(quantity,purchaseCost);
+                        ShopController.instance.OnClickItemFree((int)quantity,purchaseCost,gameObject, itemtype);
                     }
                     else
                     {
-                        ShopController.instance.OnClickTopUpItem(quantity,purchaseCost);
-                        Debug.Log("Nạp tiền đi bạn ơi :) ");
+                        ShopController.instance.OnClickTopUpItem((int)quantity,purchaseCost,gameObject, itemtype);
+                        // Debug.Log("Nạp tiền đi bạn ơi :) ");
                     }
                 });
             }
