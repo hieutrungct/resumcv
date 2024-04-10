@@ -2,75 +2,99 @@ using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.Data;
 using RubikCasual.StageLevel.UI;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace RubikCasual.StageLevel
 {
     public class StageLevelController : MonoBehaviour
     {
-        public LevelUI levelUI;
-        public GameObject gbNull;
-        public List<GameObject> lsLevelUI, lsGbNull;
-        public Transform TransTop, TransCentrel, TransBottom;
+        public LevelUIController levelUIController;
+        public List<GameObject> lsLevelUI;
+        public Transform TransCentrel;
         void Awake()
         {
 
         }
-        public void CreateLevel(int numberLevel)
-        {
-            if (lsLevelUI != null)
-            {
-                foreach (var item in lsGbNull)
-                {
-                    Destroy(item);
-                }
-                lsGbNull.Clear();
-                foreach (var item in lsLevelUI)
-                {
-                    Destroy(item);
-                }
-                lsLevelUI.Clear();
-            }
 
-            for (int i = 0; i < numberLevel; i++)
+        // [Button]
+        void AddDotAround()
+        {
+            for (int i = 0; i < lsLevelUI.Count; i++)
             {
-                int rand = UnityEngine.Random.Range(0, 3);
-                switch (rand)
+                for (int j = 0; j < 5; j++)
                 {
-                    case 0:
-                        lsLevelUI.Add(Instantiate(levelUI, TransTop).gameObject);
-                        lsGbNull.Add(Instantiate(gbNull, TransCentrel));
-                        lsGbNull.Add(Instantiate(gbNull, TransBottom));
-                        break;
-                    case 1:
-                        lsGbNull.Add(Instantiate(gbNull, TransTop));
-                        lsLevelUI.Add(Instantiate(levelUI, TransCentrel).gameObject);
-                        lsGbNull.Add(Instantiate(gbNull, TransBottom));
-                        break;
-                    case 2:
-                        lsGbNull.Add(Instantiate(gbNull, TransTop));
-                        lsGbNull.Add(Instantiate(gbNull, TransCentrel));
-                        lsLevelUI.Add(Instantiate(levelUI, TransBottom).gameObject);
-                        break;
+                    DotUI dotUI = lsLevelUI[i].GetComponent<LevelUIController>().GetDotUI((PosLevelUI)j);
+                    if (dotUI != null)
+                    {
+                        AddDotActiveAroundWithIndex(i, dotUI.posLevelUI);
+                    }
                 }
             }
         }
-        void CreateLevelTest(int countWay, int way, int slot, int rowMax)
+        void AddDotActiveAroundWithIndex(int index, PosLevelUI posLevelUI)
         {
-            if (way < countWay)
+            for (int i = 0; i < lsLevelUI.Count; i++)
             {
-                switch (slot)
+                LevelUIController levelUIControllerClone = lsLevelUI[index].GetComponent<LevelUIController>();
+                DotUI dotUITarget = levelUIControllerClone.GetDotUI(posLevelUI);
+                int posLevelUINumber = (int)posLevelUI;
+                if (index - 1 == i || index == i || index + 1 == i)
                 {
-                    case 0:
-                        int randSlotNext = UnityEngine.Random.Range(0, 2);
-                        lsLevelUI.Add(Instantiate(levelUI, TransTop).gameObject);
-                        lsLevelUI.Add(Instantiate(gbNull, TransCentrel));
-                        lsLevelUI.Add(Instantiate(gbNull, TransBottom));
+                    for (int j = 0; j < 5; j++)
+                    {
 
-                        CreateLevelTest(countWay, way + 1, randSlotNext, rowMax);
-                        break;
+                        DotUI dotUI = lsLevelUI[i].GetComponent<LevelUIController>().GetDotUI((PosLevelUI)j);
+                        if ((posLevelUINumber - 1 == j || posLevelUINumber == j || posLevelUINumber + 1 == j) && dotUI != null && dotUI != dotUITarget)
+                        {
+                            dotUITarget.AddListDotUIAround(dotUI);
+                        }
+                    }
                 }
+
             }
+            // Debug.Log(lsLevelUI[index].GetComponent<LevelUIController>().CheckActiveDot(posLevelUI));
+        }
+
+        [Button]
+        void Test(int CountWay, int lengthWay, int SlotStart)
+        {
+            CreateMapLevel(CountWay, lengthWay, SlotStart);
+            AddDotAround();
+        }
+        void CreateMapLevel(int CountWay, int lengthWay, int SlotStart)
+        {
+            if (CountWay > lengthWay)
+            {
+                LevelUIController levelUIControllerClone = Instantiate(levelUIController, TransCentrel);
+                levelUIControllerClone.SetIndexDot(lengthWay);
+                levelUIControllerClone.indexLength = CountWay;
+                for (int i = 0; i < 5; i++)
+                {
+                    if (lengthWay == 0)
+                    {
+                        levelUIControllerClone.SetActiveDotUI((PosLevelUI)SlotStart);
+                        levelUIControllerClone.SetImageDotFocusSprite((PosLevelUI)SlotStart);
+                    }
+                    else
+                    {
+                        levelUIControllerClone.SetActiveDotUI((PosLevelUI)i);
+                        levelUIControllerClone.SetImageDotNotCompleteSprite((PosLevelUI)i);
+                    }
+                }
+
+                lsLevelUI.Add(levelUIControllerClone.gameObject);
+                CreateMapLevel(CountWay, lengthWay + 1, SlotStart);
+            }
+        }
+        [Button]
+        void ResetLevel()
+        {
+            foreach (var item in lsLevelUI)
+            {
+                Destroy(item.gameObject);
+            }
+            lsLevelUI.Clear();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace RubikCasual.Stage.UI
                 DataController.instance.stageAssets.SetLsAssetData(stageAssetData.id);
 
                 stageLevelController.gameObject.SetActive(true);
-                stageLevelController.CreateLevel(stageAssetData.NumberLevelAttack);
+                // stageLevelController.CreateLevel(stageAssetData.NumberLevelAttack);
             });
         }
     }

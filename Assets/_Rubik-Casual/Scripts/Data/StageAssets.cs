@@ -47,7 +47,7 @@ namespace RubikCasual.Data
     {
         public int id;
         public string NameStage, Path;
-        public int NumberLevelAttack;
+        public int NumberLevelAttack, NumberShop;
     }
     public class StageAssets : MonoBehaviour
     {
@@ -104,7 +104,7 @@ namespace RubikCasual.Data
 
             return result;
         }
-        [Button]
+        // [Button]
         void LoadStageAssets()
         {
             foreach (JSONNode item in JSON.Parse(this.stageAssetDatas.text))
