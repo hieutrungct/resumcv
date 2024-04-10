@@ -14,8 +14,8 @@ namespace RubikCasual.CreateSkill.Panel
         public TMP_InputField inputFieldIdItem, inputFieldValuableItem, inputFieldWinWithStar;
         public TMP_Dropdown dropdownNameItem, dropdownTypeItem;
         public TextMeshProUGUI txtNumberStarNow, txtNotification;
-        public List<Data.RewardWinStage> lsRewardWinStage = new List<Data.RewardWinStage>();
-        RewardWinStage rewardWinStage = new RewardWinStage();
+        public List<Data.RewardWinLevelStage> lsRewardWinStage = new List<Data.RewardWinLevelStage>();
+        RewardWinLevelStage rewardWinStage = new RewardWinLevelStage();
         float OriginPosX;
         bool isHidePopup;
         public static InfoRewardWinStagePanel instance;
@@ -62,7 +62,7 @@ namespace RubikCasual.CreateSkill.Panel
         }
         public void AddItemIntoList()
         {
-            rewardWinStage = new RewardWinStage();
+            rewardWinStage = new RewardWinLevelStage();
             if (lsRewardWinStage.Count == 0 || (lsRewardWinStage.Find(f => f.winWithStar == int.Parse(inputFieldWinWithStar.text)) == null) && int.Parse(inputFieldWinWithStar.text) < 6)
             {
                 rewardWinStage.idItemReward = int.Parse(inputFieldIdItem.text);
@@ -74,7 +74,7 @@ namespace RubikCasual.CreateSkill.Panel
                 lsRewardWinStage.Add(rewardWinStage);
             }
 
-            txtNumberStarNow.text ="Number Star: "+ lsRewardWinStage.Count.ToString();
+            txtNumberStarNow.text = "Number Star: " + lsRewardWinStage.Count.ToString();
         }
         public void ShowAndHidePopup()
         {

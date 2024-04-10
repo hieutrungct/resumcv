@@ -11,21 +11,21 @@ using UnityEngine;
 namespace RubikCasual.Data
 {
     [Serializable]
-    public class RewardWinStage
+    public class RewardWinLevelStage
     {
         public int idItemReward, valuableItem, winWithStar;
         public DailyItem.TypeItem typeItem;
         public DailyItem.NameItem nameItem;
     }
     [Serializable]
-    public class InfoStageAssetsData
+    public class InfoLevelStageAssetsData
     {
-        public int TurnStage;
+        public int TurnLevelStage;
         public float Attribute;
         public string Slot0, Slot1, Slot2, Slot3, Slot4;
     }
     [Serializable]
-    public class ConvertStageAssetsData
+    public class ConvertLevelStageAssetsData
     {
         public float TurnStage, Attribute;
         public List<string> lsValueSlot = new List<string>();
@@ -36,55 +36,40 @@ namespace RubikCasual.Data
         public int intValue;
     }
     [Serializable]
-    public class StageAssetsData
+    public class LevelStageAssetsData
     {
-        public List<RewardWinStage> lsRewardWinStage;
+        public List<RewardWinLevelStage> lsRewardWinStage;
         public TypeMap typeMap;
-        public List<InfoStageAssetsData> lsStageAssetsDatas;
+        public List<InfoLevelStageAssetsData> lsStageAssetsDatas;
     }
-
+    [Serializable]
+    public class StageAssetData
+    {
+        public int id;
+        public string NameStage, Path;
+        public int NumberLevelAttack, NumberShop;
+    }
     public class StageAssets : MonoBehaviour
     {
-        public List<ConvertStageAssetsData> lsConvertStageAssetsData;
-        public StageAssetsData stageAssetsData;
+        public List<ConvertLevelStageAssetsData> lsConvertLevelStageAssetsData;
+        public LevelStageAssetsData levelStageAssetsData;
+        public List<StageAssetData> lsStageAssetData;
         public List<TextAsset> lsAssetData;
-        public int idTest, indexStage;
+        public TextAsset stageAssetDatas;
+        public int indexStage;
         public static StageAssets instance;
         protected void Awake()
         {
             instance = this;
-            LoadStageAssets(indexStage);
+            // LoadLevelStageAssets(indexStage);
+            LoadStageAssets();
         }
-        IEnumerator ConvertStageAssets()
-        {
-            if (lsConvertStageAssetsData != null)
-            {
-                lsConvertStageAssetsData.Clear();
-            }
-            yield return new WaitForSeconds(0.25f);
-            foreach (var item in stageAssetsData.lsStageAssetsDatas)
-            {
-                ConvertStageAssetsData clone = new ConvertStageAssetsData();
-                clone.TurnStage = item.TurnStage;
-                clone.Attribute = item.Attribute;
-                clone.lsValueSlot.Add(item.Slot0);
-                clone.lsValueSlot.Add(item.Slot1);
-                clone.lsValueSlot.Add(item.Slot2);
-                clone.lsValueSlot.Add(item.Slot3);
-                clone.lsValueSlot.Add(item.Slot4);
 
-                lsConvertStageAssetsData.Add(clone);
-            }
-        }
-        [Button]
-        public void TestRewardWinStage(int indexStar)
+
+        public RewardWinLevelStage GetRewardWinStage(int indexStar)
         {
-            Debug.Log(GetRewardWinStage(indexStar).winWithStar);
-        }
-        public RewardWinStage GetRewardWinStage(int indexStar)
-        {
-            RewardWinStage rewardWinStage = new RewardWinStage();
-            RewardWinStage rewardWinStageClone = stageAssetsData.lsRewardWinStage.Find(f => f.winWithStar == indexStar);
+            RewardWinLevelStage rewardWinStage = new RewardWinLevelStage();
+            RewardWinLevelStage rewardWinStageClone = levelStageAssetsData.lsRewardWinStage.Find(f => f.winWithStar == indexStar);
             if (rewardWinStageClone == null)
             {
                 return null;
@@ -119,11 +104,73 @@ namespace RubikCasual.Data
 
             return result;
         }
-        [Button]
-        public void LoadStageAssets(int index)
+        // [Button]
+        void LoadStageAssets()
         {
-            stageAssetsData = JsonUtility.FromJson<StageAssetsData>(JSON.Parse(this.lsAssetData[index].text).ToString());
-            StartCoroutine(ConvertStageAssets());
+            foreach (JSONNode item in JSON.Parse(this.stageAssetDatas.text))
+            {
+                StageAssetData stageAssetData = JsonUtility.FromJson<StageAssetData>(item.ToString());
+                lsStageAssetData.Add(stageAssetData);
+            }
+        }
+        [Button]
+        public void SetLsAssetData(int idStage)
+        {
+            lsAssetData.Clear();
+            StageAssetData stageAssetData = lsStageAssetData.Find(f => f.id == idStage);
+            if (stageAssetData == null)
+            {
+                Debug.LogError("stageAssetData null");
+                return;
+            }
+            for (int i = 1; i <= stageAssetData.NumberLevelAttack; i++)
+            {
+                TextAsset textAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>(stageAssetData.Path + "/Stage" + i + ".json");
+                lsAssetData.Add(textAsset);
+            }
+
+        }
+        public string GetNameStage(int idStage)
+        {
+            string nameStage = "";
+            foreach (var item in lsStageAssetData)
+            {
+                if (item.id == idStage)
+                {
+                    nameStage = item.NameStage;
+                }
+            }
+            return nameStage;
+        }
+
+
+
+        [Button]
+        public void LoadLevelStageAssets(int index)
+        {
+            levelStageAssetsData = JsonUtility.FromJson<LevelStageAssetsData>(JSON.Parse(this.lsAssetData[index].text).ToString());
+            ConvertStageAssets();
+        }
+        void ConvertStageAssets()
+        {
+            if (lsConvertLevelStageAssetsData != null)
+            {
+                lsConvertLevelStageAssetsData.Clear();
+            }
+            // yield return new WaitForSeconds(0.25f);
+            foreach (var item in levelStageAssetsData.lsStageAssetsDatas)
+            {
+                ConvertLevelStageAssetsData clone = new ConvertLevelStageAssetsData();
+                clone.TurnStage = item.TurnLevelStage;
+                clone.Attribute = item.Attribute;
+                clone.lsValueSlot.Add(item.Slot0);
+                clone.lsValueSlot.Add(item.Slot1);
+                clone.lsValueSlot.Add(item.Slot2);
+                clone.lsValueSlot.Add(item.Slot3);
+                clone.lsValueSlot.Add(item.Slot4);
+
+                lsConvertLevelStageAssetsData.Add(clone);
+            }
         }
     }
 

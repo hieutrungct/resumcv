@@ -111,7 +111,7 @@ namespace RubikCasual.Battle.UI
             {
                 for (int i = 0; i < popupResultWin.NumberStarReward; i++)
                 {
-                    RewardWinStage rewardWinStage = DataController.instance.stageAssets.stageAssetsData.lsRewardWinStage[i];
+                    RewardWinLevelStage rewardWinStage = DataController.instance.stageAssets.levelStageAssetsData.lsRewardWinStage[i];
                     switch (rewardWinStage.nameItem)
                     {
                         case DailyItem.NameItem.Coins:

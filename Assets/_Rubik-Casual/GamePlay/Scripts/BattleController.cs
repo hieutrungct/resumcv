@@ -72,7 +72,7 @@ namespace RubikCasual.Battle
         public void StartGame()
         {
 
-            if (gameState == GameState.WAIT_BATTLE && isCompleteMove && CountState != (dataController.stageAssets.lsConvertStageAssetsData.Count + 1))
+            if (gameState == GameState.WAIT_BATTLE && isCompleteMove && CountState != (dataController.stageAssets.lsConvertLevelStageAssetsData.Count + 1))
             {
                 // UnityEngine.Debug.Log("h ms dc bấm");
                 gameState = GameState.START;
@@ -258,8 +258,8 @@ namespace RubikCasual.Battle
                 for (int j = 0; j < lsPosSlot.lsPosCharacterSlot.Count; j++)
                 {
                     int indexOfSlot = j + 5 * idRowSlot;
-                    int idValueInSlot = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertStageAssetsData[idStage].lsValueSlot[j]).intValue;
-                    string valueSlotStage = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertStageAssetsData[idStage].lsValueSlot[j]).stringValue;
+                    int idValueInSlot = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertLevelStageAssetsData[idStage].lsValueSlot[j]).intValue;
+                    string valueSlotStage = dataController.stageAssets.GetNameAndId(dataController.stageAssets.lsConvertLevelStageAssetsData[idStage].lsValueSlot[j]).stringValue;
                     PositionCharacterSlot posSlot = lsPosSlot.lsPosCharacterSlot[j];
 
                     if (idValueInSlot != -1)
@@ -268,13 +268,13 @@ namespace RubikCasual.Battle
                         {
                             // UnityEngine.Debug.Log(enemyAssets.WaifuEnemyAssetDatas.FirstOrDefault(f => f.Index == enemyAssets.lsIdEnemy[indexRand]).Is_Boss);
                             mapBattleController.lsPosEnemySlot[index].lsPosCharacterSlot[j].id = idValueInSlot;
-                            switch (dataController.stageAssets.stageAssetsData.typeMap)
+                            switch (dataController.stageAssets.levelStageAssetsData.typeMap)
                             {
                                 case CreateSkill.Panel.TypeMap.Default_Map:
-                                    attribute = dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
+                                    attribute = dataController.stageAssets.lsConvertLevelStageAssetsData[idStage].Attribute;
                                     break;
                                 case CreateSkill.Panel.TypeMap.Infinity_Map:
-                                    attribute *= dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
+                                    attribute *= dataController.stageAssets.lsConvertLevelStageAssetsData[idStage].Attribute;
                                     break;
                                     // case CreateSkill.Panel.TypeMap.Challenge_Map:
                                     // attribute = dataController.stageAssets.lsConvertStageAssetsData[idStage].Attribute;
@@ -718,7 +718,7 @@ namespace RubikCasual.Battle
             isEndBattle = false;
             isRangeRemoved = false;
             CountState++;
-            if (dataController.stageAssets.lsConvertStageAssetsData.Count < CountState && dataController.stageAssets.lsConvertStageAssetsData.Count != 0)
+            if (dataController.stageAssets.lsConvertLevelStageAssetsData.Count < CountState && dataController.stageAssets.lsConvertLevelStageAssetsData.Count != 0)
             {
                 gameState = GameState.END;
                 UIGamePlay.instance.chosePopupVictory = true;
