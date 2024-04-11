@@ -9,6 +9,8 @@ namespace RubikCasual.Shop
     public class ShopController : MonoBehaviour
     {
         public static ShopController instance;
+        public double count;
+        public bool check = false;
         void Awake()
         {
             instance = this;
@@ -30,8 +32,22 @@ namespace RubikCasual.Shop
         }
         public void OnClickItemFree(int quantity,double purchaseCost, GameObject itemObj, ItemPass itemtype)
         {
-            HUDController.instanse.Increase(itemObj.transform.position, quantity, itemtype);
-            Debug.Log("bạn đã nhận free item");
+            if(check == false)
+            {
+                count = purchaseCost;
+                check = true;
+            }
+            if(count == 0)
+            {
+                HUDController.instanse.Increase(itemObj.transform.position, quantity, itemtype);
+                check = false;
+            }
+            else
+            {
+                count--;
+                Debug.Log("bạn cần coi " + count + " quảng cáo nữa mới được nhận");
+            }
+            
         }
         public void OnClickTopUpItem(int quantity,double purchaseCost, GameObject itemObj, ItemPass itemtype)
         {

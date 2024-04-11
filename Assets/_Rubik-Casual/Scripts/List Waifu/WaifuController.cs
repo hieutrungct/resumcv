@@ -274,9 +274,9 @@ namespace Rubik.ListWaifu
         }
         void SetUpTagetListTypeWaifu(bool level, bool rarity, bool power )
         {
-            btnTaget.gameObjects[0].SetActive(level);
-            btnTaget.gameObjects[1].SetActive(rarity);
-            btnTaget.gameObjects[2].SetActive(power);
+            btnTaget.gameObjects1[0].SetActive(level);
+            btnTaget.gameObjects1[1].SetActive(rarity);
+            btnTaget.gameObjects1[2].SetActive(power);
         }
     }
 }

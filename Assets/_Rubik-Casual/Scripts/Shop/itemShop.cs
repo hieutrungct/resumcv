@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.RewardPass;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 namespace RubikCasual.Shop
@@ -18,6 +19,8 @@ namespace RubikCasual.Shop
         public double quantity, purchaseCost;
         public shopItems itemType;
         public ItemPass itemtype;
+        public TextMeshProUGUI numberOfTurnsRemaining;
+        public GameObject gemItem;
         void Start()
         {
             SetUpItem();
@@ -38,7 +41,20 @@ namespace RubikCasual.Shop
                     }
                     else if(itemType == shopItems.freeItem)
                     {
+                        
                         ShopController.instance.OnClickItemFree((int)quantity,purchaseCost,gameObject, itemtype);
+                        numberOfTurnsRemaining.text = "x" + ShopController.instance.count.ToString();
+                        
+                        if(ShopController.instance.count == 0 && ShopController.instance.check == true)
+                        {
+                            gemItem.SetActive(false);
+                        }
+                        else if(ShopController.instance.count == 0 && ShopController.instance.check == false)
+                        {
+                            gemItem.SetActive(true);
+                            numberOfTurnsRemaining.text = "x3";
+                        }
+                        
                     }
                     else
                     {

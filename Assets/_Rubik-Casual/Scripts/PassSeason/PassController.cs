@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RubikCasual.Data;
 using RubikCasual.ItemPassSlots;
 using RubikCasual.RewardPass;
 using UnityEngine;
@@ -37,6 +38,7 @@ namespace RubikCasual.Pass
         {
             gameObject.SetActive(true);
             SetUp();
+            lvlPass.value = DataController.instance.playerData.userData.battlePass.LevelPass - 1;
         }
 
 
