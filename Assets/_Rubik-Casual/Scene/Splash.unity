@@ -2204,7 +2204,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
   - {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
   enemyAvatar: []
-  lsSpriteButton: []
+  lsSpriteButton:
+  - rare: 0
+    spriteButton: {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
+  - rare: 1
+    spriteButton: {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+  - rare: 2
+    spriteButton: {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+  - rare: 3
+    spriteButton: {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
   Hero: []
   Enemy: []
   RarrityBox:

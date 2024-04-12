@@ -123,9 +123,9 @@ namespace RubikCasual.Data
                 Debug.LogError("stageAssetData null");
                 return;
             }
-            for (int i = 1; i <= stageAssetData.NumberLevelAttack; i++)
+            for (int i = 0; i < stageAssetData.NumberLevelAttack; i++)
             {
-                TextAsset textAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>(stageAssetData.Path + "/Stage" + i + ".json");
+                TextAsset textAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>(stageAssetData.Path + "/Attack" + i + ".json");
                 lsAssetData.Add(textAsset);
             }
 

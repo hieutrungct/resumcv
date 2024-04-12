@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using NTPackage;
 using NTPackage.Functions;
+using RubikCasual.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,17 +14,20 @@ namespace RubikCasual.StageLevel.UI
     {
         public int id;
         public int index;
+
         public Image imageLvl, imageIcon;
         public IdentifyLevelStage identifyLevelStage;
         public List<GameObject> Path, star;
         public PosLevelUI posLevelUI;
         public List<DotUI> dotUIArounds;
         public bool isShowPath, isPathTarget;
+        IdentifyDot identifyDot;
         LevelUIController levelUIController;
         Sprite focusSprite, normalSprite, notCompleteSprite;
-
+        DataController dataController;
         void Awake()
         {
+            dataController = DataController.instance;
             imageLvl.gameObject.AddComponent<Button>().onClick.AddListener(() =>
             {
                 if (imageLvl.sprite == focusSprite && id < levelUIController.indexLength)
@@ -35,12 +39,27 @@ namespace RubikCasual.StageLevel.UI
                         levelUIController.TestSetImage(this.posLevelUI);
                         levelUIController.GetStageLevelController().AddIdentifyTurn(index, posLevelUI);
 
+                        if (identifyDot.typeDot == TypeDot.Attack)
+                        {
+                            dataController.stageAssets.LoadLevelStageAssets(identifyDot.Id);
+                        }
+
                         SetPathAround();
                         levelUIController.GetStageLevelController().SaveLevelStage();
+                        StartCoroutine(SwapGamePlay());
                     }
                     isShowPath = !isShowPath;
                 }
             });
+        }
+        IEnumerator SwapGamePlay()
+        {
+            yield return new WaitForSeconds(0.25f);
+            bl_SceneLoaderManager.LoadScene(NameScene.GAMEPLAY_SCENE);
+        }
+        public void SetUpIdentifyDot(IdentifyDot identifyDot)
+        {
+            this.identifyDot = identifyDot;
         }
         public void SetlevelController(LevelUIController levelUIController)
         {
@@ -87,12 +106,17 @@ namespace RubikCasual.StageLevel.UI
                         // else 
                         if (dotUIAround.index == this.index + 1)
                         {
+                            IdentifyDot identifyDot = new IdentifyDot();
                             dotUIAround.gameObject.SetActive(true);
                             if ((int)dotUIAround.posLevelUI == (int)posLevelUI - 1)
                             {
                                 this.GetPathActiveLevelUI(NamePath.Path_Top_Right);
                                 dotUIAround.SetImageDot(this.focusSprite);
                                 dotUIAround.GetRevertPathLevelUI(NamePath.Path_Top_Right);
+
+                                identifyDot.typeDot = TypeDot.Shop;
+                                dotUIAround.SetUpIdentifyDot(identifyDot);
+
                                 dotUIAround.isPathTarget = true;
                                 dotUIAround.id = id + 1;
 
@@ -102,6 +126,12 @@ namespace RubikCasual.StageLevel.UI
                                 this.GetPathActiveLevelUI(NamePath.Path_Right);
                                 dotUIAround.SetImageDot(this.focusSprite);
                                 dotUIAround.GetRevertPathLevelUI(NamePath.Path_Right);
+
+
+                                identifyDot.Id = dotUIAround.index;
+                                identifyDot.typeDot = TypeDot.Attack;
+                                dotUIAround.SetUpIdentifyDot(identifyDot);
+
                                 dotUIAround.isPathTarget = true;
                                 dotUIAround.id = id + 1;
                             }
@@ -110,6 +140,10 @@ namespace RubikCasual.StageLevel.UI
                                 this.GetPathActiveLevelUI(NamePath.Path_Bottom_Right);
                                 dotUIAround.SetImageDot(this.focusSprite);
                                 dotUIAround.GetRevertPathLevelUI(NamePath.Path_Bottom_Right);
+
+                                identifyDot.typeDot = TypeDot.Special;
+                                dotUIAround.SetUpIdentifyDot(identifyDot);
+
                                 dotUIAround.isPathTarget = true;
                                 dotUIAround.id = id + 1;
                             }
@@ -285,6 +319,17 @@ namespace RubikCasual.StageLevel.UI
             }
             return null;
         }
+    }
+    public class IdentifyDot
+    {
+        public int Id;
+        public TypeDot typeDot;
+    }
+    public enum TypeDot
+    {
+        Shop = 0,
+        Attack = 1,
+        Special = 2,
     }
     [Serializable]
     public class IdentifyLevelStage

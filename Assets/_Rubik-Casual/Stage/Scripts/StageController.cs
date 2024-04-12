@@ -19,7 +19,7 @@ namespace RubikCasual.Stage
         {
             LoadStageUI();
         }
-        // [Button]
+        [Button]
         void LoadStageUI()
         {
             foreach (StageAssetData stageAssetData in DataController.instance.stageAssets.lsStageAssetData)

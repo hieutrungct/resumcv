@@ -66,6 +66,11 @@ namespace RubikCasual.StageLevel
                     {
                         levelUIControllerClone.SetActiveDotUI((PosLevelUI)SlotStart);
                         levelUIControllerClone.SetImageDotFocusSprite((PosLevelUI)SlotStart);
+
+                        IdentifyDot identifyDot = new IdentifyDot();
+                        identifyDot.Id = 0;
+                        identifyDot.typeDot = TypeDot.Attack;
+                        levelUIControllerClone.GetDotUI((PosLevelUI)SlotStart).SetUpIdentifyDot(identifyDot);
                     }
                     else
                     {
@@ -208,7 +213,7 @@ namespace RubikCasual.StageLevel
             levelAsset = null;
             levelAssetData.identifyTurns.Clear();
             this.gameObject.SetActive(false);
-            
+
         }
     }
     [Serializable]
