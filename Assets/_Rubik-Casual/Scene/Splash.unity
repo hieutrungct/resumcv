@@ -1906,19 +1906,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373a3e601fff96f448a024f3bbcd3269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lsConvertStageAssetsData: []
-  stageAssetsData:
+  lsConvertLevelStageAssetsData: []
+  levelStageAssetsData:
     lsRewardWinStage: []
     typeMap: 0
     lsStageAssetsDatas: []
-  lsAssetData:
-  - {fileID: 4900000, guid: b90bc204f9d5a654dbe9dc4f40f3abe0, type: 3}
-  - {fileID: 4900000, guid: 09634ca766b95f94d89d6b6a2a952d04, type: 3}
-  - {fileID: 4900000, guid: 29a3e9e1671db8b4bb7004da34bad027, type: 3}
-  - {fileID: 4900000, guid: 001d38eb57d044f4abf208307e3eed7a, type: 3}
-  - {fileID: 4900000, guid: 125cfef352595444ab2718a8df758125, type: 3}
-  - {fileID: 4900000, guid: 752550a5d4b75e741aefa15fdfa81581, type: 3}
-  idTest: 0
+  lsStageAssetData: []
+  lsAssetData: []
+  stageAssetDatas: {fileID: 4900000, guid: 12bb93f6016ed514ca8c1a78638204ed, type: 3}
   indexStage: 0
 --- !u!1 &2950010415139075291
 GameObject:
@@ -1996,8 +1991,8 @@ MonoBehaviour:
       item_Receive_Count_free: 
       item_Receive_Count_Gold: 
       battlePass:
-        LevelPass: 0
         ExpLevelPass: 0
+        LevelPass: 0
         GoldPass: 0
     lsPlayerOwnsWaifu: []
     Inventory:
@@ -2032,8 +2027,8 @@ MonoBehaviour:
     item_Receive_Count_free: 
     item_Receive_Count_Gold: 
     battlePass:
-      LevelPass: 0
       ExpLevelPass: 0
+      LevelPass: 0
       GoldPass: 0
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   lsExpWithLevel: []
@@ -2209,7 +2204,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
   - {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
   enemyAvatar: []
-  lsSpriteButton: []
+  lsSpriteButton:
+  - rare: 0
+    spriteButton: {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
+  - rare: 1
+    spriteButton: {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+  - rare: 2
+    spriteButton: {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+  - rare: 3
+    spriteButton: {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
   Hero: []
   Enemy: []
   RarrityBox:
