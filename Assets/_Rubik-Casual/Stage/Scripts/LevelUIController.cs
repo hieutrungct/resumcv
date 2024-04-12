@@ -9,15 +9,17 @@ namespace RubikCasual.StageLevel.UI
 {
     public class LevelUIController : MonoBehaviour
     {
-
+        public int index;
         public List<DotUI> lsDotUI;
         public Sprite focusSprite, normalSprite, notCompleteSprite;
         public int indexLength;
         public bool isClickWay;
+        StageLevelController stageLevelController;
         void Awake()
         {
             SetImageDot();
             SetLevelController();
+            SetUpPosLevelUI();
         }
         void SetImageDot()
         {
@@ -33,6 +35,22 @@ namespace RubikCasual.StageLevel.UI
                 dotUI.SetlevelController(this);
             }
         }
+        public void SetUpPosLevelUI()
+        {
+            for (int i = 0; i < lsDotUI.Count; i++)
+            {
+                lsDotUI[i].posLevelUI = (PosLevelUI)i;
+            }
+        }
+        public void SetUpStageLevelController(StageLevelController stageLevelController)
+        {
+            this.stageLevelController = stageLevelController;
+        }
+        public StageLevelController GetStageLevelController()
+        {
+            return this.stageLevelController;
+        }
+
         public void TestSetImage(PosLevelUI posLevelUI)
         {
             foreach (DotUI dotUI in lsDotUI)
@@ -40,6 +58,16 @@ namespace RubikCasual.StageLevel.UI
                 if (posLevelUI != dotUI.posLevelUI)
                 {
                     dotUI.SetImageDot(notCompleteSprite);
+                }
+            }
+        }
+        public void HideDotAfterClickWay()
+        {
+            foreach (DotUI dotUI in lsDotUI)
+            {
+                if (!dotUI.isPathTarget)
+                {
+                    dotUI.gameObject.SetActive(false);
                 }
             }
         }
@@ -104,18 +132,24 @@ namespace RubikCasual.StageLevel.UI
             }
 
         }
+
         public void SetActiveDotUI(PosLevelUI posLevelUI)
         {
-            for (int i = 0; i < lsDotUI.Count; i++)
-            {
-                lsDotUI[i].posLevelUI = (PosLevelUI)i;
-            }
-
             foreach (DotUI dotUI in lsDotUI)
             {
                 if (posLevelUI == dotUI.posLevelUI)
                 {
                     dotUI.gameObject.SetActive(true);
+                }
+            }
+        }
+        public void SetHideDot(PosLevelUI posLevelUI)
+        {
+            foreach (DotUI dotUI in lsDotUI)
+            {
+                if (posLevelUI == dotUI.posLevelUI)
+                {
+                    dotUI.gameObject.SetActive(false);
                 }
             }
         }

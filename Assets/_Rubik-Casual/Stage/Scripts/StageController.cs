@@ -15,7 +15,11 @@ namespace RubikCasual.Stage
         public ItemStageUI itemStageUI;
         public List<GameObject> lsGateStage;
         public StageLevelController stageLevelController;
-        [Button]
+        void Awake()
+        {
+            LoadStageUI();
+        }
+        // [Button]
         void LoadStageUI()
         {
             foreach (StageAssetData stageAssetData in DataController.instance.stageAssets.lsStageAssetData)
@@ -25,6 +29,10 @@ namespace RubikCasual.Stage
                 itemStageUIClone.SetItemStageUI(stageAssetData, stageLevelController);
                 lsGateStage.Add(itemStageUIClone.gameObject);
             }
+        }
+        public void HidePopup()
+        {
+            this.gameObject.SetActive(false);
         }
     }
 }

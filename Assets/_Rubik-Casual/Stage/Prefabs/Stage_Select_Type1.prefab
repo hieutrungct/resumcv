@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &173252428
 MonoBehaviour:
@@ -1141,7 +1141,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6572664461310059559}
         m_TargetAssemblyTypeName: RubikCasual.Stage.StageController, Assembly-CSharp
-        m_MethodName: hideStage
+        m_MethodName: HidePopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1548,7 +1548,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 37932956716841826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 325078092012976439}
+        m_TargetAssemblyTypeName: RubikCasual.StageLevel.StageLevelController, Assembly-CSharp
+        m_MethodName: ResetLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1863484115698394840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,7 +2178,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6572664461310059559}
         m_TargetAssemblyTypeName: RubikCasual.Stage.StageController, Assembly-CSharp
-        m_MethodName: hideStage
+        m_MethodName: HidePopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3274,10 +3286,10 @@ RectTransform:
   m_Father: {fileID: 4429626032866354324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -39.5}
+  m_SizeDelta: {x: 21.999996, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4429626032639552422
 CanvasRenderer:
@@ -3415,7 +3427,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 32.1, y: 19.9}
-  m_SizeDelta: {x: 0, y: 79}
+  m_SizeDelta: {x: 80, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4429626032866354410
 CanvasRenderer:
@@ -3633,7 +3645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6507233472814561982
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3753,7 +3765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4851226585241516444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3792,6 +3804,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelUIController: {fileID: 7106015773037341800, guid: 22a7be041750e044f94f672cd041d30d, type: 3}
   lsLevelUI: []
+  levelAssetData:
+    idStage: 0
+    lengthWay: 0
+    identifyTurns: []
+  levelAsset: {fileID: 0}
   TransCentrel: {fileID: 173252427}
 --- !u!1 &5455134004103936041
 GameObject:

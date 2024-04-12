@@ -19,7 +19,7 @@ namespace RubikCasual.StageLevel.UI
         public PosLevelUI posLevelUI;
         public List<DotUI> dotUIArounds;
         public bool isShowPath, isPathTarget;
-        public LevelUIController levelUIController;
+        LevelUIController levelUIController;
         Sprite focusSprite, normalSprite, notCompleteSprite;
 
         void Awake()
@@ -33,7 +33,10 @@ namespace RubikCasual.StageLevel.UI
                         imageLvl.sprite = normalSprite;
                         levelUIController.isClickWay = true;
                         levelUIController.TestSetImage(this.posLevelUI);
+                        levelUIController.GetStageLevelController().AddIdentifyTurn(index, posLevelUI);
+
                         SetPathAround();
+                        levelUIController.GetStageLevelController().SaveLevelStage();
                     }
                     isShowPath = !isShowPath;
                 }
@@ -57,9 +60,9 @@ namespace RubikCasual.StageLevel.UI
             }
         }
 
-        void SetPathAround()
+        public void SetPathAround()
         {
-            if (id < 4)
+            if (id < levelUIController.indexLength)
             {
                 foreach (DotUI dotUIAround in dotUIArounds)
                 {
@@ -84,6 +87,7 @@ namespace RubikCasual.StageLevel.UI
                         // else 
                         if (dotUIAround.index == this.index + 1)
                         {
+                            dotUIAround.gameObject.SetActive(true);
                             if ((int)dotUIAround.posLevelUI == (int)posLevelUI - 1)
                             {
                                 this.GetPathActiveLevelUI(NamePath.Path_Top_Right);
@@ -91,6 +95,7 @@ namespace RubikCasual.StageLevel.UI
                                 dotUIAround.GetRevertPathLevelUI(NamePath.Path_Top_Right);
                                 dotUIAround.isPathTarget = true;
                                 dotUIAround.id = id + 1;
+
                             }
                             else if ((int)dotUIAround.posLevelUI == (int)posLevelUI)
                             {
@@ -108,10 +113,13 @@ namespace RubikCasual.StageLevel.UI
                                 dotUIAround.isPathTarget = true;
                                 dotUIAround.id = id + 1;
                             }
-
                         }
-
                     }
+                }
+
+                if (dotUIArounds.Find(f => f.index == index + 1) != null)
+                {
+                    dotUIArounds.Find(f => f.index == index + 1).levelUIController.HideDotAfterClickWay();
                 }
             }
         }
