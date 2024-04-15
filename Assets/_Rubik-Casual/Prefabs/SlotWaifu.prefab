@@ -1482,6 +1482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42619d9df76530c4fafd61c92a1e2e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   avaCard: {fileID: 0}
   attackType: {fileID: 6465240793845739091}
   avaBox: {fileID: 6651149600348247167}
@@ -1500,6 +1501,19 @@ MonoBehaviour:
   - {fileID: 8582394579834974020}
   - {fileID: 8582394579362187331}
   btnClick: {fileID: 0}
+  _waifu:
+    ID: 0
+    Star: 0
+    Exp: 0
+    IndexSkin: 0
+    IndexEvolution: 0
+    frag: 0
+    level: 0
+    HP: 0
+    DEF: 0
+    ATK: 0
+    Skill: 0
+    Pow: 0
 --- !u!114 &2412474139275241293
 MonoBehaviour:
   m_ObjectHideFlags: 0
