@@ -8,9 +8,29 @@ namespace RubikCasual.GamePlayManager
     {
         public void OnDrop(PointerEventData eventData)
         {
-            GameObject droped = eventData.pointerDrag;
-            MoveHero moveHero = droped.GetComponent<MoveHero>();
-            moveHero.parentAfterDrag = transform;
+            
+            if(transform.childCount == 0)
+            {  
+                GameObject droped = eventData.pointerDrag;
+                MoveHero moveHero = droped.GetComponent<MoveHero>();
+                moveHero.parentAfterDrag = transform;
+            }
+            else if(transform.childCount == 1)
+            {
+                GameObject dropped = eventData.pointerDrag;
+                MoveHero moveHero = dropped.GetComponent<MoveHero>();
+
+                GameObject child = transform.GetChild(0).gameObject;
+                MoveHero childMoveHero = child.GetComponent<MoveHero>();
+
+                // Di chuyển đối tượng con hiện tại đến InventorySlot của đối tượng mới được kéo vào
+                childMoveHero.transform.SetParent(moveHero.parentAfterDrag);
+                // childMoveHero.transform.position = moveHero.parentAfterDrag1;
+
+                // Cập nhật parentAfterDrag của đối tượng mới được kéo vào
+                moveHero.parentAfterDrag = transform;
+            }
+            
         }
     }
 }

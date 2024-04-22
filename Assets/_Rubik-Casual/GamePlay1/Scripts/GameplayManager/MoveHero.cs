@@ -10,7 +10,9 @@ namespace RubikCasual.GamePlayManager
     {
         public SkeletonGraphic UI_Waifu;
         [HideInInspector] public Transform parentAfterDrag;
+        // public Vector3 parentAfterDrag1;
         public Transform parentTransform;
+        public bool check;
 
         public void OnBeginDrag(PointerEventData eventData)
         {
@@ -20,13 +22,22 @@ namespace RubikCasual.GamePlayManager
             
             transform.SetAsLastSibling();
             UI_Waifu.raycastTarget = false;
+            
         }
 
         void IDragHandler.OnDrag(PointerEventData eventData)
         {
-            Debug.Log(Input.mousePosition);
-            // gameObject.transform.position =  Vector3.zero;
+            Debug.Log(MouseWorldPosittion());
             transform.position = MouseWorldPosittion();
+            // if (check == false)
+            // {
+            //     parentAfterDrag1 = MouseWorldPosittion();
+            //     check = true;
+            //     Debug.Log(parentAfterDrag1);
+            //     return;
+            // }
+            
+            
         }
 
         void IEndDragHandler.OnEndDrag(PointerEventData eventData)
@@ -34,6 +45,7 @@ namespace RubikCasual.GamePlayManager
             Debug.Log("Thả kéo");
             transform.SetParent(parentAfterDrag);
             UI_Waifu.raycastTarget = true;
+            check = false;
         }
         Vector3 MouseWorldPosittion()
         {
@@ -42,6 +54,7 @@ namespace RubikCasual.GamePlayManager
             return Camera.main.ScreenToWorldPoint(mouseScreenPos);
             
         }
+        
     }
 }
 

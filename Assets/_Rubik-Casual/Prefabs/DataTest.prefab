@@ -115,8 +115,8 @@ MonoBehaviour:
   Enemy: []
   RarrityBox:
   - {fileID: 21300000, guid: b56197178539f48009c713d5b5d04a81, type: 3}
-  - {fileID: 21300000, guid: 91d37967864564f818aaf9326fcf0302, type: 3}
   - {fileID: 21300000, guid: 08be456a6ddbf458784cf3a37e52822f, type: 3}
+  - {fileID: 21300000, guid: 91d37967864564f818aaf9326fcf0302, type: 3}
   - {fileID: 21300000, guid: 284f99482071f47839549747513b612b, type: 3}
   - {fileID: 21300000, guid: 072fc1e433b92438e915c6c10bfd2994, type: 3}
   RarrityAvaBox: []
@@ -294,11 +294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373a3e601fff96f448a024f3bbcd3269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lsConvertStageAssetsData: []
-  stageAssetsData:
+  lsConvertLevelStageAssetsData: []
+  levelStageAssetsData:
     lsRewardWinStage: []
     typeMap: 0
     lsStageAssetsDatas: []
+  lsStageAssetData: []
   lsAssetData:
   - {fileID: 4900000, guid: b90bc204f9d5a654dbe9dc4f40f3abe0, type: 3}
   - {fileID: 4900000, guid: 09634ca766b95f94d89d6b6a2a952d04, type: 3}
@@ -306,7 +307,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 001d38eb57d044f4abf208307e3eed7a, type: 3}
   - {fileID: 4900000, guid: 125cfef352595444ab2718a8df758125, type: 3}
   - {fileID: 4900000, guid: 752550a5d4b75e741aefa15fdfa81581, type: 3}
-  idTest: 0
+  stageAssetDatas: {fileID: 0}
   indexStage: 0
 --- !u!1 &2552376162893130867
 GameObject:
@@ -417,8 +418,8 @@ MonoBehaviour:
       item_Receive_Count_free: 
       item_Receive_Count_Gold: 
       battlePass:
-        LevelPass: 0
         ExpLevelPass: 0
+        LevelPass: 0
         GoldPass: 0
     lsPlayerOwnsWaifu: []
     Inventory:
@@ -453,8 +454,8 @@ MonoBehaviour:
     item_Receive_Count_free: 
     item_Receive_Count_Gold: 
     battlePass:
-      LevelPass: 0
       ExpLevelPass: 0
+      LevelPass: 0
       GoldPass: 0
   itemData: {fileID: 11400000, guid: 00223c391e817d04087e28307cd8c248, type: 2}
   lsExpWithLevel: []
