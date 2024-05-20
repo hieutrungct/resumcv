@@ -8,7 +8,12 @@ namespace RubikCasual.GamePlayManager
     {
         public void OnDrop(PointerEventData eventData)
         {
-            
+            if(transform.childCount == 0 && GamePlayController.instance.drag == true)
+            {  
+                // GameObject droped = eventData.pointerDrag;
+                // MoveHero moveHero = droped.GetComponent<MoveHero>();
+                // moveHero.parentAfterDrag = transform;
+            }
             if(transform.childCount == 0)
             {  
                 GameObject droped = eventData.pointerDrag;

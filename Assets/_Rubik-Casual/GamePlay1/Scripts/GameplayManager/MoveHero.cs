@@ -12,7 +12,7 @@ namespace RubikCasual.GamePlayManager
         [HideInInspector] public Transform parentAfterDrag;
         // public Vector3 parentAfterDrag1;
         public Transform parentTransform;
-        public bool check;
+        private Vector3 offset;
 
         public void OnBeginDrag(PointerEventData eventData)
         {
@@ -22,20 +22,15 @@ namespace RubikCasual.GamePlayManager
             
             transform.SetAsLastSibling();
             UI_Waifu.raycastTarget = false;
-            
+            offset = transform.position - MouseWorldPosittion();
+            GamePlayController.instance.drag = false;
         }
 
         void IDragHandler.OnDrag(PointerEventData eventData)
         {
             Debug.Log(MouseWorldPosittion());
-            transform.position = MouseWorldPosittion();
-            // if (check == false)
-            // {
-            //     parentAfterDrag1 = MouseWorldPosittion();
-            //     check = true;
-            //     Debug.Log(parentAfterDrag1);
-            //     return;
-            // }
+            transform.position = MouseWorldPosittion() + offset;
+            
             
             
         }
@@ -45,7 +40,7 @@ namespace RubikCasual.GamePlayManager
             Debug.Log("Thả kéo");
             transform.SetParent(parentAfterDrag);
             UI_Waifu.raycastTarget = true;
-            check = false;
+            
         }
         Vector3 MouseWorldPosittion()
         {

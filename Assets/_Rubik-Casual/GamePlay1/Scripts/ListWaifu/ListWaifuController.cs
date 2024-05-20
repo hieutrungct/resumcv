@@ -20,7 +20,7 @@ namespace RubikCasual.ListWaifu
             lsWaifu = DataController.instance.playerData.lsPlayerOwnsWaifu;
             // SortRarityAndLevel();
         }
-
+        
         public void SetUpListWaifu()
         {
 

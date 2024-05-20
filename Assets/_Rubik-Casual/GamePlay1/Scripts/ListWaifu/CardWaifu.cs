@@ -2,20 +2,63 @@ using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
+using RubikCasual.GamePlayManager;
 using RubikCasual.Waifu;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 namespace RubikCasual.ListWaifu
 {
-    public class CardWaifu : MonoBehaviour
+    public class CardWaifu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         public Image  avaBox, BackGlow, Glow, Role;
         public SkeletonGraphic UI_Waifu;
         public TextMeshProUGUI nameTxt, levelTxt;
         [SerializeField] GameObject[] stars;
         public PlayerOwnsWaifu _waifu;
+        public SkeletonGraphic uiWaifu;
+        [HideInInspector] public Transform parentAfterDrag;
+        private Vector3 offset;
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            Debug.Log("Bắt đầu kéo");
+            uiWaifu = Instantiate(UI_Waifu);
+            uiWaifu.transform.SetParent(GamePlayController.instance.CreatedHeroObj.transform);
+            
+            uiWaifu.transform.localScale = new Vector3(1f, 1f, 1f);
+            uiWaifu.transform.position = MouseWorldPosittion();
+            parentAfterDrag = uiWaifu.transform.parent;
+            uiWaifu.raycastTarget = false;
+            uiWaifu.transform.SetAsLastSibling();
+            offset = uiWaifu.transform.position - MouseWorldPosittion();
+            uiWaifu.gameObject.AddComponent<MoveHero>();
+            uiWaifu.gameObject.GetComponent<MoveHero>().UI_Waifu = uiWaifu;
+            uiWaifu.gameObject.GetComponent<MoveHero>().parentTransform = GamePlayController.instance.CreatedHeroObj.transform;
+            RectTransform rectTransform = uiWaifu.GetComponent<RectTransform>();
+            if (rectTransform != null)
+            {
+                rectTransform.pivot = new Vector2(0.5f, 0.5f);
+            }
+            GamePlayController.instance.drag = true;
+        }
+        void IDragHandler.OnDrag(PointerEventData eventData)
+        { 
+            uiWaifu.transform.position = MouseWorldPosittion() + offset;
+        }
+        void IEndDragHandler.OnEndDrag(PointerEventData eventData)
+        {
+            uiWaifu.transform.SetParent(parentAfterDrag);
+            uiWaifu.raycastTarget = true;
+        }
+        Vector3 MouseWorldPosittion()
+        {
+            var mouseScreenPos = Input.mousePosition;
+            mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
+            return Camera.main.ScreenToWorldPoint(mouseScreenPos);
+            
+        }
         public void SetUp(PlayerOwnsWaifu waifu)
         {
             _waifu = waifu;

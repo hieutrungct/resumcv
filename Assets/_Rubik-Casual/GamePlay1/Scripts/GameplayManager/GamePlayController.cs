@@ -5,10 +5,12 @@ namespace RubikCasual.GamePlayManager
 {
     public class GamePlayController : MonoBehaviour
     {
-    
-        void Update()
+        public GameObject CreatedHeroObj;
+        public static GamePlayController instance;
+        public bool drag;
+        void Awake()
         {
-            //Debug.Log(Input.mousePosition);
+            instance = this;
         }
     }
 }
