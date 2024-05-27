@@ -40,7 +40,7 @@ namespace RubikCasual.ListWaifu
             }
         }
         [Button]
-        private void SortRarityAndLevel()
+        public void SortRarityAndLevel()
         {
             
             lsWaifu.Sort((charA, charB) =>

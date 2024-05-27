@@ -18,9 +18,10 @@ namespace RubikCasual.ListWaifu
         public TextMeshProUGUI nameTxt, levelTxt;
         [SerializeField] GameObject[] stars;
         public PlayerOwnsWaifu _waifu;
-        public SkeletonGraphic uiWaifu;
+        public SkeletonGraphic uiWaifu, hero;
         [HideInInspector] public Transform parentAfterDrag;
-        private Vector3 offset;
+        public Vector3 offset;
+        
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("Bắt đầu kéo");
@@ -28,29 +29,46 @@ namespace RubikCasual.ListWaifu
             uiWaifu.transform.SetParent(GamePlayController.instance.CreatedHeroObj.transform);
             
             uiWaifu.transform.localScale = new Vector3(1f, 1f, 1f);
-            uiWaifu.transform.position = MouseWorldPosittion();
+            uiWaifu.transform.position = gameObject.transform.position;
             parentAfterDrag = uiWaifu.transform.parent;
             uiWaifu.raycastTarget = false;
             uiWaifu.transform.SetAsLastSibling();
             offset = uiWaifu.transform.position - MouseWorldPosittion();
-            uiWaifu.gameObject.AddComponent<MoveHero>();
-            uiWaifu.gameObject.GetComponent<MoveHero>().UI_Waifu = uiWaifu;
-            uiWaifu.gameObject.GetComponent<MoveHero>().parentTransform = GamePlayController.instance.CreatedHeroObj.transform;
+
+            MoveHero moveHero = uiWaifu.gameObject.AddComponent<MoveHero>();
+            moveHero.UI_Waifu = uiWaifu;
+            moveHero.parentTransform = GamePlayController.instance.CreatedHeroObj.transform;
+
             RectTransform rectTransform = uiWaifu.GetComponent<RectTransform>();
             if (rectTransform != null)
             {
                 rectTransform.pivot = new Vector2(0.5f, 0.5f);
             }
             GamePlayController.instance.drag = true;
+            eventData.pointerDrag = uiWaifu.gameObject;
+
         }
         void IDragHandler.OnDrag(PointerEventData eventData)
         { 
             uiWaifu.transform.position = MouseWorldPosittion() + offset;
+            // Debug.Log(MouseWorldPosittion());
+            eventData.pointerDrag = uiWaifu.gameObject;
         }
         void IEndDragHandler.OnEndDrag(PointerEventData eventData)
         {
-            uiWaifu.transform.SetParent(parentAfterDrag);
-            uiWaifu.raycastTarget = true;
+            // Debug.Log("thả kéo");
+            // Kiểm tra xem hero có được thả vào một InventorySlot hợp lệ hay không
+            bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null;
+            if(validDrop)
+            {
+                uiWaifu.transform.SetParent(parentAfterDrag);
+                uiWaifu.raycastTarget = true;
+            }
+            else
+            {
+                Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
+            }
+            
         }
         Vector3 MouseWorldPosittion()
         {
