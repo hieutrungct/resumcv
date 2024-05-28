@@ -7,6 +7,7 @@ namespace RubikCasual.GamePlayManager
     {
         public GameObject CreatedHeroObj;
         public static GamePlayController instance;
+        public Vector3 posistionAfter;
         public bool drag;
         void Awake()
         {

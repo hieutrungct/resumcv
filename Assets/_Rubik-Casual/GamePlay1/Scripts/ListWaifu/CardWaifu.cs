@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Rubik_Casual;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
@@ -13,7 +14,7 @@ namespace RubikCasual.ListWaifu
 {
     public class CardWaifu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        public Image  avaBox, BackGlow, Glow, Role;
+        public Image  avaBox, BackGlow, Glow, Role, shadow;
         public SkeletonGraphic UI_Waifu;
         public TextMeshProUGUI nameTxt, levelTxt;
         [SerializeField] GameObject[] stars;
@@ -21,20 +22,67 @@ namespace RubikCasual.ListWaifu
         public SkeletonGraphic uiWaifu, hero;
         [HideInInspector] public Transform parentAfterDrag;
         public Vector3 offset;
-        
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("Bắt đầu kéo");
-            uiWaifu = Instantiate(UI_Waifu);
-            uiWaifu.transform.SetParent(GamePlayController.instance.CreatedHeroObj.transform);
-            
-            uiWaifu.transform.localScale = new Vector3(1f, 1f, 1f);
+            uiWaifu = Instantiate(UI_Waifu, GamePlayController.instance.CreatedHeroObj.transform);
+            uiWaifu.transform.localScale = Vector3.one;
             uiWaifu.transform.position = gameObject.transform.position;
-            parentAfterDrag = uiWaifu.transform.parent;
+            // parentAfterDrag = uiWaifu.transform.parent;
             uiWaifu.raycastTarget = false;
             uiWaifu.transform.SetAsLastSibling();
-            offset = uiWaifu.transform.position - MouseWorldPosittion();
+            // offset = uiWaifu.transform.position - MouseWorldPosittion();
+            
+            AddMoveHeroComponent();
 
+            GamePlayController.instance.drag = true;
+            GamePlayController.instance.posistionAfter = gameObject.transform.position;
+            // eventData.pointerDrag = uiWaifu.gameObject;
+
+            shadow.gameObject.SetActive(true);
+        }
+        void IDragHandler.OnDrag(PointerEventData eventData)
+        { 
+            uiWaifu.transform.position = MouseWorldPosittion() + offset;
+            // Debug.Log(MouseWorldPosittion());
+
+        }
+        void IEndDragHandler.OnEndDrag(PointerEventData eventData)
+        {
+            // Kiểm tra xem hero có được thả vào một InventorySlot hợp lệ hay không
+            // bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null;
+            if(parentAfterDrag != null && parentAfterDrag.GetComponent<InventorySlot>() != null ) 
+            {
+                Debug.Log("Thả kéo vào trong");
+                uiWaifu.gameObject.transform.SetParent(parentAfterDrag);
+                uiWaifu.raycastTarget = true;
+                shadow.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Thả kéo ra ngoài");
+                Debug.Log(GamePlayController.instance.posistionAfter);
+                uiWaifu.gameObject.transform.DOMove(GamePlayController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
+                .OnComplete(()=>{
+                    Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
+                    Destroy(uiWaifu.gameObject);
+                    shadow.gameObject.SetActive(false);
+                });
+                
+            }
+            
+            
+        }
+        Vector3 MouseWorldPosittion()
+        {
+            var mouseScreenPos = Input.mousePosition;
+            mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
+            return Camera.main.ScreenToWorldPoint(mouseScreenPos);
+            
+        }
+
+        private void AddMoveHeroComponent()
+        {
             MoveHero moveHero = uiWaifu.gameObject.AddComponent<MoveHero>();
             moveHero.UI_Waifu = uiWaifu;
             moveHero.parentTransform = GamePlayController.instance.CreatedHeroObj.transform;
@@ -44,38 +92,6 @@ namespace RubikCasual.ListWaifu
             {
                 rectTransform.pivot = new Vector2(0.5f, 0.5f);
             }
-            GamePlayController.instance.drag = true;
-            eventData.pointerDrag = uiWaifu.gameObject;
-
-        }
-        void IDragHandler.OnDrag(PointerEventData eventData)
-        { 
-            uiWaifu.transform.position = MouseWorldPosittion() + offset;
-            // Debug.Log(MouseWorldPosittion());
-            eventData.pointerDrag = uiWaifu.gameObject;
-        }
-        void IEndDragHandler.OnEndDrag(PointerEventData eventData)
-        {
-            // Debug.Log("thả kéo");
-            // Kiểm tra xem hero có được thả vào một InventorySlot hợp lệ hay không
-            bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null;
-            if(validDrop)
-            {
-                uiWaifu.transform.SetParent(parentAfterDrag);
-                uiWaifu.raycastTarget = true;
-            }
-            else
-            {
-                Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
-            }
-            
-        }
-        Vector3 MouseWorldPosittion()
-        {
-            var mouseScreenPos = Input.mousePosition;
-            mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
-            return Camera.main.ScreenToWorldPoint(mouseScreenPos);
-            
         }
         public void SetUp(PlayerOwnsWaifu waifu)
         {

@@ -44,39 +44,61 @@ namespace RubikCasual.GamePlayManager
             
 
             GameObject dropped = eventData.pointerDrag;
+            if (dropped == null)
+            {
+                return; // Không có đối tượng được thả
+            }
             MoveHero moveHero = dropped.GetComponent<MoveHero>();
+            CardWaifu cardWaifu = dropped.GetComponent<CardWaifu>();
+            if (cardWaifu != null)
+            {
+                HandleCardWaifuDrop(cardWaifu, dropped);
+            }
             if (moveHero != null)
             {
-                if (transform.childCount == 0)
-                {
-                    moveHero.parentAfterDrag = transform;
-                    GamePlayController.instance.drag = false;
-                }
-                else if(transform.childCount == 1 && GamePlayController.instance.drag == true)
-                {  
-                    Debug.Log("Kéo đè lên Hero khác");
-                    // transform.DOMove(moveHero.posistionAfter, 0.7f)
-                    // .OnComplete(()=>{
-                    //     Debug.Log("xoá");
-                    //     Destroy(moveHero.gameObject);
-                    // });
-                    Destroy(moveHero.gameObject);
-                    GamePlayController.instance.drag = false;
-                }
-                else if (transform.childCount == 1)
-                {
-                    GameObject child = transform.GetChild(0).gameObject;
-                    MoveHero childMoveHero = child.GetComponent<MoveHero>();
-
-                    if (childMoveHero != null)
-                    {
-                        childMoveHero.transform.SetParent(moveHero.parentAfterDrag);
-                        moveHero.parentAfterDrag = transform;
-                    }
-                }
-                
+                HandleMoveHeroDrop(moveHero);
             }
             
+        }
+        private void HandleCardWaifuDrop(CardWaifu cardWaifu, GameObject dropped)
+        {
+            if (transform.childCount == 0)
+            {
+                cardWaifu.parentAfterDrag = transform;
+                GamePlayController.instance.drag = false;
+            }
+            else if (transform.childCount == 1 && GamePlayController.instance.drag)
+            {
+                Debug.Log("Kéo đè lên Hero khác");
+                // cardWaifu.uiWaifu.gameObject.transform.DOMove(GamePlayController.instance.posistionAfter - new Vector3(0f, 0.7f, 0f), 0.7f)
+                //     .OnComplete(() =>
+                //     {
+                //         Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
+                //         Destroy(cardWaifu.uiWaifu.gameObject);
+                //     });
+                Destroy(cardWaifu.uiWaifu.gameObject);
+                GamePlayController.instance.drag = false;
+            }
+        }
+
+        private void HandleMoveHeroDrop(MoveHero moveHero)
+        {
+            if (transform.childCount == 0)
+            {
+                moveHero.parentAfterDrag = transform;
+                GamePlayController.instance.drag = false;
+            }
+            else if (transform.childCount == 1)
+            {
+                GameObject child = transform.GetChild(0).gameObject;
+                MoveHero childMoveHero = child.GetComponent<MoveHero>();
+
+                if (childMoveHero != null)
+                {
+                    childMoveHero.transform.SetParent(moveHero.parentAfterDrag);
+                    moveHero.parentAfterDrag = transform;
+                }
+            }
         }
     }
 }
