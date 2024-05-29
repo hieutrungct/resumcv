@@ -50,15 +50,15 @@ namespace RubikCasual.ListWaifu
         void IEndDragHandler.OnEndDrag(PointerEventData eventData)
         {
             // Kiểm tra xem hero có được thả vào một InventorySlot hợp lệ hay không
-            // bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null;
-            if(parentAfterDrag != null && parentAfterDrag.GetComponent<InventorySlot>() != null ) 
+            bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null;
+            if(validDrop) 
             {
+                shadow.gameObject.SetActive(false);
                 Debug.Log("Thả kéo vào trong");
                 uiWaifu.gameObject.transform.SetParent(parentAfterDrag);
                 uiWaifu.raycastTarget = true;
-                shadow.gameObject.SetActive(false);
             }
-            else
+            else 
             {
                 Debug.Log("Thả kéo ra ngoài");
                 Debug.Log(GamePlayController.instance.posistionAfter);
@@ -70,7 +70,6 @@ namespace RubikCasual.ListWaifu
                 });
                 
             }
-            
             
         }
         Vector3 MouseWorldPosittion()
