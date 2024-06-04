@@ -79,7 +79,7 @@ MonoBehaviour:
   timeScale: 1
   freeze: 0
   layoutScaleMode: 0
-  referenceSize: {x: 190, y: 265}
+  referenceSize: {x: 0, y: 0}
   referenceScale: 1
   rectTransformSize: {x: 408.7044, y: 369.85}
   editReferenceRect: 0
@@ -119,3 +119,4 @@ MonoBehaviour:
   UI_Waifu: {fileID: 1510724889761541207}
   parentAfterDrag: {fileID: 0}
   parentTransform: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}

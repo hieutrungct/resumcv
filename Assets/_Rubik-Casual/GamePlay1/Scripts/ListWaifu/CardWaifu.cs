@@ -1,5 +1,6 @@
 using DG.Tweening;
 using Rubik_Casual;
+using RubikCasual.Character;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
@@ -35,6 +36,7 @@ namespace RubikCasual.ListWaifu
             // offset = uiWaifu.transform.position - MouseWorldPosittion();
             
             AddMoveHeroComponent();
+            AddWaifuComponent();
 
             MapController.instance.drag = true;
             MapController.instance.posistionAfter = gameObject.transform.position;
@@ -93,6 +95,12 @@ namespace RubikCasual.ListWaifu
             {
                 rectTransform.pivot = new Vector2(0.5f, 0.5f);
             }
+        }
+        private void AddWaifuComponent()
+        {
+            WaifuHero waifu = uiWaifu.gameObject.AddComponent<WaifuHero>();
+            waifu.UI_Waifu = uiWaifu;
+
         }
         public void SetUp(PlayerOwnsWaifu waifu)
         {
