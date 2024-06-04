@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using RubikCasual.ListWaifu;
+using RubikCasual.MapControllers;
 using UnityEngine;
 using UnityEngine.EventSystems;
 namespace RubikCasual.GamePlayManager
@@ -55,14 +56,14 @@ namespace RubikCasual.GamePlayManager
                 if (transform.childCount == 0)
                 {
                     cardWaifu.parentAfterDrag = transform;
-                    GamePlayController.instance.drag = false;
+                    MapController.instance.drag = false;
                     // Destroy(cardWaifu.gameObject);
                 }
-                else if(transform.childCount == 1 && GamePlayController.instance.drag == true)
+                else if(transform.childCount == 1 && MapController.instance.drag == true)
                 {  
 
                     Debug.Log("Kéo đè lên Hero khác");
-                    cardWaifu.uiWaifu.gameObject.transform.DOMove(GamePlayController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
+                    cardWaifu.uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
                     .OnComplete(()=>{
                         Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
                         cardWaifu.shadow.gameObject.SetActive(false);
@@ -70,12 +71,12 @@ namespace RubikCasual.GamePlayManager
                     });
                     // cardWaifu.shadow.gameObject.SetActive(false);
                     // Destroy(cardWaifu.uiWaifu.gameObject);
-                    GamePlayController.instance.drag = false;
+                    MapController.instance.drag = false;
                 }
-                else if(transform.childCount == 2 && GamePlayController.instance.drag == true)
+                else if(transform.childCount == 2 && MapController.instance.drag == true)
                 {
                     Destroy(cardWaifu.uiWaifu.gameObject);
-                    GamePlayController.instance.drag = false;
+                    MapController.instance.drag = false;
                 }
             }
             if (moveHero != null)
@@ -83,9 +84,8 @@ namespace RubikCasual.GamePlayManager
                 if (transform.childCount == 0)
                 {
                     moveHero.parentAfterDrag = transform;
-                    GamePlayController.instance.drag = false;
+                    MapController.instance.drag = false;
                 }
-                
                 else if (transform.childCount == 1)
                 {
                     GameObject child = transform.GetChild(0).gameObject;

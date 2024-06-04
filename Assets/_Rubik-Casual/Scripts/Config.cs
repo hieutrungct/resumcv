@@ -29,6 +29,14 @@ public class Config : MonoBehaviour
     public static string color_White = "#FFFFFF";
     public static string color_Blue = "#4AAAF8";
 
+    // Animations Hero
+    public static string Attack = "Attack";
+    public static string Attacked = "Attacked";
+    public static string Die = "Die";
+    public static string Idle = "Idle";
+    public static string SkillCast = "SkillCast";
+    public static string Hit = "Hit";
+
     
     public static void SetTextColorWithHex(TextMeshProUGUI  text, string hexColor)
     {

@@ -4,6 +4,7 @@ using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
 using RubikCasual.GamePlayManager;
+using RubikCasual.MapControllers;
 using RubikCasual.Waifu;
 using Spine.Unity;
 using TMPro;
@@ -25,7 +26,7 @@ namespace RubikCasual.ListWaifu
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("Bắt đầu kéo");
-            uiWaifu = Instantiate(UI_Waifu, GamePlayController.instance.CreatedHeroObj.transform);
+            uiWaifu = Instantiate(UI_Waifu, MapController.instance.CreatedHeroObj.transform);
             uiWaifu.transform.localScale = Vector3.one;
             uiWaifu.transform.position = gameObject.transform.position;
             // parentAfterDrag = uiWaifu.transform.parent;
@@ -35,8 +36,8 @@ namespace RubikCasual.ListWaifu
             
             AddMoveHeroComponent();
 
-            GamePlayController.instance.drag = true;
-            GamePlayController.instance.posistionAfter = gameObject.transform.position;
+            MapController.instance.drag = true;
+            MapController.instance.posistionAfter = gameObject.transform.position;
             // eventData.pointerDrag = uiWaifu.gameObject;
 
             shadow.gameObject.SetActive(true);
@@ -57,12 +58,13 @@ namespace RubikCasual.ListWaifu
                 Debug.Log("Thả kéo vào trong");
                 uiWaifu.gameObject.transform.SetParent(parentAfterDrag);
                 uiWaifu.raycastTarget = true;
+                Destroy(gameObject);
             }
             else 
             {
                 Debug.Log("Thả kéo ra ngoài");
-                Debug.Log(GamePlayController.instance.posistionAfter);
-                uiWaifu.gameObject.transform.DOMove(GamePlayController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
+                Debug.Log(MapController.instance.posistionAfter);
+                uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
                 .OnComplete(()=>{
                     Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
                     Destroy(uiWaifu.gameObject);
@@ -84,7 +86,7 @@ namespace RubikCasual.ListWaifu
         {
             MoveHero moveHero = uiWaifu.gameObject.AddComponent<MoveHero>();
             moveHero.UI_Waifu = uiWaifu;
-            moveHero.parentTransform = GamePlayController.instance.CreatedHeroObj.transform;
+            moveHero.parentTransform = MapController.instance.CreatedHeroObj.transform;
 
             RectTransform rectTransform = uiWaifu.GetComponent<RectTransform>();
             if (rectTransform != null)
