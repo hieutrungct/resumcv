@@ -43,6 +43,14 @@ namespace RubikCasual.ListWaifu
             // eventData.pointerDrag = uiWaifu.gameObject;
 
             shadow.gameObject.SetActive(true);
+            for(int i = 0; i < MapController.instance.lsSlotGlow.Count; i++)
+            {
+                if(MapController.instance.lsSlot[i].transform.childCount == 1)
+                {
+                    continue;
+                }
+                MapController.instance.lsSlotGlow[i].SetActive(true);
+            }
         }
         void IDragHandler.OnDrag(PointerEventData eventData)
         { 
@@ -52,8 +60,12 @@ namespace RubikCasual.ListWaifu
         }
         void IEndDragHandler.OnEndDrag(PointerEventData eventData)
         {
+            foreach (GameObject item in MapController.instance.lsSlotGlow)
+            {
+                item.SetActive(false);
+            }
             // Kiểm tra xem hero có được thả vào một InventorySlot hợp lệ hay không
-            bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null;
+            bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null && MapController.instance.lsSlot.Contains(eventData.pointerEnter.GetComponent<InventorySlot>());
             if(validDrop) 
             {
                 shadow.gameObject.SetActive(false);
@@ -74,6 +86,7 @@ namespace RubikCasual.ListWaifu
                 });
                 
             }
+            
             
         }
         Vector3 MouseWorldPosittion()

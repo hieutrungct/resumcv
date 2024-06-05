@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RubikCasual.GamePlayManager;
 using UnityEngine;
 
 namespace RubikCasual.MapControllers
@@ -14,6 +15,9 @@ namespace RubikCasual.MapControllers
         {
             instance = this;
         }
+        public List<InventorySlot> lsSlot;
+        public List<GameObject> lsSlotGlow, lsGlow;
+
     }
 }
 

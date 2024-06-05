@@ -1,29 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using RubikCasual.GamePlayManager;
-using Sirenix.OdinInspector;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
 namespace RubikCasual.Character
 {
-    public class WaifuHero : MonoBehaviour
+    public class Enemy : MonoBehaviour
     {
         TrackEntry animTrack;
         public SkeletonGraphic UI_Waifu;
-        
         public void SetUpHeroCombat()
         {
-            
+
         }
-        [Button]
+        
         public void UpdateHeroCombat()
         {
-            
-            animTrack = UI_Waifu.AnimationState.SetAnimation(0, Config.Attack,false);
+            // animTrack = UI_Waifu.AnimationState.SetAnimation(0, Config.Attack,false);
         }
         void Start()
         {
+            animTrack = UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
             UI_Waifu.AnimationState.Complete += delegate {
 
                 CompleteAnimation();
@@ -44,25 +42,25 @@ namespace RubikCasual.Character
             string currentAnimationName = GetCurrentAnimationName(UI_Waifu);
             switch (currentAnimationName)
             {
-                case "Attack":
+                case "Attack" :
+                    // Debug.Log("Attack End");
                     if(animTrack.IsComplete){
-                        Debug.Log("Attack End");
-                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle, true);
                     }
                     break;
                 case "Attacked":
                     if(animTrack.IsComplete){
-                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle, true);
                     }
                     break;
                 case "SkillCast":
                     if(animTrack.IsComplete){
-                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle, true);
                     }
                     break;
                 case "Die":
                     if(animTrack.IsComplete){
-                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        UI_Waifu.AnimationState.SetAnimation(0, Config.Idle, true);
                     }
                     break;
                 default:
@@ -77,11 +75,14 @@ namespace RubikCasual.Character
             if (e.Data.Name == Config.Hit) 
             {
                 // TakeDamageHero(50);
-                animTrack = GamePlayController.instance.entity.AnimationState.SetAnimation(0, Config.Attacked, false);
+
+                // animTrack = GamePlayController.instance.entity.AnimationState.SetAnimation(0, Config.Attacked, false);
+                
                 // effect("-50", locationSubHealthEntity);
-                Debug.Log("Attack_aaaa");
+                
             }
         }
+        
     }
 }
 

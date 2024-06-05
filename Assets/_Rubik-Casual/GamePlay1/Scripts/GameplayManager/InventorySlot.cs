@@ -10,6 +10,7 @@ namespace RubikCasual.GamePlayManager
     public class InventorySlot : MonoBehaviour, IDropHandler
     {
         // public Transform parentTransform;
+        public int idSlot;
         public void OnDrop(PointerEventData eventData)
         {
             // GameObject droped = eventData.pointerDrag;
@@ -53,13 +54,13 @@ namespace RubikCasual.GamePlayManager
             CardWaifu cardWaifu = dropped.GetComponent<CardWaifu>();
             if (cardWaifu != null)
             {
-                if (transform.childCount == 0)
+                if (transform.childCount == 0 && MapController.instance.lsSlot.Contains(this))
                 {
                     cardWaifu.parentAfterDrag = transform;
                     MapController.instance.drag = false;
                     // Destroy(cardWaifu.gameObject);
                 }
-                else if(transform.childCount == 1 && MapController.instance.drag == true)
+                else if(transform.childCount == 1 && MapController.instance.drag == true && MapController.instance.lsSlot.Contains(this))
                 {  
 
                     Debug.Log("Kéo đè lên Hero khác");
@@ -73,12 +74,13 @@ namespace RubikCasual.GamePlayManager
                     // Destroy(cardWaifu.uiWaifu.gameObject);
                     MapController.instance.drag = false;
                 }
-                else if(transform.childCount == 2 && MapController.instance.drag == true)
+                else if(transform.childCount == 2 && MapController.instance.drag == true && MapController.instance.lsSlot.Contains(this))
                 {
                     Destroy(cardWaifu.uiWaifu.gameObject);
                     MapController.instance.drag = false;
                 }
             }
+            
             if (moveHero != null)
             {
                 if (transform.childCount == 0)
