@@ -17,12 +17,13 @@ namespace RubikCasual.ListWaifu
         public List<PlayerOwnsWaifu> lsWaifu;
         public List<CardWaifu> lsInfoCardClone;
         public List<Transform> lsSlot;
+        public GameObject cardBack;
         public Transform posInstantiateCard;
         void Awake()
         {
             instance = this;
-            // lsWaifu = DataController.instance.playerData.lsPlayerOwnsWaifu;
-            // SortRarityAndLevel();
+            lsWaifu = DataController.instance.playerData.lsPlayerOwnsWaifu;
+            SortRarityAndLevel();
         }
         public void SetUpListWaifu()
         {
@@ -34,14 +35,10 @@ namespace RubikCasual.ListWaifu
             {
                 CardWaifu slotWaifu = Instantiate(slot_card, posInstantiateCard);
                 slotWaifu.SetUp(lsWaifu[i]);
+                slotWaifu.transform.localScale = new Vector3(-1f, 1f, 1f);
+                
                 lsInfoCardClone.Add(slotWaifu);
             }
-        }
-        [Button]
-        public void LoadScene()
-        {
-            lsWaifu = DataController.instance.playerData.lsPlayerOwnsWaifu;
-            SortRarityAndLevel();
         }
         public void SortRarityAndLevel()
         {
@@ -63,15 +60,41 @@ namespace RubikCasual.ListWaifu
 
         public void ScaleCard(int index)
         {
+            float duration = 0.25f;
+            GameObject CardBack = Instantiate(cardBack, posInstantiateCard);
             CardWaifu infoCardClone = lsInfoCardClone[index];
-            infoCardClone.transform.DOScale(new Vector3(1f, 1f, 1f), 0.25f);
-            infoCardClone.transform.DOMove(lsSlot[index].position, 0.25f)
+            
+            infoCardClone.transform.DOMove(lsSlot[index].position, duration)
             .OnComplete(() =>
             {
+                infoCardClone.transform.DOScale(new Vector3(0, 1, 1), duration / 2)
+                .SetEase(Ease.InOutQuad)
+                .OnComplete(() =>
+                {
+                    // Khi thu nhỏ hoàn tất, lật đối tượng và mở rộng lại
+                    infoCardClone.transform.DOScale(new Vector3(1, 1, 1), duration / 2)
+                        .SetEase(Ease.InOutQuad);
+                });
                 infoCardClone.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
+            });
+            CardBack.transform.DOMove(lsSlot[index].position, duration)
+            .OnComplete(() =>
+            {
+                CardBack.transform.DOScale(new Vector3(0, 1, 1), duration / 2)
+                .SetEase(Ease.InOutQuad)
+                .OnComplete(() =>
+                {
+                    Destroy(CardBack);
+                    // Khi thu nhỏ hoàn tất, lật đối tượng và mở rộng lại
+                    // CardBack.transform.DOScale(new Vector3(1, 1, 1), duration / 2)
+                    // .SetEase(Ease.InOutQuad);
+                });
+                // CardBack.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
                 
             });
-            index++;
+
+            
+            
         }
     }
 }
