@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using Rubik_Casual;
 using RubikCasual.Character;
@@ -24,9 +25,10 @@ namespace RubikCasual.ListWaifu
         public SkeletonGraphic uiWaifu, hero;
         [HideInInspector] public Transform parentAfterDrag;
         public Vector3 offset;
+        
         public void OnBeginDrag(PointerEventData eventData)
         {
-            Debug.Log("Bắt đầu kéo");
+            // Debug.Log("Bắt đầu kéo");
             uiWaifu = Instantiate(UI_Waifu, MapController.instance.CreatedHeroObj.transform);
             uiWaifu.transform.localScale = Vector3.one;
             uiWaifu.transform.position = gameObject.transform.position;
@@ -72,23 +74,46 @@ namespace RubikCasual.ListWaifu
                 Debug.Log("Thả kéo vào trong");
                 uiWaifu.gameObject.transform.SetParent(parentAfterDrag);
                 uiWaifu.raycastTarget = true;
-                Destroy(gameObject);
+
+                StartCoroutine(DestroyAndCheckCoroutine());
+            
             }
             else 
             {
-                Debug.Log("Thả kéo ra ngoài");
+                // Debug.Log("Thả kéo ra ngoài");
                 Debug.Log(MapController.instance.posistionAfter);
                 uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
                 .OnComplete(()=>{
-                    Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
+                    // Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
                     Destroy(uiWaifu.gameObject);
                     shadow.gameObject.SetActive(false);
                 });
                 
             }
-            
-            
         }
+        IEnumerator DestroyAndCheckCoroutine()
+        {
+            // Tạo đối tượng tạm thời để chạy coroutine
+            GameObject tempObject = new GameObject("TempObject");
+            TempCoroutine tempCoroutine = tempObject.AddComponent<TempCoroutine>();
+            DontDestroyOnLoad(tempObject);
+
+            // Chuyển coroutine sang đối tượng tạm thời
+            yield return tempCoroutine.StartCoroutine(DestroyAndCheck());
+
+            // Hủy đối tượng tạm thời sau khi coroutine hoàn tất
+            Destroy(tempObject);
+        }
+
+        IEnumerator DestroyAndCheck()
+        {
+            Destroy(gameObject);
+            Debug.Log("Xoá gameObject");
+            yield return new WaitForEndOfFrame(); // Chờ đến cuối khung hình
+            Debug.Log("Thực hiện sắp xếp");
+            ListWaifuController.instance.CheckAndShiftChildren();
+        }
+        
         Vector3 MouseWorldPosittion()
         {
             var mouseScreenPos = Input.mousePosition;
@@ -96,6 +121,7 @@ namespace RubikCasual.ListWaifu
             return Camera.main.ScreenToWorldPoint(mouseScreenPos);
             
         }
+        
 
         private void AddMoveHeroComponent()
         {
@@ -162,12 +188,15 @@ namespace RubikCasual.ListWaifu
                 });
             }
         }
+        
+        
         private void SetRarityColors(int rarityIndex, string glowColor, string backGlowColor)
         {
             avaBox.sprite = AssetLoader.Instance.RarrityBox[rarityIndex];
             Config.SetColorFromHex(Glow.GetComponent<Image>(), glowColor);
             Config.SetColorFromHex(BackGlow.GetComponent<Image>(), backGlowColor);
         }
+
     }
 }
 
