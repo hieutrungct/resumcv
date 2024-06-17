@@ -47,12 +47,13 @@ namespace RubikCasual.ListWaifu
             shadow.gameObject.SetActive(true);
             for(int i = 0; i < MapController.instance.lsSlotGlow.Count; i++)
             {
-                if(MapController.instance.lsSlot[i].transform.childCount == 1)
+                if(MapController.instance.lsSlot[i].gameObject.GetComponentInChildren<MoveHero>() != null)
                 {
                     continue;
                 }
                 MapController.instance.lsSlotGlow[i].SetActive(true);
             }
+            
         }
         void IDragHandler.OnDrag(PointerEventData eventData)
         { 
@@ -111,7 +112,7 @@ namespace RubikCasual.ListWaifu
             Debug.Log("Xoá gameObject");
             yield return new WaitForEndOfFrame(); // Chờ đến cuối khung hình
             Debug.Log("Thực hiện sắp xếp");
-            ListWaifuController.instance.CheckAndShiftChildren();
+            ListWaifuController.instance.cardWaifuinHand.CheckAndShiftChildren();
         }
         
         Vector3 MouseWorldPosittion()

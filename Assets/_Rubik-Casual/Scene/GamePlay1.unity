@@ -797,7 +797,7 @@ RectTransform:
   m_AnchorMin: {x: 0.11731252, y: 0}
   m_AnchorMax: {x: 0.88275003, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.00012207}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &99101937
 MonoBehaviour:
@@ -3883,6 +3883,7 @@ GameObject:
   - component: {fileID: 521973226}
   - component: {fileID: 521973228}
   - component: {fileID: 521973227}
+  - component: {fileID: 521973229}
   m_Layer: 5
   m_Name: CardWaifu
   m_TagString: Untagged
@@ -3950,6 +3951,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521973225}
   m_CullTransparentMesh: 1
+--- !u!114 &521973229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521973225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebc8bcdc2104354480324da81ccdf91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lsSlot:
+  - {fileID: 3886464450510573957}
+  - {fileID: 1725045791}
+  - {fileID: 1863363126}
+  - {fileID: 979271781}
+  - {fileID: 598165389}
+  - {fileID: 1485453370}
 --- !u!1001 &535733303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4466,6 +4486,7 @@ GameObject:
   - component: {fileID: 598165389}
   - component: {fileID: 598165391}
   - component: {fileID: 598165390}
+  - component: {fileID: 598165392}
   m_Layer: 5
   m_Name: Slot (4)
   m_TagString: Untagged
@@ -4531,6 +4552,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598165388}
   m_CullTransparentMesh: 0
+--- !u!114 &598165392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598165388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8114b590e8fd9164b81ea5f5017157de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &604827681
 GameObject:
   m_ObjectHideFlags: 0
@@ -7581,6 +7614,7 @@ GameObject:
   - component: {fileID: 979271781}
   - component: {fileID: 979271783}
   - component: {fileID: 979271782}
+  - component: {fileID: 979271784}
   m_Layer: 5
   m_Name: Slot (3)
   m_TagString: Untagged
@@ -7646,6 +7680,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979271780}
   m_CullTransparentMesh: 0
+--- !u!114 &979271784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979271780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8114b590e8fd9164b81ea5f5017157de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &990019952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11039,6 +11085,7 @@ GameObject:
   - component: {fileID: 1485453370}
   - component: {fileID: 1485453372}
   - component: {fileID: 1485453371}
+  - component: {fileID: 1485453373}
   m_Layer: 5
   m_Name: Slot (5)
   m_TagString: Untagged
@@ -11104,6 +11151,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485453369}
   m_CullTransparentMesh: 0
+--- !u!114 &1485453373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485453369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8114b590e8fd9164b81ea5f5017157de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1486782519
 GameObject:
   m_ObjectHideFlags: 0
@@ -11511,7 +11570,7 @@ RectTransform:
   m_AnchorMin: {x: 0.11731252, y: 0}
   m_AnchorMax: {x: 0.88275003, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.00012207}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1531049092
 MonoBehaviour:
@@ -12928,6 +12987,7 @@ GameObject:
   - component: {fileID: 1725045791}
   - component: {fileID: 1725045793}
   - component: {fileID: 1725045792}
+  - component: {fileID: 1725045794}
   m_Layer: 5
   m_Name: Slot (1)
   m_TagString: Untagged
@@ -12993,6 +13053,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725045790}
   m_CullTransparentMesh: 0
+--- !u!114 &1725045794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725045790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8114b590e8fd9164b81ea5f5017157de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1727776532
 GameObject:
   m_ObjectHideFlags: 0
@@ -13963,6 +14035,7 @@ GameObject:
   - component: {fileID: 1863363126}
   - component: {fileID: 1863363128}
   - component: {fileID: 1863363127}
+  - component: {fileID: 1863363129}
   m_Layer: 5
   m_Name: Slot (2)
   m_TagString: Untagged
@@ -14028,6 +14101,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863363125}
   m_CullTransparentMesh: 0
+--- !u!114 &1863363129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863363125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8114b590e8fd9164b81ea5f5017157de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1871933944
 GameObject:
   m_ObjectHideFlags: 0
@@ -14420,7 +14505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1076, y: -270}
+  m_AnchoredPosition: {x: -1076, y: -269.9995}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990476553
@@ -15360,18 +15445,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slot_card: {fileID: 7016992448430801013, guid: 1c80c5476c7daa14d8c08f42b5306618, type: 3}
-  contentWaifu: {fileID: 1225581846}
   lsWaifu: []
   lsInfoCardClone: []
-  lsSlot:
-  - {fileID: 3886464450510573957}
-  - {fileID: 1725045791}
-  - {fileID: 1863363126}
-  - {fileID: 979271781}
-  - {fileID: 598165389}
-  - {fileID: 1485453370}
   cardBack: {fileID: 3263705244820514706, guid: 6b04653eb3453e84c82bae268f60f4a0, type: 3}
+  cardWaifuinHand: {fileID: 521973229}
   posInstantiateCard: {fileID: 128603693}
+  remainingCards: {fileID: 1662639280}
+  isWaifuDead: {fileID: 1665613784}
+  waifuNumber: 0
 --- !u!4 &2144386161
 Transform:
   m_ObjectHideFlags: 0
@@ -15845,6 +15926,7 @@ GameObject:
   - component: {fileID: 3886464450510573957}
   - component: {fileID: 3886464450510573963}
   - component: {fileID: 3886464450510573956}
+  - component: {fileID: 3886464450510573964}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -15860,3 +15942,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3886464450510573958}
   m_CullTransparentMesh: 0
+--- !u!114 &3886464450510573964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886464450510573958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8114b590e8fd9164b81ea5f5017157de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

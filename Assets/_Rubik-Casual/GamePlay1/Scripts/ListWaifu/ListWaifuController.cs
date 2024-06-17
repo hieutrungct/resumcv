@@ -7,6 +7,7 @@ using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Waifu;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 namespace RubikCasual.ListWaifu
 {
@@ -14,18 +15,19 @@ namespace RubikCasual.ListWaifu
     {
         public static ListWaifuController instance;
         public CardWaifu slot_card;
-        public Transform contentWaifu;
         public List<PlayerOwnsWaifu> lsWaifu;
         public List<CardWaifu> lsInfoCardClone;
-        public List<Transform> lsSlot;
         public GameObject cardBack;
+        public CardWaifuinHand cardWaifuinHand;
         public Transform posInstantiateCard;
+        public TextMeshProUGUI remainingCards, isWaifuDead;
         void Awake()
         {
             instance = this;
             lsWaifu = DataController.instance.playerData.lsPlayerOwnsWaifu;
             SortRarityAndLevel();
-            
+            waifuNumber = lsWaifu.Count;
+            remainingCards.text = (waifuNumber).ToString();
         }
         public void SetUpListWaifu()
         {
@@ -60,11 +62,14 @@ namespace RubikCasual.ListWaifu
             SetUpListWaifu();
         }
         private int index;
+        public int waifuNumber;
         public void ScaleCard()
         {
             float duration = 0.25f;
             int indexSlot = 0;
-            if (lsSlot.All(item => item.transform.childCount > 0) || index > lsInfoCardClone.Count)
+            waifuNumber--;
+            remainingCards.text = (waifuNumber).ToString();
+            if (cardWaifuinHand.lsSlot.All(item => item.GetComponentInChildren<CardWaifu>() != null) || index > lsInfoCardClone.Count)
             {
                 Debug.Log("ko còn ô trống hoặc ko còn thẻ");
                 return;
@@ -72,9 +77,9 @@ namespace RubikCasual.ListWaifu
             GameObject CardBack = Instantiate(cardBack, posInstantiateCard);
             
             CardWaifu infoCardClone = lsInfoCardClone[index];
-            for (int i = 0; i < lsSlot.Count; i++)
+            for (int i = 0; i < cardWaifuinHand.lsSlot.Count; i++)
             {
-                if(lsSlot[i].transform.childCount == 0)
+                if(cardWaifuinHand.lsSlot[i].GetComponentInChildren<CardWaifu>() == null)
                 {
                     indexSlot = i;
                     break;
@@ -82,11 +87,11 @@ namespace RubikCasual.ListWaifu
             }
             Sequence sequence = DOTween.Sequence();
 
-            sequence.Append(infoCardClone.transform.DOMove(lsSlot[indexSlot].position, duration)
+            sequence.Append(infoCardClone.transform.DOMove(cardWaifuinHand.lsSlot[indexSlot].transform.position, duration)
             .OnComplete(() =>
             {
                 
-                infoCardClone.transform.parent = lsSlot[indexSlot].transform;
+                infoCardClone.transform.parent = cardWaifuinHand.lsSlot[indexSlot].transform;
                 infoCardClone.transform.DOScale(new Vector3(0, 1, 1), duration / 2)
                 .SetEase(Ease.InOutQuad)
                 .OnComplete(() =>
@@ -99,7 +104,7 @@ namespace RubikCasual.ListWaifu
                 });
                 infoCardClone.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
             }));
-            sequence.Join(CardBack.transform.DOMove(lsSlot[indexSlot].position, duration)
+            sequence.Join(CardBack.transform.DOMove(cardWaifuinHand.lsSlot[indexSlot].transform.position, duration)
             .OnComplete(() =>
             {
                 CardBack.transform.DOScale(new Vector3(0, 1, 1), duration / 2)
@@ -107,9 +112,6 @@ namespace RubikCasual.ListWaifu
                 .OnComplete(() =>
                 {
                     cardBack.SetActive(false);
-                    // Khi thu nhỏ hoàn tất, lật đối tượng và mở rộng lại
-                    // CardBack.transform.DOScale(new Vector3(1, 1, 1), duration / 2)
-                    // .SetEase(Ease.InOutQuad);
                 });
                 CardBack.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f)
                 .OnComplete(() => {
@@ -125,39 +127,6 @@ namespace RubikCasual.ListWaifu
             
         }
         
-        public void CheckAndShiftChildren()
-        {
-            
-            Debug.Log("After Destroy");
-            for (int i = 0; i < lsSlot.Count; i++)
-            {
-                if (lsSlot[i].transform.childCount == 0)
-                {
-                    // Di chuyển các phần tử con của các slot phía sau nó lên để lấp đầy chỗ trống
-                    for (int j = i + 1; j < lsSlot.Count; j++)
-                    {
-                        if (lsSlot[j].transform.childCount > 0)
-                        {
-                            // Lấy phần tử con đầu tiên của slot phía sau
-                            Transform child = lsSlot[j].transform.GetChild(0);
-
-                            // Di chuyển phần tử con này vào slot trống
-                            child.SetParent(lsSlot[i].transform);
-
-                            // Thay đổi vị trí của phần tử con này (nếu cần)
-                            child.localPosition = Vector3.zero; // Đặt vị trí cục bộ về (0,0,0) nếu cần
-
-                            // Break sau khi di chuyển một phần tử con
-                            break;
-                        }
-                    }
-                }
-                else
-                {
-                    Debug.Log("không có ô bị biến mất" + i);
-                }
-            }
-        }
     }
 }
 

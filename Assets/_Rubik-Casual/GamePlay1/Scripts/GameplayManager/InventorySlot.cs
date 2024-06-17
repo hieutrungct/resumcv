@@ -13,38 +13,6 @@ namespace RubikCasual.GamePlayManager
         public int idSlot;
         public void OnDrop(PointerEventData eventData)
         {
-            // GameObject droped = eventData.pointerDrag;
-            // MoveHero moveHero = droped.GetComponent<MoveHero>();
-            
-            // if(transform.childCount == 0)
-            // {  
-            //     moveHero.parentAfterDrag = transform;
-            // }
-            // else if(transform.childCount == 1 && GamePlayController.instance.drag == true)
-            // {  
-            //     // Debug.Log("Kéo đè lên Hero khác");
-            //     Destroy(moveHero.gameObject);
-            //     GamePlayController.instance.drag = false;
-            // }
-            // else if(transform.childCount == 1)
-            // {
-                
-            //     GameObject child = transform.GetChild(0).gameObject;
-            //     MoveHero childMoveHero = child.GetComponent<MoveHero>();
-
-            //     // Di chuyển đối tượng con hiện tại đến InventorySlot của đối tượng mới được kéo vào
-            //     childMoveHero.transform.SetParent(moveHero.parentAfterDrag);
-            //     // childMoveHero.transform.position = moveHero.parentAfterDrag1;
-
-            //     // Cập nhật parentAfterDrag của đối tượng mới được kéo vào
-            //     moveHero.parentAfterDrag = transform;
-            // }
-            // else
-            // {
-            //     Destroy(moveHero.gameObject);
-            // }
-            
-
             GameObject dropped = eventData.pointerDrag;
             if (dropped == null)
             {
@@ -54,13 +22,13 @@ namespace RubikCasual.GamePlayManager
             CardWaifu cardWaifu = dropped.GetComponent<CardWaifu>();
             if (cardWaifu != null)
             {
-                if (transform.childCount == 0 && MapController.instance.lsSlot.Contains(this))
+                if (gameObject.GetComponentInChildren<CardWaifu>() == null && MapController.instance.lsSlot.Contains(this))
                 {
                     cardWaifu.parentAfterDrag = transform;
                     MapController.instance.drag = false;
                     // Destroy(cardWaifu.gameObject);
                 }
-                else if(transform.childCount == 1 && MapController.instance.drag == true && MapController.instance.lsSlot.Contains(this))
+                else if(gameObject.GetComponentInChildren<CardWaifu>() != null && MapController.instance.drag == true && MapController.instance.lsSlot.Contains(this))
                 {  
 
                     Debug.Log("Kéo đè lên Hero khác");
@@ -83,12 +51,12 @@ namespace RubikCasual.GamePlayManager
             
             if (moveHero != null)
             {
-                if (transform.childCount == 0)
+                if (gameObject.GetComponentInChildren<CardWaifu>() == null)
                 {
                     moveHero.parentAfterDrag = transform;
                     MapController.instance.drag = false;
                 }
-                else if (transform.childCount == 1)
+                else if (gameObject.GetComponentInChildren<CardWaifu>() != null)
                 {
                     GameObject child = transform.GetChild(0).gameObject;
                     MoveHero childMoveHero = child.GetComponent<MoveHero>();
