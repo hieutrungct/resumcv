@@ -5,9 +5,9 @@ using Sirenix.OdinInspector;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
-namespace RubikCasual.Character
+namespace RubikCasual.PlayerInGame
 {
-    public class WaifuHero : MonoBehaviour
+    public class PlayerWaifu : MonoBehaviour
     {
         TrackEntry animTrack;
         public SkeletonGraphic UI_Waifu;
@@ -42,13 +42,15 @@ namespace RubikCasual.Character
         }
         public void CompleteAnimation(){
             string currentAnimationName = GetCurrentAnimationName(UI_Waifu);
+             
             switch (currentAnimationName)
             {
                 case "Attack":
-                    if(animTrack.IsComplete){
-                        Debug.Log("Attack End");
+                Debug.Log("CompleteAnimation"+ animTrack.IsComplete);
+                    // if(animTrack.IsComplete){
+                       
                         UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
-                    }
+                    // }
                     break;
                 case "Attacked":
                     if(animTrack.IsComplete){

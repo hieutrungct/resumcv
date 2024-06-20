@@ -15,7 +15,7 @@ namespace RubikCasual.MapControllers
         {
             instance = this;
         }
-        public List<InventorySlot> lsSlot;
+        public List<InventorySlot> lsWaifuLocations, lsPlaceHero;
         public List<GameObject> lsSlotGlow, lsGlow;
 
     }

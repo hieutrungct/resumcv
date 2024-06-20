@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using RubikCasual.ListWaifu;
+using RubikCasual.ListWaifuPlayer;
 using RubikCasual.MapControllers;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -22,55 +22,62 @@ namespace RubikCasual.GamePlayManager
             CardWaifu cardWaifu = dropped.GetComponent<CardWaifu>();
             if (cardWaifu != null)
             {
-                if (gameObject.GetComponentInChildren<CardWaifu>() == null && MapController.instance.lsSlot.Contains(this))
-                {
-                    cardWaifu.parentAfterDrag = transform;
-                    MapController.instance.drag = false;
-                    // Destroy(cardWaifu.gameObject);
-                }
-                else if(gameObject.GetComponentInChildren<CardWaifu>() != null && MapController.instance.drag == true && MapController.instance.lsSlot.Contains(this))
-                {  
-
-                    Debug.Log("Kéo đè lên Hero khác");
-                    cardWaifu.uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
-                    .OnComplete(()=>{
-                        Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
-                        cardWaifu.shadow.gameObject.SetActive(false);
-                        Destroy(cardWaifu.uiWaifu.gameObject);
-                    });
-                    // cardWaifu.shadow.gameObject.SetActive(false);
-                    // Destroy(cardWaifu.uiWaifu.gameObject);
-                    MapController.instance.drag = false;
-                }
-                else if(transform.childCount == 2 && MapController.instance.drag == true && MapController.instance.lsSlot.Contains(this))
-                {
-                    Destroy(cardWaifu.uiWaifu.gameObject);
-                    MapController.instance.drag = false;
-                }
+                HandleCardWaifuDrop(cardWaifu);
             }
             
             if (moveHero != null)
             {
-                if (gameObject.GetComponentInChildren<CardWaifu>() == null)
-                {
-                    moveHero.parentAfterDrag = transform;
-                    MapController.instance.drag = false;
-                }
-                else if (gameObject.GetComponentInChildren<CardWaifu>() != null)
-                {
-                    GameObject child = transform.GetChild(0).gameObject;
-                    MoveHero childMoveHero = child.GetComponent<MoveHero>();
-
-                    if (childMoveHero != null)
-                    {
-                        childMoveHero.transform.SetParent(moveHero.parentAfterDrag);
-                        moveHero.parentAfterDrag = transform;
-                    }
-                }
-                
-                
+                HandleMoveHeroDrop(moveHero);
             }
             
+        }
+        private void HandleCardWaifuDrop(CardWaifu cardWaifu)
+        {
+            if (transform.childCount == 0 && MapController.instance.lsWaifuLocations.Contains(this))
+            {
+                cardWaifu.parentAfterDrag = transform;
+                MapController.instance.drag = false;
+                // Destroy(cardWaifu.gameObject);
+                
+            }
+            else if(transform.childCount == 1 && MapController.instance.drag == true && MapController.instance.lsWaifuLocations.Contains(this))
+            {  
+
+                Debug.Log("Kéo đè lên Hero khác");
+                cardWaifu.uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
+                .OnComplete(()=>{
+                    Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
+                    cardWaifu.shadow.gameObject.SetActive(false);
+                    Destroy(cardWaifu.uiWaifu.gameObject);
+                });
+                // cardWaifu.shadow.gameObject.SetActive(false);
+                // Destroy(cardWaifu.uiWaifu.gameObject);
+                MapController.instance.drag = false;
+            }
+            else if(transform.childCount == 2 && MapController.instance.drag == true && MapController.instance.lsWaifuLocations.Contains(this))
+            {
+                Destroy(cardWaifu.uiWaifu.gameObject);
+                MapController.instance.drag = false;
+            }
+        }
+        private void HandleMoveHeroDrop(MoveHero moveHero)
+        {
+            if (transform.childCount == 0)
+            {
+                moveHero.parentAfterDrag = transform;
+                MapController.instance.drag = false;
+            }
+            else if (transform.childCount == 1)
+            {
+                GameObject child = transform.GetChild(0).gameObject;
+                MoveHero childMoveHero = child.GetComponent<MoveHero>();
+
+                if (childMoveHero != null)
+                {
+                    childMoveHero.transform.SetParent(moveHero.parentAfterDrag);
+                    moveHero.parentAfterDrag = transform;
+                }
+            }
         }
         
     }

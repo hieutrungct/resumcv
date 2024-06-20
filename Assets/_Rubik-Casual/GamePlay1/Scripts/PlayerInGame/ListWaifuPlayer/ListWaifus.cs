@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
-using Rubik.ListWaifu;
 using RubikCasual.Data;
-using RubikCasual.Data.Player;
+using RubikCasual.GamePlayManager;
+using RubikCasual.PlayerInGame;
 using RubikCasual.Waifu;
-using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-namespace RubikCasual.ListWaifu
+namespace RubikCasual.ListWaifuPlayer
 {
-    public class ListWaifuController : MonoBehaviour
+    public class ListWaifus : MonoBehaviour
     {
-        public static ListWaifuController instance;
+        public static ListWaifus instance;
         public CardWaifu slot_card;
-        public List<PlayerOwnsWaifu> lsWaifu;
         public List<CardWaifu> lsInfoCardClone;
+        public List<CardWaifu> lsCardWaifuInHand;
+        public List<PlayerWaifu> lsWaifuInMap;
         public GameObject cardBack;
         public CardWaifuinHand cardWaifuinHand;
         public Transform posInstantiateCard;
@@ -24,9 +24,9 @@ namespace RubikCasual.ListWaifu
         void Awake()
         {
             instance = this;
-            lsWaifu = DataController.instance.playerData.lsPlayerOwnsWaifu;
+            
             SortRarityAndLevel();
-            waifuNumber = lsWaifu.Count;
+            waifuNumber = GamePlayController.instance.lsWaifu.Count;
             remainingCards.text = (waifuNumber).ToString();
         }
         public void SetUpListWaifu()
@@ -35,10 +35,10 @@ namespace RubikCasual.ListWaifu
             {
                 Destroy(child.gameObject);
             }
-            for (int i = lsWaifu.Count - 1; i > -1; i--)
+            for (int i = GamePlayController.instance.lsWaifu.Count - 1; i > -1; i--)
             {
                 CardWaifu slotWaifu = Instantiate(slot_card, posInstantiateCard);
-                slotWaifu.SetUp(lsWaifu[i]);
+                slotWaifu.SetUp(GamePlayController.instance.lsWaifu[i]);
                 slotWaifu.transform.localScale = new Vector3(-1f, 1f, 1f);
                 
                 lsInfoCardClone.Add(slotWaifu);
@@ -47,7 +47,7 @@ namespace RubikCasual.ListWaifu
         public void SortRarityAndLevel()
         {
             
-            lsWaifu.Sort((charA, charB) =>
+            GamePlayController.instance.lsWaifu.Sort((charA, charB) =>
             {
                 InfoWaifuAsset infoWaifuA = DataController.instance.GetInfoWaifuAssetsByIndex(charA.ID);
                 InfoWaifuAsset infoWaifuB = DataController.instance.GetInfoWaifuAssetsByIndex(charB.ID);
@@ -61,37 +61,36 @@ namespace RubikCasual.ListWaifu
 
             SetUpListWaifu();
         }
-        private int index;
         public int waifuNumber;
         public void ScaleCard()
         {
             float duration = 0.25f;
-            int indexSlot = 0;
+            int indexSlot = lsCardWaifuInHand.Count;
             waifuNumber--;
             remainingCards.text = (waifuNumber).ToString();
-            if (cardWaifuinHand.lsSlot.All(item => item.GetComponentInChildren<CardWaifu>() != null) || index > lsInfoCardClone.Count)
+            if (lsCardWaifuInHand.Count >= cardWaifuinHand.lsSlot.Count || lsInfoCardClone == null)
             {
                 Debug.Log("ko còn ô trống hoặc ko còn thẻ");
                 return;
             }
             GameObject CardBack = Instantiate(cardBack, posInstantiateCard);
             
-            CardWaifu infoCardClone = lsInfoCardClone[index];
-            for (int i = 0; i < cardWaifuinHand.lsSlot.Count; i++)
-            {
-                if(cardWaifuinHand.lsSlot[i].GetComponentInChildren<CardWaifu>() == null)
-                {
-                    indexSlot = i;
-                    break;
-                }
-            }
+            CardWaifu infoCardClone = lsInfoCardClone[0];
+            // for (int i = 0; i < cardWaifuinHand.lsSlot.Count; i++)
+            // {
+            //     if(cardWaifuinHand.lsSlot[i].GetComponentInChildren<CardWaifu>() == null)
+            //     {
+            //         indexSlot = i;
+            //         break;
+            //     }
+            // }
             Sequence sequence = DOTween.Sequence();
 
-            sequence.Append(infoCardClone.transform.DOMove(cardWaifuinHand.lsSlot[indexSlot].transform.position, duration)
+            sequence.Append(infoCardClone.transform.DOMove(cardWaifuinHand.lsSlot[indexSlot].position, duration)
             .OnComplete(() =>
             {
                 
-                infoCardClone.transform.parent = cardWaifuinHand.lsSlot[indexSlot].transform;
+                infoCardClone.transform.parent = cardWaifuinHand.lsSlot[indexSlot];
                 infoCardClone.transform.DOScale(new Vector3(0, 1, 1), duration / 2)
                 .SetEase(Ease.InOutQuad)
                 .OnComplete(() =>
@@ -99,12 +98,12 @@ namespace RubikCasual.ListWaifu
                     // Khi thu nhỏ hoàn tất, lật đối tượng và mở rộng lại
                     infoCardClone.transform.DOScale(new Vector3(1, 1, 1), duration / 2)
                     .SetEase(Ease.InOutQuad).OnComplete(() => {
-                        index++;
+                        lsInfoCardClone.RemoveAt(0);
                     });
                 });
                 infoCardClone.transform.DOJump(infoCardClone.transform.position, 1f / 3f, 1, 0.5f);
             }));
-            sequence.Join(CardBack.transform.DOMove(cardWaifuinHand.lsSlot[indexSlot].transform.position, duration)
+            sequence.Join(CardBack.transform.DOMove(cardWaifuinHand.lsSlot[indexSlot].position, duration)
             .OnComplete(() =>
             {
                 CardBack.transform.DOScale(new Vector3(0, 1, 1), duration / 2)
@@ -123,8 +122,19 @@ namespace RubikCasual.ListWaifu
             }));
 
             sequence.Play();
+            lsCardWaifuInHand.Add(infoCardClone);
             
-            
+        }
+        public void RemoveCardWaifu(CardWaifu cardWaifu)
+        {
+            if (lsCardWaifuInHand.Contains(cardWaifu))
+            {
+                lsCardWaifuInHand.Remove(cardWaifu);
+            }
+            else
+            {
+                Debug.Log("CardWaifu not found in the list.");
+            }
         }
         
     }

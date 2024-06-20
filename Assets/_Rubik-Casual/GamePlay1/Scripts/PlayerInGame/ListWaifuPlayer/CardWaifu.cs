@@ -1,19 +1,19 @@
 using System.Collections;
 using DG.Tweening;
 using Rubik_Casual;
-using RubikCasual.Character;
 using RubikCasual.Data;
 using RubikCasual.Data.Player;
 using RubikCasual.Data.Waifu;
 using RubikCasual.GamePlayManager;
 using RubikCasual.MapControllers;
+using RubikCasual.PlayerInGame;
 using RubikCasual.Waifu;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-namespace RubikCasual.ListWaifu
+namespace RubikCasual.ListWaifuPlayer
 {
     public class CardWaifu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
@@ -22,7 +22,7 @@ namespace RubikCasual.ListWaifu
         public TextMeshProUGUI nameTxt, levelTxt;
         [SerializeField] GameObject[] stars;
         public PlayerOwnsWaifu _waifu;
-        public SkeletonGraphic uiWaifu, hero;
+        public SkeletonGraphic uiWaifu;
         [HideInInspector] public Transform parentAfterDrag;
         public Vector3 offset;
         
@@ -47,7 +47,7 @@ namespace RubikCasual.ListWaifu
             shadow.gameObject.SetActive(true);
             for(int i = 0; i < MapController.instance.lsSlotGlow.Count; i++)
             {
-                if(MapController.instance.lsSlot[i].gameObject.GetComponentInChildren<MoveHero>() != null)
+                if(MapController.instance.lsWaifuLocations[i].gameObject.GetComponentInChildren<MoveHero>() != null)
                 {
                     continue;
                 }
@@ -68,7 +68,7 @@ namespace RubikCasual.ListWaifu
                 item.SetActive(false);
             }
             // Kiểm tra xem hero có được thả vào một InventorySlot hợp lệ hay không
-            bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null && MapController.instance.lsSlot.Contains(eventData.pointerEnter.GetComponent<InventorySlot>());
+            bool validDrop = eventData.pointerEnter != null && eventData.pointerEnter.GetComponent<InventorySlot>() != null && MapController.instance.lsWaifuLocations.Contains(eventData.pointerEnter.GetComponent<InventorySlot>());
             if(validDrop) 
             {
                 shadow.gameObject.SetActive(false);
@@ -76,6 +76,7 @@ namespace RubikCasual.ListWaifu
                 uiWaifu.gameObject.transform.SetParent(parentAfterDrag);
                 uiWaifu.raycastTarget = true;
 
+                ListWaifus.instance.lsWaifuInMap.Add(uiWaifu.GetComponent<PlayerWaifu>());
                 StartCoroutine(DestroyAndCheckCoroutine());
             
             }
@@ -112,7 +113,14 @@ namespace RubikCasual.ListWaifu
             Debug.Log("Xoá gameObject");
             yield return new WaitForEndOfFrame(); // Chờ đến cuối khung hình
             Debug.Log("Thực hiện sắp xếp");
-            ListWaifuController.instance.cardWaifuinHand.CheckAndShiftChildren();
+            ListWaifus.instance.cardWaifuinHand.CheckAndShiftChildren();
+        }
+        private void OnDestroy()
+        {
+            if (ListWaifus.instance != null)
+            {
+                ListWaifus.instance.RemoveCardWaifu(this);
+            }
         }
         
         Vector3 MouseWorldPosittion()
@@ -138,7 +146,7 @@ namespace RubikCasual.ListWaifu
         }
         private void AddWaifuComponent()
         {
-            WaifuHero waifu = uiWaifu.gameObject.AddComponent<WaifuHero>();
+            PlayerWaifu waifu = uiWaifu.gameObject.AddComponent<PlayerWaifu>();
             waifu.UI_Waifu = uiWaifu;
 
         }

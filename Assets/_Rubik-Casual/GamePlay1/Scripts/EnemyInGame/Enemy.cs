@@ -4,7 +4,7 @@ using RubikCasual.GamePlayManager;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
-namespace RubikCasual.Character
+namespace RubikCasual.EnemyInGame
 {
     public class Enemy : MonoBehaviour
     {
