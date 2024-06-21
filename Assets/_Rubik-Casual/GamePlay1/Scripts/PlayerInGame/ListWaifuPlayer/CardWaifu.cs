@@ -24,6 +24,7 @@ namespace RubikCasual.ListWaifuPlayer
         public PlayerOwnsWaifu _waifu;
         public SkeletonGraphic uiWaifu;
         [HideInInspector] public Transform parentAfterDrag;
+        public int IndexCard;
         public Vector3 offset;
         
         public void OnBeginDrag(PointerEventData eventData)
@@ -77,6 +78,7 @@ namespace RubikCasual.ListWaifuPlayer
                 uiWaifu.raycastTarget = true;
 
                 ListWaifus.instance.lsWaifuInMap.Add(uiWaifu.GetComponent<PlayerWaifu>());
+                ListWaifus.instance.SepUpIndexCard();
                 StartCoroutine(DestroyAndCheckCoroutine());
             
             }
@@ -113,7 +115,7 @@ namespace RubikCasual.ListWaifuPlayer
             Debug.Log("Xoá gameObject");
             yield return new WaitForEndOfFrame(); // Chờ đến cuối khung hình
             Debug.Log("Thực hiện sắp xếp");
-            ListWaifus.instance.cardWaifuinHand.CheckAndShiftChildren();
+            ListWaifus.instance.cardWaifuinHand.CheckAndShiftChildren(IndexCard);
         }
         private void OnDestroy()
         {

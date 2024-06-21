@@ -28,6 +28,7 @@ namespace RubikCasual.ListWaifuPlayer
             SortRarityAndLevel();
             waifuNumber = GamePlayController.instance.lsWaifu.Count;
             remainingCards.text = (waifuNumber).ToString();
+            BattleCard();
         }
         public void SetUpListWaifu()
         {
@@ -66,6 +67,7 @@ namespace RubikCasual.ListWaifuPlayer
         {
             float duration = 0.25f;
             int indexSlot = lsCardWaifuInHand.Count;
+            
             waifuNumber--;
             remainingCards.text = (waifuNumber).ToString();
             if (lsCardWaifuInHand.Count >= cardWaifuinHand.lsSlot.Count || lsInfoCardClone == null)
@@ -74,16 +76,7 @@ namespace RubikCasual.ListWaifuPlayer
                 return;
             }
             GameObject CardBack = Instantiate(cardBack, posInstantiateCard);
-            
             CardWaifu infoCardClone = lsInfoCardClone[0];
-            // for (int i = 0; i < cardWaifuinHand.lsSlot.Count; i++)
-            // {
-            //     if(cardWaifuinHand.lsSlot[i].GetComponentInChildren<CardWaifu>() == null)
-            //     {
-            //         indexSlot = i;
-            //         break;
-            //     }
-            // }
             Sequence sequence = DOTween.Sequence();
 
             sequence.Append(infoCardClone.transform.DOMove(cardWaifuinHand.lsSlot[indexSlot].position, duration)
@@ -123,6 +116,8 @@ namespace RubikCasual.ListWaifuPlayer
 
             sequence.Play();
             lsCardWaifuInHand.Add(infoCardClone);
+
+            SepUpIndexCard();
             
         }
         public void RemoveCardWaifu(CardWaifu cardWaifu)
@@ -134,6 +129,27 @@ namespace RubikCasual.ListWaifuPlayer
             else
             {
                 Debug.Log("CardWaifu not found in the list.");
+            }
+        }
+        public void SepUpIndexCard()
+        {
+            for (int i = 0; i < lsCardWaifuInHand.Count; i++)
+            {
+                lsCardWaifuInHand[i].IndexCard = i;
+            }
+        }
+        private void BattleCard()
+        {
+            // có thể thêm card khi vào trận
+            
+            for (int i = 0; i < 2; i++)
+            {
+                CardWaifu infoCardClone = lsInfoCardClone[i];
+                infoCardClone.transform.SetParent(cardWaifuinHand.lsSlot[i]);
+                infoCardClone.transform.position = cardWaifuinHand.lsSlot[i].transform.position;
+                infoCardClone.transform.localScale = Vector3.one;
+                lsCardWaifuInHand.Add(infoCardClone);
+                lsInfoCardClone.RemoveAt(i);
             }
         }
         
