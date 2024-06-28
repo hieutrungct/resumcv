@@ -8,6 +8,7 @@ using RubikCasual.GamePlayManager;
 using RubikCasual.MapControllers;
 using RubikCasual.PlayerInGame;
 using RubikCasual.Waifu;
+using Sirenix.OdinInspector;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
@@ -26,6 +27,8 @@ namespace RubikCasual.ListWaifuPlayer
         [HideInInspector] public Transform parentAfterDrag;
         public int IndexCard;
         public Vector3 offset;
+        public Slider sliderShadow;
+        public TextMeshProUGUI unlockTxt, AtkTxt, headTxt;
         
         public void OnBeginDrag(PointerEventData eventData)
         {
@@ -198,8 +201,38 @@ namespace RubikCasual.ListWaifuPlayer
                     
                 });
             }
+            // sliderShadow.maxValue = 
+            unlockTxt.text = sliderShadow.maxValue.ToString();
+            sliderShadow.value = sliderShadow.maxValue;
+            targetvalue = sliderShadow.value;
         }
-        
+        float targetvalue;
+        [Button]
+        public void TurnsUntilUnlock()
+        {
+            if (IsCardInHand() == true)
+            {
+                targetvalue--;
+                sliderShadow.DOValue(targetvalue, 0.25f).SetEase(Ease.InOutQuad);
+                unlockTxt.text = targetvalue.ToString();
+                if (targetvalue == 0)
+                {
+                    sliderShadow.gameObject.SetActive(false);
+                }
+
+            }
+        }
+        private bool IsCardInHand()
+        {
+            foreach (var item in ListWaifus.instance.lsCardWaifuInHand)
+            {
+                if (item == this)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         
         private void SetRarityColors(int rarityIndex, string glowColor, string backGlowColor)
         {

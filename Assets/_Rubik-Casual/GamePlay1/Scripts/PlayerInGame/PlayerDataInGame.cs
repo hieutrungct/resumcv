@@ -12,5 +12,9 @@ namespace RubikCasual.Player
         private int numberWaifuDeath;
         // public int movementRange, attackRange;
     }
+    public class SupportCardData
+    {
+        
+    }
 }
 
