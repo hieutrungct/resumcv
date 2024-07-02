@@ -16,6 +16,14 @@ namespace RubikCasual.GamePlayManager
             instance = this;
             lsWaifu = DataController.instance.playerData.lsPlayerOwnsWaifu;
         }
+        public void PlayerStartBattle()
+        {
+            
+        }
+        public void EnemyBattle()
+        {
+
+        }
         
     }
 }

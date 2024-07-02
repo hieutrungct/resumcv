@@ -11,6 +11,7 @@ namespace RubikCasual.PlayerInGame
     {
         TrackEntry animTrack;
         public SkeletonGraphic UI_Waifu;
+        public int idSlotContainWaifu;
         
         public void SetUpHeroCombat()
         {

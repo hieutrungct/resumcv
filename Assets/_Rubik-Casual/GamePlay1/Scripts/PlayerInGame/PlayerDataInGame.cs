@@ -5,16 +5,23 @@ namespace RubikCasual.Player
 {
     public class PlayerDataInGame 
     {
-        public List<GameObject> lsCharactersOnBoard;
         private int  HP;
         private int DEF;
-        private int curentWaifu;
-        private int numberWaifuDeath;
         // public int movementRange, attackRange;
+    }
+    public enum TypeSpportCard
+    {
+        healSkill = 0,
+        damageBoostSkill = 1,
+        heroSkill = 2,
+        poisonSkill = 3,
+        silenceSkill = 4,
     }
     public class SupportCardData
     {
-        
+        private int HP;
+        private int DEF;
+
     }
 }
 
