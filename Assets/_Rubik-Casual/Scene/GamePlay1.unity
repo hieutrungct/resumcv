@@ -1482,8 +1482,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI_Waifu: {fileID: 186433207}
   parentAfterDrag: {fileID: 0}
+  posistionAfter: {fileID: 0}
   parentTransform: {fileID: 1226647177}
   offset: {x: 0, y: 0, z: 0}
+  check: 1
 --- !u!114 &186433207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1562,6 +1564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI_Waifu: {fileID: 186433207}
+  idSlotContainWaifuEnemy: 13
+  posWaifuEnemy: {x: 3, y: 1}
 --- !u!1 &211651139
 GameObject:
   m_ObjectHideFlags: 0
@@ -12052,6 +12056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lsEnemyInGame: []
   lsEnemyHeroInGame: []
+  lsEnemyInMap:
+  - {fileID: 186433209}
 --- !u!1 &1551147877
 GameObject:
   m_ObjectHideFlags: 0
@@ -15756,6 +15762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot_card: {fileID: 7016992448430801013, guid: 1c80c5476c7daa14d8c08f42b5306618, type: 3}
   lsInfoCardClone: []
+  lsCardWaifuDead: []
   lsCardWaifuInHand: []
   lsWaifuInMap: []
   cardBack: {fileID: 3263705244820514706, guid: 6b04653eb3453e84c82bae268f60f4a0, type: 3}

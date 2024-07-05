@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 5871394817534609979}
   - component: {fileID: 424743541999416316}
   m_Layer: 5
-  m_Name: Text_Level
+  m_Name: Text_ATK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2071,6 +2071,9 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   sliderShadow: {fileID: 1058053339281591493}
   unlockTxt: {fileID: 8211308535650668718}
+  AtkTxt: {fileID: 424743541999416316}
+  headTxt: {fileID: 7417312361755389044}
+  playerWaifu: {fileID: 9043898211234286556, guid: 3232b27b4a9efc34198e58d8663e12f3, type: 3}
 --- !u!1 &8127261385108210939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,7 +2951,7 @@ GameObject:
   - component: {fileID: 2498724617336653101}
   - component: {fileID: 7417312361755389044}
   m_Layer: 5
-  m_Name: Text_Level
+  m_Name: Text_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

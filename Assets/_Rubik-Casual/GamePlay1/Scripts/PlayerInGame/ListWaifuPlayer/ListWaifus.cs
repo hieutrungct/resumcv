@@ -15,6 +15,7 @@ namespace RubikCasual.ListWaifuPlayer
         public static ListWaifus instance;
         public CardWaifu slot_card;
         public List<CardWaifu> lsInfoCardClone;
+        public List<CardWaifu> lsCardWaifuDead;
         public List<CardWaifu> lsCardWaifuInHand;
         public List<PlayerWaifu> lsWaifuInMap;
         public GameObject cardBack;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using RubikCasual.MapControllers;
+using RubikCasual.PlayerInGame;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,11 +12,11 @@ namespace RubikCasual.GamePlayManager
     {
         public SkeletonGraphic UI_Waifu;
         [HideInInspector] public Transform parentAfterDrag;
-        // public Transform posistionAfter;
+        public Transform posistionAfter;
         public Transform parentTransform;
         public Vector3 offset;
-        private bool check = true;
-
+        public bool check = false;
+        
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("Bắt đầu kéo");
@@ -30,15 +31,6 @@ namespace RubikCasual.GamePlayManager
 
         void IDragHandler.OnDrag(PointerEventData eventData)
         {
-            // Debug.Log(MouseWorldPosittion());
-
-            // vector3 = gameObject.transform.position - MouseWorldPosittion();
-            // Debug.Log(vector3);
-            // if (check == true)
-            // {
-            //     posistionAfter = MouseWorldPosittion();
-            //     check = false;
-            // }
             transform.position = MouseWorldPosittion() + offset;
         }
 
@@ -53,12 +45,6 @@ namespace RubikCasual.GamePlayManager
             else
             {
                 Debug.Log("Thả kéo ra ngoài");
-                Debug.Log(MapController.instance.posistionAfter);
-                transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.65f,0f), 0.7f)
-                .OnComplete(()=>{
-                    Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
-                    Destroy(gameObject);
-                });
                 
             }
             

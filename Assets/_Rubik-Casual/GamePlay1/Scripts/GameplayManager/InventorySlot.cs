@@ -12,49 +12,53 @@ namespace RubikCasual.GamePlayManager
     {
         // public Transform parentTransform;
         public int idSlot;
-        public Vector2 posstionSlot;
+        public Vector2 positionSlot;
         void Start()
         {
-            posstionSlot = new Vector2((float)(idSlot%10 +1),(float)(idSlot/10 +1)); 
+            positionSlot = new Vector2((float)(idSlot%10),(float)(idSlot/10)); 
         }
         public void OnDrop(PointerEventData eventData)
         {
             GameObject dropped = eventData.pointerDrag;
-            if (dropped == null)
+            if (dropped == null || !MapController.instance.lsWaifuLocations.Contains(this))
             {
                 return; // Không có đối tượng được thả
             }
             MoveHero moveHero = dropped.GetComponent<MoveHero>();
             CardWaifu cardWaifu = dropped.GetComponent<CardWaifu>();
             PlayerWaifu playerWaifu = dropped.GetComponent<PlayerWaifu>();
-            
             if (cardWaifu != null)
             {
-                HandleCardWaifuDrop(cardWaifu, playerWaifu);
+                HandleCardWaifuDrop(cardWaifu);
             }
-            
-            if (moveHero != null)
+            // sử dụng khi sử dụng supportCard có tính năng đặt card lên vị trị cao hơn
+            if (moveHero != null && moveHero.check == true)
             {
                 HandleMoveHeroDrop(moveHero, playerWaifu);
-                
             }
             
         }
-        private void HandleCardWaifuDrop(CardWaifu cardWaifu, PlayerWaifu playerWaifu)
+        private void HandleCardWaifuDrop(CardWaifu cardWaifu)
         {
-            if (transform.childCount == 0 && MapController.instance.lsWaifuLocations.Contains(this))
+            if (transform.childCount == 0)
             {
                 cardWaifu.parentAfterDrag = transform;
                 MapController.instance.drag = false;
                 // Destroy(cardWaifu.gameObject);
-                playerWaifu.idSlotContainWaifu = idSlot;
-                
-            }
-            else if(transform.childCount == 1 && MapController.instance.drag == true && MapController.instance.lsWaifuLocations.Contains(this))
-            {  
+                // cardWaifu.playerWaifu.idSlotContainWaifu = idSlot;
+                // if (playerWaifu != null)
+                // {
+                //     Debug.Log("idSlot là " + idSlot);
+                //     playerWaifu.idSlotContainWaifu = idSlot;
+                // }
 
+                cardWaifu.waifu.idSlotContainWaifu = idSlot;
+                cardWaifu.waifu.CheckPosWaifu(positionSlot);
+            }
+            else if(transform.childCount == 1 && MapController.instance.drag == true )
+            {  
                 Debug.Log("Kéo đè lên Hero khác");
-                cardWaifu.uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
+                cardWaifu.uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.5f)
                 .OnComplete(()=>{
                     Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
                     cardWaifu.shadow.gameObject.SetActive(false);
@@ -64,7 +68,7 @@ namespace RubikCasual.GamePlayManager
                 // Destroy(cardWaifu.uiWaifu.gameObject);
                 MapController.instance.drag = false;
             }
-            else if(transform.childCount == 2 && MapController.instance.drag == true && MapController.instance.lsWaifuLocations.Contains(this))
+            else if(transform.childCount == 2 && MapController.instance.drag == true)
             {
                 Destroy(cardWaifu.uiWaifu.gameObject);
                 MapController.instance.drag = false;
@@ -76,7 +80,9 @@ namespace RubikCasual.GamePlayManager
             {
                 moveHero.parentAfterDrag = transform;
                 MapController.instance.drag = false;
+
                 playerWaifu.idSlotContainWaifu = idSlot;
+                playerWaifu.CheckPosWaifu(positionSlot);
             }
             else if (transform.childCount == 1)
             {
@@ -86,8 +92,12 @@ namespace RubikCasual.GamePlayManager
                 if (childMoveHero != null)
                 {
                     childMoveHero.transform.SetParent(moveHero.parentAfterDrag);
-                    childPlayerWaifu.idSlotContainWaifu = idSlot;
+                    childPlayerWaifu.idSlotContainWaifu = playerWaifu.idSlotContainWaifu;
+                    childPlayerWaifu.CheckPosWaifu(playerWaifu.posWaifu);
+
                     moveHero.parentAfterDrag = transform;
+                    playerWaifu.idSlotContainWaifu = idSlot;
+                    playerWaifu.CheckPosWaifu(positionSlot);
                 }
             }
         }

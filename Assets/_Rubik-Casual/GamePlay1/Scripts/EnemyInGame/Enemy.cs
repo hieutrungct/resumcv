@@ -10,6 +10,8 @@ namespace RubikCasual.EnemyInGame
     {
         TrackEntry animTrack;
         public SkeletonGraphic UI_Waifu;
+        public int idSlotContainWaifuEnemy;
+        public Vector2 posWaifuEnemy;
         public void SetUpHeroCombat()
         {
 

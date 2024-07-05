@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RubikCasual.EnemyInGame;
 using RubikCasual.GamePlayManager;
 using Sirenix.OdinInspector;
 using Spine;
@@ -12,15 +13,39 @@ namespace RubikCasual.PlayerInGame
         TrackEntry animTrack;
         public SkeletonGraphic UI_Waifu;
         public int idSlotContainWaifu;
-        
+        public Vector2 posWaifu;
+        [Button]
         public void SetUpHeroCombat()
         {
-            
+            foreach (var item in ListWaifuEnemy.instance.lsEnemyInMap)
+            {
+                if (item.posWaifuEnemy == new Vector2(posWaifu.x + 1, posWaifu.y)
+                    ||item.posWaifuEnemy == new Vector2(posWaifu.x + 1, posWaifu.y + 1)
+                    ||item.posWaifuEnemy == new Vector2(posWaifu.x + 1, posWaifu.y - 1)
+                    ||item.posWaifuEnemy == new Vector2(posWaifu.x, posWaifu.y + 1)
+                    ||item.posWaifuEnemy == new Vector2(posWaifu.x, posWaifu.y - 1))
+                {
+                    UpdateHeroCombat();
+                    break;
+                }
+                else if(item.posWaifuEnemy == new Vector2(posWaifu.x - 1, posWaifu.y)
+                ||item.posWaifuEnemy == new Vector2(posWaifu.x - 1, posWaifu.y + 1)
+                ||item.posWaifuEnemy == new Vector2(posWaifu.x - 1, posWaifu.y - 1))
+                {
+                    gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
+                    UpdateHeroCombat();
+                    break;
+                }
+            }
+
+        }
+        public void CheckPosWaifu(Vector2 pos)
+        {
+            posWaifu = pos;
         }
         [Button]
         public void UpdateHeroCombat()
         {
-            
             animTrack = UI_Waifu.AnimationState.SetAnimation(0, Config.Attack,false);
         }
         void Start()
@@ -51,21 +76,25 @@ namespace RubikCasual.PlayerInGame
                     // if(animTrack.IsComplete){
                        
                         UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
                     // }
                     break;
                 case "Attacked":
                     if(animTrack.IsComplete){
                         UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
                     }
                     break;
                 case "SkillCast":
                     if(animTrack.IsComplete){
                         UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
                     }
                     break;
                 case "Die":
                     if(animTrack.IsComplete){
                         UI_Waifu.AnimationState.SetAnimation(0, Config.Idle,true);
+                        gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
                     }
                     break;
                 default:

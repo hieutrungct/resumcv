@@ -29,6 +29,7 @@ namespace RubikCasual.ListWaifuPlayer
         public Vector3 offset;
         public Slider sliderShadow;
         public TextMeshProUGUI unlockTxt, AtkTxt, headTxt;
+
         
         public void OnBeginDrag(PointerEventData eventData)
         {
@@ -89,7 +90,7 @@ namespace RubikCasual.ListWaifuPlayer
             {
                 // Debug.Log("Thả kéo ra ngoài");
                 Debug.Log(MapController.instance.posistionAfter);
-                uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.7f)
+                uiWaifu.gameObject.transform.DOMove(MapController.instance.posistionAfter - new Vector3(0f,0.7f,0f), 0.5f)
                 .OnComplete(()=>{
                     // Debug.Log("Đối tượng không được thả vào một InventorySlot hợp lệ, xóa đối tượng.");
                     Destroy(uiWaifu.gameObject);
@@ -149,9 +150,10 @@ namespace RubikCasual.ListWaifuPlayer
                 rectTransform.pivot = new Vector2(0.5f, 0.5f);
             }
         }
+        public PlayerWaifu waifu;
         private void AddWaifuComponent()
         {
-            PlayerWaifu waifu = uiWaifu.gameObject.AddComponent<PlayerWaifu>();
+            waifu = uiWaifu.gameObject.AddComponent<PlayerWaifu>();
             waifu.UI_Waifu = uiWaifu;
 
         }
