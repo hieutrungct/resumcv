@@ -43,7 +43,7 @@ namespace RubikCasual.PlayerInGame
         {
             posWaifu = pos;
         }
-        [Button]
+        
         public void UpdateHeroCombat()
         {
             animTrack = UI_Waifu.AnimationState.SetAnimation(0, Config.Attack,false);
